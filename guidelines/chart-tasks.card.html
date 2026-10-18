@@ -1,0 +1,15 @@
+<!-- @dsCard group="Charts" viewport="700x230" name="Reading tasks → chart" subtitle="Pick the task first, then the mark, then the chart — never the other way round" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css"><style>html,body{margin:0}body{background:var(--surface-page);padding:18px 20px;font-family:var(--font-body)}.k{font-family:var(--font-mono);font-size:10px;color:var(--text-muted)}.g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 16px}.t{display:flex;flex-direction:column;gap:3px;border-top:1px solid var(--line-hairline);padding-top:6px}.t b{font-family:var(--font-display);font-size:13px;font-weight:600;color:var(--text-display);letter-spacing:.06em}.t i{font-style:normal;font-size:10.5px;color:var(--text-muted)}.t span{font-family:var(--font-mono);font-size:10px;color:var(--gold-deep)}</style></head><body><div class="g">
+<div class="t"><b>比较</b><i>A 比 B 大多少？</i><span>BarSeries · Dumbbell</span></div>
+<div class="t"><b>排序</b><i>谁最高？前十是谁？</i><span>BarSeries · SlopeChart</span></div>
+<div class="t"><b>构成</b><i>由哪些部分组成？</i><span>StackedBars · Treemap · Donut ≤5</span></div>
+<div class="t"><b>分布</b><i>集中在哪？有几个峰？</i><span>Histogram · BoxPlot</span></div>
+<div class="t"><b>趋势</b><i>随时间怎么变？</i><span>TrendLine · Sparkline</span></div>
+<div class="t"><b>关系</b><i>X 和 Y 有关吗？</i><span>Scatter · Heatmap · Matrix2x2</span></div>
+<div class="t"><b>偏差</b><i>离目标差多少？</i><span>DivergingBars · Waterfall</span></div>
+<div class="t"><b>流转</b><i>从哪来到哪去？损耗多少？</i><span>Sankey · Waterfall · Funnel</span></div>
+<div class="t"><b>层级</b><i>谁包含谁？</i><span>Treemap</span></div>
+<div class="t"><b>网络</b><i>谁和谁相连？</i><span>Heatmap（邻接矩阵）</span></div>
+<div class="t"><b>时段</b><i>何时开始、持续多久？</i><span>Gantt · CalendarHeatmap</span></div>
+<div class="t"><b>不确定性</b><i>这个数有多可信？</i><span>ForecastCorridor</span></div>
+</div><div class="k" style="margin-top:14px">一张图只服务一个任务。加一个维度时加面板（FacetGrid / FacetBars），不加编码通道。</div></body></html>

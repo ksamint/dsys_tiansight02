@@ -1,0 +1,27 @@
+<!-- @dsCard group="Charts" viewport="700x300" name="Histogram · BoxPlot" subtitle="分布 — where values concentrate, how many peaks, who is an outlier" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { Histogram, BoxPlot } = NS;
+const rnd = (seed => () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; })(7);
+const norm = (m, s) => { const u = rnd() || 1e-6, v = rnd(); return m + s * Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+const apc = Array.from({length: 420}, (_, i) => Math.max(20, i % 3 ? norm(72, 14) : norm(128, 18)));
+const grp = (m, s, n, out) => Array.from({length: n}, () => norm(m, s)).concat(out || []);
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'1.2fr 1fr',gap:28}}>
+    <div><div className="lbl">Histogram · 双峰</div>
+      <Histogram height={220} caption="人均消费分布" unit="元" bins={26} values={apc} grade="E1" scope="堂食账单 ÷ 登记人数"
+        marks={[{label:"均值",value:91},{label:"预算上限",value:150,tone:"loss"}]}/></div>
+    <div><div className="lbl">BoxPlot · 按档口</div>
+      <BoxPlot height={220} caption="出品时长" unit="min" horizontal
+        groups={[{label:"热菜档",values:grp(14,3,60,[27,31])},{label:"凉菜档",values:grp(6,1.5,60)},{label:"点心档",values:grp(9,2.2,60,[19])},{label:"汤羹档",values:grp(11,2.5,60)}]}/></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

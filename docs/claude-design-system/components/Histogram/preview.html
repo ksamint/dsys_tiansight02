@@ -1,0 +1,36 @@
+<!-- @dsCard group="Charts" height=362 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Histogram — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+const rnd = /* @__PURE__ */ ((seed) => () => {
+  seed = (seed * 9301 + 49297) % 233280;
+  return seed / 233280;
+})(7);
+const norm = (m, s) => {
+  const u = rnd() || 1e-6, v = rnd();
+  return m + s * Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
+};
+const apc = Array.from({ length: 420 }, (_, i) => Math.max(20, i % 3 ? norm(72, 14) : norm(128, 18)));
+const grp = (m, s, n, out) => Array.from({ length: n }, () => norm(m, s)).concat(out || []);
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { maxWidth: 620 } }, /* @__PURE__ */ React.createElement(
+  Histogram,
+  {
+    height: 220,
+    caption: "\u4EBA\u5747\u6D88\u8D39\u5206\u5E03",
+    unit: "\u5143",
+    bins: 26,
+    values: apc,
+    grade: "E1",
+    scope: "\u5802\u98DF\u8D26\u5355 \xF7 \u767B\u8BB0\u4EBA\u6570",
+    marks: [{ label: "\u5747\u503C", value: 91 }, { label: "\u9884\u7B97\u4E0A\u9650", value: 150, tone: "loss" }]
+  }
+))));
+</script>
+</body>
+</html>

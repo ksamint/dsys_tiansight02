@@ -1,0 +1,31 @@
+<!-- @dsCard group="Components" viewport="700x400" name="People" subtitle="ExpertCard (专家顾问团), PartnerCase (伙伴案例)" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { ExpertCard, PartnerCase } = window.TIANSIGHTDesignSystem_bb63dc;
+function Demo(){
+  return <div style={{display:'flex',flexDirection:'column',gap:26}}>
+    <div><div className="lbl">ExpertCard — photos pending, placeholder is the correct state</div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:22}}>
+        <ExpertCard name="专家姓名" title="淮扬菜出品顾问" field="菜品结构 · 出餐标准" size={92}/>
+        <ExpertCard name="专家姓名" title="连锁运营顾问" field="门店标准 · 人效" size={92}/>
+        <ExpertCard name="专家姓名" title="供应链顾问" field="成本优化 · 损耗" size={92}/>
+        <ExpertCard name="专家姓名" title="会员增长顾问" field="复购分层 · 渠道" size={92}/>
+      </div></div>
+    <div><div className="lbl">PartnerCase</div>
+      <PartnerCase brand="韵 1980 新派淮扬菜" kind="新派淮扬菜" stores={7} since="2024-09"
+        summary="午市结构与折扣叠加同时改动，两个季度内利润率回到目标区间。"
+        metrics={[{label:"午市客单",before:"68 元",after:"74 元",delta:"+8.8%"},
+                  {label:"折扣率",before:"6.7%",after:"4.9%",delta:"-1.8pt",tone:"loss"},
+                  {label:"会员复购",before:"29.8%",after:"31.2%",delta:"+1.4pt"}]}
+        actions={["重排午市套餐结构，主推高毛利招牌组合","收紧平台满减与会员券叠加规则"]}
+        quote={{text:"不仅把问题讲清楚，还把优先级、责任人和验收指标都排好了。",by:"李总",role:"餐饮老板"}}/></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

@@ -1,0 +1,65 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>侍天 销售提案 · 16:9</title><link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../_ds_bundle.js"></script>
+<script src="./deck-stage.js"></script>
+<style>html,body{margin:0}deck-stage:not(:defined){visibility:hidden}section{width:1280px;height:720px;overflow:hidden}</style>
+</head><body>
+<deck-stage width="1280" height="720">
+<section data-label="封面" data-screen-label="01"></section>
+<section data-label="承诺" data-screen-label="02"></section>
+<section data-label="节首 · 经营五问" data-screen-label="03"></section>
+<section data-label="经营五问" data-screen-label="04"></section>
+<section data-label="节首 · 以样张为证" data-screen-label="05"></section>
+<section data-label="样张为证" data-screen-label="06"></section>
+<section data-label="图谱" data-screen-label="07"></section>
+<section data-label="三层 + X" data-screen-label="08"></section>
+<section data-label="伙伴背书" data-screen-label="09"></section>
+<section data-label="专家顾问团" data-screen-label="10"></section>
+<section data-label="联系" data-screen-label="11"></section>
+</deck-stage>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_bb63dc;
+const { TitleSlide, PromiseSlide, SectionSlide, FiveQuestionsSlide, ProofSlide, ChartSlide, LadderSlide, PartnerWallSlide, ExpertTeamSlide, ContactSlide, Matrix2x2 } = NS;
+
+const MATRIX = {
+  xAxis: "点单渗透率", yAxis: "毛利率",
+  quadrants: [
+    { label: "高毛利低渗透 · 值得推", tone: "caution" },
+    { label: "招牌担当 · 守住", tone: "growth" },
+    { label: "低毛利低渗透 · 下架候选", tone: "muted" },
+    { label: "低毛利高渗透 · 改配方", tone: "loss" }
+  ],
+  points: [
+    { label: "文思豆腐", x: .74, y: .78, tone: "growth", size: 12 },
+    { label: "蟹粉狮子头", x: .28, y: .72, tone: "caution", size: 12 },
+    { label: "响油鳝糊", x: .68, y: .22, tone: "loss", size: 12 },
+    { label: "冷碟拼盘", x: .2, y: .18, tone: "muted", size: 12 },
+    { label: "松鼠鳜鱼", x: .55, y: .6, tone: "bronze", size: 12 }
+  ]
+};
+
+const DECK = [
+  <TitleSlide client="韵 1980 新派淮扬菜" date="2025-09-04" page={1}/>,
+  <PromiseSlide page={2}/>,
+  <SectionSlide index={1} title="经营五问" subtitle="逐店逐月，循环推演。五问既明，百事可决。" page={3}/>,
+  <FiveQuestionsSlide active={1} page={4}/>,
+  <SectionSlide index={2} title="以样张为证" subtitle="一份报告，就是一份决策文件。" page={5}/>,
+  <ProofSlide page={6}/>,
+  <ChartSlide chartTitle="渗透率矩阵" page={7}
+    chart={<Matrix2x2 height={392} {...MATRIX}/>}
+    takeaway="招牌菜渗透高、毛利稳；响油鳝糊与冷碟拼盘拖低整体毛利。"
+    action="重排午市套餐结构，主推高毛利招牌组合"
+    source="数据来源：收银流水 2025-03 至 2025-08。"/>,
+  <LadderSlide highlight={1} page={8}/>,
+  <PartnerWallSlide page={9}/>,
+  <ExpertTeamSlide page={10}/>,
+  <ContactSlide page={11}/>
+];
+
+document.querySelectorAll("deck-stage > section").forEach((el, n) => {
+  if (DECK[n]) ReactDOM.createRoot(el).render(DECK[n]);
+});
+</script>
+</body></html>

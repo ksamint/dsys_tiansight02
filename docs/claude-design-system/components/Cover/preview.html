@@ -1,0 +1,39 @@
+<!-- @dsCard height=300 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Cover</title>
+<style>
+html,body{margin:0;background:var(--surface)}
+.cover{position:relative;width:960px;height:300px;overflow:hidden;background:var(--surface)}
+svg{position:absolute;inset:0}
+.blk{rx:var(--radius);ry:var(--radius)}
+.ink{fill:var(--ink-primary)}.char{fill:var(--charcoal)}.gold{fill:var(--gold)}.hi{fill:var(--gold-hi)}.seal{fill:var(--seal)}
+.ring{fill:none;stroke:var(--gold);stroke-width:var(--border-hair)}
+.name{position:absolute;left:48px;top:40px;bottom:40px;width:470px;display:flex;flex-direction:column}
+.name img{width:64px;height:64px;object-fit:contain;display:block}
+.wm{margin:28px 0 0;font-family:var(--font-en);font-size:44px;line-height:1;letter-spacing:.24em;white-space:nowrap}
+.wm .k{color:var(--charcoal);font-weight:700}.wm .g{color:var(--gold-400);font-weight:400}
+.pos{margin:18px 0 0;font-family:var(--font-display);font-weight:600;font-size:22px;line-height:1.5;letter-spacing:.08em;color:var(--charcoal)}
+.tag{margin:auto 0 0;font-family:var(--font-body);font-size:14px;line-height:1.4;letter-spacing:.34em;color:var(--gold-deep)}
+</style></head>
+<body>
+<div class="cover">
+<svg width="960" height="300" viewBox="0 0 960 300" aria-hidden="true">
+<!-- blocks: ink-primary 336×300 slab (bleeds right), charcoal 192×96, gold 96×96, gold-hi 48×48, seal 24×24 — the palette by identity: 素墨 field, 玄墨 voice, 土金 structure, 明金 key, 朱红 ≤5%
+     arrangement: one tall slab bleeding off the right edge with satellites stepping down-left, square print corners
+     pattern: literal motif row — the compass ring (README: "a single oversized outline seal circle", the hero watermark); three concentric hairline rings + four ticks
+     scales: sides space-10 96 / space-8 48 / space-6 24 multiples; corners radius 2px; ring stroke border-hair 1px; ring radii 96 / 64 / 32 -->
+<rect class="blk ink" x="624" y="0" width="336" height="300"/>
+<rect class="blk char" x="528" y="168" width="192" height="96"/>
+<rect class="blk gold" x="720" y="72" width="96" height="96"/>
+<rect class="blk hi" x="816" y="168" width="48" height="48"/>
+<rect class="blk seal" x="864" y="216" width="24" height="24"/>
+<circle class="ring" cx="816" cy="120" r="96"/>
+<circle class="ring" cx="816" cy="120" r="64"/>
+<circle class="ring" cx="816" cy="120" r="32"/>
+<path class="ring" d="M816 0v24M816 216v24M696 120h24M912 120h24"/>
+</svg>
+<div class="name"><img src="/_blob/d258c06d1f23c1d069d8e9d63c556406" alt="侍天印章"><h1 class="wm" aria-label="TIANSIGHT"><span class="k">T</span><span class="g">I</span><span class="k">A</span><span class="g">NSIGHT</span></h1><p class="pos">从一道菜，到一家家店的好生意。</p><p class="tag">拍板之前，问侍天。</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+export interface QuoteProps extends React.HTMLAttributes<HTMLElement> { by?: string; children: React.ReactNode; }

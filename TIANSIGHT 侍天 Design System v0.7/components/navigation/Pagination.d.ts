@@ -1,0 +1,1 @@
+export interface PaginationProps extends React.HTMLAttributes<HTMLUListElement> { pages: number; current: number; onChange?: (n: number) => void; }

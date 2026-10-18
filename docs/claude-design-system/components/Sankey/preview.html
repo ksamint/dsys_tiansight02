@@ -1,0 +1,27 @@
+<!-- @dsCard group="Charts" height=412 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Sankey — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { maxWidth: 620 } }, /* @__PURE__ */ React.createElement(
+  Sankey,
+  {
+    height: 270,
+    caption: "\u66DD\u5149 \u2192 \u5230\u5E97 \u2192 \u6210\u4EA4",
+    unit: " \u5355",
+    grade: "E2",
+    scope: "\u5E73\u53F0 UV \u53E3\u5F84\uFF1B\u672A\u5339\u914D\u90E8\u5206\u4FDD\u7559\u4E3A\u8282\u70B9",
+    stages: ["\u6765\u6E90", "\u5230\u5E97", "\u7ED3\u679C"],
+    groupTone: { \u7EBF\u4E0A: "key", \u7EBF\u4E0B: "gold", \u7ED3\u679C: "charcoal" },
+    nodes: [{ id: "\u70B9\u8BC4", group: "\u7EBF\u4E0A" }, { id: "\u6296\u97F3", group: "\u7EBF\u4E0A" }, { id: "\u5C0F\u7EA2\u4E66", group: "\u7EBF\u4E0A" }, { id: "\u81EA\u7136\u5230\u5E97", group: "\u7EBF\u4E0B" }, { id: "\u56E2\u8D2D\u6838\u9500", group: "\u7EBF\u4E0B" }, { id: "\u5230\u5E97", group: "\u7ED3\u679C" }, { id: "\u6210\u4EA4", group: "\u7ED3\u679C" }, { id: "\u672A\u5B8C\u6210", tone: "loss" }, { id: "\u672A\u77E5\u6765\u6E90", tone: "muted" }],
+    links: [{ source: "\u70B9\u8BC4", target: "\u5230\u5E97", value: 620 }, { source: "\u6296\u97F3", target: "\u5230\u5E97", value: 200 }, { source: "\u5C0F\u7EA2\u4E66", target: "\u5230\u5E97", value: 120 }, { source: "\u81EA\u7136\u5230\u5E97", target: "\u5230\u5E97", value: 610 }, { source: "\u56E2\u8D2D\u6838\u9500", target: "\u5230\u5E97", value: 180 }, { source: "\u5230\u5E97", target: "\u6210\u4EA4", value: 1290 }, { source: "\u5230\u5E97", target: "\u672A\u5B8C\u6210", value: 340, tone: "loss" }, { source: "\u672A\u77E5\u6765\u6E90", target: "\u6210\u4EA4", value: 140 }]
+  }
+))));
+</script>
+</body>
+</html>

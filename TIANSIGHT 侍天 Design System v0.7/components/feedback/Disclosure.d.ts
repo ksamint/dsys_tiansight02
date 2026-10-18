@@ -1,0 +1,1 @@
+export interface DisclosureProps extends React.HTMLAttributes<HTMLDetailsElement> { summary: React.ReactNode; open?: boolean; children: React.ReactNode; }

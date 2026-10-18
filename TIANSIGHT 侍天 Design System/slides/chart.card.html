@@ -1,0 +1,17 @@
+<!-- @dsCard group="Slides" viewport="1280x720" name="图谱 · Chart" subtitle="Chart + 结论 + 先改这件" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../_ds_bundle.js"></script>
+<style>html,body{margin:0;background:var(--surface-page)}#root{width:1280px;height:720px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { SlideFrame, SlideTitle, SlidePlaceholder, TitleSlide, PromiseSlide, SectionSlide, FiveQuestionsSlide, ProofSlide, ChartSlide, LadderSlide, PartnerWallSlide, ExpertTeamSlide, ContactSlide, Matrix2x2, BarSeries } = window.TIANSIGHTDesignSystem_bb63dc;
+ReactDOM.createRoot(document.getElementById('root')).render(<ChartSlide chartTitle="渗透率矩阵" page={6}
+    chart={<Matrix2x2 height={392} {...{xAxis:"点单渗透率",yAxis:"毛利率",
+  quadrants:[{label:"高毛利低渗透 · 值得推",tone:"caution"},{label:"招牌担当 · 守住",tone:"growth"},{label:"低毛利低渗透 · 下架候选",tone:"muted"},{label:"低毛利高渗透 · 改配方",tone:"loss"}],
+  points:[{label:"文思豆腐",x:.74,y:.78,tone:"growth",size:12},{label:"蟹粉狮子头",x:.28,y:.72,tone:"caution",size:12},{label:"响油鳝糊",x:.68,y:.22,tone:"loss",size:12},{label:"冷碟拼盘",x:.2,y:.18,tone:"muted",size:12},{label:"松鼠鳜鱼",x:.55,y:.6,tone:"bronze",size:12}]}}/>}
+    takeaway="招牌菜渗透高、毛利稳；响油鲝糊与冷碟拼盘拖低整体毛利。"
+    action="重排午市套餐结构，主推高毛利招牌组合"
+    source="数据来源：收银流水 2025-03 至 2025-08。"/>);
+</script></body></html>

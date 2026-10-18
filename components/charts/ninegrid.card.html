@@ -1,0 +1,29 @@
+<!-- @dsCard group="Charts" viewport="700x360" name="NineGrid · 九宫格 维度分析" subtitle="味型 × 工艺 and the seven structure presets — click a cell, "·" marks a 研发补缺 gap" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { NineGrid, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const rnd = (seed => () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; })(9);
+const pick = (a) => a[Math.floor(rnd() * a.length)];
+const FLAVOR = ["咸鲜","江南咸甜","酱香浓郁","清鲜本味","糟醉酒香","酸甜","微辣融合"], CRAFT = ["清炒","红烧","清蒸","白灼","糟卤","油爆","炖煮","凉拌","炸","烤"];
+const ING = ["河鲜","海鲜","禽","畜肉","豆制品","时蔬","菌菇","点心","主食"], BAND = ["<40","40–69","70–99","100–149","150–199","200+"], SCENE = ["商务","家庭","社交","工作餐","包厢"];
+const dishes = Array.from({length: 96}, (_, i) => ({ name: "菜品-" + String(i + 1).padStart(2, "0"), flavor: pick(FLAVOR), craft: pick(CRAFT), ingredient: pick(ING), price_band: pick(BAND), primary_scene: pick(SCENE), amt: Math.round(3000 + rnd() * 40000) }));
+function Demo(){
+  const [p, setP] = React.useState(-1);
+  const [row, col] = STRUCTURE_PRESETS[p] || ["flavor","craft"];
+  return <div style={{display:'flex',flexDirection:'column',gap:14}}>
+    <div style={{display:'flex',gap:6,flexWrap:'wrap',alignItems:'center'}}>
+      <span className="lbl" style={{margin:0,marginRight:6}}>结构预设</span>
+      {[["flavor","craft"]].concat(STRUCTURE_PRESETS).map(([r,c],i) => { const on = i === 0 ? p === -1 : p === i - 1; return <button key={i} onClick={() => setP(i - 1)} style={{fontFamily:'var(--font-body)',fontSize:11,padding:'3px 9px',border:'1px solid ' + (on ? 'var(--gold)' : 'var(--line-card)'),background: on ? 'var(--ink-primary)' : 'var(--paper)',color:'var(--charcoal)',borderRadius:'var(--radius)',cursor:'pointer'}}>{DIMENSION_LABELS[r]} × {DIMENSION_LABELS[c]}</button>; })}
+    </div>
+    <NineGrid items={dishes} rowDim={p === -1 ? "flavor" : row} colDim={p === -1 ? "craft" : col} grade="E1" scope="analysis_cohort = 菜品，n=96；酒水不进分母" maxRows={9} />
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

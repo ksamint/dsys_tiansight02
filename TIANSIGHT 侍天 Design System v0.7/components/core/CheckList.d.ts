@@ -1,0 +1,1 @@
+export interface CheckListProps extends React.HTMLAttributes<HTMLUListElement> { items: { text: string; /** ✕ in vermillion */ no?: boolean }[]; }

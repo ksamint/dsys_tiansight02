@@ -1,0 +1,20 @@
+<!-- @dsCard group="Charts" height=216 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Heatmap — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+const rows = ["\u65D7\u8230\u5E97", "\u6CB3\u897F\u5E97", "\u57CE\u5317\u5E97"], cols = ["03", "04", "05", "06", "07", "08"];
+const vals = {};
+const seed = [4.2, 2.1, -1.4, 3.8, 5.1, 6.2, 1.2, 0.4, -2.2, 1.9, 2.4, 3.1, -3.4, -4.1, -2.8, -1.2, 0.6, 1.4];
+rows.forEach((r, ri) => cols.forEach((c, ci) => {
+  vals[r + "|" + c] = seed[ri * 6 + ci];
+}));
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { maxWidth: 620 } }, /* @__PURE__ */ React.createElement(Heatmap, { diverging: true, unit: "%", caption: "\u9010\u5E97\u9010\u6708 \xB7 \u540C\u6BD4", rows, columns: cols, values: vals }))));
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+:root{
+/* ── Brand base: 主色 parchment ─────────────────────────── */
+--parchment-50:#FBF8F1;--parchment-100:#F6F1E4;--parchment-200:#EFE6D2;/* 主色 */
+--parchment-300:#E4D8BE;--parchment-400:#D6C6A4;--parchment-500:#C3AF87;
+
+/* ── Brand base: 辅助色 bronze ──────────────────────────── */
+--bronze-100:#EADFC6;--bronze-200:#D2BD8E;--bronze-300:#B0925A;--bronze-400:#8F6F31;
+--bronze-500:#76551F;/* 辅助色 */--bronze-600:#5F4416;--bronze-700:#46310F;
+
+/* ── Wordmark gold: lighter than 辅助色 so INSIGHT separates from the ink T/A ── */
+--gold-400:#A8842F;--gold-300:#C0A052;
+
+/* ── Ink / neutrals ────────────────────────────────────── */
+--ink-900:#241F19;--ink-800:#332C24;--ink-700:#4A4136;--ink-600:#5B4A3F;/* 印章墨 */
+--ink-500:#6E6355;--ink-400:#8B8072;--ink-300:#ABA192;--ink-200:#CFC7B7;
+--ink-100:#E6E0D2;--ink-050:#F2EEE4;--paper:#FFFDF8;
+
+/* ── Semantic data colors (report charts) ──────────────── */
+--growth-500:#4E6B3F;--growth-200:#C3D3B4;/* 增长 */
+--loss-500:#A34A2C;--loss-200:#E6C7B9;/* 利润流失 */
+--caution-500:#B98B2A;--caution-200:#EFDCAE;/* 关注 */
+--datum-500:#3F5A6B;--datum-200:#C0CFD8;/* 中性数据 */
+
+/* ── Semantic aliases ──────────────────────────────────── */
+--surface-page:var(--parchment-200);
+--surface-page-alt:var(--parchment-100);
+--surface-card:var(--paper);
+--surface-card-muted:var(--parchment-50);
+--surface-inverse:var(--ink-900);
+--surface-seal:var(--bronze-500);
+--surface-sunken:var(--parchment-300);
+
+--text-display:var(--ink-900);
+--text-body:var(--ink-700);
+--text-muted:var(--ink-400);
+--text-accent:var(--bronze-500);
+--text-wordmark-gold:var(--gold-400);
+--text-on-inverse:var(--parchment-100);
+--text-on-accent:var(--parchment-50);
+
+--line-hairline:rgba(118,85,31,.16);
+--line-rule:rgba(118,85,31,.28);
+--line-strong:var(--bronze-500);
+--line-inverse:rgba(239,230,210,.22);
+
+--focus-ring:rgba(118,85,31,.38);
+}

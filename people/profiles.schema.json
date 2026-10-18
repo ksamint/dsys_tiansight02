@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tiansight.apuch.art/people/profiles.schema.json",
+  "title": "侍天 TIANSIGHT co-founder profile library",
+  "description": "The data contract behind people/profile-*.html. A host system can validate a payload against this before pushing it to a page (postMessage) or writing it to people/profiles.json (rebuild). Every list entry carries a stable id, which is how the page addresses it: cases.<case id>.results.<result id>.value.",
+  "type": "object",
+  "required": ["schema", "version", "issued", "branding", "categories", "grades", "sources", "profiles"],
+  "properties": {
+    "schema": { "const": "tiansight.profiles/1" },
+    "version": { "type": "string", "pattern": "^v\\d+\\.\\d+$" },
+    "issued": { "type": "string", "format": "date" },
+    "note": { "type": "string" },
+    "branding": {
+      "type": "object",
+      "required": ["logo", "wordmark", "alliance", "cobrand_label"],
+      "properties": {
+        "logo": { "type": "string", "description": "Path or URL of the 侍天 mark, rendered on every page" },
+        "wordmark": { "type": "string" },
+        "alliance": { "type": "string" },
+        "cobrand_label": { "type": "string", "description": "Placeholder text for the reserved co-brand logo slot" },
+        "cobrand_logo": { "type": "string" }
+      }
+    },
+    "categories": {
+      "type": "object",
+      "description": "The closed vocabulary every entry's type must come from",
+      "additionalProperties": { "type": "object", "required": ["zh", "en"], "properties": { "zh": { "type": "string" }, "en": { "type": "string" }, "note": { "type": "string" } } }
+    },
+    "grades": { "type": "object", "propertyNames": { "pattern": "^E[1-4]$" }, "additionalProperties": { "type": "string" } },
+    "sources": {
+      "type": "object",
+      "additionalProperties": { "type": "object", "required": ["label", "kind", "date", "grade"], "properties": { "label": { "type": "string" }, "kind": { "type": "string" }, "date": { "type": "string" }, "grade": { "$ref": "#/$defs/grade" } } }
+    },
+    "profiles": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/profile" } },
+    "lexicon_edits": { "type": "array", "items": { "type": "object", "required": ["profile", "from", "to", "why"] } },
+    "open_items": { "type": "array", "items": { "type": "object", "required": ["profile", "text"] } }
+  },
+  "$defs": {
+    "grade": { "type": "string", "enum": ["E1", "E2", "E3", "E4"] },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "numbered": {
+      "description": "Anything that prints a number must say where it came from",
+      "type": "object",
+      "required": ["grade", "source"],
+      "properties": { "grade": { "$ref": "#/$defs/grade" }, "source": { "type": "string" } }
+    },
+    "aux_title": {
+      "type": "object", "required": ["zh", "show"],
+      "properties": { "zh": { "type": "string" }, "en": { "type": "string" }, "show": { "type": "boolean" } }
+    },
+    "figure": {
+      "allOf": [{ "$ref": "#/$defs/numbered" }],
+      "required": ["id", "type", "value", "label", "zh"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "type": { "const": "figure" }, "value": { "type": "string" }, "unit": { "type": "string" }, "label": { "type": "string" }, "zh": { "type": "string" }, "note": { "type": "string" } }
+    },
+    "result": {
+      "allOf": [{ "$ref": "#/$defs/numbered" }],
+      "required": ["id", "metric", "value", "window"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "metric": { "type": "string" }, "value": { "type": "string" }, "window": { "type": "string" } }
+    },
+    "fact": { "type": "object", "required": ["k", "v"], "properties": { "k": { "type": "string" }, "v": { "type": "string" } } },
+    "case": {
+      "type": "object",
+      "required": ["id", "type", "title", "facts", "strategy", "results", "show_in"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" }, "type": { "const": "case" }, "title": { "type": "string" },
+        "facts": { "type": "array", "items": { "$ref": "#/$defs/fact" }, "description": "A pair of keys that differ only by 前/后 (调整前人均 / 调整后人均) draws the before-and-after strip" },
+        "strategy": { "type": "string" },
+        "results": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/result" } },
+        "capabilities": { "type": "array", "items": { "$ref": "#/$defs/id" }, "description": "ids from this profile's capabilities" },
+        "show_in": { "type": "array", "items": { "enum": ["full", "onepage"] } }
+      }
+    },
+    "entry": {
+      "type": "object", "required": ["id", "type"],
+      "properties": { "id": { "$ref": "#/$defs/id" }, "type": { "type": "string" } }
+    },
+    "profile": {
+      "type": "object",
+      "required": ["id", "order", "name", "en", "domain", "domain_zh", "photo", "source", "title_main", "titles_aux", "lede", "summary", "quote", "keywords", "figures", "principles", "capabilities", "portfolio_lede", "cases"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "order": { "type": "string" },
+        "name": { "type": "string" }, "en": { "type": "string" },
+        "domain": { "type": "string" }, "domain_zh": { "type": "string" },
+        "photo": { "type": "string" },
+        "source": { "type": "string", "description": "key in sources; the default provenance of this profile's claims" },
+        "title_main": { "type": "string", "description": "Fixed for co-founders: 侍天联合创始人" },
+        "titles_aux": { "type": "array", "items": { "$ref": "#/$defs/aux_title" }, "description": "At most three may have show: true" },
+        "lede": { "type": "string" }, "summary": { "type": "array", "items": { "type": "string" } }, "quote": { "type": "string" },
+        "keywords": { "type": "string" }, "portfolio_lede": { "type": "string" },
+        "contact": { "type": "object" },
+        "cobrand": { "type": "object", "properties": { "label": { "type": "string" }, "logo": { "type": "string" } } },
+        "figures": { "type": "array", "items": { "$ref": "#/$defs/figure" } },
+        "principles": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/entry" } },
+        "capabilities": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "brands": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "services": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "roles": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "education": { "type": "array", "items": { "$ref": "#/$defs/entry" } },
+        "trainings": { "type": "array", "items": { "allOf": [{ "$ref": "#/$defs/entry" }, { "$ref": "#/$defs/numbered" }] } },
+        "cases": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/case" } }
+      }
+    }
+  }
+}

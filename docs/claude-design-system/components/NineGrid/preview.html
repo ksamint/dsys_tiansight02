@@ -1,0 +1,22 @@
+<!-- @dsCard group="Charts" height=365 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>NineGrid — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+const rnd = /* @__PURE__ */ ((seed) => () => {
+  seed = (seed * 9301 + 49297) % 233280;
+  return seed / 233280;
+})(9);
+const pick = (a) => a[Math.floor(rnd() * a.length)];
+const FLAVOR = ["\u54B8\u9C9C", "\u6C5F\u5357\u54B8\u751C", "\u9171\u9999\u6D53\u90C1", "\u6E05\u9C9C\u672C\u5473", "\u7CDF\u9189\u9152\u9999", "\u9178\u751C", "\u5FAE\u8FA3\u878D\u5408"], CRAFT = ["\u6E05\u7092", "\u7EA2\u70E7", "\u6E05\u84B8", "\u767D\u707C", "\u7CDF\u5364", "\u6CB9\u7206", "\u7096\u716E", "\u51C9\u62CC", "\u70B8", "\u70E4"];
+const ING = ["\u6CB3\u9C9C", "\u6D77\u9C9C", "\u79BD", "\u755C\u8089", "\u8C46\u5236\u54C1", "\u65F6\u852C", "\u83CC\u83C7", "\u70B9\u5FC3", "\u4E3B\u98DF"], BAND = ["<40", "40\u201369", "70\u201399", "100\u2013149", "150\u2013199", "200+"], SCENE = ["\u5546\u52A1", "\u5BB6\u5EAD", "\u793E\u4EA4", "\u5DE5\u4F5C\u9910", "\u5305\u53A2"];
+const dishes = Array.from({ length: 96 }, (_, i) => ({ name: "\u83DC\u54C1-" + String(i + 1).padStart(2, "0"), flavor: pick(FLAVOR), craft: pick(CRAFT), ingredient: pick(ING), price_band: pick(BAND), primary_scene: pick(SCENE), amt: Math.round(3e3 + rnd() * 4e4) }));
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(NineGrid, { items: dishes, rowDim: "flavor", colDim: "craft", grade: "E1", scope: "analysis_cohort = \u83DC\u54C1\uFF0Cn=96\uFF1B\u9152\u6C34\u4E0D\u8FDB\u5206\u6BCD", maxRows: 9 })));
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- @dsCard group="Charts" height=331 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Dumbbell — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { maxWidth: 620 } }, /* @__PURE__ */ React.createElement(
+  Dumbbell,
+  {
+    caption: "\u516D\u9879 KPI \xB7 P1 \u2192 P2",
+    unit: "%",
+    grade: "E1",
+    fromLabel: "P1 03\u201305",
+    toLabel: "P2 06\u201308",
+    labelWidth: 72,
+    rows: [{ label: "\u6BDB\u5229\u7387", before: 58.2, after: 61.4 }, { label: "\u6298\u6263\u7387", before: 12.1, after: 8.3 }, { label: "\u7FFB\u53F0\u7387", before: 2.1, after: 2.4 }, { label: "\u4EBA\u5747", before: 86, after: 84 }, { label: "\u590D\u8D2D\u7387", before: 31, after: 36 }, { label: "\u635F\u8017\u7387", before: 4.8, after: 3.9 }]
+  }
+))));
+</script>
+</body>
+</html>

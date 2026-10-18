@@ -1,0 +1,31 @@
+/* Tiansight 侍天 — v0.7 rulings of 2026-09-08 (docs/foundation-review.md). Loads after brand/tokens.css. */
+:root {
+  /* Q2 · tagline sets in deep gold at every size; bright gold = 28px+ figures, active states, charcoal grounds */
+  --text-tagline: var(--gold-deep);
+
+  /* p1 · gold ramp — hover one step darker, press two */
+  --gold-100: #F3E7CF; --gold-300: #D4A862; --gold-400: #A8842F;
+  --gold-500: #76551F; --gold-600: #5C4218; --gold-700: #3F2D0F;
+  --gold-hover: var(--gold-600); --gold-press: var(--gold-700);
+
+  /* p2 · shadow — dialogs and overlays only; cards stay bordered */
+  --shadow-1: 0 1px 2px rgba(23,19,13,0.08);
+  --shadow-2: 0 2px 6px rgba(23,19,13,0.10);
+  --shadow-3: 0 6px 18px rgba(23,19,13,0.12);
+  --shadow-4: 0 14px 40px rgba(23,19,13,0.16);
+
+  /* p4 · interface type steps below the guide's 13px caption */
+  --text-ui: 1rem; --text-table: 0.875rem; --text-badge: 0.75rem; --text-tick: 0.6875rem;
+
+  /* p5 · semantic chart set — report only, when 增长 must be told from 关注 */
+  --chart-growth: #4E6B3F; --chart-caution: #B98B2A; --chart-benchmark-solid: #6E6355; --chart-loss: var(--seal);
+
+  /* p6 · inverse surface — one card per view (百年共创 tier); never a page ground */
+  --surface-inverse: var(--charcoal); --text-on-inverse: var(--surface);
+  --muted-on-inverse: rgba(244,240,231,0.72); --line-inverse: rgba(244,240,231,0.22);
+}
+.ts-tagline { color: var(--text-tagline); }
+.ts-ground-charcoal .ts-tagline, .ts-card-charcoal .ts-tagline { color: var(--gold-hi); }
+.ts-button-secondary:hover, .ts-nav a:hover, .ts-button-quiet:hover { color: var(--gold-hover); border-color: var(--gold-hover); }
+.ts-button-secondary:active, .ts-button-quiet:active { color: var(--gold-press); border-color: var(--gold-press); }
+.ts-dialog { box-shadow: var(--shadow-3); }

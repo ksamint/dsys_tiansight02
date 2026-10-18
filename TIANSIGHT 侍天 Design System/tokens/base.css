@@ -1,0 +1,20 @@
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--surface-page);color:var(--text-body);font-family:var(--font-body);font-size:var(--text-base);line-height:var(--leading-normal);letter-spacing:var(--tracking-cjk-body);text-wrap:pretty}
+h1,h2,h3,h4{font-family:var(--font-heading);color:var(--text-display);font-weight:var(--weight-medium);line-height:var(--leading-snug);letter-spacing:var(--tracking-cjk-display);margin:0}
+h1{font-size:var(--text-4xl);line-height:var(--leading-tight)}h2{font-size:var(--text-3xl)}h3{font-size:var(--text-xl)}h4{font-size:var(--text-lg)}
+p{margin:0 0 var(--space-4)}
+a{color:var(--text-accent);text-decoration:none;border-bottom:1px solid var(--line-rule);transition:color var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard)}
+a:hover{color:var(--bronze-600);border-color:var(--line-strong)}
+a:active{color:var(--bronze-700)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
+hr{border:0;border-top:var(--border-hair) solid var(--line-hairline);margin:var(--space-7) 0}
+::selection{background:var(--bronze-200);color:var(--ink-900)}
+.ts-num{font-family:var(--font-numeral);font-variant-numeric:tabular-nums;letter-spacing:0}
+.ts-eyebrow{font-family:var(--font-body);font-size:var(--text-2xs);text-transform:uppercase;letter-spacing:var(--tracking-caps);color:var(--text-accent)}
+.ts-latin{font-family:var(--font-quote);letter-spacing:var(--tracking-latin)}
+.ts-measure{max-width:var(--measure)}
+/* 宣纸底纹: the one texture the brand uses — a faint warm grain over parchment */
+.ts-paper{background-color:var(--surface-page);background-image:radial-gradient(rgba(118,85,31,.05) .5px,transparent .5px),radial-gradient(rgba(118,85,31,.035) .5px,transparent .5px);background-size:14px 14px,9px 9px;background-position:0 0,4px 6px}
+.ts-rule-top{border-top:var(--border-hair) solid var(--line-hairline)}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}

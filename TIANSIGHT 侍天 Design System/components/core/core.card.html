@@ -1,0 +1,48 @@
+<!-- @dsCard group="Components" viewport="700x430" name="Core" subtitle="Button, Badge, Tag, Seal, Stat, StepMarker, Quote" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}.stack{display:flex;flex-direction:column;gap:18px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { Button, IconButton, Icon, Badge, Tag, Seal, Stat, StepMarker, Quote, Card, Divider, Eyebrow } = window.TIANSIGHTDesignSystem_bb63dc;
+function Demo(){
+  return <div className="stack">
+    <div><div className="lbl">Button</div><div className="row">
+      <Button variant="primary" icon={<Icon name="arrow-right" size={15}/>}>进入平台</Button>
+      <Button variant="secondary">服务与价格</Button>
+      <Button variant="ghost" size="sm">更多伙伴</Button>
+      <Button variant="primary" size="sm" disabled>正在签约中</Button>
+      <IconButton icon={<Icon name="search" size={17}/>} label="搜索" variant="outline"/>
+    </div></div>
+    <div><div className="lbl">Badge · Tag</div><div className="row">
+      <Badge tone="bronze" variant="solid">真实报告</Badge><Badge tone="neutral">V4.2</Badge>
+      <Badge tone="growth">增长机会</Badge><Badge tone="loss">利润流失</Badge>
+      <Badge tone="caution" variant="outline">关注</Badge>
+      <Tag active>菜品结构</Tag><Tag onClick={()=>{}}>商圈供需</Tag>
+    </div></div>
+    <div><div className="lbl">Seal · Stat · StepMarker</div><div className="row" style={{gap:32,alignItems:'flex-start'}}>
+      <Seal size={38} wordmark subtitle="智慧餐饮" src="../../assets/logo-seal.png"/>
+      <Divider vertical spacing="0"/>
+      <Stat label="交付周期" value="7" unit="日内" tone="bronze"/>
+      <Stat label="利润流失" value="-4.8" unit="%" tone="loss" note="折扣结构性让利"/>
+      <Divider vertical spacing="0"/>
+      <div className="stack" style={{gap:10}}>
+        <StepMarker index={1} label="现状" sublabel="现在怎样 · 看清经营" active size={38}/>
+        <StepMarker index={2} label="机会" sublabel="机会在哪 · 发现增长点" size={38}/>
+      </div>
+    </div></div>
+    <div><div className="lbl">Card · Quote</div><div className="row" style={{alignItems:'stretch'}}>
+      <Card padding="md" emphasized style={{width:250}}>
+        <Eyebrow>看得清</Eyebrow>
+        <p style={{margin:'8px 0 0',fontSize:'var(--text-sm)'}}>收银、平台、会员数据合成一本账，每个数字有出处。</p>
+      </Card>
+      <Card padding="md" interactive style={{width:330}}>
+        <Quote size="sm" author="王总" role="餐饮老板">太高效，也太透彻了。</Quote>
+      </Card>
+    </div></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

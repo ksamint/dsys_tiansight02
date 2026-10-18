@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>接入示例 · 侍天 TIANSIGHT</title>
+<!-- The only Tiansight file a consuming site needs. Replace with the published URL:
+     https://tiansight.apuch.art/dist/tiansight.css        (follows every push)
+     https://tiansight.apuch.art/dist/tiansight-v0.6.css   (frozen at v0.6) -->
+<link rel="stylesheet" href="tiansight.css">
+<style>
+  .demo { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); }
+</style>
+</head>
+<body>
+<a class="ts-skip" href="#top">跳到正文</a>
+<main id="top" class="ts-container ts-section">
+  <div class="ts-heading">
+    <span class="ts-caption">Integration example · 接入示例</span>
+    <h1>一个外部页面接入侍天</h1>
+    <p class="ts-sub">本页只引用 <code>dist/tiansight.css</code>，没有其他依赖。字体、令牌、基础元素与全部 <code>.ts-</code> 组件随该文件一起到达；侍天推送新版本后，链接 <code>tiansight.css</code> 的站点自动跟进，链接 <code>tiansight-v0.6.css</code> 的站点保持不变。</p>
+  </div>
+
+  <div class="demo" style="margin-top:var(--space-7)">
+    <article class="ts-card" data-index="壹">
+      <span class="ts-caption">Typography · 字体</span>
+      <h2 class="ts-card-title">标题与正文</h2>
+      <p>宋体承担全部叙述，等宽体承担数字：本月经营利润 <b class="ts-mono">¥61,450</b>，同比 <b class="ts-mono">+2.4%</b>。</p>
+      <div class="ts-notice ts-notice-key" style="margin-top:var(--space-4)"><svg class="ts-icon ts-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12.5l5 5L20 6.5"/></svg><div><b>口径</b>2026-06 至 2026-08 收银流水。</div></div>
+    </article>
+
+    <article class="ts-card" data-index="贰">
+      <span class="ts-caption">Components · 组件</span>
+      <h2 class="ts-card-title">按钮、徽章、标签</h2>
+      <div class="ts-row" style="display:flex;flex-wrap:wrap;gap:var(--space-3);align-items:center;margin-top:var(--space-4)">
+        <button class="ts-button" type="button">申请经营体检</button>
+        <button class="ts-button ts-button-secondary" type="button">了解四件套</button>
+        <span class="ts-badge">现役 10 / 28</span>
+        <span class="ts-tag">D 店</span>
+      </div>
+      <div class="ts-progress" style="margin-top:var(--space-5)" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" aria-label="90 天清单完成度"><div class="track"><div class="fill" style="width:62%"></div></div><div class="meta"><span>90 天清单</span><span>62%</span></div></div>
+    </article>
+
+    <article class="ts-card ts-ground-charcoal" data-index="叁" style="border-color:var(--gold)">
+      <span class="ts-caption">Grounds · 底色</span>
+      <h2 class="ts-card-title">玄墨作用域</h2>
+      <p>加一个 <code>.ts-ground-charcoal</code> 类，整块反相，不改任何色值。</p>
+      <div class="ts-stat" style="margin-top:var(--space-4)"><span class="ts-caption">Key number</span><span class="ts-value">18<small>桌 / 日</small></span></div>
+    </article>
+  </div>
+
+  <div class="ts-card" style="margin-top:var(--space-7)">
+    <span class="ts-caption">How to link · 接入方式</span>
+    <pre class="ts-mono" style="margin-top:var(--space-3);white-space:pre-wrap;font-size:12px">&lt;link rel="stylesheet" href="https://tiansight.apuch.art/dist/tiansight.css"&gt;
+
+令牌数据（Figma、构建脚本、其他框架）：dist/tokens.json
+图标精灵：dist/icons.svg，用法 &lt;svg class="ts-icon"&gt;&lt;use href="icons.svg#ts-arrow-right"/&gt;&lt;/svg&gt;（需同源或 CORS）
+版本与变更：CHANGELOG.md，版本号见 brand/VERSION</pre>
+  </div>
+</main>
+</body>
+</html>

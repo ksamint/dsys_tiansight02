@@ -1,0 +1,21 @@
+<!-- @dsCard group="Charts" viewport="700x290" name="ForecastCorridor" subtitle="不确定性 — P10–P90 band, P50, baseline and 实测 side by side" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { ForecastCorridor } = NS;
+function Demo(){
+  return <div><div className="lbl">ForecastCorridor · 预测走廊</div>
+    <ForecastCorridor height={220} caption="月度净收入 · 预测走廊" unit=" 万" grade="E4" scope="滚动原点回测，样本外；基线 = 历史同期"
+      history={[{label:"03",value:72},{label:"04",value:78},{label:"05",value:74},{label:"06",value:83},{label:"07",value:89},{label:"08",value:92}]}
+      forecast={[{label:"09",p10:86,p50:94,p90:101},{label:"10",p10:85,p50:97,p90:108},{label:"11",p10:83,p50:99,p90:114}]}
+      baseline={[{label:"09",value:88},{label:"10",value:90},{label:"11",value:91}]}
+      actual={[{label:"09",value:95}]}/></div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

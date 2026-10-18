@@ -1,0 +1,1 @@
+export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> { tabs: { label: string; content: React.ReactNode }[]; /** pill variant: gold outline, charcoal when selected */ pill?: boolean; initial?: number; }

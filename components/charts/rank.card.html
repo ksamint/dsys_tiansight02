@@ -1,0 +1,24 @@
+<!-- @dsCard group="Charts" viewport="700x320" name="Pareto · Lollipop" subtitle="ABC 二八 with cumulative share on a declared axis; light ranked lollipops" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { Pareto, Lollipop } = NS;
+const rnd = (seed => () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; })(13);
+const skus = Array.from({length: 60}, (_, i) => ({ label: "SKU-" + String(i + 1).padStart(2, "0"), value: Math.round(60000 * Math.exp(-i / 11) + rnd() * 2500) }));
+const gm = [["蟹粉豆腐",78.2],["烫干丝",74.5],["清炒河虾仁",71.9],["文思豆腐",69.4],["桂花糖藕",68.1],["软兜长鱼",63.7],["狮子头",61.2],["盐水鸭",58.8],["三套鸭",52.3],["扬州炒饭",49.6]].map(([label,value]) => ({label,value}));
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'1.4fr 1fr',gap:28}}>
+    <div><div className="lbl">Pareto · ABC-额</div>
+      <Pareto height={250} caption="SKU 累计销售额" unit=" 元" rows={skus} grade="E1" scope="W1 当前窗 P1–P3；核心 SKU 60 项" /></div>
+    <div><div className="lbl">Lollipop · 高毛利样本</div>
+      <Lollipop caption="毛利率" unit="%" threshold={65} thresholdLabel="加权均值" highlight={["蟹粉豆腐"]} rows={gm} labelWidth={84} grade="E1" scope="unit_cost ÷ std_price；cost_trusted 项" /></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

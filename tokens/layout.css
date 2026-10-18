@@ -1,0 +1,54 @@
+/* 侍天 TIANSIGHT — layout, radius, elevation, motion.
+   Spacing, radius and motion values are the published foundation's. */
+:root{
+/* spacing — published scale */
+--space-0:0;--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:20px;
+--space-6:24px;--space-7:32px;--space-8:48px;--space-9:64px;--space-10:96px;
+/* extensions for full-bleed editorial layouts */
+--space-11:128px;--space-12:160px;
+
+/* grid */
+--container:1280px;--container-max:1280px;--columns:12; /* @kind other */--gutter:48px;
+--section-gap:96px;--section-y:var(--section-gap);--section-y-tight:64px;
+--card-pad:24px;--card-pad-lg:32px;
+--swatch:32px;
+
+/* radii — the brand is print-derived: 2px, pill or circle. Never round. */
+--radius-none:0;--radius:2px;--radius-xs:2px;--radius-sm:2px;--radius-md:2px;--radius-lg:2px;
+--radius-pill:999px;/* outline status badge only */
+--radius-seal:50%;
+
+/* borders */
+--border-hair:1px;--border-rule:1.5px;--border-heavy:2px;
+
+/* elevation — dialogs and overlays only; cards stay bordered */
+--shadow-none:none;
+--shadow-1:0 1px 2px rgba(23,19,13,.08);
+--shadow-2:0 2px 6px rgba(23,19,13,.10);
+--shadow-3:0 6px 18px rgba(23,19,13,.12);
+--shadow-4:0 14px 40px rgba(23,19,13,.16);
+--shadow-card:none;
+--shadow-xs:var(--shadow-1);--shadow-sm:var(--shadow-1);
+--shadow-md:var(--shadow-3);--shadow-lg:var(--shadow-4);
+--shadow-inset:inset 0 1px 0 rgba(255,253,248,.7);
+
+/* mark */
+--mark-min-inline:24px;--mark-min-hero:64px;
+
+/* motion — quiet, short, no bounce */
+--ease:cubic-bezier(.2,.6,.2,1); /* @kind other */
+--ease-standard:var(--ease); /* @kind other */
+--ease-out:cubic-bezier(.16,1,.3,1); /* @kind other */
+--dur-fast:120ms; /* @kind other */
+--dur-base:220ms; /* @kind other */
+--dur-slow:420ms; /* @kind other */
+--dur-reveal:700ms; /* @kind other */
+
+/* z */
+--z-base:0; /* @kind other */
+--z-sticky:100; /* @kind other */
+--z-overlay:400; /* @kind other */
+--z-modal:500; /* @kind other */
+--z-toast:600; /* @kind other */
+}
+@media (max-width:640px){:root{--gutter:24px;--section-gap:64px;--card-pad:20px;--card-pad-lg:24px}}

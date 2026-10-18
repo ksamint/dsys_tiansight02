@@ -1,0 +1,24 @@
+<!-- @dsCard group="Charts" height=333 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>TrendLine — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+const M = ["03", "04", "05", "06", "07", "08"];
+const mk = (a) => M.map((m, i) => ({ label: m, value: a[i] }));
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { maxWidth: 620 } }, /* @__PURE__ */ React.createElement(
+  TrendLine,
+  {
+    height: 220,
+    unit: "\u4E07",
+    caption: "\u9010\u6708\u8425\u6536\u8D70\u52BF",
+    series: [{ name: "\u672C\u5E97", tone: "growth", area: true, emphasis: true, points: mk([72, 78, 74, 83, 89, 92]) }, { name: "\u540C\u4E1A\u5747\u503C", tone: "muted", dashed: true, points: mk([70, 71, 73, 74, 75, 76]) }]
+  }
+))));
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>侍天 TIANSIGHT · 设计系统入口</title>
+<link rel="stylesheet" href="brand/fonts.css">
+<link rel="stylesheet" href="brand/tokens.css">
+<link rel="stylesheet" href="brand/base.css">
+<link rel="stylesheet" href="brand/components.css">
+<style>
+  .hub { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-5); margin-top: var(--space-7); }
+  .hub .ts-card { display: flex; flex-direction: column; gap: var(--space-2); }
+  .hub .ts-card p { margin: 0; font-size: var(--text-small); color: var(--text-muted); }
+  .hub .links { margin-top: auto; padding-top: var(--space-3); border-top: 1px solid var(--line); display: flex; gap: var(--space-4); flex-wrap: wrap; font-size: var(--text-small); }
+  .hub .ts-card-charcoal .links a { color: var(--gold-hi); border-color: var(--gold); }
+  .hub .ts-card-charcoal .links .ts-mono { white-space: nowrap; flex-basis: 100%; }
+  .hub .ts-icon { color: var(--gold); }
+  .cmd { margin-top: var(--space-7); }
+</style>
+</head>
+<body>
+<!-- icons:start -->
+<svg style="display:none" aria-hidden="true">
+<symbol id="ts-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="ts-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18L18 6M9 6h9v9"/></symbol>
+  <symbol id="ts-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="ts-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
+  <symbol id="ts-chevron-down" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7"/></symbol>
+  <symbol id="ts-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="ts-cross" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="ts-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ts-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 13v6H5V6h6"/></symbol>
+  <symbol id="ts-print" viewBox="0 0 24 24"><path d="M7 9V4h10v5M5 9h14v8h-3M8 14h8v6H8z"/></symbol>
+  <symbol id="ts-chart" viewBox="0 0 24 24"><path d="M4 20h16M6 16l4-5 4 3 5-7"/></symbol>
+  <symbol id="ts-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="1"/><path d="M12 3.5v4M12 16.5v4M3.5 12h4M16.5 12h4"/></symbol>
+  <symbol id="ts-route" viewBox="0 0 24 24"><circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M7 18h6a4 4 0 0 0 0-8H11a4 4 0 0 1 0-8"/></symbol>
+  <symbol id="ts-correction" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="ts-store" viewBox="0 0 24 24"><path d="M4 10l1.5-5h13L20 10M5 10v10h14V10M10 20v-6h4v6"/></symbol>
+  <symbol id="ts-data" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></symbol>
+  <symbol id="ts-seal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/></symbol>
+</svg>
+<!-- icons:end -->
+<main class="ts-container ts-section">
+  <div class="ts-lockup-row">
+    <span class="ts-mark" style="--mark-size:48px"><img src="brand/logo.png" alt="侍天"></span>
+    <span class="ts-wordmark"><span class="ts-caption" style="letter-spacing:var(--tracking-caps-tight)">Tiansight · Design system</span></span>
+  </div>
+  <div class="ts-heading" style="margin-top:var(--space-7)">
+    <span class="ts-caption">Entry · 入口</span>
+    <h1>设计系统与各消费方</h1>
+    <p class="ts-sub">离线版本 v0.7 · source: <a href="brand/guide.md">brand/guide.md</a> · 实时更新</p>
+  </div>
+
+  <div class="hub">
+    <article class="ts-card" data-index="壹">
+      <span class="ts-caption">Foundation</span>
+      <h2 class="ts-card-title">品牌基础</h2>
+      <p>色彩、字体、标志、组件、图表、版式、话术与待定事项的离线样本。</p>
+      <div class="links"><a href="brand/index.html"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-right"/></svg> 样本页</a><a href="brand/guide.md">指南 v0.7</a><a href="dist/example.html">对外分发</a></div>
+    </article>
+    <article class="ts-card" data-index="贰">
+      <span class="ts-caption">Website</span>
+      <h2 class="ts-card-title">官网</h2>
+      <p>首页长滚动与团队页。样张、五问、服务与价格、伙伴、联系。</p>
+      <div class="links"><a href="website/index.html"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-right"/></svg> 首页</a><a href="website/team.html">团队</a></div>
+    </article>
+    <article class="ts-card" data-index="叁">
+      <span class="ts-caption">Sales deck</span>
+      <h2 class="ts-card-title">销售提案</h2>
+      <p>16:9，十九页。方向键翻页，F 全屏，打印即 PDF。</p>
+      <div class="links"><a href="deck/index.html"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-right"/></svg> 打开提案</a></div>
+    </article>
+    <article class="ts-card" data-index="肆">
+      <span class="ts-caption">Report</span>
+      <h2 class="ts-card-title">经营诊断报告</h2>
+      <p>A4 九页，由 report/data.json 生成。仅看异常项，导出 PDF。</p>
+      <div class="links"><a href="report/index.html"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-right"/></svg> 报告样张</a></div>
+    </article>
+    <article class="ts-card" data-index="伍">
+      <span class="ts-caption">People</span>
+      <h2 class="ts-card-title">联合创始人</h2>
+      <p>一份 people.json 驱动区块、名片与社媒人物卡。</p>
+      <div class="links"><a href="people/profiles.html"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-right"/></svg> 履历库</a><a href="people/blocks.html">区块</a><a href="people/namecards.html">名片</a><a href="people/social.html">社媒</a></div>
+    </article>
+    <article class="ts-card" data-index="陆">
+      <span class="ts-caption">HTML report system</span>
+      <h2 class="ts-card-title">报告系统与技能集</h2>
+      <p>一份 manifest 驱动的幻灯片与长卷报告：证据分级、口径、公式、数据附录与下钻。六个技能。</p>
+      <div class="links"><a href="html-system/sample/index.html"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-right"/></svg> 样例提案</a><a href="skills/README.md">技能</a><a href="reference/catalogue.md">资产盘点</a></div>
+    </article>
+    <article class="ts-card ts-card-charcoal" data-index="柒">
+      <span class="ts-caption">Checks</span>
+      <h2 class="ts-card-title">校验与构建</h2>
+      <p class="ts-muted">每次改动后运行；偏离指南的色值、字体、圆角、远程资源、无障碍结构或版式回归都会失败。</p>
+      <div class="links" style="border-color:var(--gold)"><span class="ts-mono" style="color:var(--gold-hi)">python3 scripts/check.py --render</span><a href="docs/principles.md">原则</a><a href="docs/quickstart.md">上手</a><a href="docs/contributing.md">贡献</a><a href="CHANGELOG.md">变更</a></div>
+    </article>
+  </div>
+
+  <div class="cmd">
+    <span class="ts-caption">Build commands</span>
+    <pre class="ts-mono" style="margin-top:var(--space-3);padding:var(--space-4);border:1px solid var(--line);background:var(--paper)">python3 scripts/build_report.py     # report/index.html from template + data
+python3 scripts/build_people.py     # team page, blocks, name cards, social, deck slides
+python3 scripts/sync_icons.py       # inline brand/icons.svg into pages with markers
+node scripts/export_people.mjs      # social PNGs and name card PDF
+python3 html-system/build_deck.py html-system/sample   # manifest → report
+python3 html-system/check_report.py html-system/sample --layout
+python3 scripts/export_tokens.py    # brand/tokens.json (DTCG) from tokens.css
+python3 scripts/build_dist.py       # dist/tiansight.css bundle for other sites
+python3 scripts/lint_html.py        # accessibility and structure lint on every page
+node scripts/snapshot.mjs --update  # refresh layout baseline after an intended change
+python3 scripts/check.py --render   # guide conformance, build freshness, lint, layout regression</pre>
+  </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,1 @@
+export interface BreadcrumbProps extends React.HTMLAttributes<HTMLOListElement> { items: { label: string; href?: string }[]; }

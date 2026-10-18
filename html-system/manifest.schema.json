@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Tiansight report manifest",
+  "description": "One manifest per report. It is the single place where sources, fields, metrics, slides, quality checks and versions are declared; the deck builder, the checker and the appendix are all derived from it.",
+  "type": "object",
+  "required": ["report", "sources", "metrics", "slides", "versions"],
+  "properties": {
+    "report": {
+      "type": "object",
+      "required": ["id", "title", "client", "version", "issued", "window"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "title": {"type": "string"}, "subtitle": {"type": "string"}, "client": {"type": "string"},
+        "version": {"type": "string", "pattern": "^V\\d+(\\.\\d+)?$"},
+        "issued": {"type": "string", "format": "date"},
+        "window": {"type": "object", "required": ["from", "to"], "properties": {"from": {"type": "string"}, "to": {"type": "string"}, "note": {"type": "string"}}},
+        "scope": {"type": "string", "description": "门店范围 stores covered and excluded, e.g. 9 店（剔除天津C 店）"},
+        "author": {"type": "string"}, "mode": {"enum": ["deck", "scroll"]}
+      }
+    },
+    "sources": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["id", "name", "file", "grade", "rows", "window"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$", "description": "key used by data-src and the appendix section id src-<id>"},
+          "group": {"type": "string", "description": "appendix group heading, e.g. 商圈与竞品 · csv"},
+          "name": {"type": "string"}, "file": {"type": "string"}, "sheet": {"type": "string"},
+          "grade": {"enum": ["E1", "E2", "E3", "E4"]},
+          "rows": {"type": "integer"}, "columns": {"type": "integer"},
+          "window": {"type": "object", "properties": {"from": {"type": "string"}, "to": {"type": "string"}, "type": {"enum": ["月窗", "累计窗", "快照", "外部", "设计"]}, "months": {"type": "number"}}},
+          "caliber": {"type": "string", "description": "口径: what one row is, denominators, exclusions"},
+          "cleaning": {"type": "array", "items": {"type": "string"}},
+          "table": {"type": "string", "description": "CSV under data/ rendered into the appendix; omit for external or design sources"},
+          "key_column": {"type": "string", "description": "column whose value is matched by drill-down data-key"}
+        }
+      }
+    },
+    "fields": {
+      "type": "array",
+      "items": {"type": "object", "required": ["name", "type", "source", "caliber"],
+        "properties": {"name": {"type": "string"}, "type": {"enum": ["string", "integer", "number", "date", "boolean", "percent", "money"]}, "source": {"type": "string"}, "caliber": {"type": "string"}, "unit": {"type": "string"}}}
+    },
+    "metrics": {
+      "type": "array",
+      "items": {"type": "object", "required": ["id", "name", "formula", "grade"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9_]+$"}, "name": {"type": "string"}, "en": {"type": "string"},
+          "formula": {"type": "string", "description": "explicit numerator ÷ denominator or derivation"},
+          "numerator": {"type": "string"}, "denominator": {"type": "string"}, "unit": {"type": "string"},
+          "grade": {"enum": ["E1", "E2", "E3", "E4"]},
+          "sources": {"type": "array", "items": {"type": "string"}},
+          "window_rule": {"type": "string", "description": "which window types may be compared"},
+          "threshold": {"type": "string", "description": "anomaly rule, e.g. 折扣率 > 5.0% 为异常"},
+          "verified": {"type": "string", "description": "how the value was recomputed against the system export"}
+        }}
+    },
+    "glossary": {"type": "array", "items": {"type": "object", "required": ["term", "definition"], "properties": {"term": {"type": "string"}, "definition": {"type": "string"}}}},
+    "grades": {"type": "object", "description": "EGA legend for this report; defaults to the unified definition", "additionalProperties": {"type": "string"}},
+    "quality": {
+      "type": "array",
+      "items": {"type": "object", "required": ["check", "result", "status"],
+        "properties": {"check": {"type": "string"}, "result": {"type": "string"}, "status": {"enum": ["pass", "warn", "fail", "excluded"]}, "action": {"type": "string"}, "affected": {"type": "string"}}}
+    },
+    "limitations": {"type": "array", "items": {"type": "object", "required": ["title", "body"], "properties": {"title": {"type": "string"}, "body": {"type": "string"}, "fix": {"type": "string"}}}},
+    "slides": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["id", "chip", "title"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "kind": {"enum": ["content", "divider", "toc", "cover"]},
+          "chapter": {"type": "string"}, "chip": {"type": "string"}, "tag": {"type": "string"},
+          "ega": {"enum": ["E1", "E2", "E3", "E4"]},
+          "src": {"type": "array", "items": {"type": "string"}, "description": "source ids; first one is the srcbtn target"},
+          "metrics": {"type": "array", "items": {"type": "string"}},
+          "title": {"type": "string", "description": "the conclusion with its number; <em> key number, <s> negative"},
+          "layout": {"type": "string"},
+          "blocks": {"type": "array", "items": {"type": "object", "required": ["type"], "properties": {"type": {"enum": ["chart", "panel", "kpi", "kpis", "table", "list", "html", "meta-note"]}}}},
+          "conclusion": {"type": "object", "properties": {"text": {"type": "string"}, "metric": {"type": "string"}, "value": {"type": "string"}}},
+          "meta": {"type": "object", "required": ["source", "formula", "confidence"],
+            "properties": {"source": {"type": "string"}, "formula": {"type": "string"}, "glossary": {"type": "string"}, "conclusion": {"type": "string"}, "confidence": {"type": "string"}, "derivation": {"type": "string"}}},
+          "caliber": {"type": "string", "description": "one-line 口径 shown in the footer of the slide"}
+        }
+      }
+    },
+    "versions": {
+      "type": "array", "minItems": 1,
+      "items": {"type": "object", "required": ["version", "date", "changes"],
+        "properties": {"version": {"type": "string"}, "date": {"type": "string"}, "author": {"type": "string"},
+          "changes": {"type": "array", "items": {"type": "object", "required": ["kind", "what"], "properties": {"kind": {"enum": ["新增", "修正", "口径", "数据", "删除", "重排"]}, "what": {"type": "string"}, "why": {"type": "string"}, "affects": {"type": "array", "items": {"type": "string"}}}}}}}
+    }
+  }
+}

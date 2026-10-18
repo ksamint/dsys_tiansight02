@@ -1,0 +1,39 @@
+<!-- @dsCard group="Website" viewport="1280x820" name="官网 · 首页" subtitle="Long-scroll marketing site: hero, 报告样张, 经营五问, 三层+X, 伙伴, 联系" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>侍天 TIANSIGHT · 餐饮第二大脑</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html{scroll-behavior:smooth}body{background:var(--surface-page)}</style>
+</head><body>
+<div id="root"></div>
+<script type="text/babel" src="SiteHeader.jsx"></script>
+<script type="text/babel" src="HomeHero.jsx"></script>
+<script type="text/babel" src="ReportProof.jsx"></script>
+<script type="text/babel" src="FiveQuestions.jsx"></script>
+<script type="text/babel" src="ServiceLadder.jsx"></script>
+<script type="text/babel" src="Partners.jsx"></script>
+<script type="text/babel" src="ClosingCTA.jsx"></script>
+<script type="text/babel" data-presets="react">
+function Site(){
+  const [active,setActive]=React.useState("top");
+  const onNav=id=>{const el=document.getElementById(id);setActive(id);
+    if(el)window.scrollTo({top:id==="top"?0:el.offsetTop-64,behavior:"smooth"});};
+  return <React.Fragment>
+    <SiteHeader onNav={onNav} active={active}/>
+    <HomeHero onNav={onNav}/>
+    <ReportProof/>
+    <FiveQuestions/>
+    <ServiceLadder onNav={onNav}/>
+    <Partners/>
+    <ClosingCTA/>
+  </React.Fragment>;
+}
+function mount(){
+  if(!window.SiteHeader||!window.ClosingCTA){return setTimeout(mount,60);}
+  ReactDOM.createRoot(document.getElementById("root")).render(<Site/>);
+}
+mount();
+</script>
+</body></html>

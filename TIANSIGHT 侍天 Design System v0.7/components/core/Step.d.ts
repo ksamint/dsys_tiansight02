@@ -1,0 +1,1 @@
+export interface StepProps extends React.HTMLAttributes<HTMLSpanElement> { current?: boolean; /** Chinese numeral 一 二 三 */ children: React.ReactNode; }

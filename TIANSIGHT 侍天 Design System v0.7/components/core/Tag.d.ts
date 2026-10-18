@@ -1,0 +1,1 @@
+export interface TagProps extends React.HTMLAttributes<HTMLSpanElement> { on?: boolean; onRemove?: () => void; children: React.ReactNode; }

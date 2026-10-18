@@ -1,0 +1,1271 @@
+{
+  "report": {
+    "id": "sample-repurchase",
+    "title": "会员菜品复购数据分析",
+    "subtitle": "报告样张 · 数据已脱敏 · 侍天 TIANSIGHT",
+    "client": "［品牌名称］",
+    "lede": "交 8 个月复购导出，7 日内取得诊断：复购在何处流失、先改哪三件、由谁执行、以何验收。",
+    "version": "V2",
+    "issued": "2026-09-06",
+    "window": {
+      "from": "2026-01-01",
+      "to": "2026-09-01",
+      "note": "月窗六点，累计窗一段"
+    },
+    "scope": "10 店（门店排名剔除停业期门店，记作 9 店口径）",
+    "author": "侍天 TIANSIGHT",
+    "mode": "deck"
+  },
+  "grades": {
+    "E1": "系统实测，可复算",
+    "E2": "抽样或推算",
+    "E3": "外部参照或设计值",
+    "E4": "未验证推断"
+  },
+  "sources": [
+    {
+      "id": "items",
+      "group": "会员菜品复购导出 · xlsx",
+      "name": "考核复购产品 · 1–7 月累计窗",
+      "file": "会员复购导出-1–7 月.xlsx",
+      "sheet": "考核复购产品",
+      "grade": "E1",
+      "rows": 12,
+      "columns": 9,
+      "window": {
+        "from": "2026-01-01",
+        "to": "2026-08-01",
+        "type": "累计窗",
+        "months": 7
+      },
+      "caliber": "一行 = 门店 × 品项；复购点击率 = 复购数量 ÷ 总销售数量，系统原生字段",
+      "cleaning": [
+        "表头第 2 行",
+        "名称归一：全角括号、去空格",
+        "剥离规格与促销后缀，生成主品名 / 规格 / 促销标记"
+      ],
+      "table": "items.csv",
+      "key_column": "品项名称"
+    },
+    {
+      "id": "monthly",
+      "group": "会员菜品复购导出 · xlsx",
+      "name": "复购点击率 · 月窗六点",
+      "file": "会员复购导出-1–5 月.xlsx；复购点击率导出-2026-08.xlsx",
+      "grade": "E1",
+      "rows": 6,
+      "columns": 6,
+      "window": {
+        "from": "2026-01-01",
+        "to": "2026-09-01",
+        "type": "月窗",
+        "months": 1
+      },
+      "caliber": "每点为一个自然月单独查询；6、7 月无导出",
+      "cleaning": [
+        "从查询条件文字正则抽取窗口起止"
+      ],
+      "table": "monthly.csv",
+      "key_column": "月份"
+    },
+    {
+      "id": "stores",
+      "group": "派生表",
+      "name": "门店排行与缺口测算 · 9 店口径",
+      "file": "由 items 按门店聚合",
+      "grade": "E1",
+      "rows": 6,
+      "columns": 8,
+      "window": {
+        "from": "2026-01-01",
+        "to": "2026-08-01",
+        "type": "累计窗",
+        "months": 7
+      },
+      "caliber": "复购点击率、渗透率为 E1 聚合值；对标缺口与月化缺口金额两列为 E2 推算值：对标缺口 = 门店复购点击率 − A 店；月化缺口金额 = 缺口份数 × 会员单份均价 ÷ 7",
+      "table": "stores.csv",
+      "key_column": "门店"
+    },
+    {
+      "id": "budget",
+      "group": "派生表",
+      "name": "季度利润归因 · 万元",
+      "file": "由 POS 流水与目标测算派生",
+      "grade": "E3",
+      "rows": 6,
+      "columns": 3,
+      "window": {
+        "from": "2026-05-01",
+        "to": "2026-08-01",
+        "type": "设计",
+        "months": 3
+      },
+      "caliber": "流失项为实测；可争取项为设计值，按 60–70% 达成率排预算",
+      "table": "budget.csv",
+      "key_column": "项目"
+    }
+  ],
+  "fields": [
+    {
+      "name": "复购数量",
+      "type": "integer",
+      "source": "items",
+      "caliber": "会员在窗口内第二次及以后购买该品项的份数"
+    },
+    {
+      "name": "总销售数量",
+      "type": "integer",
+      "source": "items",
+      "caliber": "窗口内该品项全部售出份数，含非会员"
+    },
+    {
+      "name": "会员渗透率",
+      "type": "percent",
+      "source": "items",
+      "caliber": "（首次销售数量 + 复购数量）÷ 总销售数量"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "repurchase_rate",
+      "name": "复购点击率",
+      "en": "Repurchase click rate",
+      "formula": "复购数量 ÷ 总销售数量",
+      "numerator": "复购数量",
+      "denominator": "总销售数量",
+      "unit": "%",
+      "grade": "E1",
+      "sources": [
+        "items",
+        "monthly"
+      ],
+      "window_rule": "月窗只与月窗比，累计窗只与累计窗比；两者相差约 8 pp",
+      "threshold": "低于 9 店 P75 为缺口",
+      "verified": "全量逐行复算，最大偏差 3.4×10⁻³（导出端四位小数舍入）"
+    },
+    {
+      "id": "member_penetration",
+      "name": "会员渗透率",
+      "formula": "（首次销售数量 + 复购数量）÷ 总销售数量",
+      "unit": "%",
+      "grade": "E1",
+      "sources": [
+        "items"
+      ],
+      "threshold": "低于 9 店 P75 = 59.64% 为缺口"
+    },
+    {
+      "id": "gap_amount",
+      "name": "月化缺口金额",
+      "formula": "（对标复购点击率 − 门店复购点击率）× 总销量 × 会员单份均价 ÷ 7",
+      "unit": "元",
+      "grade": "E2",
+      "sources": [
+        "stores"
+      ],
+      "window_rule": "仅 9 店累计窗"
+    },
+    {
+      "id": "recoverable",
+      "name": "可争取利润",
+      "formula": "Σ 可争取项 − Σ 流失项",
+      "unit": "万元 / 季",
+      "grade": "E3",
+      "sources": [
+        "budget"
+      ],
+      "threshold": "按 60–70% 达成率排预算"
+    }
+  ],
+  "glossary": [
+    {
+      "term": "查询窗口",
+      "definition": "月窗 = 单个自然月；累计窗 = 从 1 月 1 日起的连续区间。窗口越长复购点击率越高，跨窗口不可比。"
+    },
+    {
+      "term": "门店范围",
+      "definition": "全盘用 10 店；排名与缺口测算剔除停业期门店，记作 9 店口径。"
+    },
+    {
+      "term": "主品名",
+      "definition": "剥离规格与促销后缀后的品项名称；同一道菜的多个 SKU 按主品名汇总后再排名。"
+    }
+  ],
+  "quality": [
+    {
+      "check": "查询窗口已声明",
+      "result": "月窗 6 份、累计窗 1 份",
+      "status": "pass"
+    },
+    {
+      "check": "比率复算",
+      "result": "最大偏差 3.4×10⁻³，来自导出端舍入",
+      "status": "pass",
+      "action": "记录，不修正"
+    },
+    {
+      "check": "小样本",
+      "result": "1 行总销量 < 300（清蒸东星斑 212 份）",
+      "status": "warn",
+      "affected": "清蒸东星斑",
+      "action": "图表标注 n，不进排名"
+    },
+    {
+      "check": "促销衍生 SKU",
+      "result": "蒜蓉小龙虾（会员活动）复购点击率 85.00%",
+      "status": "warn",
+      "affected": "1 行",
+      "action": "与主品分列，不并入全盘"
+    },
+    {
+      "check": "规格拆分 SKU",
+      "result": "板栗红烧肉 2 规格",
+      "status": "warn",
+      "affected": "2 行",
+      "action": "按主品名汇总后再排名"
+    },
+    {
+      "check": "会员归属异常",
+      "result": "扬州炒饭（半例）渗透率 0.15%，疑为拆单配菜项",
+      "status": "fail",
+      "affected": "6,528 份",
+      "action": "从复购率计算中剔除，单列观察"
+    },
+    {
+      "check": "分组覆盖不均",
+      "result": "E 店 4 月停业，7 个月窗口内约 3.3 个月在营",
+      "status": "warn",
+      "affected": "E 店",
+      "action": "不进同期排名"
+    }
+  ],
+  "limitations": [
+    {
+      "title": "颗粒度粗，无法复验到人",
+      "body": "导出为「门店 × 品项」汇总表，没有一行代表一位顾客或一张账单；缺订单号、会员 ID、结账时间。复购只能算到「份」。",
+      "fix": "拿到订单级流水：订单表、明细表、会员表三张。"
+    },
+    {
+      "title": "取数口径不一致",
+      "body": "导出跨月窗与累计窗两种查询窗口；同一批门店同一批菜，月窗 7.59% 与累计窗 15.58% 相差 8.0 pp，差异全部来自窗口长度。",
+      "fix": "固化取数口径：28 天滚动窗做预警，90 天滚动窗做考核。"
+    },
+    {
+      "title": "一次性快照，无滚动监控",
+      "body": "6、7 月为空档，8 月复购点击率跌至 5.98% 于导出后方被发现，错过当期干预窗口。",
+      "fix": "建立日更监控：滚动窗每日全量重算，异常当天推送到门店。"
+    }
+  ],
+  "versions": [
+    {
+      "version": "V1",
+      "date": "2026-09-02",
+      "author": "侍天 TIANSIGHT",
+      "changes": [
+        {
+          "kind": "新增",
+          "what": "首版"
+        }
+      ]
+    },
+    {
+      "version": "V2",
+      "date": "2026-09-06",
+      "author": "侍天 TIANSIGHT",
+      "changes": [
+        {
+          "kind": "口径",
+          "what": "门店排名改为 9 店口径，剔除停业期门店",
+          "why": "E 店 7 个月窗口内仅 3.3 个月在营",
+          "affects": [
+            "store-ranking",
+            "gap"
+          ]
+        },
+        {
+          "kind": "数据",
+          "what": "补入 8 月月窗导出",
+          "why": "6、7 月空档后首个可比点",
+          "affects": [
+            "trend"
+          ]
+        },
+        {
+          "kind": "修正",
+          "what": "扬州炒饭（半例）从复购率计算中剔除",
+          "why": "会员归属异常，非出品问题",
+          "affects": [
+            "core",
+            "quadrant"
+          ]
+        },
+        {
+          "kind": "新增",
+          "what": "季度利润归因页",
+          "why": "客户要求给出可争取金额",
+          "affects": [
+            "budget"
+          ]
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "summary",
+      "chapter": "摘要",
+      "chip": "摘要 · EXECUTIVE SUMMARY",
+      "ega": "E1",
+      "src": [
+        "items",
+        "stores"
+      ],
+      "metrics": [
+        "repurchase_rate",
+        "member_penetration"
+      ],
+      "tag": "9 店 · 1–7 月",
+      "title": "9 店复购点击率 <em>16.64%</em>，对标A 店 20.71% 存在 <s>4.07 pp</s> 缺口；缺口 62% 来自会员渗透不足",
+      "layout": "rows",
+      "blocks": [
+        {
+          "type": "kpis",
+          "items": [
+            {
+              "label": "复购点击率 · 9 店",
+              "value": "16.64",
+              "unit": "%",
+              "note": "累计窗 1–7 月，考核品 94 支",
+              "tone": "a"
+            },
+            {
+              "label": "对标店 · A 店",
+              "value": "20.71",
+              "unit": "%",
+              "note": "同窗同口径最高"
+            },
+            {
+              "label": "会员渗透率",
+              "value": "52.3",
+              "unit": "%",
+              "note": "9 店 P75 = 59.64%"
+            },
+            {
+              "label": "月化缺口金额",
+              "value": "29.5",
+              "unit": "万元",
+              "note": "五店合计，设计值",
+              "tone": "b"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "html": "<div style=\"display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px\"><div class=\"panel\"><div class=\"hd\">看得清</div><div class=\"txt\">复购点击率 = 渗透 × 粘性。缺口分解后，<b>渗透贡献 2.5 pp</b>，粘性贡献 1.6 pp。</div></div><div class=\"panel gold\"><div class=\"hd\">先改哪三件</div><div class=\"txt\">品项对齐 9 店 P75、会员覆盖补到 59.64%、招牌菜规格合并。</div></div><div class=\"panel warn\"><div class=\"hd\">边界</div><div class=\"txt\">复购只能算到「份」；涉及「人」的结论本报告一律未下。</div></div></div>"
+        }
+      ],
+      "conclusion": {
+        "text": "9 店复购点击率低于对标店 4.07 pp，缺口主要来自渗透",
+        "metric": "repurchase_rate",
+        "value": "16.64% vs 20.71%"
+      },
+      "meta": {
+        "source": "考核复购产品 1–7 月累计窗；门店排行派生表",
+        "formula": "复购点击率 = 复购数量 ÷ 总销售数量；缺口分解：Δ = Δ渗透 × 粘性 + 渗透 × Δ粘性",
+        "glossary": "9 店口径 = 剔除停业期门店",
+        "confidence": "高。四项 KPI 为导出字段直接汇总；缺口分解为代数恒等式。"
+      },
+      "caliber": "1–7 月累计窗 · 考核品 94 支 · 9 店"
+    },
+    {
+      "id": "ch1",
+      "kind": "divider",
+      "chapter": "壹",
+      "chip": "卷一 · 基准盘",
+      "title": "基准盘与门店排行",
+      "lede": "先用同一口径把 9 家店放在一张图里。"
+    },
+    {
+      "id": "store-ranking",
+      "chapter": "1.1",
+      "chip": "门店排行 · STORE RANKING",
+      "ega": "E1",
+      "src": [
+        "stores"
+      ],
+      "metrics": [
+        "repurchase_rate"
+      ],
+      "tag": "9 店 · 累计窗",
+      "title": "A 店 <em>20.71%</em> 为对标店；E 店 11.28% 含停业期，<s>不进排名</s>",
+      "layout": "sp2",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "bars_h",
+          "pos": [
+            [
+              {
+                "label": "A 店",
+                "value": 20.71,
+                "role": "accent",
+                "key": "A 店",
+                "tip": "**A 店**|复购点击率 20.71%|在售 94 支"
+              },
+              {
+                "label": "旗舰店",
+                "value": 18.4,
+                "key": "旗舰店"
+              },
+              {
+                "label": "B 店",
+                "value": 17.1,
+                "key": "B 店"
+              },
+              {
+                "label": "C 店",
+                "value": 16.2,
+                "key": "C 店"
+              },
+              {
+                "label": "D 店",
+                "value": 14.9,
+                "key": "D 店"
+              },
+              {
+                "label": "E 店",
+                "value": 11.28,
+                "role": "warn",
+                "key": "E 店",
+                "note": "停业期",
+                "n_small": true
+              }
+            ]
+          ],
+          "args": {
+            "unit": "%",
+            "vmax": 25,
+            "title": "复购点击率 · 1–7 月累计窗 · 点击柱体查看底表"
+          }
+        },
+        {
+          "type": "html",
+          "html": "<div class=\"vstack\"><div class=\"panel\"><div class=\"hd\">读图</div><div class=\"txt\">对标店取同窗同口径最高值，<b>不取均值</b>：均值会被停业店拉低。</div></div><div class=\"panel warn\"><div class=\"hd\">注意</div><div class=\"txt\">E 店 4 月停业，其 11.28% 不能与其他店并列。</div></div></div>"
+        }
+      ],
+      "conclusion": {
+        "text": "对标店为A 店 20.71%",
+        "metric": "repurchase_rate",
+        "value": "20.71%"
+      },
+      "meta": {
+        "source": "门店排行派生表（由考核复购产品按门店聚合）",
+        "formula": "复购点击率 = Σ复购数量 ÷ Σ总销售数量，门店内先求和再相除",
+        "confidence": "高。停业店已标注。"
+      },
+      "caliber": "累计窗 · 考核品 · 9 店"
+    },
+    {
+      "id": "gap",
+      "chapter": "1.2",
+      "chip": "缺口分解 · GAP DECOMPOSITION",
+      "ega": "E2",
+      "src": [
+        "stores"
+      ],
+      "metrics": [
+        "gap_amount"
+      ],
+      "tag": "设计值",
+      "title": "五店对标缺口合计 <em>29.5 万元 / 月</em>；渗透贡献占 62%，先补会员覆盖",
+      "layout": "sp2",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "bars_v",
+          "pos": [
+            [
+              {
+                "label": "旗舰店",
+                "values": [
+                  1.4,
+                  0.9
+                ],
+                "key": "旗舰店"
+              },
+              {
+                "label": "B 店",
+                "values": [
+                  2.3,
+                  1.3
+                ],
+                "key": "B 店"
+              },
+              {
+                "label": "C 店",
+                "values": [
+                  2.6,
+                  1.9
+                ],
+                "key": "C 店"
+              },
+              {
+                "label": "D 店",
+                "values": [
+                  3.8,
+                  2.0
+                ],
+                "key": "D 店"
+              }
+            ],
+            [
+              {
+                "name": "渗透贡献 pp",
+                "role": "measured"
+              },
+              {
+                "name": "粘性贡献 pp",
+                "role": "sampled"
+              }
+            ]
+          ],
+          "args": {
+            "unit": "",
+            "title": "对标缺口分解 · 百分点"
+          }
+        },
+        {
+          "type": "html",
+          "html": "<div class=\"vstack\"><div class=\"panel\"><div class=\"hd\">公式</div><div class=\"txt\">Δ复购 = Δ渗透 × 粘性 + 渗透 × Δ粘性。<b>推算值</b>：分解方式影响数值，不影响方向。</div></div><div class=\"panel gold\"><div class=\"hd\">先改这件</div><div class=\"txt\">D 店渗透缺口 3.8 pp 最大，先补会员覆盖。</div></div></div>"
+        }
+      ],
+      "conclusion": {
+        "text": "缺口 62% 来自渗透不足",
+        "metric": "gap_amount",
+        "value": "29.5 万元 / 月"
+      },
+      "meta": {
+        "source": "门店排行派生表",
+        "formula": "月化缺口金额 = 缺口份数 × 会员单份均价 ÷ 7",
+        "derivation": "以A 店为对标，逐店计算缺口份数后按会员单份均价折算",
+        "confidence": "中。推算值，落地转化率未验证。"
+      },
+      "caliber": "9 店累计窗 · 对标 = A 店"
+    },
+    {
+      "id": "ch2",
+      "kind": "divider",
+      "chapter": "贰",
+      "chip": "卷二 · 品项",
+      "title": "品项与四象限",
+      "lede": "哪些菜在回头，哪些菜只在卖。"
+    },
+    {
+      "id": "core",
+      "chapter": "2.1",
+      "chip": "核心关系 · CORE FINDING",
+      "ega": "E1",
+      "src": [
+        "items"
+      ],
+      "metrics": [
+        "repurchase_rate"
+      ],
+      "tag": "n = 12 · 样张",
+      "title": "销量每上一个数量级，复购点击率<s>系统性走低</s>（ρ = −0.66）；招牌担当同时高销量高复购",
+      "layout": "sp2",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "scatter",
+          "pos": [
+            [
+              {
+                "label": "文思豆腐",
+                "x": 5166,
+                "y": 23.42,
+                "r": 5166,
+                "role": "accent",
+                "key": "文思豆腐"
+              },
+              {
+                "label": "松鼠鳜鱼",
+                "x": 3980,
+                "y": 22.11,
+                "r": 3980,
+                "role": "accent",
+                "key": "松鼠鳜鱼"
+              },
+              {
+                "label": "蟹粉狮子头",
+                "x": 2140,
+                "y": 14.02,
+                "r": 2140,
+                "key": "蟹粉狮子头"
+              },
+              {
+                "label": "响油鳝糊",
+                "x": 4410,
+                "y": 9.52,
+                "r": 4410,
+                "role": "warn",
+                "key": "响油鳝糊"
+              },
+              {
+                "label": "冷碟拼盘",
+                "x": 1290,
+                "y": 6.98,
+                "r": 1290,
+                "role": "sampled",
+                "key": "冷碟拼盘"
+              },
+              {
+                "label": "粉藕汤",
+                "x": 6234,
+                "y": 25.34,
+                "r": 6234,
+                "role": "accent",
+                "key": "铫子煨排骨粉藕汤"
+              },
+              {
+                "label": "扬州炒饭",
+                "x": 4102,
+                "y": 27.55,
+                "r": 4102,
+                "key": "扬州炒饭"
+              },
+              {
+                "label": "板栗红烧肉",
+                "x": 3500,
+                "y": 22.9,
+                "r": 3500,
+                "key": "板栗红烧肉（小份）"
+              }
+            ]
+          ],
+          "args": {
+            "x_label": "总销量（份，对数轴）",
+            "y_label": "复购点击率 %",
+            "log_x": true,
+            "quadrants": [
+              "潜力口碑品 · 复购高销量小",
+              "招牌担当 · 守住",
+              "低效品 · 观察",
+              "流量品 · 提复购"
+            ],
+            "title": "气泡面积 ∝ √销量 · 中位线为虚线 · 点击气泡查看底表"
+          }
+        },
+        {
+          "type": "html",
+          "html": "<div class=\"vstack\"><div class=\"panel\"><div class=\"hd\">统计量与口径</div><div class=\"txt\">Spearman ρ = <b>−0.66</b>（n = 94，p < 0.001）为总体值；样张仅示 12 支。</div></div><div class=\"panel\"><div class=\"hd\">已剔除</div><div class=\"txt\">扬州炒饭（半例）会员归属异常、蒜蓉小龙虾（会员活动）促销衍生、清蒸东星斑小样本。</div></div></div>"
+        }
+      ],
+      "conclusion": {
+        "text": "销量与复购点击率负相关，ρ = −0.66",
+        "metric": "repurchase_rate",
+        "value": "ρ = −0.66"
+      },
+      "meta": {
+        "source": "考核复购产品 1–7 月累计窗",
+        "formula": "Spearman 秩相关 scipy.stats.spearmanr，n = 94",
+        "confidence": "高。相关系数为实测样本统计量，非因果结论。"
+      },
+      "caliber": "累计窗 · 考核品 94 支 · 剔除 3 类异常"
+    },
+    {
+      "id": "quadrant",
+      "chapter": "2.2",
+      "chip": "价格带 · PRICE BAND",
+      "ega": "E1",
+      "src": [
+        "items"
+      ],
+      "metrics": [
+        "repurchase_rate",
+        "member_penetration"
+      ],
+      "tag": "5 带",
+      "title": "58–88 元价格带 SKU 占比 <em>34%</em> 但复购金额占比 <s>12%</s>，是主力客群流失的位置",
+      "layout": "rows",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "matrix",
+          "pos": [
+            [
+              "38 元以下",
+              "38–58 元",
+              "58–88 元",
+              "88–128 元",
+              "128 元以上"
+            ],
+            [
+              "SKU 占比 %",
+              "销量占比 %",
+              "复购金额占比 %",
+              "较均值 pp"
+            ],
+            [
+              [
+                17.2,
+                22.0,
+                18.5,
+                1.3
+              ],
+              [
+                25.3,
+                34.0,
+                29.1,
+                3.8
+              ],
+              [
+                34.0,
+                20.1,
+                12.0,
+                -8.1
+              ],
+              [
+                15.3,
+                16.9,
+                26.4,
+                9.5
+              ],
+              [
+                8.2,
+                7.0,
+                14.0,
+                6.0
+              ]
+            ]
+          ],
+          "args": {
+            "kind": "heat",
+            "diverging": true,
+            "title": "价格带 × 指标 · 前三列按强度着色，末列明金为高于均值、朱红为低于",
+            "width": 1150,
+            "diverging_cols": [
+              3
+            ]
+          }
+        }
+      ],
+      "conclusion": {
+        "text": "58–88 元价格带复购金额占比最低",
+        "metric": "repurchase_rate",
+        "value": "−8.1 pp"
+      },
+      "meta": {
+        "source": "考核复购产品 1–7 月累计窗",
+        "formula": "占比 = 该带合计 ÷ 全盘合计；较均值 pp = 复购金额占比 − SKU 占比",
+        "confidence": "高。"
+      },
+      "caliber": "累计窗 · 考核品 · 价格带按会员单份均价划分"
+    },
+    {
+      "id": "trend",
+      "chapter": "2.3",
+      "chip": "时间趋势 · TREND",
+      "ega": "E1",
+      "src": [
+        "monthly"
+      ],
+      "metrics": [
+        "repurchase_rate",
+        "member_penetration"
+      ],
+      "tag": "月窗 · 9 店",
+      "title": "月窗口径下，复购点击率 1–5 月稳在 <em>7.6%–7.9%</em>，8 月落到 <s>5.98%</s>",
+      "layout": "sp2",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "line",
+          "pos": [
+            [
+              {
+                "name": "会员渗透率",
+                "values": [
+                  48.1,
+                  49.6,
+                  51.6,
+                  52.8,
+                  53.4,
+                  57.3
+                ],
+                "role": "structure",
+                "keys": [
+                  "2026-01",
+                  "2026-02",
+                  "2026-03",
+                  "2026-04",
+                  "2026-05",
+                  "2026-08"
+                ]
+              },
+              {
+                "name": "会员内复购占比",
+                "values": [
+                  15.8,
+                  15.5,
+                  15.4,
+                  14.4,
+                  14.3,
+                  10.4
+                ],
+                "role": "sampled",
+                "keys": [
+                  "2026-01",
+                  "2026-02",
+                  "2026-03",
+                  "2026-04",
+                  "2026-05",
+                  "2026-08"
+                ]
+              },
+              {
+                "name": "复购点击率",
+                "values": [
+                  7.59,
+                  7.71,
+                  7.94,
+                  7.62,
+                  7.61,
+                  5.98
+                ],
+                "role": "measured",
+                "keys": [
+                  "2026-01",
+                  "2026-02",
+                  "2026-03",
+                  "2026-04",
+                  "2026-05",
+                  "2026-08"
+                ]
+              }
+            ],
+            [
+              "1月",
+              "2月",
+              "3月",
+              "4月",
+              "5月",
+              "8月"
+            ]
+          ],
+          "args": {
+            "unit": "%",
+            "ymin": 0,
+            "ymax": 70,
+            "title": "月窗口径 · 9 店 · 6、7 月无导出",
+            "threshold": 7.0
+          }
+        },
+        {
+          "type": "html",
+          "html": "<div class=\"vstack\"><div class=\"panel\"><div class=\"hd\">三条线各自的趋势</div><div class=\"txt\">渗透率上行 <b>+9.2 pp</b>；会员内复购占比下行 5.4 pp；复购点击率几乎不动，8 月跌破阈值。</div></div><div class=\"panel warn\"><div class=\"hd\">注意 · 缺 6 月与 7 月</div><div class=\"txt\">8 月单点跌幅不能归因于连续变化，须补 6、7 月导出。</div></div></div>"
+        }
+      ],
+      "conclusion": {
+        "text": "8 月复购点击率跌至 5.98%",
+        "metric": "repurchase_rate",
+        "value": "5.98%"
+      },
+      "meta": {
+        "source": "复购点击率月窗六点",
+        "formula": "各月单独查询，复购点击率 = 复购数量 ÷ 总销售数量",
+        "confidence": "高，但 6、7 月缺失。"
+      },
+      "caliber": "月窗 · 9 店 · 6 点等长可比"
+    },
+    {
+      "id": "ladder",
+      "chapter": "2.4",
+      "chip": "阶梯 · LADDER",
+      "ega": "E1",
+      "src": [
+        "items"
+      ],
+      "metrics": [
+        "repurchase_rate"
+      ],
+      "tag": "样张",
+      "title": "每多一个招牌菜同桌出现，人均上一个台阶：<em>112 → 143 → 162 → 179</em>",
+      "layout": "sp2",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "stairs",
+          "pos": [
+            [
+              {
+                "label": "0 类",
+                "value": 112,
+                "sub": "占 32.7%"
+              },
+              {
+                "label": "1 类",
+                "value": 143,
+                "sub": "占 28.6%"
+              },
+              {
+                "label": "2 类",
+                "value": 162,
+                "sub": "占 17.8%"
+              },
+              {
+                "label": "3 类",
+                "value": 179,
+                "sub": "占 4.7%"
+              }
+            ]
+          ],
+          "args": {
+            "unit": "",
+            "title": "人均（元 / 人）· 已剔除人数效应"
+          }
+        },
+        {
+          "type": "html",
+          "html": "<div class=\"vstack\"><div class=\"panel gold\"><div class=\"hd\">迁移目标</div><div class=\"txt\">把 0 类推到 1 类（+31 元），把 1 类推到 2 类（+19 元），合计覆盖 61.3% 的账单。</div></div><div class=\"panel\"><div class=\"hd\">边界</div><div class=\"txt\">3 类以上主要由人数驱动，不作为目标。</div></div></div>"
+        }
+      ],
+      "conclusion": {
+        "text": "0→1 与 1→2 是有价值的迁移区间",
+        "metric": "repurchase_rate",
+        "value": "+31 / +19 元"
+      },
+      "meta": {
+        "source": "考核复购产品（样张）",
+        "formula": "人均 = 账单实收 ÷ 人数，按同桌招牌菜类数分组取均值",
+        "confidence": "高。"
+      },
+      "caliber": "累计窗 · 已剔除人数效应"
+    },
+    {
+      "id": "ch3",
+      "kind": "divider",
+      "chapter": "叁",
+      "chip": "卷三 · 行动",
+      "title": "利润归因与 90 天路线",
+      "lede": "可计算的量化到位，不可计算的如实说明。"
+    },
+    {
+      "id": "budget",
+      "chapter": "3.1",
+      "chip": "利润归因 · ATTRIBUTION",
+      "ega": "E3",
+      "src": [
+        "budget"
+      ],
+      "metrics": [
+        "recoverable"
+      ],
+      "tag": "设计值",
+      "title": "三项流失合计 <s>43.1 万元 / 季</s>，两项可争取 <em>31.3 万元</em>；按 60–70% 达成率排预算",
+      "layout": "sp2",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "waterfall",
+          "pos": [
+            {
+              "label": "季度营收",
+              "value": 486
+            },
+            [
+              {
+                "label": "折扣叠加",
+                "value": -24.6,
+                "key": "折扣叠加"
+              },
+              {
+                "label": "食材损耗",
+                "value": -12.1,
+                "key": "食材损耗"
+              },
+              {
+                "label": "人效排班",
+                "value": -6.4,
+                "key": "人效排班"
+              },
+              {
+                "label": "套餐结构",
+                "value": 18.2,
+                "key": "套餐结构"
+              },
+              {
+                "label": "会员唤醒",
+                "value": 13.1,
+                "key": "会员唤醒"
+              }
+            ],
+            "可争取后"
+          ],
+          "args": {
+            "unit": "",
+            "title": "万元 / 季 · 朱红为实测流失，明金为设计值"
+          }
+        },
+        {
+          "type": "html",
+          "html": "<div class=\"vstack\"><div class=\"panel\"><div class=\"hd\">口径</div><div class=\"txt\">流失项为 <b>实测</b>（E1），可争取项为 <b>设计值</b>（E3）；两者相加只表示上限。</div></div><div class=\"panel warn\"><div class=\"hd\">不承诺</div><div class=\"txt\">无增量不收成功费；可争取金额未验证，不作 KPI。</div></div></div>"
+        }
+      ],
+      "conclusion": {
+        "text": "可争取利润上限 31.3 万元 / 季",
+        "metric": "recoverable",
+        "value": "31.3 万元"
+      },
+      "meta": {
+        "source": "季度利润归因派生表",
+        "formula": "可争取 = Σ 可争取项；流失 = Σ 流失项（实测）",
+        "confidence": "低。设计值。"
+      },
+      "caliber": "季度 · 万元 · 流失为实测，可争取为设计"
+    },
+    {
+      "id": "route",
+      "chapter": "3.2",
+      "chip": "执行日历 · 90 DAYS",
+      "ega": "E3",
+      "src": [
+        "stores"
+      ],
+      "metrics": [
+        "repurchase_rate"
+      ],
+      "tag": "D+0 = 出具日",
+      "title": "三批动作在 <em>90 天</em>内错峰落地：先改口径，再改执行，最后改考核",
+      "layout": "rows",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "timeline",
+          "pos": [
+            [
+              {
+                "label": "固化取数口径",
+                "spans": [
+                  {
+                    "start": 0,
+                    "end": 2,
+                    "text": "28 天滚动窗",
+                    "role": "measured"
+                  }
+                ]
+              },
+              {
+                "label": "品项对齐 9 店 P75",
+                "spans": [
+                  {
+                    "start": 1,
+                    "end": 5,
+                    "text": "逐店逐品",
+                    "role": "accent"
+                  }
+                ]
+              },
+              {
+                "label": "会员覆盖补到 59.64%",
+                "spans": [
+                  {
+                    "start": 2,
+                    "end": 7,
+                    "text": "D 店先行",
+                    "role": "accent"
+                  }
+                ]
+              },
+              {
+                "label": "招牌菜规格合并",
+                "spans": [
+                  {
+                    "start": 3,
+                    "end": 5,
+                    "text": "改编码",
+                    "role": "measured"
+                  }
+                ]
+              },
+              {
+                "label": "考核清单版本化",
+                "spans": [
+                  {
+                    "start": 6,
+                    "end": 9,
+                    "text": "含生效日期",
+                    "role": "design"
+                  }
+                ]
+              }
+            ],
+            [
+              "W1",
+              "W2",
+              "W3",
+              "W4",
+              "W5",
+              "W6",
+              "W7",
+              "W8",
+              "W9",
+              "W10",
+              "W11",
+              "W12"
+            ]
+          ],
+          "args": {
+            "width": 1150,
+            "title": "周次 · 斜纹为设计值"
+          }
+        },
+        {
+          "type": "table",
+          "density": "c",
+          "columns": [
+            {
+              "label": "动作"
+            },
+            {
+              "label": "责任人"
+            },
+            {
+              "label": "期限",
+              "cls": "m"
+            },
+            {
+              "label": "验收指标"
+            }
+          ],
+          "rows": [
+            {
+              "cells": [
+                "固化取数口径",
+                "数据负责人",
+                "D+14",
+                "看板每图带查询区间"
+              ],
+              "cls": "hi"
+            },
+            {
+              "cells": [
+                "品项对齐 9 店 P75",
+                "运营总监",
+                "D+35",
+                "复购点击率 +4 pp"
+              ]
+            },
+            {
+              "cells": [
+                "会员覆盖补到 59.64%",
+                "门店店长",
+                "D+49",
+                "渗透率 ≥ 59.64%"
+              ]
+            },
+            {
+              "cells": [
+                "考核清单版本化",
+                "财务",
+                "D+63",
+                "清单含生效日期"
+              ]
+            }
+          ]
+        }
+      ],
+      "conclusion": {
+        "text": "三批动作 90 天内错峰落地",
+        "metric": "repurchase_rate",
+        "value": "+4 pp"
+      },
+      "meta": {
+        "source": "行动计划（设计）",
+        "formula": "验收指标按各页公式复核",
+        "confidence": "设计值，须经试点验证。"
+      },
+      "caliber": "D+0 = 2026-09-06"
+    },
+    {
+      "id": "fields",
+      "chapter": "3.3",
+      "chip": "数据缺口 · FIELD GAP",
+      "ega": "E1",
+      "src": [
+        "items"
+      ],
+      "metrics": [],
+      "tag": "字段可用率",
+      "title": "当前导出可支持复购分析，尚不支持<s>到人的结论</s>：三个字段可用率为 0",
+      "layout": "sp2",
+      "blocks": [
+        {
+          "type": "chart",
+          "family": "bullet",
+          "pos": [
+            [
+              {
+                "label": "复购数量",
+                "value": 100,
+                "target": 100
+              },
+              {
+                "label": "总销售数量",
+                "value": 100,
+                "target": 100
+              },
+              {
+                "label": "会员单份均价",
+                "value": 98.4,
+                "target": 100
+              },
+              {
+                "label": "订单号",
+                "value": 0,
+                "target": 100
+              },
+              {
+                "label": "会员 ID",
+                "value": 0,
+                "target": 100
+              },
+              {
+                "label": "结账时间",
+                "value": 0,
+                "target": 100
+              },
+              {
+                "label": "包间菜标记",
+                "value": 16.7,
+                "target": 100
+              }
+            ]
+          ],
+          "args": {
+            "title": "字段可用率 % · 虚线为分析所需"
+          }
+        },
+        {
+          "type": "list",
+          "items": [
+            "可回答：品项与门店层面的复购、渗透、缺口。",
+            "不可回答：顾客复购率、回购间隔、新老客人均差。",
+            "<i>要补：</i>订单表、明细表、会员表三张，日更。"
+          ]
+        }
+      ],
+      "conclusion": {
+        "text": "三个字段可用率为 0，到人的结论未下",
+        "metric": "member_penetration",
+        "value": "0%"
+      },
+      "meta": {
+        "source": "考核复购产品字段清单",
+        "formula": "可用率 = 非空行数 ÷ 总行数",
+        "confidence": "高。"
+      },
+      "caliber": "9 份导出 · 8,908 行"
+    }
+  ]
+}

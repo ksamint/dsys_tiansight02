@@ -1,0 +1,28 @@
+<!-- @dsCard group="Charts" viewport="700x330" name="Waffle · Mekko · PairedBars" subtitle="构成 as a count, two categoricals, and 版面 vs 产出 misalignment" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { Waffle, Mekko, PairedBars } = NS;
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'.8fr 1.2fr 1fr',gap:24}}>
+    <div><div className="lbl">Waffle · 每 100 件出炉</div>
+      <Waffle caption="出炉去向" unitLabel="件" totalLabel="口径：厨房烘焙渠道 · 6 天窗口" cell={16}
+        parts={[{label:"卖给顾客",value:71,tone:"key"},{label:"当天报废",value:9,tone:"seal"},{label:"留到明天",value:20,tone:"muted"}]}/></div>
+    <div><div className="lbl">Mekko · 区域 × 品类</div>
+      <Mekko height={230} caption="销售额 · 区域 × 品类" grade="E1" scope="6 天，18 店"
+        columns={[{label:"华南",parts:[{label:"个包",value:42},{label:"吐司",value:18},{label:"法包",value:9},{label:"三文治",value:11}]},
+                  {label:"华东",parts:[{label:"个包",value:30},{label:"吐司",value:22},{label:"法包",value:6},{label:"三文治",value:7}]},
+                  {label:"华北",parts:[{label:"个包",value:15},{label:"吐司",value:9},{label:"法包",value:3},{label:"三文治",value:3}]}]}/></div>
+    <div><div className="lbl">PairedBars · 价格带</div>
+      <PairedBars caption="SKU 占比 vs 营收占比" grade="E1" labelWidth={64}
+        rows={[{label:"<40 元",a:.31,b:.18},{label:"40–60",a:.28,b:.27},{label:"60–80",a:.09,b:.089},{label:"80–120",a:.20,b:.26},{label:"120+",a:.12,b:.20}]}/></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

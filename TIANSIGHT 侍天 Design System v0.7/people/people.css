@@ -1,0 +1,165 @@
+/* Tiansight 侍天 — people layer: portrait tile and profile blocks on the published foundation.
+   Loaded after brand/components.css. Tokens only. */
+
+/* ── Portrait tile: square, 2px radius, ink field; photo multiplied so white backgrounds vanish ── */
+.ts-portrait {
+  position: relative; display: block; overflow: hidden;
+  width: var(--portrait, 96px); aspect-ratio: 1; flex: none;
+  background: var(--ink-primary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+}
+.ts-portrait img {
+  color: var(--text-muted); font-size: var(--text-caption); text-align: center;   /* Firefox shows alt text for a missing file */
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 12%;
+  mix-blend-mode: multiply; display: block;
+}
+.ts-portrait img::after {               /* Chromium renders pseudo-elements on broken images: cover the icon with the tile */
+  content: attr(data-label); position: absolute; inset: 0; display: grid; place-items: center;
+  background: var(--ink-primary); font-family: var(--font-cn); font-size: var(--text-caption); color: var(--text-muted); text-align: center; padding: 8%;
+}
+.ts-portrait-paper { background: var(--paper); }
+.ts-portrait-paper img::after { background: var(--paper); }
+.ts-portrait-charcoal { background: var(--charcoal); border-color: var(--gold); }
+.ts-portrait-charcoal img { mix-blend-mode: normal; }   /* charcoal cannot take multiply; supply a cut-out for dark grounds */
+.ts-portrait-charcoal img::after { background: var(--charcoal); color: var(--gold-hi); }
+
+/* ── Identity text ── */
+.ts-identity { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ts-identity .name { font-size: 1.25rem; font-weight: var(--weight-title); line-height: 1.3; letter-spacing: 0.06em; }
+.ts-identity .en { font-family: var(--font-en); font-size: var(--text-caption); letter-spacing: var(--tracking-caps-tight); text-transform: uppercase; color: var(--text-caption); }
+.ts-identity .title { font-size: var(--text-small); color: var(--gold); }
+.ts-identity .focus { font-size: var(--text-caption); color: var(--text-muted); }
+
+/* ── Profile card (website grid, blocks) ── */
+.ts-profile { display: flex; flex-direction: column; gap: var(--space-4); }
+.ts-profile .ts-portrait { width: 100%; }
+.ts-profile p { margin: 0; font-size: var(--text-small); }
+.ts-profile .contact { margin-top: auto; padding-top: var(--space-3); border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: var(--text-caption); color: var(--text-muted); display: flex; flex-direction: column; gap: 2px; }
+
+/* ── Full profile (team page detail) ── */
+.ts-profile-full { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: var(--space-6); align-items: start; }
+@media (max-width: 640px) { .ts-profile-full { grid-template-columns: 1fr; } .ts-profile-full .ts-portrait { width: 160px; } }
+
+/* ── Compact row (lists, sidebars) ── */
+.ts-person-row { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) 0; border-top: 1px solid var(--line); }
+.ts-person-row:last-child { border-bottom: 1px solid var(--line); }
+.ts-person-row .ts-portrait { --portrait: 56px; }
+
+/* ── Byline (report author, article header) ── */
+.ts-byline { display: inline-flex; align-items: center; gap: var(--space-3); }
+.ts-byline .ts-portrait { --portrait: 36px; }
+.ts-byline .ts-identity .name { font-size: var(--text-small); letter-spacing: 0.04em; }
+.ts-byline .ts-identity .title { font-size: var(--text-caption); }
+
+/* ── Quote with portrait ── */
+.ts-voice { display: grid; grid-template-columns: auto 1fr; gap: var(--space-5); align-items: start; }
+.ts-voice .ts-portrait { --portrait: 88px; }
+.ts-voice blockquote { margin: 0; font-size: 1.125rem; line-height: 1.6; }
+.ts-voice footer { margin-top: var(--space-2); font-size: var(--text-small); color: var(--text-muted); }
+
+/* ── Signature block (report sign-off, letters) ── */
+.ts-signature { display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--gold); }
+.ts-signature .ts-byline .ts-portrait { --portrait: 48px; }
+
+/* ── Team grid ── */
+.ts-team { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--space-5); }
+@media (max-width: 1100px) { .ts-team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .ts-team { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ── Deck slides ── */
+.slide .founders { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 24px; }
+.slide .founders .ts-identity .name { font-size: 24px; }
+.slide .founders .ts-identity .title { font-size: 17px; }
+.slide .founders .ts-identity .focus { font-size: 15px; }
+.slide .body.spotlight { display: grid; grid-template-columns: 360px minmax(0, 1fr); gap: 56px; align-items: center; }
+.slide .spotlight .ts-portrait { width: 360px; }
+.slide .spotlight .ts-identity .name { font-size: 40px; }
+.slide .spotlight .ts-identity .en { font-size: 14px; }
+.slide .spotlight .ts-identity .title { font-size: 22px; }
+.slide .spotlight .ts-identity .focus { font-size: 18px; }
+.slide .spotlight p { font-size: 22px; margin: 0; }
+.slide .spotlight .ts-quote { font-size: 24px; padding: 6px 0 6px 20px; margin-top: 8px; }
+.slide .spotlight .ts-quote footer { font-size: 17px; }
+
+/* ── Name cards: 90 × 54 mm ── */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(90mm, 90mm)); gap: 8mm; justify-content: center; padding: var(--space-6); }
+.card { width: 90mm; height: 54mm; padding: 6mm 7mm; position: relative; overflow: hidden; border: 1px solid var(--line); background: var(--paper); display: flex; flex-direction: column; font-size: 8pt; line-height: 1.45; break-inside: avoid; }
+.card .ts-caption { font-size: 6.5pt; }
+.card-front .top { display: flex; justify-content: space-between; align-items: flex-start; }
+.card-front .top img { height: 8mm; width: auto; }
+.card-front .who { margin-top: auto; }
+.card-front .name { font-size: 14pt; font-weight: var(--weight-title); letter-spacing: 0.1em; line-height: 1.2; }
+.card-front .en { font-family: var(--font-en); font-size: 6.5pt; letter-spacing: var(--tracking-caps-tight); text-transform: uppercase; color: var(--text-caption); }
+.card-front .title { font-size: 8pt; color: var(--gold); margin-top: 1mm; }
+.card-front .contact { margin-top: 3mm; padding-top: 2mm; border-top: 1px solid var(--gold); display: grid; grid-template-columns: 1fr 1fr; gap: 0.5mm 4mm; font-family: var(--font-mono); font-size: 6.5pt; color: var(--text-muted); }
+.card-back { background: var(--ink-primary); align-items: center; justify-content: center; text-align: center; gap: 2mm; }
+.card-back img { height: 16mm; width: auto; }
+.card-back .ts-tagline { font-size: 9pt; }
+.card-back .ts-caption { margin-top: 2mm; }
+.card-portrait { padding: 0; display: grid; grid-template-columns: 36mm 1fr; }
+.card-portrait .ts-portrait { width: 36mm; height: 54mm; aspect-ratio: auto; border: 0; border-right: 1px solid var(--card-border); border-radius: 0; }
+.card-portrait .ts-portrait img { object-position: 50% 10%; }
+.card-portrait .who { padding: 6mm 6mm 5mm; display: flex; flex-direction: column; }
+.card-portrait .name { font-size: 13pt; font-weight: var(--weight-title); letter-spacing: 0.1em; margin-top: auto; }
+.card-portrait .title { font-size: 7.5pt; color: var(--gold); }
+.card-portrait .contact { margin-top: 2mm; padding-top: 1.5mm; border-top: 1px solid var(--gold); font-family: var(--font-mono); font-size: 6pt; color: var(--text-muted); display: flex; flex-direction: column; }
+@media print {
+  @page { size: 90mm 54mm; margin: 0; }
+  body { background: var(--paper); }
+  .cards { display: block; padding: 0; }
+  .card { border: 0; page-break-after: always; break-after: page; }
+  .shell-head, .spec-note { display: none; }
+}
+
+/* ── Social artboards (fixed pixel sizes) ── */
+.arts { display: flex; flex-direction: column; gap: var(--space-8); padding: var(--space-6); align-items: flex-start; }
+.art-row { display: flex; flex-wrap: wrap; gap: var(--space-6); align-items: flex-start; }
+.art-label { font-family: var(--font-mono); font-size: var(--text-caption); color: var(--text-muted); margin-bottom: var(--space-2); }
+.art { position: relative; overflow: hidden; background: var(--surface); color: var(--text); flex: none; display: flex; }
+.art .ts-compass svg { color: var(--watermark); }
+.art .mark { position: absolute; display: flex; align-items: center; gap: 12px; }
+.art .mark img { height: 40px; width: auto; }
+.art .mark .ts-caption { font-size: 12px; letter-spacing: var(--tracking-caps-tight); }
+.art .ts-identity .name { font-weight: var(--weight-title); letter-spacing: 0.08em; }
+.art .ts-identity .title { color: var(--gold); }
+.art .quote { font-size: 30px; line-height: 1.5; font-weight: var(--weight-title); }
+.art .foot { position: absolute; left: 64px; right: 64px; bottom: 48px; display: flex; justify-content: space-between; align-items: center; padding-top: 18px; border-top: 1px solid var(--gold); font-family: var(--font-en); font-size: 13px; letter-spacing: var(--tracking-caps-tight); text-transform: uppercase; color: var(--text-caption); }
+
+.art-square { width: 1080px; height: 1080px; padding: 96px 64px; flex-direction: column; justify-content: flex-end; gap: 28px; }
+.art-square .ts-portrait { position: absolute; top: 96px; right: 64px; --portrait: 420px; }
+.art-square .ts-identity { max-width: 560px; }
+.art-square .ts-identity .name { font-size: 64px; }
+.art-square .ts-identity .en { font-size: 16px; }
+.art-square .ts-identity .title { font-size: 28px; }
+.art-square .ts-identity .focus { font-size: 22px; }
+.art-square .quote { max-width: 900px; margin-bottom: 72px; }
+
+.art-wide { width: 1200px; height: 628px; padding: 64px; align-items: center; gap: 56px; }
+.art-wide .ts-portrait { --portrait: 400px; }
+.art-wide .ts-identity .name { font-size: 56px; }
+.art-wide .ts-identity .en { font-size: 15px; }
+.art-wide .ts-identity .title { font-size: 26px; }
+.art-wide .ts-identity .focus { font-size: 20px; }
+.art-wide .quote { font-size: 24px; margin-top: 20px; }
+.art-wide .foot { left: 64px; right: 64px; bottom: 40px; }
+
+.art-cover { width: 900px; height: 383px; padding: 40px 48px; align-items: center; gap: 40px; }
+.art-cover .ts-portrait { --portrait: 280px; }
+.art-cover .ts-identity .name { font-size: 44px; }
+.art-cover .ts-identity .en { font-size: 13px; }
+.art-cover .ts-identity .title { font-size: 22px; }
+.art-cover .ts-identity .focus { font-size: 17px; }
+.art-cover .mark { top: 32px; right: 48px; }
+.art-cover .mark img { height: 32px; }
+
+.art-story { width: 1080px; height: 1920px; padding: 120px 88px; flex-direction: column; justify-content: center; gap: 40px; }
+.art-story .ts-portrait { --portrait: 640px; align-self: center; }
+.art-story .ts-identity { align-items: center; text-align: center; }
+.art-story .ts-identity .name { font-size: 72px; }
+.art-story .ts-identity .en { font-size: 18px; }
+.art-story .ts-identity .title { font-size: 32px; }
+.art-story .ts-identity .focus { font-size: 24px; }
+.art-story .quote { text-align: center; font-size: 34px; max-width: 800px; align-self: center; }
+.art-story .foot { left: 88px; right: 88px; bottom: 96px; justify-content: center; }

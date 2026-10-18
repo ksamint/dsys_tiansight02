@@ -1,0 +1,1 @@
+export interface LedgerTableProps extends React.TableHTMLAttributes<HTMLTableElement> { columns: string[]; rows: (string | { text: string; mono?: boolean })[][]; /** gold-ruled total row */ total?: string[]; }

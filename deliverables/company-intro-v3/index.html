@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>侍天 TIANSIGHT 企业介绍</title>
+<link rel="stylesheet" href="../../brand/fonts.css">
+<style>
+html,body{margin:0;height:100%;background:#17130d}
+#stage{position:fixed;inset:0 0 44px 0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#frame{width:1920px;height:1080px;flex:none;transform-origin:center;position:relative;overflow:hidden;background:#f4f0e7}
+#frame section{position:absolute;inset:0;width:1920px;height:1080px}
+#frame *{box-sizing:border-box;margin:0}
+#frame section > :not([style*="position:absolute"]){position:relative}
+#frame aside{display:none}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#bar{position:fixed;left:0;right:0;bottom:0;height:44px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 16px;color:#F4F0E7;font:13px 'Noto Serif SC',serif;background:#17130d}
+#bar button{background:none;border:1px solid #D4A862;color:#F4F0E7;padding:4px 14px;cursor:pointer}
+#notes{flex:1;opacity:.75;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+</style></head><body>
+<main id="stage"><h1 class="vh">侍天 TIANSIGHT 企业介绍</h1><div id="frame"></div></main>
+<div id="bar"><button id="prev" aria-label="上一页">←</button><span id="notes"></span><span id="pg"></span><button id="next" aria-label="下一页">→</button></div>
+<script>
+const ORDER = ["cover", "promise", "stmt-problem", "sec-1", "modules", "matrix", "module-1", "timeline-1", "module-2", "timeline-2", "module-3", "timeline-3", "module-4", "timeline-4", "rhythm", "options", "stmt-data", "sec-2", "brain", "scr-report", "scr-product", "scr-price", "scr-trade", "chart-waterfall", "chart-corridor", "value", "stmt-proof", "cases", "case-01", "case-02", "case-03", "case-04", "case-05", "case-06", "case-07", "case-08", "partners", "sec-3", "team", "profile-bianjiang", "profile-guofeng", "profile-liquanchao", "profile-yuxiangdong", "stats-growth", "stats-org", "stmt-decision", "contact"];
+let i = Math.max(0, ORDER.indexOf(location.hash.slice(1)));
+const frame = document.getElementById('frame');
+function fit(){ const s = Math.min(innerWidth/1920, (innerHeight-44)/1080); frame.style.transform = 'scale(' + s + ')'; }
+async function show(k){
+  i = (k + ORDER.length) % ORDER.length;
+  const h = await (await fetch('slides/' + ORDER[i] + '.html')).text();
+  frame.innerHTML = h;
+  const a = frame.querySelector('aside');
+  document.getElementById('notes').innerHTML = a ? a.innerHTML : '';
+  document.getElementById('pg').textContent = (i + 1) + ' / ' + ORDER.length;
+  history.replaceState(null, '', '#' + ORDER[i]);
+}
+addEventListener('resize', fit);
+addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
+document.getElementById('prev').onclick = () => show(i - 1);
+document.getElementById('next').onclick = () => show(i + 1);
+fit(); show(i);
+</script></body></html>

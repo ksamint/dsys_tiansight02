@@ -1,0 +1,1 @@
+export interface SealStampProps extends React.HTMLAttributes<HTMLSpanElement> { size?: number; /** two-line 侍/天 */ two?: boolean; children?: React.ReactNode; }

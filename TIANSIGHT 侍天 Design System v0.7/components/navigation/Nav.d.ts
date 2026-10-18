@@ -1,0 +1,1 @@
+export interface NavProps extends React.HTMLAttributes<HTMLElement> { items: { label: string; href?: string; current?: boolean }[]; }

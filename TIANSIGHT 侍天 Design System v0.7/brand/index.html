@@ -1,0 +1,779 @@
+<!-- @dsCard group="Specimen" viewport="1280x900" subtitle="Every published rule rendered, bilingual (repo brand/index.html)" name="Foundation specimen" -->
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>侍天 TIANSIGHT · 品牌基础 Foundation</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="base.css">
+<link rel="stylesheet" href="components.css">
+<style>
+  /* specimen-only layout helpers */
+  .spec-toc { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
+  .spec-ratio { display: flex; height: 28px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .spec-ratio > span { display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 11px; }
+  .spec-type-row { display: grid; grid-template-columns: 140px 1fr; gap: var(--space-5); align-items: baseline; padding: var(--space-4) 0; border-top: 1px solid var(--line); }
+  .spec-type-row .ts-mono { color: var(--text-muted); }
+  .spec-marks { display: flex; align-items: flex-end; gap: var(--space-8); flex-wrap: wrap; }
+  .spec-mark-cell { display: flex; flex-direction: column; align-items: center; gap: var(--space-2); }
+  .spec-clear { position: relative; display: inline-block; border: 1px dashed var(--line-strong); }
+  .spec-clear img { display: block; }
+  .spec-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+  .spec-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); }
+  .spec-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-6); }
+  .spec-note { font-size: var(--text-small); color: var(--text-muted); font-weight: var(--weight-aux); }
+  .spec-cover { position: relative; padding-block: var(--space-10); overflow: hidden; }
+  .spec-cover .ts-lockup { padding-block: var(--space-8); }
+  .spec-hero-rule { width: 96px; margin: 0 auto; }
+  .spec-fallback { font-family: var(--font-cn); }
+  .spec-chart { width: 100%; height: auto; }
+  .spec-q { counter-reset: q; }
+  .spec-states { display: flex; flex-wrap: wrap; gap: var(--space-4); }
+  .spec-states > div { display: flex; flex-direction: column; gap: var(--space-2); }
+  .spec-states .ts-input { max-width: 160px; }
+  .spec-hover { background: var(--gold-hi); border-color: var(--gold-hi); color: var(--charcoal); }
+  .spec-focus { outline: 2px solid var(--focus); outline-offset: 2px; }
+  .spec-code { margin: var(--space-4) 0 0; font-size: 12px; white-space: pre-wrap; color: var(--text-muted); border-top: 1px solid var(--line); padding-top: var(--space-3); }
+  .spec-dot { display: inline-block; width: 10px; height: 10px; background: var(--gold-hi); border-radius: 50%; transform: translateX(-24px); }
+  .spec-dot.go[data-dur="fast"] { transition: transform var(--dur-fast) var(--ease); transform: none; }
+  .spec-dot.go[data-dur="base"] { transition: transform var(--dur-base) var(--ease); transform: none; }
+  .spec-dot.go[data-dur="reveal"] { transition: transform var(--dur-reveal) var(--ease-out); transform: none; }
+  .spec-q .ts-card { padding-left: calc(var(--card-pad) + 40px); }
+  .spec-q .ts-card::before { counter-increment: q; content: counter(q, cjk-ideographic); position: absolute; left: var(--card-pad); top: var(--card-pad); width: 28px; height: 28px; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: var(--text-caption); color: var(--gold); }
+  @media (max-width: 640px) { .spec-type-row { grid-template-columns: 1fr; gap: var(--space-2); } }
+</style>
+</head>
+<body>
+<a class="ts-skip" href="#top">跳到正文</a>
+<!-- icons:start -->
+<svg style="display:none" aria-hidden="true">
+<symbol id="ts-arrow-right" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="ts-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18L18 6M9 6h9v9"/></symbol>
+  <symbol id="ts-arrow-left" viewBox="0 0 24 24"><path d="M20 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="ts-arrow-down" viewBox="0 0 24 24"><path d="M12 4v15M6 13l6 6 6-6"/></symbol>
+  <symbol id="ts-chevron-down" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7"/></symbol>
+  <symbol id="ts-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+  <symbol id="ts-cross" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="ts-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="ts-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 13v6H5V6h6"/></symbol>
+  <symbol id="ts-print" viewBox="0 0 24 24"><path d="M7 9V4h10v5M5 9h14v8h-3M8 14h8v6H8z"/></symbol>
+  <symbol id="ts-chart" viewBox="0 0 24 24"><path d="M4 20h16M6 16l4-5 4 3 5-7"/></symbol>
+  <symbol id="ts-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="1"/><path d="M12 3.5v4M12 16.5v4M3.5 12h4M16.5 12h4"/></symbol>
+  <symbol id="ts-route" viewBox="0 0 24 24"><circle cx="5" cy="18" r="2"/><circle cx="19" cy="6" r="2"/><path d="M7 18h6a4 4 0 0 0 0-8H11a4 4 0 0 1 0-8"/></symbol>
+  <symbol id="ts-correction" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="ts-store" viewBox="0 0 24 24"><path d="M4 10l1.5-5h13L20 10M5 10v10h14V10M10 20v-6h4v6"/></symbol>
+  <symbol id="ts-data" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></symbol>
+  <symbol id="ts-seal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="5"/></symbol>
+</svg>
+<!-- icons:end -->
+
+<header class="ts-header">
+  <div class="ts-container" style="display:flex;align-items:center;justify-content:space-between;gap:var(--space-3) var(--space-6);min-height:64px;flex-wrap:wrap;padding-block:var(--space-2)">
+    <a href="#top" class="ts-lockup-row" style="border:0" aria-label="侍天 TIANSIGHT">
+      <span class="ts-mark" style="--mark-size:36px"><img src="logo.png" alt="" width="34" height="36"></span>
+      <span class="ts-wordmark"><span class="ts-caption" style="letter-spacing:var(--tracking-caps-tight)">Tiansight</span></span>
+    </a>
+    <nav class="ts-nav" aria-label="章节">
+      <a href="#rules">总则</a><a href="#color">色彩</a><a href="#type">字体</a><a href="#mark">标志</a><a href="#components">组件</a><a href="#states">状态</a><a href="#charts">图表</a><a href="#icons">图标</a><a href="#layout">版式</a><a href="#voice">话术</a><a href="#open">待定</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ── Cover ─────────────────────────────────────────────── -->
+<section class="spec-cover">
+  <div class="ts-compass" aria-hidden="true">
+    <svg viewBox="0 0 600 600" fill="none" stroke="currentColor" stroke-width="1">
+      <circle cx="300" cy="300" r="290"/><circle cx="300" cy="300" r="230"/><circle cx="300" cy="300" r="150"/><circle cx="300" cy="300" r="6"/>
+      <path d="M300 0v600M0 300h600"/>
+      <path d="M300 60l10 20h-20zM300 540l10-20h-20zM60 300l20-10v20zM540 300l-20-10v20z" fill="currentColor" stroke="none"/>
+    </svg>
+  </div>
+  <div class="ts-container">
+    <div class="ts-lockup">
+      <span class="ts-caption">Design System · Foundation · v0.6</span>
+      <div class="ts-display">侍天</div>
+      <hr>
+      <div class="ts-tagline">智慧领航者</div>
+      <p class="ts-center" style="max-width:32em;margin:0">给中高端连锁装一套「看得清、改得动、能复利」的智能领航系统。</p>
+      <p class="ts-caption" style="margin-top:var(--space-4)">Wisdom Navigator · Premium F&amp;B Chains · A Member of the Table AI Alliance</p>
+    </div>
+    <p class="ts-center spec-note" style="max-width:none;margin-top:var(--space-6)">
+      素墨为纸、玄墨为字、土金为骨；沉稳敢言、有据可依。<br>
+      Ink is the paper, charcoal is the voice, gold is the structure. Composed, forthright, evidence-based.
+    </p>
+  </div>
+</section>
+
+<!-- ── 0. Rules ──────────────────────────────────────────── -->
+<section id="rules" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">00 · Operating rules</span>
+      <h2>总则</h2>
+      <p class="ts-sub">这一页是离线样本：不依赖任何外部脚本或字体。所有取值来自已发布的品牌指南 v0.6，见 <code>brand/guide.md</code>。</p>
+    </div>
+    <div class="spec-three" style="margin-top:var(--space-7)">
+      <article class="ts-card" data-index="壹">
+        <span class="ts-caption">Always pale</span>
+        <h3 class="ts-card-title">底色永远是淡墨纸</h3>
+        <p>页面底色 <code>#F4F0E7</code>，内容层 <code>#FFFDF8</code>。不用纯白，不用纯黑。</p>
+      </article>
+      <article class="ts-card" data-index="贰">
+        <span class="ts-caption">Ink first</span>
+        <h3 class="ts-card-title">素墨是主色</h3>
+        <p><code>#EFE6D2</code> 承载色块与关键操作；玄墨承载文字；土金给结构；朱红只作印记，≤ 5%。</p>
+      </article>
+      <article class="ts-card" data-index="叁">
+        <span class="ts-caption">Serif everywhere</span>
+        <h3 class="ts-card-title">通篇宋体</h3>
+        <p>中文思源宋体，英文 Noto Serif 大写字距排版。等宽字体只用于色值、代码、数据、价格。</p>
+      </article>
+      <article class="ts-card" data-index="肆">
+        <span class="ts-caption">Bilingual</span>
+        <h3 class="ts-card-title">中文为主，英文为注</h3>
+        <p>每个中文标题配一行大写英文题注，颜色深金。中文不用斜体，强调用字重或明金。</p>
+      </article>
+      <article class="ts-card" data-index="伍">
+        <span class="ts-caption">No slop</span>
+        <h3 class="ts-card-title">不许的事</h3>
+        <ul class="ts-check-list">
+          <li data-no>装饰性渐变、表情符号</li>
+          <li data-no>圆角卡片加左侧色条</li>
+          <li data-no>Inter / Roboto，或任何无衬线回退</li>
+          <li data-no>手绘复杂图形；只画圆与线</li>
+        </ul>
+      </article>
+      <article class="ts-card" data-index="陆">
+        <span class="ts-caption">Falsifiable</span>
+        <h3 class="ts-card-title">凡判断皆可被证伪</h3>
+        <p>这份规范是活文档。任何结论一旦被门店真实数据推翻，即刻修订。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── 1. Color ──────────────────────────────────────────── -->
+<section id="color" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">01 · Color tokens</span>
+      <h2>色彩</h2>
+      <p class="ts-sub">九个已发布色值。对比度按 WCAG 相对亮度计算，底色为淡墨纸。明金在浅底上只能用于大字号或装饰；小字请用深金或玄墨。</p>
+    </div>
+
+    <div style="margin-top:var(--space-7)">
+      <div class="ts-token-row" style="border-top:1px solid var(--gold)">
+        <span></span><span class="ts-caption">Token · 名称</span><span class="ts-caption">Hex · 对比度</span><span class="ts-caption">Usage · 用途</span>
+      </div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--surface)"></span><span class="ts-token-name">--surface<small>淡墨纸 Pale Manuscript</small></span><span class="ts-hex ts-mono" data-small>#F4F0E7</span><span class="ts-usage">页面底色 · 约占任何画面的 78%</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--paper)"></span><span class="ts-token-name">--paper<small>宣纸 Paper</small></span><span class="ts-hex ts-mono" data-small>#FFFDF8</span><span class="ts-usage">内容层、卡片、图片衬底</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--ink-primary)"></span><span class="ts-token-name">--ink-primary<small>素墨 Ink · 主色</small></span><span class="ts-hex ts-mono" data-small>#EFE6D2</span><span class="ts-usage">色块、关键操作、高亮 · 约 7%。与底色对比 1.09，须以金色描边定义边界</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--charcoal)"></span><span class="ts-token-name">--charcoal<small>玄墨 Charcoal</small></span><span class="ts-hex ts-mono" data-small>#17130D · 16.3 : 1</span><span class="ts-usage">标题、正文 · 约 12%</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--gold)"></span><span class="ts-token-name">--gold<small>土金 Earth Gold</small></span><span class="ts-hex ts-mono" data-small>#76551F · 6.0 : 1</span><span class="ts-usage">描边、分隔线、导航 · 约 3%</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--gold-hi)"></span><span class="ts-token-name">--gold-hi<small>明金 Bright Gold</small></span><span class="ts-hex ts-mono">#D4A862 · 1.9 : 1</span><span class="ts-usage">激活态、关键数字、标语。浅底上不用于 28px 以下文字；玄墨底上 8.4 : 1</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--gold-deep)"></span><span class="ts-token-name">--gold-deep<small>深金 Deep Gold</small></span><span class="ts-hex ts-mono" data-small>#76551F · 6.0 : 1</span><span class="ts-usage">题注、英文标识。v0.6 与土金同值，保留别名</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--ink-muted)"></span><span class="ts-token-name">--ink-muted<small>素墨灰 Ink Muted</small></span><span class="ts-hex ts-mono" data-small>#706758 · 4.9 : 1</span><span class="ts-usage">辅助文字、坐标刻度</span></div>
+      <div class="ts-token-row"><span class="ts-swatch" style="--swatch-color:var(--seal)"></span><span class="ts-token-name">--seal<small>朱红 Vermillion</small></span><span class="ts-hex ts-mono" data-small>#8C3228 · 7.1 : 1</span><span class="ts-usage">印章、否定 ✕、警示 · ≤ 5%，从不作为色块</span></div>
+    </div>
+
+    <div class="spec-two" style="margin-top:var(--space-7)">
+      <div>
+        <span class="ts-caption">Rule ratios · 画面配比</span>
+        <div class="spec-ratio" style="margin-top:var(--space-3)">
+          <span style="flex:78;background:var(--surface);color:var(--text-muted)">78%</span>
+          <span style="flex:12;background:var(--charcoal);color:var(--surface)">12%</span>
+          <span style="flex:7;background:var(--ink-primary);color:var(--charcoal)">7%</span>
+          <span style="flex:3;background:var(--gold);color:var(--surface)">3</span>
+        </div>
+        <p class="spec-note" style="margin-top:var(--space-2)">淡墨纸 · 玄墨文字 · 素墨色块 · 土金线条。朱红另计，≤ 5%，且只是印记。</p>
+      </div>
+      <div>
+        <span class="ts-caption">Derived surfaces · 派生面</span>
+        <table style="margin-top:var(--space-3)">
+          <tbody>
+            <tr><td>hairline <code>--line</code></td><td class="ts-mono">rgba(23,19,13,.18)</td></tr>
+            <tr><td>hairline-strong <code>--line-strong</code></td><td class="ts-mono">rgba(23,19,13,.34)</td></tr>
+            <tr><td>card border <code>--card-border</code></td><td class="ts-mono">rgba(118,85,31,.34)</td></tr>
+            <tr><td>watermark <code>--watermark</code></td><td class="ts-mono">rgba(118,85,31,.10)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 2. Type ───────────────────────────────────────────── -->
+<section id="type" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">02 · Typography</span>
+      <h2>字体</h2>
+      <p class="ts-sub">字体未随仓库打包。此页以本机宋体回退渲染；正式环境须自托管 Noto Serif SC、Noto Serif 与 IBM Plex Mono，回退链永不落到无衬线。</p>
+    </div>
+
+    <div style="margin-top:var(--space-7)">
+      <div class="spec-type-row" style="border-top:1px solid var(--gold)"><span class="ts-mono">display · 96 / 1.0 / 600</span><span class="ts-display" style="font-size:clamp(3rem,6vw,5rem)">侍天</span></div>
+      <div class="spec-type-row"><span class="ts-mono">h1 · 56 / 1.1 / 600</span><h1>先把账算清，再谈策略</h1></div>
+      <div class="spec-type-row"><span class="ts-mono">h2 · 40 / 1.15 / 600</span><h2>模型未锁，扩张即放大亏损</h2></div>
+      <div class="spec-type-row"><span class="ts-mono">h3 · 28 / 1.3 / 600</span><h3>现金流先于利润</h3></div>
+      <div class="spec-type-row"><span class="ts-mono">body · 18 / 1.7 / 400</span><p style="margin:0">你这家店每天差 18 桌才不亏。这个判断的边界条件是：客单价不变、坪效按当前排班计算、外卖占比不高于三成。我们领航，你掌舵；决策权在你。</p></div>
+      <div class="spec-type-row"><span class="ts-mono">small · 14 / 1.8 / 300</span><small>数据来源：门店 POS 与平台后台，2026 年 3 月至 8 月。可计算的，量化到位；不可计算的，如实说明。</small></div>
+      <div class="spec-type-row"><span class="ts-mono">caption · 13 / 1.4 / 400</span><span class="ts-caption">Chart · Compass · Route · Correction</span></div>
+      <div class="spec-type-row"><span class="ts-mono">tagline · 0.5em</span><span class="ts-tagline">智慧领航者</span></div>
+      <div class="spec-type-row" style="border-bottom:1px solid var(--line)"><span class="ts-mono">mono · 13 / 1.5</span><span class="ts-mono">¥8,888 / 90 天 · #EFE6D2 · L3 模型锁定 · 现役 10 / 28</span></div>
+    </div>
+
+    <div class="spec-two" style="margin-top:var(--space-7)">
+      <div class="ts-card">
+        <span class="ts-caption">Pairing · 中英配对</span>
+        <div class="ts-heading" style="margin-top:var(--space-3)">
+          <span class="ts-caption">Maturity · L1 to L5</span>
+          <h3>成熟度阶梯</h3>
+          <p class="ts-sub" style="margin:0">L1 游击 → L2 单店跑通 → L3 模型锁定 → L4 体系连锁 → L5 智能领航</p>
+        </div>
+      </div>
+      <div class="ts-card">
+        <span class="ts-caption">Emphasis · 强调</span>
+        <p style="margin-top:var(--space-3)">中文不用斜体。强调用字重：<strong>真相优先</strong>，或用明金：<em>敢于证伪</em>。</p>
+        <p class="ts-latin" lang="en" style="margin:0"><em>Latin quotes may carry italic.</em> Numerals stay mono: <span class="ts-num">2026-09-05</span>.</p>
+      </div>
+    </div>
+    <p class="spec-note" style="margin-top:var(--space-5)">回退链：Noto Serif SC → Source Han Serif SC → Songti SC → STSong → serif。行长：中文 28–38 字，英文 60–72 字符。</p>
+  </div>
+</section>
+
+<!-- ── 3. Mark ───────────────────────────────────────────── -->
+<section id="mark" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">03 · The mark</span>
+      <h2>标志</h2>
+      <p class="ts-sub">官方标志为 <code>brand/logo.png</code>（601 × 640，透明底），哈希记录于 <code>brand/source.json</code>。圆环印章内书「侍天」。</p>
+    </div>
+
+    <div class="spec-marks" style="margin-top:var(--space-7)">
+      <div class="spec-mark-cell"><span class="ts-mark" style="--mark-size:24px"><img src="logo.png" alt="侍天" ></span><span class="ts-mono">24px · inline min</span></div>
+      <div class="spec-mark-cell"><span class="ts-mark" style="--mark-size:64px"><img src="logo.png" alt="侍天"></span><span class="ts-mono">64px · hero min</span></div>
+      <div class="spec-mark-cell"><span class="ts-mark" style="--mark-size:128px"><img src="logo.png" alt="侍天"></span><span class="ts-mono">128px</span></div>
+      <div class="spec-mark-cell">
+        <span class="spec-clear"><span class="ts-mark ts-mark-clear" style="--mark-size:96px"><img src="logo.png" alt="侍天"></span></span>
+        <span class="ts-mono">clear space ≥ 1 ring radius</span>
+      </div>
+    </div>
+
+    <div class="spec-three" style="margin-top:var(--space-7)">
+      <div class="ts-card">
+        <span class="ts-caption">Lockup with alliance</span>
+        <div class="ts-lockup-row" style="margin-top:var(--space-3)">
+          <span class="ts-mark" style="--mark-size:40px"><img src="logo.png" alt="侍天"></span>
+          <span class="ts-wordmark"><span class="ts-caption" style="letter-spacing:var(--tracking-caps-tight)">Tiansight</span></span>
+          <span class="ts-alliance ts-caption" style="letter-spacing:var(--tracking-caps-tight)">Table AI<br>Alliance</span>
+        </div>
+        <p class="spec-note" style="margin:var(--space-3) 0 0">只与 Table AI Alliance 字标并置，以 1px 土金竖线分隔。不与第三方标志合成。</p>
+      </div>
+      <div class="ts-card">
+        <span class="ts-caption">朱印 · Vermillion seal</span>
+        <div class="spec-row" style="margin-top:var(--space-3)">
+          <span class="ts-seal-stamp">侍</span>
+          <span class="ts-seal-stamp" data-two style="--stamp-size:64px"><span>侍</span><span>天</span></span>
+          <span class="ts-seal-stamp" style="--stamp-size:40px">侍</span>
+        </div>
+        <p class="spec-note" style="margin:var(--space-3) 0 0">只用于封面、封底与署名。CSS 版本为占位，正式印章须由书法稿件提供。</p>
+      </div>
+      <div class="ts-card">
+        <span class="ts-caption">Misuse</span>
+        <ul class="ts-check-list" style="margin-top:var(--space-3)">
+          <li data-no>旋转、改色、拉伸</li>
+          <li data-no>置于饱和色或朱红底上</li>
+          <li data-no>拆解书法字重新排版</li>
+          <li>玄墨色，置于素墨或宣纸底</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 5. Components ─────────────────────────────────────── -->
+<section id="components" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">05 · Components</span>
+      <h2>组件</h2>
+      <p class="ts-sub">纯 CSS 实现，前缀 <code>.ts-</code>，见 <code>brand/components.css</code>。圆角 2px；只有状态徽章用胶囊形。</p>
+    </div>
+
+    <div class="spec-two" style="margin-top:var(--space-7)">
+      <div class="ts-card">
+        <span class="ts-caption">Buttons · 按钮</span>
+        <div class="spec-row" style="margin-top:var(--space-4)">
+          <button class="ts-button">申请经营体检</button>
+          <button class="ts-button ts-button-secondary">查看报告样张</button>
+          <button class="ts-button ts-button-quiet">了解四件套 <svg class="ts-icon"><use href="#ts-arrow-right"/></svg></button>
+          <button class="ts-button ts-button-charcoal">进入平台</button>
+          <button class="ts-button" disabled>已提交</button>
+        </div>
+        <div class="spec-row" style="margin-top:var(--space-3)">
+          <button class="ts-button ts-button-lg">主操作 · 大</button>
+          <button class="ts-button ts-button-sm">小</button>
+        </div>
+        <p class="spec-note" style="margin:var(--space-4) 0 0">主按钮是素墨色块加玄墨文字，土金描边定义边界。按下时下沉 1px，如盖印。悬停不变色相，不放大。</p>
+      </div>
+
+      <div class="ts-card">
+        <span class="ts-caption">Badges · 徽章</span>
+        <div class="spec-row" style="margin-top:var(--space-4)">
+          <span class="ts-badge">¥8,888 / 90 天</span>
+          <span class="ts-badge">¥6,888 / 月</span>
+          <span class="ts-badge ts-badge-outline">现役 10 / 28</span>
+          <span class="ts-badge ts-badge-outline">L3 · 模型锁定</span>
+          <span class="ts-badge ts-badge-seal">✕ 未验证</span>
+        </div>
+        <p class="spec-note" style="margin:var(--space-4) 0 0">实心徽章：素墨底、玄墨字、等宽，用于价格与层级。描边徽章：土金边、明金字、胶囊形，用于状态。</p>
+        <span class="ts-caption" style="display:block;margin-top:var(--space-5)">✓ / ✕ list</span>
+        <ul class="ts-check-list" style="margin-top:var(--space-3)">
+          <li>每个结论都有证据、利润影响、执行动作、验收指标</li>
+          <li>数据不足时如实说明</li>
+          <li data-no>「跟着我们一定爆火」</li>
+          <li data-no>「先上系统，数据慢慢补」</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="spec-three" style="margin-top:var(--space-6)">
+      <article class="ts-card" data-index="壹">
+        <span class="ts-caption">Card · default</span>
+        <h3 class="ts-card-title">经营体检版</h3>
+        <p>先把问题看清。90 天内交付经营诊断：增长在何处、利润失于何处、先改哪三件。</p>
+        <span class="ts-badge">¥8,888 / 90 天</span>
+      </article>
+      <article class="ts-card ts-card-field" data-index="贰">
+        <span class="ts-caption">Card · ink field</span>
+        <h3 class="ts-card-title">增利版</h3>
+        <p>让系统昼夜守望经营。逐店逐月校正，验证有效的做法沉淀为门店标准。</p>
+        <span class="ts-badge" style="background:var(--paper)">¥6,888 / 月 · 12 个月起</span>
+      </article>
+      <article class="ts-card ts-card-charcoal" data-index="叁">
+        <span class="ts-caption">Card · charcoal</span>
+        <h3 class="ts-card-title">百年共创版</h3>
+        <p class="ts-muted">36 个月起签 · 基础领航费 ¥29,888 / 月起 · 无增量不收成功费。</p>
+        <span class="ts-badge ts-badge-outline">深度共创</span>
+      </article>
+    </div>
+
+    <div class="spec-two" style="margin-top:var(--space-6)">
+      <div class="ts-card">
+        <span class="ts-caption">Form fields · 表单</span>
+        <form class="ts-stack" style="margin-top:var(--space-4)" onsubmit="return false">
+          <div class="ts-field">
+            <label class="ts-label" for="f-brand">品牌名称</label>
+            <input class="ts-input" id="f-brand" placeholder="例：苏帮袁">
+            <span class="ts-hint">以营业执照名称为准。</span>
+          </div>
+          <div class="ts-field">
+            <label class="ts-label" for="f-stores">门店数</label>
+            <select class="ts-select" id="f-stores"><option>1 – 3</option><option>4 – 10</option><option>11 – 30</option><option>30 以上</option></select>
+          </div>
+          <div class="ts-field">
+            <label class="ts-label" for="f-data">数据月份</label>
+            <input class="ts-input" id="f-data" aria-invalid="true" value="3 个月">
+            <span class="ts-error">✕ 经营体检需要至少 6 个月数据。</span>
+          </div>
+          <div class="spec-row"><button class="ts-button" type="submit">提交</button><button class="ts-button ts-button-quiet" type="reset">清空</button></div>
+        </form>
+      </div>
+
+      <div class="ts-stack">
+        <div class="ts-card">
+          <span class="ts-caption">Stat · 关键数字</span>
+          <div class="spec-row" style="margin-top:var(--space-4);gap:var(--space-7);align-items:flex-start">
+            <div class="ts-stat"><span class="ts-caption">Break-even gap</span><span class="ts-value">18<small>桌 / 日</small></span><span class="ts-boundary">边界：客单价不变</span></div>
+            <div class="ts-stat"><span class="ts-caption">Delivery</span><span class="ts-value ts-charcoal">7<small>日内</small></span><span class="ts-boundary">自数据交付起</span></div>
+            <div class="ts-stat"><span class="ts-caption">Roster</span><span class="ts-value ts-charcoal">10<small>/ 28</small></span><span class="ts-boundary">数字员工现役</span></div>
+          </div>
+        </div>
+        <div class="ts-card">
+          <span class="ts-caption">Steps · 五问</span>
+          <div class="spec-row" style="margin-top:var(--space-4);gap:var(--space-4)">
+            <span class="ts-step">一</span><span class="ts-step">二</span><span class="ts-step" aria-current="step">三</span><span class="ts-step">四</span><span class="ts-step">五</span>
+            <span class="ts-small ts-muted">现状 · 机会 · 优先 · 行动 · 结果</span>
+          </div>
+        </div>
+        <blockquote class="ts-quote">
+          「报告分析得非常细，最关键的是结论有证据，不靠猜。」
+          <footer>餐饮老板 王总 · 引文经许可使用</footer>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="spec-two" style="margin-top:var(--space-6)">
+      <div class="ts-frame ts-frame-double">
+        <span class="ts-caption">Framing · 手稿框</span>
+        <h3 style="margin-top:var(--space-3)">导航四件套</h3>
+        <p style="margin:0">海图 Chart · 罗盘 Compass · 航线 Route · 校正 Correction。细金线、双线边框与角标，营造手稿分量。</p>
+      </div>
+      <div class="ts-card">
+        <span class="ts-caption">Ledger table · 账表</span>
+        <table class="ts-table-ledger" style="margin-top:var(--space-4)">
+          <thead><tr><th>科目</th><th class="ts-num">本月</th><th class="ts-num">同比</th></tr></thead>
+          <tbody>
+            <tr><td>堂食营收</td><td class="ts-num">¥412,300</td><td class="ts-num">+6.2%</td></tr>
+            <tr><td>外卖营收</td><td class="ts-num">¥138,900</td><td class="ts-num" style="color:var(--seal)">−3.8%</td></tr>
+            <tr><td>人力成本</td><td class="ts-num">¥146,000</td><td class="ts-num">+1.1%</td></tr>
+            <tr data-total><td>经营利润</td><td class="ts-num">¥61,450</td><td class="ts-num">+2.4%</td></tr>
+          </tbody>
+        </table>
+        <p class="spec-note" style="margin:var(--space-3) 0 0">数据为样例，仅示范格式。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Interaction and states ────────────────────────────── -->
+<section id="states" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">05b · Interaction, states and motion</span>
+      <h2>交互、状态与动效</h2>
+      <p class="ts-sub">每个组件都写明静止、悬停、焦点、按下、禁用五态；焦点环统一为 2px 土金半透明，偏移 2px。动效只有三档时长、两条曲线；系统减少动效时全部归零。</p>
+    </div>
+
+    <div class="spec-two" style="margin-top:var(--space-7)">
+      <div class="ts-card">
+        <span class="ts-caption">States · 五态</span>
+        <div class="spec-states" style="margin-top:var(--space-4)">
+          <div><span class="ts-caption">Rest</span><button class="ts-button">申请经营体检</button></div>
+          <div><span class="ts-caption">Hover</span><button class="ts-button spec-hover">申请经营体检</button></div>
+          <div><span class="ts-caption">Focus</span><button class="ts-button spec-focus">申请经营体检</button></div>
+          <div><span class="ts-caption">Pressed</span><button class="ts-button" aria-pressed="true">已选 · 按月陪跑</button></div>
+          <div><span class="ts-caption">Disabled</span><button class="ts-button" disabled>已提交</button></div>
+        </div>
+        <div class="spec-states" style="margin-top:var(--space-5)">
+          <div><span class="ts-caption">Input</span><input class="ts-input" value="D 店" aria-label="门店"></div>
+          <div><span class="ts-caption">Focus</span><input class="ts-input spec-focus" value="D 店" aria-label="门店（焦点）"></div>
+          <div><span class="ts-caption">Read-only</span><input class="ts-input" value="D+0 = 2026-09-06" readonly aria-label="口径（只读）"></div>
+          <div><span class="ts-caption">Disabled</span><input class="ts-input" value="待补" disabled aria-label="待补（禁用）"></div>
+        </div>
+        <div class="spec-row" style="margin-top:var(--space-5)">
+          <article class="ts-card" aria-selected="true" style="padding:var(--space-4);flex:1"><span class="ts-caption">Selected card</span><h3 class="ts-card-title" style="font-size:1rem">按月陪跑</h3></article>
+          <article class="ts-card ts-card-interactive" style="padding:var(--space-4);flex:1"><span class="ts-caption">Interactive card</span><h3 class="ts-card-title" style="font-size:1rem">单次体检</h3></article>
+        </div>
+        <pre class="ts-mono spec-code">:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px }
+[aria-pressed="true"]  .ts-card[aria-selected="true"]  :disabled { opacity: .4 }</pre>
+      </div>
+
+      <div class="ts-card">
+        <span class="ts-caption">Motion · 动效令牌</span>
+        <table class="ts-table-ledger" style="margin-top:var(--space-4)">
+          <thead><tr><th>令牌</th><th>值</th><th>用途</th><th class="ts-num">试</th></tr></thead>
+          <tbody>
+            <tr><td class="ts-mono">--dur-fast</td><td class="ts-mono">120ms</td><td>颜色、边框、提示</td><td class="ts-num"><span class="spec-dot" data-dur="fast"></span></td></tr>
+            <tr><td class="ts-mono">--dur-base</td><td class="ts-mono">220ms</td><td>展开、进度、对话框</td><td class="ts-num"><span class="spec-dot" data-dur="base"></span></td></tr>
+            <tr><td class="ts-mono">--dur-reveal</td><td class="ts-mono">700ms</td><td>段落入场，只用一次</td><td class="ts-num"><span class="spec-dot" data-dur="reveal"></span></td></tr>
+            <tr><td class="ts-mono">--ease</td><td class="ts-mono">.2 .6 .2 1</td><td>状态切换</td><td></td></tr>
+            <tr><td class="ts-mono">--ease-out</td><td class="ts-mono">.16 1 .3 1</td><td>入场</td><td></td></tr>
+          </tbody>
+        </table>
+        <div class="spec-row" style="margin-top:var(--space-4)">
+          <button class="ts-button ts-button-secondary ts-button-sm" type="button" id="spec-motion">播放三档</button>
+          <span class="spec-note">位移不超过 12px；不缩放、不旋转（展开箭头除外）、不弹跳。</span>
+        </div>
+        <pre class="ts-mono spec-code">.ts-reveal { animation: ts-rise var(--dur-reveal) var(--ease-out) both }
+@media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important } }</pre>
+      </div>
+    </div>
+
+    <div class="spec-three" style="margin-top:var(--space-6)">
+      <div class="ts-card">
+        <span class="ts-caption">Notice · 提示</span>
+        <div class="ts-stack" style="margin-top:var(--space-4);--stack-gap:var(--space-3)">
+          <div class="ts-notice"><svg class="ts-icon ts-icon-sm"><use href="#ts-data"/></svg><div><b>口径已固化</b>本报告所有比率以 2026-06 至 2026-08 收银流水为分母。</div></div>
+          <div class="ts-notice ts-notice-key"><svg class="ts-icon ts-icon-sm"><use href="#ts-check"/></svg><div><b>先改这一件</b>午市套餐结构，预计月度毛利 +¥18,600。</div></div>
+          <div class="ts-notice ts-notice-warn"><svg class="ts-icon ts-icon-sm"><use href="#ts-cross"/></svg><div><b>数据缺口</b>城南店 7 月外卖流水缺 9 日，相关结论降级为 E2。</div></div>
+        </div>
+        <pre class="ts-mono spec-code">&lt;div class="ts-notice ts-notice-key"&gt;&lt;svg class="ts-icon ts-icon-sm"&gt;…&lt;/svg&gt;&lt;div&gt;&lt;b&gt;标题&lt;/b&gt;正文&lt;/div&gt;&lt;/div&gt;</pre>
+      </div>
+
+      <div class="ts-card">
+        <span class="ts-caption">Tags and tooltip · 标签与提示</span>
+        <div class="spec-row" style="margin-top:var(--space-4)">
+          <span class="ts-tag">D 店 <button type="button" aria-label="移除 D 店"><svg class="ts-icon ts-icon-sm"><use href="#ts-cross"/></svg></button></span>
+          <span class="ts-tag on">午市 <button type="button" aria-label="移除 午市"><svg class="ts-icon ts-icon-sm"><use href="#ts-cross"/></svg></button></span>
+          <button class="ts-tag" type="button" aria-pressed="false">只看异常</button>
+        </div>
+        <p style="margin-top:var(--space-5)">复购率 <b class="ts-tip ts-mono" tabindex="0" data-tip="E1 · 会员系统 · 2026-06/08">31.4%</b>，较上季 <b class="ts-tip ts-mono" tabindex="0" data-tip="口径：同店同期">+4.1 pp</b>。悬停或聚焦看出处。</p>
+        <pre class="ts-mono spec-code">&lt;b class="ts-tip" tabindex="0" data-tip="E1 · 会员系统"&gt;31.4%&lt;/b&gt;</pre>
+      </div>
+
+      <div class="ts-card">
+        <span class="ts-caption">Progress · 进度</span>
+        <div class="ts-stack" style="margin-top:var(--space-4);--stack-gap:var(--space-4)">
+          <div class="ts-progress" role="progressbar" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100" aria-label="90 天清单完成度"><div class="track"><div class="fill" style="width:62%"></div></div><div class="meta"><span>90 天清单</span><span>62%</span></div></div>
+          <div class="ts-progress" role="progressbar" aria-valuenow="9" aria-valuemin="0" aria-valuemax="12" aria-label="门店接入"><div class="track"><div class="fill key" style="width:75%"></div></div><div class="meta"><span>门店接入</span><span>9 / 12</span></div></div>
+        </div>
+        <span class="ts-caption" style="display:block;margin-top:var(--space-5)">Sortable header · 可排序表头</span>
+        <table class="ts-table-ledger" style="margin-top:var(--space-2)">
+          <thead><tr><th aria-sort="none">门店</th><th class="ts-num" aria-sort="descending">毛利</th><th class="ts-num" aria-sort="none">同比</th></tr></thead>
+          <tbody><tr><td>D 店</td><td class="ts-num">¥61,450</td><td class="ts-num">+2.4%</td></tr><tr><td>城南店</td><td class="ts-num">¥48,200</td><td class="ts-num" style="color:var(--seal)">−1.1%</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="spec-two" style="margin-top:var(--space-6)">
+      <div class="ts-card">
+        <span class="ts-caption">Tabs and disclosure · 页签与折叠</span>
+        <div class="ts-tabs" role="tablist" aria-label="报告维度" style="margin-top:var(--space-4)">
+          <button role="tab" type="button" id="spec-tab-1" aria-selected="true" aria-controls="spec-panel-1">决策</button>
+          <button role="tab" type="button" id="spec-tab-2" aria-selected="false" aria-controls="spec-panel-2" tabindex="-1">分析</button>
+          <button role="tab" type="button" id="spec-tab-3" aria-selected="false" aria-controls="spec-panel-3" tabindex="-1">方法</button>
+        </div>
+        <div id="spec-panel-1" role="tabpanel" aria-labelledby="spec-tab-1" style="padding-block:var(--space-4)"><p>先改哪三件、由谁执行、以何验收。</p></div>
+        <div id="spec-panel-2" role="tabpanel" aria-labelledby="spec-tab-2" style="padding-block:var(--space-4)" hidden><p>五张洞察矩阵，每个数字有出处。</p></div>
+        <div id="spec-panel-3" role="tabpanel" aria-labelledby="spec-tab-3" style="padding-block:var(--space-4)" hidden><p>海图、罗盘、航线、校正，四件套如何协同。</p></div>
+        <div class="ts-tabs ts-tabs-pill" role="tablist" aria-label="时间窗" style="margin-top:var(--space-3)">
+          <button role="tab" type="button" aria-selected="true">近 3 月</button><button role="tab" type="button" aria-selected="false" tabindex="-1">近 6 月</button><button role="tab" type="button" aria-selected="false" tabindex="-1">全年</button>
+        </div>
+        <div style="margin-top:var(--space-5)">
+          <details class="ts-disclosure"><summary>口径说明 <svg class="ts-icon ts-icon-sm"><use href="#ts-chevron-down"/></svg></summary><div class="body"><p>复购率 = 同一会员 30 日内二次到店人数 ÷ 首次到店人数；不含外卖平台匿名订单。</p></div></details>
+          <details class="ts-disclosure"><summary>公式与方法 <svg class="ts-icon ts-icon-sm"><use href="#ts-chevron-down"/></svg></summary><div class="body"><p>利润弹性以门店固定成本与变动成本拆分后回归，样本 9 店 × 12 月。</p></div></details>
+        </div>
+        <pre class="ts-mono spec-code">&lt;div class="ts-tabs" role="tablist"&gt;&lt;button role="tab" aria-selected="true" aria-controls="p1"&gt;…
+&lt;details class="ts-disclosure"&gt;&lt;summary&gt;口径说明 &lt;svg class="ts-icon ts-icon-sm"&gt;…&lt;/summary&gt;&lt;div class="body"&gt;…</pre>
+      </div>
+
+      <div class="ts-card">
+        <span class="ts-caption">Wayfinding and dialog · 导航与对话框</span>
+        <nav aria-label="面包屑" style="margin-top:var(--space-4)"><ol class="ts-breadcrumb"><li><a href="#top">报告</a></li><li><a href="#states">分析维度</a></li><li aria-current="page">利润弹性</li></ol></nav>
+        <nav aria-label="分页" style="margin-top:var(--space-4)"><ul class="ts-pagination"><li><a href="#states" aria-label="上一页"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-left"/></svg></a></li><li><a href="#states">1</a></li><li><span aria-current="page">2</span></li><li><a href="#states">3</a></li><li><span>…</span></li><li><a href="#states">12</a></li><li><a href="#states" aria-label="下一页"><svg class="ts-icon ts-icon-sm"><use href="#ts-arrow-right"/></svg></a></li></ul></nav>
+        <div class="spec-row" style="margin-top:var(--space-5)">
+          <button class="ts-button ts-button-secondary" type="button" id="spec-dialog-open">打开对话框</button>
+          <a class="ts-skip" href="#states" style="position:static;display:inline-block">跳到正文（.ts-skip，仅聚焦时可见）</a>
+        </div>
+        <dialog class="ts-dialog" id="spec-dialog" aria-labelledby="spec-dialog-title">
+          <span class="ts-caption">Confirm · 确认</span>
+          <h3 id="spec-dialog-title" style="margin-top:var(--space-2)">锁定本版口径？</h3>
+          <p>锁定后，V2 的所有数字以 2026-09-06 为出具日，后续修订另起版本。</p>
+          <div class="actions"><button class="ts-button ts-button-quiet" type="button" data-close>再想想</button><button class="ts-button" type="button" data-close>锁定</button></div>
+        </dialog>
+        <pre class="ts-mono spec-code">&lt;dialog class="ts-dialog"&gt;… dialog.showModal()  ::backdrop = var(--scrim)
+&lt;a class="ts-skip" href="#top"&gt;跳到正文&lt;/a&gt;   置于 &lt;body&gt; 首行</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Icons and grounds ─────────────────────────────────── -->
+<section id="icons" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">06 · Icons and grounds</span>
+      <h2>图标与底色</h2>
+      <p class="ts-sub">图标只用圆与线，1.5 描边，随文字取色，见 <code>brand/icons.svg</code>。玄墨底只用于开篇、收尾或一张卡片，用一个作用域类整体反相。</p>
+    </div>
+    <div class="spec-two" style="margin-top:var(--space-7)">
+      <div class="ts-card">
+        <span class="ts-caption">Line icons · 17</span>
+        <div class="spec-row" style="margin-top:var(--space-4);gap:var(--space-5);font-size:1.5rem;color:var(--gold)">
+          <svg class="ts-icon"><use href="#ts-arrow-right"/></svg><svg class="ts-icon"><use href="#ts-arrow-up-right"/></svg><svg class="ts-icon"><use href="#ts-arrow-left"/></svg><svg class="ts-icon"><use href="#ts-arrow-down"/></svg><svg class="ts-icon"><use href="#ts-chevron-down"/></svg><svg class="ts-icon"><use href="#ts-check"/></svg><svg class="ts-icon" style="color:var(--seal)"><use href="#ts-cross"/></svg><svg class="ts-icon"><use href="#ts-menu"/></svg><svg class="ts-icon"><use href="#ts-external"/></svg><svg class="ts-icon"><use href="#ts-print"/></svg><svg class="ts-icon"><use href="#ts-chart"/></svg><svg class="ts-icon"><use href="#ts-compass"/></svg><svg class="ts-icon"><use href="#ts-route"/></svg><svg class="ts-icon"><use href="#ts-correction"/></svg><svg class="ts-icon"><use href="#ts-store"/></svg><svg class="ts-icon"><use href="#ts-data"/></svg><svg class="ts-icon"><use href="#ts-seal"/></svg>
+        </div>
+        <div class="spec-row" style="margin-top:var(--space-5)">
+          <button class="ts-button">申请经营体检 <svg class="ts-icon"><use href="#ts-arrow-right"/></svg></button>
+          <button class="ts-button ts-button-quiet">了解四件套 <svg class="ts-icon"><use href="#ts-arrow-right"/></svg></button>
+          <span><svg class="ts-icon ts-icon-sm" style="color:var(--gold-hi)"><use href="#ts-check"/></svg> 有据可依</span>
+          <span><svg class="ts-icon ts-icon-sm" style="color:var(--seal)"><use href="#ts-cross"/></svg> 包治百病</span>
+        </div>
+        <pre class="ts-mono" style="margin:var(--space-4) 0 0;font-size:12px;white-space:pre-wrap">&lt;svg class="ts-icon"&gt;&lt;use href="#ts-arrow-right"/&gt;&lt;/svg&gt;
+页面顶部内联一次 icons.svg（python3 scripts/sync_icons.py 维护），或在 http 下引用 brand/icons.svg#ts-…</pre>
+      </div>
+      <div class="ts-card ts-ground-charcoal" data-index="柒" style="border-color:var(--gold)">
+        <span class="ts-caption">.ts-ground-charcoal</span>
+        <h3 class="ts-card-title">玄墨底作用域</h3>
+        <p>标题转淡墨纸色，题注与关键数字转明金，线条转土金，按钮与徽章回到素墨色块。</p>
+        <div class="spec-row" style="margin-top:var(--space-3)">
+          <button class="ts-button">主操作</button><button class="ts-button ts-button-secondary">次操作</button>
+          <span class="ts-badge">¥8,888</span><span class="ts-badge ts-badge-outline">现役 10 / 28</span>
+        </div>
+        <ul class="ts-check-list" style="margin-top:var(--space-4)"><li>标志置于素墨小块之上，不改色</li><li data-no>不在玄墨底上使用 multiply 肖像</li></ul>
+        <div class="ts-stat" style="margin-top:var(--space-4)"><span class="ts-caption">Key number</span><span class="ts-value">18<small>桌 / 日</small></span></div>
+      </div>
+    </div>
+    <p class="spec-note" style="margin-top:var(--space-5)">字体：<code>brand/fonts.css</code> 声明思源宋体、Noto Serif 与 IBM Plex Mono 的 @font-face，先取本机字体，再取 <code>brand/fonts/</code> 下的 woff2；文件缺失时按令牌回退链退到本机宋体。</p>
+  </div>
+</section>
+
+<!-- ── Charts ────────────────────────────────────────────── -->
+<section id="charts" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">05 · Charts</span>
+      <h2>图表</h2>
+      <p class="ts-sub">一个序列用明金；两个加玄墨；三个加朱红。刻度用素墨灰。朱红永不代表正向数据。每张图都是决策辅助，序列必须标注，坐标必须可见。</p>
+    </div>
+    <div class="spec-two" style="margin-top:var(--space-7)">
+      <figure class="ts-card ts-chart">
+        <span class="ts-caption">Trend · 逐月营收 · 2 series</span>
+        <svg class="spec-chart" viewBox="0 0 520 220" style="margin-top:var(--space-4)" role="img" aria-label="逐月营收走势，两个序列">
+          <g class="axis"><line x1="48" y1="20" x2="500" y2="20"/><line x1="48" y1="80" x2="500" y2="80"/><line x1="48" y1="140" x2="500" y2="140"/></g>
+          <line class="axis-base" x1="48" y1="180" x2="500" y2="180"/>
+          <g class="tick"><text x="40" y="24" text-anchor="end">60</text><text x="40" y="84" text-anchor="end">40</text><text x="40" y="144" text-anchor="end">20</text><text x="40" y="184" text-anchor="end">0</text>
+            <text x="70" y="200">3月</text><text x="156" y="200">4月</text><text x="242" y="200">5月</text><text x="328" y="200">6月</text><text x="414" y="200">7月</text><text x="486" y="200">8月</text></g>
+          <polyline class="benchmark" points="70,120 156,118 242,122 328,116 414,118 490,115" stroke-width="1"/>
+          <polyline class="series-2" fill="none" stroke-width="1.5" points="70,132 156,126 242,110 328,104 414,96 490,92"/>
+          <polyline class="series-1" fill="none" stroke-width="2" points="70,150 156,140 242,128 328,96 414,72 490,56"/>
+          <text class="label" x="494" y="52" text-anchor="end" fill="var(--gold)">堂食</text>
+          <text class="label" x="494" y="108" text-anchor="end">外卖</text>
+          <text class="label" x="494" y="132" text-anchor="end" fill="var(--ink-muted)">同业均值</text>
+        </svg>
+        <figcaption class="source">数据来源：样例数据，单位 万元。</figcaption>
+      </figure>
+      <figure class="ts-card ts-chart">
+        <span class="ts-caption">Bars · 利润流失归因 · 3 series</span>
+        <svg class="spec-chart" viewBox="0 0 520 220" style="margin-top:var(--space-4)" role="img" aria-label="利润流失归因，三个序列">
+          <line class="axis-base" x1="48" y1="180" x2="500" y2="180"/>
+          <g class="tick"><text x="40" y="184" text-anchor="end">0</text><text x="40" y="100" text-anchor="end">50</text><text x="40" y="24" text-anchor="end">100</text></g>
+          <g class="axis"><line x1="48" y1="100" x2="500" y2="100"/><line x1="48" y1="20" x2="500" y2="20"/></g>
+          <rect class="series-1" x="80" y="60" width="56" height="120"/>
+          <rect class="series-2" x="200" y="104" width="56" height="76"/>
+          <rect class="series-3" x="320" y="136" width="56" height="44"/>
+          <rect class="series-1" x="420" y="150" width="56" height="30" opacity=".45"/>
+          <g class="tick"><text x="108" y="200" text-anchor="middle">排班冗余</text><text x="228" y="200" text-anchor="middle">损耗</text><text x="348" y="200" text-anchor="middle">折扣失控</text><text x="448" y="200" text-anchor="middle">其他</text></g>
+          <g class="tick" style="fill:var(--charcoal)"><text x="108" y="52" text-anchor="middle">72</text><text x="228" y="96" text-anchor="middle">45</text><text x="348" y="128" text-anchor="middle">26</text><text x="448" y="142" text-anchor="middle">18</text></g>
+        </svg>
+        <figcaption class="source">朱红用于警示项（折扣失控），不用于正向数据。数据为样例。</figcaption>
+      </figure>
+    </div>
+    <p class="spec-note" style="margin-top:var(--space-4)">导出方案中的绿 / 红 / 黄 / 蓝语义色（增长 · 流失 · 关注 · 中性）不在已发布指南内，未纳入基础层。见「待定」。</p>
+  </div>
+</section>
+
+<!-- ── 7. Layout ─────────────────────────────────────────── -->
+<section id="layout" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">07 · Layout</span>
+      <h2>版式</h2>
+      <p class="ts-sub">淡墨纸上留白慷慨。关键标志居中，密集规格左对齐。底色最多两层。</p>
+    </div>
+    <div class="ts-grid" style="margin-top:var(--space-7)">
+      <div class="ts-card" style="--span:4;--span-md:6"><span class="ts-caption">Grid</span><p class="ts-mono" style="margin:var(--space-2) 0 0">12 col · max 1280 · gutter 48 / 24</p></div>
+      <div class="ts-card" style="--span:4;--span-md:6"><span class="ts-caption">Rhythm</span><p class="ts-mono" style="margin:var(--space-2) 0 0">section 96 / 64 · card pad 24 – 32</p></div>
+      <div class="ts-card" style="--span:4;--span-md:12"><span class="ts-caption">Radius</span><p class="ts-mono" style="margin:var(--space-2) 0 0">2px · pill for status only · 50% for step rings</p></div>
+      <div class="ts-card" style="--span:6"><span class="ts-caption">Motion</span><p style="margin:var(--space-2) 0 0">淡入加不超过 12px 上升，700ms，只播一次。无弹跳、无视差、无自动轮播。遵循 <code>prefers-reduced-motion</code>。</p></div>
+      <div class="ts-card" style="--span:6"><span class="ts-caption">Print</span><p style="margin:var(--space-2) 0 0">固定画布，淡墨纸满版出血，导出时文字转曲线。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 4. Voice ──────────────────────────────────────────── -->
+<section id="voice" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">04 · Voice and tone</span>
+      <h2>话术</h2>
+      <p class="ts-sub">沉稳 · 专业 · 敢言 · 克制 · 有据可依。领航而非替决策。</p>
+    </div>
+    <div class="spec-two" style="margin-top:var(--space-7)">
+      <div class="ts-verdict">
+        <span class="ts-caption">✓ Say</span>
+        <ul class="ts-check-list">
+          <li>先把账算清，再谈策略。</li>
+          <li>你这家店每天差 18 桌才不亏。</li>
+          <li>这个判断的边界条件是……</li>
+          <li>我们领航，你掌舵；决策权在你。</li>
+        </ul>
+      </div>
+      <div class="ts-verdict" data-no>
+        <span class="ts-caption">✕ Avoid</span>
+        <ul class="ts-check-list">
+          <li data-no>跟着我们一定爆火。</li>
+          <li data-no>现在不做就晚了。</li>
+          <li data-no>我们的方法包治百病。</li>
+          <li data-no>先上系统，数据慢慢补。</li>
+        </ul>
+      </div>
+    </div>
+    <table style="margin-top:var(--space-6);max-width:720px">
+      <thead><tr><th>优先 · Say</th><th>避免 · Avoid</th></tr></thead>
+      <tbody>
+        <tr><td>领航 / 导航</td><td>赋能 / 抓手 / 闭环</td></tr>
+        <tr><td>复利 / 长效</td><td>包治百病 / 颠覆</td></tr>
+        <tr><td>模型 / 体系</td><td>解决方案 / 打法</td></tr>
+        <tr><td>数据校准</td><td>数据补全</td></tr>
+        <tr><td>单店跑通 → 模型锁定 → 体系连锁 → 智能领航</td><td>增长 / 爆款 / 裂变</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── Open questions ────────────────────────────────────── -->
+<section id="open" class="ts-section">
+  <div class="ts-container ts-stack">
+    <div class="ts-heading">
+      <span class="ts-caption">Decisions taken · Open questions</span>
+      <h2>已定与待定</h2>
+      <p class="ts-sub">以下为本基础层落实指南时所作的判断，以及需要品牌方确认的事项。凡判断皆可被推翻。</p>
+    </div>
+    <div class="spec-two spec-q" style="margin-top:var(--space-7)">
+      <article class="ts-card"><h3 class="ts-card-title">主按钮的边界</h3><p>素墨与淡墨纸对比仅 1.09。主按钮以土金 34% 描边定义边界，悬停转宣纸底。待确认：是否接受描边，或改用玄墨实心按钮作主操作。</p></article>
+      <article class="ts-card"><h3 class="ts-card-title">明金的字号下限</h3><p>明金在浅底上 1.9 : 1。基础层限定为 28px 以上或纯装饰；关键数字用等宽 40px。待确认：标语「智慧领航者」在 18px 时是否保留明金。</p></article>
+      <article class="ts-card"><h3 class="ts-card-title">土金与深金同值</h3><p>指南 v0.6 中 <code>--gold</code> 与 <code>--gold-deep</code> 均为 <code>#76551F</code>。两者均保留为独立令牌，以便日后分化。待确认：深金是否应另取值。</p></article>
+      <article class="ts-card"><h3 class="ts-card-title">罗盘印与官方标志</h3><p>指南描述主标志为「罗盘环 + 侍」，而发布的标志文件是圆环内「侍天」印章。基础层以发布文件为准，罗盘只作水印。待确认。</p></article>
+      <article class="ts-card"><h3 class="ts-card-title">图表语义色</h3><p>导出方案的增长 / 流失 / 关注 / 中性四色不在指南内。基础层只提供明金 · 玄墨 · 朱红三序列。待确认：报告是否需要更多语义色。</p></article>
+      <article class="ts-card"><h3 class="ts-card-title">字体授权与托管</h3><p>Noto Serif SC、Noto Serif、IBM Plex Mono 均为 OFL 授权，可自托管。待提供：字体子集策略与目标环境，以定 <code>fonts.css</code>。</p></article>
+      <article class="ts-card"><h3 class="ts-card-title">首个消费方</h3><p>官网、报告、销售提案三者中，建议先迁移官网：它是入口，组件覆盖最广。待确认：优先级与构建方式。</p></article>
+      <article class="ts-card"><h3 class="ts-card-title">文案与价格</h3><p>本页价格与客户引述均取自指南或样例，发布前须核实。伙伴名单只用指南与导出方案中的既有名称。</p></article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ts-section" style="padding-block:var(--space-8)">
+  <div class="ts-container" style="display:flex;justify-content:space-between;align-items:center;gap:var(--space-6);flex-wrap:wrap">
+    <div class="ts-lockup-row">
+      <span class="ts-mark" style="--mark-size:32px"><img src="logo.png" alt="侍天"></span>
+      <span class="ts-caption" style="letter-spacing:var(--tracking-caps-tight)">Tiansight 侍天 · 数字员工 · 餐饮陪跑 · v0.6 · Hong Kong</span>
+    </div>
+    <span class="ts-seal-stamp" style="--stamp-size:40px" aria-hidden="true">侍</span>
+  </div>
+</footer>
+
+<script>
+/* Specimen only: tabs, dialog and motion demo. Consumers carry their own scripts. */
+(function () {
+  document.querySelectorAll('.ts-tabs[role="tablist"]').forEach(function (list) {
+    var tabs = Array.prototype.slice.call(list.querySelectorAll('[role="tab"]'));
+    function select(tab) {
+      tabs.forEach(function (t) {
+        var on = t === tab; t.setAttribute('aria-selected', String(on)); t.tabIndex = on ? 0 : -1;
+        var panel = t.getAttribute('aria-controls') && document.getElementById(t.getAttribute('aria-controls'));
+        if (panel) panel.hidden = !on;
+      });
+      tab.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+        if (d) { e.preventDefault(); select(tabs[(i + d + tabs.length) % tabs.length]); }
+      });
+    });
+  });
+  var dlg = document.getElementById('spec-dialog'), open = document.getElementById('spec-dialog-open');
+  if (dlg && open && dlg.showModal) {
+    open.addEventListener('click', function () { dlg.showModal(); });
+    dlg.querySelectorAll('[data-close]').forEach(function (b) { b.addEventListener('click', function () { dlg.close(); }); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  }
+  var play = document.getElementById('spec-motion');
+  if (play) play.addEventListener('click', function () {
+    var dots = document.querySelectorAll('.spec-dot');
+    dots.forEach(function (d) { d.classList.remove('go'); });
+    requestAnimationFrame(function () { requestAnimationFrame(function () { dots.forEach(function (d) { d.classList.add('go'); }); }); });
+  });
+})();
+</script>
+</body>
+</html>

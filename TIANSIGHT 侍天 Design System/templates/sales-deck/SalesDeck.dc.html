@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="侍天 销售提案 (16:9)" description="Eleven-slide sales deck pitching 侍天 to a restaurant owner — 封面, 承诺, 经营五问, 样张为证, 图谱, 三层+X, 伙伴, 专家团, 联系." -->
+<helmet><script src="./ds-base.js"></script><style>html,body{margin:0;background:#241F19}</style></helmet>
+<x-import component-from-global-scope="deck-stage" from="../../slides/deck-stage.js" width="1280" height="720" hint-size="100%,100%">
+
+<section data-label="封面" data-screen-label="01" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.TitleSlide" client="韵 1980 新派淮扬菜" date="2025-09-04" page="{{ 1 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="承诺" data-screen-label="02" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.PromiseSlide" page="{{ 2 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="节首 · 经营五问" data-screen-label="03" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.SectionSlide" index="{{ 1 }}" title="经营五问" subtitle="逐店逐月，循环推演。五问既明，百事可决。" page="{{ 3 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="经营五问" data-screen-label="04" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.FiveQuestionsSlide" active="{{ 1 }}" page="{{ 4 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="节首 · 以样张为证" data-screen-label="05" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.SectionSlide" index="{{ 2 }}" title="以样张为证" subtitle="一份报告，就是一份决策文件。" page="{{ 5 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="样张为证" data-screen-label="06" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.ProofSlide" page="{{ 6 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="图谱" data-screen-label="07" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.ChartSlide" chart-title="渗透率矩阵" chart="{{ penetrationChart }}" takeaway="招牌菜渗透高、毛利稳；响油鳝糊与冷碟拼盘拖低整体毛利。" action="重排午市套餐结构，主推高毛利招牌组合" source="数据来源：收银流水 2025-03 至 2025-08。" page="{{ 7 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="三层+X" data-screen-label="08" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.LadderSlide" highlight="{{ 1 }}" page="{{ 8 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="伙伴背书" data-screen-label="09" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.PartnerWallSlide" page="{{ 9 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="专家顾问团" data-screen-label="10" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.ExpertTeamSlide" page="{{ 10 }}" hint-size="1280px,720px"></x-import></section>
+
+<section data-label="联系" data-screen-label="11" style="width:1280px;height:720px;overflow:hidden"><x-import component-from-global-scope="TIANSIGHTDesignSystem_bb63dc.ContactSlide" page="{{ 11 }}" hint-size="1280px,720px"></x-import></section>
+
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const NS = window.TIANSIGHTDesignSystem_bb63dc || {};
+    const Matrix2x2 = NS.Matrix2x2;
+    const penetrationChart = Matrix2x2 ? React.createElement(Matrix2x2, {
+      height: 392,
+      xAxis: "点单渗透率",
+      yAxis: "毛利率",
+      quadrants: [
+        { label: "高毛利低渗透 · 值得推", tone: "caution" },
+        { label: "招牌担当 · 守住", tone: "growth" },
+        { label: "低毛利低渗透 · 下架候选", tone: "muted" },
+        { label: "低毛利高渗透 · 改配方", tone: "loss" }
+      ],
+      points: [
+        { label: "文思豆腐", x: .74, y: .78, tone: "growth", size: 12 },
+        { label: "蟹粉狮子头", x: .28, y: .72, tone: "caution", size: 12 },
+        { label: "响油鳝糊", x: .68, y: .22, tone: "loss", size: 12 },
+        { label: "冷碟拼盘", x: .2, y: .18, tone: "muted", size: 12 },
+        { label: "松鼠鳜鱼", x: .55, y: .6, tone: "bronze", size: 12 }
+      ]
+    }) : null;
+    return { penetrationChart };
+  }
+}
+</script>
+</body>
+</html>

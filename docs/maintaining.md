@@ -19,7 +19,7 @@ Each layer derives from the one above it. Never edit a lower layer to change a v
 
 Fixed decisions (owner-confirmed 2026-10-14):
 - Display name: **侍天 TIANSIGHT** everywhere. 侍天 - 智慧餐饮 and tiansight are registry values in `brand/source.json` → `ip`; they are not display copy.
-- Official website: tiansight.apuch.cn. tiansight.apuch.art (`CNAME`) only hosts this design system.
+- Official website: https://tiansight.apuch.cn. Brand design system: https://apuch.art/tiansight. This repository's preview (GitHub Pages, no custom domain): https://ksamint.github.io/dsys_tiansight02/.
 - Report colours come only from `brand/tokens.json`. The benchmark is the `chart-benchmark` token (translucent); its print reference on 淡墨纸 is `#B9B2A7`, documented, never coded.
 
 ## 2. One change, one branch, one PR

@@ -6,7 +6,7 @@ Versions follow the published brand guide. The system version is in `brand/VERSI
 
 - The design system moves to `ksamint/dsys_tiansight02`, starting from the consolidated v0.7 release with fresh history; `ksamint/dsys_tiansight01` becomes a private archive.
 - Rule: never push sensitive data to the public repository (`AGENTS.md`, `docs/maintaining.md` §6, with the list of what counts and where it lives instead). `scripts/check.py` 8k blocks spreadsheets, databases and data dumps outside the invented sample folder.
-- Repository references, CDN and Pages URLs point at the new repository and tiansight.apuch.art.
+- Addresses: official website https://tiansight.apuch.cn; brand design system https://apuch.art/tiansight; repository preview https://ksamint.github.io/dsys_tiansight02/ (no custom domain, `CNAME` removed); CSS for external sites from jsDelivr.
 
 ## v0.7 · 2026-10-17 · Consolidated release
 
@@ -15,7 +15,7 @@ One version of the system, built from the brand guide v0.7 rulings (2026-09-09) 
 ### Brand and identity
 - Brand snapshot 5c7c158 (2026-09-27) with the IPTrust identity in `brand/source.json`, confirmed against the live apuch.art record.
 - One display name, **侍天 TIANSIGHT**, in code headers, site footers, generators, people data and token headers; the three verbatim guide copies and the preserved proposal folders keep their wording. Lockups pair the mark with the Latin caption only.
-- Official website tiansight.apuch.cn; tiansight.apuch.art hosts the design system.
+- Official website tiansight.apuch.cn; the brand design system is published at apuch.art/tiansight.
 - 边江's title is 前海底捞品牌负责人 everywhere.
 - Rulings Q1, Q2, Q3, Q10, Q11 (2026-09-09): ink-field primary button, deep-gold tagline at every size, `--gold-deep` kept, pale deck grounds with one charcoal card.
 

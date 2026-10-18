@@ -29,7 +29,7 @@ def build():
         shutil.rmtree(OUT)
     OUT.mkdir()
     # Only preview assets and documentation; archived exports and source reports stay out.
-    paths = [ROOT / name for name in ('index.html', 'CNAME', 'README.md', 'CHANGELOG.md', 'reference/catalogue.md')]
+    paths = [ROOT / name for name in ('index.html', 'CNAME', 'README.md', 'CHANGELOG.md', 'reference/catalogue.md') if (ROOT / name).exists()]
     for folder in ('brand', 'dist', 'docs', 'skills', 'website', 'deck', 'report', 'people', 'html-system'):
         for path in (ROOT / folder).rglob('*'):
             rel = path.relative_to(ROOT)

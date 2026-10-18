@@ -10,8 +10,9 @@
     "website": "tiansight.apuch.cn",
     "designSystemRepo": "ksamint/dsys_tiansight02",
     "displayName": "侍天 TIANSIGHT",
-    "designSystemSite": "tiansight.apuch.art",
-    "websiteNote": "Owner-confirmed 2026-10-14: tiansight.apuch.cn is the official website; tiansight.apuch.art (CNAME) only hosts the design system. The live record still says TBD."
+    "designSystemSite": "https://apuch.art/tiansight",
+    "websiteNote": "Owner-confirmed 2026-10-18: https://tiansight.apuch.cn is the official website; the brand design system is published at https://apuch.art/tiansight. The tiansight.apuch.art subdomain is not used.",
+    "repositoryPreview": "https://ksamint.github.io/dsys_tiansight02/"
   },
   "guidePath": "Tiansight/tiansight_design.md",
   "version": {

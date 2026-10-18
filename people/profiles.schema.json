@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://tiansight.apuch.art/people/profiles.schema.json",
+  "$id": "https://ksamint.github.io/dsys_tiansight02/people/profiles.schema.json",
   "title": "侍天 TIANSIGHT co-founder profile library",
   "description": "The data contract behind people/profile-*.html. A host system can validate a payload against this before pushing it to a page (postMessage) or writing it to people/profiles.json (rebuild). Every list entry carries a stable id, which is how the page addresses it: cases.<case id>.results.<result id>.value.",
   "type": "object",

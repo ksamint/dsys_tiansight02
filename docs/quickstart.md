@@ -42,7 +42,7 @@ Run `python3 scripts/sync_icons.py` to fill the icon markers, then use icons as 
 ## Consume the system from another site
 
 ```html
-<link rel="stylesheet" href="https://tiansight.apuch.art/dist/tiansight.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ksamint/dsys_tiansight02@main/dist/tiansight.css">
 ```
 
 One file carries the font faces, tokens, element defaults and every component. Link `tiansight.css` to follow every push, or `tiansight-v0.6.css` to pin. `dist/example.html` is a working page to copy. Details and the jsDelivr alternative are in [dist/README.md](../dist/README.md).

@@ -2,7 +2,7 @@
 
 > **Repository:** `ksamint/dsys_tiansight02` is the public home of the design system from 2026-10-18. It starts from the consolidated v0.7 release of `ksamint/dsys_tiansight01`, which is now a private archive. Nothing confidential is kept here; see `docs/maintaining.md` §6.
 
-> IP identity (IPTrust): `assetKey` sidera · display name 侍天 TIANSIGHT (registry: 侍天 - 智慧餐饮 / tiansight). Snapshot 5c7c158 (2026-09-27), see `brand/source.json`. Official website tiansight.apuch.cn; tiansight.apuch.art only hosts this design system.
+> IP identity (IPTrust): `assetKey` sidera · display name 侍天 TIANSIGHT (registry: 侍天 - 智慧餐饮 / tiansight). Snapshot 5c7c158 (2026-09-27), see `brand/source.json`. Official website https://tiansight.apuch.cn; brand design system https://apuch.art/tiansight; repository preview https://ksamint.github.io/dsys_tiansight02/.
 
 > 侍天 TIANSIGHT — 从一道菜，到一家家店的好生意。
 > *拍板之前，问侍天。*

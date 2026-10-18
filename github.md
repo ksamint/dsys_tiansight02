@@ -3,6 +3,14 @@ branch: main
 
 ## Last sync
 
+date: 2026-10-18T02:00:00Z
+
+### Updated in this project
+
+- Addresses corrected (owner, 2026-10-18): website https://tiansight.apuch.cn, brand design system https://apuch.art/tiansight, repository preview https://ksamint.github.io/dsys_tiansight02/; `CNAME` removed, CSS links via jsDelivr (branch `claude/domains-2026-10-18`). No artifact change.
+
+## Sync history
+
 date: 2026-10-18T00:00:00Z
 
 ### Updated in this project

@@ -1,0 +1,23 @@
+<!-- @dsCard group="Charts" height=354 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Waffle — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { maxWidth: 360 } }, /* @__PURE__ */ React.createElement(
+  Waffle,
+  {
+    caption: "\u51FA\u7089\u53BB\u5411",
+    unitLabel: "\u4EF6",
+    totalLabel: "\u53E3\u5F84\uFF1A\u53A8\u623F\u70D8\u7119\u6E20\u9053 \xB7 6 \u5929\u7A97\u53E3",
+    cell: 16,
+    parts: [{ label: "\u5356\u7ED9\u987E\u5BA2", value: 71, tone: "key" }, { label: "\u5F53\u5929\u62A5\u5E9F", value: 9, tone: "seal" }, { label: "\u7559\u5230\u660E\u5929", value: 20, tone: "muted" }]
+  }
+))));
+</script>
+</body>
+</html>

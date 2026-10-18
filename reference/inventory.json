@@ -1,0 +1,3542 @@
+{
+ "generated_from": [
+  "asset-a-strategy-deck.html",
+  "asset-b-member-repurchase-deck.html",
+  "asset-c-operating-model-scroll.html"
+ ],
+ "note": "Anonymised 2026-10-14 for the public repository (docs/maintaining.md §6): client names, file names, slide headlines, section chips and scroll findings removed; structure, chart families, table columns, markers and interactions kept. The source files are kept outside this repository.",
+ "assets": [
+  {
+   "file": "asset-a-strategy-deck.html",
+   "bytes": 1167941,
+   "system": "slide-deck",
+   "title": "客户 A · 品类战略提案",
+   "fonts": [
+    "\"IBM Plex Mono\",\"Roboto Mono\",ui-monospace,Menlo,\"Noto Sans Mono CJK SC\",monospace",
+    "\"Noto Serif SC\",\"Source Han Serif SC\",\"Songti SC\",\"Songti TC\",Georgia,serif",
+    "11.5px",
+    "11px",
+    "12.5px",
+    "12px"
+   ],
+   "css_vars": [
+    "c-paper",
+    "c-surface",
+    "c-primary",
+    "c-ink",
+    "c-ink-72",
+    "c-ink-55",
+    "c-ink-28",
+    "c-ink-14",
+    "c-teal",
+    "c-teal-l",
+    "c-gold",
+    "c-gold-l",
+    "c-slate",
+    "c-vermil",
+    "c-green",
+    "c-muted",
+    "c-teal-w",
+    "c-teal-w2",
+    "c-gold-w",
+    "c-vermil-w",
+    "c-slate-w",
+    "f-serif",
+    "f-mono"
+   ],
+   "markers": {
+    "数据来源": 1,
+    "来源": 44,
+    "口径": 101,
+    "公式": 79,
+    "方法论": 1,
+    "假设": 5,
+    "边界": 14,
+    "样本": 28,
+    "单位": 14,
+    "取数": 2,
+    "置信": 13,
+    "设计值": 19
+   },
+   "slides": [
+    {
+     "kind": "cover",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "csv-anchor"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-brand"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "qh-track"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "layout-fix-13",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "qh-track"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "csv-comp"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "csv-comp"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 2,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "csv-ring"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "sku-settle"
+     ],
+     "title": "",
+     "svg": 2,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "sku-tuan"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "layout-fix-34",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 2,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "sku-now"
+     ],
+     "title": "",
+     "svg": 3,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 2,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "csv-anchor"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-lake"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-river"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-lake"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-matrix"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [
+      "qh-std"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-matrix"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-matrix"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-cal"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-path"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "v6-rot"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-season"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "v6-season"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "layout-fix-85",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "sku-tuan"
+     ],
+     "title": "",
+     "svg": 2,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "layout-fix-88",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "qh-cal"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "layout-fix-92",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 抽样观测",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "v6-band"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 外部参照",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 直接计量",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 设计推断",
+     "src": [
+      "sku-dict"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "cover",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    }
+   ],
+   "scroll_sections": [],
+   "ega_levels": [
+    [
+     "E1 直接计量",
+     38
+    ],
+    [
+     "E4 设计推断",
+     25
+    ],
+    [
+     "E3 外部参照",
+     19
+    ],
+    [
+     "E2 抽样观测",
+     15
+    ]
+   ],
+   "chart_families": [
+    [
+     "bars",
+     32
+    ],
+    [
+     "bars-line",
+     9
+    ],
+    [
+     "matrix-heat",
+     8
+    ],
+    [
+     "scatter",
+     7
+    ],
+    [
+     "bubble",
+     4
+    ],
+    [
+     "other",
+     2
+    ],
+    [
+     "line-points",
+     2
+    ],
+    [
+     "mindmap",
+     1
+    ]
+   ],
+   "charts": [
+    {
+     "family": "mindmap",
+     "bytes": 15855,
+     "elems": {
+      "rect": 32,
+      "circle": 21,
+      "path": 26,
+      "line": 0,
+      "text": 49,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 10510,
+     "elems": {
+      "rect": 28,
+      "circle": 0,
+      "path": 0,
+      "line": 15,
+      "text": 62,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bubble",
+     "bytes": 4282,
+     "elems": {
+      "rect": 0,
+      "circle": 8,
+      "path": 0,
+      "line": 7,
+      "text": 21,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2868,
+     "elems": {
+      "rect": 8,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 6987,
+     "elems": {
+      "rect": 22,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 46,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2802,
+     "elems": {
+      "rect": 8,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 5202,
+     "elems": {
+      "rect": 17,
+      "circle": 0,
+      "path": 14,
+      "line": 0,
+      "text": 13,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "scatter",
+     "bytes": 4650,
+     "elems": {
+      "rect": 0,
+      "circle": 12,
+      "path": 0,
+      "line": 10,
+      "text": 19,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "other",
+     "bytes": 3456,
+     "elems": {
+      "rect": 0,
+      "circle": 4,
+      "path": 1,
+      "line": 7,
+      "text": 17,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2452,
+     "elems": {
+      "rect": 7,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 15,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 11762,
+     "elems": {
+      "rect": 30,
+      "circle": 0,
+      "path": 0,
+      "line": 6,
+      "text": 67,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 3007,
+     "elems": {
+      "rect": 12,
+      "circle": 0,
+      "path": 0,
+      "line": 2,
+      "text": 15,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 3295,
+     "elems": {
+      "rect": 6,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 8966,
+     "elems": {
+      "rect": 22,
+      "circle": 19,
+      "path": 1,
+      "line": 5,
+      "text": 34,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 4877,
+     "elems": {
+      "rect": 9,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 27,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 8907,
+     "elems": {
+      "rect": 22,
+      "circle": 19,
+      "path": 1,
+      "line": 5,
+      "text": 34,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 7696,
+     "elems": {
+      "rect": 11,
+      "circle": 0,
+      "path": 0,
+      "line": 4,
+      "text": 51,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "scatter",
+     "bytes": 6695,
+     "elems": {
+      "rect": 0,
+      "circle": 23,
+      "path": 0,
+      "line": 15,
+      "text": 24,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 4712,
+     "elems": {
+      "rect": 7,
+      "circle": 5,
+      "path": 1,
+      "line": 5,
+      "text": 24,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 4792,
+     "elems": {
+      "rect": 5,
+      "circle": 0,
+      "path": 0,
+      "line": 9,
+      "text": 26,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "scatter",
+     "bytes": 4569,
+     "elems": {
+      "rect": 0,
+      "circle": 7,
+      "path": 0,
+      "line": 9,
+      "text": 24,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 3111,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 0,
+      "text": 21,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 4888,
+     "elems": {
+      "rect": 5,
+      "circle": 5,
+      "path": 1,
+      "line": 5,
+      "text": 26,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 9196,
+     "elems": {
+      "rect": 35,
+      "circle": 0,
+      "path": 0,
+      "line": 0,
+      "text": 48,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2221,
+     "elems": {
+      "rect": 6,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 14,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2594,
+     "elems": {
+      "rect": 7,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 16,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2512,
+     "elems": {
+      "rect": 7,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 16,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 1926,
+     "elems": {
+      "rect": 5,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 12,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 3518,
+     "elems": {
+      "rect": 10,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 22,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "line-points",
+     "bytes": 8238,
+     "elems": {
+      "rect": 2,
+      "circle": 24,
+      "path": 2,
+      "line": 5,
+      "text": 38,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 4822,
+     "elems": {
+      "rect": 6,
+      "circle": 0,
+      "path": 0,
+      "line": 13,
+      "text": 24,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 7110,
+     "elems": {
+      "rect": 6,
+      "circle": 0,
+      "path": 0,
+      "line": 30,
+      "text": 28,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 6515,
+     "elems": {
+      "rect": 11,
+      "circle": 9,
+      "path": 1,
+      "line": 5,
+      "text": 32,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 1652,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 10,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bubble",
+     "bytes": 4059,
+     "elems": {
+      "rect": 0,
+      "circle": 5,
+      "path": 0,
+      "line": 6,
+      "text": 21,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 1621,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 1,
+      "text": 10,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 10633,
+     "elems": {
+      "rect": 27,
+      "circle": 24,
+      "path": 1,
+      "line": 5,
+      "text": 39,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 4259,
+     "elems": {
+      "rect": 6,
+      "circle": 4,
+      "path": 1,
+      "line": 5,
+      "text": 22,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "line-points",
+     "bytes": 6708,
+     "elems": {
+      "rect": 0,
+      "circle": 28,
+      "path": 7,
+      "line": 5,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "scatter",
+     "bytes": 5231,
+     "elems": {
+      "rect": 0,
+      "circle": 10,
+      "path": 0,
+      "line": 9,
+      "text": 27,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "scatter",
+     "bytes": 6745,
+     "elems": {
+      "rect": 0,
+      "circle": 20,
+      "path": 0,
+      "line": 14,
+      "text": 27,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 5433,
+     "elems": {
+      "rect": 12,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 32,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 6810,
+     "elems": {
+      "rect": 16,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 40,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "scatter",
+     "bytes": 5127,
+     "elems": {
+      "rect": 0,
+      "circle": 14,
+      "path": 0,
+      "line": 11,
+      "text": 21,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 4231,
+     "elems": {
+      "rect": 9,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 24,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 3282,
+     "elems": {
+      "rect": 6,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2814,
+     "elems": {
+      "rect": 10,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 12,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "scatter",
+     "bytes": 3749,
+     "elems": {
+      "rect": 0,
+      "circle": 6,
+      "path": 0,
+      "line": 7,
+      "text": 19,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars-line",
+     "bytes": 3340,
+     "elems": {
+      "rect": 4,
+      "circle": 2,
+      "path": 1,
+      "line": 5,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 7269,
+     "elems": {
+      "rect": 14,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 50,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 5886,
+     "elems": {
+      "rect": 20,
+      "circle": 0,
+      "path": 0,
+      "line": 0,
+      "text": 29,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 7439,
+     "elems": {
+      "rect": 19,
+      "circle": 0,
+      "path": 0,
+      "line": 0,
+      "text": 52,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bubble",
+     "bytes": 7171,
+     "elems": {
+      "rect": 1,
+      "circle": 12,
+      "path": 3,
+      "line": 3,
+      "text": 39,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 12501,
+     "elems": {
+      "rect": 38,
+      "circle": 0,
+      "path": 0,
+      "line": 13,
+      "text": 69,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 9850,
+     "elems": {
+      "rect": 27,
+      "circle": 0,
+      "path": 0,
+      "line": 13,
+      "text": 54,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 6707,
+     "elems": {
+      "rect": 12,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 39,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 24057,
+     "elems": {
+      "rect": 106,
+      "circle": 0,
+      "path": 0,
+      "line": 13,
+      "text": 120,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 4863,
+     "elems": {
+      "rect": 10,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 29,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 6051,
+     "elems": {
+      "rect": 13,
+      "circle": 0,
+      "path": 0,
+      "line": 13,
+      "text": 30,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 2411,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 8,
+      "text": 10,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 3397,
+     "elems": {
+      "rect": 14,
+      "circle": 0,
+      "path": 0,
+      "line": 5,
+      "text": 14,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bubble",
+     "bytes": 3881,
+     "elems": {
+      "rect": 0,
+      "circle": 6,
+      "path": 0,
+      "line": 7,
+      "text": 19,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "other",
+     "bytes": 2337,
+     "elems": {
+      "rect": 0,
+      "circle": 3,
+      "path": 0,
+      "line": 5,
+      "text": 11,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 3028,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 16,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 5204,
+     "elems": {
+      "rect": 7,
+      "circle": 0,
+      "path": 0,
+      "line": 10,
+      "text": 28,
+      "polyline": 0,
+      "polygon": 0
+     }
+    }
+   ],
+   "appendix_sections": [
+    "v6-band",
+    "v6-over",
+    "v6-season",
+    "v6-rot",
+    "v6-new6",
+    "v6-cal",
+    "qh-lake",
+    "qh-river",
+    "qh-matrix",
+    "qh-cal",
+    "qh-std",
+    "qh-path",
+    "qh-brand",
+    "qh-lang",
+    "qh-track",
+    "sku-tbl",
+    "sku-band",
+    "sku-c12",
+    "sku-crab",
+    "sku-now",
+    "sku-new",
+    "sku-dict",
+    "sku-settle",
+    "sku-tuan",
+    "csv-ring",
+    "csv-anchor",
+    "csv-comp"
+   ],
+   "meta_keys": [
+    [
+     "SOURCE",
+     97
+    ],
+    [
+     "GLOSSARY",
+     97
+    ],
+    [
+     "CONCLUSION",
+     97
+    ],
+    [
+     "CONFIDENCE",
+     97
+    ],
+    [
+     "FORMULA 公式与出处",
+     52
+    ],
+    [
+     "DERIVATION 推导逻辑",
+     32
+    ],
+    [
+     "INDEX SOURCE 客流指数出处",
+     4
+    ]
+   ],
+   "tables": 101,
+   "table_headers_sample": [
+    [
+     "价格带",
+     "现状SKU",
+     "现状占比%",
+     "新SKU",
+     "目标占比%",
+     "SKU变化",
+     "占比变化pp",
+     "其中新建"
+    ],
+    [
+     "季节章节",
+     "常驻核心",
+     "当季轮换",
+     "当季在售合计",
+     "其中新建",
+     "当季主打"
+    ],
+    [
+     "季节",
+     "现状季节SKU",
+     "客流指数",
+     "现状主品类占单点收入",
+     "新方案季节SKU",
+     "新方案主品类占比目标",
+     "诊断"
+    ],
+    [
+     "季节",
+     "槽位",
+     "SKU",
+     "定价",
+     "价格带",
+     "角色",
+     "类型",
+     "当季理由"
+    ],
+    [
+     "季节",
+     "SKU",
+     "建议定价",
+     "价格带",
+     "角色",
+     "档口",
+     "理由",
+     "开发优先级"
+    ],
+    [
+     "季节",
+     "在售期",
+     "供应链确认",
+     "试菜定版",
+     "门店培训",
+     "预告上线",
+     "正式首发",
+     "退市"
+    ],
+    [
+     "水域",
+     "身份",
+     "水质/生态依据",
+     "对应食材",
+     "地标资质",
+     "当令季",
+     "对应 SKU",
+     "阶段"
+    ],
+    [
+     "水系",
+     "特征",
+     "对应食材",
+     "地标资质",
+     "当令季",
+     "对应 SKU",
+     "合规提示"
+    ],
+    [
+     "食材",
+     "水域/产地",
+     "地标",
+     "当令季",
+     "主辅佐引二级角色",
+     "菜单族",
+     "对应 SKU",
+     "价格带"
+    ],
+    [
+     "季",
+     "时间",
+     "主唱水域",
+     "主中主",
+     "主中辅（升级）",
+     "主中引（引流）",
+     "主中佐（日常）",
+     "辅（藕系）"
+    ],
+    [
+     "条件",
+     "标准",
+     "验证方式",
+     "现有案例",
+     "不达标处理"
+    ],
+    [
+     "阶段",
+     "时间",
+     "范围",
+     "候选水域",
+     "可引入食材",
+     "引入价值",
+     "关键前置"
+    ]
+   ],
+   "d3_calls": [],
+   "interactions": {
+    "srcOpen": true,
+    "data-go": true,
+    "meta-on": true,
+    "playOn": true,
+    "showTip": false,
+    "IntersectionObserver": false
+   }
+  },
+  {
+   "file": "asset-b-member-repurchase-deck.html",
+   "bytes": 320202,
+   "system": "slide-deck",
+   "title": "客户 B · 会员菜品复购数据分析",
+   "fonts": [
+    "\"IBM Plex Mono\",\"Roboto Mono\",ui-monospace,Menlo,\"Noto Sans Mono CJK SC\",monospace",
+    "\"Noto Serif SC\",\"Source Han Serif SC\",\"Songti SC\",\"Songti TC\",Georgia,serif",
+    "11.5px",
+    "11px",
+    "12.5px",
+    "12px"
+   ],
+   "css_vars": [
+    "c-paper",
+    "c-surface",
+    "c-primary",
+    "c-ink",
+    "c-ink-72",
+    "c-ink-55",
+    "c-ink-28",
+    "c-ink-14",
+    "c-teal",
+    "c-teal-l",
+    "c-gold",
+    "c-gold-l",
+    "c-slate",
+    "c-vermil",
+    "c-green",
+    "c-muted",
+    "c-teal-w",
+    "c-teal-w2",
+    "c-gold-w",
+    "c-vermil-w",
+    "c-slate-w",
+    "c-green-w",
+    "f-serif",
+    "f-mono"
+   ],
+   "markers": {
+    "数据来源": 1,
+    "来源": 28,
+    "口径": 80,
+    "公式": 27,
+    "假设": 8,
+    "边界": 2,
+    "样本": 34,
+    "单位": 9,
+    "取数": 5,
+    "校验": 6,
+    "推算": 14,
+    "设计值": 19,
+    "版本": 4
+   },
+   "slides": [
+    {
+     "kind": "cover",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "ov"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [
+      "sizing"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "cal"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [
+      "sizing"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [
+      "sizing"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [
+      "sizing"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [
+      "sizing"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [
+      "scope"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 推算＋E3 设计",
+     "src": [
+      "decomp"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E4 未验证",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "trap"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "trend"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "inv"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "dict"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "dict"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "name"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "store"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "trap"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "qa"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "ident"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "ov"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "store"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 推算值",
+     "src": [
+      "decomp"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 推算值",
+     "src": [
+      "decomp"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "trend"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测＋E2 推算",
+     "src": [
+      "aug"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "hj"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "scatter"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "scatter"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E2 推算值",
+     "src": [
+      "quad"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "quad"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "quad"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "quad"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测＋E2 判断",
+     "src": [
+      "quad"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "price"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "spec"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 2,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "spread"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 0,
+     "meta": true
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E3 设计值",
+     "src": [
+      "sizing"
+     ],
+     "title": "",
+     "svg": 1,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测＋E2 建议",
+     "src": [
+      "scope"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "banq"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": true
+    },
+    {
+     "kind": "divider",
+     "chip": "",
+     "ega": "",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 0,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "store"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    },
+    {
+     "kind": "content",
+     "chip": "",
+     "ega": "E1 系统实测",
+     "src": [
+      "inv"
+     ],
+     "title": "",
+     "svg": 0,
+     "tables": 1,
+     "meta": false
+    }
+   ],
+   "scroll_sections": [],
+   "ega_levels": [
+    [
+     "E1 系统实测",
+     32
+    ],
+    [
+     "E3 设计值",
+     11
+    ],
+    [
+     "E2 推算值",
+     3
+    ],
+    [
+     "E2 推算＋E3 设计",
+     1
+    ],
+    [
+     "E4 未验证",
+     1
+    ],
+    [
+     "E1 系统实测＋E2 推算",
+     1
+    ],
+    [
+     "E1 系统实测＋E2 判断",
+     1
+    ],
+    [
+     "E1 系统实测＋E2 建议",
+     1
+    ]
+   ],
+   "chart_families": [
+    [
+     "bars",
+     7
+    ],
+    [
+     "other",
+     2
+    ],
+    [
+     "line-points",
+     2
+    ],
+    [
+     "bubble",
+     1
+    ],
+    [
+     "matrix-heat",
+     1
+    ]
+   ],
+   "charts": [
+    {
+     "family": "other",
+     "bytes": 3800,
+     "elems": {
+      "rect": 3,
+      "circle": 0,
+      "path": 0,
+      "line": 9,
+      "text": 12,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 4683,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 8434,
+     "elems": {
+      "rect": 9,
+      "circle": 0,
+      "path": 0,
+      "line": 8,
+      "text": 34,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 11096,
+     "elems": {
+      "rect": 16,
+      "circle": 0,
+      "path": 0,
+      "line": 9,
+      "text": 44,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "line-points",
+     "bytes": 6223,
+     "elems": {
+      "rect": 0,
+      "circle": 19,
+      "path": 3,
+      "line": 13,
+      "text": 17,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 5996,
+     "elems": {
+      "rect": 12,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 22,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "line-points",
+     "bytes": 5580,
+     "elems": {
+      "rect": 0,
+      "circle": 13,
+      "path": 2,
+      "line": 13,
+      "text": 16,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bubble",
+     "bytes": 19502,
+     "elems": {
+      "rect": 0,
+      "circle": 94,
+      "path": 0,
+      "line": 21,
+      "text": 35,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 4688,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 18,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 5024,
+     "elems": {
+      "rect": 4,
+      "circle": 0,
+      "path": 0,
+      "line": 0,
+      "text": 21,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "matrix-heat",
+     "bytes": 8962,
+     "elems": {
+      "rect": 21,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 34,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "other",
+     "bytes": 10937,
+     "elems": {
+      "rect": 13,
+      "circle": 26,
+      "path": 0,
+      "line": 18,
+      "text": 34,
+      "polyline": 0,
+      "polygon": 0
+     }
+    },
+    {
+     "family": "bars",
+     "bytes": 8047,
+     "elems": {
+      "rect": 9,
+      "circle": 0,
+      "path": 0,
+      "line": 7,
+      "text": 33,
+      "polyline": 0,
+      "polygon": 0
+     }
+    }
+   ],
+   "appendix_sections": [
+    "ov",
+    "inv",
+    "store",
+    "trend",
+    "decomp",
+    "quad",
+    "scatter",
+    "spread",
+    "sizing",
+    "price",
+    "scope",
+    "banq",
+    "spec",
+    "qa",
+    "name",
+    "cal",
+    "trap",
+    "ident",
+    "aug",
+    "hj",
+    "dict"
+   ],
+   "meta_keys": [
+    [
+     "SOURCE",
+     23
+    ],
+    [
+     "CONFIDENCE",
+     23
+    ],
+    [
+     "FORMULA 公式与出处",
+     19
+    ]
+   ],
+   "tables": 59,
+   "table_headers_sample": [
+    [
+     "指标",
+     "数值",
+     "计算式"
+    ],
+    [
+     "文件",
+     "工作表",
+     "数据行",
+     "查询窗口",
+     "门店",
+     "品项"
+    ],
+    [
+     "门店",
+     "在售品项",
+     "总销量",
+     "会员份数",
+     "复购份数",
+     "复购点击率",
+     "会员渗透率",
+     "会员内复购占比"
+    ],
+    [
+     "月份",
+     "总销量",
+     "会员份数",
+     "复购份数",
+     "复购点击率",
+     "会员渗透率",
+     "会员内复购占比",
+     "在售品项"
+    ],
+    [
+     "门店",
+     "复购点击率",
+     "会员渗透率",
+     "会员内复购占比",
+     "对标缺口 pp",
+     "渗透贡献 pp",
+     "粘性贡献 pp",
+     "渗透占比"
+    ],
+    [
+     "象限",
+     "品项名称",
+     "总销量",
+     "复购点击率",
+     "会员渗透率",
+     "会员内复购占比",
+     "会员单份均价",
+     "复购金额"
+    ],
+    [
+     "品项名称",
+     "总销量",
+     "复购点击率",
+     "复购金额",
+     "象限"
+    ],
+    [
+     "品项名称",
+     "门店数",
+     "最低",
+     "中位",
+     "P75",
+     "最高",
+     "极差 pp",
+     "倍差"
+    ],
+    [
+     "层级",
+     "对象",
+     "缺口份数",
+     "缺口金额（7 月）",
+     "月化金额",
+     "备注"
+    ],
+    [
+     "价格带",
+     "品项数",
+     "销量",
+     "销量份额",
+     "复购点击率",
+     "会员渗透率",
+     "会员内复购占比",
+     "复购金额"
+    ],
+    [
+     "品项名称",
+     "总销量",
+     "复购点击率",
+     "会员单份均价",
+     "复购金额"
+    ],
+    [
+     "品项名称",
+     "销量",
+     "复购点击率",
+     "会员单份均价",
+     "会员消费"
+    ]
+   ],
+   "d3_calls": [],
+   "interactions": {
+    "srcOpen": true,
+    "data-go": true,
+    "meta-on": true,
+    "playOn": true,
+    "showTip": false,
+    "IntersectionObserver": false
+   }
+  },
+  {
+   "file": "asset-c-operating-model-scroll.html",
+   "bytes": 407421,
+   "system": "scroll",
+   "title": "客户 A 门店 · 经营模式长卷",
+   "fonts": [
+    "\"PingFang SC\",\"Noto Sans CJK SC\",\"Hiragino Sans GB\",system-ui,sans-serif",
+    "\"SFMono-Regular\",ui-monospace,\"Menlo\",\"DejaVu Sans Mono\",\"Noto Sans Mono CJK SC\",monospace",
+    "\"Songti SC\",\"Noto Serif CJK SC\",\"Source Han Serif SC\",Georgia,serif",
+    "10.5px",
+    "10px",
+    "11.5px"
+   ],
+   "css_vars": [
+    "paper",
+    "tape",
+    "tape2",
+    "ink",
+    "ink2",
+    "ink3",
+    "gold",
+    "gold-l",
+    "gold-p",
+    "vermil",
+    "vermil-l",
+    "sage",
+    "slate",
+    "rule",
+    "mono",
+    "serif",
+    "sans"
+   ],
+   "markers": {
+    "口径": 1,
+    "边界": 1,
+    "样本": 2,
+    "校验": 3,
+    "版本": 1
+   },
+   "slides": [],
+   "scroll_sections": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+   ],
+   "ega_levels": [],
+   "chart_families": [],
+   "charts": [],
+   "appendix_sections": [],
+   "meta_keys": [],
+   "tables": 2,
+   "table_headers_sample": [
+    [
+     "支付标签",
+     "笔数",
+     "金额",
+     "占支付额"
+    ],
+    [
+     "字段 / 数据集",
+     "可用率",
+     "失去什么",
+     "从哪里补"
+    ]
+   ],
+   "d3_calls": [
+    [
+     "select",
+     28
+    ],
+    [
+     "scaleLinear",
+     16
+    ],
+    [
+     "axisLeft",
+     14
+    ],
+    [
+     "max",
+     14
+    ],
+    [
+     "axisBottom",
+     11
+    ],
+    [
+     "scaleBand",
+     9
+    ],
+    [
+     "format",
+     7
+    ],
+    [
+     "extent",
+     7
+    ],
+    [
+     "line",
+     5
+    ],
+    [
+     "sum",
+     5
+    ],
+    [
+     "scalePoint",
+     3
+    ],
+    [
+     "median",
+     3
+    ],
+    [
+     "scaleOrdinal",
+     2
+    ],
+    [
+     "area",
+     2
+    ],
+    [
+     "scaleLog",
+     2
+    ]
+   ],
+   "interactions": {
+    "srcOpen": false,
+    "data-go": false,
+    "meta-on": false,
+    "playOn": false,
+    "showTip": true,
+    "IntersectionObserver": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+<!-- @dsCard group="Data" height=189 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>LedgerTable — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
+  LedgerTable,
+  {
+    dense: true,
+    columns: [{ key: "action", label: "\u52A8\u4F5C" }, { key: "owner", label: "\u8D23\u4EFB\u4EBA" }, { key: "due", label: "\u671F\u9650", mono: true }, { key: "kpi", label: "\u9A8C\u6536\u6307\u6807" }],
+    rows: [{ action: "\u91CD\u6392\u5348\u5E02\u5957\u9910\u7ED3\u6784", owner: "\u8FD0\u8425\u603B\u76D1", due: "D+30", kpi: "\u5348\u5E02\u5BA2\u5355 +8%" }, { action: "\u6536\u7D27\u5E73\u53F0\u6EE1\u51CF\u53E0\u52A0", owner: "\u6E20\u9053\u7ECF\u7406", due: "D+45", kpi: "\u6298\u6263\u7387 \u2264 5.0%" }],
+    footer: "\u6570\u636E\u6765\u6E90\uFF1A\u6536\u94F6\u6D41\u6C34 2025-03 \u81F3 2025-08\uFF0C\u542B\u5E73\u53F0\u7ED3\u7B97\u5355\u3002"
+  }
+)));
+</script>
+</body>
+</html>

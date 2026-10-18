@@ -1,0 +1,506 @@
+{
+ "index.html@desktop": {
+  "overflow": false,
+  "height": 1320,
+  "headings": [
+   1,
+   7,
+   0
+  ],
+  "sections": 0,
+  "cards": 7,
+  "charts": 0,
+  "images": 1,
+  "h1": [
+   48,
+   210,
+   1184,
+   62
+  ],
+  "title": "侍天 TIANSIGHT · 设计系统入口",
+  "errors": []
+ },
+ "index.html@mobile": {
+  "overflow": false,
+  "height": 2801,
+  "headings": [
+   1,
+   7,
+   0
+  ],
+  "sections": 0,
+  "cards": 7,
+  "charts": 0,
+  "images": 1,
+  "h1": [
+   24,
+   178,
+   342,
+   40
+  ],
+  "title": "侍天 TIANSIGHT · 设计系统入口",
+  "errors": []
+ },
+ "brand/index.html@desktop": {
+  "overflow": false,
+  "height": 14629,
+  "headings": [
+   1,
+   13,
+   24
+  ],
+  "sections": 13,
+  "cards": 46,
+  "charts": 4,
+  "images": 7,
+  "h1": [
+   208,
+   3422,
+   1024,
+   62
+  ],
+  "title": "侍天 TIANSIGHT · 品牌基础 Foundation",
+  "errors": []
+ },
+ "brand/index.html@mobile": {
+  "overflow": false,
+  "height": 25040,
+  "headings": [
+   1,
+   13,
+   24
+  ],
+  "sections": 13,
+  "cards": 46,
+  "charts": 4,
+  "images": 7,
+  "h1": [
+   24,
+   5396,
+   342,
+   40
+  ],
+  "title": "侍天 TIANSIGHT · 品牌基础 Foundation",
+  "errors": []
+ },
+ "website/index.html@desktop": {
+  "overflow": false,
+  "height": 7456,
+  "headings": [
+   1,
+   11,
+   17
+  ],
+  "sections": 9,
+  "cards": 20,
+  "charts": 13,
+  "images": 2,
+  "h1": [
+   48,
+   246,
+   616,
+   158
+  ],
+  "title": "侍天 TIANSIGHT · 智慧领航者",
+  "errors": []
+ },
+ "website/index.html@mobile": {
+  "overflow": false,
+  "height": 13472,
+  "headings": [
+   1,
+   11,
+   17
+  ],
+  "sections": 9,
+  "cards": 20,
+  "charts": 13,
+  "images": 2,
+  "h1": [
+   24,
+   245,
+   342,
+   97
+  ],
+  "title": "侍天 TIANSIGHT · 智慧领航者",
+  "errors": []
+ },
+ "website/team.html@desktop": {
+  "overflow": false,
+  "height": 3608,
+  "headings": [
+   1,
+   3,
+   0
+  ],
+  "sections": 4,
+  "cards": 13,
+  "charts": 0,
+  "images": 15,
+  "h1": [
+   48,
+   191,
+   1184,
+   62
+  ],
+  "title": "侍天 TIANSIGHT · 联合创始人",
+  "errors": []
+ },
+ "website/team.html@mobile": {
+  "overflow": false,
+  "height": 6133,
+  "headings": [
+   1,
+   3,
+   0
+  ],
+  "sections": 4,
+  "cards": 13,
+  "charts": 0,
+  "images": 15,
+  "h1": [
+   24,
+   159,
+   342,
+   40
+  ],
+  "title": "侍天 TIANSIGHT · 联合创始人",
+  "errors": []
+ },
+ "deck/index.html@desktop": {
+  "overflow": false,
+  "height": 900,
+  "headings": [
+   1,
+   12,
+   5
+  ],
+  "sections": 19,
+  "cards": 9,
+  "charts": 2,
+  "images": 29,
+  "h1": [
+   88,
+   342,
+   1104,
+   92
+  ],
+  "title": "封面 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "report/index.html@desktop": {
+  "overflow": false,
+  "height": 10343,
+  "headings": [
+   1,
+   8,
+   28
+  ],
+  "sections": 9,
+  "cards": 11,
+  "charts": 24,
+  "images": 10,
+  "h1": [
+   417,
+   484,
+   208,
+   87
+  ],
+  "title": "侍天 TIANSIGHT · 经营诊断报告 V4.2",
+  "errors": []
+ },
+ "people/blocks.html@desktop": {
+  "overflow": false,
+  "height": 2968,
+  "headings": [
+   1,
+   0,
+   0
+  ],
+  "sections": 7,
+  "cards": 6,
+  "charts": 0,
+  "images": 18,
+  "h1": [
+   48,
+   122,
+   1184,
+   62
+  ],
+  "title": "侍天 TIANSIGHT · 人物区块",
+  "errors": []
+ },
+ "people/blocks.html@mobile": {
+  "overflow": false,
+  "height": 5341,
+  "headings": [
+   1,
+   0,
+   0
+  ],
+  "sections": 7,
+  "cards": 6,
+  "charts": 0,
+  "images": 18,
+  "h1": [
+   24,
+   90,
+   342,
+   40
+  ],
+  "title": "侍天 TIANSIGHT · 人物区块",
+  "errors": []
+ },
+ "people/namecards.html@desktop": {
+  "overflow": false,
+  "height": 1500,
+  "headings": [
+   1,
+   0,
+   0
+  ],
+  "sections": 0,
+  "cards": 0,
+  "charts": 0,
+  "images": 15,
+  "h1": [
+   48,
+   50,
+   1184,
+   62
+  ],
+  "title": "侍天 TIANSIGHT · 名片",
+  "errors": []
+ },
+ "people/social.html@desktop": {
+  "overflow": false,
+  "height": 21659,
+  "headings": [
+   1,
+   0,
+   0
+  ],
+  "sections": 0,
+  "cards": 0,
+  "charts": 0,
+  "images": 35,
+  "h1": [
+   48,
+   50,
+   1184,
+   62
+  ],
+  "title": "侍天 TIANSIGHT · 社媒人物卡",
+  "errors": []
+ },
+ "html-system/sample/index.html@desktop": {
+  "overflow": false,
+  "height": 15955,
+  "headings": [
+   1,
+   18,
+   4
+  ],
+  "sections": 26,
+  "cards": 0,
+  "charts": 20,
+  "images": 0,
+  "h1": [
+   114,
+   195,
+   1052,
+   59
+  ],
+  "title": "［品牌名称］ · 会员菜品复购数据分析 · V2 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "html-system/sample/index.html@mobile": {
+  "overflow": false,
+  "height": 4591,
+  "headings": [
+   1,
+   18,
+   4
+  ],
+  "sections": 26,
+  "cards": 0,
+  "charts": 20,
+  "images": 0,
+  "h1": [
+   47,
+   100,
+   297,
+   17
+  ],
+  "title": "［品牌名称］ · 会员菜品复购数据分析 · V2 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "dist/example.html@desktop": {
+  "overflow": false,
+  "height": 928,
+  "headings": [
+   1,
+   3,
+   0
+  ],
+  "sections": 0,
+  "cards": 4,
+  "charts": 0,
+  "images": 0,
+  "h1": [
+   48,
+   122,
+   1184,
+   62
+  ],
+  "title": "接入示例 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "dist/example.html@mobile": {
+  "overflow": false,
+  "height": 1621,
+  "headings": [
+   1,
+   3,
+   0
+  ],
+  "sections": 0,
+  "cards": 4,
+  "charts": 0,
+  "images": 0,
+  "h1": [
+   24,
+   90,
+   342,
+   79
+  ],
+  "title": "接入示例 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "people/profiles.html@desktop": {
+  "overflow": false,
+  "height": 2492,
+  "headings": [
+   1,
+   2,
+   0
+  ],
+  "sections": 0,
+  "cards": 2,
+  "charts": 0,
+  "images": 0,
+  "h1": [
+   48,
+   122,
+   1184,
+   62
+  ],
+  "title": "联合创始人履历库 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "people/profiles.html@mobile": {
+  "overflow": false,
+  "height": 4803,
+  "headings": [
+   1,
+   2,
+   0
+  ],
+  "sections": 0,
+  "cards": 2,
+  "charts": 0,
+  "images": 0,
+  "h1": [
+   24,
+   108,
+   342,
+   40
+  ],
+  "title": "联合创始人履历库 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "people/profile-bian-jiang.html@desktop": {
+  "overflow": false,
+  "height": 8173,
+  "headings": [
+   1,
+   10,
+   17
+  ],
+  "sections": 7,
+  "cards": 0,
+  "charts": 2,
+  "images": 15,
+  "h1": [
+   622,
+   393,
+   353,
+   67
+  ],
+  "title": "边江 BIAN JIANG · 侍天联合创始人 · 完整版 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "people/profile-bian-jiang-1p.html@desktop": {
+  "overflow": false,
+  "height": 1294,
+  "headings": [
+   1,
+   6,
+   0
+  ],
+  "sections": 1,
+  "cards": 0,
+  "charts": 2,
+  "images": 3,
+  "h1": [
+   509,
+   301,
+   467,
+   44
+  ],
+  "title": "边江 BIAN JIANG · 侍天联合创始人 · 一页版 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "people/profile-guo-feng.html@desktop": {
+  "overflow": false,
+  "height": 8173,
+  "headings": [
+   1,
+   10,
+   17
+  ],
+  "sections": 7,
+  "cards": 0,
+  "charts": 2,
+  "images": 15,
+  "h1": [
+   622,
+   393,
+   353,
+   67
+  ],
+  "title": "郭峰 GUO FENG · 侍天联合创始人 · 完整版 · 侍天 TIANSIGHT",
+  "errors": []
+ },
+ "people/profile-guo-feng-1p.html@desktop": {
+  "overflow": false,
+  "height": 1294,
+  "headings": [
+   1,
+   6,
+   0
+  ],
+  "sections": 1,
+  "cards": 0,
+  "charts": 2,
+  "images": 3,
+  "h1": [
+   509,
+   301,
+   467,
+   44
+  ],
+  "title": "郭峰 GUO FENG · 侍天联合创始人 · 一页版 · 侍天 TIANSIGHT",
+  "errors": []
+ }
+}

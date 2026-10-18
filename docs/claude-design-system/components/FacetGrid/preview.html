@@ -1,0 +1,29 @@
+<!-- @dsCard group="Charts" height=311 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>FacetGrid — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+const rnd = /* @__PURE__ */ ((seed) => () => {
+  seed = (seed * 9301 + 49297) % 233280;
+  return seed / 233280;
+})(17);
+const stores = ["\u65D7\u8230\u5E97", "\u6CB3\u897F\u5E97", "\u57CE\u5317\u5E97", "\u5F00\u53D1\u533A\u5E97", "\u8001\u57CE\u5E97", "\u65B0\u8857\u53E3\u5E97"].map((name, k) => ({ title: name, meta: "n=30", series: Array.from({ length: 30 }, (_, i) => Math.round(60 + k * 8 + 20 * Math.sin(i / 4) + rnd() * 15)) }));
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(
+  FacetGrid,
+  {
+    caption: "\u65E5\u5EA6\u5B9E\u6536 \xB7 \u6309\u95E8\u5E97",
+    columns: 3,
+    panels: stores,
+    max: 140,
+    panelHeight: 70,
+    render: (p, ctx) => /* @__PURE__ */ React.createElement(Sparkline, { values: p.series, width: ctx.width, height: ctx.height, toneName: "growth" })
+  }
+)));
+</script>
+</body>
+</html>

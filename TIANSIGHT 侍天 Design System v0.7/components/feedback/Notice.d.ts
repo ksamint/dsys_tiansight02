@@ -1,0 +1,1 @@
+export interface NoticeProps extends React.HTMLAttributes<HTMLDivElement> { /** key = ink-field background, bright-gold edge; warn = vermillion edge */ variant?: 'key' | 'warn'; title?: string; children: React.ReactNode; }

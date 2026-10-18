@@ -1,0 +1,1 @@
+export interface TokenRowProps extends React.HTMLAttributes<HTMLDivElement> { color: string; name: string; cn?: string; hex: string; usage?: string; /** deep-gold hex for small text */ small?: boolean; }

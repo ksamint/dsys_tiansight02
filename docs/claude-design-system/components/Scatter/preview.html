@@ -1,0 +1,24 @@
+<!-- @dsCard group="Charts" height=333 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Scatter — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+const rnd = /* @__PURE__ */ ((seed) => () => {
+  seed = (seed * 9301 + 49297) % 233280;
+  return seed / 233280;
+})(11);
+const names = ["\u6E05\u7092\u6CB3\u867E\u4EC1", "\u87F9\u7C89\u8C46\u8150", "\u72EE\u5B50\u5934", "\u70EB\u5E72\u4E1D", "\u6625\u7B0B\u6B65\u9C7C", "\u6587\u601D\u8C46\u8150", "\u8F6F\u515C\u957F\u9C7C", "\u5927\u716E\u5E72\u4E1D", "\u76D0\u6C34\u9E2D", "\u6842\u82B1\u7CD6\u85D5", "\u4E09\u5957\u9E2D", "\u626C\u5DDE\u7092\u996D"];
+const skus = names.map((n, i) => ({ label: n, x: 40 + rnd() * 260, y: 42 + rnd() * 36, r: 8e3 + rnd() * 4e4 }));
+const big = Array.from({ length: 12e3 }, () => {
+  const x = rnd() * 300;
+  return { x, y: 45 + x * 0.06 + (rnd() - 0.5) * 22, tone: rnd() > 0.92 ? "seal" : void 0 };
+});
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 28 } }, /* @__PURE__ */ React.createElement(Scatter, { height: 220, caption: "\u5343\u5355\u70B9\u51FB \xD7 \u6BDB\u5229\u7387", xLabel: "\u5343\u5355\u70B9\u51FB", yLabel: "\u6BDB\u5229\u7387 %", quadrants: true, quadrantLabels: ["\u9AD8\u5229\u4F4E\u70B9", "\u660E\u661F", "\u95EE\u9898", "\u9AD8\u70B9\u4F4E\u5229"], emphasis: ["\u6E05\u7092\u6CB3\u867E\u4EC1", "\u6625\u7B0B\u6B65\u9C7C"], points: skus, grade: "E1", scope: "03\u201308 \u6708\uFF0C\u5802\u98DF" }), /* @__PURE__ */ React.createElement(Scatter, { height: 220, caption: "\u9010\u5355 \xB7 \u4EF7\u683C \xD7 \u6BDB\u5229\u7387\uFF08canvas\uFF09", xLabel: "\u5B9E\u6536\u5355\u4EF7", yLabel: "\u6BDB\u5229\u7387 %", trend: true, points: big, grade: "E1" }))));
+</script>
+</body>
+</html>

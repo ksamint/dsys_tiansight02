@@ -1,0 +1,43 @@
+{
+  "group": {
+    "title": "联合创始人",
+    "en": "Co-founders",
+    "lede": "侍天由五位联合创始人共同发起：餐饮经营、数据模型、连锁体系与品牌方法各有所长，合在一起是一套领航系统。",
+    "note": "姓名、职务、专长、简介与联系方式均为占位，待创始人确认后在 people/people.json 填入；照片按发送顺序命名为 people/photos/founder-01.png 至 founder-05.png。"
+  },
+  "company": {
+    "name": "侍天 Tiansight",
+    "tagline": "智慧领航者",
+    "alliance": "A Member of the Table AI Alliance",
+    "city": "Hong Kong",
+    "site": "［tiansight.·］",
+    "wechat_public": "［公众号名称］"
+  },
+  "people": [
+    { "id": "founder-01", "order": "壹", "photo": "founder-01.png",
+      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
+      "quote": "［一句本人观点，可引用，不超过 30 字。］",
+      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
+    { "id": "founder-02", "order": "贰", "photo": "founder-02.png",
+      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
+      "quote": "［一句本人观点，可引用，不超过 30 字。］",
+      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
+    { "id": "founder-03", "order": "叁", "photo": "founder-03.png",
+      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
+      "quote": "［一句本人观点，可引用，不超过 30 字。］",
+      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
+    { "id": "founder-04", "order": "肆", "photo": "founder-04.png",
+      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
+      "quote": "［一句本人观点，可引用，不超过 30 字。］",
+      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
+    { "id": "founder-05", "order": "伍", "photo": "founder-05.png",
+      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
+      "quote": "［一句本人观点，可引用，不超过 30 字。］",
+      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } }
+  ]
+}

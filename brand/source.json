@@ -1,0 +1,69 @@
+{
+  "retrieved": "2026-10-14",
+  "directory": "https://apuch.art/",
+  "api": "https://apuch.art/api/brands/tiansight.json",
+  "ip": {
+    "assetKey": "sidera",
+    "mainName": "侍天 - 智慧餐饮",
+    "otherName": "tiansight",
+    "nameRule": "One display name everywhere: 侍天 TIANSIGHT. The IPTrust record's main name (侍天 - 智慧餐饮) and other name (tiansight) are kept here as registry values only.",
+    "website": "tiansight.apuch.cn",
+    "designSystemRepo": "ksamint/dsys_tiansight02",
+    "displayName": "侍天 TIANSIGHT",
+    "designSystemSite": "tiansight.apuch.art",
+    "websiteNote": "Owner-confirmed 2026-10-14: tiansight.apuch.cn is the official website; tiansight.apuch.art (CNAME) only hosts the design system. The live record still says TBD."
+  },
+  "guidePath": "Tiansight/tiansight_design.md",
+  "version": {
+    "hash": "5c7c158e439448b77c640563fe8f129eee650152",
+    "shortHash": "5c7c158",
+    "date": "2026-09-27T11:46:29+08:00",
+    "message": "Add IPTrust design system and tokens",
+    "url": "https://github.com/ksamint/tableai_designaha/commit/5c7c158e439448b77c640563fe8f129eee650152"
+  },
+  "theme": {
+    "mode": "light",
+    "primary": "#EFE6D2",
+    "accent": "#76551F",
+    "secondary": "#8C3228",
+    "surface": "#F4F0E7",
+    "paper": "#FFFDF8",
+    "ink": "#17130D",
+    "muted": "#706758",
+    "line": "rgba(23, 19, 13, 0.18)",
+    "buttonText": "#17130D",
+    "keywords": [
+      "ink ivory",
+      "pale manuscript",
+      "earth gold",
+      "vermillion",
+      "wisdom navigator"
+    ]
+  },
+  "logo": {
+    "id": "sidera-logo-sidera-logo-document-transparent-4c63205cf059",
+    "ownerType": "owned-ip",
+    "ownerId": "sidera",
+    "role": "logo",
+    "title": "sidera logo document transparent",
+    "access": "public",
+    "sourcePath": "Sidera/assets/brand-images/sidera-logo-document-transparent.png",
+    "sourceFilename": "sidera-logo-document-transparent.png",
+    "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+    "mimeType": "image/png",
+    "extension": "png",
+    "bytes": 50368,
+    "size": "49.2 KB",
+    "width": 601,
+    "height": 640,
+    "dimensions": "601 x 640 px",
+    "backgroundTransparent": true,
+    "documentLogo": true,
+    "objectKey": "public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+    "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+    "legacyUrls": [],
+    "status": "ready",
+    "version": 1
+  },
+  "syncNote": "2026-10-14: version, guidePath (primaryGuide), ip and theme confirmed against the live record https://apuch.art/api/brands/tiansight.json (fetched through the web tool; the shell is blocked by the network policy). theme and logo are unchanged."
+}

@@ -1,0 +1,29 @@
+:root{
+/* families */
+--font-serif-cn:"Noto Serif SC","Source Han Serif SC","Songti SC",serif;
+--font-sans-cn:"Noto Sans SC","Source Han Sans SC","PingFang SC",sans-serif;
+--font-serif-latin:"Spectral","Noto Serif SC",Georgia,serif;
+--font-mono:"IBM Plex Mono","SFMono-Regular",Menlo,monospace;
+
+/* roles */
+--font-display:var(--font-serif-cn);      /* 大标题 / 主张 */
+--font-heading:var(--font-serif-cn);
+--font-body:var(--font-sans-cn);          /* 正文、UI */
+--font-quote:var(--font-serif-latin);     /* 拉丁标语、引文 */
+--font-numeral:var(--font-mono);          /* 指标、表格数字 */
+
+/* scale — 1.25 ratio, tuned for CJK optical size */
+--text-3xs:11px;--text-2xs:12px;--text-xs:13px;--text-sm:14px;--text-md:15px;
+--text-base:16px;--text-lg:18px;--text-xl:21px;--text-2xl:26px;--text-3xl:32px;
+--text-4xl:40px;--text-5xl:52px;--text-6xl:68px;--text-7xl:88px;
+
+/* weights — CJK serif reads heavy; 500 is the workhorse "bold" */
+--weight-light:300;--weight-regular:400;--weight-medium:500;--weight-bold:700;--weight-black:900;
+
+/* line heights */
+--leading-tight:1.16;--leading-snug:1.32;--leading-normal:1.62;--leading-loose:1.9;
+
+/* tracking — CJK display gets airy tracking, Latin caps get wide */
+--tracking-cjk-display:.06em;--tracking-cjk-body:.02em;
+--tracking-latin:0;--tracking-caps:.18em;--tracking-caps-wide:.3em;
+}

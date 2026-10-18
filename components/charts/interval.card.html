@@ -1,0 +1,27 @@
+<!-- @dsCard group="Charts" viewport="700x330" name="Gantt · CalendarHeatmap" subtitle="时段 and 日历 — the naturally 21:9 charts; 150 rows paint to canvas" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { Gantt, CalendarHeatmap } = NS;
+const rnd = (seed => () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; })(5);
+const day = (i) => { const d = new Date(2025, 2, 1); d.setDate(d.getDate() + i); return d; };
+const iso = (d) => d.toISOString().slice(0, 10);
+const days = Array.from({length: 153}, (_, i) => { const d = day(i), w = d.getDay(); return { date: iso(d), value: Math.round(18000 + (w === 0 || w === 6 ? 9000 : 0) + (i > 32 && i < 37 ? 7000 : 0) + rnd() * 5000) }; });
+const groups = ["招牌","常规","时令","已下架"], gt = { 招牌: "key", 常规: "gold", 时令: "caution", 已下架: "muted" };
+const rows = Array.from({length: 148}, (_, i) => { const g = groups[i % 7 === 0 ? 0 : i % 5 === 0 ? 2 : i % 11 === 0 ? 3 : 1]; const s = Math.floor(rnd() * 90), len = g === "时令" ? 40 + rnd() * 30 : g === "已下架" ? 30 + rnd() * 60 : 120 + rnd() * 60; return { label: "SKU-" + String(i + 1).padStart(3, "0"), start: iso(day(s)), end: iso(day(Math.min(183, s + len))), group: g }; });
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:28}}>
+    <div><div className="lbl">Gantt · 148 SKU 生命跨度（canvas）</div>
+      <Gantt caption="SKU 在售跨度" today="2025-08-31" rows={rows} groupTone={gt} grade="E1" scope="在售 = 有可售记录的日期区间"/></div>
+    <div><div className="lbl">CalendarHeatmap · 153 天</div>
+      <CalendarHeatmap caption="日度实收 · 2025-03 → 08" unit=" 元" values={days} grade="E1" scope="堂食 + 外卖净收入"/></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

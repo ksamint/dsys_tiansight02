@@ -1,0 +1,1 @@
+export interface MarkProps extends React.HTMLAttributes<HTMLSpanElement> { /** px height, min 24 inline / 64 hero */ size?: number; wordmark?: boolean; caption?: string; /** path to brand/logo.png from the page */ src?: string; }

@@ -1,0 +1,57 @@
+{
+  "retrieved": "2026-09-05",
+  "directory": "https://apuch.art/",
+  "api": "https://apuch.art/api/brands/tiansight.json",
+  "guidePath": "Sidera/sidera_design.md",
+  "version": {
+    "hash": "74a829b2df1b50b1411b06dcf66a13ee6648c008",
+    "shortHash": "74a829b",
+    "date": "2026-09-01T17:03:57+08:00",
+    "message": "feat: add interactive IP evolution map",
+    "url": "https://github.com/fengurt/tableai_designaha/commit/74a829b2df1b50b1411b06dcf66a13ee6648c008"
+  },
+  "theme": {
+    "mode": "light",
+    "primary": "#EFE6D2",
+    "accent": "#76551F",
+    "secondary": "#8C3228",
+    "surface": "#F4F0E7",
+    "paper": "#FFFDF8",
+    "ink": "#17130D",
+    "muted": "#706758",
+    "line": "rgba(23, 19, 13, 0.18)",
+    "buttonText": "#17130D",
+    "keywords": [
+      "ink ivory",
+      "pale manuscript",
+      "earth gold",
+      "vermillion",
+      "wisdom navigator"
+    ]
+  },
+  "logo": {
+    "id": "sidera-logo-sidera-logo-document-transparent-4c63205cf059",
+    "ownerType": "owned-ip",
+    "ownerId": "sidera",
+    "role": "logo",
+    "title": "sidera logo document transparent",
+    "access": "public",
+    "sourcePath": "Sidera/assets/brand-images/sidera-logo-document-transparent.png",
+    "sourceFilename": "sidera-logo-document-transparent.png",
+    "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+    "mimeType": "image/png",
+    "extension": "png",
+    "bytes": 50368,
+    "size": "49.2 KB",
+    "width": 601,
+    "height": 640,
+    "dimensions": "601 x 640 px",
+    "backgroundTransparent": true,
+    "documentLogo": true,
+    "objectKey": "public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+    "mediaUrl": "https://media.apuch.art/public/sidera/sidera-logo-sidera-logo-document-transparent-4c63205cf059/4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22/original.png",
+    "legacyUrls": [],
+    "status": "ready",
+    "version": 1
+  }
+}

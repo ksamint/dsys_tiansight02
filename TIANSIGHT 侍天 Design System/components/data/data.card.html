@@ -1,0 +1,39 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Data" subtitle="MetricRow, BarSeries, Matrix2x2, LedgerTable" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}.stack{display:flex;flex-direction:column;gap:18px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { MetricRow, BarSeries, Matrix2x2, LedgerTable } = window.TIANSIGHTDesignSystem_bb63dc;
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'24px 30px'}}>
+    <div className="stack" style={{gap:20}}>
+      <div><div className="lbl">MetricRow</div>
+        <MetricRow label="午市客流" sublabel="旗舰店 · 工作日" value="132" unit="人/日" delta="+8.4%" deltaTone="growth"/>
+        <MetricRow label="折扣让利" value="6.7" unit="%" delta="-2.1pt" deltaTone="loss" note="平台满减叠加会员券"/>
+      </div>
+      <div><div className="lbl">BarSeries</div>
+        <BarSeries unit="%" labelWidth={80} data={[
+          {label:"文思豆腐",value:18.4,tone:"growth"},
+          {label:"狮子头",value:12.1,tone:"bronze"},
+          {label:"响油鳝糊",value:4.2,tone:"loss"}]}/>
+      </div>
+    </div>
+    <div><div className="lbl">Matrix2x2</div>
+      <Matrix2x2 height={180} xAxis="复购频次" yAxis="客单价"
+        quadrants={[{label:"高价低频 · 待激活",tone:"caution"},{label:"核心客群 · 守住",tone:"growth"},{label:"低价低频 · 观察",tone:"muted"},{label:"低价高频 · 提客单",tone:"bronze"}]}
+        points={[{label:"A 层",x:.74,y:.72,tone:"growth"},{label:"B 层",x:.3,y:.62,tone:"caution"},{label:"C 层",x:.66,y:.24,tone:"bronze"}]}/>
+    </div>
+    <div style={{gridColumn:'1 / -1'}}><div className="lbl">LedgerTable</div>
+      <LedgerTable dense
+        columns={[{key:"action",label:"动作"},{key:"owner",label:"责任人"},{key:"due",label:"期限",mono:true},{key:"kpi",label:"验收指标"}]}
+        rows={[{action:"重排午市套餐结构",owner:"运营总监",due:"D+30",kpi:"午市客单 +8%"},
+               {action:"收紧平台满减叠加",owner:"渠道经理",due:"D+45",kpi:"折扣率 ≤ 5.0%"}]}
+        footer="数据来源：收银流水 2025-03 至 2025-08，含平台结算单。"/>
+    </div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

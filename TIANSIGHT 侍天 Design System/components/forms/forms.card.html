@@ -1,0 +1,31 @@
+<!-- @dsCard group="Components" viewport="700x330" name="Forms" subtitle="Input, Select, Checkbox, Radio, Switch" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}.stack{display:flex;flex-direction:column;gap:18px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { Input, Select, Checkbox, Radio, Switch } = window.TIANSIGHTDesignSystem_bb63dc;
+function Demo(){
+  const [on,setOn]=React.useState(true);
+  return <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'26px 32px'}}>
+    <div className="stack" style={{gap:14}}>
+      <Input label="品牌名称" placeholder="例：韵 1980 新派淮扬菜" required/>
+      <Input label="门店数" suffix="家" hint="含在建门店" defaultValue="7"/>
+      <Input label="联系电话" error="请填写 11 位手机号" defaultValue="1380"/>
+    </div>
+    <div className="stack" style={{gap:14}}>
+      <Select label="业态" options={["新派淮扬菜","潮汕牛肉","河鲜小馆","老字号茶庄"]}/>
+      <div className="stack" style={{gap:10}}>
+        <Checkbox label="收银数据" description="近 6 个月流水与折扣明细" defaultChecked/>
+        <Checkbox label="平台数据" description="外卖与团购结算单"/>
+        <Radio name="t" value="1" label="第一层 · 经营洞察" defaultChecked/>
+        <Radio name="t" value="2" label="第二层 · 第二大脑共建"/>
+      </div>
+      <Switch label="仅看异常项" description="隐藏在阈值内的指标" checked={on} onChange={e=>setOn(e.target.checked)}/>
+    </div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

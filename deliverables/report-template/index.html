@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>侍天报告模板</title>
+<link rel="stylesheet" href="../../brand/fonts.css">
+<style>
+html,body{margin:0;height:100%;background:#17130D}
+#stage{position:fixed;inset:0 0 44px 0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#frame{width:1920px;height:1080px;flex:none;transform-origin:center;position:relative;overflow:hidden;background:#F4F0E7}
+#frame section{position:absolute;inset:0;width:1920px;height:1080px}
+#frame *{box-sizing:border-box;margin:0}
+#frame section > :not([style*="position:absolute"]){position:relative}
+#frame aside{display:none}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+#bar{position:fixed;left:0;right:0;bottom:0;height:44px;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:0 16px;color:#F4F0E7;font:13px 'Noto Serif SC',serif;background:#17130D}
+#bar button{background:none;border:1px solid #D4A862;color:#F4F0E7;padding:4px 14px;cursor:pointer}
+#notes{flex:1;opacity:.75;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+</style></head><body>
+<main id="stage"><h1 class="vh">侍天报告模板</h1><div id="frame"></div></main>
+<div id="bar"><button id="prev" aria-label="上一页">←</button><span id="notes"></span><span id="pg"></span><button id="next" aria-label="下一页">→</button></div>
+<script>
+const ORDER = ["cover", "toc", "principles", "howto", "voice", "colors", "type", "layout", "charts", "badges", "dodont", "qa", "constraints", "catalog", "sopen", "exsum", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "d1", "d2", "d3", "d4", "gloss", "src", "team", "close"];
+let i = Math.max(0, ORDER.indexOf(location.hash.slice(1)));
+const frame = document.getElementById('frame');
+function fit(){ const s = Math.min(innerWidth/1920, (innerHeight-44)/1080); frame.style.transform = 'scale(' + s + ')'; }
+async function show(k){
+  i = (k + ORDER.length) % ORDER.length;
+  const h = await (await fetch('slides/' + ORDER[i] + '.html')).text();
+  frame.innerHTML = h.replace(/src="(?!https?:|\/)/g, 'src="slides/');
+  const a = frame.querySelector('aside');
+  document.getElementById('notes').innerHTML = a ? a.innerHTML : '';
+  document.getElementById('pg').textContent = (i + 1) + ' / ' + ORDER.length;
+  history.replaceState(null, '', '#' + ORDER[i]);
+}
+addEventListener('resize', fit);
+addEventListener('keydown', e => { if (e.key === 'ArrowRight' || e.key === ' ') show(i + 1); if (e.key === 'ArrowLeft') show(i - 1); });
+document.getElementById('prev').onclick = () => show(i - 1);
+document.getElementById('next').onclick = () => show(i + 1);
+fit(); show(i);
+</script></body></html>

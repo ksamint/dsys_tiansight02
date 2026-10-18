@@ -1,0 +1,552 @@
+{
+ "v": 3,
+ "assetGroups": {
+  "Icons": {
+   "files": {
+    "arrow-down.svg": {
+     "blob": "14eb511927a2df0e5b9c1156e45fb287",
+     "name": "arrow-down.svg",
+     "size": 224,
+     "type": "image/svg+xml"
+    },
+    "arrow-left.svg": {
+     "blob": "4d88fb2a006c0f5647ee7ac4d74a7113",
+     "name": "arrow-left.svg",
+     "size": 225,
+     "type": "image/svg+xml"
+    },
+    "arrow-right.svg": {
+     "blob": "4f8d56457e0c39f81fb0c3d55125f201",
+     "name": "arrow-right.svg",
+     "size": 224,
+     "type": "image/svg+xml"
+    },
+    "arrow-up-right.svg": {
+     "blob": "51ea594c43d3f00f0c3f7f5a92e52dce",
+     "name": "arrow-up-right.svg",
+     "size": 221,
+     "type": "image/svg+xml"
+    },
+    "chart.svg": {
+     "blob": "58b399108405ca7cf9251057982fd402",
+     "name": "chart.svg",
+     "size": 228,
+     "type": "image/svg+xml"
+    },
+    "check.svg": {
+     "blob": "c8d51ce7d129b7cfff19b248bee4d1f8",
+     "name": "check.svg",
+     "size": 221,
+     "type": "image/svg+xml"
+    },
+    "chevron-down.svg": {
+     "blob": "50b2b63824e54e5044bde25ea8773943",
+     "name": "chevron-down.svg",
+     "size": 215,
+     "type": "image/svg+xml"
+    },
+    "compass.svg": {
+     "blob": "116a54849231c068584484124733a4a7",
+     "name": "compass.svg",
+     "size": 321,
+     "type": "image/svg+xml"
+    },
+    "correction.svg": {
+     "blob": "4ae0d0add3d95a6d427648e394dc1dd2",
+     "name": "correction.svg",
+     "size": 255,
+     "type": "image/svg+xml"
+    },
+    "cross.svg": {
+     "blob": "1376888c384ae7252820e2be70a6befe",
+     "name": "cross.svg",
+     "size": 223,
+     "type": "image/svg+xml"
+    },
+    "data.svg": {
+     "blob": "f293262d7c158818c870fc4967141d22",
+     "name": "data.svg",
+     "size": 331,
+     "type": "image/svg+xml"
+    },
+    "external.svg": {
+     "blob": "3aef627a4b71e7fef97ec97c050dc47c",
+     "name": "external.svg",
+     "size": 236,
+     "type": "image/svg+xml"
+    },
+    "menu.svg": {
+     "blob": "bcd0d1718b2812f3915a0054a391e8a3",
+     "name": "menu.svg",
+     "size": 226,
+     "type": "image/svg+xml"
+    },
+    "print.svg": {
+     "blob": "d69c969ce712b1805bad0953851af667",
+     "name": "print.svg",
+     "size": 238,
+     "type": "image/svg+xml"
+    },
+    "route.svg": {
+     "blob": "718e8ee2cb6c294439ede9d0623bf4ff",
+     "name": "route.svg",
+     "size": 317,
+     "type": "image/svg+xml"
+    },
+    "seal.svg": {
+     "blob": "cbeebdf388d9f59dbc2c69b854fd1223",
+     "name": "seal.svg",
+     "size": 265,
+     "type": "image/svg+xml"
+    },
+    "store.svg": {
+     "blob": "d2458fa53a354eef99ac4b578d7a0b81",
+     "name": "store.svg",
+     "size": 250,
+     "type": "image/svg+xml"
+    }
+   },
+   "name": "Icons",
+   "order": [
+    "arrow-right.svg",
+    "arrow-up-right.svg",
+    "arrow-left.svg",
+    "arrow-down.svg",
+    "chevron-down.svg",
+    "check.svg",
+    "cross.svg",
+    "menu.svg",
+    "external.svg",
+    "print.svg",
+    "chart.svg",
+    "compass.svg",
+    "route.svg",
+    "correction.svg",
+    "store.svg",
+    "data.svg",
+    "seal.svg"
+   ],
+   "tile": "s"
+  },
+  "Logos": {
+   "files": {
+    "logo-seal.png": {
+     "blob": "d258c06d1f23c1d069d8e9d63c556406",
+     "name": "logo-seal.png",
+     "size": 25497,
+     "type": "image/png"
+    },
+    "logo.png": {
+     "blob": "9e42acd64f437d6648692786f1f27253",
+     "name": "logo.png",
+     "size": 50368,
+     "type": "image/png"
+    }
+   },
+   "name": "Logos",
+   "order": [
+    "logo.png",
+    "logo-seal.png"
+   ],
+   "tile": "l"
+  },
+  "Deck": {
+   "name": "Deck",
+   "tile": "m",
+   "order": [
+    "cover.jpg",
+    "statement-problem.jpg",
+    "section-1.jpg",
+    "module-1.jpg",
+    "module-2.jpg",
+    "module-3.jpg",
+    "module-4.jpg",
+    "statement-data.jpg",
+    "section-2.jpg",
+    "report-page-1.jpg",
+    "report-page-2.jpg",
+    "report-page-3.jpg",
+    "dashboard-1.jpg",
+    "dashboard-2.jpg",
+    "dashboard-3.jpg",
+    "dashboard-4.jpg",
+    "mobile-review.jpg",
+    "price-band-gap.jpg",
+    "penetration-matrix.jpg",
+    "profit-sensitivity.jpg",
+    "trade-area-supply.jpg",
+    "repurchase-quadrant.jpg",
+    "statement-proof.jpg",
+    "case-01.jpg",
+    "case-02.jpg",
+    "case-03.jpg",
+    "case-04.jpg",
+    "case-05.jpg",
+    "case-06.jpg",
+    "case-07.jpg",
+    "case-08.jpg",
+    "section-3.jpg",
+    "statement-decision.jpg"
+   ],
+   "files": {
+    "case-01.jpg": {
+     "name": "case-01.jpg",
+     "blob": "94ada5d278b223a9b2abeaeb99a96c22",
+     "size": 179194,
+     "type": "image/jpeg"
+    },
+    "case-02.jpg": {
+     "name": "case-02.jpg",
+     "blob": "3e646e08bd0c31cb782d5bde30d3dc11",
+     "size": 168554,
+     "type": "image/jpeg"
+    },
+    "case-03.jpg": {
+     "name": "case-03.jpg",
+     "blob": "befb88fd0bf4daafb6fb0dd57c027769",
+     "size": 205388,
+     "type": "image/jpeg"
+    },
+    "case-04.jpg": {
+     "name": "case-04.jpg",
+     "blob": "cde90a2150c2467c2b04d5be279463a8",
+     "size": 196357,
+     "type": "image/jpeg"
+    },
+    "case-05.jpg": {
+     "name": "case-05.jpg",
+     "blob": "dc8355ef23f3dc4edc4de11ae7422e8c",
+     "size": 194824,
+     "type": "image/jpeg"
+    },
+    "case-06.jpg": {
+     "name": "case-06.jpg",
+     "blob": "eb23d474b52049377c953212e45ac67e",
+     "size": 197122,
+     "type": "image/jpeg"
+    },
+    "case-07.jpg": {
+     "name": "case-07.jpg",
+     "blob": "9b129e6540e47ca70b6dbc65ad235c0e",
+     "size": 255951,
+     "type": "image/jpeg"
+    },
+    "case-08.jpg": {
+     "name": "case-08.jpg",
+     "blob": "def2a07339166c1d221df3754ec48f9f",
+     "size": 141940,
+     "type": "image/jpeg"
+    },
+    "cover.jpg": {
+     "name": "cover.jpg",
+     "blob": "2f4b08beb816683134ddc6a91169f7dd",
+     "size": 231558,
+     "type": "image/jpeg"
+    },
+    "dashboard-1.jpg": {
+     "name": "dashboard-1.jpg",
+     "blob": "ac44360e9c9d937ce4ad01894368af90",
+     "size": 113315,
+     "type": "image/jpeg"
+    },
+    "dashboard-2.jpg": {
+     "name": "dashboard-2.jpg",
+     "blob": "43dba8998c5246608d404a1dd9be1e85",
+     "size": 75442,
+     "type": "image/jpeg"
+    },
+    "dashboard-3.jpg": {
+     "name": "dashboard-3.jpg",
+     "blob": "fbbc3a7615639a703a403d073fbb5b1f",
+     "size": 114296,
+     "type": "image/jpeg"
+    },
+    "dashboard-4.jpg": {
+     "name": "dashboard-4.jpg",
+     "blob": "631ccbe024ec8586dc08056f672a6668",
+     "size": 89648,
+     "type": "image/jpeg"
+    },
+    "mobile-review.jpg": {
+     "name": "mobile-review.jpg",
+     "blob": "47697cbd4f055dc0722f03518b9cdc31",
+     "size": 37922,
+     "type": "image/jpeg"
+    },
+    "module-1.jpg": {
+     "name": "module-1.jpg",
+     "blob": "bb00e6fccc3cc753861a025e565f2bf4",
+     "size": 193286,
+     "type": "image/jpeg"
+    },
+    "module-2.jpg": {
+     "name": "module-2.jpg",
+     "blob": "4f8ec65e7a79f34fa770e72a5ff1da10",
+     "size": 200473,
+     "type": "image/jpeg"
+    },
+    "module-3.jpg": {
+     "name": "module-3.jpg",
+     "blob": "9dda18c77b1773343017b69bd9dd4323",
+     "size": 171844,
+     "type": "image/jpeg"
+    },
+    "module-4.jpg": {
+     "name": "module-4.jpg",
+     "blob": "a5343e829aac9e8ff76bab9763530a75",
+     "size": 275521,
+     "type": "image/jpeg"
+    },
+    "penetration-matrix.jpg": {
+     "name": "penetration-matrix.jpg",
+     "blob": "097ad3db9adc717e1ca03ca0f96e4f2d",
+     "size": 67354,
+     "type": "image/jpeg"
+    },
+    "price-band-gap.jpg": {
+     "name": "price-band-gap.jpg",
+     "blob": "94b8cb43a76515207dad3c83714b3ee2",
+     "size": 46576,
+     "type": "image/jpeg"
+    },
+    "profit-sensitivity.jpg": {
+     "name": "profit-sensitivity.jpg",
+     "blob": "30ba731aa4fae269444b2ce500b13eb0",
+     "size": 57825,
+     "type": "image/jpeg"
+    },
+    "report-page-1.jpg": {
+     "name": "report-page-1.jpg",
+     "blob": "fcf928606020c8624fdd80657027aad1",
+     "size": 88438,
+     "type": "image/jpeg"
+    },
+    "report-page-2.jpg": {
+     "name": "report-page-2.jpg",
+     "blob": "129ebc728351de04b4f3a5b5466b2357",
+     "size": 72863,
+     "type": "image/jpeg"
+    },
+    "report-page-3.jpg": {
+     "name": "report-page-3.jpg",
+     "blob": "67dd9e612a9a676e35b47a9aa3d12fab",
+     "size": 78074,
+     "type": "image/jpeg"
+    },
+    "repurchase-quadrant.jpg": {
+     "name": "repurchase-quadrant.jpg",
+     "blob": "db242c7cee82244f9026bead24a35e8b",
+     "size": 89956,
+     "type": "image/jpeg"
+    },
+    "section-1.jpg": {
+     "name": "section-1.jpg",
+     "blob": "deecd56e989123ca1acba3bb3c1913a8",
+     "size": 258899,
+     "type": "image/jpeg"
+    },
+    "section-2.jpg": {
+     "name": "section-2.jpg",
+     "blob": "0ea02a51c2bb97652ab796cda90b39dd",
+     "size": 221929,
+     "type": "image/jpeg"
+    },
+    "section-3.jpg": {
+     "name": "section-3.jpg",
+     "blob": "216d8dcefbe15de17f5c8a03d42e447e",
+     "size": 197791,
+     "type": "image/jpeg"
+    },
+    "statement-data.jpg": {
+     "name": "statement-data.jpg",
+     "blob": "51a2adc6d838f82a385da68eb20f0b9f",
+     "size": 120894,
+     "type": "image/jpeg"
+    },
+    "statement-decision.jpg": {
+     "name": "statement-decision.jpg",
+     "blob": "96d934d64721a5eefd034b5eb94342d1",
+     "size": 141650,
+     "type": "image/jpeg"
+    },
+    "statement-problem.jpg": {
+     "name": "statement-problem.jpg",
+     "blob": "0979a7dca8579c9b651a53eeb3719e29",
+     "size": 108405,
+     "type": "image/jpeg"
+    },
+    "statement-proof.jpg": {
+     "name": "statement-proof.jpg",
+     "blob": "e5a77162b17b526128bf5d23945ec5e3",
+     "size": 182055,
+     "type": "image/jpeg"
+    },
+    "trade-area-supply.jpg": {
+     "name": "trade-area-supply.jpg",
+     "blob": "31fd58262dc52f578655defd2421fb4a",
+     "size": 112348,
+     "type": "image/jpeg"
+    }
+   }
+  },
+  "Partners": {
+   "name": "Partners",
+   "tile": "s",
+   "order": [
+    "shitou.png",
+    "subangyuan.png",
+    "qingshuiting.png",
+    "3699.png",
+    "youyuanjingmeng.png",
+    "wuyutai.png",
+    "yun1980.png",
+    "chaofa.png"
+   ],
+   "files": {
+    "3699.png": {
+     "name": "3699.png",
+     "blob": "ee3648786302eecc13fcf2c0ac8e87db",
+     "size": 22520,
+     "type": "image/png"
+    },
+    "chaofa.png": {
+     "name": "chaofa.png",
+     "blob": "22437eb9441c2d2e7db263c8df0fc727",
+     "size": 29943,
+     "type": "image/png"
+    },
+    "qingshuiting.png": {
+     "name": "qingshuiting.png",
+     "blob": "8d79df3fd41294f8926d7d7fc84cccc5",
+     "size": 12354,
+     "type": "image/png"
+    },
+    "shitou.png": {
+     "name": "shitou.png",
+     "blob": "7bac8db13298b0af69e7301b91f62ceb",
+     "size": 104672,
+     "type": "image/png"
+    },
+    "subangyuan.png": {
+     "name": "subangyuan.png",
+     "blob": "ded7eea295cb6052d5df8d23dbf7c4d6",
+     "size": 16822,
+     "type": "image/png"
+    },
+    "wuyutai.png": {
+     "name": "wuyutai.png",
+     "blob": "ca51832cbdaadd27fd174d387cc7807d",
+     "size": 26185,
+     "type": "image/png"
+    },
+    "youyuanjingmeng.png": {
+     "name": "youyuanjingmeng.png",
+     "blob": "fa3c31547482e1c42b55a5bbf43cee04",
+     "size": 35082,
+     "type": "image/png"
+    },
+    "yun1980.png": {
+     "name": "yun1980.png",
+     "blob": "831ed781232fa27c33c3a7ee482d3464",
+     "size": 15797,
+     "type": "image/png"
+    }
+   }
+  },
+  "People": {
+   "name": "People",
+   "tile": "m",
+   "order": [
+    "bianjiang.png",
+    "guofeng.png",
+    "liquanchao.png",
+    "yuxiangdong.png",
+    "wechat-qr.png"
+   ],
+   "files": {
+    "bianjiang.png": {
+     "name": "bianjiang.png",
+     "blob": "a2593d4bb84b506747b7b44ade9cd6d6",
+     "size": 494478,
+     "type": "image/png"
+    },
+    "guofeng.png": {
+     "name": "guofeng.png",
+     "blob": "733c7250dae8b93c0e0d86b74f56d62c",
+     "size": 331459,
+     "type": "image/png"
+    },
+    "liquanchao.png": {
+     "name": "liquanchao.png",
+     "blob": "734ae7ab3d7f010f2acd64a8becd5a62",
+     "size": 392433,
+     "type": "image/png"
+    },
+    "wechat-qr.png": {
+     "name": "wechat-qr.png",
+     "blob": "5e14170ae7d8721e8dcf5a91b73cc6b9",
+     "size": 107496,
+     "type": "image/png"
+    },
+    "yuxiangdong.png": {
+     "name": "yuxiangdong.png",
+     "blob": "5a3d276ebd7961015b2c3208ce2f50d7",
+     "size": 261554,
+     "type": "image/png"
+    }
+   }
+  }
+ },
+ "blobs": {},
+ "createdOnFiles": {
+  "at": "2026-10-01T12:22:18Z",
+  "v": 1
+ },
+ "docs": {
+  "readme": "project/README.md",
+  "sections": []
+ },
+ "groups": [
+  "Logos",
+  "Icons",
+  "Deck",
+  "Partners",
+  "People"
+ ],
+ "lastChange": {
+  "by": "Claude",
+  "at": "2026-10-02T01:54:47Z",
+  "via": "Claude (Cowork)",
+  "note": "§7: slides carry no explanatory small print; subtitles, step descriptions, 口径 and sources go to speaker notes."
+ },
+ "layout": "files",
+ "libraries": [
+  {
+   "file": "components/lib/react.production.min.js",
+   "global": "React",
+   "name": "react",
+   "version": "18.3.1"
+  },
+  {
+   "file": "components/lib/react-dom.production.min.js",
+   "global": "ReactDOM",
+   "name": "react-dom",
+   "version": "18.3.1"
+  },
+  {
+   "file": "components/lib/d3.min.js",
+   "global": "d3",
+   "name": "d3",
+   "version": "7.9.0"
+  },
+  {
+   "file": "components/lib/d3-sankey.min.js",
+   "global": "d3",
+   "name": "d3-sankey",
+   "version": "0.12.3"
+  }
+ ],
+ "namespace": "TIANSIGHT",
+ "sections": {},
+ "title": "侍天 TIANSIGHT"
+}

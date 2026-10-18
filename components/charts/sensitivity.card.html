@@ -1,0 +1,27 @@
+<!-- @dsCard group="Charts" viewport="700x330" name="Tornado · Lorenz · ScoreCompass" subtitle="敏感性, 集中度 and the 十二要素评分罗盘 — from the 推演 samples" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { Tornado, Lorenz, ScoreCompass } = NS;
+const rnd = (seed => () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; })(21);
+const vals = Array.from({length: 120}, (_, i) => Math.round(50000 * Math.exp(-i / 14) + rnd() * 1500));
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'1.1fr .9fr .9fr',gap:24,alignItems:'start'}}>
+    <div><div className="lbl">Tornado · 年净利 ±10%</div>
+      <Tornado caption="年净利敏感性" unit=" 万" grade="E4" swingLabel="±10%" labelWidth={92} scope="蒙特卡洛 1,600 次；其余变量固定 P50"
+        rows={[{label:"客流",low:-48,high:46},{label:"客单价",low:-31,high:31},{label:"食材成本率",low:19,high:-19},{label:"人工",low:12,high:-12},{label:"租金",low:8,high:-8},{label:"停留时长",low:-6,high:9}]}/></div>
+    <div><div className="lbl">Lorenz · 货盘集中度</div>
+      <Lorenz height={250} caption="SKU 销售额分布" values={vals} grade="E1" itemLabel="SKU" valueLabel="销售额"/></div>
+    <div><div className="lbl">ScoreCompass · 十二要素</div>
+      <ScoreCompass size={270} caption="地点推演 · 要素评分" verdict="宜" grade="E4"
+        factors={[{label:"需求池",score:74},{label:"口味适配",score:61},{label:"竞争",score:38},{label:"可达",score:82},{label:"租金",score:55},{label:"面宽",score:70},{label:"客群",score:66},{label:"天气",score:49},{label:"产能",score:77},{label:"回本",score:44},{label:"品牌",score:63},{label:"人力",score:58}]}/></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

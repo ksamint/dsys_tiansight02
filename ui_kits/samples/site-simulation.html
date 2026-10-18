@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>侍天 · 地点推演台</title>
+<style>
+:root{
+  --paper:#EFE6D2; --paper-2:#E4D8BC; --paper-3:#F8F3E6; --paper-4:#DCCFAE;
+  --ink:#22201B; --ink-2:#57503F; --ink-3:#8C8371;
+  --gold:#76551F; --gold-2:#A98A45;
+  --cinnabar:#A8321E; --jade:#2F6157; --slate:#4A5A6B;
+  --rule:#CBBC9B; --rule-2:#B8A67F;
+  --serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--paper); color:var(--ink); font-family:var(--sans);
+  font-size:15px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  background-image:
+    repeating-linear-gradient(90deg,rgba(118,85,31,.030) 0 1px,transparent 1px 38px),
+    repeating-linear-gradient(0deg,rgba(118,85,31,.022) 0 1px,transparent 1px 38px);
+}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+
+/* ── 顶栏 ───────────────────────────────── */
+header.top{
+  position:sticky;top:0;z-index:60;background:rgba(239,230,210,.94);
+  backdrop-filter:blur(7px);border-bottom:1px solid var(--rule-2);
+}
+.topbar{display:flex;align-items:center;gap:20px;padding:11px 0;flex-wrap:wrap}
+.mark{display:flex;align-items:baseline;gap:10px;font-family:var(--serif)}
+.mark .seal{
+  width:26px;height:26px;border:1.6px solid var(--cinnabar);color:var(--cinnabar);
+  display:grid;place-items:center;font-size:14px;border-radius:3px;
+  font-family:var(--serif);letter-spacing:0;transform:translateY(3px)
+}
+.mark b{font-size:19px;letter-spacing:.14em;font-weight:600}
+.mark span{font-size:10.5px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-family:var(--sans)}
+.mark i{font-style:normal;font-size:13px;color:var(--ink-2);border-left:1px solid var(--rule-2);padding-left:12px;letter-spacing:.1em}
+.sitetabs{display:flex;gap:0;margin-left:auto;border:1px solid var(--rule-2);border-radius:2px;overflow:hidden}
+.sitetabs button{
+  font-family:var(--sans);font-size:12.5px;padding:7px 14px;border:0;cursor:pointer;
+  background:transparent;color:var(--ink-2);border-right:1px solid var(--rule-2);
+  transition:background .18s,color .18s;line-height:1.3
+}
+.sitetabs button:last-child{border-right:0}
+.sitetabs button small{display:block;font-size:10px;color:var(--ink-3);letter-spacing:.04em}
+.sitetabs button[aria-pressed="true"]{background:var(--gold);color:var(--paper-3)}
+.sitetabs button[aria-pressed="true"] small{color:rgba(248,243,230,.72)}
+.sitetabs button:focus-visible{outline:2px solid var(--cinnabar);outline-offset:-2px}
+
+/* ── 罗盘区 ─────────────────────────────── */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:34px;padding:30px 0 12px;align-items:start}
+.compass-card{position:relative}
+.eyebrow{font-size:10.5px;letter-spacing:.34em;color:var(--gold);text-transform:uppercase;margin:0 0 6px}
+.hero h1{font-family:var(--serif);font-size:27px;line-height:1.35;margin:0 0 4px;font-weight:600;letter-spacing:.01em}
+.hero .sub{color:var(--ink-2);font-size:13px;margin:0 0 14px}
+.compass-holder{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:22px;align-items:center}
+@media(max-width:1080px){.hero{grid-template-columns:1fr}.compass-holder{grid-template-columns:1fr}}
+svg.compass{width:100%;height:auto;display:block;overflow:visible}
+.verdict{border:1px solid var(--rule-2);background:var(--paper-3);padding:16px 16px 14px}
+.verdict .stamp{
+  display:inline-grid;place-items:center;width:60px;height:60px;border:2.4px solid var(--cinnabar);
+  color:var(--cinnabar);font-family:var(--serif);font-size:30px;border-radius:5px;margin-bottom:10px;
+  box-shadow:inset 0 0 0 3px rgba(168,50,30,.13)
+}
+.verdict .stamp.warn{border-color:var(--gold);color:var(--gold);box-shadow:inset 0 0 0 3px rgba(118,85,31,.13)}
+.verdict .stamp.stop{border-color:var(--ink-2);color:var(--ink-2);box-shadow:inset 0 0 0 3px rgba(87,80,63,.12)}
+.verdict h3{margin:0 0 3px;font-family:var(--serif);font-size:16px;font-weight:600}
+.verdict .conf{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);margin-bottom:11px}
+.verdict ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.verdict li{padding:8px 0;border-bottom:1px dotted var(--rule);font-size:12.6px;line-height:1.55;color:var(--ink-2)}
+.verdict li b{color:var(--ink);font-family:var(--mono);font-weight:600}
+
+/* ── 参数盘 ─────────────────────────────── */
+.panel{border:1px solid var(--rule-2);background:var(--paper-3);position:sticky;top:64px}
+.panel h4{
+  margin:0;padding:9px 14px;font-family:var(--serif);font-size:13px;font-weight:600;
+  border-bottom:1px solid var(--rule-2);background:var(--paper-2);letter-spacing:.08em
+}
+.panel .body{padding:12px 14px 15px;max-height:calc(100vh - 130px);overflow:auto}
+.fld{margin-bottom:11px}
+.fld label{display:flex;justify-content:space-between;align-items:baseline;font-size:11.5px;color:var(--ink-2);margin-bottom:3px}
+.fld label b{font-family:var(--mono);font-size:12px;color:var(--gold);font-weight:600}
+input[type=range]{width:100%;height:3px;-webkit-appearance:none;appearance:none;background:var(--rule);outline:none;border-radius:2px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;background:var(--gold);border-radius:50%;cursor:pointer;border:2px solid var(--paper-3)}
+input[type=range]::-moz-range-thumb{width:13px;height:13px;background:var(--gold);border-radius:50%;cursor:pointer;border:2px solid var(--paper-3)}
+input[type=range]:focus-visible{outline:2px solid var(--cinnabar);outline-offset:3px}
+.seg{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px}
+.seg button{
+  flex:1 1 auto;font-size:11px;padding:4px 6px;border:1px solid var(--rule-2);background:transparent;
+  color:var(--ink-2);cursor:pointer;font-family:var(--sans);border-radius:2px;white-space:nowrap
+}
+.seg button[aria-pressed="true"]{background:var(--gold);color:var(--paper-3);border-color:var(--gold)}
+.seg button:focus-visible{outline:2px solid var(--cinnabar);outline-offset:1px}
+.panel .grp{font-size:10px;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin:15px 0 7px;padding-bottom:3px;border-bottom:1px solid var(--rule)}
+.panel .grp:first-child{margin-top:0}
+.reset{width:100%;margin-top:12px;padding:7px;border:1px solid var(--cinnabar);background:transparent;color:var(--cinnabar);font-family:var(--sans);font-size:11.5px;cursor:pointer;border-radius:2px}
+.reset:hover{background:var(--cinnabar);color:var(--paper-3)}
+
+/* ── 分节导航 ───────────────────────────── */
+nav.rail{position:sticky;top:53px;z-index:50;background:rgba(239,230,210,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule-2);border-top:1px solid var(--rule-2);margin-top:18px}
+nav.rail ol{display:flex;gap:0;margin:0;padding:0;list-style:none;overflow-x:auto}
+nav.rail a{
+  display:block;padding:9px 15px;font-size:12.5px;color:var(--ink-2);text-decoration:none;
+  border-right:1px solid var(--rule);white-space:nowrap;font-family:var(--serif);letter-spacing:.06em
+}
+nav.rail a em{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--gold-2);margin-right:6px}
+nav.rail a:hover,nav.rail a:focus-visible{background:var(--paper-2);color:var(--ink)}
+
+/* ── 模块 ───────────────────────────────── */
+section.mod{padding:34px 0 6px;border-bottom:1px solid var(--rule);scroll-margin-top:100px}
+section.mod:last-of-type{border-bottom:0}
+.modhead{margin-bottom:18px}
+.modhead .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--gold-2);display:block;margin-bottom:5px}
+.modhead h2{font-family:var(--serif);font-size:22px;line-height:1.42;margin:0 0 6px;font-weight:600;max-width:56ch}
+.modhead h2 b{color:var(--cinnabar);font-family:var(--mono);font-weight:600;font-size:.94em}
+.modhead p{margin:0;font-size:12.8px;color:var(--ink-3);max-width:74ch}
+.cols{display:grid;gap:20px;min-width:0;align-items:start}
+.c2{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.c32{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
+.c23{grid-template-columns:minmax(0,1fr) minmax(0,1.55fr)}
+@media(max-width:900px){.cols{grid-template-columns:minmax(0,1fr)!important}}
+@media(max-width:640px){table.t{display:block;overflow-x:auto;white-space:nowrap}.modhead h2{font-size:19px}.hero h1{font-size:22px}}
+.box{border:1px solid var(--rule-2);background:var(--paper-3);padding:14px 15px;min-width:0}
+.box>h5{margin:0 0 10px;font-family:var(--serif);font-size:13.5px;font-weight:600;display:flex;justify-content:space-between;align-items:baseline}
+.box>h5 span{font-family:var(--mono);font-size:10.5px;color:var(--ink-3);font-weight:400;letter-spacing:.02em}
+.formula{font-family:var(--mono);font-size:11px;color:var(--gold);background:var(--paper-2);padding:5px 8px;border-left:2px solid var(--gold-2);margin:9px 0 0;overflow-x:auto;white-space:nowrap}
+.note{font-size:11.5px;color:var(--ink-3);margin:8px 0 0;line-height:1.55}
+svg.chart{width:100%;height:auto;display:block;overflow:visible}
+
+/* 数字卡 */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule-2)}
+.kpi{background:var(--paper-3);padding:10px 12px}
+.kpi .v{font-family:var(--mono);font-size:20px;font-weight:600;color:var(--ink);line-height:1.2}
+.kpi .v small{font-size:11px;color:var(--ink-3);font-weight:400;margin-left:2px}
+.kpi .k{font-size:10.5px;color:var(--ink-3);letter-spacing:.06em;margin-top:2px}
+.kpi.hot .v{color:var(--cinnabar)}
+.kpi.good .v{color:var(--jade)}
+
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th{
+  text-align:left;font-weight:600;color:var(--gold);font-size:10.5px;letter-spacing:.11em;
+  border-bottom:1px solid var(--rule-2);padding:5px 7px 5px 0;text-transform:uppercase
+}
+table.t td{padding:5px 7px 5px 0;border-bottom:1px dotted var(--rule);vertical-align:top}
+table.t td.n{font-family:var(--mono);text-align:right;padding-right:14px;white-space:nowrap}
+table.t td.n:last-child{padding-right:0}
+table.t tr:last-child td{border-bottom:0}
+.chip{display:inline-block;font-size:10px;padding:1px 6px;border:1px solid var(--rule-2);border-radius:9px;color:var(--ink-2);font-family:var(--mono)}
+.chip.a{border-color:var(--jade);color:var(--jade)}
+.chip.b{border-color:var(--cinnabar);color:var(--cinnabar)}
+.chip.c{border-color:var(--gold);color:var(--gold)}
+
+footer.foot{padding:26px 0 40px;font-size:11.5px;color:var(--ink-3);border-top:1px solid var(--rule-2);margin-top:24px}
+footer.foot b{color:var(--ink-2);font-weight:600}
+footer.foot .cols2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:10px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap topbar">
+    <div class="mark">
+      <span class="seal">侍</span>
+      <b>侍天</b><span>Tiansight</span>
+      <i>地点推演台</i>
+    </div>
+    <div class="sitetabs" id="sitetabs" role="group" aria-label="候选地点"></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="compass-card">
+      <p class="eyebrow">十二要素推演盘</p>
+      <h1 id="heroTitle">—</h1>
+      <p class="sub" id="heroSub">—</p>
+      <div class="compass-holder">
+        <svg class="compass" id="compass" viewBox="0 0 460 460" role="img" aria-labelledby="compassTitle">
+          <title id="compassTitle">十二要素评分罗盘</title>
+        </svg>
+        <div class="verdict" id="verdict"></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h4>推演参数</h4>
+      <div class="body" id="params"></div>
+    </div>
+  </div>
+</div>
+
+<nav class="rail"><div class="wrap"><ol>
+  <li><a href="#m1"><em>壹</em>需求捕获</a></li>
+  <li><a href="#m2"><em>贰</em>口味与菜单</a></li>
+  <li><a href="#m3"><em>叁</em>时序与天气</a></li>
+  <li><a href="#m4"><em>肆</em>席位与产能</a></li>
+  <li><a href="#m5"><em>伍</em>财务推演</a></li>
+  <li><a href="#m6"><em>陆</em>前瞻规划</a></li>
+</ol></div></nav>
+
+<main class="wrap" id="main"></main>
+
+<footer class="foot"><div class="wrap">
+  <b>方法论出处</b>：Huff (1963) 概率引力模型 · Nakanishi &amp; Cooper (1974) MCI · McFadden (1974) 离散选择 · Jensen (2006) POI 业态互斥/互补系数 · Kasavana &amp; Smith (1982) 菜单工程 · Kimes (1998–2004) RevPASH 与餐厅收益管理 · Thompson (2002) 桌型组合仿真 · 杨慧等 (2013)《一种座位组合优化的计算方法及仿真分析》 · Ahn 等 (2011) 风味网络 · Zhu 等 (2013) 中国区域菜系地理相似性 · Sevtsuk (2014) 城市网络分析与零售区位。
+  <div class="cols2">
+    <div><b>示例数据</b>：随本推演台交付的 20 张示例表（3 个候选地点 · 4,104 条动态人口 · 956 条业态构成 · 60 家竞品 · 1,095 天气象 · 1,095 天基准店流水）。数值为量级仿真，不代表任何真实门店。</div>
+    <div><b>脱敏口径</b>：商业体、品牌、门店、供应商一律以代号呈现（BD-/BR-/STORE-/SITE-），对外提案沿用同一套代号表。</div>
+    <div><b>置信度</b>：由数据可得性 × 模型回测精度 × 本地标定样本量三项合成，低于 0.55 的结论在报告中必须标注"待补数据"。</div>
+  </div>
+</div></footer>
+
+<script id="payload" type="application/json">{"axes":["咸","鲜","辣","麻","酸","甜","苦","油润","焦香","发酵","温热","脆爽"],"sites":{"SITE-A":{"meta":{"site_id":"SITE-A","city_code":"BJ","city_name":"北京","city_tier":1,"district_code":"BJ-HD-W","bd_code":"BD-A1","bd_type":"场馆文娱型","bd_desc":"大型体育场馆+演艺中心+商业街区复合体，B1 层餐饮动线","lon":116.2751,"lat":39.9098,"h3_r8":"88318a1b0dfffff","floor":"B1","gfa_sqm":286.0,"frontage_m":9.2,"ceiling_m":3.6,"rent_rmb_sqm_month":520.0,"mgmt_fee_sqm_month":28.0,"deposit_months":3,"free_fitout_days":60,"lease_years":5,"revenue_share_pct":0.0,"gas_available":1,"exhaust_capacity":"中","outdoor_seating_allowed":1},"hourly_pop":{"工作日":{"resident":[5318,5567,5567,5318,4857,4058,3917,4431,5334,5978,6510,6915,7060,6857,6862,7163,7682,7858,8001,7961,7508,6807,6120,5583],"worker":[1823,1838,1838,1823,1859,2256,3519,5196,6529,7105,7407,7529,7030,7372,7551,7576,7416,6179,5090,4428,3777,3048,2469,2024],"visitor":[1383,1389,1389,1383,1424,1622,2366,3297,4224,5020,5687,6106,6211,6041,5903,6054,6277,6337,6175,5858,4992,3721,2540,1716]},"周末":{"resident":[4854,5090,5090,4854,4408,3565,3207,3392,4054,4656,5204,5642,5943,5619,5545,5855,6442,6980,7404,7494,7081,6378,5660,5113],"worker":[1527,1573,1573,1527,1470,1460,1837,2431,3043,3466,3797,4009,4004,3962,3941,4043,4178,4070,3907,3713,3282,2675,2115,1702],"visitor":[1284,1289,1289,1284,1332,1493,2146,2926,3789,4653,5419,5915,6163,5873,5655,5838,6152,6509,6556,6305,5365,3936,2588,1657]},"节假日":{"resident":[5543,5811,5811,5543,5032,4070,3658,3873,4626,5316,5940,6439,6784,6413,6329,6684,7355,7966,8449,8556,8083,7279,6459,5835],"worker":[1743,1793,1793,1743,1681,1668,2100,2781,3474,3959,4335,4575,4568,4521,4501,4612,4770,4645,4457,4240,3747,3053,2412,1946],"visitor":[1469,1469,1469,1469,1519,1707,2453,3345,4326,5310,6188,6759,7038,6704,6458,6667,7022,7430,7484,7197,6127,4496,2954,1892]}},"rings":[{"ring":0,"dist_m":120,"day_pop":2005},{"ring":1,"dist_m":620,"day_pop":5439},{"ring":2,"dist_m":1240,"day_pop":7514}],"poi_mix":[{"l3":"影院/演艺","n":142,"price":null,"rating":4.34,"chain":0.408},{"l3":"健身/场馆","n":133,"price":null,"rating":4.36,"chain":0.332},{"l3":"茶饮","n":116,"price":18.3,"rating":4.34,"chain":0.34},{"l3":"中式快餐","n":114,"price":33.4,"rating":4.37,"chain":0.351},{"l3":"西式正餐","n":109,"price":180.3,"rating":4.35,"chain":0.283},{"l3":"小吃简餐","n":105,"price":28.8,"rating":4.38,"chain":0.304},{"l3":"西式快餐","n":96,"price":39.8,"rating":4.4,"chain":0.35},{"l3":"烧烤/烤肉","n":95,"price":114.4,"rating":4.32,"chain":0.337},{"l3":"咖啡","n":93,"price":36.2,"rating":4.33,"chain":0.35},{"l3":"火锅","n":83,"price":132.5,"rating":4.39,"chain":0.273},{"l3":"中式正餐","n":82,"price":98.3,"rating":4.35,"chain":0.286},{"l3":"景区/展馆","n":76,"price":null,"rating":4.37,"chain":0.299},{"l3":"酒吧/清吧","n":75,"price":150.3,"rating":4.38,"chain":0.354},{"l3":"教育/儿童","n":69,"price":null,"rating":4.28,"chain":0.407},{"l3":"服装鞋帽","n":64,"price":null,"rating":4.42,"chain":0.361},{"l3":"中高端酒店","n":61,"price":null,"rating":4.41,"chain":0.322},{"l3":"超市便利","n":55,"price":null,"rating":4.24,"chain":0.341},{"l3":"写字楼","n":47,"price":null,"rating":4.32,"chain":0.336}],"competitors":[{"comp_id":"SITE-A-C05","cuisine_l3":"中式正餐","dist_to_site_m":65,"seats":67,"avg_price_rmb":107.7,"rating":4.12,"review_count":649,"is_chain":1,"est_daily_covers":171},{"comp_id":"SITE-A-C21","cuisine_l3":"中式快餐","dist_to_site_m":69,"seats":83,"avg_price_rmb":15.0,"rating":4.54,"review_count":2759,"is_chain":0,"est_daily_covers":227},{"comp_id":"SITE-A-C09","cuisine_l3":"酒吧/清吧","dist_to_site_m":85,"seats":80,"avg_price_rmb":170.5,"rating":4.11,"review_count":1710,"is_chain":0,"est_daily_covers":224},{"comp_id":"SITE-A-C15","cuisine_l3":"西式正餐","dist_to_site_m":154,"seats":123,"avg_price_rmb":178.0,"rating":4.21,"review_count":615,"is_chain":0,"est_daily_covers":335},{"comp_id":"SITE-A-C14","cuisine_l3":"火锅","dist_to_site_m":156,"seats":47,"avg_price_rmb":168.7,"rating":4.46,"review_count":197,"is_chain":1,"est_daily_covers":103},{"comp_id":"SITE-A-C18","cuisine_l3":"火锅","dist_to_site_m":170,"seats":144,"avg_price_rmb":131.1,"rating":4.58,"review_count":763,"is_chain":1,"est_daily_covers":350},{"comp_id":"SITE-A-C02","cuisine_l3":"中式正餐","dist_to_site_m":180,"seats":76,"avg_price_rmb":47.7,"rating":4.41,"review_count":708,"is_chain":0,"est_daily_covers":141},{"comp_id":"SITE-A-C04","cuisine_l3":"中式快餐","dist_to_site_m":194,"seats":114,"avg_price_rmb":28.7,"rating":4.29,"review_count":267,"is_chain":1,"est_daily_covers":314},{"comp_id":"SITE-A-C06","cuisine_l3":"火锅","dist_to_site_m":197,"seats":108,"avg_price_rmb":153.2,"rating":4.55,"review_count":1803,"is_chain":0,"est_daily_covers":246},{"comp_id":"SITE-A-C16","cuisine_l3":"火锅","dist_to_site_m":228,"seats":91,"avg_price_rmb":130.5,"rating":4.3,"review_count":3284,"is_chain":1,"est_daily_covers":138},{"comp_id":"SITE-A-C01","cuisine_l3":"中式快餐","dist_to_site_m":255,"seats":99,"avg_price_rmb":68.7,"rating":4.42,"review_count":3284,"is_chain":1,"est_daily_covers":296},{"comp_id":"SITE-A-C12","cuisine_l3":"中式正餐","dist_to_site_m":288,"seats":188,"avg_price_rmb":126.0,"rating":4.6,"review_count":180,"is_chain":0,"est_daily_covers":443},{"comp_id":"SITE-A-C11","cuisine_l3":"小吃简餐","dist_to_site_m":294,"seats":73,"avg_price_rmb":26.7,"rating":4.42,"review_count":885,"is_chain":1,"est_daily_covers":185},{"comp_id":"SITE-A-C19","cuisine_l3":"中式正餐","dist_to_site_m":313,"seats":50,"avg_price_rmb":97.6,"rating":4.26,"review_count":3599,"is_chain":0,"est_daily_covers":148},{"comp_id":"SITE-A-C22","cuisine_l3":"中式快餐","dist_to_site_m":328,"seats":143,"avg_price_rmb":15.0,"rating":3.87,"review_count":2114,"is_chain":1,"est_daily_covers":267},{"comp_id":"SITE-A-C20","cuisine_l3":"火锅","dist_to_site_m":425,"seats":56,"avg_price_rmb":214.6,"rating":4.25,"review_count":380,"is_chain":0,"est_daily_covers":119},{"comp_id":"SITE-A-C07","cuisine_l3":"中式正餐","dist_to_site_m":456,"seats":115,"avg_price_rmb":106.8,"rating":4.26,"review_count":2174,"is_chain":1,"est_daily_covers":375},{"comp_id":"SITE-A-C03","cuisine_l3":"中式正餐","dist_to_site_m":542,"seats":107,"avg_price_rmb":105.7,"rating":4.46,"review_count":8327,"is_chain":0,"est_daily_covers":278},{"comp_id":"SITE-A-C17","cuisine_l3":"西式正餐","dist_to_site_m":681,"seats":128,"avg_price_rmb":160.2,"rating":4.17,"review_count":1092,"is_chain":1,"est_daily_covers":267},{"comp_id":"SITE-A-C10","cuisine_l3":"中式正餐","dist_to_site_m":792,"seats":91,"avg_price_rmb":110.8,"rating":4.1,"review_count":205,"is_chain":1,"est_daily_covers":259},{"comp_id":"SITE-A-C13","cuisine_l3":"中式正餐","dist_to_site_m":1339,"seats":43,"avg_price_rmb":75.2,"rating":4.31,"review_count":1769,"is_chain":0,"est_daily_covers":136},{"comp_id":"SITE-A-C08","cuisine_l3":"小吃简餐","dist_to_site_m":1500,"seats":82,"avg_price_rmb":15.0,"rating":4.43,"review_count":139,"is_chain":1,"est_daily_covers":144}],"occasions":[{"occasion":"工作餐","share":0.14,"daypart_start":11,"daypart_end":14,"avg_party_size":1.6,"avg_budget_per_head_rmb":45,"price_elasticity":-0.81},{"occasion":"朋友聚餐","share":0.3,"daypart_start":17,"daypart_end":21,"avg_party_size":3.4,"avg_budget_per_head_rmb":120,"price_elasticity":-0.99},{"occasion":"家庭聚餐","share":0.16,"daypart_start":17,"daypart_end":20,"avg_party_size":4.6,"avg_budget_per_head_rmb":105,"price_elasticity":-0.83},{"occasion":"商务宴请","share":0.06,"daypart_start":18,"daypart_end":21,"avg_party_size":6.2,"avg_budget_per_head_rmb":260,"price_elasticity":-1.39},{"occasion":"一人食","share":0.07,"daypart_start":11,"daypart_end":21,"avg_party_size":1.0,"avg_budget_per_head_rmb":38,"price_elasticity":-1.4},{"occasion":"夜宵","share":0.11,"daypart_start":21,"daypart_end":26,"avg_party_size":3.0,"avg_budget_per_head_rmb":95,"price_elasticity":-1.44},{"occasion":"约会","share":0.1,"daypart_start":18,"daypart_end":21,"avg_party_size":2.0,"avg_budget_per_head_rmb":175,"price_elasticity":-1.24},{"occasion":"下午茶","share":0.06,"daypart_start":14,"daypart_end":17,"avg_party_size":2.4,"avg_budget_per_head_rmb":62,"price_elasticity":-1.16}],"industry":[{"industry_name":"体育文娱","employment_share":0.27,"avg_monthly_wage_rmb":15219,"lunch_out_rate":0.615,"business_banquet_index":0.79},{"industry_name":"科技互联网","employment_share":0.19,"avg_monthly_wage_rmb":9756,"lunch_out_rate":0.737,"business_banquet_index":1.24},{"industry_name":"教育科研","employment_share":0.16,"avg_monthly_wage_rmb":12660,"lunch_out_rate":0.647,"business_banquet_index":1.07},{"industry_name":"零售服务","employment_share":0.21,"avg_monthly_wage_rmb":10195,"lunch_out_rate":0.662,"business_banquet_index":1.43},{"industry_name":"行政机关","employment_share":0.17,"avg_monthly_wage_rmb":12500,"lunch_out_rate":0.7,"business_banquet_index":1.03}],"transit":[{"mode":"地铁","dist_to_site_m":180,"daily_boardings":96000,"walk_minutes":2.4},{"mode":"地铁","dist_to_site_m":640,"daily_boardings":54000,"walk_minutes":8.5},{"mode":"公交","dist_to_site_m":120,"daily_boardings":8200,"walk_minutes":1.6},{"mode":"停车场","dist_to_site_m":60,"daily_boardings":2400,"walk_minutes":0.8}],"taste_region":[0.72,0.66,0.55,0.3,0.34,0.4,0.18,0.7,0.74,0.52,0.78,0.48],"macro":{"city_code":"BJ","city_name":"北京","year":2025,"city_tier":1,"permanent_pop_wan":2183,"gdp_per_capita_rmb":200273,"disposable_income_rmb":81752,"engel_coef":0.245,"catering_retail_sales_yi":1320,"restaurant_count":118000,"chain_rate":0.26,"cpi_food_yoy":0.021,"min_wage_rmb":2420,"tourist_arrivals_wan":33800,"avg_shop_rent_rmb_sqm_day":17.6},"policy":{"city_code":"BJ","district_code":"BJ-HD-W","open_flame_allowed":1,"exhaust_standard":"GB18483 加严","outdoor_seating_policy":"限时段许可","night_econ_policy":"鼓励·22 点后延时","license_days_median":46,"food_permit_days":28,"env_permit_required":1,"alcohol_license_days":15,"note":"场馆散场时段有临时管控，需报备"},"weather_mix":{"晴":0.548,"阴":0.301,"严寒":0.077,"雨":0.074},"events":{"n_events":92,"annual_attendance":989024,"by_type":{"展会":187724,"市集":168783,"演唱会":290866,"赛事":220158,"首发活动":121493},"mean_spill_prior":0.13623913043478258}},"SITE-B":{"meta":{"site_id":"SITE-B","city_code":"GZ","city_name":"广州","city_tier":1,"district_code":"GZ-HZ-R","bd_code":"BD-B1","bd_type":"滨江文创型","bd_desc":"旧厂改造滨江文创街区，夜间经济与酒吧业态集聚，游客占比高","lon":113.3428,"lat":23.1085,"h3_r8":"8841b1a4c1fffff","floor":"1F","gfa_sqm":420.0,"frontage_m":16.0,"ceiling_m":5.2,"rent_rmb_sqm_month":310.0,"mgmt_fee_sqm_month":18.0,"deposit_months":3,"free_fitout_days":90,"lease_years":8,"revenue_share_pct":0.0,"gas_available":0,"exhaust_capacity":"低","outdoor_seating_allowed":1},"hourly_pop":{"工作日":{"resident":[1945,2017,2017,1945,1830,1693,1952,2487,3077,3488,3807,4017,4004,3965,3976,4092,4260,4145,3989,3824,3422,2887,2421,2091],"worker":[783,757,757,783,884,1349,2474,3869,4905,5353,5576,5643,5202,5513,5667,5654,5454,4369,3398,2821,2264,1667,1231,919],"visitor":[606,576,576,606,694,970,1666,2454,3193,3870,4451,4806,4883,4754,4647,4761,4934,4978,4782,4479,3643,2499,1503,856]},"周末":{"resident":[1758,1830,1830,1758,1633,1419,1475,1736,2144,2534,2883,3132,3258,3112,3058,3193,3446,3650,3745,3696,3317,2757,2252,1907],"worker":[600,599,599,600,620,743,1143,1650,2103,2433,2687,2839,2799,2797,2787,2839,2890,2742,2530,2337,1949,1435,1007,717],"visitor":[568,537,537,568,656,901,1521,2191,2880,3625,4302,4736,4935,4700,4530,4680,4940,5237,5216,4968,4045,2741,1594,853]},"节假日":{"resident":[2010,2090,2090,2010,1864,1623,1687,1981,2448,2893,3292,3579,3725,3552,3493,3651,3935,4168,4276,4219,3789,3151,2574,2179],"worker":[687,686,686,687,708,849,1306,1884,2404,2778,3069,3241,3196,3194,3182,3240,3299,3128,2887,2668,2226,1640,1150,819],"visitor":[650,617,617,650,752,1029,1735,2504,3288,4138,4912,5406,5632,5367,5172,5341,5639,5978,5955,5672,4622,3130,1819,975]}},"rings":[{"ring":0,"dist_m":120,"day_pop":676},{"ring":1,"dist_m":620,"day_pop":3165},{"ring":2,"dist_m":1240,"day_pop":5401}],"poi_mix":[{"l3":"酒吧/清吧","n":156,"price":158.9,"rating":4.39,"chain":0.353},{"l3":"健身/场馆","n":73,"price":null,"rating":4.35,"chain":0.328},{"l3":"西式快餐","n":67,"price":41.4,"rating":4.35,"chain":0.39},{"l3":"西式正餐","n":62,"price":183.1,"rating":4.39,"chain":0.336},{"l3":"火锅","n":61,"price":136.2,"rating":4.37,"chain":0.354},{"l3":"小吃简餐","n":61,"price":27.8,"rating":4.3,"chain":0.297},{"l3":"影院/演艺","n":60,"price":null,"rating":4.32,"chain":0.306},{"l3":"中式快餐","n":59,"price":30.7,"rating":4.27,"chain":0.351},{"l3":"烧烤/烤肉","n":59,"price":118.2,"rating":4.32,"chain":0.359},{"l3":"服装鞋帽","n":59,"price":null,"rating":4.41,"chain":0.383},{"l3":"咖啡","n":55,"price":35.3,"rating":4.36,"chain":0.381},{"l3":"中式正餐","n":53,"price":97.9,"rating":4.35,"chain":0.317},{"l3":"超市便利","n":51,"price":null,"rating":4.41,"chain":0.378},{"l3":"中高端酒店","n":51,"price":null,"rating":4.33,"chain":0.345},{"l3":"茶饮","n":47,"price":19.0,"rating":4.32,"chain":0.317},{"l3":"教育/儿童","n":45,"price":null,"rating":4.33,"chain":0.282},{"l3":"景区/展馆","n":35,"price":null,"rating":4.32,"chain":0.364},{"l3":"写字楼","n":18,"price":null,"rating":4.38,"chain":0.33}],"competitors":[{"comp_id":"SITE-B-C16","cuisine_l3":"西式正餐","dist_to_site_m":35,"seats":69,"avg_price_rmb":194.5,"rating":4.3,"review_count":2753,"is_chain":1,"est_daily_covers":158},{"comp_id":"SITE-B-C15","cuisine_l3":"西式正餐","dist_to_site_m":66,"seats":148,"avg_price_rmb":181.2,"rating":4.19,"review_count":2653,"is_chain":1,"est_daily_covers":451},{"comp_id":"SITE-B-C18","cuisine_l3":"火锅","dist_to_site_m":96,"seats":37,"avg_price_rmb":164.4,"rating":4.45,"review_count":865,"is_chain":0,"est_daily_covers":61},{"comp_id":"SITE-B-C11","cuisine_l3":"火锅","dist_to_site_m":97,"seats":72,"avg_price_rmb":165.9,"rating":4.47,"review_count":1163,"is_chain":0,"est_daily_covers":235},{"comp_id":"SITE-B-C02","cuisine_l3":"中式快餐","dist_to_site_m":113,"seats":90,"avg_price_rmb":63.4,"rating":4.43,"review_count":2013,"is_chain":1,"est_daily_covers":264},{"comp_id":"SITE-B-C04","cuisine_l3":"中式正餐","dist_to_site_m":156,"seats":195,"avg_price_rmb":91.6,"rating":4.29,"review_count":2380,"is_chain":0,"est_daily_covers":370},{"comp_id":"SITE-B-C13","cuisine_l3":"烧烤/烤肉","dist_to_site_m":175,"seats":106,"avg_price_rmb":133.4,"rating":4.34,"review_count":813,"is_chain":1,"est_daily_covers":158},{"comp_id":"SITE-B-C14","cuisine_l3":"中式快餐","dist_to_site_m":205,"seats":104,"avg_price_rmb":90.5,"rating":4.0,"review_count":2485,"is_chain":0,"est_daily_covers":299},{"comp_id":"SITE-B-C01","cuisine_l3":"火锅","dist_to_site_m":284,"seats":97,"avg_price_rmb":124.4,"rating":4.28,"review_count":2633,"is_chain":0,"est_daily_covers":224},{"comp_id":"SITE-B-C12","cuisine_l3":"西式正餐","dist_to_site_m":290,"seats":153,"avg_price_rmb":184.9,"rating":4.31,"review_count":645,"is_chain":0,"est_daily_covers":492},{"comp_id":"SITE-B-C07","cuisine_l3":"小吃简餐","dist_to_site_m":294,"seats":129,"avg_price_rmb":15.0,"rating":4.53,"review_count":569,"is_chain":1,"est_daily_covers":412},{"comp_id":"SITE-B-C10","cuisine_l3":"西式正餐","dist_to_site_m":309,"seats":30,"avg_price_rmb":185.1,"rating":4.19,"review_count":4876,"is_chain":0,"est_daily_covers":66},{"comp_id":"SITE-B-C05","cuisine_l3":"火锅","dist_to_site_m":313,"seats":111,"avg_price_rmb":144.2,"rating":4.16,"review_count":3291,"is_chain":1,"est_daily_covers":254},{"comp_id":"SITE-B-C17","cuisine_l3":"中式正餐","dist_to_site_m":379,"seats":102,"avg_price_rmb":99.3,"rating":4.38,"review_count":1297,"is_chain":1,"est_daily_covers":258},{"comp_id":"SITE-B-C03","cuisine_l3":"中式正餐","dist_to_site_m":532,"seats":52,"avg_price_rmb":97.2,"rating":4.25,"review_count":968,"is_chain":0,"est_daily_covers":140},{"comp_id":"SITE-B-C06","cuisine_l3":"火锅","dist_to_site_m":537,"seats":39,"avg_price_rmb":118.9,"rating":4.2,"review_count":825,"is_chain":0,"est_daily_covers":119},{"comp_id":"SITE-B-C09","cuisine_l3":"火锅","dist_to_site_m":900,"seats":107,"avg_price_rmb":120.3,"rating":4.35,"review_count":2429,"is_chain":1,"est_daily_covers":290},{"comp_id":"SITE-B-C08","cuisine_l3":"中式快餐","dist_to_site_m":955,"seats":143,"avg_price_rmb":34.6,"rating":4.36,"review_count":2916,"is_chain":0,"est_daily_covers":212}],"occasions":[{"occasion":"工作餐","share":0.06,"daypart_start":11,"daypart_end":14,"avg_party_size":1.6,"avg_budget_per_head_rmb":45,"price_elasticity":-0.97},{"occasion":"朋友聚餐","share":0.34,"daypart_start":17,"daypart_end":21,"avg_party_size":3.4,"avg_budget_per_head_rmb":120,"price_elasticity":-0.85},{"occasion":"家庭聚餐","share":0.09,"daypart_start":17,"daypart_end":20,"avg_party_size":4.6,"avg_budget_per_head_rmb":105,"price_elasticity":-0.68},{"occasion":"商务宴请","share":0.07,"daypart_start":18,"daypart_end":21,"avg_party_size":6.2,"avg_budget_per_head_rmb":260,"price_elasticity":-0.81},{"occasion":"一人食","share":0.06,"daypart_start":11,"daypart_end":21,"avg_party_size":1.0,"avg_budget_per_head_rmb":38,"price_elasticity":-0.62},{"occasion":"夜宵","share":0.22,"daypart_start":21,"daypart_end":26,"avg_party_size":3.0,"avg_budget_per_head_rmb":95,"price_elasticity":-1.28},{"occasion":"约会","share":0.12,"daypart_start":18,"daypart_end":21,"avg_party_size":2.0,"avg_budget_per_head_rmb":175,"price_elasticity":-0.95},{"occasion":"下午茶","share":0.04,"daypart_start":14,"daypart_end":17,"avg_party_size":2.4,"avg_budget_per_head_rmb":62,"price_elasticity":-0.75}],"industry":[{"industry_name":"文创设计","employment_share":0.31,"avg_monthly_wage_rmb":10964,"lunch_out_rate":0.802,"business_banquet_index":0.79},{"industry_name":"旅游会展","employment_share":0.24,"avg_monthly_wage_rmb":14395,"lunch_out_rate":0.537,"business_banquet_index":1.52},{"industry_name":"零售服务","employment_share":0.22,"avg_monthly_wage_rmb":14069,"lunch_out_rate":0.542,"business_banquet_index":0.63},{"industry_name":"媒体广告","employment_share":0.13,"avg_monthly_wage_rmb":12203,"lunch_out_rate":0.686,"business_banquet_index":0.97},{"industry_name":"制造业","employment_share":0.1,"avg_monthly_wage_rmb":13837,"lunch_out_rate":0.53,"business_banquet_index":0.87}],"transit":[{"mode":"地铁","dist_to_site_m":520,"daily_boardings":61000,"walk_minutes":6.9},{"mode":"公交","dist_to_site_m":210,"daily_boardings":5400,"walk_minutes":2.8},{"mode":"轮渡","dist_to_site_m":150,"daily_boardings":6800,"walk_minutes":2.0},{"mode":"停车场","dist_to_site_m":240,"daily_boardings":900,"walk_minutes":3.2}],"taste_region":[0.48,0.86,0.22,0.08,0.3,0.58,0.22,0.4,0.46,0.34,0.52,0.74],"macro":{"city_code":"GZ","city_name":"广州","year":2025,"city_tier":1,"permanent_pop_wan":1883,"gdp_per_capita_rmb":161000,"disposable_income_rmb":76849,"engel_coef":0.312,"catering_retail_sales_yi":1450,"restaurant_count":142000,"chain_rate":0.22,"cpi_food_yoy":0.014,"min_wage_rmb":2300,"tourist_arrivals_wan":26400,"avg_shop_rent_rmb_sqm_day":11.2},"policy":{"city_code":"GZ","district_code":"GZ-HZ-R","open_flame_allowed":0,"exhaust_standard":"街区统一井道","outdoor_seating_policy":"允许·需缴外摆费","night_econ_policy":"重点夜间经济集聚区","license_days_median":32,"food_permit_days":21,"env_permit_required":1,"alcohol_license_days":10,"note":"历史建筑改造，明火与结构改动受限"},"weather_mix":{"晴":0.559,"雨":0.249,"阴":0.186,"暴雨":0.005},"events":{"n_events":20,"annual_attendance":43977,"by_type":{"展会":9353,"市集":7896,"演唱会":8956,"赛事":13007,"首发活动":4765},"mean_spill_prior":0.12115000000000001}},"SITE-C":{"meta":{"site_id":"SITE-C","city_code":"FS","city_name":"佛山","city_tier":2,"district_code":"FS-CC-M","bd_code":"BD-C1","bd_type":"购物中心型","bd_desc":"城市新中心高端购物中心 L3 餐饮层，办公+高端住宅双客源","lon":113.1215,"lat":23.0288,"h3_r8":"8841b17099fffff","floor":"L3","gfa_sqm":345.0,"frontage_m":11.5,"ceiling_m":4.2,"rent_rmb_sqm_month":245.0,"mgmt_fee_sqm_month":22.0,"deposit_months":2,"free_fitout_days":75,"lease_years":6,"revenue_share_pct":6.5,"gas_available":0,"exhaust_capacity":"高","outdoor_seating_allowed":0},"hourly_pop":{"工作日":{"resident":[3613,3770,3770,3613,3344,2908,2979,3496,4229,4728,5135,5452,5576,5425,5397,5614,5995,6148,6255,6171,5755,5113,4423,3871],"worker":[1281,1279,1279,1281,1344,1718,2760,4092,5138,5594,5842,5955,5622,5857,5958,5988,5893,5042,4274,3757,3209,2556,1960,1488],"visitor":[989,983,983,989,1057,1289,1976,2789,3573,4205,4721,5051,5148,5007,4860,4970,5129,5185,5086,4819,4160,3124,2080,1306]},"周末":{"resident":[3297,3446,3446,3297,3033,2556,2467,2742,3299,3767,4188,4525,4762,4522,4436,4659,5087,5498,5809,5823,5446,4808,4105,3551],"worker":[1072,1090,1090,1072,1066,1142,1540,2084,2608,2951,3219,3399,3421,3378,3333,3414,3532,3492,3393,3215,2834,2276,1702,1260],"visitor":[926,916,916,926,998,1208,1834,2545,3289,3974,4564,4950,5147,4918,4710,4840,5057,5322,5371,5153,4452,3305,2137,1274]},"节假日":{"resident":[3765,3935,3935,3765,3466,2920,2817,3132,3768,4303,4784,5165,5434,5165,5065,5317,5809,6279,6627,6650,6216,5485,4685,4055],"worker":[1223,1245,1245,1223,1220,1305,1758,2382,2978,3369,3676,3880,3904,3858,3804,3898,4032,3983,3870,3670,3237,2600,1945,1440],"visitor":[1058,1046,1046,1058,1140,1378,2092,2908,3753,4536,5211,5649,5874,5614,5377,5525,5773,6079,6132,5884,5080,3775,2440,1455]}},"rings":[{"ring":0,"dist_m":120,"day_pop":1210},{"ring":1,"dist_m":620,"day_pop":3854},{"ring":2,"dist_m":1240,"day_pop":6661}],"poi_mix":[{"l3":"写字楼","n":109,"price":null,"rating":4.35,"chain":0.409},{"l3":"中式正餐","n":80,"price":100.6,"rating":4.32,"chain":0.308},{"l3":"教育/儿童","n":77,"price":null,"rating":4.41,"chain":0.334},{"l3":"小吃简餐","n":76,"price":28.3,"rating":4.38,"chain":0.375},{"l3":"茶饮","n":70,"price":17.8,"rating":4.4,"chain":0.345},{"l3":"火锅","n":68,"price":134.7,"rating":4.39,"chain":0.307},{"l3":"咖啡","n":68,"price":35.2,"rating":4.4,"chain":0.336},{"l3":"烧烤/烤肉","n":67,"price":106.6,"rating":4.37,"chain":0.325},{"l3":"服装鞋帽","n":66,"price":null,"rating":4.35,"chain":0.358},{"l3":"超市便利","n":65,"price":null,"rating":4.3,"chain":0.275},{"l3":"景区/展馆","n":62,"price":null,"rating":4.38,"chain":0.333},{"l3":"西式快餐","n":60,"price":41.0,"rating":4.38,"chain":0.338},{"l3":"西式正餐","n":59,"price":181.7,"rating":4.36,"chain":0.28},{"l3":"中式快餐","n":57,"price":33.3,"rating":4.41,"chain":0.351},{"l3":"影院/演艺","n":57,"price":null,"rating":4.35,"chain":0.283},{"l3":"健身/场馆","n":53,"price":null,"rating":4.39,"chain":0.309},{"l3":"中高端酒店","n":46,"price":null,"rating":4.29,"chain":0.353},{"l3":"酒吧/清吧","n":29,"price":155.0,"rating":4.4,"chain":0.299}],"competitors":[{"comp_id":"SITE-C-C10","cuisine_l3":"小吃简餐","dist_to_site_m":51,"seats":123,"avg_price_rmb":26.6,"rating":4.35,"review_count":1383,"is_chain":1,"est_daily_covers":405},{"comp_id":"SITE-C-C09","cuisine_l3":"酒吧/清吧","dist_to_site_m":80,"seats":79,"avg_price_rmb":153.7,"rating":4.31,"review_count":320,"is_chain":0,"est_daily_covers":137},{"comp_id":"SITE-C-C03","cuisine_l3":"中式正餐","dist_to_site_m":103,"seats":108,"avg_price_rmb":86.5,"rating":4.34,"review_count":1347,"is_chain":0,"est_daily_covers":214},{"comp_id":"SITE-C-C04","cuisine_l3":"中式正餐","dist_to_site_m":123,"seats":61,"avg_price_rmb":106.1,"rating":4.65,"review_count":378,"is_chain":0,"est_daily_covers":170},{"comp_id":"SITE-C-C14","cuisine_l3":"酒吧/清吧","dist_to_site_m":135,"seats":24,"avg_price_rmb":171.5,"rating":4.41,"review_count":1357,"is_chain":0,"est_daily_covers":61},{"comp_id":"SITE-C-C01","cuisine_l3":"烧烤/烤肉","dist_to_site_m":184,"seats":100,"avg_price_rmb":77.7,"rating":4.08,"review_count":222,"is_chain":0,"est_daily_covers":255},{"comp_id":"SITE-C-C07","cuisine_l3":"中式快餐","dist_to_site_m":257,"seats":92,"avg_price_rmb":15.0,"rating":4.33,"review_count":909,"is_chain":0,"est_daily_covers":191},{"comp_id":"SITE-C-C19","cuisine_l3":"中式正餐","dist_to_site_m":310,"seats":77,"avg_price_rmb":95.8,"rating":4.41,"review_count":1015,"is_chain":0,"est_daily_covers":151},{"comp_id":"SITE-C-C17","cuisine_l3":"中式正餐","dist_to_site_m":383,"seats":76,"avg_price_rmb":86.6,"rating":4.39,"review_count":741,"is_chain":1,"est_daily_covers":129},{"comp_id":"SITE-C-C16","cuisine_l3":"火锅","dist_to_site_m":423,"seats":90,"avg_price_rmb":85.1,"rating":4.53,"review_count":411,"is_chain":0,"est_daily_covers":246},{"comp_id":"SITE-C-C06","cuisine_l3":"酒吧/清吧","dist_to_site_m":453,"seats":79,"avg_price_rmb":121.0,"rating":4.07,"review_count":1288,"is_chain":1,"est_daily_covers":258},{"comp_id":"SITE-C-C15","cuisine_l3":"火锅","dist_to_site_m":511,"seats":39,"avg_price_rmb":126.1,"rating":4.32,"review_count":501,"is_chain":1,"est_daily_covers":57},{"comp_id":"SITE-C-C13","cuisine_l3":"西式正餐","dist_to_site_m":524,"seats":117,"avg_price_rmb":209.1,"rating":3.74,"review_count":1741,"is_chain":0,"est_daily_covers":345},{"comp_id":"SITE-C-C20","cuisine_l3":"火锅","dist_to_site_m":532,"seats":35,"avg_price_rmb":120.3,"rating":4.52,"review_count":465,"is_chain":0,"est_daily_covers":87},{"comp_id":"SITE-C-C02","cuisine_l3":"火锅","dist_to_site_m":557,"seats":100,"avg_price_rmb":159.0,"rating":4.52,"review_count":891,"is_chain":0,"est_daily_covers":301},{"comp_id":"SITE-C-C11","cuisine_l3":"火锅","dist_to_site_m":567,"seats":114,"avg_price_rmb":107.0,"rating":4.52,"review_count":2550,"is_chain":1,"est_daily_covers":278},{"comp_id":"SITE-C-C12","cuisine_l3":"火锅","dist_to_site_m":568,"seats":81,"avg_price_rmb":122.6,"rating":4.37,"review_count":573,"is_chain":0,"est_daily_covers":221},{"comp_id":"SITE-C-C18","cuisine_l3":"西式正餐","dist_to_site_m":655,"seats":155,"avg_price_rmb":158.6,"rating":4.11,"review_count":40,"is_chain":1,"est_daily_covers":311},{"comp_id":"SITE-C-C05","cuisine_l3":"小吃简餐","dist_to_site_m":755,"seats":61,"avg_price_rmb":15.0,"rating":4.33,"review_count":2116,"is_chain":0,"est_daily_covers":100},{"comp_id":"SITE-C-C08","cuisine_l3":"西式正餐","dist_to_site_m":801,"seats":64,"avg_price_rmb":200.8,"rating":4.55,"review_count":3522,"is_chain":1,"est_daily_covers":134}],"occasions":[{"occasion":"工作餐","share":0.22,"daypart_start":11,"daypart_end":14,"avg_party_size":1.6,"avg_budget_per_head_rmb":45,"price_elasticity":-1.26},{"occasion":"朋友聚餐","share":0.21,"daypart_start":17,"daypart_end":21,"avg_party_size":3.4,"avg_budget_per_head_rmb":120,"price_elasticity":-1.2},{"occasion":"家庭聚餐","share":0.22,"daypart_start":17,"daypart_end":20,"avg_party_size":4.6,"avg_budget_per_head_rmb":105,"price_elasticity":-1.23},{"occasion":"商务宴请","share":0.11,"daypart_start":18,"daypart_end":21,"avg_party_size":6.2,"avg_budget_per_head_rmb":260,"price_elasticity":-0.78},{"occasion":"一人食","share":0.06,"daypart_start":11,"daypart_end":21,"avg_party_size":1.0,"avg_budget_per_head_rmb":38,"price_elasticity":-1.15},{"occasion":"夜宵","share":0.03,"daypart_start":21,"daypart_end":26,"avg_party_size":3.0,"avg_budget_per_head_rmb":95,"price_elasticity":-1.78},{"occasion":"约会","share":0.08,"daypart_start":18,"daypart_end":21,"avg_party_size":2.0,"avg_budget_per_head_rmb":175,"price_elasticity":-1.26},{"occasion":"下午茶","share":0.07,"daypart_start":14,"daypart_end":17,"avg_party_size":2.4,"avg_budget_per_head_rmb":62,"price_elasticity":-0.64}],"industry":[{"industry_name":"制造业总部","employment_share":0.29,"avg_monthly_wage_rmb":9463,"lunch_out_rate":0.527,"business_banquet_index":1.39},{"industry_name":"金融保险","employment_share":0.18,"avg_monthly_wage_rmb":10753,"lunch_out_rate":0.679,"business_banquet_index":0.65},{"industry_name":"科技互联网","employment_share":0.17,"avg_monthly_wage_rmb":10827,"lunch_out_rate":0.785,"business_banquet_index":1.37},{"industry_name":"零售服务","employment_share":0.2,"avg_monthly_wage_rmb":11961,"lunch_out_rate":0.629,"business_banquet_index":1.22},{"industry_name":"专业服务","employment_share":0.16,"avg_monthly_wage_rmb":13587,"lunch_out_rate":0.511,"business_banquet_index":1.53}],"transit":[{"mode":"地铁","dist_to_site_m":90,"daily_boardings":72000,"walk_minutes":1.2},{"mode":"公交","dist_to_site_m":160,"daily_boardings":6100,"walk_minutes":2.1},{"mode":"停车场","dist_to_site_m":40,"daily_boardings":3600,"walk_minutes":0.5}],"taste_region":[0.46,0.88,0.2,0.07,0.28,0.6,0.2,0.38,0.44,0.32,0.5,0.78],"macro":{"city_code":"FS","city_name":"佛山","year":2025,"city_tier":2,"permanent_pop_wan":961,"gdp_per_capita_rmb":137000,"disposable_income_rmb":63200,"engel_coef":0.328,"catering_retail_sales_yi":520,"restaurant_count":61000,"chain_rate":0.19,"cpi_food_yoy":0.012,"min_wage_rmb":1900,"tourist_arrivals_wan":8600,"avg_shop_rent_rmb_sqm_day":7.4},"policy":{"city_code":"FS","district_code":"FS-CC-M","open_flame_allowed":0,"exhaust_standard":"商场统一处理","outdoor_seating_policy":"不允许","night_econ_policy":"一般","license_days_median":28,"food_permit_days":18,"env_permit_required":0,"alcohol_license_days":8,"note":"商场闭店时间 22:00，夜宵场景不可用"},"weather_mix":{"晴":0.493,"阴":0.26,"雨":0.241,"暴雨":0.005},"events":{"n_events":4,"annual_attendance":3696,"by_type":{"演唱会":3148,"赛事":548},"mean_spill_prior":0.09225}}},"menu":[{"id":"MI-01","name":"招牌红焖虾","cat":"主菜","price":128.0,"cost":41.0,"prep":11,"station":"灶","vec":[0.7,0.8,0.75,0.35,0.2,0.3,0.05,0.8,0.7,0.3,0.85,0.2],"pop":1.0,"sig":1},{"id":"MI-02","name":"清蒸时令河鲜","cat":"主菜","price":168.0,"cost":62.0,"prep":14,"station":"蒸","vec":[0.35,0.95,0.05,0.02,0.15,0.3,0.05,0.25,0.2,0.1,0.6,0.5],"pop":0.8,"sig":0},{"id":"MI-03","name":"炭烤牛肋条","cat":"主菜","price":158.0,"cost":55.0,"prep":16,"station":"烤","vec":[0.72,0.7,0.35,0.1,0.1,0.2,0.1,0.82,0.95,0.2,0.9,0.15],"pop":0.9,"sig":1},{"id":"MI-04","name":"白灼本地菜心","cat":"素菜","price":38.0,"cost":8.0,"prep":5,"station":"灶","vec":[0.3,0.6,0.02,0.0,0.05,0.25,0.12,0.15,0.1,0.05,0.45,0.9],"pop":0.7,"sig":0},{"id":"MI-05","name":"麻辣香锅","cat":"主菜","price":108.0,"cost":34.0,"prep":12,"station":"灶","vec":[0.8,0.55,0.95,0.9,0.15,0.12,0.1,0.85,0.7,0.25,0.9,0.3],"pop":0.75,"sig":0},{"id":"MI-06","name":"响螺片老火汤","cat":"汤羹","price":188.0,"cost":78.0,"prep":20,"station":"炖","vec":[0.4,0.96,0.0,0.0,0.05,0.35,0.18,0.2,0.12,0.1,0.8,0.2],"pop":0.6,"sig":0},{"id":"MI-07","name":"手工酥皮点心","cat":"点心","price":32.0,"cost":9.5,"prep":6,"station":"烤","vec":[0.2,0.35,0.0,0.0,0.05,0.8,0.05,0.6,0.75,0.05,0.5,0.85],"pop":0.85,"sig":0},{"id":"MI-08","name":"腌笃鲜","cat":"汤羹","price":98.0,"cost":31.0,"prep":18,"station":"炖","vec":[0.62,0.9,0.0,0.0,0.12,0.3,0.08,0.45,0.2,0.55,0.82,0.25],"pop":0.55,"sig":0}],"weather_elasticity":{"BJ":{"严寒":0.757,"晴":1.0,"阴":0.941,"雨":0.846},"FS":{"晴":1.0,"暴雨":0.703,"阴":0.986,"雨":0.861},"GZ":{"晴":1.0,"暴雨":0.658,"阴":0.978,"雨":0.853}},"dow_index":{"BJ":[0.821,0.784,0.82,0.956,1.17,1.334,1.111],"FS":[0.847,0.785,0.846,0.961,1.152,1.297,1.107],"GZ":[0.851,0.795,0.856,0.915,1.19,1.304,1.084]},"benchmark_stores":[{"store":"STORE-X01","city":"BJ","seats":128,"avg_covers":211.7,"avg_check":135.8,"avg_turns":4.3,"food_cost_ratio":0.353,"delivery_share":0.189},{"store":"STORE-X02","city":"GZ","seats":96,"avg_covers":167.3,"avg_check":111.6,"avg_turns":4.53,"food_cost_ratio":0.352,"delivery_share":0.194},{"store":"STORE-X03","city":"FS","seats":110,"avg_covers":153.1,"avg_check":98.1,"avg_turns":3.62,"food_cost_ratio":0.353,"delivery_share":0.19}]}</script>
+<script>/* 侍天 · 地点推演台 —— 模型链与渲染 */
+(function () {
+"use strict";
+const D = JSON.parse(document.getElementById("payload").textContent);
+const AX = D.axes;
+const $ = (s, r) => (r || document).querySelector(s);
+const fmt = (v, d) => (v === null || v === undefined || isNaN(v)) ? "—" :
+  Number(v).toLocaleString("zh-CN", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 });
+const pct = (v, d) => (v * 100).toFixed(d === undefined ? 1 : d) + "%";
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const sum = a => a.reduce((x, y) => x + y, 0);
+
+/* ── 品类先验（可由标定库覆盖） ───────────────────────────── */
+const EQUIP = {"中式正餐":1900,"火锅":2200,"烧烤/烤肉":2400,"西式正餐":2100,"中式快餐":1500};
+const CUISINE = {
+  "中式正餐":  { pen:.160, dwell:72, fc:.352, laborK:1.00, checkRef:112, prep:12, fire:1, orig:760, cv:.22,
+                 vec:[.62,.86,.32,.12,.22,.40,.10,.55,.52,.28,.72,.46] },
+  "火锅":      { pen:.062, dwell:96, fc:.398, laborK:.82,  checkRef:132, prep:6,  fire:1, orig:1350, cv:.19,
+                 vec:[.70,.72,.78,.52,.20,.22,.10,.72,.40,.30,.92,.34] },
+  "烧烤/烤肉": { pen:.055, dwell:88, fc:.380, laborK:.94,  checkRef:110, prep:10, fire:1, orig:1150, cv:.17,
+                 vec:[.76,.66,.48,.20,.14,.24,.12,.80,.92,.22,.88,.24] },
+  "西式正餐":  { pen:.045, dwell:84, fc:.330, laborK:1.18, checkRef:178, prep:16, fire:0, orig:4200, cv:.26,
+                 vec:[.52,.60,.10,.02,.30,.52,.16,.66,.70,.36,.60,.40] },
+  "中式快餐":  { pen:.300, dwell:32, fc:.340, laborK:.70,  checkRef:36,  prep:5,  fire:1, orig:520, cv:.14,
+                 vec:[.66,.70,.30,.10,.18,.30,.08,.52,.44,.20,.72,.42] }
+};
+/* 品类间需求重叠（Huff 竞争权重） */
+const OVERLAP = {
+  "中式正餐": {"中式正餐":1,"火锅":.55,"烧烤/烤肉":.5,"西式正餐":.4,"中式快餐":.3,"小吃简餐":.22,"酒吧/清吧":.12},
+  "火锅":     {"中式正餐":.55,"火锅":1,"烧烤/烤肉":.62,"西式正餐":.25,"中式快餐":.2,"小吃简餐":.16,"酒吧/清吧":.15},
+  "烧烤/烤肉":{"中式正餐":.5,"火锅":.62,"烧烤/烤肉":1,"西式正餐":.28,"中式快餐":.22,"小吃简餐":.2,"酒吧/清吧":.34},
+  "西式正餐": {"中式正餐":.4,"火锅":.25,"烧烤/烤肉":.28,"西式正餐":1,"中式快餐":.18,"小吃简餐":.14,"酒吧/清吧":.3},
+  "中式快餐": {"中式正餐":.3,"火锅":.2,"烧烤/烤肉":.22,"西式正餐":.18,"中式快餐":1,"小吃简餐":.68,"酒吧/清吧":.05}
+};
+/* 场合 → 品类需求映射（列和为 1） */
+const OCC2CAT = {
+  "工作餐":  {"中式快餐":.46,"小吃简餐":.28,"中式正餐":.18,"西式正餐":.05,"火锅":.02,"烧烤/烤肉":.01},
+  "朋友聚餐":{"中式正餐":.30,"火锅":.22,"烧烤/烤肉":.20,"西式正餐":.12,"小吃简餐":.09,"酒吧/清吧":.07},
+  "家庭聚餐":{"中式正餐":.52,"火锅":.20,"西式正餐":.10,"中式快餐":.09,"烧烤/烤肉":.09},
+  "商务宴请":{"中式正餐":.58,"西式正餐":.28,"火锅":.09,"烧烤/烤肉":.05},
+  "一人食":  {"中式快餐":.52,"小吃简餐":.34,"中式正餐":.10,"西式正餐":.04},
+  "夜宵":    {"烧烤/烤肉":.40,"酒吧/清吧":.24,"小吃简餐":.20,"火锅":.14,"中式正餐":.02},
+  "约会":    {"西式正餐":.42,"中式正餐":.24,"酒吧/清吧":.14,"火锅":.11,"烧烤/烤肉":.09},
+  "下午茶":  {"咖啡":.44,"茶饮":.34,"西式正餐":.14,"小吃简餐":.08}
+};
+const DWELL_OCC = {"工作餐":38,"朋友聚餐":82,"家庭聚餐":86,"商务宴请":112,"一人食":26,"夜宵":74,"约会":92,"下午茶":62};
+const TABLEMIX = {
+  "快节奏": {t2:.55,t4:.38,t6:.07,label:"2 人位为主"},
+  "社交型": {t2:.32,t4:.52,t6:.16,label:"4 人位为主"},
+  "宴请型": {t2:.18,t4:.44,t6:.38,label:"大桌加权"}
+};
+const HOURS = {
+  "午+晚":   {open:10,close:22},
+  "全天":    {open:8, close:22},
+  "晚+夜宵": {open:16,close:26}
+};
+const WXS = {
+  "W-BASE":{n:"常年天气",k:1.00,note:"按 10 年气候均值抽样"},
+  "W-RAIN":{n:"多雨季",  k:0.91,note:"降雨日占比 +12pp"},
+  "W-HEAT":{n:"极端高温",k:0.94,note:"≥35℃ 日 +18 天，夜宵 +12%"},
+  "W-COLD":{n:"严寒冬季",k:0.87,note:"≤-5℃ 日 +15 天，火锅 +15%"}
+};
+const CMP = {"C-BASE":{n:"竞争不变",add:0},"C-P1":{n:"同层新增 1 家强竞品",add:1},"C-P3":{n:"商圈同品类扩容",add:3}};
+const MAC = {"M-BASE":{n:"基准",g:0},"M-DOWN":{n:"消费降级",g:-.08},"M-UP":{n:"商圈升级",g:.06}};
+
+/* ── 状态 ────────────────────────────────────────────────── */
+const DEF = {
+  cuisine:"中式正餐", seats:96, check:128, hours:"午+晚", tableMix:"社交型",
+  patience:"中", fitout:4200, rentAdj:1.0, delivery:.18,
+  wx:"W-BASE", comp:"C-BASE", macro:"M-BASE"
+};
+let SITE = "SITE-A";
+function siteDefaults(k) {
+  const m = D.sites[k].meta;
+  return Object.assign({}, DEF, {
+    seats: clamp(Math.round(m.gfa_sqm/2.6/4)*4, 40, 200),
+    check: Math.round(clamp(CUISINE[DEF.cuisine].checkRef*(m.city_tier===1?1.16:0.94)/2,40,300))*2
+  });
+}
+let P = siteDefaults(SITE);
+
+/* ── 数学工具 ────────────────────────────────────────────── */
+function cosine(a, b) {
+  let d = 0, na = 0, nb = 0;
+  for (let i = 0; i < a.length; i++) { d += a[i]*b[i]; na += a[i]*a[i]; nb += b[i]*b[i]; }
+  return d / (Math.sqrt(na)*Math.sqrt(nb) + 1e-9);
+}
+let _sp = null;
+function gauss() {                                   // Box–Muller
+  if (_sp !== null) { const v = _sp; _sp = null; return v; }
+  let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random();
+  const r = Math.sqrt(-2*Math.log(u)); _sp = r*Math.sin(2*Math.PI*v); return r*Math.cos(2*Math.PI*v);
+}
+function quantile(sorted, q) {
+  const i = (sorted.length-1)*q, lo = Math.floor(i), hi = Math.ceil(i);
+  return lo === hi ? sorted[lo] : sorted[lo]*(hi-i) + sorted[hi]*(i-lo);
+}
+
+/* ── ① 需求捕获：Huff / MCI ─────────────────────────────── */
+const TURN = 4.2;      // 日内周转系数：日均独立到访 / 小时均在场人数（= 营业时段 ÷ 平均停留）
+const AWARE = 0.70;    // 新店认知系数：稳态知晓率（连锁品牌可提高到 0.85）
+function demand(S, p) {
+  const C = CUISINE[p.cuisine], mac = MAC[p.macro];
+  const lw = S.industry.reduce((a,b)=>a+b.lunch_out_rate*b.employment_share,0);
+  const outRate = clamp(0.18 + 0.30*lw - 0.35*(S.macro.engel_coef - .28), .15, .45);
+  const priceRef = C.checkRef * (1 + (S.macro.city_tier === 1 ? .12 : 0));
+  const ownPriceFit = Math.exp(-Math.pow(Math.log(p.check/priceRef), 2)/0.42);
+  const fitTaste = taste(S, p).fit;
+  const A0 = Math.pow(Math.max(p.seats,20), .45) * Math.pow(4.35, 1.8) *
+             Math.pow(fitTaste, 1.1) * Math.pow(ownPriceFit, .9);
+
+  const ov = OVERLAP[p.cuisine];
+  let comps = S.competitors.map(c => ({
+    d: Math.max(90, c.dist_to_site_m),
+    A: Math.pow(Math.max(c.seats,20),.45) * Math.pow(c.rating,1.8) * (ov[c.cuisine_l3]||.1) *
+       Math.exp(-Math.pow(Math.log(c.avg_price_rmb/priceRef),2)/0.42) * (c.is_chain? 1.08 : 1)
+  }));
+  for (let i = 0; i < CMP[p.comp].add; i++)                       // 情景注入强竞品
+    comps.push({ d: 120, A: Math.pow(110,.45)*Math.pow(4.6,1.8)*1.0*0.95 });
+
+  const ev0 = S.events;
+  const evPool = ev0.annual_attendance * ev0.mean_spill_prior * C.pen * 2.2 / 365;
+  const evSplit = [0.62, 0.28, 0.10];
+  const beta = 1.85, rings = [];
+  let pool = 0, capture = 0, evCap = 0;
+  S.rings.forEach((r, ri) => {
+    const dOwn = Math.max(110, r.dist_m + 110);
+    const num = A0 * Math.pow(dOwn, -beta);
+    let den = num;
+    comps.forEach(c => { den += c.A * Math.pow(Math.max(110, r.dist_m + c.d*0.55), -beta); });
+    const share = num/den;
+    const ringPool = r.day_pop * TURN * outRate * C.pen * (1 + mac.g*0.6);
+    const evRing = evPool * (evSplit[ri] || 0);
+    rings.push({ ring:r.ring, dist:r.dist_m, pop:r.day_pop, share,
+                 pool:ringPool+evRing, cap:(ringPool+evRing)*share*AWARE });
+    pool += ringPool + evRing;
+    capture += ringPool*share*AWARE;
+    evCap  += evRing*share*AWARE;
+  });
+
+  const del = p.delivery * (capture+evCap) * 0.55;                 // 外卖增量（非纯替代）
+  return { outRate, pool, capture, dine:capture, event:evCap, delivery:del, evPool,
+           total: capture + evCap + del, share: (capture+evCap)/Math.max(pool,1),
+           rings, nComp: comps.length, priceFit: ownPriceFit, priceRef };
+}
+
+/* ── ② 口味适配（风味向量 + MAYA 新奇度修正） ───────────── */
+function pearson(a, b) {
+  const n = a.length, ma = sum(a)/n, mb = sum(b)/n;
+  let num=0, da=0, db=0;
+  for (let i=0;i<n;i++){ const x=a[i]-ma, y=b[i]-mb; num+=x*y; da+=x*x; db+=y*y; }
+  return num/(Math.sqrt(da*db)+1e-9);
+}
+function taste(S, p) {
+  const menuVec = CUISINE[p.cuisine].vec;
+  const r = pearson(S.taste_region, menuVec);
+  const raw = clamp((1 + r) / 2, 0, 1);
+  const nov = clamp(1 - raw, 0, 1);
+  const maya = 1 + 0.14 * Math.pow(Math.max(0, 4*nov*(1-nov)), 1.4);   // 倒 U 型新奇度
+  const fit = clamp(raw * maya, 0, 1);
+  const gaps = AX.map((a,i) => ({ axis:a, region:S.taste_region[i], menu:menuVec[i],
+                                  delta:menuVec[i]-S.taste_region[i] }));
+  return { r, raw, nov, maya, fit, gaps, menuVec };
+}
+
+/* ── ③ 供给缺口（需求份额 − 供给份额） ──────────────────── */
+function gap(S) {
+  const dem = {}, sup = {};
+  S.occasions.forEach(o => {
+    const m = OCC2CAT[o.occasion] || {};
+    for (const k in m) dem[k] = (dem[k]||0) + o.share * m[k];
+  });
+  const FOOD = new Set(["中式正餐","西式正餐","火锅","烧烤/烤肉","中式快餐","小吃简餐","酒吧/清吧","咖啡","茶饮"]);
+  let tot = 0;
+  S.poi_mix.forEach(x => { if (FOOD.has(x.l3)) { sup[x.l3] = x.n; tot += x.n; } });
+  const keys = Array.from(new Set(Object.keys(dem).concat(Object.keys(sup))));
+  return keys.map(k => ({ cat:k, dem:dem[k]||0, sup:(sup[k]||0)/Math.max(tot,1) }))
+             .map(x => Object.assign(x, { gap:x.dem - x.sup }))
+             .sort((a,b) => b.gap - a.gap);
+}
+
+/* ── ④ 时序：日内曲线 × 星期 × 天气 ─────────────────────── */
+function timeline(S, p, dm) {
+  const H = HOURS[p.hours], C = CUISINE[p.cuisine];
+  const prof = new Array(28).fill(0);
+  S.occasions.forEach(o => {
+    const w = (OCC2CAT[o.occasion]||{})[p.cuisine] || 0;
+    if (!w) return;
+    const span = Math.max(1, o.daypart_end - o.daypart_start);
+    for (let h = o.daypart_start; h < o.daypart_end; h++) {
+      const t = (h - o.daypart_start + .5)/span;
+      prof[h % 28] += o.share * w * Math.exp(-Math.pow((t-.44)/.46, 2));
+    }
+  });
+  const open = [];
+  for (let h = H.open; h < H.close; h++) open.push(h % 24 + (h >= 24 ? 24 : 0));
+  const mask = prof.map((v,h) => (h >= H.open && h < H.close) ? v : 0);
+  const s = sum(mask) || 1;
+  const hourShare = mask.map(v => v/s);
+
+  const city = S.meta.city_code;
+  const dow = D.dow_index[city] || [1,1,1,1,1,1,1];
+  const wxk = WXS[p.wx].k * (p.wx==="W-COLD" && p.cuisine==="火锅" ? 1.15 :
+                             p.wx==="W-HEAT" && p.hours==="晚+夜宵" ? 1.12 : 1);
+  const daily = dow.map(f => dm.total * f * wxk);
+  const grid = [];
+  for (let d = 0; d < 7; d++) {
+    const row = [];
+    for (let h = H.open; h < H.close; h++) row.push(daily[d] * hourShare[h % 28]);
+    grid.push(row);
+  }
+  return { hourShare, dow, daily, grid, hours:Array.from({length:H.close-H.open},(_,i)=>H.open+i),
+           wxk, mean: sum(daily)/7 };
+}
+
+/* ── ⑤ 席位与产能：离散事件仿真 ─────────────────────────── */
+function capacitySim(S, p, tl) {
+  const mixP = TABLEMIX[p.tableMix];
+  const avgSeat = 2*mixP.t2 + 4*mixP.t4 + 6*mixP.t6;
+  const nT = Math.max(4, Math.round(p.seats/avgSeat));
+  const tables = [];
+  for (let i=0;i<Math.round(nT*mixP.t2);i++) tables.push(2);
+  for (let i=0;i<Math.round(nT*mixP.t4);i++) tables.push(4);
+  for (let i=0;i<Math.round(nT*mixP.t6);i++) tables.push(6);
+  tables.sort((a,b)=>a-b);
+  const seatsReal = sum(tables);
+
+  const occs = S.occasions.filter(o => (OCC2CAT[o.occasion]||{})[p.cuisine]);
+  const wOcc = occs.map(o => o.share * (OCC2CAT[o.occasion][p.cuisine]||0));
+  const wTot = sum(wOcc) || 1;
+  const dwellK = CUISINE[p.cuisine].dwell / 72;
+  const tol = {"短":12,"中":22,"长":38}[p.patience];
+  const BIN = 10, H = HOURS[p.hours], nBin = (H.close-H.open)*60/BIN;
+  const DAYS = 42;
+
+  let served=0, arrived=0, balked=0, waitSum=0, waitN=0, seatMin=0, turnCnt=0;
+  for (let d=0; d<DAYS; d++) {
+    const dow = d % 7;
+    const dayCovers = tl.daily[dow] * (1 + gauss()*0.11);
+    const free = tables.map(()=>0);
+    const q = [];
+    for (let b=0; b<nBin; b++) {
+      const h = H.open + Math.floor(b*BIN/60);
+      const lam = dayCovers * tl.hourShare[h%28] * (BIN/60);
+      let oi = 0, r = Math.random()*wTot, acc = 0;
+      for (let i=0;i<wOcc.length;i++){ acc += wOcc[i]; if (r<=acc){ oi=i; break; } }
+      const party = Math.max(1, Math.round(occs[oi].avg_party_size * (0.7+Math.random()*0.75)));
+      let nPart = Math.max(0, Math.round(lam/Math.max(occs[oi].avg_party_size,1) + gauss()*0.8));
+      for (let k=0;k<nPart;k++) q.push({ party, t:b, occ:occs[oi].occasion });
+      arrived += nPart*party;
+      for (let i=free.length-1;i>=0;i--) if (free[i]>0) free[i]--;
+      for (let qi=0; qi<q.length; qi++) {
+        const g = q[qi];
+        let idx = -1;
+        for (let i=0;i<tables.length;i++) if (free[i]===0 && tables[i]>=g.party){ idx=i; break; }
+        if (idx<0 && g.party>4) {                                  // 拼桌
+          const two=[]; for (let i=0;i<tables.length;i++) if (free[i]===0 && tables[i]>=4) two.push(i);
+          if (two.length>=2 && sum(two.slice(0,2).map(i=>tables[i]))>=g.party){
+            const dw = Math.round(DWELL_OCC[g.occ]*dwellK/BIN);
+            two.slice(0,2).forEach(i=>free[i]=dw);
+            served+=g.party; seatMin+=g.party*dw*BIN; turnCnt++; waitSum+=(b-g.t)*BIN; waitN++;
+            q.splice(qi,1); qi--; continue;
+          }
+        }
+        if (idx>=0) {
+          const dw = Math.max(1, Math.round(DWELL_OCC[g.occ]*dwellK/BIN));
+          free[idx]=dw; served+=g.party; seatMin+=g.party*dw*BIN; turnCnt++;
+          waitSum+=(b-g.t)*BIN; waitN++; q.splice(qi,1); qi--;
+        } else if ((b-g.t)*BIN > tol) { balked += g.party; q.splice(qi,1); qi--; }
+      }
+    }
+    balked += sum(q.map(g=>g.party)); q.length = 0;
+  }
+  const openHrs = H.close - H.open;
+  const servedDay = served/DAYS, balkDay = balked/DAYS;
+  return {
+    tables, nTables: tables.length, seatsReal, servedDay, balkDay,
+    balkRate: balkDay/Math.max(servedDay+balkDay,1),
+    turns: (turnCnt/DAYS)/Math.max(tables.length,1),
+    seatUtil: (seatMin/DAYS)/(seatsReal*openHrs*60),
+    avgWait: waitN? waitSum/waitN : 0,
+    revpash: servedDay*P.check/(seatsReal*openHrs),
+    openHrs, capacityCeil: seatsReal*openHrs*60/(CUISINE[p.cuisine].dwell) * .78
+  };
+}
+
+/* ── ⑥ 财务蒙特卡洛 ─────────────────────────────────────── */
+function finance(S, p, cap) {
+  const N = 1600, m = S.meta;
+  const rent = m.rent_rmb_sqm_month*p.rentAdj*m.gfa_sqm + m.mgmt_fee_sqm_month*m.gfa_sqm;
+  const capex = m.gfa_sqm*p.fitout + m.gfa_sqm*EQUIP[p.cuisine] + cap.seatsReal*850 + 300000;
+  const rampCurve = [.62,.78,.89,.95,1,1,1.02,.98,1,1.04,1.06,1.02];
+  const fcBase = CUISINE[p.cuisine].fc;
+  const laborRate = .208*CUISINE[p.cuisine].laborK*(m.city_tier===1?1.08:1);
+  const ebs=[], pays=[], revs=[];
+  for (let i=0;i<N;i++){
+    let covK = Math.exp(gauss()*.22 - .024);                  // 客流预测误差（对数正态）
+    if (Math.random() < .08) covK *= .55;                     // 模型风险：8% 概率结构性高估
+    const chkK = 1 + gauss()*.09;
+    const fc = clamp(fcBase + gauss()*.022, .24, .52);
+    const cum = []; let rev12=0, eb12=0, acc=-capex, payback=null;
+    for (let mo=0; mo<12; mo++){
+      const cov = cap.servedDay*30.4*rampCurve[mo]*covK;
+      const chk = p.check*chkK*(1+MAC[p.macro].g*.5);
+      const rev = cov*chk*(1+p.delivery*.55*.82);
+      const cost = rev*fc + rev*laborRate*(1+gauss()*.06) + rent + rev*.035 + rev*.032 + rev*.042;
+      const eb = rev - cost;
+      rev12+=rev; eb12+=eb; acc += eb - capex/60*0;               // 折旧不计入 EBITDA
+      cum.push(acc);
+      if (payback===null && acc>=0) payback = mo+1;
+    }
+    let a = acc, mo = 12;
+    while (payback===null && mo<72){ a += eb12/12*1.03; mo++; if (a>=0) payback=mo; }
+    ebs.push(eb12); revs.push(rev12); pays.push(payback||72);
+  }
+  ebs.sort((a,b)=>a-b); revs.sort((a,b)=>a-b); pays.sort((a,b)=>a-b);
+  const rev50 = quantile(revs,.5);
+  return {
+    capex, rent, laborRate, fcBase,
+    rev:{p10:quantile(revs,.1),p50:rev50,p90:quantile(revs,.9)},
+    eb:{p10:quantile(ebs,.1),p50:quantile(ebs,.5),p90:quantile(ebs,.9)},
+    margin:quantile(ebs,.5)/Math.max(rev50,1),
+    payback:{p10:quantile(pays,.1),p50:quantile(pays,.5),p90:quantile(pays,.9)},
+    pLoss: ebs.filter(x=>x<0).length/N,
+    pSlow: pays.filter(x=>x>36).length/N, dist: ebs
+  };
+}
+
+/* ── ⑦ 十二要素评分 ─────────────────────────────────────── */
+function domains(S, p, dm, ts, gp, cap, fin, tl) {
+  const m = S.meta, mac = S.macro;
+  const nrm = (v,a,b) => clamp((v-a)/(b-a),0,1)*100;
+  const ov0 = OVERLAP[p.cuisine];
+  const foodAll = S.poi_mix.filter(x=>["中式正餐","西式正餐","火锅","烧烤/烤肉","中式快餐","小吃简餐","酒吧/清吧"].includes(x.l3));
+  const cuisineShare = (S.poi_mix.find(x=>x.l3===p.cuisine)||{n:0}).n /
+                       Math.max(sum(foodAll.map(x=>x.n)),1);
+  const takeRate = clamp(cap.servedDay/Math.max(dm.total,1),0,1);
+  const foodPOI = S.poi_mix.filter(x=>["中式正餐","西式正餐","火锅","烧烤/烤肉","中式快餐","小吃简餐","酒吧/清吧","咖啡","茶饮"].includes(x.l3));
+  const foodN = sum(foodPOI.map(x=>x.n));
+  const compl = sum(S.poi_mix.filter(x=>["影院/演艺","健身/场馆","写字楼","中高端酒店","服装鞋帽","景区/展馆"].includes(x.l3)).map(x=>x.n));
+  const transit = sum(S.transit.map(t=>t.daily_boardings*Math.exp(-t.dist_to_site_m/320)));
+  const ov = OVERLAP[p.cuisine];
+  const compPress = sum(S.competitors.map(c=>(ov[c.cuisine_l3]||.1)*c.seats*Math.exp(-c.dist_to_site_m/380)))
+                    + CMP[p.comp].add*110;
+  const myGap = (gp.find(x=>x.cat===p.cuisine)||{gap:0}).gap;
+  const occFit = sum(S.occasions.map(o=>o.share*((OCC2CAT[o.occasion]||{})[p.cuisine]||0)));
+  const pol = S.policy;
+  const fireOK = CUISINE[p.cuisine].fire ? (pol.open_flame_allowed?1:.62) : 1;   // 禁明火可改电磁/蒸烤，但产能与投入受损
+  const nightOK = p.hours==="晚+夜宵" ? (pol.night_econ_policy.indexOf("一般")>=0?.3:1) : 1;
+  const rentRatio = fin.rent*12/Math.max(fin.rev.p50,1);
+  const ingr = { dist: CUISINE[p.cuisine].orig, vol: CUISINE[p.cuisine].cv };
+
+  return [
+    { k:"客群基盘", s:nrm(Math.log10(dm.pool+1),2.9,4.4),
+      f:"Σ_ring 在场人群 × 外出就餐率 × 品类渗透率",
+      d:`商圈日均品类需求池 ${fmt(dm.pool)} 人次，外出就餐率 ${pct(dm.outRate,0)}` },
+    { k:"交通可达", s:nrm(Math.log10(transit+1),3.2,5.1),
+      f:"Σ_k 日客运量 · exp(−d_k/320)",
+      d:`${S.transit.length} 个节点加权可达量 ${fmt(transit)}，最近轨交 ${fmt(Math.min.apply(null,S.transit.filter(t=>t.mode==="地铁").map(t=>t.dist_to_site_m)))} 米` },
+    { k:"商业供给", s:nrm(Math.log10(foodN+compl+1),2.0,3.5),
+      f:"log(餐饮 POI + 互补业态 POI)",
+      d:`餐饮 ${fmt(foodN)} 家、互补业态 ${fmt(compl)} 家，连锁化率 ${pct(sum(foodPOI.map(x=>x.chain*x.n))/Math.max(foodN,1),0)}` },
+    { k:"竞争强度", s:100-nrm(Math.log10(compPress+1),2.0,3.9),
+      f:"100 − log(Σ 重叠度 · 座位 · exp(−d/380))",
+      d:`同需求域竞品压力指数 ${fmt(compPress)}，捕获份额 ${pct(dm.share,1)}` },
+    { k:"口味适配", s:ts.fit*100,
+      f:"cos(T_region, t_menu) × MAYA 新奇度修正",
+      d:`皮尔逊相关 ${ts.r.toFixed(3)}，标准化 ${ts.raw.toFixed(3)}，新奇度 ${ts.nov.toFixed(2)}，修正后 ${ts.fit.toFixed(3)}` },
+    { k:"食材产地", s:nrm(1/(1+ingr.dist/1200)*(1-ingr.vol),.10,.70),
+      f:"1/(1+产地距离/1200) × (1−价格波动 CV)",
+      d:`核心食材平均产地距离 ${fmt(ingr.dist)} 公里，价格波动 CV ${pct(ingr.vol,0)}` },
+    { k:"技法产能", s:nrm(takeRate*(1-(CUISINE[p.cuisine].prep-5)/40)*({"高":1,"中":.92,"低":.78})[m.exhaust_capacity],.35,1),
+      f:"需求承接率 × 出餐工时折扣 × 排烟能力系数",
+      d:`出餐 ${CUISINE[p.cuisine].prep} 分钟/道，需求承接率 ${pct(takeRate,0)}，座位利用率 ${pct(cap.seatUtil,0)}，排烟「${m.exhaust_capacity}」` },
+    { k:"场景匹配", s:nrm(occFit,.06,.42),
+      f:"Σ_occ 场合份额 × 场合→品类映射",
+      d:`匹配度 ${pct(occFit,1)}，主导场合「${S.occasions.slice().sort((a,b)=>b.share-a.share)[0].occasion}」占 ${pct(S.occasions.slice().sort((a,b)=>b.share-a.share)[0].share,0)}` },
+    { k:"本地文化", s:.5*nrm(cuisineShare,.015,.28)+.5*ts.raw*100,
+      f:"0.5×本地同品类门店占比 + 0.5×口味谱契合",
+      d:`本品类占本地餐饮门店 ${pct(cuisineShare,1)}，本地口味主轴「${AX[S.taste_region.indexOf(Math.max.apply(null,S.taste_region))]}」权重 ${Math.max.apply(null,S.taste_region).toFixed(2)}` },
+    { k:"经济消费力", s:nrm(mac.disposable_income_rmb/1000/Math.max(p.check,1)*10,3.2,9.5)*
+                      clamp(1.25-rentRatio*2.4,.35,1.1),
+      f:"可支配收入/客单价 × 租金占比惩罚",
+      d:`人均可支配 ${fmt(mac.disposable_income_rmb)} 元，租金占营收 ${pct(rentRatio,1)}` },
+    { k:"文旅事件", s:nrm(Math.log10(S.events.annual_attendance+1),3.4,6.4),
+      f:"log(年到场人次) × 外溢先验",
+      d:`年 ${fmt(S.events.n_events)} 场活动、到场 ${fmt(S.events.annual_attendance)} 人次，外溢先验 ${pct(S.events.mean_spill_prior,1)}` },
+    { k:"政策合规", s:nrm(fireOK*nightOK*(1-pol.license_days_median/90)*(pol.outdoor_seating_policy.indexOf("不允许")>=0?.82:1),.20,.90),
+      f:"明火 × 夜经济 × 证照周期 × 外摆",
+      d:`证照中位 ${pol.license_days_median} 天，明火${pol.open_flame_allowed?"可用":"禁用"}，外摆「${pol.outdoor_seating_policy}」` }
+  ].map(x => Object.assign(x, { s: clamp(x.s, 3, 100) }));
+}
+
+/* ── ⑧ 决策与置信度 ─────────────────────────────────────── */
+function verdict(dom, fin, cap, dm) {
+  const weak = dom.filter(d=>d.s<40).length;
+  const avg = sum(dom.map(d=>d.s))/dom.length;
+  let v, cls, txt;
+  if (fin.margin>=.12 && fin.pLoss<=.15 && fin.payback.p50<=24 && weak<=2) { v="宜"; cls=""; txt="可推进签约，按下方条件锁定"; }
+  else if (fin.pLoss>.35 || fin.payback.p50>36 || weak>=5)                 { v="止"; cls="stop"; txt="不建议按当前方案进入"; }
+  else                                                                     { v="慎"; cls="warn"; txt="有条件推进，需先解开约束"; }
+  const conf = clamp(.52 + .22*(dm.nComp>12?1:dm.nComp/12) + .16*(avg/100) + .10, .35, .93);
+  return { v, cls, txt, conf, avg, weak };
+}
+
+/* ── SVG 图表工具 ───────────────────────────────────────── */
+const SV = (w,h,inner,cls) => `<svg class="chart ${cls||""}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="xMidYMid meet">${inner}</svg>`;
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function txt(x,y,s,o){o=o||{};return `<text x="${x}" y="${y}" font-size="${o.fs||10}" fill="${o.fill||"var(--ink-3)"}" text-anchor="${o.a||"start"}" font-family="${o.ff||"var(--sans)"}" ${o.w?`font-weight="${o.w}"`:""}>${esc(s)}</text>`;}
+
+/* 罗盘 */
+function drawCompass(dom, vd) {
+  const cx=230, cy=230, r0=62, r1=168;
+  let g = "";
+  [.25,.5,.75,1].forEach(f => {
+    g += `<circle cx="${cx}" cy="${cy}" r="${r0+(r1-r0)*f}" fill="none" stroke="var(--rule)" stroke-width="${f===1?1.2:.7}" stroke-dasharray="${f===1?"none":"2 4"}"/>`;
+  });
+  dom.forEach((d,i) => {
+    const a0 = -Math.PI/2 + (i/12)*2*Math.PI + .022, a1 = -Math.PI/2 + ((i+1)/12)*2*Math.PI - .022;
+    const rr = r0 + (r1-r0)*(d.s/100);
+    const p = (a,r)=>[cx+Math.cos(a)*r, cy+Math.sin(a)*r];
+    const [x0,y0]=p(a0,r0), [x1,y1]=p(a1,r0), [x2,y2]=p(a1,rr), [x3,y3]=p(a0,rr);
+    const col = d.s>=68?"var(--jade)": d.s>=45?"var(--gold)":"var(--cinnabar)";
+    const op  = d.s>=68?.80: d.s>=45?.72:.66;
+    g += `<path d="M${x0} ${y0} A${r0} ${r0} 0 0 1 ${x1} ${y1} L${x2} ${y2} A${rr} ${rr} 0 0 0 ${x3} ${y3} Z" fill="${col}" opacity="${op}"><title>${esc(d.k)}：${d.s.toFixed(0)} 分\n${esc(d.f)}\n${esc(d.d)}</title></path>`;
+    const am=(a0+a1)/2, [lx,ly]=p(am,r1+18);
+    const anch = Math.abs(Math.cos(am))<.28 ? "middle" : (Math.cos(am)>0?"start":"end");
+    g += txt(lx,ly-1,d.k,{fs:11.5,fill:"var(--ink-2)",a:anch,ff:"var(--serif)"});
+    g += txt(lx,ly+11.5,d.s.toFixed(0),{fs:10.5,fill:col,a:anch,ff:"var(--mono)",w:600});
+    const [tx,ty]=p(a0,r1+4), [tx2,ty2]=p(a0,r0);
+    g += `<line x1="${tx2}" y1="${ty2}" x2="${tx}" y2="${ty}" stroke="var(--rule)" stroke-width=".6"/>`;
+  });
+  g += `<circle cx="${cx}" cy="${cy}" r="${r0-4}" fill="var(--paper-3)" stroke="var(--rule-2)" stroke-width="1"/>`;
+  const sc = vd.v==="宜"?"var(--jade)": vd.v==="慎"?"var(--gold)":"var(--ink-2)";
+  g += `<circle cx="${cx}" cy="${cy}" r="30" fill="none" stroke="${sc}" stroke-width="2.2"/>`;
+  g += `<text x="${cx}" y="${cy+11}" font-size="34" fill="${sc}" text-anchor="middle" font-family="var(--serif)">${vd.v}</text>`;
+  g += txt(cx,cy+38,"综合 "+vd.avg.toFixed(0),{fs:10,a:"middle",ff:"var(--mono)"});
+  return SV(460,460,g);
+}
+
+/* 堆叠面积：日内客流构成 */
+function areaChart(tl, dm, hours) {
+  const W=560,H=210,L=38,R=10,T=12,B=26, iw=W-L-R, ih=H-T-B;
+  const n = hours.length;
+  const dine = hours.map(h=>tl.hourShare[h%28]*dm.dine);
+  const evx  = hours.map(h=>tl.hourShare[h%28]*dm.event);
+  const del  = hours.map(h=>tl.hourShare[h%28]*dm.delivery);
+  const mx = Math.max.apply(null, hours.map((_,i)=>dine[i]+evx[i]+del[i]))*1.15 || 1;
+  const X = i => L + iw*i/Math.max(n-1,1), Y = v => T + ih - ih*v/mx;
+  let g = "";
+  [0,.5,1].forEach(f=>{ g += `<line x1="${L}" y1="${Y(mx*f)}" x2="${W-R}" y2="${Y(mx*f)}" stroke="var(--rule)" stroke-width=".7" stroke-dasharray="2 4"/>`
+                            + txt(L-5,Y(mx*f)+3,fmt(mx*f),{a:"end",fs:9,ff:"var(--mono)"}); });
+  const layers = [[dine,"var(--gold)",.78,"堂食"],[evx,"var(--cinnabar)",.7,"事件外溢"],[del,"var(--jade)",.62,"外卖"]];
+  let base = hours.map(()=>0);
+  layers.forEach(([arr,col,op,name])=>{
+    const top = arr.map((v,i)=>base[i]+v);
+    let d = `M${X(0)} ${Y(base[0])}`;
+    top.forEach((v,i)=>{ d += ` L${X(i)} ${Y(v)}`; });
+    for (let i=n-1;i>=0;i--) d += ` L${X(i)} ${Y(base[i])}`;
+    g += `<path d="${d} Z" fill="${col}" opacity="${op}"><title>${name}</title></path>`;
+    base = top;
+  });
+  hours.forEach((h,i)=>{ if (i%2===0) g += txt(X(i),H-9,(h%24)+"时",{a:"middle",fs:9,ff:"var(--mono)"}); });
+  let lx = W-R-208;
+  layers.forEach(([,col,op,name])=>{ g += `<rect x="${lx}" y="${H-10}" width="8" height="8" fill="${col}" opacity="${op}"/>` + txt(lx+11,H-3,name,{fs:9.5}); lx += name.length*11+24; });
+  return SV(W,H,g);
+}
+
+/* 热力：星期 × 时段 */
+function heat(tl) {
+  const days=["一","二","三","四","五","六","日"], hs=tl.hours;
+  const cw=Math.min(30, 480/hs.length), ch=20, L=26, T=18;
+  const W=L+cw*hs.length+8, H=T+ch*7+16;
+  const mx = Math.max.apply(null, tl.grid.map(r=>Math.max.apply(null,r)))||1;
+  let g="";
+  hs.forEach((h,i)=>{ if(i%2===0) g += txt(L+cw*i+cw/2,T-6,(h%24),{a:"middle",fs:9,ff:"var(--mono)"}); });
+  tl.grid.forEach((row,d)=>{
+    g += txt(L-6,T+ch*d+13.5,days[d],{a:"end",fs:10});
+    row.forEach((v,i)=>{
+      const f=v/mx;
+      const col = f>.66?"var(--cinnabar)": f>.36?"var(--gold)":"var(--gold-2)";
+      g += `<rect x="${L+cw*i}" y="${T+ch*d}" width="${cw-1.5}" height="${ch-1.5}" fill="${col}" opacity="${(.12+f*.82).toFixed(2)}"><title>周${days[d]} ${hs[i]%24}时 ${fmt(v)} 人次</title></rect>`;
+    });
+  });
+  g += txt(L, H-3, "色深 = 该时段到店人次；峰值 "+fmt(mx)+" 人次/小时", {fs:9.5});
+  return SV(W,H,g);
+}
+
+/* 雷达：区域口味 vs 菜单口味 */
+function radar(ts) {
+  const W=380,H=372,cx=190,cy=170,r=116;
+  const p=(i,v)=>{const a=-Math.PI/2+i/12*2*Math.PI;return [cx+Math.cos(a)*r*v, cy+Math.sin(a)*r*v];};
+  let g="";
+  [.25,.5,.75,1].forEach(f=>{
+    let d=""; for(let i=0;i<12;i++){const[x,y]=p(i,f); d+=(i?"L":"M")+x+" "+y;}
+    g+=`<path d="${d} Z" fill="none" stroke="var(--rule)" stroke-width="${f===1?1:.6}" stroke-dasharray="${f===1?"none":"2 3"}"/>`;
+  });
+  for(let i=0;i<12;i++){const[x,y]=p(i,1);g+=`<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="var(--rule)" stroke-width=".5"/>`;
+    const[lx,ly]=p(i,1.19); g+=txt(lx,ly+3,AX[i],{fs:10.5,a:"middle",fill:"var(--ink-2)"});}
+  const poly=(vals,col,fill)=>{let d="";vals.forEach((v,i)=>{const[x,y]=p(i,v);d+=(i?"L":"M")+x+" "+y;});
+    return `<path d="${d} Z" fill="${col}" opacity="${fill}" stroke="${col}" stroke-width="1.6"/>`;};
+  g+=poly(ts.gaps.map(x=>x.region),"var(--jade)",.16);
+  g+=poly(ts.menuVec,"var(--cinnabar)",.14);
+  g+=`<rect x="24" y="${H-14}" width="9" height="9" fill="var(--jade)" opacity=".5"/>`+txt(37,H-6,"本地口味谱",{fs:10});
+  g+=`<rect x="140" y="${H-14}" width="9" height="9" fill="var(--cinnabar)" opacity=".5"/>`+txt(153,H-6,"拟定菜单口味",{fs:10});
+  return SV(W,H,g);
+}
+
+/* 分歧条：供给缺口 */
+function gapBars(gp) {
+  const rows = gp.filter(x=>Math.abs(x.gap)>0.004).slice(0,9);
+  const W=420, rh=23, H=rows.length*rh+22, L=76, mid=L+(W-L-14)/2, half=(W-L-14)/2;
+  const mx = Math.max.apply(null, rows.map(r=>Math.abs(r.gap)))||.01;
+  let g = `<line x1="${mid}" y1="6" x2="${mid}" y2="${H-16}" stroke="var(--rule-2)" stroke-width="1"/>`;
+  rows.forEach((r,i)=>{
+    const y=8+i*rh, w=Math.abs(r.gap)/mx*half*.92;
+    const pos=r.gap>0;
+    g += txt(L-6,y+13,r.cat,{a:"end",fs:11,fill:"var(--ink-2)"});
+    g += `<rect x="${pos?mid:mid-w}" y="${y+3}" width="${w}" height="${rh-11}" fill="${pos?"var(--jade)":"var(--cinnabar)"}" opacity=".7"><title>${r.cat}：需求 ${pct(r.dem)} / 供给 ${pct(r.sup)}</title></rect>`;
+    g += txt(pos?mid+w+5:mid-w-5, y+13, (pos?"+":"")+(r.gap*100).toFixed(1)+"pp", {a:pos?"start":"end",fs:9.5,ff:"var(--mono)",fill:pos?"var(--jade)":"var(--cinnabar)"});
+  });
+  g += txt(mid-6,H-4,"← 供给过剩",{a:"end",fs:9}) + txt(mid+6,H-4,"需求缺口 →",{fs:9});
+  return SV(W,H,g);
+}
+
+/* 竞品散点 */
+function scatter(S, p, dm) {
+  const W=420,H=250,L=42,R=14,T=14,B=32,iw=W-L-R,ih=H-T-B;
+  const cs=S.competitors, mxP=Math.max.apply(null,cs.map(c=>c.avg_price_rmb).concat([p.check]))*1.1;
+  const X=v=>L+iw*v/mxP, Y=v=>T+ih-ih*(v-3.4)/1.6;
+  let g="";
+  [3.6,4.0,4.4,4.8].forEach(v=>{g+=`<line x1="${L}" y1="${Y(v)}" x2="${W-R}" y2="${Y(v)}" stroke="var(--rule)" stroke-width=".6" stroke-dasharray="2 4"/>`+txt(L-5,Y(v)+3,v.toFixed(1),{a:"end",fs:9,ff:"var(--mono)"});});
+  [0,.25,.5,.75,1].forEach(f=>{g+=txt(X(mxP*f),H-11,fmt(mxP*f),{a:"middle",fs:9,ff:"var(--mono)"});});
+  const ov=OVERLAP[p.cuisine];
+  cs.forEach(c=>{
+    const rr=Math.sqrt(c.seats)/2.1, o=(ov[c.cuisine_l3]||.1);
+    g+=`<circle cx="${X(c.avg_price_rmb)}" cy="${Y(c.rating)}" r="${rr}" fill="var(--ink-2)" opacity="${(.12+o*.42).toFixed(2)}" stroke="var(--ink-3)" stroke-width=".5"><title>${c.comp_id} · ${c.cuisine_l3}\n人均 ${c.avg_price_rmb} 元 · ${c.rating} 分 · ${c.seats} 座 · ${c.dist_to_site_m} 米\n需求重叠度 ${o.toFixed(2)}</title></circle>`;
+  });
+  g+=`<circle cx="${X(p.check)}" cy="${Y(4.35)}" r="${Math.sqrt(p.seats)/2.1}" fill="var(--cinnabar)" opacity=".85"/>`;
+  g+=txt(X(p.check),Y(4.35)-Math.sqrt(p.seats)/2.1-5,"拟开门店",{a:"middle",fs:10,fill:"var(--cinnabar)",w:600});
+  g+=`<rect x="${X(dm.priceRef*.78)}" y="${T}" width="${X(dm.priceRef*1.28)-X(dm.priceRef*.78)}" height="${ih}" fill="var(--gold)" opacity=".07"/>`;
+  g+=txt(X(dm.priceRef),T+11,"主流价格带",{a:"middle",fs:9,fill:"var(--gold)"});
+  g+=txt(L,H-1,"横轴：人均消费（元）　纵轴：评分　气泡：座位数　深浅：需求重叠度",{fs:9});
+  return SV(W,H,g);
+}
+
+/* 直方图：EBITDA 分布 */
+function hist(fin) {
+  const W=520,H=210,L=44,R=12,T=16,B=30,iw=W-L-R,ih=H-T-B;
+  const a=fin.dist, lo=quantile(a,.01), hi=quantile(a,.99), nb=34;
+  const bins=new Array(nb).fill(0);
+  a.forEach(v=>{const i=clamp(Math.floor((v-lo)/(hi-lo+1e-9)*nb),0,nb-1);bins[i]++;});
+  const mx=Math.max.apply(null,bins)||1;
+  const X=v=>L+iw*(v-lo)/(hi-lo+1e-9), Y=c=>T+ih-ih*c/mx;
+  let g="";
+  bins.forEach((c,i)=>{
+    const x0=L+iw*i/nb, v=lo+(hi-lo)*(i+.5)/nb;
+    g+=`<rect x="${x0}" y="${Y(c)}" width="${iw/nb-1}" height="${T+ih-Y(c)}" fill="${v<0?"var(--cinnabar)":"var(--gold)"}" opacity="${v<0?.66:.72}"/>`;
+  });
+  if (lo<0&&hi>0) g+=`<line x1="${X(0)}" y1="${T-4}" x2="${X(0)}" y2="${T+ih}" stroke="var(--cinnabar)" stroke-width="1.4"/>`+txt(X(0)+4,T+6,"盈亏线",{fs:9.5,fill:"var(--cinnabar)"});
+  [["P10",fin.eb.p10],["P50",fin.eb.p50],["P90",fin.eb.p90]].forEach(([n,v])=>{
+    if(v<lo||v>hi)return;
+    g+=`<line x1="${X(v)}" y1="${T}" x2="${X(v)}" y2="${T+ih}" stroke="var(--ink-2)" stroke-width=".9" stroke-dasharray="3 3"/>`
+      +txt(X(v),T-4,n,{a:"middle",fs:9,ff:"var(--mono)",fill:"var(--ink-2)"});
+  });
+  [0,.5,1].forEach(f=>{const v=lo+(hi-lo)*f;g+=txt(X(v),H-11,(v/10000).toFixed(0)+"万",{a:"middle",fs:9,ff:"var(--mono)"});});
+  g+=txt(L,H-1,"横轴：首年 EBITDA（元）　纵轴：1,600 次抽样频次",{fs:9});
+  return SV(W,H,g);
+}
+
+/* 龙卷风：敏感性 */
+function tornado(items) {
+  const W=440, rh=26, H=items.length*rh+18, L=104, mid=L+(W-L-30)/2, half=(W-L-30)/2;
+  const mx=Math.max.apply(null,items.map(i=>Math.max(Math.abs(i.lo),Math.abs(i.hi))))||1;
+  let g=`<line x1="${mid}" y1="4" x2="${mid}" y2="${H-14}" stroke="var(--rule-2)"/>`;
+  items.forEach((it,i)=>{
+    const y=6+i*rh;
+    [[it.lo,"var(--cinnabar)"],[it.hi,"var(--jade)"]].forEach(([v,c])=>{
+      const w=Math.abs(v)/mx*half*.9;
+      g+=`<rect x="${v>0?mid:mid-w}" y="${y+4}" width="${w}" height="${rh-13}" fill="${c}" opacity=".72"><title>${it.k} ${v>0?"+":""}${fmt(v)} 元</title></rect>`;
+    });
+    g+=txt(L-8,y+14,it.k,{a:"end",fs:11,fill:"var(--ink-2)"});
+    g+=txt(W-4,y+14,"±"+fmt(Math.max(Math.abs(it.lo),Math.abs(it.hi))/10000,1)+"万",{a:"end",fs:9.5,ff:"var(--mono)"});
+  });
+  g+=txt(mid,H-2,"首年 EBITDA 对单因子 ±1σ 的响应",{a:"middle",fs:9});
+  return SV(W,H,g);
+}
+
+/* 12 月推演曲线 */
+function rampChart(fin, cap, p) {
+  const W=520,H=200,L=46,R=42,T=14,B=28,iw=W-L-R,ih=H-T-B;
+  const ramp=[.62,.78,.89,.95,1,1,1.02,.98,1,1.04,1.06,1.02];
+  const rev=ramp.map(f=>cap.servedDay*30.4*f*p.check*(1+p.delivery*.55*.82));
+  const cost=rev.map(r=>r*fin.fcBase+r*fin.laborRate+fin.rent+r*.109);
+  const eb=rev.map((r,i)=>r-cost[i]);
+  let acc=-fin.capex; const cum=eb.map(v=>{acc+=v;return acc;});
+  const mxR=Math.max.apply(null,rev)*1.12, mnC=Math.min.apply(null,cum), mxC=Math.max.apply(null,cum);
+  const X=i=>L+iw*i/11, Y=v=>T+ih-ih*v/mxR, Y2=v=>T+ih-ih*(v-mnC)/(mxC-mnC+1e-9);
+  let g="";
+  [0,.5,1].forEach(f=>{g+=`<line x1="${L}" y1="${Y(mxR*f)}" x2="${W-R}" y2="${Y(mxR*f)}" stroke="var(--rule)" stroke-width=".6" stroke-dasharray="2 4"/>`+txt(L-5,Y(mxR*f)+3,(mxR*f/10000).toFixed(0)+"万",{a:"end",fs:9,ff:"var(--mono)"});});
+  let d1="",d2="";
+  rev.forEach((v,i)=>{d1+=(i?"L":"M")+X(i)+" "+Y(v);});
+  eb.forEach((v,i)=>{d2+=(i?"L":"M")+X(i)+" "+Y(v);});
+  g+=`<path d="${d1}" fill="none" stroke="var(--gold)" stroke-width="2"/>`;
+  g+=`<path d="${d2}" fill="none" stroke="var(--jade)" stroke-width="1.8" stroke-dasharray="4 3"/>`;
+  let d3=""; cum.forEach((v,i)=>{d3+=(i?"L":"M")+X(i)+" "+Y2(v);});
+  g+=`<path d="${d3}" fill="none" stroke="var(--cinnabar)" stroke-width="1.4" opacity=".8"/>`;
+  if (mnC<0&&mxC>0) g+=`<line x1="${L}" y1="${Y2(0)}" x2="${W-R}" y2="${Y2(0)}" stroke="var(--cinnabar)" stroke-width=".8" stroke-dasharray="2 3" opacity=".6"/>`;
+  for(let i=0;i<12;i+=2) g+=txt(X(i),H-11,"M"+(i+1),{a:"middle",fs:9,ff:"var(--mono)"});
+  g+=txt(W-R+4,Y(rev[11]),"月收入",{fs:9,fill:"var(--gold)"});
+  g+=txt(W-R+4,Y(eb[11])+10,"EBITDA",{fs:9,fill:"var(--jade)"});
+  g+=txt(W-R+4,Y2(cum[11]),"累计现金",{fs:9,fill:"var(--cinnabar)"});
+  return SV(W,H,g);
+}
+
+/* ── 参数面板 ───────────────────────────────────────────── */
+function segRow(key, opts, labels) {
+  return `<div class="seg" data-key="${key}">` + opts.map(o =>
+    `<button type="button" data-v="${esc(o)}" aria-pressed="${P[key]===o}">${esc(labels?labels[o]:o)}</button>`).join("") + `</div>`;
+}
+function renderParams() {
+  const S = D.sites[SITE], m = S.meta;
+  $("#params").innerHTML = `
+  <div class="grp">品类与规格</div>
+  ${segRow("cuisine", Object.keys(CUISINE))}
+  <div class="fld" style="margin-top:10px"><label>座位数<b id="l_seats">${P.seats}</b></label>
+    <input type="range" id="p_seats" min="36" max="220" step="4" value="${P.seats}"></div>
+  <div class="fld"><label>目标客单价（元）<b id="l_check">${P.check}</b></label>
+    <input type="range" id="p_check" min="28" max="320" step="2" value="${P.check}"></div>
+  <div class="fld"><label>桌型结构<b>${TABLEMIX[P.tableMix].label}</b></label>${segRow("tableMix",Object.keys(TABLEMIX))}</div>
+  <div class="fld"><label>营业时段<b>${HOURS[P.hours].open}:00–${HOURS[P.hours].close%24}:00</b></label>${segRow("hours",Object.keys(HOURS))}</div>
+  <div class="fld"><label>等位容忍<b>${({"短":"12 分钟","中":"22 分钟","长":"38 分钟"})[P.patience]}</b></label>${segRow("patience",["短","中","长"])}</div>
+
+  <div class="grp">投入与结构</div>
+  <div class="fld"><label>装修单价（元/㎡）<b id="l_fitout">${fmt(P.fitout)}</b></label>
+    <input type="range" id="p_fitout" min="2000" max="8000" step="100" value="${P.fitout}"></div>
+  <div class="fld"><label>租金谈判系数<b id="l_rent">${P.rentAdj.toFixed(2)}×</b></label>
+    <input type="range" id="p_rent" min="60" max="140" step="2" value="${Math.round(P.rentAdj*100)}"></div>
+  <div class="fld"><label>外卖占比<b id="l_del">${pct(P.delivery,0)}</b></label>
+    <input type="range" id="p_del" min="0" max="50" step="1" value="${Math.round(P.delivery*100)}"></div>
+
+  <div class="grp">情景</div>
+  <div class="fld"><label>天气<b>${WXS[P.wx].n}</b></label>${segRow("wx",Object.keys(WXS),Object.fromEntries(Object.entries(WXS).map(([k,v])=>[k,v.n])))}</div>
+  <div class="fld"><label>竞争<b>${CMP[P.comp].n}</b></label>${segRow("comp",Object.keys(CMP),Object.fromEntries(Object.entries(CMP).map(([k,v])=>[k,v.n])))}</div>
+  <div class="fld"><label>宏观<b>${MAC[P.macro].n}</b></label>${segRow("macro",Object.keys(MAC),Object.fromEntries(Object.entries(MAC).map(([k,v])=>[k,v.n])))}</div>
+  <button class="reset" id="reset">恢复默认参数</button>
+  <p class="note" style="margin-top:10px">铺位口径：${m.gfa_sqm} ㎡ · ${m.floor} · 租金 ${fmt(m.rent_rmb_sqm_month)} 元/㎡·月 · 免租 ${m.free_fitout_days} 天</p>`;
+
+  $("#params").querySelectorAll(".seg button").forEach(b => b.onclick = () => {
+    P[b.parentNode.dataset.key] = b.dataset.v; render();
+  });
+  const bind = (id,f) => { const el=$(id); if(el) el.oninput = e => { f(+e.target.value); render(true); }; };
+  bind("#p_seats", v=>P.seats=v); bind("#p_check", v=>P.check=v);
+  bind("#p_fitout", v=>P.fitout=v); bind("#p_rent", v=>P.rentAdj=v/100);
+  bind("#p_del", v=>P.delivery=v/100);
+  $("#reset").onclick = () => { P = siteDefaults(SITE); render(); };
+}
+
+/* ── 渲染 ───────────────────────────────────────────────── */
+function render(keepScroll) {
+  const S = D.sites[SITE], m = S.meta;
+  const ts = taste(S,P), dm = demand(S,P), gp = gap(S), tl = timeline(S,P,dm);
+  const cap = capacitySim(S,P,tl), fin = finance(S,P,cap);
+  const dom = domains(S,P,dm,ts,gp,cap,fin,tl), vd = verdict(dom,fin,cap,dm);
+
+  $("#heroTitle").textContent = `${m.city_name} · ${m.bd_code}（${m.bd_type}）`;
+  $("#heroSub").textContent = `${m.bd_desc} ｜ ${m.gfa_sqm} ㎡ · ${m.floor} · 面宽 ${m.frontage_m} 米`;
+  $("#compass").innerHTML = `<title>十二要素评分罗盘</title>` + drawCompass(dom,vd).replace(/^<svg[^>]*>/,"").replace(/<\/svg>$/,"");
+
+  const top = dom.slice().sort((a,b)=>b.s-a.s), low = dom.slice().sort((a,b)=>a.s-b.s);
+  $("#verdict").innerHTML = `
+    <div class="stamp ${vd.cls}">${vd.v}</div>
+    <h3>${vd.txt}</h3>
+    <div class="conf">置信度 ${vd.conf.toFixed(2)} ｜ 综合 ${vd.avg.toFixed(0)} 分 ｜ 弱项 ${vd.weak} 项</div>
+    <ul>
+      <li>最强要素 <b>${top[0].k} ${top[0].s.toFixed(0)}</b>、<b>${top[1].k} ${top[1].s.toFixed(0)}</b></li>
+      <li>最弱要素 <b>${low[0].k} ${low[0].s.toFixed(0)}</b>、<b>${low[1].k} ${low[1].s.toFixed(0)}</b></li>
+      <li>首年 EBITDA 率 <b>${pct(fin.margin,1)}</b>，亏损概率 <b>${pct(fin.pLoss,0)}</b></li>
+      <li>回本期中位 <b>${fin.payback.p50.toFixed(0)} 个月</b>（P90 ${fin.payback.p90.toFixed(0)} 个月）</li>
+    </ul>`;
+
+  const sens = sensitivity(S,P,cap,fin);
+  const idle = Math.max(0, dm.total - cap.servedDay);
+  const nightBlocked = P.hours==="晚+夜宵" && S.policy.night_econ_policy.indexOf("一般")>=0;
+
+  $("#main").innerHTML = `
+  <section class="mod" id="m1">
+    <div class="modhead"><span class="tag">壹 · 需求捕获</span>
+      <h2>商圈日均品类需求池 <b>${fmt(dm.pool)}</b> 人次，本店按引力模型可捕获 <b>${pct(dm.share,1)}</b>，折合 <b>${fmt(dm.total)}</b> 人次/日</h2>
+      <p>捕获份额由 Huff 概率引力模型给出：吸引力取座位规模、评分先验、口味适配与价格带匹配的乘积形式（MCI 规格），距离衰减指数 β=1.85。竞品清单含 ${dm.nComp} 家同需求域门店。</p></div>
+    <div class="cols c32">
+      <div class="box"><h5>日内客流构成<span>堂食 / 事件外溢 / 外卖</span></h5>
+        ${areaChart(tl,dm,tl.hours)}
+        <p class="formula">V = Σ_i [ A₀·d_i^−β / (A₀·d_i^−β + Σ_j A_j·d_ij^−β) ] × N_i × τ × f_out × ρ_cat × α</p>
+        <p class="note">τ=4.2 为日内周转系数（日均独立到访 ÷ 小时均在场人数），α=0.70 为新店稳态知晓率；连锁品牌带流量进场时 α 可上调至 0.85。</p>
+        <p class="note">场馆与街区活动按年到场 ${fmt(S.events.annual_attendance)} 人次、外溢先验 ${pct(S.events.mean_spill_prior,1)} 折算为日均 ${fmt(dm.evPool)} 人次的额外需求池，与常规需求走同一套份额分配后本店得 ${fmt(dm.event)} 人次；外卖按非替代增量 55% 计入。</p></div>
+      <div class="box"><h5>分环捕获<span>Huff 份额</span></h5>
+        <table class="t"><tr><th>环</th><th>距离</th><th>在场人群</th><th>需求池</th><th>份额</th><th>捕获</th></tr>
+        ${dm.rings.map(r=>`<tr><td>R${r.ring}</td><td class="n">${fmt(r.dist)}m</td><td class="n">${fmt(r.pop)}</td><td class="n">${fmt(r.pool)}</td><td class="n">${pct(r.share,1)}</td><td class="n">${fmt(r.cap)}</td></tr>`).join("")}
+        </table>
+        <p class="note">外出就餐率 ${pct(dm.outRate,0)} 由本地产业结构（${S.industry.map(i=>i.industry_name).slice(0,3).join(" / ")}）与恩格尔系数 ${S.macro.engel_coef} 推得。</p></div>
+    </div>
+    <div class="cols c2" style="margin-top:20px">
+      <div class="box"><h5>竞争格局<span>价格 × 评分 × 座位</span></h5>${scatter(S,P,dm)}</div>
+      <div class="box"><h5>业态构成<span>周边 POI 前十</span></h5>
+        <table class="t"><tr><th>业态</th><th>门店</th><th>人均</th><th>评分</th><th>连锁率</th></tr>
+        ${S.poi_mix.slice(0,10).map(x=>`<tr><td>${x.l3}</td><td class="n">${x.n}</td><td class="n">${x.price?fmt(x.price):"—"}</td><td class="n">${x.rating}</td><td class="n">${pct(x.chain,0)}</td></tr>`).join("")}
+        </table></div>
+    </div>
+  </section>
+
+  <section class="mod" id="m2">
+    <div class="modhead"><span class="tag">贰 · 口味与菜单</span>
+      <h2>菜单口味与本地口味谱形状相关度 <b>${ts.raw.toFixed(2)}</b>，新奇度修正后适配度 <b>${ts.fit.toFixed(2)}</b>；${gp[0].cat}是最大需求缺口，达 <b>${(gp[0].gap*100).toFixed(1)}pp</b></h2>
+      <p>口味谱由本地菜单语料与评论语义抽取的十二味觉轴构成。新奇度按倒 U 型（MAYA 原则）修正：完全贴合与完全陌生都不占优，中度陌生的方案获得最高溢价。</p></div>
+    <div class="cols c23">
+      <div class="box"><h5>口味谱对照<span>十二味觉轴</span></h5>${radar(ts)}
+        <p class="formula">F = (1+ρ)/2 × [1 + 0.14·(4n(1−n))^1.4] ， ρ = corr(T_region , t_menu) ， n = 1 − (1+ρ)/2</p></div>
+      <div class="box"><h5>供给缺口<span>需求份额 − 供给份额</span></h5>${gapBars(gp)}
+        <p class="note">需求份额由场合结构经「场合→品类」映射矩阵推得，供给份额取周边餐饮 POI 门店数占比。正值表示该品类的需求未被现有供给吸收。</p>
+        <h5 style="margin-top:14px">口味调整建议<span>偏差最大的三轴</span></h5>
+        <table class="t"><tr><th>味觉轴</th><th>本地</th><th>菜单</th><th>偏差</th><th>动作</th></tr>
+        ${ts.gaps.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta)).slice(0,4).map(x=>
+          `<tr><td>${x.axis}</td><td class="n">${x.region.toFixed(2)}</td><td class="n">${x.menu.toFixed(2)}</td><td class="n">${x.delta>0?"+":""}${x.delta.toFixed(2)}</td><td>${x.delta>0.18?"下调，本地接受度不足":x.delta<-0.18?"上调，可作差异点":"维持"}</td></tr>`).join("")}
+        </table></div>
+    </div>
+  </section>
+
+  <section class="mod" id="m3">
+    <div class="modhead"><span class="tag">叁 · 时序与天气</span>
+      <h2>周峰谷差 <b>${((Math.max.apply(null,tl.dow)/Math.min.apply(null,tl.dow)-1)*100).toFixed(0)}%</b>，${WXS[P.wx].n}情景使全年客流系数落到 <b>${tl.wxk.toFixed(2)}</b></h2>
+      <p>星期指数与天气弹性由 ${D.benchmark_stores.length} 家同城基准店 ${fmt(1095)} 天流水回归得到，非经验假设。天气影响按天气类别分箱估计，避免线性外推。</p></div>
+    <div class="cols c32">
+      <div class="box"><h5>星期 × 时段热力<span>到店人次</span></h5>${heat(tl)}</div>
+      <div class="box"><h5>天气弹性<span>相对晴天</span></h5>
+        <table class="t"><tr><th>天气</th><th>客流系数</th><th>年占比</th></tr>
+        ${Object.entries(D.weather_elasticity[m.city_code]).sort((a,b)=>b[1]-a[1]).map(([k,v])=>
+          `<tr><td>${k}</td><td class="n">${v.toFixed(2)}</td><td class="n">${S.weather_mix[k]?pct(S.weather_mix[k],1):"—"}</td></tr>`).join("")}
+        </table>
+        <p class="note">${WXS[P.wx].note}。当前情景对本品类的净效应已计入下方产能与财务推演。</p>
+        <div class="kpis" style="margin-top:12px">
+          <div class="kpi"><div class="v">${fmt(tl.mean)}<small>人次</small></div><div class="k">日均到店</div></div>
+          <div class="kpi"><div class="v">${fmt(Math.max.apply(null,tl.daily))}<small>人次</small></div><div class="k">周峰值日</div></div>
+          <div class="kpi"><div class="v">${fmt(Math.min.apply(null,tl.daily))}<small>人次</small></div><div class="k">周谷值日</div></div>
+        </div></div>
+    </div>
+  </section>
+
+  <section class="mod" id="m4">
+    <div class="modhead"><span class="tag">肆 · 席位与产能</span>
+      <h2>${cap.seatsReal} 座 / ${cap.nTables} 桌的配置日承接 <b>${fmt(cap.servedDay)}</b> 人次，放弃率 <b>${pct(cap.balkRate,1)}</b>，RevPASH <b>${cap.revpash.toFixed(1)}</b> 元</h2>
+      <p>离散事件仿真：到达按非齐次泊松过程展开到 10 分钟粒度，团体规模由场合结构抽样，就座采用「最小可容桌优先 + 大桌拼台」规则，超过等位容忍即计入放弃。仿真 42 个营业日取均值。</p></div>
+    <div class="cols c2">
+      <div class="box"><h5>产能结果<span>42 日仿真</span></h5>
+        <div class="kpis">
+          <div class="kpi"><div class="v">${fmt(cap.servedDay)}</div><div class="k">日均接待（人次）</div></div>
+          <div class="kpi ${cap.balkRate>.12?"hot":""}"><div class="v">${pct(cap.balkRate,1)}</div><div class="k">放弃率</div></div>
+          <div class="kpi"><div class="v">${cap.turns.toFixed(2)}</div><div class="k">桌均翻台（次/日）</div></div>
+          <div class="kpi"><div class="v">${pct(cap.seatUtil,0)}</div><div class="k">座位利用率</div></div>
+          <div class="kpi good"><div class="v">${cap.revpash.toFixed(1)}</div><div class="k">RevPASH（元/座·时）</div></div>
+          <div class="kpi"><div class="v">${cap.avgWait.toFixed(0)}<small>分</small></div><div class="k">平均等位</div></div>
+          <div class="kpi"><div class="v">${pct(Math.min(1,cap.servedDay/Math.max(dm.total,1)),0)}</div><div class="k">需求承接率</div></div>
+        </div>
+        <p class="formula">RevPASH = 营业收入 ÷（可售座位数 × 营业小时）</p>
+        <p class="note">桌型 ${TABLEMIX[P.tableMix].label}：2 人桌 ${cap.tables.filter(t=>t===2).length} 张、4 人桌 ${cap.tables.filter(t=>t===4).length} 张、6 人桌 ${cap.tables.filter(t=>t===6).length} 张。${idle>25?`需求侧仍有 <b>${fmt(idle)}</b> 人次/日未被产能承接，扩位或提速可直接变现。`:"当前产能与需求基本匹配。"}</p></div>
+      <div class="box"><h5>基准店对照<span>同城标定样本</span></h5>
+        <table class="t"><tr><th>基准店</th><th>座位</th><th>日均客</th><th>客单</th><th>翻台</th><th>食材率</th></tr>
+        ${D.benchmark_stores.map(b=>`<tr><td>${b.store}<br><span class="chip">${b.city}</span></td><td class="n">${b.seats}</td><td class="n">${fmt(b.avg_covers)}</td><td class="n">${fmt(b.avg_check)}</td><td class="n">${b.avg_turns}</td><td class="n">${pct(b.food_cost_ratio,1)}</td></tr>`).join("")}
+        <tr><td><b>本方案</b></td><td class="n"><b>${cap.seatsReal}</b></td><td class="n"><b>${fmt(cap.servedDay)}</b></td><td class="n"><b>${P.check}</b></td><td class="n"><b>${cap.turns.toFixed(2)}</b></td><td class="n"><b>${pct(fin.fcBase,1)}</b></td></tr>
+        </table>
+        <p class="note">基准店用于校准爬坡曲线与波动幅度；正式项目中此处替换为客户自有门店的收银流水。</p></div>
+    </div>
+  </section>
+
+  <section class="mod" id="m5">
+    <div class="modhead"><span class="tag">伍 · 财务推演</span>
+      <h2>首年营收中位 <b>${fmt(fin.rev.p50/10000,0)}</b> 万元、EBITDA 率 <b>${pct(fin.margin,1)}</b>，亏损概率 <b>${pct(fin.pLoss,0)}</b>、回本超 36 个月概率 <b>${pct(fin.pSlow,0)}</b>，回本期中位 <b>${fin.payback.p50.toFixed(0)}</b> 个月</h2>
+      <p>1,600 次蒙特卡洛抽样，随机变量含客流、客单、食材率三项，相关性通过共同的爬坡曲线传导。初始投资 ${fmt(fin.capex/10000,0)} 万元＝装修 ${fmt(m.gfa_sqm*P.fitout/10000,0)} 万＋后厨设备 ${fmt(m.gfa_sqm*EQUIP[P.cuisine]/10000,0)} 万＋家具 ${fmt(cap.seatsReal*850/10000,0)} 万＋开办 30 万；押金 ${fmt(m.rent_rmb_sqm_month*m.gfa_sqm*m.deposit_months/10000,0)} 万元为可退保证金，另计为营运资金。</p></div>
+    <div class="cols c32">
+      <div class="box"><h5>首年 EBITDA 分布<span>P10 / P50 / P90</span></h5>${hist(fin)}
+        <div class="kpis" style="margin-top:12px">
+          <div class="kpi"><div class="v">${fmt(fin.eb.p10/10000,0)}<small>万</small></div><div class="k">EBITDA P10</div></div>
+          <div class="kpi"><div class="v">${fmt(fin.eb.p50/10000,0)}<small>万</small></div><div class="k">EBITDA P50</div></div>
+          <div class="kpi"><div class="v">${fmt(fin.eb.p90/10000,0)}<small>万</small></div><div class="k">EBITDA P90</div></div>
+          <div class="kpi ${fin.pLoss>.2?"hot":"good"}"><div class="v">${pct(fin.pLoss,0)}</div><div class="k">P（首年亏损）</div></div>
+          <div class="kpi ${fin.pSlow>.25?"hot":""}"><div class="v">${pct(fin.pSlow,0)}</div><div class="k">P（回本 &gt; 36 月）</div></div>
+        </div></div>
+      <div class="box"><h5>敏感性<span>单因子 ±1σ</span></h5>${tornado(sens)}
+        <p class="note">排序即为谈判优先级：位次越靠前的因子，每单位改善对首年 EBITDA 的杠杆越大。</p></div>
+    </div>
+    <div class="cols c2" style="margin-top:20px">
+      <div class="box"><h5>12 个月推演<span>收入 / EBITDA / 累计现金</span></h5>${rampChart(fin,cap,P)}</div>
+      <div class="box"><h5>成本结构<span>占营收比</span></h5>
+        <table class="t"><tr><th>科目</th><th>比率</th><th>年额（万元）</th><th>口径</th></tr>
+        ${[["食材成本",fin.fcBase,"品类先验 + 产地波动"],["人力成本",fin.laborRate,"品类工时 × 城市工资"],
+           ["租金与管理费",fin.rent*12/fin.rev.p50,"合同租金 × 谈判系数"],["能耗",0.035,"面积与灶头数"],
+           ["营销与平台",0.032,"含外卖佣金摊销"],["其他与损耗",0.042,"包材、维修、办公"]].map(([k,v,n])=>
+          `<tr><td>${k}</td><td class="n">${pct(v,1)}</td><td class="n">${fmt(v*fin.rev.p50/10000,0)}</td><td>${n}</td></tr>`).join("")}
+        <tr><td><b>EBITDA</b></td><td class="n"><b>${pct(fin.margin,1)}</b></td><td class="n"><b>${fmt(fin.eb.p50/10000,0)}</b></td><td>不含折旧摊销</td></tr>
+        </table></div>
+    </div>
+  </section>
+
+  <section class="mod" id="m6">
+    <div class="modhead"><span class="tag">陆 · 前瞻规划</span>
+      <h2>${vd.v==="宜"?`按当前方案推进，未来 12 个月有 <b>${sens.length}</b> 个可控杠杆，最优先的是「${sens[0].k}」`:`当前方案有 <b>${vd.weak}</b> 项弱要素，${vd.v==="止"?"须先更换铺位或品类":"须在签约前解开下列条件"}`}</h2>
+      <p>规划由弱要素与敏感性排序自动生成：每一条都绑定触发条件与验证指标，进入运营后按月回灌实际数据重估。</p></div>
+    <div class="cols c2">
+      <div class="box"><h5>签约前条件<span>解锁项</span></h5>
+        <table class="t"><tr><th>要素</th><th>当前</th><th>条件</th></tr>
+        ${low.slice(0,4).map(d=>`<tr><td>${d.k}</td><td class="n"><span class="chip ${d.s<40?"b":"c"}">${d.s.toFixed(0)}</span></td><td>${condition(d,S,P,fin,cap,dm)}</td></tr>`).join("")}
+        </table>
+        <p class="note">${nightBlocked?'<span class="chip b">硬约束</span> 该铺位夜间经营政策为「一般」，晚+夜宵时段收入不可计入模型，须改回午+晚。':""}
+        ${!S.policy.open_flame_allowed&&CUISINE[P.cuisine].fire?'<span class="chip b">硬约束</span> 该铺位禁明火，本品类须改为电磁/蒸烤方案，出餐节奏与投入均需重估。':""}</p></div>
+      <div class="box"><h5>12 个月动作表<span>触发式</span></h5>
+        <table class="t"><tr><th>月</th><th>动作</th><th>触发条件</th><th>验证指标</th></tr>
+        ${plan(vd,cap,fin,dm,gp,ts).map(r=>`<tr><td class="n">${r.m}</td><td>${r.a}</td><td>${r.t}</td><td>${r.k}</td></tr>`).join("")}
+        </table></div>
+    </div>
+    <div class="box" style="margin-top:20px"><h5>十二要素明细<span>公式与取数</span></h5>
+      <table class="t"><tr><th>要素</th><th>得分</th><th>算式</th><th>本地取数</th></tr>
+      ${dom.map(d=>`<tr><td>${d.k}</td><td class="n"><span class="chip ${d.s>=68?"a":d.s>=45?"c":"b"}">${d.s.toFixed(0)}</span></td><td style="font-family:var(--mono);font-size:10.5px;color:var(--gold)">${d.f}</td><td>${d.d}</td></tr>`).join("")}
+      </table></div>
+  </section>`;
+}
+
+/* 敏感性：单因子 ±1σ */
+function sensitivity(S, p, cap, fin) {
+  const base = fin.eb.p50;
+  const run = (mut) => {
+    const q = Object.assign({}, p); mut(q);
+    const dm2 = demand(S,q), tl2 = timeline(S,q,dm2), c2 = capacitySim(S,q,tl2);
+    return finance(S,q,c2).eb.p50;
+  };
+  const items = [
+    { k:"客单价 ±8%",   lo:run(q=>q.check=Math.round(p.check*.92))-base, hi:run(q=>q.check=Math.round(p.check*1.08))-base },
+    { k:"租金 ±15%",    lo:run(q=>q.rentAdj=p.rentAdj*1.15)-base,        hi:run(q=>q.rentAdj=p.rentAdj*.85)-base },
+    { k:"座位 ±20%",    lo:run(q=>q.seats=Math.round(p.seats*.8))-base,  hi:run(q=>q.seats=Math.round(p.seats*1.2))-base },
+    { k:"竞争新增",     lo:run(q=>q.comp="C-P3")-base,                   hi:run(q=>q.comp="C-BASE")-base },
+    { k:"天气情景",     lo:run(q=>q.wx="W-RAIN")-base,                   hi:run(q=>q.wx="W-BASE")-base },
+    { k:"外卖占比 ±10pp",lo:run(q=>q.delivery=Math.max(0,p.delivery-.1))-base, hi:run(q=>q.delivery=Math.min(.5,p.delivery+.1))-base }
+  ];
+  return items.sort((a,b)=>Math.max(Math.abs(b.lo),Math.abs(b.hi))-Math.max(Math.abs(a.lo),Math.abs(a.hi)));
+}
+
+function condition(d, S, p, fin, cap, dm) {
+  const M = {
+    "客群基盘":"扩大可及半径：增设外卖专线或与场馆/写字楼做定向团餐，把 R2 环需求池纳入捕获范围",
+    "交通可达":"补强最后 200 米：门头指引、地图定位纠偏、接驳指示，把可达衰减系数从 exp(−d/320) 抬升",
+    "商业供给":"引入互补业态共生：与影院/健身/办公做套票或错峰联营，借客流不借客单",
+    "竞争强度":`价格带避让：主流带 ${fmt(dm.priceRef)} 元附近拥挤，向上或向下错位一档，或以品类重叠度低的产品结构切入`,
+    "口味适配":"按偏差最大的味觉轴调整配方，把形状相关度抬到 0.80 以上再签约",
+    "食材产地":"锁定 2 家以上同品类供应商并签年度价格带，把波动 CV 压到 0.15 以内",
+    "技法产能":"重排出餐动线：把出餐时长超过 12 分钟的菜品做半成品化，或增设一个出品工位",
+    "场景匹配":"重做场景结构：按主导场合重设套餐、人数配置与桌型，而非沿用总部标配",
+    "本地文化":"用本地食材与在地叙事做在地化改造，降低文化折扣",
+    "经济消费力":`租金必须谈到 ${(fin.rent*12/Math.max(fin.rev.p50,1)*100).toFixed(1)}% 以下的营收占比，或缩减面积`,
+    "文旅事件":"与场馆方签活动日历共享，把事件外溢从被动接客变成排班与备货的前置输入",
+    "政策合规":`证照周期 ${S.policy.license_days_median} 天须计入开业排期，明火与排烟方案在签约前取得书面确认`
+  };
+  return M[d.k] || "—";
+}
+
+function plan(vd, cap, fin, dm, gp, ts) {
+  const rows = [
+    { m:"M-2", a:"证照与排烟方案书面确认", t:"签约前置", k:"取得受理回执" },
+    { m:"M-1", a:"按场合结构定桌型与预订规则", t:`主导场合份额 > 25%`, k:"桌型与场合结构偏差 < 10%" },
+    { m:"M1",  a:"开业首月只跑 60% SKU，逐周放量", t:"出餐时长 > 12 分钟的菜品占比过高", k:"出餐达标率 ≥ 92%" },
+    { m:"M2",  a:cap.balkRate>.10?"增设等位动线与预点单，压放弃率":"启动错峰时段专属产品", t:`放弃率 ${pct(cap.balkRate,1)}`, k:"放弃率 ≤ 8%" },
+    { m:"M3",  a:`按口味偏差调整 ${ts.gaps.slice().sort((a,b)=>Math.abs(b.delta)-Math.abs(a.delta))[0].axis} 轴配方`, t:"复购率低于同城基准", k:"14 日复购 ≥ 18%" },
+    { m:"M4",  a:`切入「${gp[0].cat}」缺口做限定产品线`, t:`缺口 ${(gp[0].gap*100).toFixed(1)}pp 仍未被竞品填补`, k:"新品贡献营收 ≥ 12%" },
+    { m:"M6",  a:"菜单工程复盘：明星/金牛/瘦狗/问号四象限重排", t:"任一菜品毛利贡献连续 8 周垫底", k:"菜单综合毛利率 +2pp" },
+    { m:"M9",  a:"进入淡季前锁定人力与食材年度价格带", t:"周谷值日客流低于峰值 55%", k:"食材率波动 CV ≤ 0.15" },
+    { m:"M12", a:"回灌实际流水重估十二要素，决定二店与否", t:`累计现金转正（预测 ${fin.payback.p50.toFixed(0)} 月）`, k:"模型 WAPE ≤ 12%" }
+  ];
+  return rows;
+}
+
+/* ── 启动 ───────────────────────────────────────────────── */
+function boot() {
+  const tabs = $("#sitetabs");
+  tabs.innerHTML = Object.keys(D.sites).map(k => {
+    const m = D.sites[k].meta;
+    return `<button type="button" data-k="${k}" aria-pressed="${k===SITE}">${m.city_name} · ${m.bd_code}<small>${m.bd_type}</small></button>`;
+  }).join("");
+  tabs.querySelectorAll("button").forEach(b => b.onclick = () => {
+    SITE = b.dataset.k; P = siteDefaults(SITE);
+    tabs.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    renderParams(); render();
+  });
+  renderParams(); render();
+}
+boot();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,826 @@
+<!doctype html>
+<html lang="zh">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>餐饮经营全周期图谱</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one sheet. A Minard-style growth stream (stages left→right, four lenses as bands whose width grows with the business),
+   stage header above, 侍天 service track below, a pinned detail card at the right. Single light theme by brand choice (宣纸 report). */
+:root{
+  --paper:#f4f0e7; --card:#fffdf8; --ink:#17130d; --body:#3a332a; --muted:#706758; --gold:#76551f; --gold-400:#a8842f; --gold-hi:#d4a862;
+  --ink-field:#efe6d2; --seal:#8c3228; --line:rgba(23,19,13,.16); --rule:rgba(23,19,13,.34); --card-line:rgba(118,85,31,.34);
+  --l-guest:#d4a862; --l-ops:#76551f; --l-team:#4e6b3f; --l-eco:#6e6355;
+  --f-cn:'Noto Serif SC','Songti SC','STSong',serif; --f-en:'Noto Serif',Georgia,serif; --f-mono:'IBM Plex Mono','Noto Serif SC',ui-monospace,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-cn);font-size:15px;line-height:1.6}
+.wrap{max-width:1560px;margin:0 auto;padding:28px clamp(16px,3vw,48px) 48px}
+h1,h2,h3{margin:0;font-weight:600;text-wrap:balance}
+p{margin:0;text-wrap:pretty}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:14px}
+.brand img{width:44px;height:44px}
+.wm{font-family:var(--f-en);font-size:18px;letter-spacing:.3em;white-space:nowrap}
+.wm .k{color:var(--ink);font-weight:700}.wm .g{color:var(--gold-400);font-weight:400}
+.top .doc{font-size:13px;letter-spacing:.3em;color:var(--gold)}
+
+.intro{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;padding:28px 0 20px}
+.eyebrow{font-size:13px;letter-spacing:.34em;color:var(--gold);margin-bottom:10px}
+.intro h1{font-size:clamp(24px,2.6vw,40px);line-height:1.3;letter-spacing:.06em}
+.legend{display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--body);min-width:0}
+.legend .row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px}
+.legend{flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 32px}
+.legend svg{vertical-align:middle;margin-right:6px}
+.legend .note{color:var(--muted)}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+.controls{display:flex;flex-direction:column;gap:10px;padding:4px 0 18px}
+.lenses{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.ctl-lab{font-size:13px;letter-spacing:.2em;color:var(--gold);min-width:9.5em}
+.chip.st{font-weight:600}
+.chip.st .n{font-family:var(--f-mono);font-weight:400;color:var(--gold);font-size:12px}
+.insight{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:24px 48px;align-items:center;background:var(--card);border:1px solid var(--card-line);border-radius:2px;padding:24px 28px;margin:4px 0 20px}
+.insight .big{font-family:var(--f-mono);font-size:clamp(44px,5vw,72px);line-height:1;color:var(--gold)}
+.insight .big small{font-size:.42em;color:var(--muted)}
+.insight h2{font-size:clamp(18px,1.6vw,24px);line-height:1.5;letter-spacing:.04em;margin-top:12px}
+.insight .so{font-size:15px;color:var(--body);margin-top:10px}
+.insight .src{font-size:12px;color:var(--muted);margin-top:12px}
+.cad svg{display:block;width:100%;height:auto}
+.cad .leg{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--body);margin-top:8px}
+.cad .leg i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.qlist{display:flex;flex-direction:column}
+.qlist button{all:unset;cursor:pointer;display:grid;grid-template-columns:10px minmax(0,1fr) 16px;gap:10px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.5;color:var(--ink)}
+.qlist button:hover{color:var(--gold)}
+.qlist button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.qlist i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;color:var(--body)}
+.kv b{font-family:var(--f-mono);font-weight:500;color:var(--ink);text-align:right}
+@media (max-width:860px){.insight{grid-template-columns:minmax(0,1fr)}}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--card-line);background:var(--card);border-radius:2px;padding:7px 14px;font-size:14px;cursor:pointer;transition:border-color .2s, background .2s}
+.chip:hover{border-color:var(--gold)}
+.chip[aria-pressed="true"]{background:var(--ink-field);border-color:var(--gold);font-weight:600}
+.chip i{width:12px;height:12px;border-radius:2px;display:inline-block}
+
+.stage-grid{display:flex;flex-direction:column;gap:20px}
+.chart{background:var(--card);border:1px solid var(--card-line);border-radius:2px;padding:12px 8px 6px;min-width:0;overflow-x:auto}
+.chart svg{display:block;width:100%;min-width:1040px;height:auto}
+.chart.g3d{position:relative;padding:0;overflow:hidden}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px}
+.tools{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;font-size:13px;color:var(--body)}
+.tools .key{display:inline-flex;align-items:center;gap:6px}
+.lsel{font-size:13px;letter-spacing:.2em;color:var(--gold);margin-left:8px}
+#lensSel{font:inherit;font-size:14px;color:var(--ink);background:var(--card);border:1px solid var(--card-line);border-radius:2px;padding:6px 10px}
+#cad .sthead:hover rect{opacity:.85}
+.views{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--gold);border-radius:2px;overflow:hidden}
+.seg{all:unset;cursor:pointer;padding:9px 18px;font-size:14px;color:var(--body);background:var(--card);border-right:1px solid var(--card-line)}
+.seg:last-child{border-right:0}
+.seg:hover{color:var(--ink)}
+.seg[aria-pressed="true"]{background:var(--ink);color:#f6f1e4;font-weight:600}
+.seg:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.method{font-size:14px;color:var(--body);line-height:1.8;margin-top:12px;max-width:72em}
+.method b{color:var(--ink)}
+.panel{background:var(--card);border:1px solid var(--card-line);border-top:3px solid var(--gold);border-radius:2px;padding:24px 28px;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.25fr) minmax(0,1fr);gap:20px 40px;min-width:0}
+.panel .col{display:flex;flex-direction:column;gap:14px;min-width:0}
+.panel .col + .col{padding-left:40px;border-left:1px solid var(--line)}
+.panel .col .blk:first-child{border-top:0;padding-top:0}
+.sib{display:grid;grid-template-columns:1fr 1fr;column-gap:20px}
+.panel .where{font-size:13px;letter-spacing:.2em;color:var(--gold)}
+.panel h2{font-size:28px;letter-spacing:.06em}
+.panel .q{font-size:19px;line-height:1.55;color:var(--ink)}
+.panel .blk{display:flex;flex-direction:column;gap:6px;padding-top:14px;border-top:1px solid var(--line)}
+.panel .lab{font-size:12px;letter-spacing:.3em;color:var(--muted)}
+.panel .metric{font-size:15px;line-height:1.6;color:var(--body)}
+.panel .do{font-size:16px;line-height:1.6;color:var(--ink)}
+.pill{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--card-line);border-radius:999px;padding:3px 12px;font-size:13px}
+.sib button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:7px 0;border-top:1px solid var(--line);font-size:14px;color:var(--body)}
+.sib button:hover{color:var(--ink)}
+.sib button[aria-current="true"]{color:var(--ink);font-weight:600}
+.sib button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.sib i{width:9px;height:9px;border-radius:2px;flex:none}
+
+svg text{font-family:var(--f-cn);fill:var(--ink)}
+svg .mono{font-family:var(--f-mono)}
+.node,.gate{cursor:pointer}
+.gate:focus{outline:none}
+.gate:focus-visible rect{stroke:var(--gold);stroke-width:2}
+.node:focus{outline:none}
+.node:focus-visible .hit{stroke:var(--gold);stroke-width:2}
+.band,.node,.nlabel{transition:opacity .25s}
+
+.tip{position:fixed;pointer-events:none;z-index:5;max-width:280px;background:var(--ink);color:var(--paper);border-radius:2px;padding:8px 12px;font-size:13px;line-height:1.5;opacity:0;transition:opacity .12s}
+.tip b{display:block;font-size:14px;color:#f6f1e4}
+
+.foot{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 48px;margin-top:28px;padding-top:20px;border-top:1px solid var(--rule)}
+.foot .claim{font-size:18px;font-weight:600;letter-spacing:.06em}
+.foot .small{font-size:13px;color:var(--muted);margin-top:6px}
+.foot .cta{font-size:14px;color:var(--body);text-align:right}
+.foot .cta b{display:block;font-size:15px;letter-spacing:.34em;color:var(--gold);font-weight:400;margin-bottom:4px}
+.nw{white-space:nowrap}
+br.mb{display:none}
+@media (max-width:560px){br.mb{display:inline}}
+
+details.table{margin-top:24px;border-top:1px solid var(--line);padding-top:12px}
+details.table summary{cursor:pointer;font-size:14px;color:var(--gold);letter-spacing:.1em}
+.tscroll{overflow-x:auto;margin-top:12px}
+table{border-collapse:collapse;width:100%;min-width:880px;font-size:13px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12px;letter-spacing:.1em}
+
+@media (max-width:980px){.panel{grid-template-columns:minmax(0,1fr)}.ctl-lab{min-width:0;width:100%}.panel .col + .col{padding-left:0;border-left:0;padding-top:16px;border-top:1px solid var(--line)}}
+.hint{display:none;font-size:12px;color:var(--muted);margin:-8px 0 0}
+@media (max-width:1100px){.hint{display:block}}
+@media (max-width:720px){.foot{grid-template-columns:minmax(0,1fr)}.foot .cta{text-align:left}.top .doc{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<main class="wrap">
+  <header class="top">
+    <div class="brand"><img src="data:image/png;base64,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" alt="侍天印章"><span class="wm" aria-label="TIANSIGHT"><span class="k">T</span><span class="g">I</span><span class="k">A</span><span class="g">NSIGHT</span></span></div>
+    <span class="doc">餐饮经营全周期图谱</span>
+  </header>
+
+  <section class="intro">
+    <div>
+      <p class="eyebrow" id="eyebrow">餐饮经营全周期 · 5 个视角 · 60 个关键决策点</p>
+      <h1 id="headline">先用 3 个阶段跑通一家店，<br>再从 3 条路径并行扩张。</h1>
+    </div>
+  </section>
+
+  <section class="insight" aria-label="核心发现">
+    <div>
+      <p class="big"><span id="ins-n"></span><small> / <span id="ins-d"></span></small></p>
+      <h2 id="ins-h"></h2>
+    </div>
+    <div class="cad"><p class="lab" style="font-size:12px;letter-spacing:.3em;color:var(--gold);margin-bottom:8px">点一行，看这一步要回答的问题</p><div id="cad"></div>
+      <div class="leg"><span><i style="background:#e4d8be"></i>一次性定下</span><span><i style="background:#a8842f"></i>每开一家店、每进一个市场重做</span><span><i style="background:#17130d"></i>按周按月持续</span></div>
+    </div>
+  </section>
+
+
+  <div class="stage-grid">
+    <div class="toolbar">
+    <div class="views" id="views" role="group" aria-label="切换视图">
+      <button type="button" class="seg" data-view="map" aria-pressed="true">全周期 · 扩张路径</button>
+      <button type="button" class="seg" data-view="gantt" aria-pressed="false">单店视图 · 甘特</button>
+      <button type="button" class="seg" data-view="g3d" aria-pressed="false">单店视图 · 立体</button>
+    </div>
+    <div class="tools">
+      <span class="key"><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="#17130d"/></svg>侍天主导 <span class="num" id="n-lead"></span></span>
+      <span class="key"><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="#fffdf8" stroke="#17130d" stroke-width="1.5"/></svg>协同 <span class="num" id="n-co"></span></span>
+      <span class="key"><svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="#fffdf8" stroke="#706758" stroke-width="1.3" stroke-dasharray="2.2 1.8"/></svg>外部 <span class="num" id="n-ext"></span></span>
+      <label class="lsel" for="lensSel">视角</label>
+      <select id="lensSel"></select>
+    </div>
+    </div>
+    <div class="chart" id="chart" aria-label="全周期图谱"></div>
+    <div class="chart" id="gantt" aria-label="单店甘特图" hidden></div>
+    <div class="chart g3d" id="g3d" aria-label="单店立体视图" hidden></div>
+    <p class="hint">图谱可左右滑动，查看三条扩张路径。</p>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+
+  <details class="table">
+    <summary>方法与口径</summary>
+    <div class="method">
+      <p><b>扩张门槛（建议值，设计值，按项目核定）</b>　① 连续 3 个月达成测算营收的 90% 以上（达成率 = 实际营收 ÷ 测算营收）；② 单店模型偏差在 ±10% 以内（偏差 = 实际门店利润 ÷ 模型测算利润 − 1）；③ 经营例会建议完成率 80% 以上；④ 招牌菜与主要岗位已有书面标准。</p>
+      <p><b>画法与方法来源</b>　全周期图参照 Minard 的流向图与冲积图（alluvial）；扩张路径按 Ansoff 增长矩阵（1957）划分；扩张门槛借用 Cooper 的 Stage-Gate 阶段门方法；单店视图用泳道甘特图，一行一个决策，持续性决策画成节奏条，一个刻度代表一次复盘。</p>
+      <p><b>怎么读</b>　带宽表示各视角在该阶段的工作量占比，跑通单店后每个视角分流到三条扩张路径；三条路径按 Ansoff 增长矩阵分为同店加密、新定位、新市场，资源允许时可以同时推进；新定位与新市场叠加即多元化，风险最高，建议两条路径各自跑通后再组合。一次性的决定靠专家把关，反复做的决定靠看板和例会，侍天的第二大脑与教练式督导主要用在后一类。</p>
+      <p><b>数据性质</b>　带宽、单店时间节奏与决策节奏均为侍天的设计值与分类，用于说明方法，不是统计数据；指标口径为通用定义，具体项目按门店数据重新核定。</p>
+    </div>
+  </details>
+
+  <details class="table">
+    <summary>以表格查看全部决策点</summary>
+    <div class="tscroll"><table id="table"></table></div>
+  </details>
+
+  <footer class="foot">
+    <div>
+      <p class="claim">每次拍板有依据，每项行动有人落实，每轮改善可以核对。</p>
+      <p class="small">指标口径为通用定义，具体项目按门店数据重新核定。证照、工程施工、法律与财税事项由相应专业机构完成。</p>
+    </div>
+    <div class="cta"><b>拍板之前，问侍天。</b>合作从一份经营诊断开始 · <span class="nw">tiansight.apuch.cn</span></div>
+  </footer>
+</main>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+const STAGES = [
+  {id:"s1", cn:"一", name:"筹备", span:"开业前 6–12 个月", scale:"1 家店 · 筹建中", glyph:"plan", svc:"新店开业 · 概念开创"},
+  {id:"s2", cn:"二", name:"开业", span:"开业前后 90 天", scale:"1 家店", glyph:"one", svc:"新店开业 · 第二大脑"},
+  {id:"s3", cn:"三", name:"单店稳定", span:"开业 3 个月后", scale:"1 家店 · 模型跑通", glyph:"steady", svc:"经营复盘 · 第二大脑"},
+  {id:"s4", cn:"甲", name:"多店复制", branch:true, ansoff:"PENETRATION", span:"同品牌 · 同市场 · 2–10 家店", glyph:"many", svc:"连锁督导 · 经营复盘"},
+  {id:"s5", cn:"乙", name:"多定位", branch:true, ansoff:"PRODUCT DEVELOPMENT", span:"新品牌或新店型 · 同市场", glyph:"brands", svc:"概念开创 · 经营复盘"},
+  {id:"s6", cn:"丙", name:"多市场适配", branch:true, ansoff:"MARKET DEVELOPMENT", span:"同品牌 · 跨城市或跨区域", glyph:"markets", svc:"新店开业 · 连锁督导"}
+];
+const LENSES = [
+  {id:"scene", name:"客户场景", en:"SCENES",     hex:"#d4a862", op:.40, share:[.21,.22,.21]},
+  {id:"brand", name:"品牌 IP",  en:"BRAND & IP", hex:"#8c3228", op:.13, share:[.20,.20,.20]},
+  {id:"ops",   name:"经营决策", en:"OWNER",      hex:"#76551f", op:.24, share:[.23,.21,.23]},
+  {id:"team",  name:"团队组织", en:"TEAM",       hex:"#4e6b3f", op:.22, share:[.18,.20,.19]},
+  {id:"eco",   name:"生态伙伴", en:"PARTNERS",   hex:"#6e6355", op:.22, share:[.18,.17,.17]}
+];
+const ROLE = {lead:"侍天主导", co:"侍天协同", ext:"外部专业方"};
+// [stage, lens, name, question, metric, role, what 侍天 does, cadence]
+const RAW = [
+ ["s1","scene","目标客群","为谁做这一餐？","目标客群占商圈客流比","lead","商圈客群画像","once"],
+ ["s1","scene","消费场景","顾客在什么场合、什么时段来？","场景与时段分布：午市 / 晚市 / 夜宵 / 外卖","lead","场景与时段测算","once"],
+ ["s1","brand","品类与概念","卖什么，凭什么被选？","品类竞争密度 = 同品类门店数 ÷ 商圈餐饮门店数","lead","概念开创：主概念、招牌菜与价格带","once"],
+ ["s1","brand","命名与视觉","名字和门头能不能让人记住？","商标检索结果；门头辨识测试通过率","co","提供定位与卖点输入；命名注册与视觉由专业方完成","once"],
+ ["s1","ops","选址与可研","这个铺位能不能做，多久回本？","投资回收期 = 总投资 ÷ 月均经营现金流","lead","36 个月投资现金流模型","once"],
+ ["s1","ops","菜单与价格带","菜单怎么排，价格怎么定？","ATV 每桌实收；菜品毛利率 = (售价 − 食材成本) ÷ 售价","lead","开业菜单结构与价格体系","once"],
+ ["s1","team","后厨产能","后厨能否稳定出品？","高峰小时出餐能力（份 / 小时）","co","后厨档口与动线校对；设计施工由专业方完成","once"],
+ ["s1","team","团队配置","要多少人，设哪些岗位？","人力成本率 = 人力成本 ÷ 营业收入","co","岗位编制与人效测算","once"],
+ ["s1","eco","设计与施工","谁来建，按什么标准建？","预算偏差率 = (实际 − 预算) ÷ 预算；工期偏差","ext","提出经营需求，由设计施工方执行","once"],
+ ["s1","eco","供应链","食材从哪来，供应稳不稳？","核心食材供应商数；到货准时率","co","由菜单反推采购清单与备货标准","once"],
+
+ ["s2","scene","开业获客","第一批客人从哪来？","新客数；平台曝光到店转化率","co","开业期渠道与套餐建议；投放由门店或平台执行","once"],
+ ["s2","scene","首次体验","顾客第一次来，满意吗？","平台评分；差评中出品类占比","lead","差评分类与出品问题清单","loop"],
+ ["s2","brand","招牌记忆点","顾客离店后记得哪道菜？","招牌菜点单渗透率 = 含招牌菜订单数 ÷ 总订单数","lead","招牌菜识别与菜单呈现","loop"],
+ ["s2","brand","开业内容","第一批内容讲什么？","内容曝光到店转化率；品牌词搜索量","co","提供卖点与菜品故事；内容制作与投放由门店或代理执行","once"],
+ ["s2","ops","爬坡曲线","实际经营是否沿着测算走？","达成率 = 实际营收 ÷ 测算营收（按周）","lead","周快报，偏差项标出","loop"],
+ ["s2","ops","点单结构校准","顾客真正点的是什么？","点单渗透率 = 含该菜订单数 ÷ 总订单数","lead","订单级流水分析与首轮菜单调整","loop"],
+ ["s2","team","开业演练","开业那天，人、货、场是否就位？","演练问题关闭率","co","开业演练与现场督导（可选专项）","once"],
+ ["s2","team","出品标准","每道菜是否同一个味道？","出餐时长中位数；退菜率","co","出品标准卡与复核节奏","loop"],
+ ["s2","eco","平台上线","外卖与团购怎么上？","平台订单占比；平台抽佣率","ext","提供菜单与价格建议；上线由平台方执行","once"],
+ ["s2","eco","证照与合规","证照是否齐全？","证照办结状态","ext","不在侍天服务范围，由专业机构办理","once"],
+
+ ["s3","scene","复购与会员","老顾客是否回来？","复购率 = 统计期内消费 ≥ 2 次的会员数 ÷ 消费会员数","lead","复购分层与菜品关联分析","loop"],
+ ["s3","scene","体验一致性","每一桌的体验是否稳定？","出品类差评占比；翻台时长","co","体验问题按环节归因","loop"],
+ ["s3","brand","口碑沉淀","评价里顾客反复提到什么？","好评中提及招牌菜与品牌元素的占比","lead","评价文本分析与口碑关键词","loop"],
+ ["s3","brand","菜品故事","门店讲得出自己的故事吗？","有故事说明的招牌菜数 ÷ 招牌菜总数","co","菜单文案与菜品故事梳理","once"],
+ ["s3","ops","菜单迭代","哪些菜留、改，哪些下架？","菜品四象限：销量 × 毛利；复点率","lead","月度菜单复盘与上下架清单","loop"],
+ ["s3","ops","座位与时段","哪个餐段、哪类桌型没坐满？","RevPASH 每座位每小时收入 = 营业收入 ÷ (座位数 × 营业小时数)","lead","餐段与桌型效率分析","loop"],
+ ["s3","team","经营例会","每条建议有人负责吗？","建议完成率 = 按期完成项 ÷ 当期建议项","lead","教练式督导：责任人与完成时间","loop"],
+ ["s3","team","人效与排班","高峰人手够吗，闲时是否过剩？","人效 = 营业收入 ÷ 总工时","co","岗位协同与人效优化（可选专项）","loop"],
+ ["s3","eco","渠道与折扣","满减与券叠加后，实际让利多少？","折扣率 = 折扣金额 ÷ 应收金额（分渠道）","lead","分渠道实收拆解与折扣规则建议","loop"],
+ ["s3","eco","供应商协同","价格与品质是否稳定，损耗出在哪？","食材成本率 = 食材成本 ÷ 营业收入；损耗率 = 损耗金额 ÷ 食材领用金额","co","成本波动预警与损耗控制；议价由门店执行","loop"],
+
+ ["s4","scene","区域客群","新店的客人和首店一样吗？","新店与首店的客群、场景与时段结构对比","lead","新店竞争圈研判与定位适配","unit"],
+ ["s4","scene","跨店体验","每家店吃到的是同一个水准吗？","跨店评分差；跨店出品类差评占比","co","跨店体验对比","loop"],
+ ["s4","brand","品牌一致性","门头、菜单、出品，每家店是同一个品牌吗？","品牌标准执行达标率；招牌菜渗透率跨店差","co","品牌标准与区域菜单","loop"],
+ ["s4","brand","品牌资产","品牌被搜索、被推荐的次数在涨吗？","品牌词搜索量；自然到店占比","co","品牌数据纳入总部看板","loop"],
+ ["s4","ops","单店模型","好的方法能在第二家、第十家重现吗？","模型偏差 = 新店实际 ÷ 单店模型测算","lead","单店模型标准化与店型效率模型","unit"],
+ ["s4","ops","总部看板","总部能否同时看清每家店？","门店分层：按营收与利润贡献","lead","经营看板：周报、月报与季度复盘","loop"],
+ ["s4","team","标准与培训","新团队能否按标准做？","标准执行达标率","co","产品标准、岗位分工与培训辅导","loop"],
+ ["s4","team","店长梯队","店长从哪来？","储备店长数 ÷ 计划开店数","co","督导体系与店长复盘方法","loop"],
+ ["s4","eco","中央厨房","统一配送，还是门店自制？","中央厨房配送占比；配送成本率","ext","提出菜单侧需求；建设由专业方完成","once"],
+ ["s4","eco","加盟与融资","用什么方式扩张？","直营与加盟的单店模型对比","co","提供经营数据与模型；交易由专业机构完成","once"],
+
+ ["s5","scene","新客群","第二品牌为谁做？","新品牌目标客群规模与场景","lead","新概念开创与客群验证","unit"],
+ ["s5","scene","店型适配","商场店、社区店、外卖店各卖什么？","分店型 ATV 每桌实收与时段结构","lead","分店型菜单与价格带","unit"],
+ ["s5","brand","品牌架构","主品牌与新品牌是什么关系？","新老品牌客群重叠率；品牌认知区分度","lead","品牌架构与定位区隔","unit"],
+ ["s5","brand","IP 与联名","是否需要文化 IP 或联名？","联名期新客占比","co","餐饮 IP 文化打造（可选专项）","once"],
+ ["s5","ops","品牌组合","资源投给哪个品牌？","分品牌利润贡献与投资回收期","lead","品牌组合与分业态现金流模型","loop"],
+ ["s5","ops","共享与区隔","哪些能共用，哪些要分开？","共用食材 SKU 占比","co","菜单架构与供应链共用分析","once"],
+ ["s5","team","多品牌组织","一个团队能管几个品牌？","人效 = 营业收入 ÷ 员工数（分品牌）","co","岗位协同与人效优化（可选专项）","once"],
+ ["s5","team","方法沉淀","好方法如何留在组织里？","培训覆盖率；标准文档更新频率","co","教练式培训与经营例会方法","loop"],
+ ["s5","eco","设计与空间","第二品牌的视觉与空间由谁做？","设计交付节点达成","ext","提供定位与菜单输入；设计由专业方完成","unit"],
+ ["s5","eco","共享供应商","两个品牌能否共用供应商？","共用供应商采购额占比","co","采购清单合并与替代方案","once"],
+
+ ["s6","scene","本地口味","菜系进入新市场，要改多少？","本地化菜品占比；招牌菜点单渗透率","lead","本地客群分析与菜单本地化","unit"],
+ ["s6","scene","价格带","新市场的价格带在哪？","目标价格带的门店占比与断层","lead","价格带与菜品矩阵","unit"],
+ ["s6","brand","品牌本地化","品牌故事在新市场还讲得通吗？","新市场品牌认知调研；菜名理解度","co","本地化表达与菜单命名","unit"],
+ ["s6","brand","本地口碑起势","新市场的第一批口碑从哪来？","开业 90 天评分与收藏数","co","本地内容与平台建议；执行由门店或代理完成","unit"],
+ ["s6","ops","区域模型","每个市场用同一个模型吗？","分区域单店模型偏差","lead","区域菜单与店型模型","unit"],
+ ["s6","ops","进入与退出","何时加码，何时止损？","按现金流设定的止损线；下滑原因诊断","lead","下滑诊断与优先动作","loop"],
+ ["s6","team","跨区督导","远程如何保证执行？","跨区建议完成率","lead","第二大脑远程看板与季度复盘","loop"],
+ ["s6","team","本地团队","本地人才从哪来？","本地员工占比；员工流失率","ext","招聘由门店或人力机构执行","unit"],
+ ["s6","eco","本地供应链","食材能否本地采购？","本地采购占比；到货准时率","co","菜单侧的食材替代方案","unit"],
+ ["s6","eco","法规与税务","跨区域经营是否合规？","合规事项清单","ext","不在侍天服务范围，由法律与财税机构完成","unit"]
+];
+const CAD = {once:"一次性定下", unit:"每开一店 · 每进一市场重做", loop:"按周按月持续"};
+const CAD_HEX = {once:"#e4d8be", unit:"#a8842f", loop:"#17130d"};
+const PTS = RAW.map((r,i)=>({i, stage:r[0], lens:r[1], name:r[2], q:r[3], metric:r[4], role:r[5], does:r[6], cad:r[7]}));
+document.getElementById('eyebrow').textContent = `餐饮经营全周期 · ${LENSES.length} 个视角 · ${PTS.length} 个关键决策点`;
+
+const GATE = [
+  ["连续 3 个月达成测算营收的 90% 以上","达成率 = 实际营收 ÷ 测算营收"],
+  ["单店模型偏差在 ±10% 以内","偏差 = 实际门店利润 ÷ 模型测算利润 − 1"],
+  ["经营例会建议完成率 80% 以上","建议完成率 = 按期完成项 ÷ 当期建议项"],
+  ["招牌菜与主要岗位已有书面标准","标准覆盖率 = 已成文的招牌菜与岗位数 ÷ 总数"]
+];
+
+const count = r => PTS.filter(p=>p.role===r).length;
+document.getElementById('n-lead').textContent = count('lead');
+document.getElementById('n-co').textContent = count('co');
+document.getElementById('n-ext').textContent = count('ext');
+document.getElementById('headline').innerHTML = `先用 3 个阶段跑通一家店，<br>再从 3 条路径并行扩张。`;
+
+// ── geometry (viewBox units)
+// Trunk: three sequential stages build one store. Then the stream fans out (alluvial) into three parallel expansion paths.
+const W = 1240, LM = 118, RM = 14, colW = 184;
+const TRUNK = STAGES.filter(s=>!s.branch), BR = STAGES.filter(s=>s.branch);
+const MID = 540, TOTAL = [460, 480, 500];
+const GATE_X = LM + colW*TRUNK.length, BX = GATE_X + 104, BW = W - RM - BX;
+const BH_HEAD = 58, ROW = 36, BGAP = 30, BH = BH_HEAD + ROW*LENSES.length;
+const BTOP = MID - (BR.length*BH + (BR.length-1)*BGAP)/2;
+const H = BTOP + BR.length*BH + (BR.length-1)*BGAP + 92;
+const cx = i => LM + colW * (i + .5);
+const lensIdx = Object.fromEntries(LENSES.map((l,i)=>[l.id,i]));
+const stIdx = Object.fromEntries(STAGES.map((s,i)=>[s.id,i]));
+const brIdx = Object.fromEntries(BR.map((s,i)=>[s.id,i]));
+function bandAt(i){ let y = MID - TOTAL[i]/2; return LENSES.map(l=>{ const h = TOTAL[i]*l.share[i]; const r=[y, y+h]; y+=h; return r; }); }
+const B = TRUNK.map((_,i)=>bandAt(i));
+const brTop = k => BTOP + k*(BH+BGAP);
+const rowY = (k,li) => brTop(k) + BH_HEAD + li*ROW;
+
+const svg = d3.select('#chart').append('svg').attr('viewBox',`0 0 ${W} ${H}`).attr('role','img')
+  .attr('aria-label','餐饮经营全周期图谱：三个阶段跑通单店，之后分成三条可并行的扩张路径，五个视角共 60 个关键决策点');
+
+// trunk dividers + opening-day marker
+const g0 = svg.append('g');
+TRUNK.forEach((s,i)=>{ if(i>0){ const x0 = LM + colW*i; g0.append('line').attr('x1',x0).attr('x2',x0).attr('y1',18).attr('y2',MID+TOTAL[i]/2+40).attr('stroke','rgba(23,19,13,.12)'); } });
+const xo = LM + colW;
+g0.append('line').attr('x1',xo).attr('x2',xo).attr('y1',150).attr('y2',MID+TOTAL[1]/2+30).attr('stroke','#8c3228').attr('stroke-width',1.2).attr('stroke-dasharray','4 4');
+g0.append('text').attr('x',xo+6).attr('y',168).attr('font-size',12).style('fill','#8c3228').text('开业日');
+
+// trunk stage headers
+function glyph(g, kind){ // one square = one store
+  const sq=(x,y,c,dash)=>g.append('rect').attr('x',x).attr('y',y).attr('width',9).attr('height',9).attr('rx',1)
+    .attr('fill',dash?'none':c).attr('stroke',dash?'#706758':'none').attr('stroke-dasharray',dash?'2 2':null);
+  if(kind==='plan') sq(0,6,'',true);
+  if(kind==='one') sq(0,6,'#17130d');
+  if(kind==='steady'){ sq(0,6,'#17130d'); g.append('circle').attr('cx',4.5).attr('cy',10.5).attr('r',10).attr('fill','none').attr('stroke','#76551f'); }
+  if(kind==='many'){ for(let k=0;k<7;k++) sq((k%4)*12,(k<4?0:12),'#17130d'); }
+  if(kind==='brands'){ for(let k=0;k<4;k++) sq((k%2)*12,(k<2?0:12),'#17130d'); for(let k=0;k<4;k++) sq(30+(k%2)*12,(k<2?0:12),'#a8842f'); }
+  if(kind==='markets'){ [[0,'#17130d'],[34,'#17130d'],[68,'#17130d']].forEach(([ox,c],j)=>{ for(let k=0;k<4;k++) sq(ox+(k%2)*12,(k<2?0:12),c); if(j) g.append('line').attr('x1',ox-6).attr('x2',ox-6).attr('y1',-2).attr('y2',23).attr('stroke','#706758').attr('stroke-dasharray','2 2'); }); }
+}
+const ghi = svg.insert('g',':first-child');
+TRUNK.forEach((s,i)=>{ ghi.append('rect').attr('class','colhi').attr('data-st',s.id).attr('x',LM+colW*i+2).attr('y',8).attr('width',colW-4).attr('height',MID+TOTAL[2]/2+28).attr('rx',2).attr('fill','#efe6d2').attr('opacity',0); });
+const gh = svg.append('g');
+TRUNK.forEach((s,i)=>{
+  const g = gh.append('g').attr('class','sthead').attr('data-st',s.id).attr('tabindex',0).attr('role','button').attr('aria-label',`查看${s.name}阶段的全部问题`).attr('transform',`translate(${LM + colW*i + 14},20)`);
+  g.append('rect').attr('x',-8).attr('y',-6).attr('width',colW-12).attr('height',140).attr('fill','transparent');
+  g.append('circle').attr('cx',15).attr('cy',15).attr('r',15).attr('fill','none').attr('stroke','#76551f').attr('stroke-width',1.2);
+  g.append('text').attr('x',15).attr('y',20.5).attr('text-anchor','middle').attr('font-size',15).attr('font-weight',600).style('fill','#76551f').text(s.cn);
+  g.append('text').attr('x',40).attr('y',21).attr('font-size',19).attr('font-weight',600).text(s.name);
+  g.append('text').attr('x',0).attr('y',52).attr('font-size',12).style('fill','#706758').text(s.span);
+  glyph(g.append('g').attr('transform','translate(0,66)'), s.glyph);
+  g.append('text').attr('x',0).attr('y',106).attr('font-size',12).style('fill','#3a332a').text(s.scale);
+});
+
+// trunk stream
+const area = d3.area().curve(d3.curveBumpX).x(d=>d.x).y0(d=>d.y0).y1(d=>d.y1);
+const GAP = 1.5;
+const xs = [LM, ...TRUNK.map((_,i)=>cx(i)), GATE_X];
+const idxAt = k => Math.max(0, Math.min(TRUNK.length-1, k-1));
+const gs = svg.append('g');
+LENSES.forEach((l,li)=>{
+  const data = xs.map((x,k)=>{ const b = B[idxAt(k)][li]; return {x, y0:b[0]+GAP, y1:b[1]-GAP}; });
+  gs.append('path').attr('class','band').attr('data-lens',l.id).attr('d',area(data)).attr('fill',l.hex).attr('fill-opacity',l.op);
+  gs.append('path').attr('class','band').attr('data-lens',l.id).attr('d',d3.line().curve(d3.curveBumpX).x(d=>d.x).y(d=>d.y0)(data)).attr('fill','none').attr('stroke',l.hex).attr('stroke-opacity',.55);
+});
+
+// alluvial fan: each lens band splits into three ribbons, one per expansion path; colour = lens identity all the way through
+const gf = svg.append('g');
+const last = B[TRUNK.length-1];
+LENSES.forEach((l,li)=>{
+  const [t0,t1] = last[li], part = (t1-t0)/BR.length;
+  BR.forEach((s,k)=>{
+    const a0 = t0 + part*k + .6, a1 = t0 + part*(k+1) - .6, r0 = rowY(k,li) + 2, r1 = rowY(k,li) + ROW - 2, xm = (GATE_X + BX)/2;
+    gf.append('path').attr('class','band').attr('data-lens',l.id).attr('data-br',s.id)
+      .attr('d',`M${GATE_X},${a0} C${xm},${a0} ${xm},${r0} ${BX},${r0} L${W-RM},${r0} L${W-RM},${r1} L${BX},${r1} C${xm},${r1} ${xm},${a1} ${GATE_X},${a1} Z`)
+      .attr('fill',l.hex).attr('fill-opacity',l.op*.95);
+  });
+});
+
+// gate: the single store model has to work before any expansion path
+const gg = svg.append('g').attr('class','gate').attr('tabindex',0).attr('role','button').attr('aria-label','扩张门槛：单店模型跑通的四项检查');
+gg.append('rect').attr('x',GATE_X-9).attr('y',MID-TOTAL[2]/2-10).attr('width',18).attr('height',TOTAL[2]+20).attr('fill','transparent');
+gg.append('line').attr('x1',GATE_X-3).attr('x2',GATE_X-3).attr('y1',MID-TOTAL[2]/2-10).attr('y2',MID+TOTAL[2]/2+10).attr('stroke','#17130d').attr('stroke-width',1.5);
+gg.append('line').attr('x1',GATE_X+3).attr('x2',GATE_X+3).attr('y1',MID-TOTAL[2]/2-10).attr('y2',MID+TOTAL[2]/2+10).attr('stroke','#17130d').attr('stroke-width',1.5);
+const gl1 = gg.append('g').attr('transform',`translate(${GATE_X},${MID-TOTAL[2]/2-36})`);
+gl1.append('rect').attr('x',-70).attr('y',-18).attr('width',140).attr('height',30).attr('rx',15).attr('fill','#17130d');
+gl1.append('text').attr('x',0).attr('y',2).attr('text-anchor','middle').attr('font-size',13).style('fill','#f6f1e4').text('② 扩张门槛 · 查看');
+
+// branch headers + frames
+const gb = svg.append('g');
+BR.forEach((s,k)=>{
+  const y = brTop(k);
+  gb.append('rect').attr('class','brframe').attr('data-st',s.id).attr('x',BX).attr('y',y).attr('width',BW).attr('height',BH).attr('fill','none').attr('stroke','rgba(118,85,31,.34)');
+  gb.append('rect').attr('x',BX).attr('y',y).attr('width',3).attr('height',BH).attr('fill','#76551f');
+  const g = gb.append('g').attr('class','sthead').attr('data-st',s.id).attr('tabindex',0).attr('role','button').attr('aria-label',`查看${s.name}路径的全部问题`).attr('transform',`translate(${BX+16},${y+8})`);
+  g.append('rect').attr('x',-12).attr('y',-6).attr('width',BW-8).attr('height',BH_HEAD-2).attr('fill','transparent');
+  g.append('circle').attr('cx',13).attr('cy',14).attr('r',13).attr('fill','none').attr('stroke','#76551f').attr('stroke-width',1.2);
+  g.append('text').attr('x',13).attr('y',19).attr('text-anchor','middle').attr('font-size',13).attr('font-weight',600).style('fill','#76551f').text(s.cn);
+  g.append('text').attr('x',36).attr('y',20).attr('font-size',18).attr('font-weight',600).text(s.name);
+  g.append('text').attr('x',36 + s.name.length*19 + 10).attr('y',19).attr('font-size',10).attr('letter-spacing','.16em').style('fill','#706758').attr('font-family',"'Noto Serif',Georgia,serif").text(s.ansoff);
+  g.append('text').attr('x',0).attr('y',43).attr('font-size',12).style('fill','#3a332a').text(s.span);
+  glyph(g.append('g').attr('transform',`translate(${BW-32-(s.glyph==='markets'?90:s.glyph==='many'?46:52)},4)`), s.glyph);
+});
+// branch-area title
+const gt = svg.append('g').attr('transform',`translate(${BX},34)`);
+gt.append('text').attr('x',0).attr('y',0).attr('font-size',15).attr('font-weight',600).style('fill','#17130d').text('③ 三条路径可并行');
+// diversification note
+const gd = svg.append('g').attr('transform',`translate(${BX},${brTop(BR.length-1)+BH+30})`);
+svg.append('path').attr('d',`M${W-RM+2},${brTop(1)+BH/2} h8 V${brTop(2)+BH/2} h-8`).attr('fill','none').attr('stroke','#8c3228').attr('stroke-dasharray','3 3');
+gd.append('text').attr('x',0).attr('y',4).attr('font-size',13).style('fill','#8c3228').text('乙 × 丙 = 多元化，风险最高');
+
+// ① reading guide over the trunk
+const ga = svg.append('g').attr('transform',`translate(${LM+colW+18},${MID-TOTAL[2]/2-70})`);
+ga.append('text').attr('x',0).attr('y',0).attr('font-size',15).attr('font-weight',600).text('① 先跑通一家店');
+
+// lens labels at the left margin
+const gl = svg.append('g');
+LENSES.forEach((l,li)=>{
+  const b = B[0][li], y = (b[0]+b[1])/2;
+  const g = gl.append('g').attr('class','band').attr('data-lens',l.id).attr('transform',`translate(10,${y})`);
+  g.append('rect').attr('x',0).attr('y',-14).attr('width',4).attr('height',28).attr('fill',l.hex);
+  g.append('text').attr('x',12).attr('y',-1).attr('font-size',15).attr('font-weight',600).text(l.name);
+  g.append('text').attr('x',12).attr('y',15).attr('font-size',10).attr('letter-spacing','.18em').style('fill','#706758').attr('font-family',"'Noto Serif',Georgia,serif").text(l.en);
+});
+
+// node positions
+PTS.forEach(p=>{
+  const li = lensIdx[p.lens], sibs = PTS.filter(q=>q.stage===p.stage && q.lens===p.lens), k = sibs.indexOf(p);
+  if (brIdx[p.stage] === undefined) {
+    const si = stIdx[p.stage], b = B[si][li], h = b[1]-b[0];
+    p.x = cx(si) - colW/2 + 22; p.y = b[0] + h*(k===0? .34 : .70); p.hitW = colW - 24;
+  } else {
+    const bk = brIdx[p.stage];
+    p.x = BX + 22 + k*(BW/2); p.y = rowY(bk,li) + ROW/2; p.hitW = BW/2 - 20;
+  }
+});
+const gn = svg.append('g');
+const nodes = gn.selectAll('g.node').data(PTS).join('g').attr('class','node').attr('data-lens',d=>d.lens)
+  .attr('transform',d=>`translate(${d.x},${d.y})`).attr('tabindex',0).attr('role','button')
+  .attr('aria-label',d=>`${stageName(d)} · ${lensName(d)} · ${d.name}：${d.q}（${ROLE[d.role]}）`);
+nodes.append('rect').attr('class','hit').attr('x',-12).attr('y',-13).attr('width',d=>d.hitW).attr('height',26).attr('rx',2).attr('fill','transparent');
+nodes.append('circle').attr('class','sel').attr('r',12).attr('fill','none').attr('stroke','#76551f').attr('stroke-width',2).attr('opacity',0);
+nodes.append('circle').attr('r',d=>d.role==='lead'?6.5:5.8)
+  .attr('fill',d=>d.role==='lead'?'#17130d':'#fffdf8')
+  .attr('stroke',d=>d.role==='lead'?'#fffdf8':d.role==='co'?'#17130d':'#706758')
+  .attr('stroke-width',d=>d.role==='lead'?2:d.role==='co'?1.6:1.4)
+  .attr('stroke-dasharray',d=>d.role==='ext'?'2.4 2':null);
+nodes.append('text').attr('class','nlabel').attr('x',17).attr('y',4.8).attr('font-size',14)
+  .style('fill',d=>d.role==='ext'?'#706758':'#17130d').text(d=>d.name);
+
+// ── interaction
+const tip = document.getElementById('tip');
+function stageName(p){ return STAGES[stIdx[p.stage]].name; }
+function lensName(p){ return LENSES[lensIdx[p.lens]].name; }
+nodes.on('mouseenter', function(ev,d){
+  tip.innerHTML = `<b>${d.name}</b>${d.q}`; tip.style.opacity = 1; moveTip(ev);
+}).on('mousemove', moveTip).on('mouseleave', ()=>{ tip.style.opacity = 0; })
+  .on('click', (ev,d)=>select(d))
+  .on('keydown', (ev,d)=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); select(d); } });
+function moveTip(ev){
+  const pad = 14, r = tip.getBoundingClientRect();
+  let x = ev.clientX + pad, y = ev.clientY + pad;
+  if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - pad;
+  if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - pad;
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+}
+
+const panel = document.getElementById('panel');
+let current = PTS.find(p=>p.stage==='s3' && p.name==='菜单迭代');
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function roleDot(r){ return r==='lead' ? '<svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="#17130d"/></svg>'
+  : r==='co' ? '<svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="#fffdf8" stroke="#17130d" stroke-width="1.5"/></svg>'
+  : '<svg width="14" height="14" aria-hidden="true"><circle cx="7" cy="7" r="4.6" fill="#fffdf8" stroke="#706758" stroke-width="1.3" stroke-dasharray="2.2 1.8"/></svg>'; }
+function select(d){
+  current = d; if (typeof highlightStage === 'function') highlightStage(d.stage); if (typeof ganttMark === 'function' && typeof grows !== 'undefined') ganttMark(d);
+  nodes.select('.sel').attr('opacity', p=>p===d?1:0);
+  const st = STAGES[stIdx[d.stage]], ln = LENSES[lensIdx[d.lens]];
+  const sibs = PTS.filter(p=>p.stage===d.stage);
+  panel.innerHTML = `
+    <div class="col"><p class="where">${st.cn} ${esc(st.name)} · ${esc(ln.name)}</p>
+    <h2>${esc(d.name)}</h2>
+    <p class="q">${esc(d.q)}</p></div>
+    <div class="col"><div class="blk"><p class="lab">指标口径</p><p class="metric">${esc(d.metric)}</p></div>
+    <div class="blk"><p class="lab">侍天做什么</p><span class="pill">${roleDot(d.role)}${ROLE[d.role]}</span><p class="do">${esc(d.does)}</p></div>
+    <div class="blk"><p class="lab">决策节奏</p>${cadPill(d.cad)}</div></div>
+    <div class="col"><div class="blk"><p class="lab">${st.branch ? "本路径" : "本阶段"}的 ${sibs.length} 个决策点</p><div class="sib">${
+      sibs.map(p=>`<button type="button" data-i="${p.i}" aria-current="${p===d}"><i style="background:${LENSES[lensIdx[p.lens]].hex}"></i>${esc(p.name)}</button>`).join('')
+    }</div></div></div>`;
+  panel.querySelectorAll('.sib button').forEach(b=>b.addEventListener('click',()=>select(PTS[+b.dataset.i])));
+}
+
+function showGate(){
+  current = null;
+  nodes.select('.sel').attr('opacity',0);
+  panel.innerHTML = `
+    <div class="col"><p class="where">三 单店稳定 → 三条扩张路径</p>
+    <h2>扩张门槛</h2>
+    <p class="q">单店模型跑通之前，任何一条扩张路径都会放大问题。</p></div>
+    <div class="col"><div class="blk"><p class="lab">建议门槛（设计值，按项目核定）</p>${
+      GATE.map((g,i)=>`<p class="do"><span class="num" style="color:#76551f">${String(i+1).padStart(2,'0')}</span>　${esc(g[0])}</p><p class="metric" style="padding-left:2.2em">${esc(g[1])}</p>`).join('')
+    }</div></div>
+    <div class="col"><div class="blk"><p class="lab">侍天做什么</p><span class="pill">${roleDot('lead')}侍天主导</span><p class="do">按月复盘四项检查；未达标的项目先回到单店优化，达标后再按资源选择一条或多条路径。</p></div></div>`;
+}
+gg.on('click', showGate).on('keydown', ev=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); showGate(); } });
+
+function highlightStage(id){
+  svg.selectAll('.colhi').attr('opacity', function(){ return this.dataset.st===id ? .55 : 0; });
+  svg.selectAll('.brframe').attr('stroke', function(){ return this.dataset.st===id ? '#76551f' : 'rgba(118,85,31,.34)'; }).attr('stroke-width', function(){ return this.dataset.st===id ? 2 : 1; });
+}
+function cadPill(c){ return `<span class="pill"><i style="width:10px;height:10px;border-radius:2px;display:inline-block;background:${CAD_HEX[c]}"></i>${CAD[c]}</span>`; }
+function showStage(id){
+  current = null; nodes.select('.sel').attr('opacity',0); highlightStage(id); if (typeof grows !== 'undefined') ganttStage(id);
+  const st = STAGES[stIdx[id]], ps = PTS.filter(p=>p.stage===id);
+  const n = k => ps.filter(p=>p.role===k).length, c = k => ps.filter(p=>p.cad===k).length;
+  panel.innerHTML = `
+    <div class="col"><p class="where">你在这里 · ${st.branch ? '扩张路径' : '阶段'} ${st.cn}</p>
+      <h2>${esc(st.name)}</h2>
+      <p class="q">${esc(st.span)}</p>
+      <div class="blk"><p class="lab">侍天对应服务</p><p class="do">${esc(st.svc)}</p></div></div>
+    <div class="col"><div class="blk"><p class="lab">这一步要回答的 ${ps.length} 个问题</p><div class="qlist">${
+      ps.map(p=>`<button type="button" data-i="${p.i}"><i style="background:${LENSES[lensIdx[p.lens]].hex}"></i><span>${esc(p.q)}</span>${roleDot(p.role)}</button>`).join('')
+    }</div></div></div>
+    <div class="col"><div class="blk"><p class="lab">侍天承担</p><div class="kv"><span>侍天主导</span><b>${n('lead')}</b><span>侍天协同</span><b>${n('co')}</b><span>外部专业方</span><b>${n('ext')}</b></div></div>
+      <div class="blk"><p class="lab">决策节奏</p><div class="kv"><span>${CAD.once}</span><b>${c('once')}</b><span>${CAD.unit}</span><b>${c('unit')}</b><span>${CAD.loop}</span><b>${c('loop')}</b></div></div>
+      <p class="metric">点任一问题，看指标口径与侍天的做法。</p></div>`;
+  panel.querySelectorAll('.qlist button').forEach(b=>b.addEventListener('click',()=>select(PTS[+b.dataset.i])));
+}
+svg.selectAll('.sthead').on('click', function(){ showStage(this.dataset.st); })
+  .on('keydown', function(ev){ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); showStage(this.dataset.st); } });
+
+
+// insight: decision cadence by stage (classification, not measurement)
+(function(){
+  const after = PTS.filter(p=>p.stage!=='s1'), rep = after.filter(p=>p.cad!=='once').length;
+  document.getElementById('ins-n').textContent = rep;
+  document.getElementById('ins-d').textContent = after.length;
+  document.getElementById('ins-h').textContent = `开业之后的 ${after.length} 个决策里，${rep} 个要反复做：按周按月持续，或每开一家店、每进一个市场重来一次。`;
+  const cw = document.getElementById('cad').clientWidth || 640, RW = Math.min(640, Math.max(300, cw)), LW = RW < 480 ? 112 : 132;
+  const keys = ['once','unit','loop'], RH = 30, G = 8, HH = STAGES.length*(RH+G);
+  const s = d3.select('#cad').append('svg').attr('viewBox',`0 0 ${RW} ${HH}`).attr('role','img').attr('aria-label','各阶段与路径的决策节奏构成');
+  const x = d3.scaleLinear().domain([0,10]).range([LW, RW-8]);
+  STAGES.forEach((st,r)=>{
+    const y = r*(RH+G), ps = PTS.filter(p=>p.stage===st.id);
+    const g = s.append('g').attr('class','sthead').attr('data-st',st.id).style('cursor','pointer').on('click',()=>showStage(st.id));
+    g.append('text').attr('x',0).attr('y',y+RH/2+5).attr('font-size',14).attr('font-weight',600).text(`${st.cn}　${st.name}`);
+    let acc = 0;
+    keys.forEach(k=>{
+      const m = ps.filter(p=>p.cad===k); if(!m.length) return;
+      const x0 = x(acc), x1 = x(acc+m.length); acc += m.length;
+      const seg = g.append('g').on('mouseenter', ev=>{ tip.innerHTML = `<b>${st.name} · ${CAD[k]} ${m.length} 个</b>${m.map(p=>p.name).join('、')}`; tip.style.opacity=1; moveTip(ev); })
+        .on('mousemove', moveTip).on('mouseleave', ()=>{ tip.style.opacity=0; });
+      seg.append('rect').attr('x',x0+1).attr('y',y).attr('width',Math.max(0,x1-x0-2)).attr('height',RH).attr('rx',2).attr('fill',CAD_HEX[k]);
+      seg.append('text').attr('x',(x0+x1)/2).attr('y',y+RH/2+5).attr('text-anchor','middle').attr('font-size',14).attr('font-family',"'IBM Plex Mono',monospace")
+        .style('fill', k==='once' ? '#17130d' : '#fffdf8').text(m.length);
+    });
+  });
+  // divider between the single-store trunk and the parallel paths
+  const yd = 3*(RH+G) - G/2;
+  s.append('line').attr('x1',0).attr('x2',RW).attr('y1',yd).attr('y2',yd).attr('stroke','rgba(23,19,13,.34)').attr('stroke-dasharray','3 3');
+})();
+
+// lens focus chips
+let focus = 'all';
+const lensSel = document.getElementById('lensSel');
+[{id:'all',name:'全部'}, ...LENSES].forEach(l=>{ const o = document.createElement('option'); o.value = l.id; o.textContent = l.name; lensSel.appendChild(o); });
+lensSel.addEventListener('change', ()=>setFocus(lensSel.value));
+function setFocus(id){
+  focus = id;
+  lensSel.value = id;
+  svg.selectAll('.band').style('opacity', function(){ return id==='all' || this.dataset.lens===id ? 1 : .22; });
+  nodes.style('opacity', d=> id==='all' || d.lens===id ? 1 : .18);
+  if (typeof grows !== 'undefined') ganttFocus(id);
+  if(id!=='all' && current && current.lens!==id){ select(PTS.find(p=>p.lens===id && p.stage===current.stage)); }
+}
+
+// table view
+const tb = document.getElementById('table');
+tb.innerHTML = '<thead><tr><th>阶段</th><th>视角</th><th>决策点</th><th>关键问题</th><th>指标口径</th><th>侍天角色</th><th>决策节奏</th></tr></thead><tbody>' +
+  PTS.map(p=>`<tr><td>${STAGES[stIdx[p.stage]].name}</td><td>${lensName(p)}</td><td>${esc(p.name)}</td><td>${esc(p.q)}</td><td>${esc(p.metric)}</td><td>${ROLE[p.role]}</td><td>${CAD[p.cad]}</td></tr>`).join('') + '</tbody>';
+
+// ════════ 单店视图：甘特（2D）与立体（3D）
+// Method: swimlane Gantt (one row per decision, grouped by lens) with a store track on top;
+// stage gates as milestones (Stage-Gate); recurring decisions drawn as rhythm strips, one tick per review.
+// Timings are a typical single-store rhythm (design values), month 0 = opening day.
+const T = { // [start, end] in months relative to opening day; freq for recurring: 'w' weekly, 'm' monthly
+  "目标客群":[-12,-10], "消费场景":[-11,-9], "品类与概念":[-11,-8], "命名与视觉":[-8,-5],
+  "选址与可研":[-12,-9], "菜单与价格带":[-7,-2], "后厨产能":[-7,-4], "团队配置":[-4,-1],
+  "设计与施工":[-8,-1], "供应链":[-4,-1],
+  "开业获客":[-1,1], "首次体验":[0,3,'w'], "招牌记忆点":[0,3,'w'], "开业内容":[-1.5,0.5],
+  "爬坡曲线":[0,3,'w'], "点单结构校准":[0.5,3,'w'], "开业演练":[-0.75,0], "出品标准":[-1,3,'w'],
+  "平台上线":[-0.5,0.5], "证照与合规":[-3,-0.5],
+  "复购与会员":[3,12,'m'], "体验一致性":[3,12,'m'], "口碑沉淀":[3,12,'m'], "菜品故事":[3,5],
+  "菜单迭代":[3,12,'m'], "座位与时段":[3,12,'m'], "经营例会":[3,12,'w'], "人效与排班":[3,12,'m'],
+  "渠道与折扣":[3,12,'m'], "供应商协同":[3,12,'m']
+};
+const STORE_PHASES = [{name:"筹备", a:-12, b:-1, st:"s1"}, {name:"开业", a:-1, b:3, st:"s2"}, {name:"单店稳定", a:3, b:12, st:"s3"}];
+const MILESTONES = [
+  {m:-9, name:"签约选址", ly:24}, {m:-6, name:"设计定稿", ly:40, an:"end"}, {m:-5, name:"进场施工", ly:24, an:"start"}, {m:-0.5, name:"证照办结", ly:40, an:"end"},
+  {m:0, name:"开业日", key:true, ly:24}, {m:1, name:"首月复盘", ly:40, an:"start"}, {m:3, name:"90 天复盘", ly:24}, {m:9, name:"扩张门槛评估", gate:true, ly:24}
+];
+const SP = PTS.filter(p=>T[p.name] && ['s1','s2','s3'].includes(p.stage)).map(p=>{
+  const t = T[p.name]; return Object.assign(p, {t0:t[0], t1:t[1], freq:t[2]||null});
+});
+
+// ── view switch
+const views = {map:document.getElementById('chart'), gantt:document.getElementById('gantt'), g3d:document.getElementById('g3d')};
+const hintEl = document.querySelector('.hint');
+let view = 'map', three = null;
+document.querySelectorAll('#views .seg').forEach(b=>b.addEventListener('click',()=>setView(b.dataset.view)));
+function setView(v){
+  view = v;
+  Object.entries(views).forEach(([k,el])=>{ el.hidden = k!==v; });
+  document.querySelectorAll('#views .seg').forEach(b=>b.setAttribute('aria-pressed', b.dataset.view===v));
+  hintEl.textContent = v==='map' ? '图谱可左右滑动，查看三条扩张路径。' : v==='gantt' ? '甘特图可左右滑动，查看开业前 12 个月到开业后 12 个月。' : '拖动旋转，滚轮或双指缩放。';
+  if (v==='g3d') { if(!three) three = build3D(); else three.resize(); }
+}
+
+// ── 2D Gantt
+const GW = 1240, LBL = 214, GX0 = LBL + 18, GX1 = GW - 16, TRACK_Y = 70, LANE_Y = 214, RH = 26, LH = 30;
+const gx = d3.scaleLinear().domain([-12,12]).range([GX0, GX1]);
+const laneRows = LENSES.map(l => SP.filter(p=>p.lens===l.id).sort((a,b)=>a.t0-b.t0 || a.t1-b.t1));
+let gy = LANE_Y; const laneTop = [];
+laneRows.forEach((rows,li)=>{ laneTop.push(gy); rows.forEach((p,k)=>{ p.gy = gy + LH + k*RH + RH/2; }); gy += LH + rows.length*RH + 14; });
+const GH = gy + 10;
+const gsvg = d3.select('#gantt').append('svg').attr('viewBox',`0 0 ${GW} ${GH}`).attr('role','img')
+  .attr('aria-label','单店生命周期甘特图：上方为门店阶段与里程碑，下方按五个视角列出各决策的时间与节奏');
+
+// phase backgrounds
+STORE_PHASES.forEach((ph,i)=>{
+  gsvg.append('rect').attr('class','gph').attr('data-st',ph.st).attr('x',gx(ph.a)).attr('y',36).attr('width',gx(ph.b)-gx(ph.a)).attr('height',GH-40)
+    .attr('fill', i%2 ? '#f6f1e4' : '#fffdf8');
+});
+// month grid + axis
+d3.range(-12,13).forEach(m=>{
+  gsvg.append('line').attr('x1',gx(m)).attr('x2',gx(m)).attr('y1',40).attr('y2',GH-8).attr('stroke', m%3===0 ? 'rgba(23,19,13,.14)' : 'rgba(23,19,13,.06)');
+  if (m%3===0) gsvg.append('text').attr('x',gx(m)).attr('y',28).attr('text-anchor','middle').attr('font-size',12).attr('class','mono')
+    .style('fill', m===0 ? '#8c3228' : '#706758').text(m===0 ? '开业日' : (m>0?'+':'') + m + ' 月');
+});
+gsvg.append('text').attr('x',10).attr('y',28).attr('font-size',12).attr('letter-spacing','.2em').style('fill','#76551f').text('典型节奏 · 设计值');
+// store track (on top)
+const gtr = gsvg.append('g');
+gtr.append('text').attr('x',10).attr('y',TRACK_Y+18).attr('font-size',16).attr('font-weight',600).text('单店');
+gtr.append('text').attr('x',10).attr('y',TRACK_Y+36).attr('font-size',10).attr('letter-spacing','.18em').attr('font-family',"'Noto Serif',Georgia,serif").style('fill','#706758').text('ONE STORE');
+STORE_PHASES.forEach((ph,i)=>{
+  const g = gtr.append('g').attr('class','sthead').attr('data-st',ph.st).style('cursor','pointer').on('click',()=>showStage(ph.st));
+  g.append('rect').attr('x',gx(ph.a)+1).attr('y',TRACK_Y).attr('width',gx(ph.b)-gx(ph.a)-2).attr('height',30).attr('rx',2)
+    .attr('fill', ['#e4d8be','#a8842f','#17130d'][i]);
+  g.append('text').attr('x',gx(ph.a)+12).attr('y',TRACK_Y+20).attr('font-size',14).attr('font-weight',600).style('fill', i===0 ? '#17130d' : '#fffdf8')
+    .text(`${STAGES[i].cn} ${ph.name}`);
+});
+MILESTONES.forEach((ms,i)=>{
+  const x = gx(ms.m), y = TRACK_Y + 50, g = gtr.append('g').attr('transform',`translate(${x},${y})`);
+  if (ms.gate) { g.attr('class','gate2').style('cursor','pointer').attr('tabindex',0).attr('role','button').attr('aria-label','扩张门槛：查看四项检查')
+    .on('click', showGate).on('keydown', ev=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); showGate(); } }); }
+  g.append('path').attr('d','M0,-7 L7,0 L0,7 L-7,0 Z').attr('fill', ms.key ? '#8c3228' : ms.gate ? '#17130d' : '#fffdf8').attr('stroke', ms.key ? '#8c3228' : '#17130d').attr('stroke-width',1.4);
+  g.append('text').attr('x', ms.an==='end' ? 4 : ms.an==='start' ? -4 : 0).attr('y', ms.ly).attr('text-anchor', ms.an || 'middle').attr('font-size',12)
+    .style('fill', ms.key ? '#8c3228' : '#3a332a').attr('font-weight', ms.gate ? 600 : 400).text(ms.gate ? ms.name + ' →' : ms.name);
+});
+// opening-day line across lanes
+gsvg.append('line').attr('x1',gx(0)).attr('x2',gx(0)).attr('y1',TRACK_Y-6).attr('y2',GH-8).attr('stroke','#8c3228').attr('stroke-width',1.2).attr('stroke-dasharray','4 4');
+
+// lanes
+const glanes = gsvg.append('g');
+LENSES.forEach((l,li)=>{
+  const y = laneTop[li], g = glanes.append('g').attr('class','glane').attr('data-lens',l.id);
+  g.append('rect').attr('x',0).attr('y',y).attr('width',GW).attr('height',2).attr('fill',l.hex).attr('opacity',.9);
+  g.append('text').attr('x',10).attr('y',y+21).attr('font-size',15).attr('font-weight',600).text(l.name);
+  g.append('text').attr('x',10 + l.name.length*15 + 10).attr('y',y+20).attr('font-size',10).attr('letter-spacing','.18em').attr('font-family',"'Noto Serif',Georgia,serif").style('fill','#706758').text(l.en);
+});
+const grows = glanes.selectAll('g.grow').data(SP).join('g').attr('class','grow').attr('data-lens',d=>d.lens)
+  .attr('transform',d=>`translate(0,${d.gy})`).attr('tabindex',0).attr('role','button').style('cursor','pointer')
+  .attr('aria-label',d=>`${d.name}：${d.q}（${ROLE[d.role]}，${CAD[d.cad]}）`);
+grows.append('rect').attr('class','rowhi').attr('x',0).attr('y',-RH/2).attr('width',GW).attr('height',RH).attr('fill','#efe6d2').attr('opacity',0);
+grows.append('circle').attr('cx',22).attr('cy',0).attr('r',d=>d.role==='lead'?5:4.6)
+  .attr('fill',d=>d.role==='lead'?'#17130d':'#fffdf8').attr('stroke',d=>d.role==='ext'?'#706758':'#17130d')
+  .attr('stroke-width',d=>d.role==='lead'?0:1.4).attr('stroke-dasharray',d=>d.role==='ext'?'2.2 1.8':null);
+grows.append('text').attr('x',36).attr('y',4.8).attr('font-size',14).style('fill',d=>d.role==='ext'?'#706758':'#17130d').text(d=>d.name);
+grows.each(function(d){
+  const g = d3.select(this), l = LENSES[lensIdx[d.lens]], x0 = gx(d.t0), x1 = gx(d.t1);
+  if (!d.freq) { // one-off decision: a solid bar
+    g.append('rect').attr('x',x0).attr('y',-7).attr('width',Math.max(6,x1-x0)).attr('height',14).attr('rx',2)
+      .attr('fill', d.role==='ext' ? 'none' : l.hex).attr('fill-opacity', d.role==='lead' ? .95 : .45)
+      .attr('stroke', d.role==='ext' ? '#706758' : l.hex).attr('stroke-dasharray', d.role==='ext' ? '3 2' : null);
+  } else { // recurring decision: a rhythm strip, one tick per review
+    g.append('line').attr('x1',x0).attr('x2',x1).attr('y1',0).attr('y2',0).attr('stroke',l.hex).attr('stroke-width',2).attr('stroke-opacity',.9);
+    const step = d.freq==='w' ? 0.25 : 1, hh = d.freq==='w' ? 6 : 9;
+    for (let m = d.t0; m <= d.t1 + 1e-6; m += step)
+      g.append('line').attr('x1',gx(m)).attr('x2',gx(m)).attr('y1',-hh).attr('y2',hh).attr('stroke', d.role==='lead' ? '#17130d' : l.hex).attr('stroke-width', d.freq==='w' ? 1 : 1.6);
+    g.append('text').attr('x',x0-8).attr('y',4).attr('text-anchor','end').attr('font-size',11).style('fill','#706758').text(d.freq==='w' ? '每周' : '每月');
+  }
+});
+grows.on('mouseenter',(ev,d)=>{ tip.innerHTML = `<b>${d.name}</b>${d.q}<br><span style="opacity:.75">${fmtT(d)}</span>`; tip.style.opacity=1; moveTip(ev); })
+  .on('mousemove', moveTip).on('mouseleave', ()=>{ tip.style.opacity=0; })
+  .on('click', (ev,d)=>select(d)).on('keydown', (ev,d)=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); select(d); } });
+function fmtT(d){ const f = m => m===0 ? '开业日' : m<0 ? `开业前 ${-m} 个月` : `开业后 ${m} 个月`; return `${f(d.t0)} → ${f(d.t1)}${d.freq ? (d.freq==='w' ? ' · 每周复盘' : ' · 每月复盘') : ''}`; }
+
+
+function ganttMark(d){ grows.select('.rowhi').attr('opacity', p => p===d ? .7 : 0); if (three) three.mark(d); }
+function ganttStage(id){ gsvg.selectAll('.gph').attr('fill', function(){ const i = STORE_PHASES.findIndex(p=>p.st===this.dataset.st); return this.dataset.st===id ? '#efe6d2' : (i%2 ? '#f6f1e4' : '#fffdf8'); }); grows.select('.rowhi').attr('opacity',0); }
+function ganttFocus(id){ grows.style('opacity', d=> id==='all'||d.lens===id ? 1 : .2); glanes.selectAll('.glane').style('opacity', function(){ return id==='all'||this.dataset.lens===id ? 1 : .3; }); if (three) three.focus(id); }
+
+// ── 3D: the same Gantt as a landscape. x = time, z = lens lanes, recurring decisions rise as columns, one per review.
+function build3D(){
+  const box = document.getElementById('g3d');
+  if (!window.THREE) { box.innerHTML = '<p class="metric" style="padding:24px">立体视图需要 WebGL，当前环境不可用。</p>'; return null; }
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({antialias:true}); } catch(e) { box.innerHTML = '<p class="metric" style="padding:24px">立体视图需要 WebGL，当前环境不可用。</p>'; return null; }
+  const cv = renderer.domElement; cv.style.display='block'; cv.style.width='100%'; cv.setAttribute('aria-label','单店生命周期立体视图'); box.appendChild(cv);
+  const reset = document.createElement('button'); reset.type='button'; reset.className='chip'; reset.textContent='重置视角'; reset.style.cssText='position:absolute;right:14px;top:14px';
+  box.appendChild(reset);
+  renderer.setPixelRatio(Math.min(2, devicePixelRatio || 1)); renderer.setClearColor(0xfffdf8, 1);
+  const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(34, 2, .1, 400);
+  scene.add(new THREE.AmbientLight(0xffffff, .72));
+  const sun = new THREE.DirectionalLight(0xffffff, .55); sun.position.set(-20, 40, 30); scene.add(sun);
+  const XS = 1.6, ROWZ = 1.1, LANEGAP = 1.6;
+  const X = m => m * XS;
+  // lanes along z
+  let z = 0; const laneZ = [];
+  laneRows.forEach((rows,li)=>{ laneZ.push(z); rows.forEach((p,k)=>{ p.z3 = z + k*ROWZ; }); z += rows.length*ROWZ + LANEGAP; });
+  const ZMAX = z - LANEGAP, ZC = ZMAX/2;
+  const root = new THREE.Group(); scene.add(root); root.position.z = -ZC;
+  const mat = (hex, op=1) => new THREE.MeshLambertMaterial({color:hex, transparent:op<1, opacity:op});
+  // floor and lane strips
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(X(24)+6, ZMAX+12), mat(0xf6f1e4)); floor.rotation.x = -Math.PI/2; floor.position.set(0,-0.01,ZMAX/2-1.5); root.add(floor);
+  LENSES.forEach((l,li)=>{
+    const rows = laneRows[li].length, s = new THREE.Mesh(new THREE.PlaneGeometry(X(24), rows*ROWZ), mat(new THREE.Color(l.hex), .16));
+    s.rotation.x = -Math.PI/2; s.position.set(0, 0.005, laneZ[li] + rows*ROWZ/2 - ROWZ/2); s.userData.lens = l.id; root.add(s);
+    const lab = sprite(l.name, l.hex, 34); lab.position.set(X(-12)-3.2, 0.6, laneZ[li] + rows*ROWZ/2 - ROWZ/2); lab.userData.lens = l.id; root.add(lab);
+  });
+  // month lines
+  const lm = new THREE.LineBasicMaterial({color:0x17130d, transparent:true, opacity:.12});
+  for (let m=-12; m<=12; m+=3){ const g = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(X(m),0.01,-4.2), new THREE.Vector3(X(m),0.01,ZMAX)]); root.add(new THREE.Line(g, lm));
+    const t = sprite(m===0 ? '开业日' : (m>0?'+':'')+m+' 月', m===0 ? '#8c3228' : '#706758', 26); t.position.set(X(m), 0.3, ZMAX+1.6); root.add(t); }
+  // store track at the back (on top of the lanes, read first)
+  STORE_PHASES.forEach((ph,i)=>{
+    const w = X(ph.b) - X(ph.a) - .08, b = new THREE.Mesh(new THREE.BoxGeometry(w, 0.9, 1.6), mat([0xe4d8be,0xa8842f,0x17130d][i]));
+    b.position.set((X(ph.a)+X(ph.b))/2, 0.45, -3.2); root.add(b);
+    const t = sprite(`${STAGES[i].cn} ${ph.name}`, '#17130d', 44); t.position.set((X(ph.a)+X(ph.b))/2, 2.3, -3.2); root.add(t);
+  });
+  MILESTONES.forEach(ms=>{
+    const c = new THREE.Mesh(new THREE.CylinderGeometry(.08,.08, ms.key?3.2:2.2, 8), mat(ms.key?0x8c3228:0x17130d)); c.position.set(X(ms.m), (ms.key?3.2:2.2)/2, -2.2); root.add(c);
+  });
+  const open = new THREE.Mesh(new THREE.PlaneGeometry(.06, ZMAX+4), mat(0x8c3228,.8)); open.rotation.x = -Math.PI/2; open.position.set(X(0), .02, ZMAX/2-1); root.add(open);
+  // decisions
+  const picks = [];
+  SP.forEach(p=>{
+    const l = LENSES[lensIdx[p.lens]], col = new THREE.Color(l.hex), grp = new THREE.Group(); grp.userData.p = p; grp.userData.lens = p.lens;
+    if (!p.freq) {
+      const w = Math.max(.25, X(p.t1)-X(p.t0)), h = p.role==='lead' ? .7 : .45;
+      const m = new THREE.Mesh(new THREE.BoxGeometry(w, h, .62), p.role==='ext' ? mat(0xd6c6a4,.55) : mat(col, p.role==='lead' ? 1 : .6));
+      m.position.set(X(p.t0)+w/2, h/2, p.z3); grp.add(m); picks.push(m); m.userData.p = p;
+    } else {
+      const base = new THREE.Mesh(new THREE.BoxGeometry(X(p.t1)-X(p.t0), .08, .5), mat(col,.75)); base.position.set((X(p.t0)+X(p.t1))/2, .04, p.z3); grp.add(base); base.userData.p = p; picks.push(base);
+      const step = p.freq==='w' ? .25 : 1, h = p.freq==='w' ? 1.0 : 1.9, r = p.freq==='w' ? .07 : .13;
+      const cm = mat(p.role==='lead' ? 0x17130d : col, p.role==='lead' ? 1 : .85), cg = new THREE.CylinderGeometry(r, r, h, 8);
+      for (let m = p.t0; m <= p.t1 + 1e-6; m += step){ const c = new THREE.Mesh(cg, cm); c.position.set(X(m), h/2, p.z3); c.userData.p = p; grp.add(c); picks.push(c); }
+    }
+    root.add(grp); p.g3 = grp;
+  });
+  const ring = new THREE.Mesh(new THREE.TorusGeometry(.55, .06, 8, 32), mat(0x76551f)); ring.rotation.x = -Math.PI/2; ring.visible = false; root.add(ring);
+
+  function sprite(text, color, px){
+    const c = document.createElement('canvas'), x = c.getContext('2d'), f = `600 ${px}px 'Noto Serif SC', 'Songti SC', serif`;
+    x.font = f; const w = Math.ceil(x.measureText(text).width) + 16; c.width = w; c.height = px + 16;
+    const y = c.getContext('2d'); y.font = f; y.fillStyle = color; y.textBaseline = 'middle'; y.fillText(text, 8, c.height/2);
+    const tx = new THREE.CanvasTexture(c); tx.minFilter = THREE.LinearFilter;
+    const s = new THREE.Sprite(new THREE.SpriteMaterial({map:tx, transparent:true, depthWrite:false}));
+    const k = .022; s.scale.set(c.width*k, c.height*k, 1); return s;
+  }
+  // camera: orbit by hand (drag to rotate, wheel / pinch to zoom)
+  const home = {az:-0.38, el:0.78, r:74}; let cam = Object.assign({}, home);
+  function place(){ const {az,el,r} = cam; camera.position.set(r*Math.sin(az)*Math.cos(el), r*Math.sin(el), r*Math.cos(az)*Math.cos(el)); camera.lookAt(0,0,0); }
+  function resize(){ const w = box.clientWidth, h = Math.max(420, Math.min(680, w*.56)); renderer.setSize(w, h, false); cv.style.height = h+'px'; camera.aspect = w/h; camera.updateProjectionMatrix(); draw(); }
+  function draw(){ place(); renderer.render(scene, camera); }
+  let drag = null, pinch = null;
+  cv.addEventListener('pointerdown', e=>{ drag = {x:e.clientX, y:e.clientY, az:cam.az, el:cam.el, moved:false}; cv.setPointerCapture(e.pointerId); });
+  cv.addEventListener('pointermove', e=>{
+    if (drag) { const dx = e.clientX-drag.x, dy = e.clientY-drag.y; if (Math.abs(dx)+Math.abs(dy) > 3) drag.moved = true;
+      cam.az = drag.az - dx*.006; cam.el = Math.max(.12, Math.min(1.35, drag.el + dy*.005)); draw(); return; }
+    const p = pick(e); if (p) { tip.innerHTML = `<b>${p.name}</b>${p.q}<br><span style="opacity:.75">${fmtT(p)}</span>`; tip.style.opacity = 1; moveTip(e); cv.style.cursor='pointer'; } else { tip.style.opacity = 0; cv.style.cursor='grab'; }
+  });
+  cv.addEventListener('pointerup', e=>{ if (drag && !drag.moved){ const p = pick(e); if (p) select(p); } drag = null; });
+  cv.addEventListener('pointerleave', ()=>{ tip.style.opacity = 0; });
+  cv.addEventListener('wheel', e=>{ e.preventDefault(); cam.r = Math.max(30, Math.min(110, cam.r * (1 + Math.sign(e.deltaY)*.08))); draw(); }, {passive:false});
+  reset.addEventListener('click', ()=>{ cam = Object.assign({}, home); draw(); });
+  const ray = new THREE.Raycaster(), v2 = new THREE.Vector2();
+  function pick(e){ const r = cv.getBoundingClientRect(); v2.set(((e.clientX-r.left)/r.width)*2-1, -((e.clientY-r.top)/r.height)*2+1); ray.setFromCamera(v2, camera);
+    const hit = ray.intersectObjects(picks.filter(o=>o.parent && o.parent.visible !== false), false)[0]; return hit ? hit.object.userData.p : null; }
+  function mark(d){ if (!d || !d.g3) { ring.visible = false; draw(); return; } ring.visible = true; ring.position.set(X(d.t0), .05, d.z3); draw(); }
+  function focus(id){
+    root.traverse(o=>{
+      if (!o.material || !o.userData) return;
+      const lens = o.userData.lens || (o.userData.p && o.userData.p.lens) || (o.parent && o.parent.userData && o.parent.userData.lens);
+      if (!lens) return;
+      if (o.userData.op === undefined) { o.material = o.material.clone(); o.userData.op = o.material.opacity; }
+      o.material.transparent = true; o.material.opacity = (id==='all' || lens===id) ? o.userData.op : .07;
+    });
+    draw();
+  }
+  addEventListener('resize', ()=>{ if (view==='g3d') resize(); });
+  resize(); if (current) mark(current);
+  return {resize, mark, focus};
+}
+
+showStage('s3');
+})();
+</script>

@@ -1,0 +1,980 @@
+{
+  "schema": "tiansight.profiles/1",
+  "version": "v0.1",
+  "issued": "2026-09-07",
+  "note": "联合创始人履历库。每条经历都归入 categories 中的一类，每个数字都带出处与证据等级。原始材料为本人提供的 A4 Profile（郭峰、边江），转录后未经第三方核验，等级一律 E4，客户可见前须由本人确认。 公开仓库版本：客户与竞争对手名称已替换为描述，人均价格、门店数量与可识别的产品口号已删除（docs/maintaining.md §6）。",
+  "branding": {
+    "logo": "../brand/logo.png",
+    "wordmark": "侍天 TIANSIGHT",
+    "alliance": "A Member of the Table AI Alliance",
+    "cobrand_label": "合作方 LOGO 位",
+    "cobrand_logo": ""
+  },
+  "categories": {
+    "role": {
+      "zh": "任职经历",
+      "en": "Role",
+      "note": "受雇或合伙的职务，含起止与机构"
+    },
+    "education": {
+      "zh": "教育与认证",
+      "en": "Education",
+      "note": "学历、学术认证、职业资格"
+    },
+    "training": {
+      "zh": "培训经历",
+      "en": "Training",
+      "note": "主讲、师资培训、教练课程"
+    },
+    "case": {
+      "zh": "咨询案例",
+      "en": "Case",
+      "note": "有服务时间、对象与经营结果的项目"
+    },
+    "brand": {
+      "zh": "服务品牌",
+      "en": "Brand",
+      "note": "服务过的品牌，按品类归组"
+    },
+    "service": {
+      "zh": "服务覆盖",
+      "en": "Service",
+      "note": "对外提供的服务领域，按方向归组"
+    },
+    "capability": {
+      "zh": "核心能力",
+      "en": "Capability",
+      "note": "对外承诺可交付的能力项"
+    },
+    "method": {
+      "zh": "原创方法论",
+      "en": "Method",
+      "note": "自有方法、工具与体系"
+    },
+    "principle": {
+      "zh": "全案原则",
+      "en": "Principle",
+      "note": "做事准则，三条以内"
+    },
+    "research": {
+      "zh": "学术研究",
+      "en": "Research",
+      "note": "研究方向与跨界课题"
+    },
+    "figure": {
+      "zh": "关键数字",
+      "en": "Key figure",
+      "note": "封面与一页版使用的数字，必须有出处"
+    }
+  },
+  "grades": {
+    "E1": "直接计量：可从原始系统导出并复算",
+    "E2": "抽样推算：样本或阶段数据外推",
+    "E3": "外部参照／设计值：引用第三方口径或目标值",
+    "E4": "未验证：本人提供，尚未核验"
+  },
+  "sources": {
+    "src-bj-profile": {
+      "label": "边江 A4 Profile",
+      "kind": "本人提供",
+      "date": "2026-09",
+      "grade": "E4"
+    },
+    "src-gf-profile": {
+      "label": "郭峰 A4 Profile",
+      "kind": "本人提供",
+      "date": "2026-09",
+      "grade": "E4"
+    }
+  },
+  "profiles": [
+    {
+      "id": "bian-jiang",
+      "order": "壹",
+      "name": "边江",
+      "en": "BIAN JIANG",
+      "domain": "RESTAURANT BRAND STRATEGY",
+      "domain_zh": "餐饮品牌与产品结构",
+      "photo": "photos/founder-bian-jiang.png",
+      "source": "src-bj-profile",
+      "title_main": "侍天联合创始人",
+      "titles_aux": [
+        {
+          "zh": "侍天 · 智慧餐饮 主理",
+          "en": "Smart F&B",
+          "show": true
+        },
+        {
+          "zh": "Table AI 生态合伙人",
+          "en": "Table AI Ecosystem Partner",
+          "show": true
+        },
+        {
+          "zh": "OPC Global 共创教练",
+          "en": "OPC Global Coach",
+          "show": true
+        },
+        {
+          "zh": "尖味菜单工作室 创始人",
+          "en": "Founder, Menu Studio",
+          "show": false
+        },
+        {
+          "zh": "羽生餐饮品牌管理 创始人",
+          "en": "Founder, Yusheng Brand Management",
+          "show": false
+        }
+      ],
+      "lede": "北大经济学背景，前海底捞品牌负责人，尖味菜单工作室创始人，互联网品牌传播与头部餐饮品牌管理复合经验。",
+      "summary": [
+        "边江，北大经济学出身，有新浪、网易等互联网公司 6 年品牌传播经验，曾在呷哺呷哺、海底捞做品牌 5 年，任海底捞品牌负责人。后成立羽生餐饮品牌管理有限公司，常年从事品牌管理、产品结构管理及品牌传播的定位、咨询与落地工作。羽生团队成员来自餐饮公司市场总监、广告创意总监及广告公司的资深文案。",
+        "在羽生餐饮管理公司时期，边江参与多品牌连锁火锅集团的品牌定位、北方老字号火锅品牌的品牌重塑与每季度菜单分析和菜品结构管理、连锁烤鱼品牌旗下点心子品牌的品牌及产品战略设计等项目，并持续落地执行服务至今。"
+      ],
+      "quote": "定位方向不正确，每一步都离目标更远。",
+      "contact": {
+        "wechat": "［微信号］",
+        "email": "［bianjiang@tiansight.·］"
+      },
+      "figures": [
+        {
+          "id": "bj-fig-brands",
+          "type": "figure",
+          "value": "100+",
+          "unit": "",
+          "label": "BRANDS",
+          "zh": "全案服务品牌",
+          "note": "深入全案服务中国超过 100 个品牌",
+          "grade": "E4",
+          "source": "src-bj-profile"
+        },
+        {
+          "id": "bj-fig-top50",
+          "type": "figure",
+          "value": "60",
+          "unit": "%",
+          "label": "TOP50 COVERAGE",
+          "zh": "中国餐饮 TOP50 覆盖",
+          "note": "中国餐饮排行 TOP50 中占到 60%",
+          "grade": "E4",
+          "source": "src-bj-profile"
+        }
+      ],
+      "principles": [
+        {
+          "id": "bj-pr-1",
+          "type": "principle",
+          "title": "方向性",
+          "body": "定位方向不正确，每一步都离目标更远。"
+        },
+        {
+          "id": "bj-pr-2",
+          "type": "principle",
+          "title": "系统性",
+          "body": "营销是一个体系，不能头痛医头、脚痛医脚。"
+        },
+        {
+          "id": "bj-pr-3",
+          "type": "principle",
+          "title": "落地性",
+          "body": "没有真枪实弹落地执行，再好的仗也打不赢。"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "bj-cap-1",
+          "type": "capability",
+          "title": "品牌定位与重塑"
+        },
+        {
+          "id": "bj-cap-2",
+          "type": "capability",
+          "title": "产品结构与利润模型"
+        },
+        {
+          "id": "bj-cap-3",
+          "type": "capability",
+          "title": "君王产品设计"
+        },
+        {
+          "id": "bj-cap-4",
+          "type": "capability",
+          "title": "菜单体系与场景组合"
+        },
+        {
+          "id": "bj-cap-5",
+          "type": "capability",
+          "title": "全案落地与经营跟进"
+        }
+      ],
+      "brands": [
+        {
+          "id": "bj-br-hotpot",
+          "type": "brand",
+          "group": "火锅",
+          "items": [
+            "6 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-bbq",
+          "type": "brand",
+          "group": "烧烤",
+          "items": [
+            "4 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-fast",
+          "type": "brand",
+          "group": "快餐",
+          "items": [
+            "8 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-casual",
+          "type": "brand",
+          "group": "简餐",
+          "items": [
+            "4 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-banquet",
+          "type": "brand",
+          "group": "小宴",
+          "items": [
+            "3 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-drinks",
+          "type": "brand",
+          "group": "饮品",
+          "items": [
+            "2 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-buzz",
+          "type": "brand",
+          "group": "网红餐厅",
+          "items": [
+            "3 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-blackpearl",
+          "type": "brand",
+          "group": "黑珍珠餐厅",
+          "items": [
+            "4 个品牌"
+          ]
+        },
+        {
+          "id": "bj-br-michelin",
+          "type": "brand",
+          "group": "米其林餐厅",
+          "items": [
+            "2 个品牌"
+          ]
+        }
+      ],
+      "roles": [
+        {
+          "id": "bj-role-1",
+          "type": "role",
+          "org": "新浪、网易",
+          "title": "品牌传播",
+          "period": "6 年",
+          "note": "互联网品牌传播"
+        },
+        {
+          "id": "bj-role-2",
+          "type": "role",
+          "org": "呷哺呷哺、海底捞",
+          "title": "品牌负责人",
+          "period": "5 年",
+          "note": "海底捞品牌负责人（本人确认的职务表述，2026-10-14）"
+        },
+        {
+          "id": "bj-role-3",
+          "type": "role",
+          "org": "羽生餐饮品牌管理有限公司",
+          "title": "创始人",
+          "period": "至今",
+          "note": "品牌管理、产品结构管理、品牌传播定位与落地"
+        },
+        {
+          "id": "bj-role-4",
+          "type": "role",
+          "org": "尖味菜单工作室",
+          "title": "创始人",
+          "period": "至今",
+          "note": "菜单体系与产品结构"
+        }
+      ],
+      "education": [
+        {
+          "id": "bj-edu-1",
+          "type": "education",
+          "org": "北京大学",
+          "title": "经济学",
+          "period": ""
+        }
+      ],
+      "cases": [
+        {
+          "id": "bj-case-a",
+          "type": "case",
+          "title": "北方老字号火锅品牌",
+          "en": "SELECTED CASE",
+          "facts": [
+            {
+              "k": "服务时间",
+              "v": "2016 年"
+            },
+            {
+              "k": "品牌所在地",
+              "v": "华北"
+            },
+            {
+              "k": "品类",
+              "v": "火锅"
+            },
+            {
+              "k": "业态",
+              "v": "直营连锁"
+            }
+          ],
+          "strategy": "以核心肉品为主系列，以传统手工技艺为背书，树立高价值的手工系列，替换原低毛利系列；以可视化的出品表达加大产品价值感与市场教育。根据原材料能力开发地方小吃系列，增加口味和产品的场景搭配，增强午餐与夜宵时段吸引力。",
+          "results": [
+            {
+              "id": "bj-r-a-1",
+              "metric": "手切羊肉点击率",
+              "value": "+15.3%",
+              "window": "年同比",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            },
+            {
+              "id": "bj-r-a-2",
+              "metric": "羊肉类客单价",
+              "value": "+14%",
+              "window": "平均",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            },
+            {
+              "id": "bj-r-a-3",
+              "metric": "整体单均销售",
+              "value": "+24%",
+              "window": "调整后",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            }
+          ],
+          "show_in": [
+            "full",
+            "onepage"
+          ],
+          "capabilities": [
+            "bj-cap-1",
+            "bj-cap-2",
+            "bj-cap-3"
+          ]
+        },
+        {
+          "id": "bj-case-b",
+          "type": "case",
+          "title": "华东连锁中式快餐品牌",
+          "en": "SELECTED CASE",
+          "facts": [
+            {
+              "k": "服务时间",
+              "v": "2017 年"
+            },
+            {
+              "k": "品牌所在地",
+              "v": "华东"
+            },
+            {
+              "k": "品类",
+              "v": "中式快餐"
+            },
+            {
+              "k": "业态",
+              "v": "连锁"
+            }
+          ],
+          "strategy": "面对区域头部快餐品牌的竞争，改变产品赛道，重新确立以小份蒸菜为君王产品系列，以汤品为佐类形成差异，构建多样性的产品组合搭配策略。蒸菜中聚焦地方菜工艺，确定一条肉类系列为核心产品。",
+          "results": [
+            {
+              "id": "bj-r-b-1",
+              "metric": "销售同比增长",
+              "value": "+58%",
+              "window": "2017–2018",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            },
+            {
+              "id": "bj-r-b-2",
+              "metric": "小笼系列销售占比",
+              "value": "50%",
+              "window": "调整后",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            },
+            {
+              "id": "bj-r-b-3",
+              "metric": "日均破万元门店",
+              "value": "90%",
+              "window": "调整后",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            },
+            {
+              "id": "bj-r-b-4",
+              "metric": "机场店日均流水",
+              "value": "1.3×",
+              "window": "对比同场景国际快餐品牌门店",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            }
+          ],
+          "show_in": [
+            "full",
+            "onepage"
+          ],
+          "capabilities": [
+            "bj-cap-2",
+            "bj-cap-3",
+            "bj-cap-4"
+          ]
+        },
+        {
+          "id": "bj-case-c",
+          "type": "case",
+          "title": "华南连锁西餐品牌",
+          "en": "SELECTED CASE",
+          "facts": [
+            {
+              "k": "服务时间",
+              "v": "2018 年"
+            },
+            {
+              "k": "品牌所在地",
+              "v": "华南"
+            },
+            {
+              "k": "品类",
+              "v": "西餐厅"
+            },
+            {
+              "k": "业态",
+              "v": "连锁"
+            }
+          ],
+          "strategy": "重新树立以带骨牛扒为核心的君王系列，改变原来以产地加部位的销售方法，摆脱低毛利率定价问题。调整午餐菜单，独立出以扒饭为核心的套餐业务，并在线上外卖形成普适度更高的鸡扒类产品系列。",
+          "results": [
+            {
+              "id": "bj-r-c-1",
+              "metric": "带骨扒系列销售额占比",
+              "value": "35%",
+              "window": "调整后",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            },
+            {
+              "id": "bj-r-c-2",
+              "metric": "整体营业额",
+              "value": "+6.2%",
+              "window": "调整后",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            },
+            {
+              "id": "bj-r-c-3",
+              "metric": "午餐人流量",
+              "value": "+20%",
+              "window": "调整后",
+              "grade": "E4",
+              "source": "src-bj-profile"
+            }
+          ],
+          "show_in": [
+            "full",
+            "onepage"
+          ],
+          "capabilities": [
+            "bj-cap-2",
+            "bj-cap-3",
+            "bj-cap-4",
+            "bj-cap-5"
+          ]
+        }
+      ],
+      "keywords": "Table AI Alliance | Brand Strategy | Menu Architecture | Restaurant Growth",
+      "cobrand": {
+        "label": "",
+        "logo": ""
+      },
+      "portfolio_lede": "深入全案服务中国超过 100 个品牌，中国餐饮排行 TOP50 占到 60%。"
+    },
+    {
+      "id": "guo-feng",
+      "order": "贰",
+      "name": "郭峰",
+      "en": "GUO FENG",
+      "domain": "AI, EDUCATION & ORGANIZATION",
+      "domain_zh": "人工智能、教育与组织发展",
+      "photo": "photos/founder-guo-feng.png",
+      "source": "src-gf-profile",
+      "title_main": "侍天联合创始人",
+      "titles_aux": [
+        {
+          "zh": "Table AI 创始合伙人",
+          "en": "Founding Partner, Table AI",
+          "show": true
+        },
+        {
+          "zh": "OPC Global 创始人",
+          "en": "Founder, OPC Global",
+          "show": true
+        },
+        {
+          "zh": "OPC Global 理事会秘书长",
+          "en": "Secretary-General",
+          "show": true
+        },
+        {
+          "zh": "EHL 集团在华奠基团队成员",
+          "en": "Founding Team, EHL China",
+          "show": false
+        },
+        {
+          "zh": "QLF 引导式学习教练",
+          "en": "QLF Learning Coach",
+          "show": false
+        }
+      ],
+      "lede": "研究者、分享者、创业者；横跨教育组织发展、品牌体验与酒店资产管理、AI 工程与跨界研究。",
+      "summary": [
+        "郭峰是一位横跨教育培训与组织发展、品牌体验与酒店资产管理、AI 工程与跨界研究三大领域的复合型实践者。他以全球 QS 排名第一的瑞士 EHL 集团在华奠基团队成员的学术底蕴，融合 Table AI 创始合伙人的技术架构能力与 OPC Global（一人公司全球联盟）创始人的实践视野，为高净值人群、家族办公室、主权基金、顶奢品牌、顶尖学府与政府机构提供从顶层战略到落地执行的一体化服务。",
+        "其独特价值在于打通三大领域间通常彼此割裂的壁垒：以教育与组织发展沉淀人才，以品牌与资产管理创造价值，以科技与科研驱动创新，并将其整合为可持续的机构级资产与长期增长动能。"
+      ],
+      "quote": "善用 AI，终获自由。",
+      "contact": {
+        "wechat": "［微信号］",
+        "email": "［guofeng@tiansight.·］"
+      },
+      "figures": [
+        {
+          "id": "gf-fig-curriculum",
+          "type": "figure",
+          "value": "200",
+          "unit": "万字",
+          "label": "CURRICULUM",
+          "zh": "课程本地化与迭代",
+          "note": "EHL 中国课程体系本地化字数",
+          "grade": "E4",
+          "source": "src-gf-profile"
+        },
+        {
+          "id": "gf-fig-assets",
+          "type": "figure",
+          "value": "130+",
+          "unit": "",
+          "label": "ASSETS",
+          "zh": "地标性酒店资产",
+          "note": "参与投资测算与管理咨询的资产数量",
+          "grade": "E4",
+          "source": "src-gf-profile"
+        }
+      ],
+      "principles": [
+        {
+          "id": "gf-pr-1",
+          "type": "principle",
+          "title": "融会贯通",
+          "body": "连接学术、教育、商业与 AI 工程，让战略不止停留在概念层。"
+        },
+        {
+          "id": "gf-pr-2",
+          "type": "principle",
+          "title": "系统交付",
+          "body": "从顶层设计、方法论、课程体系、品牌体验到产品系统，形成可复用的完整链路。"
+        },
+        {
+          "id": "gf-pr-3",
+          "type": "principle",
+          "title": "长期价值",
+          "body": "在 AI 时代重构个体与组织的长期价值，帮助伙伴实现「善用 AI，终获自由」。"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "gf-cap-1",
+          "type": "capability",
+          "title": "教育培训与组织发展"
+        },
+        {
+          "id": "gf-cap-2",
+          "type": "capability",
+          "title": "品牌体验与酒店资产管理"
+        },
+        {
+          "id": "gf-cap-3",
+          "type": "capability",
+          "title": "AI 系统架构与全栈工程"
+        },
+        {
+          "id": "gf-cap-4",
+          "type": "capability",
+          "title": "原创方法论与跨界研究"
+        },
+        {
+          "id": "gf-cap-5",
+          "type": "capability",
+          "title": "高净值 IP 与机构级资产增长"
+        }
+      ],
+      "services": [
+        {
+          "id": "gf-sv-1",
+          "type": "service",
+          "group": "教育培训与组织发展",
+          "body": "人才与组织发展、企业大学体系、L.I.D. 体系、QLF 引导式学习教练培训"
+        },
+        {
+          "id": "gf-sv-2",
+          "type": "service",
+          "group": "教育体系与学术认证",
+          "body": "EHL 中国区高校筹建考察、国际学术认证、师资培训、课程本地化体系"
+        },
+        {
+          "id": "gf-sv-3",
+          "type": "service",
+          "group": "高管教练与领导力",
+          "body": "跨国企业、大型国央企、文旅、医疗、非盈利机构 CXO 定制化教练辅导"
+        },
+        {
+          "id": "gf-sv-4",
+          "type": "service",
+          "group": "品牌体验与个人 IP",
+          "body": "顶奢品牌、奢华酒店、高端医疗、旅游目的地及企业家个人 IP 打造"
+        },
+        {
+          "id": "gf-sv-5",
+          "type": "service",
+          "group": "酒店投资与资产管理",
+          "body": "130+ 地标性酒店资产的投资测算、品牌构建、运营管理、REITs / RWA 路径"
+        },
+        {
+          "id": "gf-sv-6",
+          "type": "service",
+          "group": "AI 工程与跨界研究",
+          "body": "Table AI 产品技术战略、Agent-to-Agent 架构、全栈工程与行业应用"
+        },
+        {
+          "id": "gf-sv-7",
+          "type": "method",
+          "group": "原创方法论",
+          "body": "L.I.D.、MEAT、iTRUST、IP 进化论等可落地方法工具"
+        },
+        {
+          "id": "gf-sv-8",
+          "type": "research",
+          "group": "学术研究",
+          "body": "医疗与人工智能跨界研究，强调学术严谨性与实践可验证性"
+        }
+      ],
+      "roles": [
+        {
+          "id": "gf-role-1",
+          "type": "role",
+          "org": "Table AI",
+          "title": "创始合伙人",
+          "period": "2025 至今",
+          "note": "集团战略、教育、文旅与 AI 应用四大板块"
+        },
+        {
+          "id": "gf-role-2",
+          "type": "role",
+          "org": "OPC Global（一人公司全球联盟）",
+          "title": "创始人 / 理事会秘书长",
+          "period": "2025 至今",
+          "note": "AI 时代超级个体的全球化发展与资源链接网络"
+        },
+        {
+          "id": "gf-role-3",
+          "type": "role",
+          "org": "瑞士 EHL 集团",
+          "title": "在华奠基团队成员 / 顾问 / 引导式学习教练 / 讲师",
+          "period": "2015–2025",
+          "note": "全球 QS 排名第一的款待业学府"
+        }
+      ],
+      "education": [
+        {
+          "id": "gf-edu-1",
+          "type": "education",
+          "org": "瑞士 EHL 集团",
+          "title": "国际学术认证与学术质量审查参与",
+          "period": "2015–2025"
+        }
+      ],
+      "trainings": [
+        {
+          "id": "gf-tr-1",
+          "type": "training",
+          "title": "QLF 引导式学习教练课程",
+          "org": "瑞士 EHL 集团",
+          "role": "主讲",
+          "scale": "10+ 场高校师资教练式培训",
+          "region": "三亚、上海、贵州、新疆等地高校",
+          "grade": "E4",
+          "source": "src-gf-profile",
+          "period": "2015–2025"
+        },
+        {
+          "id": "gf-tr-2",
+          "type": "training",
+          "title": "CXO 定制化教练辅导",
+          "org": "跨国企业、大型国央企、文旅、医疗、非盈利机构",
+          "role": "高管教练",
+          "scale": "",
+          "region": "",
+          "grade": "E4",
+          "source": "src-gf-profile",
+          "period": ""
+        }
+      ],
+      "cases": [
+        {
+          "id": "gf-case-ehl",
+          "type": "case",
+          "title": "EHL 集团中国落地",
+          "en": "SELECTED CASE",
+          "facts": [
+            {
+              "k": "时间跨度",
+              "v": "2015–2025"
+            },
+            {
+              "k": "机构",
+              "v": "瑞士 EHL 集团"
+            },
+            {
+              "k": "角色",
+              "v": "创始团队成员 / 顾问 / 引导式学习教练 / 讲师"
+            },
+            {
+              "k": "规模",
+              "v": "约 200 万字课程本地化"
+            },
+            {
+              "k": "覆盖",
+              "v": "三亚、上海、贵州、新疆等地高校"
+            },
+            {
+              "k": "训练",
+              "v": "10+ 场高校师资教练式培训"
+            }
+          ],
+          "strategy": "深度参与全球 QS 排名第一的瑞士 EHL 集团在华业务体系搭建，涵盖品牌、增长策略、人才体系、高校筹建考察、国际学术认证、学术质量审查与课程体系本地化。将瑞士职业教育与产教融合体系转译为中国语境下可执行、可审查、可迭代的教育产品。",
+          "results": [
+            {
+              "id": "gf-r-ehl-1",
+              "metric": "课程本地化与迭代",
+              "value": "约 200 万字",
+              "window": "2015–2025",
+              "grade": "E4",
+              "source": "src-gf-profile"
+            },
+            {
+              "id": "gf-r-ehl-2",
+              "metric": "EHL 中国业务",
+              "value": "从 0 到 1 落地",
+              "window": "十年",
+              "grade": "E4",
+              "source": "src-gf-profile"
+            },
+            {
+              "id": "gf-r-ehl-3",
+              "metric": "区域延伸",
+              "value": "欧洲、中东、非洲",
+              "window": "项目经验",
+              "grade": "E4",
+              "source": "src-gf-profile"
+            }
+          ],
+          "show_in": [
+            "full",
+            "onepage"
+          ],
+          "capabilities": [
+            "gf-cap-1",
+            "gf-cap-4"
+          ]
+        },
+        {
+          "id": "gf-case-hospitality",
+          "type": "case",
+          "title": "酒店资产与顶奢品牌体验",
+          "en": "SELECTED CASE",
+          "facts": [
+            {
+              "k": "资产规模",
+              "v": "130+ 地标性酒店资产"
+            },
+            {
+              "k": "区域",
+              "v": "瑞士洛桑、上海、深圳、青岛、成都、莫干山等"
+            },
+            {
+              "k": "服务对象",
+              "v": "业主方、顶奢品牌、高净值客户、旅游目的地"
+            },
+            {
+              "k": "方法",
+              "v": "Hospitality Excellence 转译"
+            },
+            {
+              "k": "范围",
+              "v": "投资测算、品牌构建、运营管理、资产证券化"
+            }
+          ],
+          "strategy": "以瑞士款待业卓越标准为底层，将奢华酒店投资测算、品牌构建、客户体验升级、个人 IP 与机构 IP 打造整合为可复制、可量化的品牌资产体系。为业主提供从投资测算到 REITs / RWA 的全生命周期服务。",
+          "results": [
+            {
+              "id": "gf-r-hos-1",
+              "metric": "地标性酒店资产",
+              "value": "130+",
+              "window": "投资测算与管理咨询",
+              "grade": "E4",
+              "source": "src-gf-profile"
+            },
+            {
+              "id": "gf-r-hos-2",
+              "metric": "服务对象",
+              "value": "高净值客户、顶奢品牌、资产方",
+              "window": "长期",
+              "grade": "E4",
+              "source": "src-gf-profile"
+            }
+          ],
+          "show_in": [
+            "full",
+            "onepage"
+          ],
+          "capabilities": [
+            "gf-cap-2",
+            "gf-cap-5"
+          ]
+        },
+        {
+          "id": "gf-case-tableai",
+          "type": "case",
+          "title": "Table AI 与 OPC Global",
+          "en": "SELECTED CASE",
+          "facts": [
+            {
+              "k": "时间",
+              "v": "2025 至今"
+            },
+            {
+              "k": "机构",
+              "v": "Table AI / OPC Global"
+            },
+            {
+              "k": "角色",
+              "v": "创始合伙人 / 创始人 / 理事会秘书长"
+            },
+            {
+              "k": "方向",
+              "v": "Agent-to-Agent 全球应用架构"
+            },
+            {
+              "k": "愿景",
+              "v": "善用 AI，终获自由"
+            }
+          ],
+          "strategy": "负责集团战略、教育、文旅与 AI 应用四大板块，推动 Agent-to-Agent 全球应用架构落地，并主导从系统架构到全栈开发的端到端实现。以 OPC Global 构建 AI 时代超级个体的全球化发展与资源链接网络。",
+          "results": [
+            {
+              "id": "gf-r-tai-1",
+              "metric": "服务系统",
+              "value": "Table AI 技术底座 + OPC Global 组织网络",
+              "window": "长期",
+              "grade": "E4",
+              "source": "src-gf-profile"
+            },
+            {
+              "id": "gf-r-tai-2",
+              "metric": "融合场景",
+              "value": "教育、文旅、企业、家庭与个体发展",
+              "window": "长期",
+              "grade": "E4",
+              "source": "src-gf-profile"
+            }
+          ],
+          "show_in": [
+            "full",
+            "onepage"
+          ],
+          "capabilities": [
+            "gf-cap-3",
+            "gf-cap-4"
+          ]
+        }
+      ],
+      "keywords": "Table AI Alliance | OPC Global | AI Engineering | Organization Development",
+      "cobrand": {
+        "label": "",
+        "logo": ""
+      },
+      "portfolio_lede": "面向高净值人群、家族办公室、顶奢品牌、政府机构、顶尖学府与企业组织，提供战略、教育、品牌、资产管理与 AI 工程一体化服务。"
+    }
+  ],
+  "lexicon_edits": [
+    {
+      "profile": "guo-feng",
+      "from": "一体化解决方案",
+      "to": "一体化服务",
+      "why": "指南语汇表避免「解决方案」"
+    },
+    {
+      "profile": "guo-feng",
+      "from": "可复用闭环",
+      "to": "可复用的完整链路",
+      "why": "指南语汇表避免「闭环」"
+    },
+    {
+      "profile": "guo-feng",
+      "from": "全生命周期闭环服务",
+      "to": "全生命周期服务",
+      "why": "指南语汇表避免「闭环」"
+    },
+    {
+      "profile": "bian-jiang",
+      "from": "口味和产品的场景搭配（原稿为「口味」，PDF 提取显示为「⼜味」）",
+      "to": "口味和产品的场景搭配",
+      "why": "原文字形提取误差，按语义还原"
+    }
+  ],
+  "open_items": [
+    {
+      "profile": "*",
+      "text": "履历中的全部数字均为本人提供，等级 E4，客户可见版本前请逐条确认或降级表述。"
+    },
+    {
+      "profile": "*",
+      "text": "肖像取自本人提供的 A4 Profile PDF（388×488 / 435×542 px），印刷版建议换用 1200 px 以上原图，文件名不变。"
+    },
+    {
+      "profile": "*",
+      "text": "profiles.json 与 people/people.json 的五人名册尚未对应，待创始人顺序确认后补 people_id。"
+    }
+  ]
+}

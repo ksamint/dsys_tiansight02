@@ -1,0 +1,1 @@
+export interface ProgressProps extends React.HTMLAttributes<HTMLDivElement> { value: number; max?: number; label?: string; /** bright-gold fill instead of charcoal */ keyed?: boolean; }

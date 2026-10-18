@@ -1,0 +1,28 @@
+<!-- @dsCard group="Charts" viewport="700x300" name="Donut · Funnel · Gauge · Sparkline" subtitle="占比环, 转化漏斗, 指标达成, 表内微图" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { Donut, Funnel, Gauge, Sparkline, MetricRow } = window.TIANSIGHTDesignSystem_bb63dc;
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'1.1fr 1fr',gap:28}}>
+    <div><div className="lbl">Donut</div>
+      <Donut size={150} thickness={22} centerValue="31.2%" centerLabel="会员占比"
+        data={[{label:"会员",value:31.2,tone:"growth"},{label:"平台新客",value:44.1,tone:"caution"},{label:"散客",value:24.7,tone:"muted"}]}/>
+      <div className="lbl" style={{marginTop:18}}>Sparkline · in a MetricRow</div>
+      <MetricRow dense label="午市客流" sublabel="旗舰店" value="132" unit="人/日" delta="+8.4%" deltaTone="growth"
+        note={<Sparkline values={[112,118,109,124,131,132]} toneName="growth"/>}/>
+    </div>
+    <div style={{display:'flex',gap:24}}>
+      <div style={{flex:1}}><div className="lbl">Funnel</div>
+        <Funnel stages={[{label:"曝光",value:12400},{label:"进店",value:3180},{label:"下单",value:2260},{label:"复购",value:705}]}/></div>
+      <div><div className="lbl">Gauge</div><Gauge size={150} value={92} target={100} unit="%" label="午市客单"/></div>
+    </div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

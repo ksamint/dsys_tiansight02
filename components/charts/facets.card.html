@@ -1,0 +1,22 @@
+<!-- @dsCard group="Charts" viewport="700x300" name="FacetBars · 维度分析" subtitle="Dimension breakdown as small multiples — one shared scale, n per facet" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { FacetBars } = NS;
+const rnd = (seed => () => { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; })(3);
+const shifts = ["午市","晚市","夜宵"], regions = ["城北","河西","旗舰","开发区","老城"];
+const base = { 午市: .08, 晚市: .46, 夜宵: .21 }, lift = { 城北: 1.4, 河西: 1.0, 旗舰: 1.2, 开发区: .7, 老城: .9 };
+const facts = [];
+shifts.forEach(s => regions.forEach(r => { const n = 60 + Math.floor(rnd() * 80); for (let i = 0; i < n; i++) facts.push({ 市别: s, 区域: r, 带率: rnd() < base[s] * lift[r] ? 1 : 0 }); }));
+function Demo(){
+  return <FacetBars caption="配菜带率 · 市别 × 区域" rows={facts} dims={["市别","区域"]} measure="带率" agg="mean" percent columns={3} panelHeight={130}
+    highlight="城北" scope="堂食账单；带配菜账单数 ÷ 全部账单数" note="晚市带率约为午市的 5.8 倍" />;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

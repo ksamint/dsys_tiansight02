@@ -1,0 +1,1 @@
+export interface FieldProps extends React.InputHTMLAttributes<HTMLInputElement> { label: string; hint?: string; /** vermillion message + invalid border */ error?: string; kind?: 'input' | 'select' | 'textarea'; options?: string[]; }

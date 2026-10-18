@@ -1,0 +1,30 @@
+<!-- @dsCard group="Charts" viewport="700x320" name="Sankey · Treemap" subtitle="流转 and 层级 — conserved flows, area with printed values" -->
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script>
+<script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>html,body{margin:0}body{background:var(--surface-page);padding:20px;font-family:var(--font-body)}.lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.TIANSIGHTDesignSystem_703ad4;
+const { Sankey, Treemap } = NS;
+function Demo(){
+  return <div style={{display:'grid',gridTemplateColumns:'1.25fr 1fr',gap:28}}>
+    <div><div className="lbl">Sankey · 渠道流向 → 结果（悬停 / 点击节点）</div>
+      <Sankey height={250} caption="曝光 → 到店 → 成交" unit=" 单" grade="E2" scope="平台 UV 口径；未匹配部分保留为节点" stages={["来源","到店","结果"]}
+        groupTone={{线上:"key",线下:"gold",结果:"charcoal"}}
+        nodes={[{id:"点评",group:"线上"},{id:"抖音",group:"线上"},{id:"小红书",group:"线上"},{id:"自然到店",group:"线下"},{id:"团购核销",group:"线下"},{id:"到店",group:"结果"},{id:"成交",group:"结果"},{id:"未完成",tone:"loss"},{id:"未知来源",tone:"muted"}]}
+        links={[{source:"点评",target:"到店",value:620},{source:"抖音",target:"到店",value:200},{source:"小红书",target:"到店",value:120},{source:"自然到店",target:"到店",value:610},{source:"团购核销",target:"到店",value:180},{source:"到店",target:"成交",value:1290},{source:"到店",target:"未完成",value:340,tone:"loss"},{source:"未知来源",target:"成交",value:140}]}/></div>
+    <div><div className="lbl">Treemap · 菜单结构</div>
+      <Treemap height={240} caption="净收入 · 大类 → 品项" unit=" 元" grade="E1"
+        data={{name:"菜单",children:[
+          {name:"热菜",children:[{name:"狮子头",value:48200},{name:"清炒河虾仁",value:39100},{name:"软兜长鱼",value:22800},{name:"三套鸭",value:9800}]},
+          {name:"凉菜",children:[{name:"烫干丝",value:12800},{name:"盐水鸭",value:11200}]},
+          {name:"点心",children:[{name:"蟹黄汤包",value:16400},{name:"翡翠烧卖",value:7200}]},
+          {name:"主食",children:[{name:"扬州炒饭",value:9900}]}]}}/></div>
+  </div>;
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

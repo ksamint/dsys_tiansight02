@@ -1,0 +1,20 @@
+.ts-root {
+  color-scheme: light;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-cn);
+  font-size: var(--type-ui);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+.ts-root *, .ts-root *::before, .ts-root *::after { box-sizing: border-box; }
+.ts-root :where(h1,h2,h3,h4) { font-family: var(--font-cn); font-weight: var(--weight-title); color: var(--text); }
+.ts-root :where(button,input,select,textarea) { font-family: var(--font-cn); }
+.ts-root :where(code,pre,kbd), .ts-num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.ts-caption, .ts-eyebrow { font-family: var(--font-en); font-size: var(--text-caption); color: var(--color-caption); letter-spacing: var(--tracking-caps-tight); }
+.ts-root :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.ts-root .ts-input, .ts-root .ts-select, .ts-root .ts-textarea, .ts-root .ts-button { border-color: var(--control-border); font-size: var(--type-ui); }
+.ts-root .ts-input:read-only { background: var(--paper); }
+.ts-root .ts-input[readonly] { background: var(--surface); }
+.ts-root .ts-button:disabled { transform: none; }
+.ts-root .ts-button[aria-busy="true"] { cursor: progress; }

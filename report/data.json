@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "brand": "［品牌名称］",
+    "version": "V4.2",
+    "period": "2026-03 → 2026-08",
+    "stores": 7,
+    "issued": "2026-09-05",
+    "months": ["03", "04", "05", "06", "07", "08"]
+  },
+  "kpis": [
+    { "label": "季度营收", "value": "486.2", "unit": "万", "tone": "charcoal" },
+    { "label": "增利机会", "value": "+31.4", "unit": "万", "tone": "positive", "note": "午市套餐 + 会员唤醒" },
+    { "label": "利润流失", "value": "−38.9", "unit": "万", "tone": "negative", "note": "折扣叠加 + 食材损耗" },
+    { "label": "净可争取", "value": "+70.3", "unit": "万", "tone": "positive", "note": "90 天内可落地部分" }
+  ],
+  "conclusions": [
+    { "tone": "positive", "tag": "增利机会", "head": "午市套餐结构存在可加码空间",
+      "evidence": "工作日午市点单集中在 38–58 元价格带，套餐渗透仅 34%。",
+      "impact": "+18.2 万 / 季", "boundary": "客单价与客流不变",
+      "action": "重排午市套餐结构，主推高毛利招牌组合。", "kpi": "午市客单 +8%，D+30 复核" },
+    { "tone": "negative", "tag": "利润流失", "head": "平台满减与会员券叠加，让利失控",
+      "evidence": "6 个月内 27% 订单同时使用两类优惠，实收折扣率 6.7%。",
+      "impact": "−24.6 万 / 季", "boundary": "订单量不变",
+      "action": "收紧叠加规则，按时段分层投放。", "kpi": "折扣率 ≤ 5.0%" },
+    { "tone": "watch", "tag": "关注", "head": "招牌菜出餐时长波动，影响复购",
+      "evidence": "晚市高峰出餐 P90 为 14.3 分钟，差评关键词首位为「上菜慢」。",
+      "impact": "不可计算，如实说明", "boundary": "",
+      "action": "招牌菜出餐标准化与备料前置。", "kpi": "出餐时长 ≤ 9 分钟" }
+  ],
+  "store_index": [
+    { "label": "旗舰店", "value": 92, "series": 1 },
+    { "label": "C 店", "value": 78, "series": 2 },
+    { "label": "F 店", "value": 71, "series": 2 },
+    { "label": "D 店", "value": 54, "series": 2 },
+    { "label": "E 店", "value": 38, "series": 3 }
+  ],
+  "ledger": [
+    { "label": "午市客流", "sub": "旗舰店 · 工作日", "value": "132 人/日", "target": "140", "gap": "−8", "tone": "watch" },
+    { "label": "晚市翻台", "sub": "全店均值", "value": "2.6 次", "target": "2.8", "gap": "−0.2", "tone": "watch" },
+    { "label": "折扣让利", "sub": "实收口径", "value": "6.7%", "target": "≤ 5.0%", "gap": "+1.7pt", "tone": "negative" },
+    { "label": "食材损耗", "sub": "全店均值", "value": "4.3%", "target": "≤ 3.5%", "gap": "+0.8pt", "tone": "negative" },
+    { "label": "会员复购", "sub": "90 天内", "value": "31.2%", "target": "35%", "gap": "−3.8pt", "tone": "watch" }
+  ],
+  "actions": [
+    { "n": "壹", "action": "收紧平台满减与会员券叠加规则", "owner": "渠道经理", "due": "D+30", "kpi": "折扣率 ≤ 5.0%", "impact": "+24.6 万", "tone": "positive" },
+    { "n": "贰", "action": "重排午市套餐结构，主推高毛利招牌组合", "owner": "运营总监", "due": "D+45", "kpi": "午市客单 +8%", "impact": "+18.2 万", "tone": "positive" },
+    { "n": "叁", "action": "招牌菜出餐标准化，备料前置", "owner": "行政总厨", "due": "D+60", "kpi": "出餐时长 ≤ 9 分钟", "impact": "如实说明", "tone": "muted" },
+    { "n": "", "action": "会员 B 层唤醒计划", "owner": "会员运营", "due": "D+90", "kpi": "B 层复购 +6pt", "impact": "+13.1 万", "tone": "positive" },
+    { "n": "", "action": "D 店备料流程复核", "owner": "店长 · 城北", "due": "D+30", "kpi": "损耗率 ≤ 3.5%", "impact": "+6.4 万", "tone": "positive" }
+  ],
+  "matrices": {
+    "penetration": { "x": "点单渗透率", "y": "毛利率",
+      "quadrants": ["高毛利低渗透 · 值得推", "招牌担当 · 守住", "低毛利低渗透 · 下架候选", "低毛利高渗透 · 改配方"],
+      "points": [
+        { "label": "文思豆腐", "x": 0.74, "y": 0.78, "series": 1 },
+        { "label": "松鼠鳜鱼", "x": 0.55, "y": 0.62, "series": 1 },
+        { "label": "蟹粉狮子头", "x": 0.28, "y": 0.72, "series": 2 },
+        { "label": "响油鳝糊", "x": 0.68, "y": 0.22, "series": 3 },
+        { "label": "冷碟拼盘", "x": 0.2, "y": 0.18, "series": 0 } ] },
+    "market": { "x": "同业供给密度", "y": "需求强度",
+      "quadrants": ["需求旺 供给稀 · 抢占", "需求旺 供给密 · 打差异", "双低 · 不投入", "需求弱 供给密 · 退出"],
+      "points": [
+        { "label": "写字楼午市", "x": 0.32, "y": 0.82, "series": 1 },
+        { "label": "住宅晚市", "x": 0.58, "y": 0.66, "series": 2 },
+        { "label": "商场档口", "x": 0.84, "y": 0.44, "series": 3 } ] },
+    "repurchase": { "x": "复购频次", "y": "客单价",
+      "quadrants": ["高价低频 · 待激活", "核心客群 · 守住", "低价低频 · 观察", "低价高频 · 提客单"],
+      "points": [
+        { "label": "会员 A 层", "x": 0.78, "y": 0.74, "series": 1 },
+        { "label": "会员 B 层", "x": 0.26, "y": 0.66, "series": 2 },
+        { "label": "平台新客", "x": 0.7, "y": 0.26, "series": 2 },
+        { "label": "沉睡会员", "x": 0.18, "y": 0.22, "series": 0 } ] }
+  },
+  "bars": {
+    "sensitivity": { "unit": "万 / 季", "max": 5, "items": [
+      { "label": "折扣结构", "value": 4.8, "series": 3 }, { "label": "食材损耗", "value": 3.1, "series": 3 },
+      { "label": "套餐结构", "value": 2.9, "series": 1 }, { "label": "人效排班", "value": 2.4, "series": 2 },
+      { "label": "外卖运费", "value": 1.2, "series": 0 } ] },
+    "priceband": { "unit": "%", "max": 40, "items": [
+      { "label": "38 元以下", "value": 17, "series": 2 }, { "label": "38–58 元", "value": 34, "series": 2 },
+      { "label": "58–88 元", "value": 12, "series": 3, "note": "断层" }, { "label": "88–128 元", "value": 29, "series": 1 },
+      { "label": "128 元以上", "value": 8, "series": 0 } ] }
+  },
+  "trend": { "unit": "万", "min": 60, "max": 100,
+    "series": [ { "name": "本店", "kind": 1, "values": [72, 78, 74, 83, 89, 92] },
+                { "name": "同业均值", "kind": "benchmark", "values": [70, 71, 73, 74, 75, 76] } ] },
+  "channels": { "keys": ["堂食", "外卖", "团购"], "kinds": [2, 1, 0],
+    "rows": [[52, 30, 18], [53, 29.5, 17.5], [54, 29, 17], [55, 28.5, 16.5], [56, 28, 16], [57, 27.5, 15.5]] },
+  "waterfall": { "unit": "万", "start": { "label": "季度营收", "value": 486 },
+    "steps": [ { "label": "折扣叠加", "value": -24.6 }, { "label": "食材损耗", "value": -12.1 }, { "label": "人效排班", "value": -6.4 },
+               { "label": "套餐结构", "value": 18.2 }, { "label": "会员唤醒", "value": 13.1 } ], "end": "可争取后" },
+  "heatmap": { "rows": ["旗舰店", "C 店", "F 店", "D 店", "E 店"], "unit": "%",
+    "values": [[4.2, 2.1, -1.4, 3.8, 5.1, 6.2], [1.2, 0.4, -2.2, 1.9, 2.4, 3.1], [0.8, 1.1, 0.2, -0.6, 1.4, 2.0],
+               [-3.4, -4.1, -2.8, -1.2, 0.6, 1.4], [-5.1, -4.4, -3.9, -4.8, -2.2, -1.6]] },
+  "donut": { "center": "31.2%", "center_label": "会员占比",
+    "items": [ { "label": "会员", "value": 31.2, "kind": 1 }, { "label": "平台新客", "value": 44.1, "kind": 2 }, { "label": "散客", "value": 24.7, "kind": 0 } ] },
+  "funnel": [ { "label": "曝光", "value": 12400 }, { "label": "进店", "value": 3180 }, { "label": "下单", "value": 2260 }, { "label": "复购", "value": 705 } ],
+  "gauges": [ { "label": "午市客单", "value": 92, "target": 100 }, { "label": "折扣控制", "value": 104, "target": 100 } ]
+}

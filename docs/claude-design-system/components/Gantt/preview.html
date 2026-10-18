@@ -1,0 +1,34 @@
+<!-- @dsCard group="Charts" height=770 -->
+<!doctype html>
+<html lang="zh">
+<head><meta charset="utf-8"><title>Gantt — preview</title><style>body{padding:20px;margin:0}.row{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.stack{display:flex;flex-direction:column;gap:18px}.lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px}</style></head>
+<body>
+<div id="root"></div>
+<script>
+const NS = window.TIANSIGHT;
+const { Badge, BarSeries, BoxPlot, Button, CalendarHeatmap, Card, Checkbox, DivergingBars, Divider, Donut, Dumbbell, ExpertCard, Eyebrow, FacetBars, FacetGrid, ForecastCorridor, Funnel, Gantt, Gauge, Heatmap, Histogram, Icon, IconButton, Input, LedgerTable, Lollipop, Lorenz, Matrix2x2, Mekko, MetricRow, NineGrid, PairedBars, Pareto, PartnerCase, PlanCard, Quote, Radio, Sankey, Scatter, ScoreCompass, Seal, SectionHeading, Select, SlopeChart, Sparkline, StackedBars, Stat, StepMarker, Switch, Tag, Tornado, Treemap, TrendLine, Waffle, Waterfall, Wordmark, STRUCTURE_PRESETS, DIMENSION_LABELS } = NS;
+const SEAL = "/_blob/d258c06d1f23c1d069d8e9d63c556406";
+const rnd = /* @__PURE__ */ ((seed) => () => {
+  seed = (seed * 9301 + 49297) % 233280;
+  return seed / 233280;
+})(5);
+const day = (i) => {
+  const d = new Date(2025, 2, 1);
+  d.setDate(d.getDate() + i);
+  return d;
+};
+const iso = (d) => d.toISOString().slice(0, 10);
+const days = Array.from({ length: 153 }, (_, i) => {
+  const d = day(i), w = d.getDay();
+  return { date: iso(d), value: Math.round(18e3 + (w === 0 || w === 6 ? 9e3 : 0) + (i > 32 && i < 37 ? 7e3 : 0) + rnd() * 5e3) };
+});
+const groups = ["\u62DB\u724C", "\u5E38\u89C4", "\u65F6\u4EE4", "\u5DF2\u4E0B\u67B6"], gt = { \u62DB\u724C: "key", \u5E38\u89C4: "gold", \u65F6\u4EE4: "caution", \u5DF2\u4E0B\u67B6: "muted" };
+const rows = Array.from({ length: 148 }, (_, i) => {
+  const g = groups[i % 7 === 0 ? 0 : i % 5 === 0 ? 2 : i % 11 === 0 ? 3 : 1];
+  const s = Math.floor(rnd() * 90), len = g === "\u65F6\u4EE4" ? 40 + rnd() * 30 : g === "\u5DF2\u4E0B\u67B6" ? 30 + rnd() * 60 : 120 + rnd() * 60;
+  return { label: "SKU-" + String(i + 1).padStart(3, "0"), start: iso(day(s)), end: iso(day(Math.min(183, s + len))), group: g };
+});
+ReactDOM.createRoot(document.getElementById("root")).render(/* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", { style: { maxWidth: 620 } }, /* @__PURE__ */ React.createElement(Gantt, { caption: "SKU \u5728\u552E\u8DE8\u5EA6", today: "2025-08-31", rows, groupTone: gt, grade: "E1", scope: "\u5728\u552E = \u6709\u53EF\u552E\u8BB0\u5F55\u7684\u65E5\u671F\u533A\u95F4" }))));
+</script>
+</body>
+</html>

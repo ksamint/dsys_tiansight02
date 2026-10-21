@@ -1,0 +1,83 @@
+{
+  "id": "case-08",
+  "name": "吴裕泰",
+  "summary": {
+    "name": "吴裕泰",
+    "image": {
+      "$asset": "assets/cases/case-08/case-08.jpg"
+    },
+    "logo": {
+      "$asset": "assets/partners/wuyutai.png"
+    },
+    "module": "营销支持",
+    "summary": "为新店奶茶提供概念图营销生成支持。",
+    "sub": "茶饮 · 新店奶茶",
+    "headline": "为新店奶茶生成营销概念图。",
+    "meta": [
+      {
+        "k": "业态",
+        "v": "茶饮 · 新店奶茶"
+      },
+      {
+        "k": "地点",
+        "v": "新店"
+      }
+    ],
+    "background": "吴裕泰新店推出奶茶产品，上市前需要一批可用于营销宣传的概念视觉。",
+    "challenges": [
+      "上市节奏紧，传统拍摄周期长",
+      "视觉要体现茶底与品牌调性",
+      "需要多个方向供选择"
+    ],
+    "approach": [
+      {
+        "title": "产品概念梳理",
+        "body": "提炼茶底、口感与品牌卖点"
+      },
+      {
+        "title": "视觉方向设定",
+        "body": "确定画面风格、场景与色调"
+      },
+      {
+        "title": "AI 概念图生成",
+        "body": "批量生成多个方向的营销概念图"
+      },
+      {
+        "title": "筛选与交付",
+        "body": "与团队共同筛选，交付可用图稿"
+      }
+    ],
+    "results": [
+      {
+        "value": "概念图",
+        "label": "AI 营销视觉生成"
+      },
+      {
+        "value": "多方向",
+        "label": "视觉方案供选择"
+      },
+      {
+        "value": "新店",
+        "label": "奶茶上市营销"
+      }
+    ],
+    "deliverables": [
+      "产品概念梳理",
+      "视觉方向",
+      "营销概念图组",
+      "新店营销素材"
+    ],
+    "index": 8,
+    "total": 8
+  },
+  "gallery": [],
+  "assets": [
+    "assets/cases/case-08/case-08.jpg",
+    "assets/partners/wuyutai.png"
+  ],
+  "approval": {
+    "by": "owner",
+    "date": "2026-10-21",
+    "record": "docs/component-runtime.md"
+  }
+}

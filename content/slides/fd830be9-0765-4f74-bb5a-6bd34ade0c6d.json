@@ -1,0 +1,14 @@
+{
+  "id": "fd830be9-0765-4f74-bb5a-6bd34ade0c6d",
+  "label": "量化制作",
+  "cat": "kitchen",
+  "type": "steps",
+  "tags": [
+    "量化",
+    "品控"
+  ],
+  "publish": "web",
+  "purpose": "量化制作的步骤。",
+  "owner": "kitchen",
+  "status": "planned"
+}

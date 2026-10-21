@@ -1,0 +1,23 @@
+{
+  "id": "bf00938c-e2a7-47a2-a11f-e609597ad24c",
+  "label": "节首 · 后厨设计",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "后厨设计",
+    "让高峰出得快"
+  ],
+  "publish": "banner",
+  "purpose": "第三章节首：让高峰出得快（后厨设计）。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 3,
+    "title": "让高峰出得快",
+    "subtitle": "功能分区 · 动线原则 · 后厨实景",
+    "image": {
+      "$asset": "assets/exhibit/ex-05-sec-boh.jpg"
+    }
+  }
+}

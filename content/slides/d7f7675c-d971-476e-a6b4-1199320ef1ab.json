@@ -1,0 +1,19 @@
+{
+  "id": "d7f7675c-d971-476e-a6b4-1199320ef1ab",
+  "label": "样张为证",
+  "cat": "system",
+  "type": "chart",
+  "tags": [
+    "报告",
+    "样张",
+    "价格带"
+  ],
+  "publish": "web",
+  "purpose": "报告样张与午市价格带分布图（销售提案版）。",
+  "evidence": "sample",
+  "note": "销售提案版",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProofSlide",
+  "props": {}
+}

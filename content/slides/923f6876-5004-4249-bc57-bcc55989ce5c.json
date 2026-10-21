@@ -1,0 +1,18 @@
+{
+  "id": "923f6876-5004-4249-bc57-bcc55989ce5c",
+  "label": "案例 05 · 潮发",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例",
+    "潮汕牛肉"
+  ],
+  "publish": "web",
+  "purpose": "伙伴案例：潮发潮汕牛肉。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseStudySlide",
+  "props": {
+    "$case": "case-05"
+  }
+}

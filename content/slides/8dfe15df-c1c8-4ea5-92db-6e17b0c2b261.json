@@ -1,0 +1,16 @@
+{
+  "id": "8dfe15df-c1c8-4ea5-92db-6e17b0c2b261",
+  "label": "收餐处理",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "收餐",
+    "洁污分流"
+  ],
+  "publish": "web",
+  "purpose": "收餐处理与洁污分流实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

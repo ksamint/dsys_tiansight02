@@ -1,0 +1,83 @@
+{
+  "id": "case-05",
+  "name": "潮发",
+  "summary": {
+    "name": "潮发",
+    "image": {
+      "$asset": "assets/cases/case-05/case-05.jpg"
+    },
+    "logo": {
+      "$asset": "assets/partners/chaofa.png"
+    },
+    "module": "模块二 · 概念开创",
+    "summary": "在开放式厨房展陈与运营动线上做概念创新，优化展示模式。",
+    "sub": "新店 · 开放式厨房",
+    "headline": "在开放式厨房展陈与运营动线上做概念创新。",
+    "meta": [
+      {
+        "k": "业态",
+        "v": "新店 · 开放式厨房"
+      },
+      {
+        "k": "地点",
+        "v": "新店"
+      }
+    ],
+    "background": "潮发新店采用开放式厨房。厨房既是出品空间，也是顾客进店后最先看到的品牌展示。",
+    "challenges": [
+      "展陈效果与出品效率需要兼顾",
+      "顾客动线与员工动线容易交叉",
+      "展示需要讲清品牌与食材"
+    ],
+    "approach": [
+      {
+        "title": "概念梳理",
+        "body": "提炼新店要传达的品牌与食材卖点"
+      },
+      {
+        "title": "展陈规划",
+        "body": "规划展示位、陈列方式与视线焦点"
+      },
+      {
+        "title": "动线优化",
+        "body": "梳理备餐、出品、传菜与顾客动线"
+      },
+      {
+        "title": "展示模式优化",
+        "body": "让展示与点单、出品节奏结合"
+      }
+    ],
+    "results": [
+      {
+        "value": "展陈",
+        "label": "开放式厨房展示方案"
+      },
+      {
+        "value": "动线",
+        "label": "备餐 出品 传菜梳理"
+      },
+      {
+        "value": "展示",
+        "label": "模式优化与概念创新"
+      }
+    ],
+    "deliverables": [
+      "新店概念方案",
+      "开放式厨房展陈方案",
+      "运营动线优化建议",
+      "展示模式方案"
+    ],
+    "index": 5,
+    "total": 8
+  },
+  "gallery": [],
+  "assets": [
+    "assets/cases/case-05/case-05.jpg",
+    "assets/partners/chaofa.png"
+  ],
+  "approval": {
+    "by": "owner",
+    "date": "2026-10-21",
+    "record": "docs/component-runtime.md"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
+  "label": "服务模式",
+  "cat": "service",
+  "type": "tiers",
+  "tags": [
+    "服务模式",
+    "经营诊断",
+    "落地辅导",
+    "第二大脑陪跑"
+  ],
+  "publish": "web",
+  "purpose": "三档服务模式，按餐饮类型与经营阶段选择（销售提案版）。",
+  "note": "销售提案版",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ServiceModelSlide",
+  "props": {
+    "highlight": 1
+  }
+}

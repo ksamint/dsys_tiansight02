@@ -1,0 +1,17 @@
+{
+  "id": "6668bdcd-fc78-4a34-8d9b-5f735207fa8e",
+  "label": "案例 06 · 游园京梦",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例"
+  ],
+  "publish": "web",
+  "purpose": "伙伴案例：游园京梦。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseStudySlide",
+  "props": {
+    "$case": "case-06"
+  }
+}

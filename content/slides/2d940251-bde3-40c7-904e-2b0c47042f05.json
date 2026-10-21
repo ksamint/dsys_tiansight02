@@ -1,0 +1,18 @@
+{
+  "id": "2d940251-bde3-40c7-904e-2b0c47042f05",
+  "label": "伙伴背书",
+  "cat": "proof",
+  "type": "logos",
+  "tags": [
+    "伙伴",
+    "logo"
+  ],
+  "publish": "web",
+  "purpose": "伙伴品牌 logo 墙。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "PartnerWallSlide",
+  "props": {
+    "$partners": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "767d87a9-26b1-404b-947e-ef46a19fb49b",
+  "label": "可视化管理",
+  "cat": "kitchen",
+  "type": "tiers",
+  "tags": [
+    "管理体系",
+    "可视化"
+  ],
+  "publish": "web",
+  "purpose": "可视化管理的层级与做法。",
+  "owner": "kitchen",
+  "status": "planned"
+}

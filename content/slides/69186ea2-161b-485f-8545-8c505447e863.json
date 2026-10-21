@@ -1,0 +1,14 @@
+{
+  "id": "69186ea2-161b-485f-8545-8c505447e863",
+  "label": "产品 SOP",
+  "cat": "kitchen",
+  "type": "cards",
+  "tags": [
+    "品控",
+    "SOP"
+  ],
+  "publish": "web",
+  "purpose": "产品 SOP 的组成。",
+  "owner": "kitchen",
+  "status": "planned"
+}

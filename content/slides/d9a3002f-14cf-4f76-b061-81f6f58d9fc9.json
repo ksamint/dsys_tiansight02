@@ -1,0 +1,60 @@
+{
+  "id": "d9a3002f-14cf-4f76-b061-81f6f58d9fc9",
+  "label": "供应体系",
+  "cat": "design",
+  "type": "stats",
+  "tags": [
+    "设备",
+    "供应链"
+  ],
+  "publish": "web",
+  "purpose": "设备合作方的生产、仓储与安装能力。",
+  "evidence": "partner",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "StatColumnsSlide",
+  "props": {
+    "eyebrow": "设备与交付 · 合作方",
+    "title": "设计、生产、仓储、安装一体交付",
+    "subtitle": "",
+    "columns": [
+      {
+        "title": "生产与仓储",
+        "stats": [
+          {
+            "value": "3",
+            "label": "条生产线",
+            "note": "北京 · 广东 · 山东"
+          },
+          {
+            "value": "25 万 m²",
+            "label": "总占地面积"
+          },
+          {
+            "value": "15,000 m²",
+            "label": "仓储物流配送中心"
+          }
+        ]
+      },
+      {
+        "title": "展示与服务",
+        "stats": [
+          {
+            "value": "10,000 m²",
+            "label": "酒店用品展销厅"
+          },
+          {
+            "value": "8",
+            "label": "地分公司及办事处",
+            "note": "广东 · 成都 · 天津 · 山东 · 太原 · 武汉 · 长沙 · 三亚"
+          },
+          {
+            "value": "2003",
+            "label": "年起服务酒店与餐饮"
+          }
+        ]
+      }
+    ],
+    "source": "设备合作方提供的数据。"
+  }
+}

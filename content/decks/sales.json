@@ -1,0 +1,49 @@
+{
+  "id": "sales",
+  "title": "侍天 TIANSIGHT 销售提案",
+  "slides": [
+    "64ffecdf-2549-56c9-9977-a67ce4810da0",
+    "4908fa67-0c0b-58be-b6ff-ef4710a8f658",
+    "f83aae18-e034-5a59-af29-4fdbb2816cb9",
+    "916c9d8c-56d4-45f0-9722-01ff073a4219",
+    "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
+    "2e73adff-ba13-5bb2-bdff-2e0353c0dd64",
+    "bf0552b6-86e5-5668-8cff-2dffc0ddbe58",
+    "d7f7675c-d971-476e-a6b4-1199320ef1ab",
+    "fe45c1ed-a833-4b4a-9243-ba217666b1cc",
+    "4e47be0a-f7de-5c0f-ab7e-b0bc74e01adb",
+    "58a82f6d-8e63-4ac1-8416-ba0ec1ca872c",
+    "2d940251-bde3-40c7-904e-2b0c47042f05",
+    "ba744346-0af7-452a-a815-974d6b106700",
+    "60f54dbe-8e06-45c8-b877-b1574f1e6bee"
+  ],
+  "params": {
+    "date": {
+      "default": "2026-10",
+      "editor": "text"
+    }
+  },
+  "profiles": {
+    "internal": {
+      "publish": [
+        "web",
+        "banner",
+        "internal",
+        "hold"
+      ]
+    },
+    "client": {
+      "publish": [
+        "web",
+        "banner"
+      ]
+    },
+    "web": {
+      "publish": [
+        "web"
+      ]
+    }
+  },
+  "transforms": [],
+  "status": "maintained"
+}

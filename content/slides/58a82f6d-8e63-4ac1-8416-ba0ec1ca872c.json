@@ -1,0 +1,18 @@
+{
+  "id": "58a82f6d-8e63-4ac1-8416-ba0ec1ca872c",
+  "label": "伙伴案例",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例"
+  ],
+  "publish": "internal",
+  "purpose": "销售提案版的单页案例；官网改用案例 01–08。",
+  "note": "销售提案版",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseSlide",
+  "props": {
+    "sample": true
+  }
+}

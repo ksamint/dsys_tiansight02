@@ -1,0 +1,711 @@
+{
+  "id": "76300fea-d62c-4907-8081-e9379fc4ef8d",
+  "label": "功能分区",
+  "cat": "design",
+  "type": "chart",
+  "tags": [
+    "后厨设计",
+    "分区"
+  ],
+  "publish": "web",
+  "purpose": "后厨六大功能区与食物、餐具流向图。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ChartSlide",
+  "props": {
+    "eyebrow": "后厨设计 · 功能分区",
+    "title": "六大功能区，按食物流向布置",
+    "chartTitle": "功能分区与流向",
+    "chart": {
+      "$element": {
+        "type": "svg",
+        "props": {
+          "viewBox": "0 0 830 400",
+          "style": {
+            "width": "100%",
+            "height": "auto",
+            "overflow": "visible"
+          },
+          "children": [
+            {
+              "$element": {
+                "type": "defs",
+                "props": {
+                  "children": [
+                    {
+                      "$element": {
+                        "type": "marker",
+                        "props": {
+                          "id": "ex-a",
+                          "viewBox": "0 0 10 10",
+                          "refX": 9,
+                          "refY": 5,
+                          "markerWidth": 7,
+                          "markerHeight": 7,
+                          "orient": "auto-start-reverse",
+                          "children": {
+                            "$element": {
+                              "type": "path",
+                              "props": {
+                                "d": "M0 0L10 5L0 10z",
+                                "fill": "var(--gold)"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "$element": {
+                        "type": "marker",
+                        "props": {
+                          "id": "ex-b",
+                          "viewBox": "0 0 10 10",
+                          "refX": 9,
+                          "refY": 5,
+                          "markerWidth": 7,
+                          "markerHeight": 7,
+                          "orient": "auto-start-reverse",
+                          "children": {
+                            "$element": {
+                              "type": "path",
+                              "props": {
+                                "d": "M0 0L10 5L0 10z",
+                                "fill": "var(--seal)"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            [
+              {
+                "$element": {
+                  "type": "g",
+                  "props": {
+                    "key": "收货",
+                    "children": [
+                      {
+                        "$element": {
+                          "type": "rect",
+                          "props": {
+                            "x": 0,
+                            "y": 30,
+                            "width": 120,
+                            "height": 96,
+                            "rx": 2,
+                            "fill": "var(--paper)",
+                            "stroke": "var(--gold)",
+                            "strokeWidth": 1.2,
+                            "strokeDasharray": null
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 26,
+                              "fontWeight": 600,
+                              "fill": "var(--charcoal)"
+                            },
+                            "x": 60,
+                            "y": 72,
+                            "children": "收货"
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 22,
+                              "fill": "var(--ink-muted)"
+                            },
+                            "x": 60,
+                            "y": 102,
+                            "children": "验收称重"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "g",
+                  "props": {
+                    "key": "储存",
+                    "children": [
+                      {
+                        "$element": {
+                          "type": "rect",
+                          "props": {
+                            "x": 142,
+                            "y": 30,
+                            "width": 120,
+                            "height": 96,
+                            "rx": 2,
+                            "fill": "var(--paper)",
+                            "stroke": "var(--gold)",
+                            "strokeWidth": 1.2,
+                            "strokeDasharray": null
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 26,
+                              "fontWeight": 600,
+                              "fill": "var(--charcoal)"
+                            },
+                            "x": 202,
+                            "y": 72,
+                            "children": "储存"
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 22,
+                              "fill": "var(--ink-muted)"
+                            },
+                            "x": 202,
+                            "y": 102,
+                            "children": "冷藏冷冻"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "g",
+                  "props": {
+                    "key": "加工",
+                    "children": [
+                      {
+                        "$element": {
+                          "type": "rect",
+                          "props": {
+                            "x": 284,
+                            "y": 30,
+                            "width": 120,
+                            "height": 96,
+                            "rx": 2,
+                            "fill": "var(--paper)",
+                            "stroke": "var(--gold)",
+                            "strokeWidth": 1.2,
+                            "strokeDasharray": null
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 26,
+                              "fontWeight": 600,
+                              "fill": "var(--charcoal)"
+                            },
+                            "x": 344,
+                            "y": 72,
+                            "children": "加工"
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 22,
+                              "fill": "var(--ink-muted)"
+                            },
+                            "x": 344,
+                            "y": 102,
+                            "children": "生熟分开"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "g",
+                  "props": {
+                    "key": "烹饪",
+                    "children": [
+                      {
+                        "$element": {
+                          "type": "rect",
+                          "props": {
+                            "x": 426,
+                            "y": 30,
+                            "width": 120,
+                            "height": 96,
+                            "rx": 2,
+                            "fill": "var(--paper)",
+                            "stroke": "var(--gold)",
+                            "strokeWidth": 1.2,
+                            "strokeDasharray": null
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 26,
+                              "fontWeight": 600,
+                              "fill": "var(--charcoal)"
+                            },
+                            "x": 486,
+                            "y": 72,
+                            "children": "烹饪"
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 22,
+                              "fill": "var(--ink-muted)"
+                            },
+                            "x": 486,
+                            "y": 102,
+                            "children": "热厨工位"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "g",
+                  "props": {
+                    "key": "出品",
+                    "children": [
+                      {
+                        "$element": {
+                          "type": "rect",
+                          "props": {
+                            "x": 568,
+                            "y": 30,
+                            "width": 120,
+                            "height": 96,
+                            "rx": 2,
+                            "fill": "var(--paper)",
+                            "stroke": "var(--gold)",
+                            "strokeWidth": 1.2,
+                            "strokeDasharray": null
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 26,
+                              "fontWeight": 600,
+                              "fill": "var(--charcoal)"
+                            },
+                            "x": 628,
+                            "y": 72,
+                            "children": "出品"
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 22,
+                              "fill": "var(--ink-muted)"
+                            },
+                            "x": 628,
+                            "y": 102,
+                            "children": "检验装盘"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "g",
+                  "props": {
+                    "key": "餐厅",
+                    "children": [
+                      {
+                        "$element": {
+                          "type": "rect",
+                          "props": {
+                            "x": 710,
+                            "y": 30,
+                            "width": 120,
+                            "height": 96,
+                            "rx": 2,
+                            "fill": "none",
+                            "stroke": "var(--gold)",
+                            "strokeWidth": 1.2,
+                            "strokeDasharray": "5 4"
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 26,
+                              "fontWeight": 600,
+                              "fill": "var(--charcoal)"
+                            },
+                            "x": 770,
+                            "y": 72,
+                            "children": "餐厅"
+                          }
+                        }
+                      },
+                      {
+                        "$element": {
+                          "type": "text",
+                          "props": {
+                            "textAnchor": "middle",
+                            "style": {
+                              "fontFamily": "var(--font-body)",
+                              "fontSize": 22,
+                              "fill": "var(--ink-muted)"
+                            },
+                            "x": 770,
+                            "y": 102,
+                            "children": "前厅"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            ],
+            [
+              {
+                "$element": {
+                  "type": "line",
+                  "props": {
+                    "key": 0,
+                    "x1": 122,
+                    "y1": 78,
+                    "x2": 139,
+                    "y2": 78,
+                    "stroke": "var(--gold)",
+                    "strokeWidth": 2,
+                    "markerEnd": "url(#ex-a)"
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "line",
+                  "props": {
+                    "key": 1,
+                    "x1": 264,
+                    "y1": 78,
+                    "x2": 281,
+                    "y2": 78,
+                    "stroke": "var(--gold)",
+                    "strokeWidth": 2,
+                    "markerEnd": "url(#ex-a)"
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "line",
+                  "props": {
+                    "key": 2,
+                    "x1": 406,
+                    "y1": 78,
+                    "x2": 423,
+                    "y2": 78,
+                    "stroke": "var(--gold)",
+                    "strokeWidth": 2,
+                    "markerEnd": "url(#ex-a)"
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "line",
+                  "props": {
+                    "key": 3,
+                    "x1": 548,
+                    "y1": 78,
+                    "x2": 565,
+                    "y2": 78,
+                    "stroke": "var(--gold)",
+                    "strokeWidth": 2,
+                    "markerEnd": "url(#ex-a)"
+                  }
+                }
+              },
+              {
+                "$element": {
+                  "type": "line",
+                  "props": {
+                    "key": 4,
+                    "x1": 690,
+                    "y1": 78,
+                    "x2": 707,
+                    "y2": 78,
+                    "stroke": "var(--gold)",
+                    "strokeWidth": 2,
+                    "markerEnd": "url(#ex-a)"
+                  }
+                }
+              }
+            ],
+            {
+              "$element": {
+                "type": "g",
+                "props": {
+                  "key": "洗消",
+                  "children": [
+                    {
+                      "$element": {
+                        "type": "rect",
+                        "props": {
+                          "x": 568,
+                          "y": 236,
+                          "width": 120,
+                          "height": 96,
+                          "rx": 2,
+                          "fill": "var(--paper)",
+                          "stroke": "var(--gold)",
+                          "strokeWidth": 1.2,
+                          "strokeDasharray": null
+                        }
+                      }
+                    },
+                    {
+                      "$element": {
+                        "type": "text",
+                        "props": {
+                          "textAnchor": "middle",
+                          "style": {
+                            "fontFamily": "var(--font-body)",
+                            "fontSize": 26,
+                            "fontWeight": 600,
+                            "fill": "var(--charcoal)"
+                          },
+                          "x": 628,
+                          "y": 278,
+                          "children": "洗消"
+                        }
+                      }
+                    },
+                    {
+                      "$element": {
+                        "type": "text",
+                        "props": {
+                          "textAnchor": "middle",
+                          "style": {
+                            "fontFamily": "var(--font-body)",
+                            "fontSize": 22,
+                            "fill": "var(--ink-muted)"
+                          },
+                          "x": 628,
+                          "y": 308,
+                          "children": "清洗消毒"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "$element": {
+                "type": "path",
+                "props": {
+                  "d": "M770 128 V284 H691",
+                  "fill": "none",
+                  "stroke": "var(--seal)",
+                  "strokeWidth": 2,
+                  "strokeDasharray": "7 5",
+                  "markerEnd": "url(#ex-b)"
+                }
+              }
+            },
+            {
+              "$element": {
+                "type": "text",
+                "props": {
+                  "textAnchor": "start",
+                  "style": {
+                    "fontFamily": "var(--font-body)",
+                    "fontSize": 22,
+                    "fill": "var(--seal)"
+                  },
+                  "x": 784,
+                  "y": 222,
+                  "children": "收餐"
+                }
+              }
+            },
+            {
+              "$element": {
+                "type": "line",
+                "props": {
+                  "x1": 628,
+                  "y1": 234,
+                  "x2": 628,
+                  "y2": 130,
+                  "stroke": "var(--gold)",
+                  "strokeWidth": 1.4,
+                  "strokeDasharray": "2 4",
+                  "markerEnd": "url(#ex-a)"
+                }
+              }
+            },
+            {
+              "$element": {
+                "type": "text",
+                "props": {
+                  "textAnchor": "end",
+                  "style": {
+                    "fontFamily": "var(--font-body)",
+                    "fontSize": 22,
+                    "fill": "var(--gold)"
+                  },
+                  "x": 616,
+                  "y": 184,
+                  "children": "洁净餐具"
+                }
+              }
+            },
+            {
+              "$element": {
+                "type": "g",
+                "props": {
+                  "transform": "translate(0 372)",
+                  "children": [
+                    {
+                      "$element": {
+                        "type": "line",
+                        "props": {
+                          "x1": 0,
+                          "y1": -6,
+                          "x2": 44,
+                          "y2": -6,
+                          "stroke": "var(--gold)",
+                          "strokeWidth": 2
+                        }
+                      }
+                    },
+                    {
+                      "$element": {
+                        "type": "text",
+                        "props": {
+                          "textAnchor": "start",
+                          "style": {
+                            "fontFamily": "var(--font-body)",
+                            "fontSize": 22,
+                            "fill": "var(--ink-muted)"
+                          },
+                          "x": 56,
+                          "y": 0,
+                          "children": "食物流向（单向）"
+                        }
+                      }
+                    },
+                    {
+                      "$element": {
+                        "type": "line",
+                        "props": {
+                          "x1": 300,
+                          "y1": -6,
+                          "x2": 344,
+                          "y2": -6,
+                          "stroke": "var(--seal)",
+                          "strokeWidth": 2,
+                          "strokeDasharray": "7 5"
+                        }
+                      }
+                    },
+                    {
+                      "$element": {
+                        "type": "text",
+                        "props": {
+                          "textAnchor": "start",
+                          "style": {
+                            "fontFamily": "var(--font-body)",
+                            "fontSize": 22,
+                            "fill": "var(--ink-muted)"
+                          },
+                          "x": 356,
+                          "y": 0,
+                          "children": "餐具回收（独立通道）"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

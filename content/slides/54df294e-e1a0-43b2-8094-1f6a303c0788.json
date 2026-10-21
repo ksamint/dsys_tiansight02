@@ -1,0 +1,30 @@
+{
+  "id": "54df294e-e1a0-43b2-8094-1f6a303c0788",
+  "label": "后厨实景 · 二",
+  "cat": "design",
+  "type": "gallery",
+  "tags": [
+    "后厨设计"
+  ],
+  "publish": "web",
+  "purpose": "后厨项目实景拼板（二）。",
+  "evidence": "partner",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "后厨设计 · 实景",
+    "title": "设备、排烟、\n照明协同",
+    "body": "一体规划，减少后期改造。",
+    "note": "项目实景照片。",
+    "layout": "row",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/exhibit/m-boh2.jpg"
+        },
+        "caption": "加工区 · 热厨区 · 设备排列 · 厨房通道"
+      }
+    ]
+  }
+}

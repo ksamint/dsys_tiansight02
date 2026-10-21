@@ -1,0 +1,15 @@
+{
+  "id": "60f68492-0a44-49ed-82b1-013be536290b",
+  "label": "现场定置",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "工具定置"
+  ],
+  "publish": "web",
+  "purpose": "现场定置与档案实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

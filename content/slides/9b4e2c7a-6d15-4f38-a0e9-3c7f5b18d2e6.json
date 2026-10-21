@@ -1,0 +1,60 @@
+{
+  "id": "9b4e2c7a-6d15-4f38-a0e9-3c7f5b18d2e6",
+  "label": "展陈诊断",
+  "cat": "engage",
+  "type": "module",
+  "tags": [
+    "合作入口",
+    "展陈诊断",
+    "现场勘察",
+    "点单"
+  ],
+  "publish": "hold",
+  "purpose": "合作入口：展陈诊断的四步与交付。",
+  "note": "三类交付保留，数量按每次合作约定",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ModuleDetailSlide",
+  "props": {
+    "eyebrow": "合作入口 · 展陈诊断",
+    "title": "合作从一次展陈诊断开始",
+    "subtitle": "看现场、看菜单、看点单，先找出最值得改的三处。",
+    "stats": [],
+    "steps": [
+      {
+        "title": "现场勘察",
+        "body": "用餐区、明档、出品与后厨动线，高峰时段观察。"
+      },
+      {
+        "title": "菜单与点单",
+        "body": "招牌菜点单占比、客单价与出餐时长。"
+      },
+      {
+        "title": "诊断报告",
+        "body": "先改哪三处、谁来执行、以什么验收。"
+      },
+      {
+        "title": "共同确认",
+        "body": "约定基线与目标，再决定是否进入设计与改造。"
+      }
+    ],
+    "deliverablesLabel": "诊断交付",
+    "deliverables": [
+      {
+        "k": "展陈诊断报告",
+        "v": "按项目约定"
+      },
+      {
+        "k": "优先改造清单",
+        "v": "按项目约定"
+      },
+      {
+        "k": "前后对照指标",
+        "v": "按项目约定"
+      }
+    ],
+    "image": {
+      "$asset": "assets/exhibit/m-detail.jpg"
+    }
+  }
+}

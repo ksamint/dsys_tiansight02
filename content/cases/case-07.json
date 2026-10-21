@@ -1,0 +1,83 @@
+{
+  "id": "case-07",
+  "name": "韵1980淮扬菜",
+  "summary": {
+    "name": "韵1980淮扬菜",
+    "image": {
+      "$asset": "assets/cases/case-07/case-07.jpg"
+    },
+    "logo": {
+      "$asset": "assets/partners/yun1980.png"
+    },
+    "module": "模块一 · 新店开业支持",
+    "summary": "分析本地客群与竞争圈，完成淮扬菜新店的适配与落地支持。",
+    "sub": "广东 · 珠江啤酒产业园",
+    "headline": "让淮扬菜新店适配本地客群与竞争圈，完成落地。",
+    "meta": [
+      {
+        "k": "业态",
+        "v": "淮扬菜"
+      },
+      {
+        "k": "地点",
+        "v": "广东 · 珠江啤酒产业园"
+      }
+    ],
+    "background": "韵1980 将淮扬菜新店开在广东珠江啤酒产业园。菜系进入新的地域市场，需要重新理解本地客群与竞争环境。",
+    "challenges": [
+      "本地客群口味与消费习惯不同",
+      "园区周边竞争与客流结构不清楚",
+      "菜单与价格需要本地化"
+    ],
+    "approach": [
+      {
+        "title": "本地客群分析",
+        "body": "园区及周边客群构成、场景与时段"
+      },
+      {
+        "title": "竞争圈分析",
+        "body": "周边业态、价格带与主力竞品"
+      },
+      {
+        "title": "定位与菜单适配",
+        "body": "保留淮扬特色，调整菜单结构与价格"
+      },
+      {
+        "title": "落地支持",
+        "body": "配合开业筹备与开业期运营"
+      }
+    ],
+    "results": [
+      {
+        "value": "客群",
+        "label": "本地客群适配"
+      },
+      {
+        "value": "竞争圈",
+        "label": "周边业态与价格带"
+      },
+      {
+        "value": "落地",
+        "label": "新店开业支持"
+      }
+    ],
+    "deliverables": [
+      "本地客群分析",
+      "竞争圈分析报告",
+      "菜单与价格适配建议",
+      "开业落地支持"
+    ],
+    "index": 7,
+    "total": 8
+  },
+  "gallery": [],
+  "assets": [
+    "assets/cases/case-07/case-07.jpg",
+    "assets/partners/yun1980.png"
+  ],
+  "approval": {
+    "by": "owner",
+    "date": "2026-10-21",
+    "record": "docs/component-runtime.md"
+  }
+}

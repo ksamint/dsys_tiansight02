@@ -1,0 +1,24 @@
+{
+  "id": "3531cea9-7492-4d22-9767-cc7977113b06",
+  "label": "问题",
+  "cat": "brand",
+  "type": "statement",
+  "tags": [
+    "痛点",
+    "经营决策"
+  ],
+  "publish": "web",
+  "purpose": "整页陈述：经营决定缺少依据。",
+  "evidence": "illustration",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "StatementSlide",
+  "props": {
+    "kicker": "问题",
+    "title": "每天打烊之后，\n经营的决定才刚开始。",
+    "body": "卖什么、定什么价、怎么组合，每个决定都要有依据。",
+    "image": {
+      "$asset": "assets/deck/statement-problem.jpg"
+    }
+  }
+}

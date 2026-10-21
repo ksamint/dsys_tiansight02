@@ -1,0 +1,18 @@
+{
+  "id": "4fef1e6b-f64c-42a4-8d73-76e78d029569",
+  "label": "厨务痛点",
+  "cat": "kitchen",
+  "type": "table",
+  "tags": [
+    "痛点",
+    "标准",
+    "效率",
+    "出品",
+    "损耗",
+    "食安"
+  ],
+  "publish": "web",
+  "purpose": "五个厨务痛点、对经营的影响与服务回应；提案改善目标的来源。",
+  "owner": "kitchen",
+  "status": "planned"
+}

@@ -1,0 +1,63 @@
+{
+  "title": "这些品牌，已与侍天同行",
+  "logos": [
+    {
+      "name": "苏帮袁",
+      "src": {
+        "$asset": "assets/partners/subangyuan.png"
+      }
+    },
+    {
+      "name": "清水亭",
+      "src": {
+        "$asset": "assets/partners/qingshuiting.png"
+      }
+    },
+    {
+      "name": "3699 河鲜小馆",
+      "src": {
+        "$asset": "assets/partners/3699.png"
+      }
+    },
+    {
+      "name": "游园京梦",
+      "src": {
+        "$asset": "assets/partners/youyuanjingmeng.png"
+      }
+    },
+    {
+      "name": "吴裕泰",
+      "src": {
+        "$asset": "assets/partners/wuyutai.png"
+      }
+    },
+    {
+      "name": "韵 1980 新派淮扬菜",
+      "src": {
+        "$asset": "assets/partners/yun1980.png"
+      }
+    },
+    {
+      "name": "潮发潮汕牛肉",
+      "src": {
+        "$asset": "assets/partners/chaofa.png"
+      }
+    },
+    {
+      "name": "石头先生的汉堡",
+      "src": {
+        "$asset": "assets/partners/shitou.png"
+      }
+    },
+    {
+      "name": "石头先生的烤炉",
+      "src": {
+        "$asset": "assets/partners/shitou.png"
+      }
+    },
+    {
+      "name": "更多伙伴"
+    }
+  ],
+  "columns": 5
+}

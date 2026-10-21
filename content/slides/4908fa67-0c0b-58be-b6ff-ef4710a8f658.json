@@ -1,0 +1,13 @@
+{
+  "id": "4908fa67-0c0b-58be-b6ff-ef4710a8f658",
+  "label": "主张",
+  "owner": "sales",
+  "cat": "service",
+  "type": "cards",
+  "tags": [],
+  "publish": "web",
+  "purpose": "主张",
+  "status": "maintained",
+  "component": "PromiseSlide",
+  "props": {}
+}

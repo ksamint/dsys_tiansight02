@@ -1,0 +1,70 @@
+{
+  "id": "1f8c6e27-b4d3-4a59-9c02-7e5a3d81b6c4",
+  "label": "光与视觉 · 成效",
+  "cat": "design",
+  "type": "stats",
+  "tags": [
+    "用餐体验",
+    "光线",
+    "摆盘",
+    "明档",
+    "研究",
+    "成效"
+  ],
+  "publish": "hold",
+  "purpose": "光线、摆盘与双向可见的外部研究及实验情境。",
+  "evidence": "external",
+  "note": "已按原始论文修订；支持数字附实验情境，未核实数字改定性。详见 docs/content-provenance.md。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "StatColumnsSlide",
+  "props": {
+    "eyebrow": "用餐体验 · 外部研究",
+    "title": "外部研究提供线索，门店效果需验证",
+    "subtitle": "",
+    "columns": [
+      {
+        "title": "光线",
+        "stats": [
+          {
+            "value": "选择",
+            "label": "光线明暗，影响选择"
+          },
+          {
+            "value": "验证",
+            "label": "目标菜品，比较点单占比"
+          }
+        ]
+      },
+      {
+        "title": "摆盘",
+        "stats": [
+          {
+            "value": "≈2×",
+            "label": "艺术摆盘沙拉，陈述愿付价格",
+            "note": "相同食材，60 人实验"
+          },
+          {
+            "value": "感知",
+            "label": "摆盘，影响主观口味评价"
+          }
+        ]
+      },
+      {
+        "title": "双向可见",
+        "stats": [
+          {
+            "value": "+22.2%",
+            "label": "顾客报告的，餐品质量"
+          },
+          {
+            "value": "−19.2%",
+            "label": "订单完成用时",
+            "note": "厨师与顾客互相可见的餐饮实验"
+          }
+        ]
+      }
+    ],
+    "source": "Biswas 等, JMR 2017；Michel 等, Flavour 2014；Buell 等, Management Science 2017。实验情境与指标不同，不能视为门店收益承诺。"
+  }
+}

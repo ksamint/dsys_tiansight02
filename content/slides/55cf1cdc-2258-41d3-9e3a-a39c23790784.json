@@ -1,0 +1,18 @@
+{
+  "id": "55cf1cdc-2258-41d3-9e3a-a39c23790784",
+  "label": "经营层 × 模块",
+  "cat": "service",
+  "type": "table",
+  "tags": [
+    "服务模块",
+    "经营层"
+  ],
+  "publish": "web",
+  "purpose": "经营层与四个服务模块的对应矩阵。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "highlight": -1
+  }
+}

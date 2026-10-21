@@ -1,0 +1,17 @@
+{
+  "id": "5d4889fa-fd9a-46cf-b96b-c997dc83a1a9",
+  "label": "冷藏标签",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "储存",
+    "冷藏",
+    "标识"
+  ],
+  "publish": "web",
+  "purpose": "冷藏标签实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

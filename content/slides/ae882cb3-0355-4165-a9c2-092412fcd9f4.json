@@ -1,0 +1,23 @@
+{
+  "id": "ae882cb3-0355-4165-a9c2-092412fcd9f4",
+  "label": "节首 · 落地方式",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "落地方式",
+    "让改善看得见"
+  ],
+  "publish": "banner",
+  "purpose": "第五章节首：让改善看得见（落地方式）。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 5,
+    "title": "让改善看得见",
+    "subtitle": "新店与改造 · 服务流程 · 交付物 · 验收",
+    "image": {
+      "$asset": "assets/exhibit/ex-07-sec-delivery.jpg"
+    }
+  }
+}

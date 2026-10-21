@@ -1,0 +1,31 @@
+{
+  "id": "69a70c07-74f7-4269-bd23-b491dd6c7b68",
+  "label": "明档细节",
+  "cat": "design",
+  "type": "gallery",
+  "tags": [
+    "出品展陈",
+    "明档"
+  ],
+  "publish": "web",
+  "purpose": "明档细节项目实景拼板。",
+  "evidence": "partner",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "出品展陈 · 明档细节",
+    "title": "排烟、照明、\n台面一体设计",
+    "body": "排烟罩、灯光、台面高度一体设计。",
+    "note": "项目实景照片。",
+    "layout": "row",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/exhibit/m-detail.jpg"
+        },
+        "caption": "炒锅明档 · 岛式排烟罩 · 明档灯光"
+      }
+    ]
+  }
+}

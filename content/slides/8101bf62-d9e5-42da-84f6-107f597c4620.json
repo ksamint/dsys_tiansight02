@@ -1,0 +1,21 @@
+{
+  "id": "8101bf62-d9e5-42da-84f6-107f597c4620",
+  "label": "联合创始人 · 郭峰",
+  "cat": "team",
+  "type": "profile",
+  "tags": [
+    "人物",
+    "联合创始人",
+    "组织",
+    "服务体验"
+  ],
+  "publish": "web",
+  "purpose": "郭峰个人介绍：EHL 背景、组织与 AI 应用。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProfileSlide",
+  "props": {
+    "$team": "郭峰",
+    "eyebrow": "团队 · 联合创始人"
+  }
+}

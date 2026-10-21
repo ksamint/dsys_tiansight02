@@ -1,0 +1,22 @@
+{
+  "id": "ceb4f385-17f4-46cf-aaaf-3fe469db76e2",
+  "label": "节首 · 团队",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "团队"
+  ],
+  "publish": "banner",
+  "purpose": "第三章节首：团队（企业介绍）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 3,
+    "title": "团队",
+    "subtitle": "联合创始人 · 专家团队",
+    "image": {
+      "$asset": "assets/deck/section-3.jpg"
+    }
+  }
+}

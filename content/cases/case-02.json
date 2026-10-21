@@ -1,0 +1,83 @@
+{
+  "id": "case-02",
+  "name": "清水亭",
+  "summary": {
+    "name": "清水亭",
+    "image": {
+      "$asset": "assets/cases/case-02/case-02.jpg"
+    },
+    "logo": {
+      "$asset": "assets/partners/qingshuiting.png"
+    },
+    "module": "模块三 · 经营复盘",
+    "summary": "订单级复盘历史经营数据，重新梳理湖北菜定位与菜单战略。",
+    "sub": "北京 · 湖北菜门店",
+    "headline": "重新梳理定位，给出未来发展的菜系与菜单战略建议。",
+    "meta": [
+      {
+        "k": "业态",
+        "v": "湖北菜"
+      },
+      {
+        "k": "地点",
+        "v": "北京"
+      }
+    ],
+    "background": "清水亭是北京的湖北菜门店，已积累一段时间的历史经营数据。周边竞争加剧，需要用数据重新看清自身优势，判断下一阶段的定位与菜系方向。",
+    "challenges": [
+      "定位在经营中逐渐模糊，湖北菜特色未被放大",
+      "历史数据停留在月度汇总，看不到单品与时段",
+      "菜系扩展方向缺少数据依据"
+    ],
+    "approach": [
+      {
+        "title": "订单级数据还原",
+        "body": "把历史流水拆到每一单、每道菜、每个时段"
+      },
+      {
+        "title": "菜品贡献分析",
+        "body": "按销量、毛利与搭配评估招牌与长尾"
+      },
+      {
+        "title": "竞争格局对照",
+        "body": "对照北京同类门店的定位、价格带与菜单"
+      },
+      {
+        "title": "战略建议",
+        "body": "输出定位、菜系方向与菜单结构建议"
+      }
+    ],
+    "results": [
+      {
+        "value": "订单级",
+        "label": "历史数据分析颗粒度"
+      },
+      {
+        "value": "定位",
+        "label": "湖北菜定位重新梳理"
+      },
+      {
+        "value": "战略",
+        "label": "菜系与菜单发展建议"
+      }
+    ],
+    "deliverables": [
+      "订单级历史经营复盘",
+      "菜品贡献与结构分析",
+      "北京竞争格局对照",
+      "菜系与菜单战略建议"
+    ],
+    "index": 2,
+    "total": 8
+  },
+  "gallery": [],
+  "assets": [
+    "assets/cases/case-02/case-02.jpg",
+    "assets/partners/qingshuiting.png"
+  ],
+  "approval": {
+    "by": "owner",
+    "date": "2026-10-21",
+    "record": "docs/component-runtime.md"
+  }
+}

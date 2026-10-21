@@ -1,0 +1,15 @@
+{
+  "id": "64fe666d-a6dd-4eb9-84ca-12b1087950dd",
+  "label": "可选专项",
+  "cat": "service",
+  "type": "cards",
+  "tags": [
+    "专项"
+  ],
+  "publish": "web",
+  "purpose": "可在模块之外叠加的专项服务。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {}
+}

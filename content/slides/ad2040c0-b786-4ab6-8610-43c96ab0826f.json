@@ -1,0 +1,15 @@
+{
+  "id": "ad2040c0-b786-4ab6-8610-43c96ab0826f",
+  "label": "计量与验收",
+  "cat": "kitchen",
+  "type": "table",
+  "tags": [
+    "落地",
+    "验收",
+    "指标"
+  ],
+  "publish": "web",
+  "purpose": "计量口径与验收指标。",
+  "owner": "kitchen",
+  "status": "planned"
+}

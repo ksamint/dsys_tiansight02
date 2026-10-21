@@ -1,0 +1,23 @@
+{
+  "id": "b63a770d-49c7-40e5-8db3-02bc6ede0331",
+  "label": "封面",
+  "cat": "nav",
+  "type": "cover",
+  "tags": [
+    "企业介绍"
+  ],
+  "publish": "banner",
+  "purpose": "企业介绍封面：从一道菜，到一家家店的好生意。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "TitleSlide",
+  "props": {
+    "title": "从一道菜，\n到一家家店的好生意。",
+    "clientLabel": "文件",
+    "client": "企业介绍",
+    "date": "2026-09-27",
+    "image": {
+      "$asset": "assets/deck/cover.jpg"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "5b1a9bb8-0955-4cf6-831a-0fc3ab3f6158",
+  "label": "服务品牌",
+  "cat": "proof",
+  "type": "logos",
+  "tags": [
+    "品牌墙",
+    "餐饮品牌"
+  ],
+  "publish": "hold",
+  "purpose": "余向东服务过的餐饮品牌墙。",
+  "evidence": "partner",
+  "note": "品牌名称待余向东核对",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "设备与交付 · 服务品牌",
+    "title": "餐饮品牌\n服务经历",
+    "body": "覆盖新派中餐、烧肉、火锅、快餐与茶饮等业态。",
+    "note": "余向东服务的部分餐饮品牌。",
+    "layout": "row",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/exhibit/brand-wall.jpg"
+        },
+        "caption": "部分餐饮品牌"
+      }
+    ]
+  }
+}

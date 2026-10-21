@@ -1,0 +1,15 @@
+{
+  "id": "753ea379-36ea-4a59-8f63-55390d5326a3",
+  "label": "洗菜作业",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "洗涤"
+  ],
+  "publish": "web",
+  "purpose": "洗菜作业实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "82e572f3-d3bc-49d8-8b65-39d2d79c0782",
+  "label": "节首 · 餐饮第二大脑",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "第二大脑"
+  ],
+  "publish": "banner",
+  "purpose": "第二章节首：餐饮第二大脑。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 2,
+    "title": "餐饮第二大脑",
+    "subtitle": "菜单推演 · 经营看板 · 教练式督导 · 持续复盘",
+    "image": {
+      "$asset": "assets/deck/section-2.jpg"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "3fd8612f-e855-44fa-805a-e945aaa4f040",
+  "label": "清洁工具定置",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "清洁",
+    "工具定置"
+  ],
+  "publish": "web",
+  "purpose": "清洁工具定置实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

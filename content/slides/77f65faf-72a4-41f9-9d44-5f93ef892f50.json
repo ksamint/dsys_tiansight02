@@ -1,0 +1,81 @@
+{
+  "id": "77f65faf-72a4-41f9-9d44-5f93ef892f50",
+  "label": "交付节奏",
+  "cat": "service",
+  "type": "timeline",
+  "tags": [
+    "交付",
+    "周报",
+    "月度复盘"
+  ],
+  "publish": "web",
+  "purpose": "四个模块的交付周期与报告节奏对照。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "TimelineSlide",
+  "props": {
+    "eyebrow": "服务内容 · 交付节奏",
+    "title": "交付节奏",
+    "tag": "周报 · 月度复盘 · 季度复盘 · 阶段成果",
+    "note": "口径：按各模块标准周期绘制，新店开业以签约后第 60 日开业为参考；实际节点随项目进度调整。",
+    "axis": {
+      "min": 0,
+      "max": 12,
+      "ticks": [
+        {
+          "at": 0,
+          "label": "签约"
+        },
+        {
+          "at": 3,
+          "label": "3 月"
+        },
+        {
+          "at": 6,
+          "label": "6 月"
+        },
+        {
+          "at": 9,
+          "label": "9 月"
+        },
+        {
+          "at": 12,
+          "label": "12 月"
+        }
+      ]
+    },
+    "labelWidth": 280,
+    "markers": [],
+    "rows": [
+      {
+        "label": "新店开业",
+        "sub": "签约 → 开业后 90 天",
+        "from": 0,
+        "to": 5,
+        "out": "13 周报 · 3 月复盘"
+      },
+      {
+        "label": "概念开创",
+        "sub": "首轮 12 周",
+        "from": 0,
+        "to": 2.8,
+        "out": "12 周进展 · 3 期成果"
+      },
+      {
+        "label": "经营复盘",
+        "sub": "标准首期 90 天",
+        "from": 0,
+        "to": 3,
+        "out": "周快报 · 3 月复盘"
+      },
+      {
+        "label": "连锁督导",
+        "sub": "标准首年 12 个月",
+        "from": 0,
+        "to": 12,
+        "out": "52 周报 · 12 月报 · 4 季复盘",
+        "accent": true
+      }
+    ]
+  }
+}

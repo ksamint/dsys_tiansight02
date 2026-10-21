@@ -1,0 +1,18 @@
+{
+  "id": "60f54dbe-8e06-45c8-b877-b1574f1e6bee",
+  "label": "联系",
+  "cat": "engage",
+  "type": "contact",
+  "tags": [
+    "联系",
+    "二维码"
+  ],
+  "publish": "web",
+  "purpose": "收尾页：品牌口号、微信二维码与官网地址。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ContactSlide",
+  "props": {
+    "$contact": true
+  }
+}

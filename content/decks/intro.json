@@ -1,0 +1,88 @@
+{
+  "id": "intro",
+  "title": "企业介绍",
+  "canonicalSource": "guidelines/company-intro-v3.md",
+  "slides": [
+    "b63a770d-49c7-40e5-8db3-02bc6ede0331",
+    "a34bdc46-9be1-45a0-9300-fd57ea216be3",
+    "3531cea9-7492-4d22-9767-cc7977113b06",
+    "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
+    "916c9d8c-56d4-45f0-9722-01ff073a4219",
+    "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
+    "36b35d54-c26c-4985-8c82-d0f758848008",
+    "55cf1cdc-2258-41d3-9e3a-a39c23790784",
+    "f97c967e-6f86-45fb-bb36-e22d1df0dfff",
+    "fe3e5ea3-cd6d-4618-b48e-1c2d04a74222",
+    "bfea5864-e5c2-43ef-8f35-ee8ef113e40f",
+    "82689cc6-d75f-4e4b-b4ac-d567c8708feb",
+    "1bfcb28d-0489-4267-bc88-bb5afd9edd30",
+    "47a1e177-3245-4eaf-9bd2-c839ee78e217",
+    "9ca9a8f2-58ca-4b23-bf8a-f00ac306c17e",
+    "45a17eba-ac0a-4d77-8fd6-c6a3660d2573",
+    "77f65faf-72a4-41f9-9d44-5f93ef892f50",
+    "64fe666d-a6dd-4eb9-84ca-12b1087950dd",
+    "a3899939-9c43-4f5b-b6ee-e12b7615f862",
+    "82e572f3-d3bc-49d8-8b65-39d2d79c0782",
+    "7bdbce6f-a0e8-49ab-bd3d-64c2dfc8565c",
+    "d7f7675c-d971-476e-a6b4-1199320ef1ab",
+    "fe45c1ed-a833-4b4a-9243-ba217666b1cc",
+    "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+    "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+    "d300e5eb-7629-435b-abbc-22f91e013c28",
+    "48d9c918-a62e-430f-952b-bc8007f333c6",
+    "7dd147e8-c3c8-412a-a6db-001140f41a34",
+    "27ee71ef-7f9f-46f5-b9d3-5cd83dd7eed8",
+    "b8fbe927-ea40-4906-8c98-9b2928eb53d5",
+    "58a82f6d-8e63-4ac1-8416-ba0ec1ca872c",
+    "812447ee-f013-4213-a98a-89e9c7d4f127",
+    "06c5c56b-0e55-4ccb-bbcf-6023afdbebed",
+    "f944281f-0a18-41c8-85f8-195236bf3325",
+    "11f58198-e3a9-4f0c-ac0c-a3d55763eb3c",
+    "909bcf6d-4727-457e-bded-15bf27df98e2",
+    "fa570563-6805-4835-bf60-5c5d15441864",
+    "923f6876-5004-4249-bc57-bcc55989ce5c",
+    "6668bdcd-fc78-4a34-8d9b-5f735207fa8e",
+    "e9ee5393-4d7d-4a62-aacb-4ea80285d9de",
+    "4289c668-7be0-4db0-90cf-6ae8ce371c12",
+    "2d940251-bde3-40c7-904e-2b0c47042f05",
+    "ceb4f385-17f4-46cf-aaaf-3fe469db76e2",
+    "ba744346-0af7-452a-a815-974d6b106700",
+    "ed451b90-dc1f-497d-82c3-d9cb095dd225",
+    "8101bf62-d9e5-42da-84f6-107f597c4620",
+    "5419cbed-e0d1-46a9-bd7b-393c6b260205",
+    "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
+    "c5b7abdd-d3a2-44b0-a155-93ff56c79ee9",
+    "03051a0b-475c-4847-a438-ab022540c12f",
+    "cdbe10c1-a934-4565-b22c-32620690305a",
+    "60f54dbe-8e06-45c8-b877-b1574f1e6bee"
+  ],
+  "params": {
+    "date": {
+      "default": "2026-10",
+      "editor": "text"
+    }
+  },
+  "profiles": {
+    "internal": {
+      "publish": [
+        "web",
+        "banner",
+        "internal",
+        "hold"
+      ]
+    },
+    "client": {
+      "publish": [
+        "web",
+        "banner"
+      ]
+    },
+    "web": {
+      "publish": [
+        "web"
+      ]
+    }
+  },
+  "transforms": [],
+  "status": "maintained"
+}

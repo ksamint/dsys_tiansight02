@@ -1,0 +1,13 @@
+{
+  "id": "3ede721f-fe1a-44a6-b880-569b6214e6e6",
+  "label": "总结",
+  "cat": "kitchen",
+  "type": "promise",
+  "tags": [
+    "总结"
+  ],
+  "publish": "web",
+  "purpose": "厨政专项总结。",
+  "owner": "kitchen",
+  "status": "planned"
+}

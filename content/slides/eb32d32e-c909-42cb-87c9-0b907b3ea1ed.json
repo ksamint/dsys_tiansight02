@@ -1,0 +1,47 @@
+{
+  "id": "eb32d32e-c909-42cb-87c9-0b907b3ea1ed",
+  "label": "体验动线",
+  "cat": "design",
+  "type": "steps",
+  "tags": [
+    "用餐体验",
+    "体验动线"
+  ],
+  "publish": "web",
+  "purpose": "沿顾客一餐的五个停留点安排厨房可见部分。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "FiveQuestionsSlide",
+  "props": {
+    "eyebrow": "用餐体验 · 体验动线",
+    "title": "按顾客动线，规划可见区域",
+    "note": "",
+    "steps": [
+      {
+        "label": "抵达",
+        "q": "第一视线",
+        "aim": "门口与等位区的展陈、明档视线。"
+      },
+      {
+        "label": "入座",
+        "q": "座位视线",
+        "aim": "座位朝向、明档距离与遮挡。"
+      },
+      {
+        "label": "点单",
+        "q": "引导选择",
+        "aim": "招牌出品进入视线。"
+      },
+      {
+        "label": "上菜",
+        "q": "送餐路径",
+        "aim": "出餐口至餐桌的距离与路线。"
+      },
+      {
+        "label": "离店",
+        "q": "收尾动线",
+        "aim": "收餐、清台、离店动线分离。"
+      }
+    ]
+  }
+}

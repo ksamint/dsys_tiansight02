@@ -1,0 +1,23 @@
+{
+  "id": "d2c0bdd1-2cdf-4c7a-90fe-14e39a5e2db1",
+  "label": "节首 · 设备与交付",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "设备与交付",
+    "让方案落得了地"
+  ],
+  "publish": "banner",
+  "purpose": "第四章节首：让方案落得了地（设备与交付）。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 4,
+    "title": "让方案落得了地",
+    "subtitle": "设备选型 · 合作方能力 · 服务经历 · 项目案例",
+    "image": {
+      "$asset": "assets/exhibit/ex-06-sec-equipment.jpg"
+    }
+  }
+}

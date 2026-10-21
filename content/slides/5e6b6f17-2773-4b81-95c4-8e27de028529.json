@@ -1,0 +1,24 @@
+{
+  "id": "5e6b6f17-2773-4b81-95c4-8e27de028529",
+  "label": "封面",
+  "cat": "nav",
+  "type": "cover",
+  "tags": [
+    "餐饮展陈与厨房设计"
+  ],
+  "publish": "banner",
+  "purpose": "餐饮展陈与厨房设计封面。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "TitleSlide",
+  "props": {
+    "title": "餐饮展陈与厨房设计",
+    "subtitle": "用展陈开启餐厅增长第二曲线",
+    "clientLabel": "文件",
+    "client": "侍天 · 展陈厨房与用餐体验专项",
+    "date": "2026-10",
+    "image": {
+      "$asset": "assets/exhibit/ex-01-cover.jpg"
+    }
+  }
+}

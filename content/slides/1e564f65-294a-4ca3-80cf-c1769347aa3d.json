@@ -1,0 +1,42 @@
+{
+  "id": "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+  "label": "报告样张",
+  "cat": "system",
+  "type": "screens",
+  "tags": [
+    "报告",
+    "样张"
+  ],
+  "publish": "web",
+  "purpose": "经营报告样张页面截图。",
+  "evidence": "sample",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "方法论 · 报告样张",
+    "title": "诊断报告，\n逐页给出依据",
+    "body": "方法论地图、决策维度与分析维度，每一页先写结论，再给依据。",
+    "note": "报告样张为演示版本 · 模拟数据，非客户数据",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/screens/report-page-1.jpg"
+        },
+        "caption": "方法论地图"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/report-page-2.jpg"
+        },
+        "caption": "决策维度"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/report-page-3.jpg"
+        },
+        "caption": "分析维度"
+      }
+    ]
+  }
+}

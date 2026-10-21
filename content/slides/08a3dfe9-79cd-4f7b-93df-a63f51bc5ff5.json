@@ -1,0 +1,22 @@
+{
+  "id": "08a3dfe9-79cd-4f7b-93df-a63f51bc5ff5",
+  "label": "节首 · 团队",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "团队"
+  ],
+  "publish": "banner",
+  "purpose": "第六章节首：团队（展陈）。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 6,
+    "title": "团队",
+    "subtitle": "后厨设计专家 · 出品专家 · 联合创始人",
+    "image": {
+      "$asset": "assets/exhibit/ex-08-sec-team.jpg"
+    }
+  }
+}

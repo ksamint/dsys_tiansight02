@@ -1,0 +1,21 @@
+{
+  "id": "b8fbe927-ea40-4906-8c98-9b2928eb53d5",
+  "label": "老板看到的价值",
+  "cat": "brand",
+  "type": "promise",
+  "tags": [
+    "价值",
+    "三不",
+    "验收"
+  ],
+  "publish": "web",
+  "purpose": "老板看得到的经营变化与三不原则。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ValueSlide",
+  "props": {
+    "title": "老板看得到的变化",
+    "note": "侍天不替老板拍板，不凭单一销量砍菜，不把预期收益当成结果。",
+    "proof": "决策有依据，行动有人落实，改善可以核对。"
+  }
+}

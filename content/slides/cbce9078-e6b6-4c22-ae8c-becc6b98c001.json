@@ -1,0 +1,60 @@
+{
+  "id": "cbce9078-e6b6-4c22-ae8c-becc6b98c001",
+  "label": "设备选型",
+  "cat": "design",
+  "type": "table",
+  "tags": [
+    "设备",
+    "选型"
+  ],
+  "publish": "web",
+  "purpose": "设备选型的五个标准。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "eyebrow": "设备与交付 · 选型",
+    "title": "设备选型五项标准",
+    "subtitle": "",
+    "corner": "标准",
+    "columns": [
+      "要求"
+    ],
+    "rows": [
+      {
+        "label": "产能匹配",
+        "cells": [
+          "按菜单与高峰销量核定。"
+        ]
+      },
+      {
+        "label": "易于清洁",
+        "cells": [
+          "少缝隙、无死角。"
+        ]
+      },
+      {
+        "label": "能耗排烟",
+        "cells": [
+          "能耗、排烟、消防统筹。"
+        ]
+      },
+      {
+        "label": "维护责任",
+        "cells": [
+          "明确保养周期与责任人。"
+        ]
+      },
+      {
+        "label": "展示观感",
+        "cells": [
+          "明档设备兼顾外观。"
+        ]
+      }
+    ],
+    "footnote": {
+      "label": "立场",
+      "text": "设备清单按参数出具，可多家比价；是否由合作方供货由业主决定。"
+    }
+  }
+}

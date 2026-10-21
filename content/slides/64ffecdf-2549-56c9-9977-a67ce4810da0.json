@@ -1,0 +1,16 @@
+{
+  "id": "64ffecdf-2549-56c9-9977-a67ce4810da0",
+  "label": "封面",
+  "owner": "sales",
+  "cat": "service",
+  "type": "cards",
+  "tags": [],
+  "publish": "web",
+  "purpose": "封面",
+  "status": "maintained",
+  "component": "TitleSlide",
+  "props": {
+    "client": "潜在客户",
+    "date": "2026-09-19"
+  }
+}

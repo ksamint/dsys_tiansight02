@@ -1,0 +1,23 @@
+{
+  "id": "cdbe10c1-a934-4565-b22c-32620690305a",
+  "label": "决策",
+  "cat": "brand",
+  "type": "statement",
+  "tags": [
+    "拍板之前问侍天"
+  ],
+  "publish": "web",
+  "purpose": "整页陈述：拍板之前，问侍天。",
+  "evidence": "illustration",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "StatementSlide",
+  "props": {
+    "kicker": "决策",
+    "title": "拍板之前，\n问侍天。",
+    "body": "餐饮第二大脑 · 让每个经营决定都有依据。",
+    "image": {
+      "$asset": "assets/deck/statement-decision.jpg"
+    }
+  }
+}

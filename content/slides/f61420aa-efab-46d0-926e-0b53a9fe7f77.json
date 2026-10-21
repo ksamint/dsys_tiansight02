@@ -1,0 +1,30 @@
+{
+  "id": "f61420aa-efab-46d0-926e-0b53a9fe7f77",
+  "label": "后厨实景 · 一",
+  "cat": "design",
+  "type": "gallery",
+  "tags": [
+    "后厨设计"
+  ],
+  "publish": "web",
+  "purpose": "后厨项目实景拼板（一）。",
+  "evidence": "partner",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "后厨设计 · 实景",
+    "title": "分区清晰，\n台面连续",
+    "body": "设备沿动线布置，台面连续，便于清洁与取用。",
+    "note": "项目实景照片。",
+    "layout": "row",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/exhibit/m-boh1.jpg"
+        },
+        "caption": "加工台 · 热厨线 · 开放厨房 · 后厨通道"
+      }
+    ]
+  }
+}

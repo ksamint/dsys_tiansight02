@@ -1,0 +1,58 @@
+{
+  "id": "76d3d22d-c460-4b4c-ab4e-dd673ba5aae8",
+  "label": "动线原则",
+  "cat": "design",
+  "type": "table",
+  "tags": [
+    "后厨设计",
+    "动线",
+    "洁污分流"
+  ],
+  "publish": "web",
+  "purpose": "后厨动线原则对照表。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "eyebrow": "后厨设计 · 动线原则",
+    "title": "后厨动线五原则",
+    "subtitle": "",
+    "corner": "原则",
+    "columns": [
+      "做法"
+    ],
+    "rows": [
+      {
+        "label": "单向流动",
+        "cells": [
+          "食物从生到熟单向推进，不回流"
+        ]
+      },
+      {
+        "label": "生熟分开",
+        "cells": [
+          "加工区与熟食区物理分隔"
+        ]
+      },
+      {
+        "label": "洁污分流",
+        "cells": [
+          "收餐与洗消独立通道"
+        ]
+      },
+      {
+        "label": "最短取用",
+        "cells": [
+          "常用原料与工具就近放置"
+        ]
+      },
+      {
+        "label": "高峰不交叉",
+        "cells": [
+          "高峰时段岗位动线互不穿行"
+        ]
+      }
+    ],
+    "footnote": null
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "240279bf-2bad-4484-970c-c8e939b1fd5f",
+  "label": "设备与备料",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "设备",
+    "备料"
+  ],
+  "publish": "web",
+  "purpose": "设备与备料区实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

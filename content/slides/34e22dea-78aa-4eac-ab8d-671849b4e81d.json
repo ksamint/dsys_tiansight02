@@ -1,0 +1,16 @@
+{
+  "id": "34e22dea-78aa-4eac-ab8d-671849b4e81d",
+  "label": "明档陈列",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "明档",
+    "陈列"
+  ],
+  "publish": "web",
+  "purpose": "明档陈列实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

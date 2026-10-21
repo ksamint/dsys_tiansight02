@@ -1,0 +1,15 @@
+{
+  "id": "5ee6b1fc-5513-4740-b800-9d9bd34467d6",
+  "label": "工作台",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "台面"
+  ],
+  "publish": "web",
+  "purpose": "工作台面标准实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

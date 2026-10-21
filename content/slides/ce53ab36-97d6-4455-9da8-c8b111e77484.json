@@ -1,0 +1,15 @@
+{
+  "id": "ce53ab36-97d6-4455-9da8-c8b111e77484",
+  "label": "巡检机制",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "巡检"
+  ],
+  "publish": "web",
+  "purpose": "巡检机制实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

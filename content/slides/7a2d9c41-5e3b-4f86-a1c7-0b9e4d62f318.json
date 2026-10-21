@@ -1,0 +1,24 @@
+{
+  "id": "7a2d9c41-5e3b-4f86-a1c7-0b9e4d62f318",
+  "label": "项目案例 · 游园京梦 · 一",
+  "cat": "proof",
+  "type": "gallery",
+  "tags": [
+    "项目案例",
+    "游园京梦",
+    "北京SKP",
+    "明档",
+    "园林"
+  ],
+  "publish": "hold",
+  "purpose": "游园京梦北京 SKP：园林步道与玻璃明档实景。",
+  "evidence": "real",
+  "note": "任务所有者已批准保留实景照片；官网同步不在本任务范围。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "$case": "case-06",
+    "$view": "gallery:0"
+  }
+}

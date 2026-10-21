@@ -1,0 +1,14 @@
+{
+  "id": "eafab63e-953c-409c-87bf-4afeb6f6bfd7",
+  "label": "储存管理",
+  "cat": "kitchen",
+  "type": "steps",
+  "tags": [
+    "现场标准",
+    "储存"
+  ],
+  "publish": "web",
+  "purpose": "储存管理的步骤与要求。",
+  "owner": "kitchen",
+  "status": "planned"
+}

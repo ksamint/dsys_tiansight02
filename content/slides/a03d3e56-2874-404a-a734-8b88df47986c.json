@@ -1,0 +1,14 @@
+{
+  "id": "a03d3e56-2874-404a-a734-8b88df47986c",
+  "label": "服务方式",
+  "cat": "engage",
+  "type": "steps",
+  "tags": [
+    "合作方式",
+    "厨政"
+  ],
+  "publish": "web",
+  "purpose": "厨政合作方式：看现场、定重点、定范围、再实施。",
+  "owner": "kitchen",
+  "status": "planned"
+}

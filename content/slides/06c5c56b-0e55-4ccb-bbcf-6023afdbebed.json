@@ -1,0 +1,55 @@
+{
+  "id": "06c5c56b-0e55-4ccb-bbcf-6023afdbebed",
+  "label": "伙伴案例 · 索引",
+  "cat": "proof",
+  "type": "table",
+  "tags": [
+    "案例",
+    "索引"
+  ],
+  "publish": "web",
+  "purpose": "八个伙伴案例的索引卡片。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {
+    "eyebrow": "伙伴案例",
+    "title": "从新店开业，到近百店督导。",
+    "subtitle": "7 个品牌 · 8 个项目 · 覆盖四个服务模块",
+    "items": [
+      {
+        "$case": "case-01",
+        "$view": "index"
+      },
+      {
+        "$case": "case-02",
+        "$view": "index"
+      },
+      {
+        "$case": "case-03",
+        "$view": "index"
+      },
+      {
+        "$case": "case-04",
+        "$view": "index"
+      },
+      {
+        "$case": "case-05",
+        "$view": "index"
+      },
+      {
+        "$case": "case-06",
+        "$view": "index"
+      },
+      {
+        "$case": "case-07",
+        "$view": "index"
+      },
+      {
+        "$case": "case-08",
+        "$view": "index"
+      }
+    ],
+    "columns": 4
+  }
+}

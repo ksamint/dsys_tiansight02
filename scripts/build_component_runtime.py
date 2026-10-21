@@ -53,10 +53,10 @@ for uid, item in embedded.items():
     if item.get('compressed'):
         data = gzip.decompress(data)
     ext = 'css' if item['mime'] == 'text/css' else 'js'
-    record = put(ARCHIVE / 'resources' / (uid + '.' + ext), data)
+    record = {'bytes': len(data), 'sha256': sha(data)}
     resource_records.append({'id': uid, 'mime': item['mime'], **record})
     resources[uid] = data.decode()
-put(ARCHIVE / 'template.html', template)
+# The preserved ZIP is the only archived copy; decode resources and template in memory.
 bundle = next(x for x in resources.values() if x.startswith('/* @ds-bundle:'))
 meta = json.loads(re.search(r'/\* @ds-bundle: (.*?) \*/', bundle)[1])
 assert meta['namespace'] == 'TIANSIGHTDesignSystem_e0a760' and len(meta['components']) == 105
@@ -64,15 +64,17 @@ css = next(x for k, x in resources.items() if embedded[k]['mime'] == 'text/css')
 image_script = next(x for x in resources.values() if 'window.__EXH_IMG=' in x)
 images = json.JSONDecoder().raw_decode(image_script[image_script.index('={') + 1:])[0]
 nested = []
-# Preserve every embedded image, including the approved originals also present as ZIP entries.
+asset_map = json.loads((ROOT / 'assets/path-map.json').read_text())
+# Validate the approved image map against canonical files; runtime copies are generated only.
 for name, uri in images.items():
     assert '..' not in Path(name).parts and not name.startswith('/')
     mime, payload = uri.split(';base64,', 1)
     data = base64.b64decode(payload, validate=True)
-    record = put(DIST / 'assets' / ('supplied-logo-seal.png' if name == 'logo-seal.png' else name), data)
+    alias = 'supplied-logo-seal.png' if name == 'logo-seal.png' else name
+    canonical = asset_map['runtime'][alias]
+    assert (ROOT / canonical).read_bytes() == data, f'Canonical ZIP asset differs: {canonical}'
+    record = {'path': canonical, 'bytes': len(data), 'sha256': sha(data)}
     nested.append({'resource': 'image-map', 'name': name, 'mime': mime[5:], **record})
-    if name.startswith('exhibit/'):
-        assert (ROOT / 'deliverables/exhibit-design/src' / name).read_bytes() == data
 # Recover all font bytes; deduplicate against the official self-hosted fonts by content.
 fonts = {sha(p.read_bytes()): p for p in (ROOT / 'brand/fonts').glob('*.woff2')}
 for i, uri in enumerate(re.findall(r'data:font/woff2;base64,[A-Za-z0-9+/=]+', css)):
@@ -122,8 +124,9 @@ assert not re.search(r'#[0-9a-fA-F]{3,8}\b|rgba?\(', css)
 put(DIST / 'styles.css', '@import "../../../brand/fonts.css";\n@import "../../../brand/tokens.css";\n' + css + '\n')
 # Keep the compiled original intact in archive; only adapt runtime asset resolution here.
 bundle = patch_bundle(bundle)
-bundle = bundle.replace('function dsAsset(file) {', 'function dsAsset(file) {\n  if (file.startsWith("logos/")) file = "partners/" + file.slice(6);')
+bundle = bundle.replace('function dsAsset(file) {', 'function dsAsset(file) {\n  if (file.startsWith("logos/")) file = "partners/" + file.slice(6);\n  file = (' + json.dumps({key: value.removeprefix('assets/') for key, value in asset_map['runtime'].items()}, ensure_ascii=False, sort_keys=True) + ')[file] || file;')
 bundle = bundle.replace('"../../assets/logo-seal.png"', '__ds_scope.dsAsset("logo-seal.png")')
+bundle = bundle.replace('assets/logo-seal.png', 'assets/logo/logo.png')
 bundle = bundle.replace('const LUCIDE = "https://unpkg.com/lucide-static@0.441.0/icons/";', 'const LUCIDE = window.TIANSIGHT_LUCIDE;')
 bundle = bundle.replace('"url(" + LUCIDE + name + ".svg)"', '"url(" + (LUCIDE[name] || "") + ")"')
 # Resolve compiled chart colours from the foundation too (d3 requires concrete colours).
@@ -154,25 +157,25 @@ for package, filename in [('react@18.3.1/umd/react.production.min.js', 'react.mi
 support = support.replace('if (!window.__resources) {', 'if (!window.__resources && location.protocol !== "file:") {')
 put(DIST / 'support.js', support)
 put(DIST / 'deck-stage.js', next(x for x in resources.values() if x.startswith('// @ds-adherence-ignore')))
-# Existing system assets supply default corporate/chart examples, newer supplied images win.
-for path in (ROOT / 'assets').rglob('*'):
-    if path.is_file() and 'fonts' not in path.relative_to(ROOT / 'assets').parts:
-        rel = path.relative_to(ROOT / 'assets')
-        if rel.parts[0] == 'intro':
-            rel = Path(*rel.parts[1:])
-        target = DIST / 'assets' / rel
-        if target not in FILES and rel.as_posix() != 'logo-seal.png':
-            put(target, path.read_bytes())
-# Canonical identity is verified against the live brand record by the repository gate.
-put(DIST / 'assets/logo-seal.png', (ROOT / 'brand/logo.png').read_bytes())
-inventory = {'schema':'tiansight.recovery/1', 'source':{'path':'archive/approved-2026-10-21/source.zip','originalFilename':'Template review and fixes (1).zip','sha256':sha((ARCHIVE/'source.zip').read_bytes())},'zipEntries':entries,'embeddedResources':resource_records,'nestedResources':nested,'template':{'path':'archive/approved-2026-10-21/template.html','sha256':sha(template.encode())}}
+# Runtime assets are the sole generated duplicate of canonical assets.
+expected_assets = set()
+for path in sorted((ROOT / 'assets').rglob('*')):
+    if path.is_file() and path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.svg', '.webp', '.gif', '.avif'}:
+        target = DIST / 'assets' / path.relative_to(ROOT / 'assets')
+        put(target, path.read_bytes())
+        expected_assets.add(target)
+for path in (DIST / 'assets').rglob('*'):
+    if path.is_file() and path.suffix.lower() != '.woff2' and path not in expected_assets:
+        assert not CHECK, f'Obsolete generated asset: {path.relative_to(ROOT)}'
+        path.unlink()
+inventory = {'schema':'tiansight.recovery/1', 'source':{'path':'archive/approved-2026-10-21/source.zip','originalFilename':'Template review and fixes (1).zip','sha256':sha((ARCHIVE/'source.zip').read_bytes())},'zipEntries':entries,'embeddedResources':resource_records,'nestedResources':nested,'template':{'source':'source.zip#embedded/template','bytes':len(template.encode()),'sha256':sha(template.encode())}}
 put(ARCHIVE / 'inventory.json', js(inventory))
 asset_records = []
 for path in sorted(DIST.rglob('*')):
     if path.is_file() and path.name != 'manifest.json':
         data = FILES.get(path, path.read_bytes())
         asset_records.append({'path':path.relative_to(ROOT).as_posix(),'bytes':len(data),'sha256':sha(data)})
-manifest = {'schema':'tiansight.component-distribution/1','version':VERSION,'namespace':meta['namespace'],'status':'review-candidate','source':inventory['source'],'foundationVersion':(ROOT/'brand/VERSION').read_text().strip(),'entry':'dist/components/'+VERSION+'/loader.js','styles':'dist/components/'+VERSION+'/styles.css','components':meta['components'],'sourceHashes':meta['sourceHashes'],'unexposedExports':meta['unexposedExports'],'files':asset_records,'externalAssets':[x for x in nested if x['path'].startswith('brand/')]+[{'path':name,'bytes':len((ROOT/name).read_bytes()),'sha256':sha((ROOT/name).read_bytes())} for name in ('brand/fonts.css','brand/tokens.css')],'limitations':['Compiled components supplied; original JSX sources are not included.','Historical JSX and older exported bundles are archives, not the current build input.'],'dependencies':{'react':'18.3.1','react-dom':'18.3.1','d3':'7.9.0','d3-sankey':'0.12.3','lucide-static':'0.441.0','@babel/standalone':'7.29.0'}}
+manifest = {'schema':'tiansight.component-distribution/1','version':VERSION,'namespace':meta['namespace'],'status':'review-candidate','source':inventory['source'],'foundationVersion':(ROOT/'brand/VERSION').read_text().strip(),'entry':'dist/components/'+VERSION+'/loader.js','styles':'dist/components/'+VERSION+'/styles.css','components':meta['components'],'sourceHashes':meta['sourceHashes'],'unexposedExports':meta['unexposedExports'],'files':asset_records,'externalAssets':[x for x in nested if x['path'].startswith('brand/')]+[{'path':name,'bytes':len((ROOT/name).read_bytes()),'sha256':sha((ROOT/name).read_bytes())} for name in ('brand/fonts.css','brand/tokens.css')],'assetSource': 'assets/index.json', 'generatedAssetCopies': [{'path': p.relative_to(ROOT).as_posix(), 'source': 'assets/' + p.relative_to(DIST / 'assets').as_posix()} for p in sorted(expected_assets)],'limitations':['Compiled components supplied; original JSX sources are not included.','Historical JSX and older exported bundles are archives, not the current build input.'],'dependencies':{'react':'18.3.1','react-dom':'18.3.1','d3':'7.9.0','d3-sankey':'0.12.3','lucide-static':'0.441.0','@babel/standalone':'7.29.0'}}
 put(DIST / 'manifest.json', js(manifest))
-put(ROOT / 'dist/components/current.json', js({'schema':'tiansight.component-channel/1','supported':VERSION,'manifest':f'{VERSION}/manifest.json','latestApprovedBuilt':None,'latestPolicy':'Latest means the latest explicitly approved release that passed build and artifact validation. This PR is a review candidate; merging alone is not approval of generated artifacts.'}))
+put(ROOT / 'dist/components/current.json', js({'schema':'tiansight.component-channel/1','supported':VERSION,'manifest':f'{VERSION}/manifest.json','latestPolicy':'Latest means the latest explicitly approved release that passed build and artifact validation. This PR is a review candidate; merging alone is not approval of generated artifacts.'}))
 print(f'PASS: {len(entries)} ZIP entries, {len(resources)} embedded resources, {len(nested)} nested assets, {len(meta["components"])} exports; {"verified" if CHECK else "built"} {VERSION}')

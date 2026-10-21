@@ -1,0 +1,3520 @@
+{
+  "schema": "tiansight.asset-register/1",
+  "assets": [
+    {
+      "path": "assets/cases/case-01/case-01.jpg",
+      "sha256": "b283f07a4cab3cb28229d7c04420db075fdf35667a35956b738c9f0e79b8ea6a",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-01.jpg",
+      "sources": [
+        "assets/intro/deck/case-01.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-01"
+      ]
+    },
+    {
+      "path": "assets/cases/case-02/case-02.jpg",
+      "sha256": "561094856b34c7b7ce1df6aa59f2809730acbfb995a66c33dc5d84d1359b88ed",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-02.jpg",
+      "sources": [
+        "assets/intro/deck/case-02.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-02"
+      ]
+    },
+    {
+      "path": "assets/cases/case-03/case-03.jpg",
+      "sha256": "17b4f8c0a1fb719226af62a82c183237f97c210210c7a1709515afa0a7a4fae8",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-03.jpg",
+      "sources": [
+        "assets/intro/deck/case-03.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-03"
+      ]
+    },
+    {
+      "path": "assets/cases/case-04/case-04.jpg",
+      "sha256": "9e1b160d6a5dd73a662f4eb0ef8c929d9bb6321c7b61c7a0067d8f9f57ff8102",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-04.jpg",
+      "sources": [
+        "assets/intro/deck/case-04.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-04"
+      ]
+    },
+    {
+      "path": "assets/cases/case-05/case-05.jpg",
+      "sha256": "e7d2eb94d32de785694acbaa3debdf62b2582af0ad56ea57d118795833a1d7c9",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-05.jpg",
+      "sources": [
+        "assets/intro/deck/case-05.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-05"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/case-06.jpg",
+      "sha256": "f0c704544ecda684e5b41cb0a85de7794407dd9d1f6c3f4aa95618b5c8943770",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-06.jpg",
+      "sources": [
+        "assets/intro/deck/case-06.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-1.jpg",
+      "sha256": "c07a716e5251eabb22241351bc63397b25969b3d8cd3869385d6eba197e51e49",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-1.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-2.jpg",
+      "sha256": "cbc5f92c22659b43adb2c25008a63c577253ac18ab960da75d205cecf85a01f6",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-2.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-3.jpg",
+      "sha256": "79117893bcb00499d145bcd8222cb0d8c834484e3833d874919833e047b8d1d2",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-3.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-4.jpg",
+      "sha256": "8f2cb56eebcf5b34a1845cae7525448f35e647a63362075238e47453477fb23e",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-4.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-4.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-5.jpg",
+      "sha256": "77fd95b2da854f6e5c8fbf3d791a91e6e65483bed3f8fbf7c38b43cc3e6747f5",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-5.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-5.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-6.jpg",
+      "sha256": "077b4cdab4588ac6475a5852f97f75ce13d7586d08a62e857581fad16c35a56a",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-6.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-6.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-07/case-07.jpg",
+      "sha256": "86a8b1e63fe026359987aa30b6119a33ea4c2533bbb32c41f1c17953e2327eb2",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-07.jpg",
+      "sources": [
+        "assets/intro/deck/case-07.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-07"
+      ]
+    },
+    {
+      "path": "assets/cases/case-08/case-08.jpg",
+      "sha256": "9c12559cb009bc1c2a7bfa9e7ac4e6333d455d5ef3b8d839cf4adb01e5f910d3",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-08.jpg",
+      "sources": [
+        "assets/intro/deck/case-08.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-08"
+      ]
+    },
+    {
+      "path": "assets/deck/cover.jpg",
+      "sha256": "41e1f110fd2c9beac09d1a289bfd1700bffa42030f27bb386bc9036e3f9f72fb",
+      "kind": "deck",
+      "source": "assets/intro/deck/cover.jpg",
+      "sources": [
+        "assets/intro/deck/cover.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "b63a770d-49c7-40e5-8db3-02bc6ede0331",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/deck/module-1.jpg",
+      "sha256": "4541ddf24fd677149589e9f02bf60eadb015d0b014d802202263c464c52e8ac0",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-1.jpg",
+      "sources": [
+        "assets/intro/deck/module-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "f97c967e-6f86-45fb-bb36-e22d1df0dfff"
+      ]
+    },
+    {
+      "path": "assets/deck/module-2.jpg",
+      "sha256": "a6719173c491d45b748fcad1b7446023c3465056fa45cf570da458bb5d4aee5b",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-2.jpg",
+      "sources": [
+        "assets/intro/deck/module-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "bfea5864-e5c2-43ef-8f35-ee8ef113e40f",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/module-3.jpg",
+      "sha256": "c88c214cb00184bd5687e321feb9d40474dd35af11cb996da4cc1cbf4a3058d7",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-3.jpg",
+      "sources": [
+        "assets/intro/deck/module-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1bfcb28d-0489-4267-bc88-bb5afd9edd30",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/module-4.jpg",
+      "sha256": "a7386657c95a292d419c186dddb7c2deca8c771e0e6aec4c3a2b2fdb925b45c6",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-4.jpg",
+      "sources": [
+        "assets/intro/deck/module-4.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "9ca9a8f2-58ca-4b23-bf8a-f00ac306c17e",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/section-1.jpg",
+      "sha256": "689130a16caf7d5e80ea469c4d06fe4afd369576af26e7754d91d77f755ec292",
+      "kind": "deck",
+      "source": "assets/intro/deck/section-1.jpg",
+      "sources": [
+        "assets/intro/deck/section-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/deck/section-2.jpg",
+      "sha256": "94569cc727fe009fffefd39925acd695787f500da51ab49ea2f98cf3d94bb851",
+      "kind": "deck",
+      "source": "assets/intro/deck/section-2.jpg",
+      "sources": [
+        "assets/intro/deck/section-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "82e572f3-d3bc-49d8-8b65-39d2d79c0782",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/section-3.jpg",
+      "sha256": "69c977b1e50821f359042decc8beabed7b9019bdc4e3d1caa017d0be212ac331",
+      "kind": "deck",
+      "source": "assets/intro/deck/section-3.jpg",
+      "sources": [
+        "assets/intro/deck/section-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "ceb4f385-17f4-46cf-aaaf-3fe469db76e2"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-data.jpg",
+      "sha256": "83d66104fdfcb627149e8050bacde3506e6fad8b9a9456e2fd88963cb4df61c2",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-data.jpg",
+      "sources": [
+        "assets/intro/deck/statement-data.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "a3899939-9c43-4f5b-b6ee-e12b7615f862",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-decision.jpg",
+      "sha256": "951b373f41fdd92d36d459fcc59fe969e9f2669d8c2b79754a0d333608290fb9",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-decision.jpg",
+      "sources": [
+        "assets/intro/deck/statement-decision.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "cdbe10c1-a934-4565-b22c-32620690305a"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-problem.jpg",
+      "sha256": "a0b75e60bcc8ee2e084fa1b708fa03103e6fd31273582393b0eca3543b819d32",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-problem.jpg",
+      "sources": [
+        "assets/intro/deck/statement-problem.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "3531cea9-7492-4d22-9767-cc7977113b06",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-proof.jpg",
+      "sha256": "c3c3bdd17f8499084f0cbf22a097b74c383ce826ff80691e8984ee38c698bd83",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-proof.jpg",
+      "sources": [
+        "assets/intro/deck/statement-proof.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "812447ee-f013-4213-a98a-89e9c7d4f127",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/brand-wall.jpg",
+      "sha256": "d6752b1b5932bee95a22f81c844036259d194b9c90adb51142a29150bbd30f57",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/brand-wall.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/brand-wall.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "5b1a9bb8-0955-4cf6-831a-0fc3ab3f6158",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-01-cover.jpg",
+      "sha256": "cc45e1e5bf9adb55887e9e427c4f76692d2d80d57ed88f8f6b2fa36e7ae3d1e6",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-01-cover.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-01-cover.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "5e6b6f17-2773-4b81-95c4-8e27de028529",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-03-sec-dining.jpg",
+      "sha256": "c582d14f9a333c10b441aca4061842ce2c3c9ccdd2a9e305bc74f0bad4a826a4",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-03-sec-dining.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-03-sec-dining.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "cf2c6541-8f7f-4f78-a90b-816e61be6e7d"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-04-sec-display.jpg",
+      "sha256": "99d08b0c04385d070c584b85e967bf55d245a6188f568a6c0ae55d5ff7ca8a60",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-04-sec-display.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-04-sec-display.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "97aca518-0224-4cfd-823c-13e258967232",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-05-sec-boh.jpg",
+      "sha256": "db9b7fb4fe2541421bf9699da0dcfecb8fef87242eed595c3969a7ad6dce0fc1",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-05-sec-boh.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-05-sec-boh.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "bf00938c-e2a7-47a2-a11f-e609597ad24c",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-06-sec-equipment.jpg",
+      "sha256": "deed55506064c39d55b517cab6a187027c4116df6d6bd50d451a813478c62ad4",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-06-sec-equipment.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-06-sec-equipment.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d2c0bdd1-2cdf-4c7a-90fe-14e39a5e2db1"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-07-sec-delivery.jpg",
+      "sha256": "3355e85b0e321db19abda169a8d790c6d37fd690da92a53d3f79f10838fbcfd8",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-07-sec-delivery.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-07-sec-delivery.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "ae882cb3-0355-4165-a9c2-092412fcd9f4",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-08-sec-team.jpg",
+      "sha256": "f47c726bcec8dd03b7b0f321c189f2fa2ad9476594796bd49903a9c71eaf28d8",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-08-sec-team.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-08-sec-team.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "08a3dfe9-79cd-4f7b-93df-a63f51bc5ff5",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/hotels.jpg",
+      "sha256": "1a80b94061c281433bf7411a4cbd7523f4f8f8bf53bbce17caf9dcc01cb34385",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/hotels.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/hotels.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "f745a121-4a40-4240-aec6-b95fc669ed1a"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-boh1.jpg",
+      "sha256": "886d0d4ecda48489067fcd2712948d0bf4539dbdbfd1b09c3a8322966b0bed59",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh1.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "f61420aa-efab-46d0-926e-0b53a9fe7f77"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-boh2.jpg",
+      "sha256": "01dfc4531289a2b877dfb1ab600cd656885220fb14aaecaca1a772e62bd8181b",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh2.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "54df294e-e1a0-43b2-8094-1f6a303c0788",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-detail.jpg",
+      "sha256": "6148d3946728f5e2e84998460cc40e064f57b0d780fe7fe9fe196e21388106e6",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-detail.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-detail.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "69a70c07-74f7-4269-bd23-b491dd6c7b68",
+        "9b4e2c7a-6d15-4f38-a0e9-3c7f5b18d2e6",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-island.jpg",
+      "sha256": "baff70c132f0b22a32d63eb13aa04f0a1513fd4f63fb86da3f386162e32305aa",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-island.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-island.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "cecda97f-9fb6-40fa-b437-22da4bcb1395"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-mingdang.jpg",
+      "sha256": "3002273e1d34b9588deebfc7f6fcbaaf36eeeec97e26c0470dd8f35747ce1bc9",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-mingdang.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-mingdang.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "6b98ca6f-126a-4a4e-85f3-fa44feb38344",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-pass.jpg",
+      "sha256": "b83703e54905da562ef5dce195edda02fcca62a51fbca55e83d8124a5247a179",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-pass.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-pass.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "1ebbbf22-f947-4331-9d56-e06f526c54db",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/p9-1.jpg",
+      "sha256": "e4134fcaef61fb459d3d37695b813e4281cb052c7f10717270163e1f5723f885",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/src/p9-1.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/src/p9-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "b28ad6d5-1a75-4740-b42b-106d85f1384e",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/fonts/OFL-IBMPlexMono.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "kind": "fonts",
+      "source": "assets/fonts/OFL-IBMPlexMono.txt",
+      "sources": [
+        "assets/fonts/OFL-IBMPlexMono.txt"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/OFL-NotoSerif.txt",
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a",
+      "kind": "fonts",
+      "source": "assets/fonts/OFL-NotoSerif.txt",
+      "sources": [
+        "assets/fonts/OFL-NotoSerif.txt"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/OFL-NotoSerifSC.txt",
+      "sha256": "5e0da210fb04058a8c0087985d2d456b931c2579811a49655721d3cf0c36b6d6",
+      "kind": "fonts",
+      "source": "assets/fonts/OFL-NotoSerifSC.txt",
+      "sources": [
+        "assets/fonts/OFL-NotoSerifSC.txt"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/README.md",
+      "sha256": "c9bc24317a495208d12dbb551b56dc8ba0482ab2eb319f9cdeafa2f1230a70d9",
+      "kind": "fonts",
+      "source": "assets/fonts/README.md",
+      "sources": [
+        "assets/fonts/README.md"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-01d285447409c8a588692162.woff2",
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "kind": "fonts",
+      "source": "assets/fonts/font-01d285447409c8a588692162.woff2",
+      "sources": [
+        "assets/fonts/font-01d285447409c8a588692162.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-039698b9bc16db3439b86528.woff2",
+      "sha256": "039698b9bc16db3439b86528c88c369086ed237f7baa13873ca33a0922edce18",
+      "kind": "fonts",
+      "source": "assets/fonts/font-039698b9bc16db3439b86528.woff2",
+      "sources": [
+        "assets/fonts/font-039698b9bc16db3439b86528.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-03de62bc4c94fcf00ad2a87e.woff2",
+      "sha256": "03de62bc4c94fcf00ad2a87ed76731c95b0852b0b41c9028844e1a05c06082c0",
+      "kind": "fonts",
+      "source": "assets/fonts/font-03de62bc4c94fcf00ad2a87e.woff2",
+      "sources": [
+        "assets/fonts/font-03de62bc4c94fcf00ad2a87e.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-08949f728dc52d528e69b166.woff2",
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "kind": "fonts",
+      "source": "assets/fonts/font-08949f728dc52d528e69b166.woff2",
+      "sources": [
+        "assets/fonts/font-08949f728dc52d528e69b166.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-09248b343e7220ab8786b907.woff2",
+      "sha256": "09248b343e7220ab8786b907c2d75aaf6d1a54830822070a0ab012ec03a02bb1",
+      "kind": "fonts",
+      "source": "assets/fonts/font-09248b343e7220ab8786b907.woff2",
+      "sources": [
+        "assets/fonts/font-09248b343e7220ab8786b907.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-0a97bd54c22add0ce1fd5425.woff2",
+      "sha256": "0a97bd54c22add0ce1fd54256f20bcafa92b8db870b3f80cefd3672da29eb3ae",
+      "kind": "fonts",
+      "source": "assets/fonts/font-0a97bd54c22add0ce1fd5425.woff2",
+      "sources": [
+        "assets/fonts/font-0a97bd54c22add0ce1fd5425.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-0eb731d70aa1f4966dfffab3.woff2",
+      "sha256": "0eb731d70aa1f4966dfffab308b3fb11975886fd5375f45ce6b16f1eaebafb83",
+      "kind": "fonts",
+      "source": "assets/fonts/font-0eb731d70aa1f4966dfffab3.woff2",
+      "sources": [
+        "assets/fonts/font-0eb731d70aa1f4966dfffab3.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-0f39f0bbe9a7a450b994c3c3.woff2",
+      "sha256": "0f39f0bbe9a7a450b994c3c3bd9aa0627ae2dea8d36b67fc5a3554830f28005e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-0f39f0bbe9a7a450b994c3c3.woff2",
+      "sources": [
+        "assets/fonts/font-0f39f0bbe9a7a450b994c3c3.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-106e18d90034e75630790ad2.woff2",
+      "sha256": "106e18d90034e75630790ad203bc69850747bf96c0a398b96bd88bcaa81e9480",
+      "kind": "fonts",
+      "source": "assets/fonts/font-106e18d90034e75630790ad2.woff2",
+      "sources": [
+        "assets/fonts/font-106e18d90034e75630790ad2.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-10d846c3e11659c57d906ae2.woff2",
+      "sha256": "10d846c3e11659c57d906ae2ab9a9d418e0aaa36b99a991a09aca8e5bd6e3c64",
+      "kind": "fonts",
+      "source": "assets/fonts/font-10d846c3e11659c57d906ae2.woff2",
+      "sources": [
+        "assets/fonts/font-10d846c3e11659c57d906ae2.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-1252037b6f1d6e86c49f59cd.woff2",
+      "sha256": "1252037b6f1d6e86c49f59cd4b2cc953413fcad1fc3659a55aacfb4ae5f42531",
+      "kind": "fonts",
+      "source": "assets/fonts/font-1252037b6f1d6e86c49f59cd.woff2",
+      "sources": [
+        "assets/fonts/font-1252037b6f1d6e86c49f59cd.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-139765926260131beb5763bb.woff2",
+      "sha256": "139765926260131beb5763bb8474d5441c7a504f62257cacd5b569ee39d119e4",
+      "kind": "fonts",
+      "source": "assets/fonts/font-139765926260131beb5763bb.woff2",
+      "sources": [
+        "assets/fonts/font-139765926260131beb5763bb.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-1581af3bbb4e78f52db3b107.woff2",
+      "sha256": "1581af3bbb4e78f52db3b1078a85595e0ffa30ee334b7dbb49baf42ba9fbb28a",
+      "kind": "fonts",
+      "source": "assets/fonts/font-1581af3bbb4e78f52db3b107.woff2",
+      "sources": [
+        "assets/fonts/font-1581af3bbb4e78f52db3b107.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-158a0be2cbba07d17824a5ba.woff2",
+      "sha256": "158a0be2cbba07d17824a5ba52319a3f914c59857f4bd70a332596bbe1b1128f",
+      "kind": "fonts",
+      "source": "assets/fonts/font-158a0be2cbba07d17824a5ba.woff2",
+      "sources": [
+        "assets/fonts/font-158a0be2cbba07d17824a5ba.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-1594e53f4ab5fe067f7ba108.woff2",
+      "sha256": "1594e53f4ab5fe067f7ba108b65a71ed07b2fb9da68af01349b4966c871e4d36",
+      "kind": "fonts",
+      "source": "assets/fonts/font-1594e53f4ab5fe067f7ba108.woff2",
+      "sources": [
+        "assets/fonts/font-1594e53f4ab5fe067f7ba108.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-16b43b96dc859eaf9b6f2ee8.woff2",
+      "sha256": "16b43b96dc859eaf9b6f2ee884c9976318d6b55720ae72b118f9ec77582361d6",
+      "kind": "fonts",
+      "source": "assets/fonts/font-16b43b96dc859eaf9b6f2ee8.woff2",
+      "sources": [
+        "assets/fonts/font-16b43b96dc859eaf9b6f2ee8.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-1a6cc82f2ce03f8bbc6c78ad.woff2",
+      "sha256": "1a6cc82f2ce03f8bbc6c78ad27bb79d1319dbabb6a016499d9042073acabcc0e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-1a6cc82f2ce03f8bbc6c78ad.woff2",
+      "sources": [
+        "assets/fonts/font-1a6cc82f2ce03f8bbc6c78ad.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-1bd7a4092909a57cf3f2df1f.woff2",
+      "sha256": "1bd7a4092909a57cf3f2df1f983980fa45d37f0f77b038a31785719fc9580668",
+      "kind": "fonts",
+      "source": "assets/fonts/font-1bd7a4092909a57cf3f2df1f.woff2",
+      "sources": [
+        "assets/fonts/font-1bd7a4092909a57cf3f2df1f.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-1d89462e86cb8e87e7e9d6f6.woff2",
+      "sha256": "1d89462e86cb8e87e7e9d6f6635605bd7c3081baca6caaecee84916bf7b60edc",
+      "kind": "fonts",
+      "source": "assets/fonts/font-1d89462e86cb8e87e7e9d6f6.woff2",
+      "sources": [
+        "assets/fonts/font-1d89462e86cb8e87e7e9d6f6.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-2101d62af080d6803513f4fe.woff2",
+      "sha256": "2101d62af080d6803513f4fe5d91aba6831b61bc95ed172dace75caa2a5b8c2d",
+      "kind": "fonts",
+      "source": "assets/fonts/font-2101d62af080d6803513f4fe.woff2",
+      "sources": [
+        "assets/fonts/font-2101d62af080d6803513f4fe.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-2263f0841a3499dd34793a4b.woff2",
+      "sha256": "2263f0841a3499dd34793a4b21c831760bcae5582b047cbcab0b55cf9b105ab5",
+      "kind": "fonts",
+      "source": "assets/fonts/font-2263f0841a3499dd34793a4b.woff2",
+      "sources": [
+        "assets/fonts/font-2263f0841a3499dd34793a4b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-2392f5989457174e847cc69a.woff2",
+      "sha256": "2392f5989457174e847cc69a4eff0ff80f5ac744b8f1fe29b0b1925299cb0a0e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-2392f5989457174e847cc69a.woff2",
+      "sources": [
+        "assets/fonts/font-2392f5989457174e847cc69a.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-24f7302e65f8adaec36d642a.woff2",
+      "sha256": "24f7302e65f8adaec36d642aa8caf68cdf4c50c91e54f75e9e535382366766b4",
+      "kind": "fonts",
+      "source": "assets/fonts/font-24f7302e65f8adaec36d642a.woff2",
+      "sources": [
+        "assets/fonts/font-24f7302e65f8adaec36d642a.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-2654f8d1261a420fc8162812.woff2",
+      "sha256": "2654f8d1261a420fc81628122bee9d494b493227e3d7d9baa4238360b92b11d3",
+      "kind": "fonts",
+      "source": "assets/fonts/font-2654f8d1261a420fc8162812.woff2",
+      "sources": [
+        "assets/fonts/font-2654f8d1261a420fc8162812.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-26b9dec17f125371d5f5089f.woff2",
+      "sha256": "26b9dec17f125371d5f5089f89de39094a11f98ffebb061011158d7e4aa602d0",
+      "kind": "fonts",
+      "source": "assets/fonts/font-26b9dec17f125371d5f5089f.woff2",
+      "sources": [
+        "assets/fonts/font-26b9dec17f125371d5f5089f.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-28858c6c597253c4488e0ce1.woff2",
+      "sha256": "28858c6c597253c4488e0ce1bddf52d6bb5464ebcf981927ea5c7269b5c1dc17",
+      "kind": "fonts",
+      "source": "assets/fonts/font-28858c6c597253c4488e0ce1.woff2",
+      "sources": [
+        "assets/fonts/font-28858c6c597253c4488e0ce1.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-2a55b026bb206504dc94a3fa.woff2",
+      "sha256": "2a55b026bb206504dc94a3fa0d58a1f2af2b9b4c3daf6dd988519458e7404876",
+      "kind": "fonts",
+      "source": "assets/fonts/font-2a55b026bb206504dc94a3fa.woff2",
+      "sources": [
+        "assets/fonts/font-2a55b026bb206504dc94a3fa.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-2ac76686e472db28292edcc2.woff2",
+      "sha256": "2ac76686e472db28292edcc26bcc201a3b40b08b2615db7e75e03d07ab853017",
+      "kind": "fonts",
+      "source": "assets/fonts/font-2ac76686e472db28292edcc2.woff2",
+      "sources": [
+        "assets/fonts/font-2ac76686e472db28292edcc2.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-2db79fd3aa1d48c07e306645.woff2",
+      "sha256": "2db79fd3aa1d48c07e30664553e9d1ddb9fc4c23fdf02d48c63e094ebf275a5d",
+      "kind": "fonts",
+      "source": "assets/fonts/font-2db79fd3aa1d48c07e306645.woff2",
+      "sources": [
+        "assets/fonts/font-2db79fd3aa1d48c07e306645.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-30691665669ee807f465d552.woff2",
+      "sha256": "30691665669ee807f465d552b3247cd41f9097020662bc43f28dbaf243cbd883",
+      "kind": "fonts",
+      "source": "assets/fonts/font-30691665669ee807f465d552.woff2",
+      "sources": [
+        "assets/fonts/font-30691665669ee807f465d552.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-3616d3502701dcdf867d0c85.woff2",
+      "sha256": "3616d3502701dcdf867d0c850ef50cbf19e1613b283a238fe4f8ea0c91908c6d",
+      "kind": "fonts",
+      "source": "assets/fonts/font-3616d3502701dcdf867d0c85.woff2",
+      "sources": [
+        "assets/fonts/font-3616d3502701dcdf867d0c85.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-365512ffc9e2717c81cf5d9a.woff2",
+      "sha256": "365512ffc9e2717c81cf5d9af42646426d657d5494b4fd04501a5beb0af6f2e7",
+      "kind": "fonts",
+      "source": "assets/fonts/font-365512ffc9e2717c81cf5d9a.woff2",
+      "sources": [
+        "assets/fonts/font-365512ffc9e2717c81cf5d9a.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-373d1b4d724f4ee5fa02eb5e.woff2",
+      "sha256": "373d1b4d724f4ee5fa02eb5ee5474033a914a990d966f2abbb36c96682e5e993",
+      "kind": "fonts",
+      "source": "assets/fonts/font-373d1b4d724f4ee5fa02eb5e.woff2",
+      "sources": [
+        "assets/fonts/font-373d1b4d724f4ee5fa02eb5e.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-3f116c05fbb0abc3fba86bb8.woff2",
+      "sha256": "3f116c05fbb0abc3fba86bb85b4426eca3a41650d2763ed4c5b31fe8b28f752e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-3f116c05fbb0abc3fba86bb8.woff2",
+      "sources": [
+        "assets/fonts/font-3f116c05fbb0abc3fba86bb8.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-3febe5c7f22e4b07b4552738.woff2",
+      "sha256": "3febe5c7f22e4b07b4552738673c3dbe8bced2dc5f48b866edf7ccd9552d109a",
+      "kind": "fonts",
+      "source": "assets/fonts/font-3febe5c7f22e4b07b4552738.woff2",
+      "sources": [
+        "assets/fonts/font-3febe5c7f22e4b07b4552738.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-405f96fc00f5de66a1104587.woff2",
+      "sha256": "405f96fc00f5de66a11045874d0964dcb4230122f820771ee13dd329895074d8",
+      "kind": "fonts",
+      "source": "assets/fonts/font-405f96fc00f5de66a1104587.woff2",
+      "sources": [
+        "assets/fonts/font-405f96fc00f5de66a1104587.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-44c0c56034f2906014cd0082.woff2",
+      "sha256": "44c0c56034f2906014cd0082c42cef587cd4e2eb24983aca2a10d9805a0f26f6",
+      "kind": "fonts",
+      "source": "assets/fonts/font-44c0c56034f2906014cd0082.woff2",
+      "sources": [
+        "assets/fonts/font-44c0c56034f2906014cd0082.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-45cb9a16cbc13eff333b49bf.woff2",
+      "sha256": "45cb9a16cbc13eff333b49bfa5c63f0478078ac6bdc327de9d69bdb6cdd8ce2b",
+      "kind": "fonts",
+      "source": "assets/fonts/font-45cb9a16cbc13eff333b49bf.woff2",
+      "sources": [
+        "assets/fonts/font-45cb9a16cbc13eff333b49bf.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-45f3ed82e9bd8231532b58a0.woff2",
+      "sha256": "45f3ed82e9bd8231532b58a0de47d0b26fbe8e4ceba610615903e346e5213263",
+      "kind": "fonts",
+      "source": "assets/fonts/font-45f3ed82e9bd8231532b58a0.woff2",
+      "sources": [
+        "assets/fonts/font-45f3ed82e9bd8231532b58a0.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-46281456234014ceb2a79bff.woff2",
+      "sha256": "46281456234014ceb2a79bff447245de0f76b8d803be0738972ed374c3206c5b",
+      "kind": "fonts",
+      "source": "assets/fonts/font-46281456234014ceb2a79bff.woff2",
+      "sources": [
+        "assets/fonts/font-46281456234014ceb2a79bff.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-4665f9383f65a4fb003c5380.woff2",
+      "sha256": "4665f9383f65a4fb003c53808f5b91d1e93fcccd3d2d8c799cfda6e3d14656d7",
+      "kind": "fonts",
+      "source": "assets/fonts/font-4665f9383f65a4fb003c5380.woff2",
+      "sources": [
+        "assets/fonts/font-4665f9383f65a4fb003c5380.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-4851e60df7e67b489609516b.woff2",
+      "sha256": "4851e60df7e67b489609516bdc9f53d3ed8b6090c3e16e149350a88f172a574e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-4851e60df7e67b489609516b.woff2",
+      "sources": [
+        "assets/fonts/font-4851e60df7e67b489609516b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-4b59ce2a13d696b34950c628.woff2",
+      "sha256": "4b59ce2a13d696b34950c628aea26585b870169c78719f3d6fb6ad5dce00e4df",
+      "kind": "fonts",
+      "source": "assets/fonts/font-4b59ce2a13d696b34950c628.woff2",
+      "sources": [
+        "assets/fonts/font-4b59ce2a13d696b34950c628.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-4e943fdd06982ac9a81d1928.woff2",
+      "sha256": "4e943fdd06982ac9a81d192846dab76a2797321c990774600dc65ff8fe1d4e68",
+      "kind": "fonts",
+      "source": "assets/fonts/font-4e943fdd06982ac9a81d1928.woff2",
+      "sources": [
+        "assets/fonts/font-4e943fdd06982ac9a81d1928.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-4fb8ac1d7a95c72aa66de767.woff2",
+      "sha256": "4fb8ac1d7a95c72aa66de7673a352e3e8b9046ffa90c444d0f961221f7052e40",
+      "kind": "fonts",
+      "source": "assets/fonts/font-4fb8ac1d7a95c72aa66de767.woff2",
+      "sources": [
+        "assets/fonts/font-4fb8ac1d7a95c72aa66de767.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-50751cd23b3787eff2af23d3.woff2",
+      "sha256": "50751cd23b3787eff2af23d3b9676b13cb5263e750a72fd258328f5812520b08",
+      "kind": "fonts",
+      "source": "assets/fonts/font-50751cd23b3787eff2af23d3.woff2",
+      "sources": [
+        "assets/fonts/font-50751cd23b3787eff2af23d3.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-52740303931d8b85ab952907.woff2",
+      "sha256": "52740303931d8b85ab9529076bf835aeaf877c56e47aead612281bc128318282",
+      "kind": "fonts",
+      "source": "assets/fonts/font-52740303931d8b85ab952907.woff2",
+      "sources": [
+        "assets/fonts/font-52740303931d8b85ab952907.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-5392252c91bd0707d647df33.woff2",
+      "sha256": "5392252c91bd0707d647df33a9a279501a029388c7882a0ad420a40b760e5a62",
+      "kind": "fonts",
+      "source": "assets/fonts/font-5392252c91bd0707d647df33.woff2",
+      "sources": [
+        "assets/fonts/font-5392252c91bd0707d647df33.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-54e3bd0c4a002b0f76bf9c75.woff2",
+      "sha256": "54e3bd0c4a002b0f76bf9c758507fe9bb170f9e364ea4ecc85fc8b22819bca7e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-54e3bd0c4a002b0f76bf9c75.woff2",
+      "sources": [
+        "assets/fonts/font-54e3bd0c4a002b0f76bf9c75.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-585d109a9951bf6a99b13386.woff2",
+      "sha256": "585d109a9951bf6a99b13386fe90dc4e19a0ad38c210bad0cd22140e238842d2",
+      "kind": "fonts",
+      "source": "assets/fonts/font-585d109a9951bf6a99b13386.woff2",
+      "sources": [
+        "assets/fonts/font-585d109a9951bf6a99b13386.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-5945538dcbfc11c1db2d573e.woff2",
+      "sha256": "5945538dcbfc11c1db2d573e1a0889c33b90b45d8445cb9ce1f18b38db36336c",
+      "kind": "fonts",
+      "source": "assets/fonts/font-5945538dcbfc11c1db2d573e.woff2",
+      "sources": [
+        "assets/fonts/font-5945538dcbfc11c1db2d573e.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-5968dd127304a59f1e2ea36b.woff2",
+      "sha256": "5968dd127304a59f1e2ea36b875f3702dadb0a229bc87a9053727c26807a15dc",
+      "kind": "fonts",
+      "source": "assets/fonts/font-5968dd127304a59f1e2ea36b.woff2",
+      "sources": [
+        "assets/fonts/font-5968dd127304a59f1e2ea36b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-5b42c53aa93cc2a7fd855c85.woff2",
+      "sha256": "5b42c53aa93cc2a7fd855c85a5ca733d4da8d06984df8b4c9b2b76ce1090bc80",
+      "kind": "fonts",
+      "source": "assets/fonts/font-5b42c53aa93cc2a7fd855c85.woff2",
+      "sources": [
+        "assets/fonts/font-5b42c53aa93cc2a7fd855c85.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-5c818243ce70b138c5e7edd2.woff2",
+      "sha256": "5c818243ce70b138c5e7edd2798f92d311d8d9158eb60bad6c4f5cebe4d46fc6",
+      "kind": "fonts",
+      "source": "assets/fonts/font-5c818243ce70b138c5e7edd2.woff2",
+      "sources": [
+        "assets/fonts/font-5c818243ce70b138c5e7edd2.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-60bae2b9a8bf65e1b4c1a06d.woff2",
+      "sha256": "60bae2b9a8bf65e1b4c1a06d529079cea1824bbab0a37840469f24b698880aab",
+      "kind": "fonts",
+      "source": "assets/fonts/font-60bae2b9a8bf65e1b4c1a06d.woff2",
+      "sources": [
+        "assets/fonts/font-60bae2b9a8bf65e1b4c1a06d.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-60e71123f0b838bf4fd52cb5.woff2",
+      "sha256": "60e71123f0b838bf4fd52cb5de5e3d6af8e48c8f7f32481a39da625d1e63fd2e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-60e71123f0b838bf4fd52cb5.woff2",
+      "sources": [
+        "assets/fonts/font-60e71123f0b838bf4fd52cb5.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-62632b6375305e70ddcafdd8.woff2",
+      "sha256": "62632b6375305e70ddcafdd895218e6ae41a184fcd280a69c739460604ca00a9",
+      "kind": "fonts",
+      "source": "assets/fonts/font-62632b6375305e70ddcafdd8.woff2",
+      "sources": [
+        "assets/fonts/font-62632b6375305e70ddcafdd8.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-675553f67dda471ccc684b73.woff2",
+      "sha256": "675553f67dda471ccc684b734a07db465fb6bb9ec1ce5a70b6d6b0f9a36a7a26",
+      "kind": "fonts",
+      "source": "assets/fonts/font-675553f67dda471ccc684b73.woff2",
+      "sources": [
+        "assets/fonts/font-675553f67dda471ccc684b73.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-6b583a41d620c6b504ce9d45.woff2",
+      "sha256": "6b583a41d620c6b504ce9d451fdbb8e08d073b2573e46d444820959647d7f3e0",
+      "kind": "fonts",
+      "source": "assets/fonts/font-6b583a41d620c6b504ce9d45.woff2",
+      "sources": [
+        "assets/fonts/font-6b583a41d620c6b504ce9d45.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-6b91a10abb4a03d31c63d528.woff2",
+      "sha256": "6b91a10abb4a03d31c63d528f6ef6b0fcdf4dbe7c030d67e1943f6139c115d73",
+      "kind": "fonts",
+      "source": "assets/fonts/font-6b91a10abb4a03d31c63d528.woff2",
+      "sources": [
+        "assets/fonts/font-6b91a10abb4a03d31c63d528.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-6bb06407c97584b0867a959e.woff2",
+      "sha256": "6bb06407c97584b0867a959e05e8874693bfeb8c317de190811c51598f2d99ea",
+      "kind": "fonts",
+      "source": "assets/fonts/font-6bb06407c97584b0867a959e.woff2",
+      "sources": [
+        "assets/fonts/font-6bb06407c97584b0867a959e.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-6bc0f226a5b7884a8170e3f6.woff2",
+      "sha256": "6bc0f226a5b7884a8170e3f62c63d7675609d4631bdc5931b5cdab81821f00eb",
+      "kind": "fonts",
+      "source": "assets/fonts/font-6bc0f226a5b7884a8170e3f6.woff2",
+      "sources": [
+        "assets/fonts/font-6bc0f226a5b7884a8170e3f6.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-6e0e93e30ac6e513ffdb1e5d.woff2",
+      "sha256": "6e0e93e30ac6e513ffdb1e5ddc50337e81c5f33d54bc3bb0e044113f228f5727",
+      "kind": "fonts",
+      "source": "assets/fonts/font-6e0e93e30ac6e513ffdb1e5d.woff2",
+      "sources": [
+        "assets/fonts/font-6e0e93e30ac6e513ffdb1e5d.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-6f05dd92f2f040024ed6f401.woff2",
+      "sha256": "6f05dd92f2f040024ed6f401c03a78ec8f8058313ecab04b6ff195a0041a4a5a",
+      "kind": "fonts",
+      "source": "assets/fonts/font-6f05dd92f2f040024ed6f401.woff2",
+      "sources": [
+        "assets/fonts/font-6f05dd92f2f040024ed6f401.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-713d2bb29db38602e97e272b.woff2",
+      "sha256": "713d2bb29db38602e97e272bdafa666c5b426b7b779dbf3beb32313fd95b8551",
+      "kind": "fonts",
+      "source": "assets/fonts/font-713d2bb29db38602e97e272b.woff2",
+      "sources": [
+        "assets/fonts/font-713d2bb29db38602e97e272b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-7635422bd10ddbbcb0e0caa1.woff2",
+      "sha256": "7635422bd10ddbbcb0e0caa1154b928298f5c8319b8c00b30978d4395f4783ce",
+      "kind": "fonts",
+      "source": "assets/fonts/font-7635422bd10ddbbcb0e0caa1.woff2",
+      "sources": [
+        "assets/fonts/font-7635422bd10ddbbcb0e0caa1.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-781633d95de88040fb77141d.woff2",
+      "sha256": "781633d95de88040fb77141d1e65d928c87c0144691fbc74da5a64d137a7e910",
+      "kind": "fonts",
+      "source": "assets/fonts/font-781633d95de88040fb77141d.woff2",
+      "sources": [
+        "assets/fonts/font-781633d95de88040fb77141d.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-7bf7c8fd9809004cba36338a.woff2",
+      "sha256": "7bf7c8fd9809004cba36338a94c338cffbce66069c2b091a7472e0b4dfa6b041",
+      "kind": "fonts",
+      "source": "assets/fonts/font-7bf7c8fd9809004cba36338a.woff2",
+      "sources": [
+        "assets/fonts/font-7bf7c8fd9809004cba36338a.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-7c7afb20d33e30ec38245187.woff2",
+      "sha256": "7c7afb20d33e30ec38245187464419281115615db288f294414f49802396b612",
+      "kind": "fonts",
+      "source": "assets/fonts/font-7c7afb20d33e30ec38245187.woff2",
+      "sources": [
+        "assets/fonts/font-7c7afb20d33e30ec38245187.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-7e94834579a87ac5bbeae3c8.woff2",
+      "sha256": "7e94834579a87ac5bbeae3c8d0cfc33206d7e0fc85e7c59568f75358fb000c44",
+      "kind": "fonts",
+      "source": "assets/fonts/font-7e94834579a87ac5bbeae3c8.woff2",
+      "sources": [
+        "assets/fonts/font-7e94834579a87ac5bbeae3c8.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-80938d29c0efdbd634308ac5.woff2",
+      "sha256": "80938d29c0efdbd634308ac52ecbbda6707a0b3e3b7d1c84e197c28a6c8c837b",
+      "kind": "fonts",
+      "source": "assets/fonts/font-80938d29c0efdbd634308ac5.woff2",
+      "sources": [
+        "assets/fonts/font-80938d29c0efdbd634308ac5.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-8164af476b514e30654ecf3a.woff2",
+      "sha256": "8164af476b514e30654ecf3aa34edeecbad209782f4b026964032e4f594a2881",
+      "kind": "fonts",
+      "source": "assets/fonts/font-8164af476b514e30654ecf3a.woff2",
+      "sources": [
+        "assets/fonts/font-8164af476b514e30654ecf3a.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-854a14f63241e795bc8a17e6.woff2",
+      "sha256": "854a14f63241e795bc8a17e64d472f09c834a02f9b59258637063aabca530070",
+      "kind": "fonts",
+      "source": "assets/fonts/font-854a14f63241e795bc8a17e6.woff2",
+      "sources": [
+        "assets/fonts/font-854a14f63241e795bc8a17e6.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-87fdad598fb7ab598784e43f.woff2",
+      "sha256": "87fdad598fb7ab598784e43f87f1da2c5476f88e4a5a9aba56abc73973449a42",
+      "kind": "fonts",
+      "source": "assets/fonts/font-87fdad598fb7ab598784e43f.woff2",
+      "sources": [
+        "assets/fonts/font-87fdad598fb7ab598784e43f.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-8d51258200de4d85d209eac6.woff2",
+      "sha256": "8d51258200de4d85d209eac6f0cd6798ec251b7be4672e8a2e6e7f6f07dc8460",
+      "kind": "fonts",
+      "source": "assets/fonts/font-8d51258200de4d85d209eac6.woff2",
+      "sources": [
+        "assets/fonts/font-8d51258200de4d85d209eac6.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-90a9d9858975f1c073521af5.woff2",
+      "sha256": "90a9d9858975f1c073521af5df9a7286356ff78397d274cfe7b64cb97f719920",
+      "kind": "fonts",
+      "source": "assets/fonts/font-90a9d9858975f1c073521af5.woff2",
+      "sources": [
+        "assets/fonts/font-90a9d9858975f1c073521af5.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-91923c87f9f32c46056285e6.woff2",
+      "sha256": "91923c87f9f32c46056285e69b1009fbb71c0bd27a1a1f9d386bc9248217606f",
+      "kind": "fonts",
+      "source": "assets/fonts/font-91923c87f9f32c46056285e6.woff2",
+      "sources": [
+        "assets/fonts/font-91923c87f9f32c46056285e6.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-92b93561d8af277543529189.woff2",
+      "sha256": "92b93561d8af27754352918934377dc09ecbf91d2d65a0951fb1d60895367330",
+      "kind": "fonts",
+      "source": "assets/fonts/font-92b93561d8af277543529189.woff2",
+      "sources": [
+        "assets/fonts/font-92b93561d8af277543529189.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-93daeb451edfe65dad18a468.woff2",
+      "sha256": "93daeb451edfe65dad18a468cc90933d6a5fc79e9411ce28027bacbfd7bfa0b8",
+      "kind": "fonts",
+      "source": "assets/fonts/font-93daeb451edfe65dad18a468.woff2",
+      "sources": [
+        "assets/fonts/font-93daeb451edfe65dad18a468.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-952351694a0ada3a721a73de.woff2",
+      "sha256": "952351694a0ada3a721a73decd3afeac99fac4637e0dbd2af987c7e147205ff1",
+      "kind": "fonts",
+      "source": "assets/fonts/font-952351694a0ada3a721a73de.woff2",
+      "sources": [
+        "assets/fonts/font-952351694a0ada3a721a73de.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-9826143bb6278155de4f7691.woff2",
+      "sha256": "9826143bb6278155de4f76910fd6ec34fe450385dd0d85df10e4497bb174eac7",
+      "kind": "fonts",
+      "source": "assets/fonts/font-9826143bb6278155de4f7691.woff2",
+      "sources": [
+        "assets/fonts/font-9826143bb6278155de4f7691.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-98eb7841a02d362b6b926466.woff2",
+      "sha256": "98eb7841a02d362b6b92646644d54e9a3ed296e931799f342acc76f844024328",
+      "kind": "fonts",
+      "source": "assets/fonts/font-98eb7841a02d362b6b926466.woff2",
+      "sources": [
+        "assets/fonts/font-98eb7841a02d362b6b926466.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-9a03bacc0425e420573fa8ba.woff2",
+      "sha256": "9a03bacc0425e420573fa8ba6b4a1468ebfe8860ef2243e41a646dee45b67b54",
+      "kind": "fonts",
+      "source": "assets/fonts/font-9a03bacc0425e420573fa8ba.woff2",
+      "sources": [
+        "assets/fonts/font-9a03bacc0425e420573fa8ba.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-9b3f4c4ff3adefd2476a2ac2.woff2",
+      "sha256": "9b3f4c4ff3adefd2476a2ac234ac3c72bea116c21a6f98dbe5d524c38b239c46",
+      "kind": "fonts",
+      "source": "assets/fonts/font-9b3f4c4ff3adefd2476a2ac2.woff2",
+      "sources": [
+        "assets/fonts/font-9b3f4c4ff3adefd2476a2ac2.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-9d345b17ad128918a7d4eea6.woff2",
+      "sha256": "9d345b17ad128918a7d4eea67714a376f8840ffdc82b77da8dbc416071491f65",
+      "kind": "fonts",
+      "source": "assets/fonts/font-9d345b17ad128918a7d4eea6.woff2",
+      "sources": [
+        "assets/fonts/font-9d345b17ad128918a7d4eea6.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-9fa23b6cf30829d06600bda4.woff2",
+      "sha256": "9fa23b6cf30829d06600bda44f2b5d31880d088ef9bd5626aaf4557941457c10",
+      "kind": "fonts",
+      "source": "assets/fonts/font-9fa23b6cf30829d06600bda4.woff2",
+      "sources": [
+        "assets/fonts/font-9fa23b6cf30829d06600bda4.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-a1e18c863c00ab7e6f17fddc.woff2",
+      "sha256": "a1e18c863c00ab7e6f17fddcc42b193fb94ccb5e3e01ee394a189c149aef447e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-a1e18c863c00ab7e6f17fddc.woff2",
+      "sources": [
+        "assets/fonts/font-a1e18c863c00ab7e6f17fddc.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-a4557ab88bbc6bb5272d3154.woff2",
+      "sha256": "a4557ab88bbc6bb5272d315402d2448f92a7e53bdf3e89f1d839e95e5b67999a",
+      "kind": "fonts",
+      "source": "assets/fonts/font-a4557ab88bbc6bb5272d3154.woff2",
+      "sources": [
+        "assets/fonts/font-a4557ab88bbc6bb5272d3154.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-a491a10a853d1fb3480d4471.woff2",
+      "sha256": "a491a10a853d1fb3480d4471a275fd8824726b0e1a795fe8a98eb946001ac80e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-a491a10a853d1fb3480d4471.woff2",
+      "sources": [
+        "assets/fonts/font-a491a10a853d1fb3480d4471.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-a5fdbb67e3dadebda5b447c1.woff2",
+      "sha256": "a5fdbb67e3dadebda5b447c1707fe47a2d9e40f095fb22dedc63aadf969d6609",
+      "kind": "fonts",
+      "source": "assets/fonts/font-a5fdbb67e3dadebda5b447c1.woff2",
+      "sources": [
+        "assets/fonts/font-a5fdbb67e3dadebda5b447c1.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-a7386f772de25b62a3a449fa.woff2",
+      "sha256": "a7386f772de25b62a3a449fa5d9f3e09916b65cf6a6dfc52f5a103c276fee157",
+      "kind": "fonts",
+      "source": "assets/fonts/font-a7386f772de25b62a3a449fa.woff2",
+      "sources": [
+        "assets/fonts/font-a7386f772de25b62a3a449fa.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-a8e46481396f2a9e4ac4875b.woff2",
+      "sha256": "a8e46481396f2a9e4ac4875b64645f26e4e9ff185a8503c2402c2bc9bf46219c",
+      "kind": "fonts",
+      "source": "assets/fonts/font-a8e46481396f2a9e4ac4875b.woff2",
+      "sources": [
+        "assets/fonts/font-a8e46481396f2a9e4ac4875b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-ab7aef1b30a10f6643f3271c.woff2",
+      "sha256": "ab7aef1b30a10f6643f3271cb55e64c49e6d8c4b91a2e68287196cde66ad7614",
+      "kind": "fonts",
+      "source": "assets/fonts/font-ab7aef1b30a10f6643f3271c.woff2",
+      "sources": [
+        "assets/fonts/font-ab7aef1b30a10f6643f3271c.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-aba77127699e71bc7d13fd80.woff2",
+      "sha256": "aba77127699e71bc7d13fd80c4eaaebcb5065862590f6dfbb05ba14bb0c0d2d8",
+      "kind": "fonts",
+      "source": "assets/fonts/font-aba77127699e71bc7d13fd80.woff2",
+      "sources": [
+        "assets/fonts/font-aba77127699e71bc7d13fd80.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-ae54f03733db84abcacd43c9.woff2",
+      "sha256": "ae54f03733db84abcacd43c967c9d6afd647f0a1579ef3b595a807bd24f76a2f",
+      "kind": "fonts",
+      "source": "assets/fonts/font-ae54f03733db84abcacd43c9.woff2",
+      "sources": [
+        "assets/fonts/font-ae54f03733db84abcacd43c9.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-b07e7e5e090ed9220e5fd4af.woff2",
+      "sha256": "b07e7e5e090ed9220e5fd4afc6a22339a77f63f79f1f7ac010e3b05a8849c5ce",
+      "kind": "fonts",
+      "source": "assets/fonts/font-b07e7e5e090ed9220e5fd4af.woff2",
+      "sources": [
+        "assets/fonts/font-b07e7e5e090ed9220e5fd4af.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-b36a86aa9d07ae91a379ef06.woff2",
+      "sha256": "b36a86aa9d07ae91a379ef0661f723c323677fb9106457318b1194d5c5f7cbc9",
+      "kind": "fonts",
+      "source": "assets/fonts/font-b36a86aa9d07ae91a379ef06.woff2",
+      "sources": [
+        "assets/fonts/font-b36a86aa9d07ae91a379ef06.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-b677122aea77998b4b6c991c.woff2",
+      "sha256": "b677122aea77998b4b6c991cc0268585a48690a9347bd17057ac589728176c5d",
+      "kind": "fonts",
+      "source": "assets/fonts/font-b677122aea77998b4b6c991c.woff2",
+      "sources": [
+        "assets/fonts/font-b677122aea77998b4b6c991c.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-b9df2ce5d328a524975728c0.woff2",
+      "sha256": "b9df2ce5d328a524975728c051385e14c1c823798e084c1227101ed4acc6174a",
+      "kind": "fonts",
+      "source": "assets/fonts/font-b9df2ce5d328a524975728c0.woff2",
+      "sources": [
+        "assets/fonts/font-b9df2ce5d328a524975728c0.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-ba142270184772c2bbc1985b.woff2",
+      "sha256": "ba142270184772c2bbc1985bf88e42d05e9462b14163001b8c253765c3f1d55e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-ba142270184772c2bbc1985b.woff2",
+      "sources": [
+        "assets/fonts/font-ba142270184772c2bbc1985b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-ba9fbd7fdbf7cce92c1a9594.woff2",
+      "sha256": "ba9fbd7fdbf7cce92c1a95946a7ad7b10ff9d3098403174b2b2b11ba6b282eb0",
+      "kind": "fonts",
+      "source": "assets/fonts/font-ba9fbd7fdbf7cce92c1a9594.woff2",
+      "sources": [
+        "assets/fonts/font-ba9fbd7fdbf7cce92c1a9594.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-bb4982fa7f34b1814c5c1add.woff2",
+      "sha256": "bb4982fa7f34b1814c5c1addcc64831a5c2657b4905fcb77a5d1914c36ebb602",
+      "kind": "fonts",
+      "source": "assets/fonts/font-bb4982fa7f34b1814c5c1add.woff2",
+      "sources": [
+        "assets/fonts/font-bb4982fa7f34b1814c5c1add.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-bca8897bbf2ee33d854e2d2c.woff2",
+      "sha256": "bca8897bbf2ee33d854e2d2cb19a31c66d549c2eb585af439e905378486df29e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-bca8897bbf2ee33d854e2d2c.woff2",
+      "sources": [
+        "assets/fonts/font-bca8897bbf2ee33d854e2d2c.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-beb4eb845df30631a69e29a0.woff2",
+      "sha256": "beb4eb845df30631a69e29a0c46763583fe335322852e9506396dd69cd13126e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-beb4eb845df30631a69e29a0.woff2",
+      "sources": [
+        "assets/fonts/font-beb4eb845df30631a69e29a0.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-bf628db08549cbf5090c3486.woff2",
+      "sha256": "bf628db08549cbf5090c3486717d5121d48af1d82c79b6ab181ed9b49ba5e31b",
+      "kind": "fonts",
+      "source": "assets/fonts/font-bf628db08549cbf5090c3486.woff2",
+      "sources": [
+        "assets/fonts/font-bf628db08549cbf5090c3486.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-c56fed07baa5368c483c00d7.woff2",
+      "sha256": "c56fed07baa5368c483c00d7963847caf0f9aff18bc78561fe8b14db7171b572",
+      "kind": "fonts",
+      "source": "assets/fonts/font-c56fed07baa5368c483c00d7.woff2",
+      "sources": [
+        "assets/fonts/font-c56fed07baa5368c483c00d7.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-c5cbbb60e77f863af35524ec.woff2",
+      "sha256": "c5cbbb60e77f863af35524ec5a6674f5ce15735f05746923caa8d07e99b55886",
+      "kind": "fonts",
+      "source": "assets/fonts/font-c5cbbb60e77f863af35524ec.woff2",
+      "sources": [
+        "assets/fonts/font-c5cbbb60e77f863af35524ec.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-c940bed82b2192c9a436af93.woff2",
+      "sha256": "c940bed82b2192c9a436af93a8ae990c9e66d1384376f56878c3906c6de35353",
+      "kind": "fonts",
+      "source": "assets/fonts/font-c940bed82b2192c9a436af93.woff2",
+      "sources": [
+        "assets/fonts/font-c940bed82b2192c9a436af93.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-ca078411ddf19a164747d6e2.woff2",
+      "sha256": "ca078411ddf19a164747d6e2220b0b2022f08e1682a1dc660a8902da13f2b0e0",
+      "kind": "fonts",
+      "source": "assets/fonts/font-ca078411ddf19a164747d6e2.woff2",
+      "sources": [
+        "assets/fonts/font-ca078411ddf19a164747d6e2.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-cad6d79ef7a000ed533559c0.woff2",
+      "sha256": "cad6d79ef7a000ed533559c080e92351797bb90d800243fa3a25c7064a3ce93e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-cad6d79ef7a000ed533559c0.woff2",
+      "sources": [
+        "assets/fonts/font-cad6d79ef7a000ed533559c0.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-cc967469ff60e3386f8fc664.woff2",
+      "sha256": "cc967469ff60e3386f8fc664b1df34ada138cfaac8ad4ae549b4849df687f27e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-cc967469ff60e3386f8fc664.woff2",
+      "sources": [
+        "assets/fonts/font-cc967469ff60e3386f8fc664.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-cfabb52e72825965ec66b18b.woff2",
+      "sha256": "cfabb52e72825965ec66b18bc1bab646d150206f2a3aa6d4fa6f29040058515e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-cfabb52e72825965ec66b18b.woff2",
+      "sources": [
+        "assets/fonts/font-cfabb52e72825965ec66b18b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-d4a6aba2cb4636b371991a19.woff2",
+      "sha256": "d4a6aba2cb4636b371991a197aed964f2308b7e3d5f5748bfe8d1b9af191f3a7",
+      "kind": "fonts",
+      "source": "assets/fonts/font-d4a6aba2cb4636b371991a19.woff2",
+      "sources": [
+        "assets/fonts/font-d4a6aba2cb4636b371991a19.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-d4ba29a42d58e9c71f523225.woff2",
+      "sha256": "d4ba29a42d58e9c71f523225d6c2257e231e4d3fe92b720bbcbf99dd08add33c",
+      "kind": "fonts",
+      "source": "assets/fonts/font-d4ba29a42d58e9c71f523225.woff2",
+      "sources": [
+        "assets/fonts/font-d4ba29a42d58e9c71f523225.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-d6e6ed7b0a14b508f94072ae.woff2",
+      "sha256": "d6e6ed7b0a14b508f94072aea3bb29abe236fd012ba6174b49292a6c900718e6",
+      "kind": "fonts",
+      "source": "assets/fonts/font-d6e6ed7b0a14b508f94072ae.woff2",
+      "sources": [
+        "assets/fonts/font-d6e6ed7b0a14b508f94072ae.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-d8f48bbf844eadbaa2e3db64.woff2",
+      "sha256": "d8f48bbf844eadbaa2e3db648ed6889ccb8083572437eb6f0f717f9097b9e45b",
+      "kind": "fonts",
+      "source": "assets/fonts/font-d8f48bbf844eadbaa2e3db64.woff2",
+      "sources": [
+        "assets/fonts/font-d8f48bbf844eadbaa2e3db64.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-dc5909d502de13c096a9d4b6.woff2",
+      "sha256": "dc5909d502de13c096a9d4b6f674433f2da1ef62f71cce1e3f43be499f1a4a52",
+      "kind": "fonts",
+      "source": "assets/fonts/font-dc5909d502de13c096a9d4b6.woff2",
+      "sources": [
+        "assets/fonts/font-dc5909d502de13c096a9d4b6.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-e50204d9c99dee1b284a8f5c.woff2",
+      "sha256": "e50204d9c99dee1b284a8f5c9508295fe6209c54e089ba7146813360d9c17713",
+      "kind": "fonts",
+      "source": "assets/fonts/font-e50204d9c99dee1b284a8f5c.woff2",
+      "sources": [
+        "assets/fonts/font-e50204d9c99dee1b284a8f5c.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-ebda2b19fc7a325ab200e073.woff2",
+      "sha256": "ebda2b19fc7a325ab200e073d3152ef8761dd2e3fc6f4a36c757792ba393264e",
+      "kind": "fonts",
+      "source": "assets/fonts/font-ebda2b19fc7a325ab200e073.woff2",
+      "sources": [
+        "assets/fonts/font-ebda2b19fc7a325ab200e073.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-ef454fca50875c2536bfbcf4.woff2",
+      "sha256": "ef454fca50875c2536bfbcf4e0b540f456c012a61d08ff778ea4e3e640bd938b",
+      "kind": "fonts",
+      "source": "assets/fonts/font-ef454fca50875c2536bfbcf4.woff2",
+      "sources": [
+        "assets/fonts/font-ef454fca50875c2536bfbcf4.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-f0dbe158fa641cc4297af81a.woff2",
+      "sha256": "f0dbe158fa641cc4297af81a4d44d2a9a2b775a32a96d4f665d62820ee2e6562",
+      "kind": "fonts",
+      "source": "assets/fonts/font-f0dbe158fa641cc4297af81a.woff2",
+      "sources": [
+        "assets/fonts/font-f0dbe158fa641cc4297af81a.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-f0e12f7e577876bf2d554e92.woff2",
+      "sha256": "f0e12f7e577876bf2d554e924f0a2bbce375b647d885a568b37dd5b042133ad1",
+      "kind": "fonts",
+      "source": "assets/fonts/font-f0e12f7e577876bf2d554e92.woff2",
+      "sources": [
+        "assets/fonts/font-f0e12f7e577876bf2d554e92.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-f402c381cb2eb5c6d1e65a8b.woff2",
+      "sha256": "f402c381cb2eb5c6d1e65a8bae7629b5cb97faaa42759af6874f6d33fcc98273",
+      "kind": "fonts",
+      "source": "assets/fonts/font-f402c381cb2eb5c6d1e65a8b.woff2",
+      "sources": [
+        "assets/fonts/font-f402c381cb2eb5c6d1e65a8b.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-f43c00b1e7e213add01d19ee.woff2",
+      "sha256": "f43c00b1e7e213add01d19eecf6ef2e8a96f7087b46b908df407490b72fe09d9",
+      "kind": "fonts",
+      "source": "assets/fonts/font-f43c00b1e7e213add01d19ee.woff2",
+      "sources": [
+        "assets/fonts/font-f43c00b1e7e213add01d19ee.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-f69a03144d47d4987530030e.woff2",
+      "sha256": "f69a03144d47d4987530030eceff2c2c4e37388ce5e45976a7a15f4dcd849d30",
+      "kind": "fonts",
+      "source": "assets/fonts/font-f69a03144d47d4987530030e.woff2",
+      "sources": [
+        "assets/fonts/font-f69a03144d47d4987530030e.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-f8c22ec1804bd6966b70f43a.woff2",
+      "sha256": "f8c22ec1804bd6966b70f43ac7c327025645b4c09597117fca2a5a6c750106fe",
+      "kind": "fonts",
+      "source": "assets/fonts/font-f8c22ec1804bd6966b70f43a.woff2",
+      "sources": [
+        "assets/fonts/font-f8c22ec1804bd6966b70f43a.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/font-fb6a5ed734c2fbe39794a1e1.woff2",
+      "sha256": "fb6a5ed734c2fbe39794a1e11ea075c70676ed82b8e8cd57c175ebbb4af805c1",
+      "kind": "fonts",
+      "source": "assets/fonts/font-fb6a5ed734c2fbe39794a1e1.woff2",
+      "sources": [
+        "assets/fonts/font-fb6a5ed734c2fbe39794a1e1.woff2"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/fonts/sources.json",
+      "sha256": "fd245c1a291a1eedbea57d2436cdbc65bf9a4205a70830a3d73a440d908cdff0",
+      "kind": "fonts",
+      "source": "assets/fonts/sources.json",
+      "sources": [
+        "assets/fonts/sources.json"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:brand/fonts.css"
+      ]
+    },
+    {
+      "path": "assets/logo/icons.svg",
+      "sha256": "83edca866b5d0b734244275853735707c87fa70da80c304d919e9afabf15d319",
+      "kind": "logo",
+      "source": "assets/icons.svg",
+      "sources": [
+        "assets/icons.svg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "components/core/Icon.d.ts",
+        "components/core/Icon.jsx"
+      ]
+    },
+    {
+      "path": "assets/logo/logo.png",
+      "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+      "kind": "logo",
+      "source": "assets/logo.png",
+      "sources": [
+        "assets/logo.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "slides/ContactSlide.jsx",
+        "slides/SlideFrame.jsx",
+        "slides/TitleSlide.jsx"
+      ]
+    },
+    {
+      "path": "assets/logo/supplied-logo-seal.png",
+      "sha256": "0c2f7379b8624516b20c407747c991b8eb36b870832bb7bab2a42ffbae4a05c2",
+      "kind": "logo",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/logo-seal.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/logo-seal.png",
+        "assets/logo-seal.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "components/core/Seal.d.ts",
+        "components/core/Seal.jsx",
+        "components/core/Seal.prompt.md",
+        "components/core/core.card.html",
+        "slides/ContactSlide.jsx",
+        "slides/SlideFrame.jsx",
+        "slides/TitleSlide.jsx",
+        "templates/report-kit/README.md",
+        "templates/report-kit/example/starter.py",
+        "ui_kits/report/ReportShell.jsx",
+        "ui_kits/website/ClosingCTA.jsx",
+        "ui_kits/website/SiteHeader.jsx"
+      ]
+    },
+    {
+      "path": "assets/partners/3699.png",
+      "sha256": "e2ce139afafeb7dd1ace434421a0f904b80e303169525dcb1213b187216a4ab8",
+      "kind": "partners",
+      "source": "assets/intro/partners/3699.png",
+      "sources": [
+        "assets/intro/partners/3699.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/chaofa.png",
+      "sha256": "387fd1b8d75d1f514fea30877533bfff9e8de2481619f28b49faf4f8b7c40b8a",
+      "kind": "partners",
+      "source": "assets/intro/partners/chaofa.png",
+      "sources": [
+        "assets/intro/partners/chaofa.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-05",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/qingshuiting.png",
+      "sha256": "11fc80676aca61d21bdf53a4bc627434bec2e0e2f689fe0d9f5b8ee450c2d203",
+      "kind": "partners",
+      "source": "assets/intro/partners/qingshuiting.png",
+      "sources": [
+        "assets/intro/partners/qingshuiting.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-02",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/shitou.png",
+      "sha256": "780364d22b8761ee19227b3be72a8ec8cb3ced0c3ac754927e5d2e4b969070a6",
+      "kind": "partners",
+      "source": "assets/intro/partners/shitou.png",
+      "sources": [
+        "assets/intro/partners/shitou.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-01",
+        "case-03",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/subangyuan.png",
+      "sha256": "bfea44bfd8eefbed90059a84fe949f92e83e9043ced5bb262a6134e70844db24",
+      "kind": "partners",
+      "source": "assets/intro/partners/subangyuan.png",
+      "sources": [
+        "assets/intro/partners/subangyuan.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-04",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/wuyutai.png",
+      "sha256": "f1e9facf768ec20efe66287fef664ccb46063b7c02e97316bdb5224fe8f9b922",
+      "kind": "partners",
+      "source": "assets/intro/partners/wuyutai.png",
+      "sources": [
+        "assets/intro/partners/wuyutai.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-08",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/youyuanjingmeng.png",
+      "sha256": "9779b14b6c36b73407bb486161687b6aeed45494cd80f9de1d585de52c2e6e1e",
+      "kind": "partners",
+      "source": "assets/intro/partners/youyuanjingmeng.png",
+      "sources": [
+        "assets/intro/partners/youyuanjingmeng.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/yun1980.png",
+      "sha256": "6753ed4919ea87d219c192954994e83da01d99f651c8b4bb08e0a2f77ed77a24",
+      "kind": "partners",
+      "source": "assets/intro/partners/yun1980.png",
+      "sources": [
+        "assets/intro/partners/yun1980.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-07",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/people/bianjiang.png",
+      "sha256": "02382a1f0b0050cc356da91032cfcccacdbb32a630b799264e07e20d4e9228f8",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/bianjiang.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/bianjiang.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/guofeng.png",
+      "sha256": "347e351fa7aeb18e1a9a5ec384c36a0077060736f63e712e62a7c5a620a58c9a",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/guofeng.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/guofeng.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/bianjiang.png",
+      "sha256": "f3a3625893d283d05a4baa2f635862bbba3f5a86fedee9fc74ecf1a446c911c4",
+      "kind": "people",
+      "source": "assets/intro/people/bianjiang.png",
+      "sources": [
+        "assets/intro/people/bianjiang.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/guofeng.png",
+      "sha256": "9f895f15515daa5a2f685861f352192bfabc1d8e83718c128c3e51370cd937b7",
+      "kind": "people",
+      "source": "assets/intro/people/guofeng.png",
+      "sources": [
+        "assets/intro/people/guofeng.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/liquanchao.png",
+      "sha256": "30e9be0aa517f0dfdfa6a77dd8baf9e5905062dfda0e078e3c0ef83f077f96a2",
+      "kind": "people",
+      "source": "assets/intro/people/liquanchao.png",
+      "sources": [
+        "assets/intro/people/liquanchao.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/wechat-qr.png",
+      "sha256": "204cc541635c423e2e055c77d68d0200353661c4c8df2671d29e3519d38cf768",
+      "kind": "people",
+      "source": "assets/intro/people/wechat-qr.png",
+      "sources": [
+        "assets/intro/people/wechat-qr.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/contact.js",
+        "content/contact.json",
+        "slides/ContactSlide.prompt.md",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/people/intro/yuxiangdong.png",
+      "sha256": "34ed5eb65f5bd9c20b8f738c2227d4ae09853880076c407dc0429a11f18b5608",
+      "kind": "people",
+      "source": "assets/intro/people/yuxiangdong.png",
+      "sources": [
+        "assets/intro/people/yuxiangdong.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/liquanchao.png",
+      "sha256": "6298c36ff75d5d9ca06b0aeb5140de79ff76d59a15d8055bacbb9428c4b414f4",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/liquanchao.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/liquanchao.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/wechat-qr.png",
+      "sha256": "3b8426bc477a0214f4c7c161bf3486232297555c36b6db5d074539b692856d47",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/wechat-qr.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/wechat-qr.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/contact.js",
+        "content/contact.json",
+        "slides/ContactSlide.prompt.md",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/people/yuxiangdong.png",
+      "sha256": "f7e38de909077096d4530c333478c10845039c1ed456a464b314c9e1dc0becb0",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/yuxiangdong.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/yuxiangdong.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/screens/3d.png",
+      "sha256": "f12d4cf9bfe4fd1ed80e51cda6a852832cf376ae8f695ade1c0012ce877f927c",
+      "kind": "screens",
+      "source": "deliverables/lifecycle-map/previews/3d.png",
+      "sources": [
+        "deliverables/lifecycle-map/previews/3d.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "deliverables/lifecycle-map/README.md"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-1.jpg",
+      "sha256": "7683048f49516379657aee151e16f1911c3ee5e50a135af23225d3844de18e2d",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-1.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-2.jpg",
+      "sha256": "ca60a54c0a340a12b051d9bdd0266036f3bdc95a98e8c8e9bf3ca387a73cd526",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-2.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-3.jpg",
+      "sha256": "ad370fe2b4c203a515152d6ccb8d17edcda654e46f6d69ec24941b8e3dfd3e08",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-3.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-4.jpg",
+      "sha256": "8675042c38931ab18ba0799c5adab0f57b0c1549ddda43f50c8e860c5363df76",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-4.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-4.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/gantt.png",
+      "sha256": "5d65fab7c5b26d83e2c2b7ff3c614809d7b44bbce8591143d76291cf1a7acc59",
+      "kind": "screens",
+      "source": "deliverables/lifecycle-map/previews/gantt.png",
+      "sources": [
+        "deliverables/lifecycle-map/previews/gantt.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "deliverables/lifecycle-map/README.md"
+      ]
+    },
+    {
+      "path": "assets/screens/map.png",
+      "sha256": "0fb285a19ed339ac9855c2b3dc381ae885f1020c77f6ac3cffc83775415d524f",
+      "kind": "screens",
+      "source": "deliverables/lifecycle-map/previews/map.png",
+      "sources": [
+        "deliverables/lifecycle-map/previews/map.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "deliverables/lifecycle-map/README.md"
+      ]
+    },
+    {
+      "path": "assets/screens/mobile-review.jpg",
+      "sha256": "f185449e5603951c8e43bd89d67953bbd5455d4a105898e841171e19dc93240b",
+      "kind": "screens",
+      "source": "assets/intro/deck/mobile-review.jpg",
+      "sources": [
+        "assets/intro/deck/mobile-review.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/penetration-matrix.jpg",
+      "sha256": "ead2621ba75681380cac7590f7e833801495e3a68e0a890d78ba5025a26393c5",
+      "kind": "screens",
+      "source": "assets/intro/deck/penetration-matrix.jpg",
+      "sources": [
+        "assets/intro/deck/penetration-matrix.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d300e5eb-7629-435b-abbc-22f91e013c28"
+      ]
+    },
+    {
+      "path": "assets/screens/price-band-gap.jpg",
+      "sha256": "bb90d51a624674d5880be1aea1df82f39dc14bb3ef5a49aca5814dc43c2079fb",
+      "kind": "screens",
+      "source": "assets/intro/deck/price-band-gap.jpg",
+      "sources": [
+        "assets/intro/deck/price-band-gap.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d300e5eb-7629-435b-abbc-22f91e013c28"
+      ]
+    },
+    {
+      "path": "assets/screens/profit-sensitivity.jpg",
+      "sha256": "45bb49d007d5baf9e807fd9603c4f8d3aa8ebf4c140d17b90fd4de8cb1454f89",
+      "kind": "screens",
+      "source": "assets/intro/deck/profit-sensitivity.jpg",
+      "sources": [
+        "assets/intro/deck/profit-sensitivity.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d300e5eb-7629-435b-abbc-22f91e013c28"
+      ]
+    },
+    {
+      "path": "assets/screens/report-page-1.jpg",
+      "sha256": "fea647250082f76d5a42506feb4a180749b50823a525d480ec7a467545594df8",
+      "kind": "screens",
+      "source": "assets/intro/deck/report-page-1.jpg",
+      "sources": [
+        "assets/intro/deck/report-page-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/report-page-2.jpg",
+      "sha256": "9db9374fec0b1ce6cc7ad35c22681763dfa349532a1a53fe813433bbcdf6094b",
+      "kind": "screens",
+      "source": "assets/intro/deck/report-page-2.jpg",
+      "sources": [
+        "assets/intro/deck/report-page-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/report-page-3.jpg",
+      "sha256": "9b77123726bac0910e0ae6305edc0f2493b3c8d62ec978645e3d0596f569bc33",
+      "kind": "screens",
+      "source": "assets/intro/deck/report-page-3.jpg",
+      "sources": [
+        "assets/intro/deck/report-page-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/repurchase-quadrant.jpg",
+      "sha256": "80946a065e4d2a9601c9c5fdde86429e2873b23740cd62d890c58db261f4b3ce",
+      "kind": "screens",
+      "source": "assets/intro/deck/repurchase-quadrant.jpg",
+      "sources": [
+        "assets/intro/deck/repurchase-quadrant.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "48d9c918-a62e-430f-952b-bc8007f333c6",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/trade-area-supply.jpg",
+      "sha256": "8a5c99cb143aecea7ceef6cf8cf3aae6deb7b7273c5da1dece8db868f3a8615b",
+      "kind": "screens",
+      "source": "assets/intro/deck/trade-area-supply.jpg",
+      "sources": [
+        "assets/intro/deck/trade-area-supply.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "48d9c918-a62e-430f-952b-bc8007f333c6",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    }
+  ]
+}

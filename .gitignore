@@ -36,3 +36,14 @@ reference/source/*
 
 # Current versioned compiled component distribution is an intentional deliverable.
 !dist/components/*/_ds_bundle.js
+
+# Browser evidence is scratch; PDFs and versioned verification summaries are review artifacts.
+build/**/.verification/
+
+# Historical exports remain intact after their archive move.
+!archive/**/_ds_bundle.js
+!archive/**/_ds_manifest.json
+!archive/**/_adherence.oxlintrc.json
+
+# Interrupted PDF optimisation scratch is never a release artifact.
+build/**/*.optimized.pdf

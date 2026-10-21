@@ -61,6 +61,12 @@ class Contracts(unittest.TestCase):
         self.write('content/team.json',{'people':[{'name':'A','photo':{'$asset':'assets/logo/logo.png'},'seat':{'title':'New role'}}]})
         for deck in before:self.assertNotEqual(before[deck],self.lib.content_version(deck))
 
+    def test_full_case_record_invalidates_all_consumers(self):
+        self.lib.slides['aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa']['props']={'$case':'case-01'}
+        before={d:self.lib.content_version(d) for d in ('intro','sales')}
+        self.write('content/cases/case-01.json',{'summary':{'title':'Case'},'gallery':[], 'approval':'Updated approval'})
+        for deck in before:self.assertNotEqual(before[deck],self.lib.content_version(deck))
+
     def test_asset_integrity_and_runtime_invalidation(self):
         before=self.lib.content_version('intro')
         self.write('dist/components/test/bundle.js','changed')

@@ -4,7 +4,7 @@
 
 The approved corporate introduction remains primary: `deliverables/company-intro-v3/gen/vals.json`
 previously held the four profiles and roster. Their exact wording was moved to `content/team.json`.
-The approved corporate `gen/gen.py` and `docs/claude-design-system/templates/company-intro/CompanyIntro.dc.html`
+The approved corporate `gen/gen.py` and `archive/claude-design-system-v13/templates/company-intro/CompanyIntro.dc.html`
 provided the contact copy now in `content/contact.json`. `scripts/build_content.py` generates the
 two `window.TIANSIGHT_*` browser files; do not edit those generated files directly.
 

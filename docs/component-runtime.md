@@ -1,10 +1,16 @@
+> Consolidation update: active commands and contracts are in `architecture.md`. The runtime
+> resolves registered canonical images in `assets/` directly (the foundation styles/fonts are
+> also repository dependencies); the manifest records their external hashes. Former deck
+> generators and template paths below are historical provenance, now replaced by
+> `content/decks/` and `scripts/build_deck.py`.
+
 # Supported component runtime
 
 The supported component distribution is `dist/components/2026.10.21-e0a760/` (105 named exports). `dist/components/current.json` points to its manifest. It replaces the 55-export bb63dc runtime for active component cards, slides and source templates. The CSS/product runtime in `dist/product/` remains a separate foundation consumer.
 
 The owner approved the import of **Template review and fixes (1).zip**, including the supplied logos, hotel marks, brand wall and case photographs, in the task approved on 2026-10-21. These are company/service introductions, not new private client deliverables. No new customer permission or third-party endorsement is inferred. The complete supplied package is preserved at `archive/approved-2026-10-21/source.zip`; its SHA-256 and every ZIP entry, embedded resource and nested image/font are recorded in `archive/approved-2026-10-21/inventory.json`.
 
-The package contains **compiled components, not their original JSX sources**. The runtime manifest's `sourcePath` and `sourceHashes` describe the upstream build; they do not imply those source files were recovered. The old `TIANSIGHT 侍天 Design System/`, `TIANSIGHT 侍天 Design System v0.7/`, `docs/claude-design-system/`, and root JSX are historical source/export material. They remain intact for provenance. Editing them does not rebuild the new runtime. Current HTML cards beside the historical JSX consume the pinned distribution.
+The package contains **compiled components, not their original JSX sources**. The runtime manifest's `sourcePath` and `sourceHashes` describe the upstream build; they do not imply those source files were recovered. The old `TIANSIGHT 侍天 Design System/`, `TIANSIGHT 侍天 Design System v0.7/`, `archive/claude-design-system-v13/`, and root JSX are historical source/export material. They remain intact for provenance. Editing them does not rebuild the new runtime. Current HTML cards beside the historical JSX consume the pinned distribution.
 
 ## Loading
 

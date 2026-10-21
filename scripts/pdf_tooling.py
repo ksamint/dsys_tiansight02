@@ -28,7 +28,7 @@ def tooling_command():
                 env['PYTHONPATH'] = os.pathsep.join([str(fitz_path.parents[1]),str(image_path.parents[1]),env.get('PYTHONPATH','')])
                 if available(interpreter, env):
                     return [interpreter], env
-    return ['uv','run','--with','pillow','--with','pymupdf','python'], None
+    return ['uv','run','--with-requirements',str(Path(__file__).with_name('pdf-requirements.txt')),'python'], None
 
 
 def run_pdf(arguments, **kwargs):

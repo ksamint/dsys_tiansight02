@@ -4,6 +4,13 @@ Versions follow the published brand guide. The system version is in `brand/VERSI
 
 ## v0.7 · 2026-10-18 · New public repository
 
+### Consolidation: slide library, deck manifests, one export path
+
+- Canonical UUID slide library and intro/exhibit/sales manifests, shared case/team/contact/partner data; kitchen planned.
+- Registered canonical assets and in-memory ZIP recovery; historical exports archived.
+- One offline HTML/PDF builder, content/system versions, verification and separate build/approval pointers.
+- Contract, migration, offline runtime, PDF and layout gates; architecture/MCP contract documented.
+
 - The design system moves to `ksamint/dsys_tiansight02`, starting from the consolidated v0.7 release with fresh history; `ksamint/dsys_tiansight01` becomes a private archive.
 - Rule: never push sensitive data to the public repository (`AGENTS.md`, `docs/maintaining.md` §6, with the list of what counts and where it lives instead). `scripts/check.py` 8k blocks spreadsheets, databases and data dumps outside the invented sample folder.
 - Addresses: official website https://tiansight.apuch.cn; brand design system https://apuch.art/tiansight; repository preview https://ksamint.github.io/dsys_tiansight02/ (no custom domain, `CNAME` removed); CSS for external sites from jsDelivr.

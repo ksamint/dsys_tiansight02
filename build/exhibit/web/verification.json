@@ -1,0 +1,228 @@
+{
+  "schema": "tiansight.pdf-verification/2",
+  "deckId": "exhibit",
+  "profile": "web",
+  "contentVersion": "708920274f5d67d6a57d037c51f0cf81d8337d35da7e6c866c07155b23fd92be",
+  "systemVersion": "2026.10.21-e0a760",
+  "htmlSha256": "66c7c98b722ad243cc5cc86f63ef574f1f3e8a2077c69d199e888039407fb977",
+  "pdfSha256": "a0e7c08eac4978893ee630bf72cb8084d0d3fe4a28d9a47e2c78ec4865d0d52b",
+  "pageCount": 26,
+  "pages": [
+    {
+      "page": 1,
+      "id": "08d447c4-1e58-45c1-83b2-9f28976cdd7f",
+      "characters": 110,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 1.181
+    },
+    {
+      "page": 2,
+      "id": "bba93bc0-e4f8-4068-8984-2935d93d8cfb",
+      "characters": 220,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.659
+    },
+    {
+      "page": 3,
+      "id": "3f41859f-1d87-4ded-a0a5-95177bd788ed",
+      "characters": 105,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.248
+    },
+    {
+      "page": 4,
+      "id": "eb32d32e-c909-42cb-87c9-0b907b3ea1ed",
+      "characters": 142,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.806
+    },
+    {
+      "page": 5,
+      "id": "d08c13a5-d95f-4d16-a212-7cf71ba95537",
+      "characters": 164,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.907
+    },
+    {
+      "page": 6,
+      "id": "6b98ca6f-126a-4a4e-85f3-fa44feb38344",
+      "characters": 121,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.818
+    },
+    {
+      "page": 7,
+      "id": "cecda97f-9fb6-40fa-b437-22da4bcb1395",
+      "characters": 122,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.806
+    },
+    {
+      "page": 8,
+      "id": "9b1b891a-3fea-46e6-9eab-cf05efd17716",
+      "characters": 145,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.808
+    },
+    {
+      "page": 9,
+      "id": "1ebbbf22-f947-4331-9d56-e06f526c54db",
+      "characters": 88,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.721
+    },
+    {
+      "page": 10,
+      "id": "69a70c07-74f7-4269-bd23-b491dd6c7b68",
+      "characters": 82,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.737
+    },
+    {
+      "page": 11,
+      "id": "2c61e7ef-c71a-4ccb-8308-e7407dda3cf8",
+      "characters": 116,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.782
+    },
+    {
+      "page": 12,
+      "id": "76300fea-d62c-4907-8081-e9379fc4ef8d",
+      "characters": 116,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.101
+    },
+    {
+      "page": 13,
+      "id": "76d3d22d-c460-4b4c-ab4e-dd673ba5aae8",
+      "characters": 122,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.055
+    },
+    {
+      "page": 14,
+      "id": "f61420aa-efab-46d0-926e-0b53a9fe7f77",
+      "characters": 84,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.754
+    },
+    {
+      "page": 15,
+      "id": "54df294e-e1a0-43b2-8094-1f6a303c0788",
+      "characters": 76,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.712
+    },
+    {
+      "page": 16,
+      "id": "cbce9078-e6b6-4c22-ae8c-becc6b98c001",
+      "characters": 146,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.198
+    },
+    {
+      "page": 17,
+      "id": "d9a3002f-14cf-4f76-b061-81f6f58d9fc9",
+      "characters": 167,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.409
+    },
+    {
+      "page": 18,
+      "id": "d923b05d-df80-4feb-ab3e-fbce2b6512b9",
+      "characters": 146,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.193
+    },
+    {
+      "page": 19,
+      "id": "4ccad737-2ed1-464d-921f-e9e6bbdd6937",
+      "characters": 158,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.911
+    },
+    {
+      "page": 20,
+      "id": "adefb319-95e5-49d1-895b-19e4e4578013",
+      "characters": 147,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.121
+    },
+    {
+      "page": 21,
+      "id": "806e82b8-b93c-432d-a124-3fbd65816617",
+      "characters": 150,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.197
+    },
+    {
+      "page": 22,
+      "id": "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
+      "characters": 247,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.718
+    },
+    {
+      "page": 23,
+      "id": "5419cbed-e0d1-46a9-bd7b-393c6b260205",
+      "characters": 259,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.777
+    },
+    {
+      "page": 24,
+      "id": "ed451b90-dc1f-497d-82c3-d9cb095dd225",
+      "characters": 293,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.739
+    },
+    {
+      "page": 25,
+      "id": "8101bf62-d9e5-42da-84f6-107f597c4620",
+      "characters": 323,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.873
+    },
+    {
+      "page": 26,
+      "id": "60f54dbe-8e06-45c8-b877-b1574f1e6bee",
+      "characters": 116,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.725
+    }
+  ],
+  "fontsEmbedded": true,
+  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "pageSizePoints": [
+    960,
+    540
+  ],
+  "textComparison": "NFKC non-whitespace character multisets including punctuation/signs, plus each numeric token in visual digit order at its HTML range; positioned text blocks may reorder",
+  "passed": true
+}

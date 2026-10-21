@@ -21,7 +21,8 @@ def build():
         ['scripts/build_dist.py'],
         ['scripts/build_component_runtime.py'],
         ['scripts/build_content.py'],
-        ['scripts/build_exhibit.py'],
+        ['scripts/build_assets.py'],
+        ['scripts/build_deck.py', '--all'],
     ):
         subprocess.run([sys.executable, *args], cwd=ROOT, check=True)
 
@@ -45,9 +46,9 @@ def build():
                 continue
             if path.suffix.lower() in {'.html', '.css', '.js', '.json', '.csv', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.woff2', '.md'} or path.name.startswith('LICENSE-') or (path.suffix == '.txt' and path.name.startswith('OFL-') and 'fonts' in rel.parts):
                 paths.append(path)
-    for folder in ('content', 'deliverables/exhibit-design'):
+    for folder in ('content', 'assets', 'build'):
         for path in (ROOT / folder).rglob('*'):
-            if path.is_file() and (path.suffix in {'.js', '.json', '.png', '.jpg', '.pdf'} or path == ROOT / 'deliverables/exhibit-design/index.html'):
+            if '.verification' not in path.parts and path.is_file() and path.suffix in {'.html', '.css', '.js', '.json', '.png', '.jpg', '.jpeg', '.svg', '.webp', '.woff2', '.pdf'}:
                 paths.append(path)
     for path in paths:
         if path.is_symlink() or ROOT not in path.resolve().parents:
@@ -67,7 +68,7 @@ def build():
     manifest = json.loads((OUT / 'dist/product/manifest.json').read_text())
     for name in manifest['files']:
         assert (OUT / 'dist/product' / name).is_file(), f'Missing product asset: {name}'
-    assert not (OUT / '.git').exists() and not (OUT / 'reference/source').exists()
+    assert not (OUT / '.git').exists() and not (OUT / 'reference/source').exists() and not (OUT / 'archive').exists()
     print(f'PASS: staged {len(paths)} preview files in _site; HTML links resolve')
 
 

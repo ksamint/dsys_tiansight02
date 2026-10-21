@@ -10,7 +10,7 @@ const PAGES = [
 function ReportShell({ page, onPage, onlyAnomalies, onToggle, children }) {
   return <div style={{ minHeight: "100vh", display: "grid", gridTemplateColumns: "244px minmax(0,1fr)" }}>
     <aside style={{ borderRight: "1px solid var(--line-hairline)", background: "var(--parchment-100)", padding: "22px 20px", display: "flex", flexDirection: "column", gap: "var(--space-7)", position: "sticky", top: 0, height: "100vh" }}>
-      <Seal size={32} wordmark subtitle="报告样张" src="../../assets/logo-seal.png" />
+      <Seal size={32} wordmark subtitle="报告样张" src="../../assets/logo/supplied-logo-seal.png" />
       <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
         {PAGES.map(p => {
           const on = p.key === page;

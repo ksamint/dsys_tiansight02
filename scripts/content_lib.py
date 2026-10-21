@@ -147,6 +147,25 @@ class Library:
             for p in sorted((self.root / folder).rglob('*')):
                 if p.is_file() and (folder == 'brand' and p.suffix in ('.css', '.woff2', '.woff') or folder == 'content/extensions' and p.stem in extension_owners):
                     dependencies[str(p.relative_to(self.root))] = sha(p.read_bytes())
+        # Track whole shared source records as well as resolved props. A case gallery or
+        # approval edit must invalidate every deck referencing that case, even when its
+        # current layout reads only summary props.
+        def shared_sources(value):
+            if isinstance(value, dict):
+                for key, ref in value.items():
+                    path = None
+                    if key in ('$team', '$contact', '$partners'):
+                        path = 'content/' + key[1:] + '.json'
+                    elif key == '$case':
+                        path = f'content/cases/{ref}.json'
+                    if path:
+                        dependencies[path] = sha((self.root / path).read_bytes())
+                    shared_sources(ref)
+            elif isinstance(value, list):
+                for item in value: shared_sources(item)
+        for entry in manifest['slides']:
+            sid = entry if isinstance(entry, str) else entry['id']
+            shared_sources(self.slides[sid].get('props', {}))
         referenced = set()
         def assets(value):
             if isinstance(value, dict):

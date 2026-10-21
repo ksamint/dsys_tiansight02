@@ -1,6 +1,6 @@
 // Clickable PDF: node pdf.js <deck-dir> <links.json> <out.pdf>
 // Renders the deck with the design-system fonts (TOKENS lists the WOFF2 subsets, FONTDIR holds them;
-// defaults are the repo's docs/claude-design-system/tokens.json and brand/fonts/), overlays an <a> on
+// defaults are the repo's archive/claude-design-system-v13/tokens.json and brand/fonts/), overlays an <a> on
 // every link in links.json (written by tsk.build_links) and prints one 1920×1080 page per slide.
 // DEBUG=id,id outlines the link boxes and saves screenshots of those slides to <deck>/.build/.
 const { chromium } = require('playwright');
@@ -11,7 +11,7 @@ const cfg = H.config(process.argv);
 const LK = JSON.parse(fs.readFileSync(process.argv[3], 'utf8'));
 const OUT = process.argv[4];
 const DEBUG = process.env.DEBUG;
-const TOKENS = process.env.TOKENS || path.join(H.REPO, 'docs/claude-design-system/tokens.json');
+const TOKENS = process.env.TOKENS || path.join(H.REPO, 'archive/claude-design-system-v13/tokens.json');
 process.env.FONTDIR_RESOLVED = path.resolve(process.env.FONTDIR || path.join(H.REPO, 'brand/fonts')) + '/';
 // one family name per subset file; the stacks replace the deck's family names
 const tok = JSON.parse(fs.readFileSync(TOKENS, 'utf8')).type.fonts;

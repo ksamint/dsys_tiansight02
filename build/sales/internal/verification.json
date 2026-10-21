@@ -1,0 +1,132 @@
+{
+  "schema": "tiansight.pdf-verification/2",
+  "deckId": "sales",
+  "profile": "internal",
+  "contentVersion": "eec86ed28b3b0e0f21eee9179f32d7240615d30b7c1e5f9c8d19b8031686e200",
+  "systemVersion": "2026.10.21-e0a760",
+  "htmlSha256": "00ed43c2ebec4b565af31b101eac5fec4ac1c4529e8f97008fa141bac476c0fb",
+  "pdfSha256": "48a6138b0b59508c579908f143868ecaa77a3dcb5695791d5b3b6dcef619d10d",
+  "pageCount": 14,
+  "pages": [
+    {
+      "page": 1,
+      "id": "64ffecdf-2549-56c9-9977-a67ce4810da0",
+      "characters": 98,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 1.374
+    },
+    {
+      "page": 2,
+      "id": "4908fa67-0c0b-58be-b6ff-ef4710a8f658",
+      "characters": 291,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.803
+    },
+    {
+      "page": 3,
+      "id": "f83aae18-e034-5a59-af29-4fdbb2816cb9",
+      "characters": 46,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.237
+    },
+    {
+      "page": 4,
+      "id": "916c9d8c-56d4-45f0-9722-01ff073a4219",
+      "characters": 257,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.466
+    },
+    {
+      "page": 5,
+      "id": "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
+      "characters": 444,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 4.244
+    },
+    {
+      "page": 6,
+      "id": "2e73adff-ba13-5bb2-bdff-2e0353c0dd64",
+      "characters": 47,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.473
+    },
+    {
+      "page": 7,
+      "id": "bf0552b6-86e5-5668-8cff-2dffc0ddbe58",
+      "characters": 227,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.198
+    },
+    {
+      "page": 8,
+      "id": "d7f7675c-d971-476e-a6b4-1199320ef1ab",
+      "characters": 285,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.323
+    },
+    {
+      "page": 9,
+      "id": "fe45c1ed-a833-4b4a-9243-ba217666b1cc",
+      "characters": 273,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.792
+    },
+    {
+      "page": 10,
+      "id": "4e47be0a-f7de-5c0f-ab7e-b0bc74e01adb",
+      "characters": 145,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.485
+    },
+    {
+      "page": 11,
+      "id": "58a82f6d-8e63-4ac1-8416-ba0ec1ca872c",
+      "characters": 326,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.368
+    },
+    {
+      "page": 12,
+      "id": "2d940251-bde3-40c7-904e-2b0c47042f05",
+      "characters": 153,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 3.76
+    },
+    {
+      "page": 13,
+      "id": "ba744346-0af7-452a-a815-974d6b106700",
+      "characters": 172,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 4.088
+    },
+    {
+      "page": 14,
+      "id": "60f54dbe-8e06-45c8-b877-b1574f1e6bee",
+      "characters": 116,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.728
+    }
+  ],
+  "fontsEmbedded": true,
+  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "pageSizePoints": [
+    960,
+    540
+  ],
+  "textComparison": "NFKC non-whitespace character multisets including punctuation/signs, plus each numeric token in visual digit order at its HTML range; positioned text blocks may reorder",
+  "passed": true
+}

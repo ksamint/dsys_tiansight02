@@ -9,7 +9,7 @@
 export interface SealProps {
   /** px; 28–40 in headers, 88–120 in the closing CTA */
   size?: number;
-  /** path to assets/logo-seal.png, relative to the consuming page */
+  /** path to assets/logo/supplied-logo-seal.png, relative to the consuming page */
   src?: string;
   /** show "TIANSIGHT" set in plain Spectral caps beside the seal (no supplied wordmark exists) */
   wordmark?: boolean;

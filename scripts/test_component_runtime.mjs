@@ -5,20 +5,13 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import assert from 'node:assert/strict';
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-const {chromium}=await import(process.env.PLAYWRIGHT_MODULE||resolve(execSync('npm root -g').toString().trim(),'playwright/index.mjs'));
+const {chromium}=await import('./playwright.mjs');
 const version='2026.10.21-e0a760';
 const runtime=`dist/components/${version}`;
 const read=p=>readFileSync(resolve(root,p),'utf8');
 const url=p=>pathToFileURL(resolve(root,p)).href;
 const output=resolve(root,'.build/runtime-check');mkdirSync(output,{recursive:true});
 const manifest=JSON.parse(read(`${runtime}/manifest.json`));
-// Exercise the existing corporate template with its actual props and shared canonical people.
-let template=read('docs/claude-design-system/templates/company-intro/CompanyIntro.dc.html').replace(/<helmet>[\s\S]*?<\/helmet>/,'').replace('from="./deck-stage.js"','');
-let logic=read('docs/claude-design-system/templates/company-intro/CompanyIntro.dc.js').replace(/const PEOPLE = \[[\s\S]*?\n    \];/,'const PEOPLE = window.TIANSIGHT_TEAM.people;');
-const types=[...new Set([...template.matchAll(/TIANSIGHTDesignSystem_e0a760\.([\w]+)/g)].map(m=>m[1]))];
-const scripts=['vendor/react.min.js','vendor/react-dom.min.js','vendor/d3.min.js','vendor/d3-sankey.min.js','vendor/lucide-icons.js','_ds_bundle.js','deck-stage.js'].map(p=>runtime+'/'+p).concat(['content/team.js','content/contact.js',runtime+'/support.js']);
-const fixture=`<!doctype html><html lang="zh"><head><meta charset="utf-8"><link rel="stylesheet" href="${url(runtime+'/styles.css')}">${scripts.map(p=>`<script src="${url(p)}"></script>`).join('')}</head><body><script>window.__renderedTypes=new Set();for(const name of ${JSON.stringify(types)}){const original=window.TIANSIGHTDesignSystem_e0a760[name];window.TIANSIGHTDesignSystem_e0a760[name]=function(...args){window.__renderedTypes.add(name);return original(...args);};}</script><x-dc>${template}</x-dc><script type="text/x-dc" data-dc-script>${logic}</script></body></html>`;
-writeFileSync(resolve(output,'corporate.html'),fixture);
 const browser=await chromium.launch();
 const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'});
 const external=[];
@@ -50,9 +43,16 @@ async function inspect(file, expectedSlides){
   return facts;
 }
 try{
-  const exhibit=await inspect('deliverables/exhibit-design/index.html',41);
-  const catalog=JSON.parse(read('content/deck-catalog.json')).decks.find(d=>d.id==='exhibit');
-  assert.deepEqual(exhibit.slides.map(s=>s.id),catalog.slides.map(s=>s.id));
+  const catalog=JSON.parse(read('content/deck-catalog.json'));
+  const decks={};
+  for(const id of ['intro','sales','exhibit']){
+    const entry=catalog.decks.find(d=>d.id===id);
+    const facts=await inspect(`build/${id}/internal/index.html`, entry.slides.filter(s=>s.status!=='planned').length);
+    assert.deepEqual(facts.slides.map(s=>s.id), entry.slides.filter(s=>s.status!=='planned').map(s=>s.id));
+    assert(!facts.text.match(/\d\.\d{10}/),'Floating-point chart label regression');
+    decks[id]=facts;
+  }
+  const exhibit=decks.exhibit;
   assert(exhibit.text.includes('按项目约定')&&exhibit.text.includes('+22.2%')&&exhibit.text.includes('−19.2%'));
   assert(!exhibit.text.includes('+17.3%')&&!exhibit.text.includes('+13.2%'));
   await page.keyboard.press('ArrowRight');
@@ -79,24 +79,16 @@ try{
     if(clipped.length)clipping.push({page:i+1,text:clipped});
   }
   assert.deepEqual(clipping,[],'Exhibit text clipping');
-  // Export from the same HTML, with identity in both HTML metadata and PDF title.
-  if(process.argv.includes('--pdf')){
-    await page.evaluate(()=>{document.querySelector('deck-stage').removeAttribute('noscale');document.title+=' | '+document.body.dataset.contentVersion+' | '+document.body.dataset.systemVersion;});
-    await page.pdf({path:resolve(root,'deliverables/exhibit-design/exhibit-design.pdf'),printBackground:true,preferCSSPageSize:true});
-  }
-  await inspect('.build/runtime-check/corporate.html',47);
-  assert(!((await page.locator('body').innerText()).match(/\d\.\d{10}/)),'Waterfall floating-point labels regressed');
-  const used=await page.evaluate(()=>[...window.__renderedTypes]);
-  for(const name of types)assert(used.includes(name),`Corporate type missing: ${name}`);
   const cards=[];
   for(const folder of ['components','slides']){
     const walk=dir=>{for(const e of readdirSync(resolve(root,dir),{withFileTypes:true})){const p=dir+'/'+e.name;if(e.isDirectory())walk(p);else if(p.endsWith('.card.html'))cards.push(p);}};walk(folder);
   }
   for(const file of cards.concat(['ui_kits/report/index.html','ui_kits/website/index.html','ui_kits/website/partners.html']))await inspect(file);
-  await inspect('templates/sales-deck/SalesDeck.dc.html',14);
-  const editable=await inspect('deliverables/exhibit-design/src/TiansightDeck-Exhibit.dc.html',41);
-  assert.deepEqual(editable.slides,exhibit.slides,'Editable exhibit and generated HTML differ');
+  // Explicit specimen props must not hide a broken default runtime asset resolver.
+  await page.evaluate(()=>{const host=document.createElement('div');document.body.append(host);ReactDOM.flushSync(()=>ReactDOM.createRoot(host).render(React.createElement(window.TIANSIGHTDesignSystem_e0a760.Seal,{})));});
+  await page.waitForFunction(()=>[...document.images].every(x=>x.complete));
+  assert.deepEqual(await page.evaluate(()=>[...document.images].filter(x=>!x.naturalWidth).map(x=>x.src)),[],'Bare Seal default image');
   assert.deepEqual(external,[],'Runtime attempted external requests');
-  writeFileSync(resolve(output,'results.json'),JSON.stringify({version,observations,corporateTypes:types,exhibitText:exhibit.slides.map(s=>s.text),clipping,external,errors},null,2)+'\n');
-  console.log(`PASS: 105 exports; 41 exhibit slides; 47 corporate slides (${types.length} component types); ${cards.length} cards; offline images/fonts/navigation/clipping`);
+  writeFileSync(resolve(output,'results.json'),JSON.stringify({version,observations,decks:Object.fromEntries(Object.entries(decks).map(([id,facts])=>[id,facts.slides])),exhibitText:exhibit.slides.map(s=>s.text),clipping,external,errors},null,2)+'\n');
+  console.log(`PASS: 105 exports; ${decks.exhibit.slides.length} exhibit slides; ${decks.intro.slides.length} intro slides; ${decks.sales.slides.length} sales slides (shared canonical library); ${cards.length} cards; offline images/fonts/navigation/clipping`);
 }finally{await browser.close();}

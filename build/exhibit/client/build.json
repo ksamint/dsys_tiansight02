@@ -1,0 +1,16 @@
+{
+  "schema": "tiansight.artifact/2",
+  "deckId": "exhibit",
+  "profile": "client",
+  "contentVersion": "708920274f5d67d6a57d037c51f0cf81d8337d35da7e6c866c07155b23fd92be",
+  "systemVersion": "2026.10.21-e0a760",
+  "htmlSha256": "41b75b7c1174aa971ced66adf87b374595636d8d7a7b28b3e84653cb6fa7e031",
+  "params": {
+    "date": "2026-10"
+  },
+  "builtAt": "2026-10-21T06:08:10Z",
+  "pageCount": 33,
+  "transforms": [
+    "keep-words"
+  ]
+}

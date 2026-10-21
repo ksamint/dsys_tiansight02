@@ -1,0 +1,14 @@
+{
+  "schema": "tiansight.artifact/2",
+  "deckId": "sales",
+  "profile": "web",
+  "contentVersion": "eec86ed28b3b0e0f21eee9179f32d7240615d30b7c1e5f9c8d19b8031686e200",
+  "systemVersion": "2026.10.21-e0a760",
+  "htmlSha256": "0bec6ef58934bc16c6898810dad6be3b44267eb34991e6aab39869a110bfef4d",
+  "params": {
+    "date": "2026-09-19"
+  },
+  "builtAt": "2026-10-21T06:08:10Z",
+  "pageCount": 13,
+  "transforms": []
+}

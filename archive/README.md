@@ -1,5 +1,9 @@
 # Preserved exports
 
-`approved-2026-10-21/source.zip` is the complete owner-approved input, byte-for-byte. `inventory.json` records its SHA-256, all 32 entries, 11 embedded resources and 155 nested image/font resources. `resources/` and `template.html` preserve decoded bytes; they are not the maintained application. Research claims, legacy CDN URLs and conflicting styles inside these originals are retained only as provenance.
+`approved-2026-10-21/source.zip` preserves the owner-approved bytes. Its inventory records
+ZIP entries and decoded resource hashes; resources and template are decoded in memory by the
+runtime builder rather than stored again. The published guide and brand record preserve approval context.
 
-The maintained runtime is `dist/components/2026.10.21-e0a760/`; the corrected exhibit is `deliverables/exhibit-design/`. See `docs/component-runtime.md` and `docs/content-provenance.md`. Archive files are excluded from the public preview build.
+`proposal-2026-09/`, `proposal-v0.7/` and `claude-design-system-v13/` are historical exports.
+Current content is the canonical `content/` library; generated decks are in `build/`.
+Archive files are excluded from the public preview. See `docs/architecture.md`.

@@ -1,7 +1,7 @@
 # Slides · 侍天 销售提案 (16:9)
 
 Fourteen slides for pitching 侍天 to a restaurant owner. `index.html` is the deck, built on
-the `deck-stage` shell (`templates/sales-deck/deck-stage.js` — kept in the template folder so
+the `deck-stage` shell (`dist/components/2026.10.21-e0a760/deck-stage.js` — kept in the template folder so
 it stays out of `_ds_bundle.js`). Arrow keys / space, thumbnail rail, slide counter and
 print-to-PDF come from the shell. **Do not hand-roll a fit-to-window scaler**; `deck-stage`
 owns slide scaling (four attempts at a custom scaler produced blank or clipped decks).

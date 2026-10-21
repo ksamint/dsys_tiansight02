@@ -9,3 +9,7 @@ If creating visual artifacts (slides, mocks, throwaway prototypes, etc), copy as
 If the user invokes this skill without any other guidance, ask them what they want to build or design, ask some questions, and act as an expert designer who outputs HTML artifacts _or_ production code, depending on the need.
 
 Current component runtime: `dist/components/current.json` → `2026.10.21-e0a760` (105 exports). Use the versioned local runtime and shared content; historical JSX and artifact exports are archived references. The original JSX for the new bundle was not supplied. Preserve `brand/` foundation authority and follow `AGENTS.md` for build and validation commands.
+
+Current deck entry points: read `content/deck-catalog.json` and `content/slides.index.json`,
+compose manifests using canonical slide IDs, and build with `python3 scripts/build_deck.py`.
+See `docs/architecture.md`; never copy shared slide or case content into a new deck.

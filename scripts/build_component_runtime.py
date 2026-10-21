@@ -127,6 +127,10 @@ bundle = patch_bundle(bundle)
 bundle = bundle.replace('function dsAsset(file) {', 'function dsAsset(file) {\n  if (file.startsWith("logos/")) file = "partners/" + file.slice(6);\n  file = (' + json.dumps({key: value.removeprefix('assets/') for key, value in asset_map['runtime'].items()}, ensure_ascii=False, sort_keys=True) + ')[file] || file;')
 bundle = bundle.replace('"../../assets/logo-seal.png"', '__ds_scope.dsAsset("logo-seal.png")')
 bundle = bundle.replace('assets/logo-seal.png', 'assets/logo/logo.png')
+# The runtime already imports the repository foundation; resolve visual bytes from the
+# same canonical repository asset root rather than duplicating them in each version.
+bundle = bundle.replace('+ "assets/" + file;', '+ "../../../assets/" + file;')
+bundle = bundle.replace('+ "assets/logo/logo.png";', '+ "../../../assets/logo/logo.png";')
 bundle = bundle.replace('const LUCIDE = "https://unpkg.com/lucide-static@0.441.0/icons/";', 'const LUCIDE = window.TIANSIGHT_LUCIDE;')
 bundle = bundle.replace('"url(" + LUCIDE + name + ".svg)"', '"url(" + (LUCIDE[name] || "") + ")"')
 # Resolve compiled chart colours from the foundation too (d3 requires concrete colours).
@@ -157,13 +161,8 @@ for package, filename in [('react@18.3.1/umd/react.production.min.js', 'react.mi
 support = support.replace('if (!window.__resources) {', 'if (!window.__resources && location.protocol !== "file:") {')
 put(DIST / 'support.js', support)
 put(DIST / 'deck-stage.js', next(x for x in resources.values() if x.startswith('// @ds-adherence-ignore')))
-# Runtime assets are the sole generated duplicate of canonical assets.
+# All runtime assets resolve to the canonical register, alongside the shared foundation.
 expected_assets = set()
-for path in sorted((ROOT / 'assets').rglob('*')):
-    if path.is_file() and path.suffix.lower() in {'.png', '.jpg', '.jpeg', '.svg', '.webp', '.gif', '.avif'}:
-        target = DIST / 'assets' / path.relative_to(ROOT / 'assets')
-        put(target, path.read_bytes())
-        expected_assets.add(target)
 for path in (DIST / 'assets').rglob('*'):
     if path.is_file() and path.suffix.lower() != '.woff2' and path not in expected_assets:
         assert not CHECK, f'Obsolete generated asset: {path.relative_to(ROOT)}'
@@ -175,7 +174,7 @@ for path in sorted(DIST.rglob('*')):
     if path.is_file() and path.name != 'manifest.json':
         data = FILES.get(path, path.read_bytes())
         asset_records.append({'path':path.relative_to(ROOT).as_posix(),'bytes':len(data),'sha256':sha(data)})
-manifest = {'schema':'tiansight.component-distribution/1','version':VERSION,'namespace':meta['namespace'],'status':'review-candidate','source':inventory['source'],'foundationVersion':(ROOT/'brand/VERSION').read_text().strip(),'entry':'dist/components/'+VERSION+'/loader.js','styles':'dist/components/'+VERSION+'/styles.css','components':meta['components'],'sourceHashes':meta['sourceHashes'],'unexposedExports':meta['unexposedExports'],'files':asset_records,'externalAssets':[x for x in nested if x['path'].startswith('brand/')]+[{'path':name,'bytes':len((ROOT/name).read_bytes()),'sha256':sha((ROOT/name).read_bytes())} for name in ('brand/fonts.css','brand/tokens.css')],'assetSource': 'assets/index.json', 'generatedAssetCopies': [{'path': p.relative_to(ROOT).as_posix(), 'source': 'assets/' + p.relative_to(DIST / 'assets').as_posix()} for p in sorted(expected_assets)],'limitations':['Compiled components supplied; original JSX sources are not included.','Historical JSX and older exported bundles are archives, not the current build input.'],'dependencies':{'react':'18.3.1','react-dom':'18.3.1','d3':'7.9.0','d3-sankey':'0.12.3','lucide-static':'0.441.0','@babel/standalone':'7.29.0'}}
+manifest = {'schema':'tiansight.component-distribution/1','version':VERSION,'namespace':meta['namespace'],'status':'review-candidate','source':inventory['source'],'foundationVersion':(ROOT/'brand/VERSION').read_text().strip(),'entry':'dist/components/'+VERSION+'/loader.js','styles':'dist/components/'+VERSION+'/styles.css','components':meta['components'],'sourceHashes':meta['sourceHashes'],'unexposedExports':meta['unexposedExports'],'files':asset_records,'externalAssets':[{'path': p.relative_to(ROOT).as_posix(), 'bytes':p.stat().st_size, 'sha256':sha(p.read_bytes())} for p in sorted((ROOT/'assets').rglob('*')) if p.is_file() and p.suffix.lower() in {'.png','.jpg','.jpeg','.svg','.webp','.gif','.avif'}]+[x for x in nested if x['path'].startswith('brand/')]+[{'path':name,'bytes':len((ROOT/name).read_bytes()),'sha256':sha((ROOT/name).read_bytes())} for name in ('brand/fonts.css','brand/tokens.css')],'assetSource': 'assets/index.json', 'generatedAssetCopies': [{'path': p.relative_to(ROOT).as_posix(), 'source': 'assets/' + p.relative_to(DIST / 'assets').as_posix()} for p in sorted(expected_assets)],'limitations':['Compiled components supplied; original JSX sources are not included.','Historical JSX and older exported bundles are archives, not the current build input.'],'dependencies':{'react':'18.3.1','react-dom':'18.3.1','d3':'7.9.0','d3-sankey':'0.12.3','lucide-static':'0.441.0','@babel/standalone':'7.29.0'}}
 put(DIST / 'manifest.json', js(manifest))
 put(ROOT / 'dist/components/current.json', js({'schema':'tiansight.component-channel/1','supported':VERSION,'manifest':f'{VERSION}/manifest.json','latestPolicy':'Latest means the latest explicitly approved release that passed build and artifact validation. This PR is a review candidate; merging alone is not approval of generated artifacts.'}))
 print(f'PASS: {len(entries)} ZIP entries, {len(resources)} embedded resources, {len(nested)} nested assets, {len(meta["components"])} exports; {"verified" if CHECK else "built"} {VERSION}')

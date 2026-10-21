@@ -12,8 +12,8 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else './deck/'
 #    发布到 Slides 幻灯片时，把这些图上传为素材，写一个 {键: "/_blob/<id>"} 的 blobs.json，
 #    用 TSK_BLOBS=blobs.json 重新生成即可。
 configure(deckname='[客户] · [报告名]', outdir=OUT, images={
-    'seal': 'assets/logo-seal.png', 'cover': 'assets/intro/deck/cover.jpg',
-    'section': 'assets/intro/deck/section-1.jpg', 'qr': 'assets/intro/people/wechat-qr.png'})
+    'seal': 'assets/logo/supplied-logo-seal.png', 'cover': 'assets/deck/cover.jpg',
+    'section': 'assets/deck/section-1.jpg', 'qr': 'assets/people/intro/wechat-qr.png'})
 
 # 2) 页序：先定结构，再写页。SHORT 是目录与书签里显示的短名
 S1 = ['data', 'fields']

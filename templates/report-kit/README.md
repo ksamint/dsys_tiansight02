@@ -88,13 +88,13 @@ Pages that quote the rules themselves (a do / don't page) go in `configure(rule_
    parse, export, flatten and init functions by signature and fails loudly if one is not found. It is
    idempotent. Without the runtime the Python side (generation, tests, freshness) still works.
 4. **Fonts.** `pdf.js` embeds the 127 WOFF2 subsets listed in
-   `docs/claude-design-system/tokens.json` from `brand/fonts/`. Override with `TOKENS` and `FONTDIR`.
+   `archive/claude-design-system-v13/tokens.json` from `brand/fonts/`. Override with `TOKENS` and `FONTDIR`.
 
 ## Writing a deck
 
 ```python
 from tsk import *
-configure(deckname='[客户] · [报告名]', outdir=OUT, images={'seal': 'assets/logo-seal.png', …})
+configure(deckname='[客户] · [报告名]', outdir=OUT, images={'seal': 'assets/logo/supplied-logo-seal.png', …})
 set_order(order, sections, short)        # page ids, (cn, name, ids) sections, short names
 cover(…); toc(); exec_summary(…); kpi_cards(…); table(…); glossary('gloss', …); closing(…)
 render(); write_index(title, sections_desc); write_viewer(title)

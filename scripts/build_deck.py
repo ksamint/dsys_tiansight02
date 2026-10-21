@@ -18,9 +18,11 @@ def script_json(value):
 def source_date():
     epoch = os.environ.get('SOURCE_DATE_EPOCH')
     if epoch is None:
-        # Source-package commit date is stable across derived-artifact commits.
-        epoch = subprocess.check_output(['git', 'log', '-1', '--format=%ct', '--', 'archive/approved-2026-10-21/source.zip'], cwd=ROOT, text=True).strip()
+        # Recorded once from the source-package commit; independent of clone depth.
+        value = read_json(ROOT / 'content/provenance.json')['sourceDate']
+        return datetime.datetime.fromisoformat(value.replace('Z', '+00:00')).astimezone(datetime.timezone.utc).isoformat().replace('+00:00', 'Z')
     return datetime.datetime.fromtimestamp(int(epoch), datetime.timezone.utc).isoformat().replace('+00:00', 'Z')
+
 
 
 def build(lib, manifest, profile, params):

@@ -225,6 +225,14 @@ if '--render' in sys.argv:
         problems.append('snapshot: ' + run.stdout.strip().replace('\n', ' '))
     else:
         notes.append(run.stdout.strip())
+    text_check = subprocess.run(['node', str(root / 'scripts/test_export_text.mjs')], capture_output=True, text=True)
+    if text_check.returncode:
+        problems.append('rendered PDF text: ' + (text_check.stdout + text_check.stderr).strip().replace('\n', ' '))
+    run = subprocess.run(['node', str(root / 'scripts/test_migration.mjs')], capture_output=True, text=True)
+    if run.returncode:
+        problems.append('migration text: ' + (run.stdout + run.stderr).strip().replace('\n', ' '))
+    else:
+        notes.append(run.stdout.strip())
 
 # 8f. Version file matches the guide
 version = (brand / 'VERSION').read_text().strip()
@@ -271,27 +279,49 @@ for group, name, expected_type in (('color', 'gold-600', 'color'), ('shadow', 's
     if exported_tokens.get(group, {}).get(name, {}).get('$type') != expected_type:
         problems.append(f'tokens.json: {name} must be {group}/{expected_type}')
 
-# Current runtime and maintained content must be reproducible offline.
+# Current runtime, canonical library and generated profiles must be reproducible offline.
 for command in ([sys.executable, 'scripts/build_component_runtime.py', '--check'],
                 [sys.executable, 'scripts/build_content.py', '--check'],
-                [sys.executable, 'scripts/build_exhibit.py', '--check'],
+                [sys.executable, 'scripts/content_lib.py', '--check'],
+                [sys.executable, 'scripts/build_assets.py', '--check'],
+                [sys.executable, 'scripts/build_deck.py', '--all', '--check'],
+                [sys.executable, 'scripts/test_content.py'],
                 ['node', 'scripts/build_deck_catalog.mjs', '--check']):
     run = subprocess.run(command, cwd=root, capture_output=True, text=True)
     if run.returncode:
-        problems.append(' '.join(command) + ': ' + run.stdout + run.stderr)
+        problems.append(' '.join(command) + ': ' + (run.stdout + run.stderr).strip().replace('\n', ' '))
 
-# The reviewed PDF must identify exactly the HTML/content/system being shipped.
-artifact_dir = root / 'deliverables/exhibit-design'
-artifact = json.loads((artifact_dir / 'build.json').read_text())
-verification = json.loads((artifact_dir / 'pdf-verification.json').read_text())
-for key in ('contentVersion', 'designSystemVersion', 'htmlSha256'):
-    if artifact[key] != verification[key]:
-        problems.append('Exhibit PDF verification is stale: ' + key)
-if hashlib.sha256((artifact_dir / artifact['pdf']).read_bytes()).hexdigest() != verification['pdfSha256']:
-    problems.append('Exhibit PDF hash differs from the verified artifact')
+from lint_html import lint
+for page in sorted((root / 'build').glob('*/*/index.html')):
+    errors = lint(page)
+    if errors:
+        problems.append(str(page.relative_to(root)) + ': ' + '; '.join(errors))
+
+# Public content path guard complements the unchanged raw-data guard above.
+for folder in ('content', 'assets'):
+    for path in (root / folder).rglob('*'):
+        if path.is_file() and re.search(r'client|客户数据|POS', path.relative_to(root).as_posix(), re.I):
+            problems.append(f'{path.relative_to(root)}: sensitive content path')
+# No unregistered visual files outside the documented source/distribution exceptions.
+image_extensions = {'.png', '.jpg', '.jpeg', '.svg', '.webp', '.gif', '.avif'}
+for path in root.rglob('*'):
+    rel = path.relative_to(root).as_posix()
+    if rel.startswith('snapshots/render/'):
+        continue
+    if any(part.startswith('.') or part in {'_site', 'node_modules', '__pycache__'} for part in path.relative_to(root).parts):
+        continue
+    if path.is_file() and path.suffix.lower() in image_extensions:
+        allowed = rel.startswith(('assets/', 'brand/', 'archive/', 'people/photos/', 'templates/report-kit/', 'dist/product/')) or bool(re.match(r'dist/components/[^/]+/assets/', rel)) or rel == 'dist/icons.svg'
+        if not allowed:
+            problems.append(f'{rel}: image outside canonical asset folders')
+# Extensions must remain offline and derive typography/colours from foundation tokens.
+for path in (root / 'content/extensions').glob('*.js'):
+    code = path.read_text()
+    if re.search(r'#[0-9a-fA-F]{3,8}\b|rgba?\(|https?://|sans-serif|\b(?:Arial|Helvetica|Inter|Roboto)\b', code):
+        problems.append(f'{path.relative_to(root)}: extension violates token/font/offline policy')
 
 # Archived export completeness remains checked independently.
-export = root / 'TIANSIGHT 侍天 Design System'
+export = root / 'archive/proposal-2026-09'
 manifest = json.loads((export / '_ds_manifest.json').read_text())
 for entry in manifest['components']:
     if not (export / entry['sourcePath']).is_file():

@@ -29,9 +29,9 @@ export { Wordmark };
 function defaultSealSrc() {
   try {
     var s = document.querySelector('script[src*="_ds_bundle.js"]');
-    if (s) return s.getAttribute("src").replace(/_ds_bundle\.js.*$/, "") + "assets/logo-seal.png";
+    if (s) return s.getAttribute("src").replace(/_ds_bundle\.js.*$/, "") + "assets/logo/supplied-logo-seal.png";
   } catch (e) {}
-  return "assets/logo-seal.png";
+  return "assets/logo/supplied-logo-seal.png";
 }
 
 export function Seal({ size = 36, src = defaultSealSrc(), wordmark = false, subtitle, inverse = false, align = "row" }) {

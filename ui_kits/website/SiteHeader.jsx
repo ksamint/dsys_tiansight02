@@ -14,7 +14,7 @@ function SiteHeader({ onNav, active }) {
     backdropFilter: "blur(10px)", WebkitBackdropFilter: "blur(10px)", borderBottom: "1px solid var(--line-hairline)" }}>
     <div style={{ maxWidth: "var(--container-max)", margin: "0 auto", padding: "14px 32px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--space-7)" }}>
       <a href="#top" onClick={e => { e.preventDefault(); onNav("top"); }} style={{ borderBottom: "none" }}>
-        <Seal size={34} wordmark subtitle="智慧餐饮" src="../../assets/logo-seal.png" />
+        <Seal size={34} wordmark subtitle="智慧餐饮" src="../../assets/logo/supplied-logo-seal.png" />
       </a>
       <nav style={{ display: "flex", alignItems: "center", gap: "var(--space-7)" }}>
         <NavLink id="proof" onNav={onNav} active={active === "proof"}>报告样张</NavLink>

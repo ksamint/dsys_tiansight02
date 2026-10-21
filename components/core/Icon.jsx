@@ -1,6 +1,6 @@
 import React from "react";
 
-/* 侍天's own icon set — the 17 hairline glyphs from the brand sprite (assets/icons.svg),
+/* 侍天's own icon set — the 17 hairline glyphs from the brand sprite (assets/logo/icons.svg),
    inlined so the component is self-contained at any directory depth. Stroke 1.5,
    round caps, no fills, always currentColor.
    Names not in the set fall back to Lucide via CDN mask and are a flagged

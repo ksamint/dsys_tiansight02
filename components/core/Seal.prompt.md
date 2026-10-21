@@ -1,7 +1,7 @@
 The brand lockup. Use in the sticky header (row, 32px) and the closing CTA (column, 96px).
 
 ```jsx
-<Seal size={32} wordmark subtitle="智慧餐饮" src="../../assets/logo-seal.png" />
+<Seal size={32} wordmark subtitle="智慧餐饮" src="../../assets/logo/supplied-logo-seal.png" />
 <Seal size={96} align="column" wordmark inverse />
 ```
 

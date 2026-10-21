@@ -13,7 +13,7 @@ function ClosingCTA() {
           每次拍板有依据，每项行动有人落实，每轮改善可以核对。从一道菜，到一家家店的好生意。
         </p>
         <div style={{ marginTop: "var(--space-9)", display: "flex", alignItems: "center", gap: "var(--space-6)" }}>
-          <Seal size={92} inverse src="../../assets/logo-seal.png" />
+          <Seal size={92} inverse src="../../assets/logo/supplied-logo-seal.png" />
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             <Wordmark fontSize="var(--text-md)" inverse />
             <span style={{ fontSize: "var(--text-xs)", color: "rgba(239,230,210,.6)" }}>微信扫码联系侍天</span>

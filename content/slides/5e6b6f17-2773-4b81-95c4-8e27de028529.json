@@ -16,7 +16,9 @@
     "subtitle": "用展陈开启餐厅增长第二曲线",
     "clientLabel": "文件",
     "client": "侍天 · 展陈厨房与用餐体验专项",
-    "date": "2026-10",
+    "date": {
+      "$param": "date"
+    },
     "image": {
       "$asset": "assets/exhibit/ex-01-cover.jpg"
     }

@@ -65,13 +65,26 @@ const salesIDs=[];for(const s of sales){let label=s.label==='创始团队'?'团�
 const cases=[];for(let i=0;i<approved.cases.length;i++){const c=approved.cases[i],id='case-'+String(i+1).padStart(2,'0'),summary=assets(clean(c.props));const gallery=exhibit.filter(x=>x.label.includes('游园')&&id==='case-06').map(x=>({label:x.label,component:x.component,props:assets(clean(x.props))}));const record={id,name:c.props.name,summary,gallery,assets:[],approval:{by:'owner',date:'2026-10-21',record:'docs/component-runtime.md'}};function collect(x){if(x&&typeof x==='object'){if(x.$asset)record.assets.push(x.$asset);Object.values(x).forEach(collect);}}collect(summary);collect(gallery);record.assets=[...new Set(record.assets)];cases.push(record);write('content/cases/'+id+'.json',record);const r=library.get(introMap.get(c.label).id);r.props={$case:id};}
 for(const [i,s]of exhibit.filter(x=>x.label.includes('游园')).entries()){const r=library.get(exhibitMap.get(s.label).id);r.owner='intro';r.props={$case:'case-06',$view:'gallery:'+i};}
 const indexRecord=library.get(introMap.get('伙伴案例 · 索引').id);indexRecord.props.items=cases.map(c=>({$case:c.id,$view:'index'}));
+// Ancillary case mentions also derive from the case record, preserving exact source copy.
+for(const [slideId,caseId] of [
+ ['03051a0b-475c-4847-a438-ab022540c12f','case-06'],
+ ['48d9c918-a62e-430f-952b-bc8007f333c6','case-05']
+]){
+ const slide=library.get(slideId), record=cases.find(c=>c.id===caseId), key=slideId+'-1';
+ const holder=caseId==='case-06'?slide.props.columns[2].stats[1]:slide.props;
+ record.snippets={...(record.snippets||{}),[key]:holder.note};
+ holder.note={$case:caseId,$view:'snippet:'+key};
+ write('content/cases/'+caseId+'.json',record);
+}
 const partners={title:intro.find(x=>x.label==='伙伴背书').props.title,logos:assets(approved.partnerLogos),columns:5};write('content/partners.json',partners);
+const dateDefaults={intro:intro.find(s=>s.label==='封面').props.date,exhibit:exhibit.find(s=>s.label==='封面').props.date,sales:sales.find(s=>s.label==='封面').props.date};
+for(const r of library.values())if(r.status==='maintained'&&r.label==='封面'&&['intro','exhibit','sales'].includes(r.owner))r.props.date={$param:'date'};
 for(const filename of fs.readdirSync('content/slides').filter(x=>x.endsWith('.json')))if(!library.has(filename.slice(0,-5)))fs.unlinkSync('content/slides/'+filename);
 for(const r of library.values()){if(r.status!=='maintained')continue;if(r.component==='ProfileSlide'){r.owner='intro';r.props={$team:r.props.name,eyebrow:r.props.eyebrow};}if(r.component==='ContactSlide'){r.owner='intro';r.props={$contact:true};}if(r.label==='伙伴背书'){r.owner='intro';r.props={$partners:true};}if(r.label==='团队'){r.owner='intro';r.props={...r.props,experts:team.people.map(x=>({$team:x.name,$view:'seat'}))};}write('content/slides/'+r.id+'.json',r);}
 for(const r of library.values())if(r.status==='planned')write('content/slides/'+r.id+'.json',r);
 const profiles={internal:{publish:['web','banner','internal','hold']},client:{publish:['web','banner']},web:{publish:['web']}};
-for(const[id,d]of Object.entries(registry))write('content/decks/'+id+'.json',{id,title:d.title,canonicalSource:id==='intro'?'guidelines/company-intro-v3.md':null,slides:d.slides.map(s=>s.id),params:{date:{default:'2026-10',editor:'text'}},profiles,transforms:id==='exhibit'?['keep-words']:[],...(id==='exhibit'?{footer:'侍天 TIANSIGHT · 餐饮展陈与厨房设计'}:{}),status:id==='kitchen'?'planned':'maintained'});
-write('content/decks/sales.json',{id:'sales',title:'侍天 TIANSIGHT 销售提案',slides:salesIDs,params:{date:{default:'2026-10',editor:'text'}},profiles,transforms:[],status:'maintained'});
+for(const[id,d]of Object.entries(registry))write('content/decks/'+id+'.json',{id,title:d.title,canonicalSource:id==='intro'?'guidelines/company-intro-v3.md':null,slides:d.slides.map(s=>s.id),params:{date:{default:dateDefaults[id]||'2026-10',editor:'text'}},profiles,transforms:id==='exhibit'?['keep-words']:[],...(id==='exhibit'?{footer:'侍天 TIANSIGHT · 餐饮展陈与厨房设计'}:{}),status:id==='kitchen'?'planned':'maintained'});
+write('content/decks/sales.json',{id:'sales',title:'侍天 TIANSIGHT 销售提案',slides:salesIDs,params:{date:{default:dateDefaults.sales,editor:'text'}},profiles,transforms:[],status:'maintained'});
 write('.build/migration/props-differences.json',diffs);write('.build/migration/source-slides.json',{intro,exhibit,sales});write('.build/migration/report.json',{uniqueSlides:library.size,maintained:[...library.values()].filter(x=>x.status==='maintained').length,planned:[...library.values()].filter(x=>x.status==='planned').length,introSourceSlides:intro.length,exhibitSourceSlides:exhibit.length,introClient:registry.intro.slides.filter(x=>profiles.client.publish.includes(x.publish)).length,approvedDifferences:diffs.length,assetMappingApplied:Object.keys(assetPaths).length});
 for(const f of [salesFile,exhibitFile,registryFile,valsFile]){const to='.build/migration/sources/'+path.basename(f);fs.mkdirSync(path.dirname(to),{recursive:true});if(f!==to)fs.writeFileSync(to,read(f));}
 console.log(read('.build/migration/report.json'));

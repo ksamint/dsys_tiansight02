@@ -15,7 +15,9 @@
     "title": "从一道菜，\n到一家家店的好生意。",
     "clientLabel": "文件",
     "client": "企业介绍",
-    "date": "2026-09-27",
+    "date": {
+      "$param": "date"
+    },
     "image": {
       "$asset": "assets/deck/cover.jpg"
     }

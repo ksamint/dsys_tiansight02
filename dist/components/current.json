@@ -1,0 +1,7 @@
+{
+  "schema": "tiansight.component-channel/1",
+  "supported": "2026.10.21-e0a760",
+  "manifest": "2026.10.21-e0a760/manifest.json",
+  "latestApprovedBuilt": null,
+  "latestPolicy": "Latest means the latest explicitly approved release that passed build and artifact validation. This PR is a review candidate; merging alone is not approval of generated artifacts."
+}

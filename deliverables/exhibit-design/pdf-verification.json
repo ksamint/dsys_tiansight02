@@ -1,0 +1,350 @@
+{
+  "schema": "tiansight.pdf-verification/1",
+  "contentVersion": "7cf4a5a308cd9fe721ee5c31461cb2603692f8bb8c73857ede34630ccc6d7876",
+  "designSystemVersion": "2026.10.21-e0a760",
+  "htmlSha256": "3c0a9ca35751002f1fb32ff7973c3eeb37104eaae6ace28104f8e42923321b0e",
+  "pdfSha256": "8cdf2c3d55a6ace0716cf23358dcfcde970cbdfaad22f10ff99348bc2e863774",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 97,
+      "imageCount": 2,
+      "meanPixelDifference": 1.13,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 2,
+      "characters": 100,
+      "imageCount": 1,
+      "meanPixelDifference": 0.922,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 3,
+      "characters": 207,
+      "imageCount": 1,
+      "meanPixelDifference": 1.553,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 4,
+      "characters": 95,
+      "imageCount": 1,
+      "meanPixelDifference": 0.675,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 5,
+      "characters": 41,
+      "imageCount": 2,
+      "meanPixelDifference": 0.988,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 6,
+      "characters": 130,
+      "imageCount": 1,
+      "meanPixelDifference": 0.964,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 7,
+      "characters": 146,
+      "imageCount": 1,
+      "meanPixelDifference": 0.962,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 8,
+      "characters": 123,
+      "imageCount": 1,
+      "meanPixelDifference": 1.062,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 9,
+      "characters": 222,
+      "imageCount": 1,
+      "meanPixelDifference": 1.797,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 10,
+      "characters": 108,
+      "imageCount": 2,
+      "meanPixelDifference": 0.858,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 11,
+      "characters": 106,
+      "imageCount": 2,
+      "meanPixelDifference": 0.842,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 12,
+      "characters": 41,
+      "imageCount": 2,
+      "meanPixelDifference": 0.999,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 13,
+      "characters": 131,
+      "imageCount": 1,
+      "meanPixelDifference": 0.848,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 14,
+      "characters": 77,
+      "imageCount": 2,
+      "meanPixelDifference": 0.76,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 15,
+      "characters": 72,
+      "imageCount": 2,
+      "meanPixelDifference": 0.782,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 16,
+      "characters": 108,
+      "imageCount": 1,
+      "meanPixelDifference": 0.823,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 17,
+      "characters": 41,
+      "imageCount": 2,
+      "meanPixelDifference": 1.008,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 18,
+      "characters": 109,
+      "imageCount": 1,
+      "meanPixelDifference": 1.035,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 19,
+      "characters": 119,
+      "imageCount": 1,
+      "meanPixelDifference": 0.989,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 20,
+      "characters": 74,
+      "imageCount": 2,
+      "meanPixelDifference": 0.799,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 21,
+      "characters": 66,
+      "imageCount": 2,
+      "meanPixelDifference": 0.757,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 22,
+      "characters": 47,
+      "imageCount": 2,
+      "meanPixelDifference": 0.949,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 23,
+      "characters": 133,
+      "imageCount": 1,
+      "meanPixelDifference": 1.135,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 24,
+      "characters": 150,
+      "imageCount": 1,
+      "meanPixelDifference": 1.341,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 25,
+      "characters": 101,
+      "imageCount": 2,
+      "meanPixelDifference": 0.881,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 26,
+      "characters": 82,
+      "imageCount": 2,
+      "meanPixelDifference": 0.867,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 27,
+      "characters": 75,
+      "imageCount": 2,
+      "meanPixelDifference": 0.807,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 28,
+      "characters": 104,
+      "imageCount": 4,
+      "meanPixelDifference": 1.702,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 29,
+      "characters": 100,
+      "imageCount": 4,
+      "meanPixelDifference": 1.356,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 30,
+      "characters": 43,
+      "imageCount": 2,
+      "meanPixelDifference": 0.915,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 31,
+      "characters": 140,
+      "imageCount": 1,
+      "meanPixelDifference": 1.129,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 32,
+      "characters": 142,
+      "imageCount": 1,
+      "meanPixelDifference": 0.957,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 33,
+      "characters": 134,
+      "imageCount": 1,
+      "meanPixelDifference": 1.058,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 34,
+      "characters": 139,
+      "imageCount": 1,
+      "meanPixelDifference": 1.13,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 35,
+      "characters": 40,
+      "imageCount": 2,
+      "meanPixelDifference": 0.671,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 36,
+      "characters": 226,
+      "imageCount": 2,
+      "meanPixelDifference": 1.625,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 37,
+      "characters": 242,
+      "imageCount": 2,
+      "meanPixelDifference": 1.695,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 38,
+      "characters": 255,
+      "imageCount": 2,
+      "meanPixelDifference": 1.658,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 39,
+      "characters": 296,
+      "imageCount": 2,
+      "meanPixelDifference": 1.791,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 40,
+      "characters": 188,
+      "imageCount": 2,
+      "meanPixelDifference": 1.591,
+      "textMatches": true,
+      "clippedWords": 0
+    },
+    {
+      "page": 41,
+      "characters": 106,
+      "imageCount": 2,
+      "meanPixelDifference": 0.737,
+      "textMatches": true,
+      "clippedWords": 0
+    }
+  ],
+  "fontsEmbedded": true,
+  "fontFamilies": [
+    "IBMPlexMono",
+    "Menlo",
+    "NotoSerif",
+    "NotoSerifSC",
+    "PingFangSC"
+  ],
+  "pageSizePoints": [
+    960,
+    540
+  ],
+  "comparison": "Same-page alphanumeric/CJK character multisets, word bounds, and rendered 1280x720 images; screenshots are browser output from the same HTML."
+}

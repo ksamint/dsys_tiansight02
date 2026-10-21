@@ -13,7 +13,7 @@ Each layer derives from the one above it. Never edit a lower layer to change a v
 | 1 | Live brand record (IPTrust) | https://apuch.art/api/brands/tiansight.json | the brand owner |
 | 2 | Checked-in snapshot | `brand/source.json` (version, theme, logo, `ip`), `brand/guide.md` | §3 below |
 | 3 | Foundation | `brand/tokens.css` → `brand/tokens.json` (`scripts/export_tokens.py`), `brand/base.css`, `brand/components.css` | PR, gate |
-| 4 | Distribution | `dist/` (`scripts/build_dist.py`) | generated |
+| 4 | Distribution | `dist/` (`scripts/build_dist.py`); component runtime `dist/components/current.json` (`scripts/build_component_runtime.py`) | generated |
 | 5 | Consumers | `deck/`, `website/`, `report/`, `people/`, `html-system/`, `templates/`, `deliverables/` | PR, gate; colours only from tokens |
 | 6 | Claude exports | Design System artifact, Slides artifacts (see `github.md`) | re-exported from the repo, never edited first |
 
@@ -84,3 +84,9 @@ Where sensitive material lives instead: private repositories or artifacts per cl
 ## 7. Release notes
 
 Every merged PR adds a `CHANGELOG.md` entry under the current `brand/VERSION`. New commands go in `README.md` (§6 Index) and, for skills, in `skills/README.md`.
+
+## 8. Approved component packages
+
+The current supported component runtime is `2026.10.21-e0a760`; see `component-runtime.md`. Recover approved exports into a versioned distribution, keep the exact ZIP and decoded-byte inventory, and leave older source snapshots archived. Palette, typography and identity still derive from the foundation. Every consumer must use local dependencies and a version pin. Run the recovery/content/exhibit/catalog freshness checks and runtime integration test as well as the existing gate.
+
+The live registry's v0.6 guide snapshot and this repository's owner-approved v0.7 amendments are recorded separately. Do not silently revert accepted accessibility rulings during a registry metadata refresh.

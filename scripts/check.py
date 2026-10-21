@@ -271,6 +271,26 @@ for group, name, expected_type in (('color', 'gold-600', 'color'), ('shadow', 's
     if exported_tokens.get(group, {}).get(name, {}).get('$type') != expected_type:
         problems.append(f'tokens.json: {name} must be {group}/{expected_type}')
 
+# Current runtime and maintained content must be reproducible offline.
+for command in ([sys.executable, 'scripts/build_component_runtime.py', '--check'],
+                [sys.executable, 'scripts/build_content.py', '--check'],
+                [sys.executable, 'scripts/build_exhibit.py', '--check'],
+                ['node', 'scripts/build_deck_catalog.mjs', '--check']):
+    run = subprocess.run(command, cwd=root, capture_output=True, text=True)
+    if run.returncode:
+        problems.append(' '.join(command) + ': ' + run.stdout + run.stderr)
+
+# The reviewed PDF must identify exactly the HTML/content/system being shipped.
+artifact_dir = root / 'deliverables/exhibit-design'
+artifact = json.loads((artifact_dir / 'build.json').read_text())
+verification = json.loads((artifact_dir / 'pdf-verification.json').read_text())
+for key in ('contentVersion', 'designSystemVersion', 'htmlSha256'):
+    if artifact[key] != verification[key]:
+        problems.append('Exhibit PDF verification is stale: ' + key)
+if hashlib.sha256((artifact_dir / artifact['pdf']).read_bytes()).hexdigest() != verification['pdfSha256']:
+    problems.append('Exhibit PDF hash differs from the verified artifact')
+
+# Archived export completeness remains checked independently.
 export = root / 'TIANSIGHT 侍天 Design System'
 manifest = json.loads((export / '_ds_manifest.json').read_text())
 for entry in manifest['components']:
@@ -290,4 +310,4 @@ if missing_photos:
 for note in notes:
     print('note:', note)
 print(f"PASS: official palette, {len(guide_rows)} guide tokens, logo hash, foundation policy, tokens.json, dist bundle, a11y lint, contrast, profiles, chart theme, public reference, no raw data, "
-      f"offline specimen, deck, website, report and people, report kit, {len(manifest['components'])} component exports and {len(manifest['cards'])} cards")
+      f"offline specimen, deck, website, report and people, report kit, 105 current component exports; {len(manifest['components'])} archived exports and {len(manifest['cards'])} cards")

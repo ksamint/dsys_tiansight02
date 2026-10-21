@@ -1,3 +1,5 @@
+> **Archived snapshot.** Current runtime: `dist/components/2026.10.21-e0a760/` (105 exports). This directory preserves prior artifact sources and documentation. See `../component-runtime.md`; no artifact synchronization was performed in this update.
+
 # Claude Design System — import and keep in sync
 
 This folder is a snapshot of the Claude Design System artifact 「侍天 TIANSIGHT」 (version 13, 2026-10-02): the brand book (`README.md`), `tokens.json`, the component cards (`components/*/README.md`, `preview.html`, `bundle.js`, `bundle.css`, `index.d.ts`), `company-intro-v3.md` and the asset-group READMEs. Fonts (`brand/fonts/`) and libraries are not duplicated here.

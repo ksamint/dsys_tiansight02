@@ -8,7 +8,11 @@ Content source: `guidelines/company-intro-v3.md` (draft v3, 2026-09-27, confirme
 | `slides/*.html` | One `<section>` per page, 1920×1080, inline styles on the design-system tokens. Images point at `assets/intro/` and `assets/logo-seal.png`. |
 | `deck.json` | Page order, sections, fonts. Same shape as a Claude Slides artifact. |
 | `company-intro-v3.pdf` | Rendered PDF for sharing with partners (1920×1080 pages). |
-| `gen/` | Generator. `cd gen && python3 gen.py` rewrites `../slides/` and `../deck.json` from `vals.json` (content) and `assets.json` (image paths). |
+| `gen/` | Generator. `cd gen && python3 gen.py` rewrites `../slides/` and `../deck.json` from `vals.json` (deck content), root `content/team.json` and `content/contact.json` (shared canonical content), and `assets.json` (image paths). |
+
+Team and contact changes start in root `content/*.json`; run `python3 scripts/build_content.py`
+from the repository root to refresh the browser versions consumed by derivative decks. The
+corporate generator reads the JSON directly. See `docs/content-provenance.md` for source mappings.
 
 Rules carried by the generator (see README §7 of `docs/claude-design-system/README.md`):
 

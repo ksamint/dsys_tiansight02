@@ -76,3 +76,11 @@ One version of the system, built from the brand guide v0.7 rulings (2026-09-09) 
 
 - `brand/tokens.css`, `base.css`, `components.css`, specimen, check script.
 - Sales deck, website and A4 diagnostic report on the foundation.
+
+## Component runtime 2026.10.21-e0a760 (review candidate)
+
+- Recover the approved ZIP: 32 entries, 11 embedded resources, 155 image/font assets; retain full provenance and compiled-source limitation.
+- Support 105 exports (50 additions, no removed names), local React/d3/Babel, foundation token mapping, pale slide styling and existing chart correctness fixes.
+- Migrate active cards/loaders; preserve historical JSX/export directories as archives.
+- Add the editable 41-page exhibit, shared canonical team/contact, verified research wording and original slide IDs/images.
+- Add distribution/deck/artifact manifests and one versioned content → HTML → PDF export contract. No web/MCP service, merge or deployment.

@@ -1,5 +1,11 @@
 import json, os, html, datetime
+from pathlib import Path
 V = json.load(open('vals.json'))
+CONTENT = Path(__file__).resolve().parents[3] / 'content'
+TEAM = json.loads((CONTENT / 'team.json').read_text())
+CONTACT = json.loads((CONTENT / 'contact.json').read_text())
+assert len(TEAM['people']) == 4, 'Update corporate page count when adding team members'
+ROSTER = [{**p['seat'], 'name': p['name'], 'photo': p['photo']} for p in TEAM['people']]
 B = json.load(open('assets.json'))  # key -> relative asset path; inside a Claude Slides artifact use blobs.json
 E = html.escape
 OUT = '../slides'
@@ -314,21 +320,21 @@ section_open('sec-3', '三', '团队', '联合创始人 · 专家团队', 'deck/
 def seat_title(r):
     return ''.join(f'<p style="font-size:28px;line-height:1.5;color:{CHAR}">{E(t)}</p>' for t in r['title'].split(' · '))
 k = nx()
-seats = ''.join(f'<div style="flex:1;display:flex;flex-direction:column;gap:16px"><div style="height:340px;background:{P100};border-bottom:2px solid {GOLD};border-radius:2px;display:flex;align-items:flex-end;justify-content:center"><img src="{B[r["photo"]]}" alt="{E(r["name"])}" style="width:280px;height:340px;object-fit:contain"></div><h3 style="font-size:40px;font-weight:600;letter-spacing:4px">{E(r["name"])}</h3>{seat_title(r)}</div>' for r in V['roster'])
-note(*[r['name'] + '：' + r['field'] for r in V['roster']])
+seats = ''.join(f'<div style="flex:1;display:flex;flex-direction:column;gap:16px"><div style="height:340px;background:{P100};border-bottom:2px solid {GOLD};border-radius:2px;display:flex;align-items:flex-end;justify-content:center"><img src="{B[r["photo"]]}" alt="{E(r["name"])}" style="width:280px;height:340px;object-fit:contain"></div><h3 style="font-size:40px;font-weight:600;letter-spacing:4px">{E(r["name"])}</h3>{seat_title(r)}</div>' for r in ROSTER)
+note(*[r['name'] + '：' + r['field'] for r in ROSTER])
 sec('team', f'''{head('团队 · 总览', '两位联合创始人，两位专家。', '新增专家时，在团队中加一位即可。')}
 <div style="flex:1;display:flex;gap:40px">{seats}</div>''', n=k)
 
 # 40-43 profiles
-for pp in V['people']:
-    p = pp['props']; k = nx()
+for p in TEAM['people']:
+    k = nx()
     roles = ''.join(f'<p style="font-size:24px;line-height:1.5;color:{BODY}">{E(r)}</p>' for r in p['roles'])
     hl = ''.join(f'<div style="display:flex;gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid {LINE}"><p style="width:52px;font-family:{MONO};font-size:28px;color:{GOLD}">{j+1:02d}</p><p style="flex:1;font-size:30px;line-height:1.5;color:{CHAR}">{E(h)}</p></div>' for j, h in enumerate(p['highlights']))
     note(' / '.join(p['roles']), p['bio'])
     pid = p['photo'].split('/')[1].split('.')[0]
     sec(f'profile-{pid}', f'''<div style="flex:1;display:flex;gap:72px">
 <div style="width:460px;display:flex;flex-direction:column;gap:20px"><div style="height:700px;background:{P100};border-bottom:2px solid {GOLD};border-radius:2px;display:flex;align-items:flex-end;justify-content:center"><img src="{B[p['photo']]}" alt="{E(p['name'])}" style="width:460px;height:700px;object-fit:contain"></div></div>
-<div style="flex:1;display:flex;flex-direction:column;gap:28px">{eyebrow(p['eyebrow'])}
+<div style="flex:1;display:flex;flex-direction:column;gap:28px">{eyebrow('团队 · ' + p['group'])}
 <div style="display:flex;align-items:baseline;gap:28px"><h2 style="font-size:80px;font-weight:600;letter-spacing:8px">{E(p['name'])}</h2><p style="font-family:{EN};font-size:28px;letter-spacing:8px;color:{GOLD}">{E(p['latin'])}</p></div>
 <div style="display:flex;flex-direction:column">{hl}</div></div></div>''', pad='112px 128px 160px', n=k)
 
@@ -354,10 +360,10 @@ statement('stmt-decision', '决策', '拍板之前，<br>问侍天。', '餐饮�
 k = nx()
 sec('contact', f'''<div style="flex:1;display:flex;gap:96px;align-items:center">
 <div style="flex:1;display:flex;flex-direction:column;gap:32px"><div style="display:flex;align-items:center;gap:24px"><img src="{B['logo-seal.png']}" alt="侍天印章" style="width:96px;height:96px;object-fit:contain"><p style="font-family:{EN};font-size:32px;letter-spacing:11px">{wm()}</p></div>
-<h2 style="font-size:88px;font-weight:600;line-height:1.25;letter-spacing:6px">寸阴寸金，<br>侍天可行。</h2>
-<p style="font-family:{EN};font-style:italic;font-size:30px;color:{GOLD}">Time is money. With TIANSIGHT, lose neither.</p>
-<p style="font-family:{EN};font-size:34px;letter-spacing:2px;color:{GOLD}">tiansight.apuch.cn</p></div>
-<div style="display:flex;flex-direction:column;align-items:center;gap:20px;background:{PAPER};border:1px solid {CARD};border-radius:2px;padding:40px">{img('wechat-qr.png', 380, 380, 'contain')}<p style="font-size:26px;letter-spacing:4px;color:{BODY}">微信扫码联系侍天</p></div>
+<h2 style="font-size:88px;font-weight:600;line-height:1.25;letter-spacing:6px">{E(CONTACT['title']).replace('，', '，<br>')}</h2>
+<p style="font-family:{EN};font-style:italic;font-size:30px;color:{GOLD}">{E(CONTACT['english'])}</p>
+<p style="font-family:{EN};font-size:34px;letter-spacing:2px;color:{GOLD}">{E(CONTACT['url'])}</p></div>
+<div style="display:flex;flex-direction:column;align-items:center;gap:20px;background:{PAPER};border:1px solid {CARD};border-radius:2px;padding:40px">{img(CONTACT['qr'], 380, 380, 'contain')}<p style="font-size:26px;letter-spacing:4px;color:{BODY}">{E(CONTACT['qrLabel'])}</p></div>
 </div>''', n=k)
 
 assert n == TOTAL, n

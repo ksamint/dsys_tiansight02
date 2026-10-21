@@ -1,5 +1,5 @@
 {
-  "retrieved": "2026-10-14",
+  "retrieved": "2026-10-21",
   "directory": "https://apuch.art/",
   "api": "https://apuch.art/api/brands/tiansight.json",
   "ip": {
@@ -16,11 +16,11 @@
   },
   "guidePath": "Tiansight/tiansight_design.md",
   "version": {
-    "hash": "5c7c158e439448b77c640563fe8f129eee650152",
-    "shortHash": "5c7c158",
-    "date": "2026-09-27T11:46:29+08:00",
-    "message": "Add IPTrust design system and tokens",
-    "url": "https://github.com/ksamint/tableai_designaha/commit/5c7c158e439448b77c640563fe8f129eee650152"
+    "hash": "53340b5287a42790703a21b20a84beb62e54cdf5",
+    "shortHash": "53340b5",
+    "date": "2026-10-18T08:59:45+08:00",
+    "message": "Point Tiansight design-system links to dsys_tiansight02 (#7)",
+    "url": "https://github.com/ksamint/tableai_designaha/commit/53340b5287a42790703a21b20a84beb62e54cdf5"
   },
   "theme": {
     "mode": "light",
@@ -66,5 +66,5 @@
     "status": "ready",
     "version": 1
   },
-  "syncNote": "2026-10-14: version, guidePath (primaryGuide), ip and theme confirmed against the live record https://apuch.art/api/brands/tiansight.json (fetched through the web tool; the shell is blocked by the network policy). theme and logo are unchanged."
+  "syncNote": "2026-10-21: public directory and brand API fetched. Theme and official logo unchanged. Live guide remains v0.6; brand/guide.md retains the owner-confirmed v0.7 accessibility and foundation amendments documented in docs/foundation-review.md. Verbatim live guide is archived in archive/approved-2026-10-21/published-guide.md."
 }

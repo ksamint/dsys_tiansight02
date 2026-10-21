@@ -19,9 +19,14 @@ def build():
         ['scripts/build_report.py'],
         ['html-system/build_deck.py', 'html-system/sample'],
         ['scripts/build_dist.py'],
-        ['scripts/check.py'],
+        ['scripts/build_component_runtime.py'],
+        ['scripts/build_content.py'],
+        ['scripts/build_exhibit.py'],
     ):
         subprocess.run([sys.executable, *args], cwd=ROOT, check=True)
+
+    subprocess.run(['node', 'scripts/build_deck_catalog.mjs'], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, 'scripts/check.py'], cwd=ROOT, check=True)
 
     if OUT.is_symlink():
         raise ValueError('_site must not be a symlink')
@@ -38,7 +43,11 @@ def build():
             # Claude Design System snapshot: preview cards render only inside that artifact.
             if rel.parts[:2] == ('docs', 'claude-design-system'):
                 continue
-            if path.suffix.lower() in {'.html', '.css', '.js', '.json', '.csv', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.woff2', '.md'} or (path.suffix == '.txt' and path.name.startswith('OFL-') and 'fonts' in rel.parts):
+            if path.suffix.lower() in {'.html', '.css', '.js', '.json', '.csv', '.svg', '.png', '.jpg', '.jpeg', '.webp', '.woff2', '.md'} or path.name.startswith('LICENSE-') or (path.suffix == '.txt' and path.name.startswith('OFL-') and 'fonts' in rel.parts):
+                paths.append(path)
+    for folder in ('content', 'deliverables/exhibit-design'):
+        for path in (ROOT / folder).rglob('*'):
+            if path.is_file() and (path.suffix in {'.js', '.json', '.png', '.jpg', '.pdf'} or path == ROOT / 'deliverables/exhibit-design/index.html'):
                 paths.append(path)
     for path in paths:
         if path.is_symlink() or ROOT not in path.resolve().parents:

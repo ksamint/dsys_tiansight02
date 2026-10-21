@@ -1,2 +1,6 @@
 brand/fonts/OFL-*.txt -whitespace
 dist/product/fonts/OFL-*.txt -whitespace
+
+# Preserve verbatim archive and copied identity asset bytes.
+archive/** -whitespace
+dist/components/*/assets/icons.svg -whitespace

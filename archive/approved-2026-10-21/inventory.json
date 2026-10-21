@@ -1,0 +1,1495 @@
+{
+  "schema": "tiansight.recovery/1",
+  "source": {
+    "path": "archive/approved-2026-10-21/source.zip",
+    "originalFilename": "Template review and fixes (1).zip",
+    "sha256": "290a8602bd71603455ccdf9e2ea1c4ebd8f3f03fe829ccc41abd41aca0f327b6"
+  },
+  "zipEntries": [
+    {
+      "path": "export/dsys_tiansight02/CHANGELOG-entry.md",
+      "bytes": 724,
+      "sha256": "5f11af77a07a4e4343a3f1d39cb1100deea5f1d620c9dd4c0974f83824143e02"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/README.md",
+      "bytes": 2238,
+      "sha256": "9f59c375f7b03cd32a527202883bcd848168265ac35f59dfa3517fffa69cee1c"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/index.html",
+      "bytes": 18335107,
+      "sha256": "c0665eec78dcc7db78d03f127e943840ff96e840886553b5217574a1566a3e2a"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/TiansightDeck-Exhibit.dc.html",
+      "bytes": 27484,
+      "sha256": "1f2dfc776893a37f820bdf8cf01b50f7ca366a926196bf1d703dba5dd31b89f4"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/content/contact.js",
+      "bytes": 257,
+      "sha256": "03353a3d1dfdc4be2c894e9e2bfdb0ebd22816cd34aa4a410eec177884ac54de"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/content/slide-catalog.js",
+      "bytes": 28284,
+      "sha256": "69806780a6ea0b14a148a24648f8a6f1eaa015cf7479be59f776a71ae55b13e2"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/content/team.js",
+      "bytes": 4983,
+      "sha256": "6aeed7382d0ee4ec60fb351b4d0f149dc6218bd21192ab62930aefbe48e64ab2"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/deck-stage.js",
+      "bytes": 136293,
+      "sha256": "f3d3d0a662c08eefb5a8757a6da3139572485f4be32ac33785c5047061926a8a"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/ds-base.js",
+      "bytes": 695,
+      "sha256": "1ec2bcde7201e8b8bdd9500c0f5f8a648eea6520cd106327f0eedabe5971d2e2"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/brand-wall.jpg",
+      "bytes": 224219,
+      "sha256": "d6752b1b5932bee95a22f81c844036259d194b9c90adb51142a29150bbd30f57"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/case/yyjm-1.jpg",
+      "bytes": 461706,
+      "sha256": "c07a716e5251eabb22241351bc63397b25969b3d8cd3869385d6eba197e51e49"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/case/yyjm-2.jpg",
+      "bytes": 334342,
+      "sha256": "cbc5f92c22659b43adb2c25008a63c577253ac18ab960da75d205cecf85a01f6"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/case/yyjm-3.jpg",
+      "bytes": 260882,
+      "sha256": "79117893bcb00499d145bcd8222cb0d8c834484e3833d874919833e047b8d1d2"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/case/yyjm-4.jpg",
+      "bytes": 280530,
+      "sha256": "8f2cb56eebcf5b34a1845cae7525448f35e647a63362075238e47453477fb23e"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/case/yyjm-5.jpg",
+      "bytes": 336164,
+      "sha256": "77fd95b2da854f6e5c8fbf3d791a91e6e65483bed3f8fbf7c38b43cc3e6747f5"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/case/yyjm-6.jpg",
+      "bytes": 304607,
+      "sha256": "077b4cdab4588ac6475a5852f97f75ce13d7586d08a62e857581fad16c35a56a"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/gen/ex-01-cover.jpg",
+      "bytes": 207801,
+      "sha256": "cc45e1e5bf9adb55887e9e427c4f76692d2d80d57ed88f8f6b2fa36e7ae3d1e6"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/gen/ex-03-sec-dining.jpg",
+      "bytes": 276883,
+      "sha256": "c582d14f9a333c10b441aca4061842ce2c3c9ccdd2a9e305bc74f0bad4a826a4"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/gen/ex-04-sec-display.jpg",
+      "bytes": 266900,
+      "sha256": "99d08b0c04385d070c584b85e967bf55d245a6188f568a6c0ae55d5ff7ca8a60"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/gen/ex-05-sec-boh.jpg",
+      "bytes": 305637,
+      "sha256": "db9b7fb4fe2541421bf9699da0dcfecb8fef87242eed595c3969a7ad6dce0fc1"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/gen/ex-06-sec-equipment.jpg",
+      "bytes": 249653,
+      "sha256": "deed55506064c39d55b517cab6a187027c4116df6d6bd50d451a813478c62ad4"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/gen/ex-07-sec-delivery.jpg",
+      "bytes": 244965,
+      "sha256": "3355e85b0e321db19abda169a8d790c6d37fd690da92a53d3f79f10838fbcfd8"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/gen/ex-08-sec-team.jpg",
+      "bytes": 228619,
+      "sha256": "f47c726bcec8dd03b7b0f321c189f2fa2ad9476594796bd49903a9c71eaf28d8"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/hotels.jpg",
+      "bytes": 203230,
+      "sha256": "1a80b94061c281433bf7411a4cbd7523f4f8f8bf53bbce17caf9dcc01cb34385"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/m-boh1.jpg",
+      "bytes": 171231,
+      "sha256": "886d0d4ecda48489067fcd2712948d0bf4539dbdbfd1b09c3a8322966b0bed59"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/m-boh2.jpg",
+      "bytes": 195334,
+      "sha256": "01dfc4531289a2b877dfb1ab600cd656885220fb14aaecaca1a772e62bd8181b"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/m-detail.jpg",
+      "bytes": 197577,
+      "sha256": "6148d3946728f5e2e84998460cc40e064f57b0d780fe7fe9fe196e21388106e6"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/m-island.jpg",
+      "bytes": 215043,
+      "sha256": "baff70c132f0b22a32d63eb13aa04f0a1513fd4f63fb86da3f386162e32305aa"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/m-mingdang.jpg",
+      "bytes": 185639,
+      "sha256": "3002273e1d34b9588deebfc7f6fcbaaf36eeeec97e26c0470dd8f35747ce1bc9"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/m-pass.jpg",
+      "bytes": 167242,
+      "sha256": "b83703e54905da562ef5dce195edda02fcca62a51fbca55e83d8124a5247a179"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/exhibit/src/p9-1.jpg",
+      "bytes": 69703,
+      "sha256": "e4134fcaef61fb459d3d37695b813e4281cb052c7f10717270163e1f5723f885"
+    },
+    {
+      "path": "export/dsys_tiansight02/deliverables/exhibit-design/src/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    }
+  ],
+  "embeddedResources": [
+    {
+      "id": "1f4751c8-8e15-4470-b341-08f5273e4987",
+      "mime": "application/javascript",
+      "path": "archive/approved-2026-10-21/resources/1f4751c8-8e15-4470-b341-08f5273e4987.js",
+      "bytes": 436783,
+      "sha256": "11eb75c367ce5e683c3f34f6df1e4f207597e4a2b063bdb405beecb25aa1b821"
+    },
+    {
+      "id": "713f77dd-15c9-4397-8686-652b1844acb5",
+      "mime": "text/css",
+      "path": "archive/approved-2026-10-21/resources/713f77dd-15c9-4397-8686-652b1844acb5.css",
+      "bytes": 9135233,
+      "sha256": "ba2559e00d8e1308ba63ac69758afa140adc81246f1090279a28cfa10788625d"
+    },
+    {
+      "id": "98a96e64-f60b-4792-a97f-945388efc590",
+      "mime": "application/javascript",
+      "path": "archive/approved-2026-10-21/resources/98a96e64-f60b-4792-a97f-945388efc590.js",
+      "bytes": 1630,
+      "sha256": "b0e46ba4cd04d6cda50d98586e5536c6b0fa4c56195a2fba9bb67894df6c3486"
+    },
+    {
+      "id": "fee4ee04-e8ed-4c64-ab59-74f453976612",
+      "mime": "application/javascript",
+      "path": "archive/approved-2026-10-21/resources/fee4ee04-e8ed-4c64-ab59-74f453976612.js",
+      "bytes": 257,
+      "sha256": "03353a3d1dfdc4be2c894e9e2bfdb0ebd22816cd34aa4a410eec177884ac54de"
+    },
+    {
+      "id": "ab1aca59-3344-4783-84e8-82eca66e346e",
+      "mime": "application/javascript",
+      "path": "archive/approved-2026-10-21/resources/ab1aca59-3344-4783-84e8-82eca66e346e.js",
+      "bytes": 4983,
+      "sha256": "6aeed7382d0ee4ec60fb351b4d0f149dc6218bd21192ab62930aefbe48e64ab2"
+    },
+    {
+      "id": "be4b1983-03d5-4510-ba72-c4f50e26d23a",
+      "mime": "application/javascript",
+      "path": "archive/approved-2026-10-21/resources/be4b1983-03d5-4510-ba72-c4f50e26d23a.js",
+      "bytes": 28284,
+      "sha256": "69806780a6ea0b14a148a24648f8a6f1eaa015cf7479be59f776a71ae55b13e2"
+    },
+    {
+      "id": "896e52ab-35f2-46fb-9caa-7d0af96b322d",
+      "mime": "text/javascript",
+      "path": "archive/approved-2026-10-21/resources/896e52ab-35f2-46fb-9caa-7d0af96b322d.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "id": "2036ea6e-a232-4d20-9a79-caf2e0655195",
+      "mime": "application/javascript",
+      "path": "archive/approved-2026-10-21/resources/2036ea6e-a232-4d20-9a79-caf2e0655195.js",
+      "bytes": 8944914,
+      "sha256": "76e85a5703c2718e81be235c75f112f82312925c96ba068c2bd88ec58da10062"
+    },
+    {
+      "id": "f2184463-fc36-40f7-98c8-8cba137ac857",
+      "mime": "application/javascript",
+      "path": "archive/approved-2026-10-21/resources/f2184463-fc36-40f7-98c8-8cba137ac857.js",
+      "bytes": 136293,
+      "sha256": "f3d3d0a662c08eefb5a8757a6da3139572485f4be32ac33785c5047061926a8a"
+    },
+    {
+      "id": "9af7b91b-ab7d-4300-a3a8-7b28d0cecb28",
+      "mime": "text/javascript",
+      "path": "archive/approved-2026-10-21/resources/9af7b91b-ab7d-4300-a3a8-7b28d0cecb28.js",
+      "bytes": 10751,
+      "sha256": "d949f1c3687aedadcedac85261865f29b17cd273997e7f6b2bfc53b2f9d4c4dd"
+    },
+    {
+      "id": "234d8b4d-17cc-44a3-9f85-4fac7cab7208",
+      "mime": "text/javascript",
+      "path": "archive/approved-2026-10-21/resources/234d8b4d-17cc-44a3-9f85-4fac7cab7208.js",
+      "bytes": 131835,
+      "sha256": "35f4f974f4b2bcd44da73963347f8952e341f83909e4498227d4e26b98f66f0d"
+    }
+  ],
+  "nestedResources": [
+    {
+      "resource": "image-map",
+      "name": "exhibit/gen/ex-01-cover.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/gen/ex-01-cover.jpg",
+      "bytes": 207801,
+      "sha256": "cc45e1e5bf9adb55887e9e427c4f76692d2d80d57ed88f8f6b2fa36e7ae3d1e6"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/gen/ex-03-sec-dining.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/gen/ex-03-sec-dining.jpg",
+      "bytes": 276883,
+      "sha256": "c582d14f9a333c10b441aca4061842ce2c3c9ccdd2a9e305bc74f0bad4a826a4"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/gen/ex-04-sec-display.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/gen/ex-04-sec-display.jpg",
+      "bytes": 266900,
+      "sha256": "99d08b0c04385d070c584b85e967bf55d245a6188f568a6c0ae55d5ff7ca8a60"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/gen/ex-05-sec-boh.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/gen/ex-05-sec-boh.jpg",
+      "bytes": 305637,
+      "sha256": "db9b7fb4fe2541421bf9699da0dcfecb8fef87242eed595c3969a7ad6dce0fc1"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/gen/ex-06-sec-equipment.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/gen/ex-06-sec-equipment.jpg",
+      "bytes": 249653,
+      "sha256": "deed55506064c39d55b517cab6a187027c4116df6d6bd50d451a813478c62ad4"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/gen/ex-07-sec-delivery.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/gen/ex-07-sec-delivery.jpg",
+      "bytes": 244965,
+      "sha256": "3355e85b0e321db19abda169a8d790c6d37fd690da92a53d3f79f10838fbcfd8"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/gen/ex-08-sec-team.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/gen/ex-08-sec-team.jpg",
+      "bytes": 228619,
+      "sha256": "f47c726bcec8dd03b7b0f321c189f2fa2ad9476594796bd49903a9c71eaf28d8"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/m-mingdang.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/m-mingdang.jpg",
+      "bytes": 185639,
+      "sha256": "3002273e1d34b9588deebfc7f6fcbaaf36eeeec97e26c0470dd8f35747ce1bc9"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/m-island.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/m-island.jpg",
+      "bytes": 215043,
+      "sha256": "baff70c132f0b22a32d63eb13aa04f0a1513fd4f63fb86da3f386162e32305aa"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/m-pass.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/m-pass.jpg",
+      "bytes": 167242,
+      "sha256": "b83703e54905da562ef5dce195edda02fcca62a51fbca55e83d8124a5247a179"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/m-detail.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/m-detail.jpg",
+      "bytes": 197577,
+      "sha256": "6148d3946728f5e2e84998460cc40e064f57b0d780fe7fe9fe196e21388106e6"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/m-boh1.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/m-boh1.jpg",
+      "bytes": 171231,
+      "sha256": "886d0d4ecda48489067fcd2712948d0bf4539dbdbfd1b09c3a8322966b0bed59"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/m-boh2.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/m-boh2.jpg",
+      "bytes": 195334,
+      "sha256": "01dfc4531289a2b877dfb1ab600cd656885220fb14aaecaca1a772e62bd8181b"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/hotels.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/hotels.jpg",
+      "bytes": 203230,
+      "sha256": "1a80b94061c281433bf7411a4cbd7523f4f8f8bf53bbce17caf9dcc01cb34385"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/brand-wall.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/brand-wall.jpg",
+      "bytes": 224219,
+      "sha256": "d6752b1b5932bee95a22f81c844036259d194b9c90adb51142a29150bbd30f57"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/src/p9-1.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/src/p9-1.jpg",
+      "bytes": 69703,
+      "sha256": "e4134fcaef61fb459d3d37695b813e4281cb052c7f10717270163e1f5723f885"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/case/yyjm-1.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/case/yyjm-1.jpg",
+      "bytes": 461706,
+      "sha256": "c07a716e5251eabb22241351bc63397b25969b3d8cd3869385d6eba197e51e49"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/case/yyjm-2.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/case/yyjm-2.jpg",
+      "bytes": 334342,
+      "sha256": "cbc5f92c22659b43adb2c25008a63c577253ac18ab960da75d205cecf85a01f6"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/case/yyjm-3.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/case/yyjm-3.jpg",
+      "bytes": 260882,
+      "sha256": "79117893bcb00499d145bcd8222cb0d8c834484e3833d874919833e047b8d1d2"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/case/yyjm-4.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/case/yyjm-4.jpg",
+      "bytes": 280530,
+      "sha256": "8f2cb56eebcf5b34a1845cae7525448f35e647a63362075238e47453477fb23e"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/case/yyjm-5.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/case/yyjm-5.jpg",
+      "bytes": 336164,
+      "sha256": "77fd95b2da854f6e5c8fbf3d791a91e6e65483bed3f8fbf7c38b43cc3e6747f5"
+    },
+    {
+      "resource": "image-map",
+      "name": "exhibit/case/yyjm-6.jpg",
+      "mime": "image/jpeg",
+      "path": "dist/components/2026.10.21-e0a760/assets/exhibit/case/yyjm-6.jpg",
+      "bytes": 304607,
+      "sha256": "077b4cdab4588ac6475a5852f97f75ce13d7586d08a62e857581fad16c35a56a"
+    },
+    {
+      "resource": "image-map",
+      "name": "people/bianjiang.png",
+      "mime": "image/png",
+      "path": "dist/components/2026.10.21-e0a760/assets/people/bianjiang.png",
+      "bytes": 300646,
+      "sha256": "02382a1f0b0050cc356da91032cfcccacdbb32a630b799264e07e20d4e9228f8"
+    },
+    {
+      "resource": "image-map",
+      "name": "people/guofeng.png",
+      "mime": "image/png",
+      "path": "dist/components/2026.10.21-e0a760/assets/people/guofeng.png",
+      "bytes": 225649,
+      "sha256": "347e351fa7aeb18e1a9a5ec384c36a0077060736f63e712e62a7c5a620a58c9a"
+    },
+    {
+      "resource": "image-map",
+      "name": "people/liquanchao.png",
+      "mime": "image/png",
+      "path": "dist/components/2026.10.21-e0a760/assets/people/liquanchao.png",
+      "bytes": 271580,
+      "sha256": "6298c36ff75d5d9ca06b0aeb5140de79ff76d59a15d8055bacbb9428c4b414f4"
+    },
+    {
+      "resource": "image-map",
+      "name": "people/yuxiangdong.png",
+      "mime": "image/png",
+      "path": "dist/components/2026.10.21-e0a760/assets/people/yuxiangdong.png",
+      "bytes": 342859,
+      "sha256": "f7e38de909077096d4530c333478c10845039c1ed456a464b314c9e1dc0becb0"
+    },
+    {
+      "resource": "image-map",
+      "name": "wechat-qr.png",
+      "mime": "image/png",
+      "path": "dist/components/2026.10.21-e0a760/assets/wechat-qr.png",
+      "bytes": 152880,
+      "sha256": "3b8426bc477a0214f4c7c161bf3486232297555c36b6db5d074539b692856d47"
+    },
+    {
+      "resource": "image-map",
+      "name": "logo-seal.png",
+      "mime": "image/png",
+      "path": "dist/components/2026.10.21-e0a760/assets/supplied-logo-seal.png",
+      "bytes": 25497,
+      "sha256": "0c2f7379b8624516b20c407747c991b8eb36b870832bb7bab2a42ffbae4a05c2"
+    },
+    {
+      "resource": "styles",
+      "index": 0,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-f8c22ec1804bd6966b70f43a.woff2",
+      "bytes": 6912,
+      "sha256": "f8c22ec1804bd6966b70f43ac7c327025645b4c09597117fca2a5a6c750106fe"
+    },
+    {
+      "resource": "styles",
+      "index": 1,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-7635422bd10ddbbcb0e0caa1.woff2",
+      "bytes": 8356,
+      "sha256": "7635422bd10ddbbcb0e0caa1154b928298f5c8319b8c00b30978d4395f4783ce"
+    },
+    {
+      "resource": "styles",
+      "index": 2,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-62632b6375305e70ddcafdd8.woff2",
+      "bytes": 5868,
+      "sha256": "62632b6375305e70ddcafdd895218e6ae41a184fcd280a69c739460604ca00a9"
+    },
+    {
+      "resource": "styles",
+      "index": 3,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-6bc0f226a5b7884a8170e3f6.woff2",
+      "bytes": 13348,
+      "sha256": "6bc0f226a5b7884a8170e3f62c63d7675609d4631bdc5931b5cdab81821f00eb"
+    },
+    {
+      "resource": "styles",
+      "index": 4,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-08949f728dc52d528e69b166.woff2",
+      "bytes": 14708,
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7"
+    },
+    {
+      "resource": "styles",
+      "index": 5,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-3febe5c7f22e4b07b4552738.woff2",
+      "bytes": 6972,
+      "sha256": "3febe5c7f22e4b07b4552738673c3dbe8bced2dc5f48b866edf7ccd9552d109a"
+    },
+    {
+      "resource": "styles",
+      "index": 6,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-1d89462e86cb8e87e7e9d6f6.woff2",
+      "bytes": 8460,
+      "sha256": "1d89462e86cb8e87e7e9d6f6635605bd7c3081baca6caaecee84916bf7b60edc"
+    },
+    {
+      "resource": "styles",
+      "index": 7,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-781633d95de88040fb77141d.woff2",
+      "bytes": 6040,
+      "sha256": "781633d95de88040fb77141d1e65d928c87c0144691fbc74da5a64d137a7e910"
+    },
+    {
+      "resource": "styles",
+      "index": 8,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-6bb06407c97584b0867a959e.woff2",
+      "bytes": 13432,
+      "sha256": "6bb06407c97584b0867a959e05e8874693bfeb8c317de190811c51598f2d99ea"
+    },
+    {
+      "resource": "styles",
+      "index": 9,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-01d285447409c8a588692162.woff2",
+      "bytes": 14888,
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22"
+    },
+    {
+      "resource": "styles",
+      "index": 10,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-bb4982fa7f34b1814c5c1add.woff2",
+      "bytes": 30452,
+      "sha256": "bb4982fa7f34b1814c5c1addcc64831a5c2657b4905fcb77a5d1914c36ebb602"
+    },
+    {
+      "resource": "styles",
+      "index": 11,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-cc967469ff60e3386f8fc664.woff2",
+      "bytes": 9928,
+      "sha256": "cc967469ff60e3386f8fc664b1df34ada138cfaac8ad4ae549b4849df687f27e"
+    },
+    {
+      "resource": "styles",
+      "index": 12,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-585d109a9951bf6a99b13386.woff2",
+      "bytes": 5596,
+      "sha256": "585d109a9951bf6a99b13386fe90dc4e19a0ad38c210bad0cd22140e238842d2"
+    },
+    {
+      "resource": "styles",
+      "index": 13,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-8d51258200de4d85d209eac6.woff2",
+      "bytes": 10112,
+      "sha256": "8d51258200de4d85d209eac6f0cd6798ec251b7be4672e8a2e6e7f6f07dc8460"
+    },
+    {
+      "resource": "styles",
+      "index": 14,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-beb4eb845df30631a69e29a0.woff2",
+      "bytes": 29128,
+      "sha256": "beb4eb845df30631a69e29a0c46763583fe335322852e9506396dd69cd13126e"
+    },
+    {
+      "resource": "styles",
+      "index": 15,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-4b59ce2a13d696b34950c628.woff2",
+      "bytes": 5736,
+      "sha256": "4b59ce2a13d696b34950c628aea26585b870169c78719f3d6fb6ad5dce00e4df"
+    },
+    {
+      "resource": "styles",
+      "index": 16,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-4851e60df7e67b489609516b.woff2",
+      "bytes": 66588,
+      "sha256": "4851e60df7e67b489609516bdc9f53d3ed8b6090c3e16e149350a88f172a574e"
+    },
+    {
+      "resource": "styles",
+      "index": 17,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-a7386f772de25b62a3a449fa.woff2",
+      "bytes": 15664,
+      "sha256": "a7386f772de25b62a3a449fa5d9f3e09916b65cf6a6dfc52f5a103c276fee157"
+    },
+    {
+      "resource": "styles",
+      "index": 18,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-7c7afb20d33e30ec38245187.woff2",
+      "bytes": 89100,
+      "sha256": "7c7afb20d33e30ec38245187464419281115615db288f294414f49802396b612"
+    },
+    {
+      "resource": "styles",
+      "index": 19,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-54e3bd0c4a002b0f76bf9c75.woff2",
+      "bytes": 24572,
+      "sha256": "54e3bd0c4a002b0f76bf9c758507fe9bb170f9e364ea4ecc85fc8b22819bca7e"
+    },
+    {
+      "resource": "styles",
+      "index": 20,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-9b3f4c4ff3adefd2476a2ac2.woff2",
+      "bytes": 12704,
+      "sha256": "9b3f4c4ff3adefd2476a2ac234ac3c72bea116c21a6f98dbe5d524c38b239c46"
+    },
+    {
+      "resource": "styles",
+      "index": 21,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-1252037b6f1d6e86c49f59cd.woff2",
+      "bytes": 27844,
+      "sha256": "1252037b6f1d6e86c49f59cd4b2cc953413fcad1fc3659a55aacfb4ae5f42531"
+    },
+    {
+      "resource": "styles",
+      "index": 22,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-d4a6aba2cb4636b371991a19.woff2",
+      "bytes": 65124,
+      "sha256": "d4a6aba2cb4636b371991a197aed964f2308b7e3d5f5748bfe8d1b9af191f3a7"
+    },
+    {
+      "resource": "styles",
+      "index": 23,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-fb6a5ed734c2fbe39794a1e1.woff2",
+      "bytes": 14704,
+      "sha256": "fb6a5ed734c2fbe39794a1e11ea075c70676ed82b8e8cd57c175ebbb4af805c1"
+    },
+    {
+      "resource": "styles",
+      "index": 24,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-2654f8d1261a420fc8162812.woff2",
+      "bytes": 186552,
+      "sha256": "2654f8d1261a420fc81628122bee9d494b493227e3d7d9baa4238360b92b11d3"
+    },
+    {
+      "resource": "styles",
+      "index": 25,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-46281456234014ceb2a79bff.woff2",
+      "bytes": 36756,
+      "sha256": "46281456234014ceb2a79bff447245de0f76b8d803be0738972ed374c3206c5b"
+    },
+    {
+      "resource": "styles",
+      "index": 26,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-92b93561d8af277543529189.woff2",
+      "bytes": 4644,
+      "sha256": "92b93561d8af27754352918934377dc09ecbf91d2d65a0951fb1d60895367330"
+    },
+    {
+      "resource": "styles",
+      "index": 27,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-405f96fc00f5de66a1104587.woff2",
+      "bytes": 26836,
+      "sha256": "405f96fc00f5de66a11045874d0964dcb4230122f820771ee13dd329895074d8"
+    },
+    {
+      "resource": "styles",
+      "index": 28,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-aba77127699e71bc7d13fd80.woff2",
+      "bytes": 15672,
+      "sha256": "aba77127699e71bc7d13fd80c4eaaebcb5065862590f6dfbb05ba14bb0c0d2d8"
+    },
+    {
+      "resource": "styles",
+      "index": 29,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-c56fed07baa5368c483c00d7.woff2",
+      "bytes": 26040,
+      "sha256": "c56fed07baa5368c483c00d7963847caf0f9aff18bc78561fe8b14db7171b572"
+    },
+    {
+      "resource": "styles",
+      "index": 30,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-4e943fdd06982ac9a81d1928.woff2",
+      "bytes": 85288,
+      "sha256": "4e943fdd06982ac9a81d192846dab76a2797321c990774600dc65ff8fe1d4e68"
+    },
+    {
+      "resource": "styles",
+      "index": 31,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-e50204d9c99dee1b284a8f5c.woff2",
+      "bytes": 73872,
+      "sha256": "e50204d9c99dee1b284a8f5c9508295fe6209c54e089ba7146813360d9c17713"
+    },
+    {
+      "resource": "styles",
+      "index": 32,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-03de62bc4c94fcf00ad2a87e.woff2",
+      "bytes": 82664,
+      "sha256": "03de62bc4c94fcf00ad2a87ed76731c95b0852b0b41c9028844e1a05c06082c0"
+    },
+    {
+      "resource": "styles",
+      "index": 33,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-9fa23b6cf30829d06600bda4.woff2",
+      "bytes": 77944,
+      "sha256": "9fa23b6cf30829d06600bda44f2b5d31880d088ef9bd5626aaf4557941457c10"
+    },
+    {
+      "resource": "styles",
+      "index": 34,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-158a0be2cbba07d17824a5ba.woff2",
+      "bytes": 71356,
+      "sha256": "158a0be2cbba07d17824a5ba52319a3f914c59857f4bd70a332596bbe1b1128f"
+    },
+    {
+      "resource": "styles",
+      "index": 35,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-dc5909d502de13c096a9d4b6.woff2",
+      "bytes": 64664,
+      "sha256": "dc5909d502de13c096a9d4b6f674433f2da1ef62f71cce1e3f43be499f1a4a52"
+    },
+    {
+      "resource": "styles",
+      "index": 36,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-93daeb451edfe65dad18a468.woff2",
+      "bytes": 67936,
+      "sha256": "93daeb451edfe65dad18a468cc90933d6a5fc79e9411ce28027bacbfd7bfa0b8"
+    },
+    {
+      "resource": "styles",
+      "index": 37,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-d4ba29a42d58e9c71f523225.woff2",
+      "bytes": 72784,
+      "sha256": "d4ba29a42d58e9c71f523225d6c2257e231e4d3fe92b720bbcbf99dd08add33c"
+    },
+    {
+      "resource": "styles",
+      "index": 38,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-106e18d90034e75630790ad2.woff2",
+      "bytes": 76908,
+      "sha256": "106e18d90034e75630790ad203bc69850747bf96c0a398b96bd88bcaa81e9480"
+    },
+    {
+      "resource": "styles",
+      "index": 39,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-b9df2ce5d328a524975728c0.woff2",
+      "bytes": 64260,
+      "sha256": "b9df2ce5d328a524975728c051385e14c1c823798e084c1227101ed4acc6174a"
+    },
+    {
+      "resource": "styles",
+      "index": 40,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-87fdad598fb7ab598784e43f.woff2",
+      "bytes": 68000,
+      "sha256": "87fdad598fb7ab598784e43f87f1da2c5476f88e4a5a9aba56abc73973449a42"
+    },
+    {
+      "resource": "styles",
+      "index": 41,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-a1e18c863c00ab7e6f17fddc.woff2",
+      "bytes": 66088,
+      "sha256": "a1e18c863c00ab7e6f17fddcc42b193fb94ccb5e3e01ee394a189c149aef447e"
+    },
+    {
+      "resource": "styles",
+      "index": 42,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-ba9fbd7fdbf7cce92c1a9594.woff2",
+      "bytes": 64724,
+      "sha256": "ba9fbd7fdbf7cce92c1a95946a7ad7b10ff9d3098403174b2b2b11ba6b282eb0"
+    },
+    {
+      "resource": "styles",
+      "index": 43,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-0eb731d70aa1f4966dfffab3.woff2",
+      "bytes": 63760,
+      "sha256": "0eb731d70aa1f4966dfffab308b3fb11975886fd5375f45ce6b16f1eaebafb83"
+    },
+    {
+      "resource": "styles",
+      "index": 44,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-b36a86aa9d07ae91a379ef06.woff2",
+      "bytes": 57848,
+      "sha256": "b36a86aa9d07ae91a379ef0661f723c323677fb9106457318b1194d5c5f7cbc9"
+    },
+    {
+      "resource": "styles",
+      "index": 45,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-5b42c53aa93cc2a7fd855c85.woff2",
+      "bytes": 67828,
+      "sha256": "5b42c53aa93cc2a7fd855c85a5ca733d4da8d06984df8b4c9b2b76ce1090bc80"
+    },
+    {
+      "resource": "styles",
+      "index": 46,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-60bae2b9a8bf65e1b4c1a06d.woff2",
+      "bytes": 75304,
+      "sha256": "60bae2b9a8bf65e1b4c1a06d529079cea1824bbab0a37840469f24b698880aab"
+    },
+    {
+      "resource": "styles",
+      "index": 47,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-ef454fca50875c2536bfbcf4.woff2",
+      "bytes": 72288,
+      "sha256": "ef454fca50875c2536bfbcf4e0b540f456c012a61d08ff778ea4e3e640bd938b"
+    },
+    {
+      "resource": "styles",
+      "index": 48,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-5392252c91bd0707d647df33.woff2",
+      "bytes": 66144,
+      "sha256": "5392252c91bd0707d647df33a9a279501a029388c7882a0ad420a40b760e5a62"
+    },
+    {
+      "resource": "styles",
+      "index": 49,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-0f39f0bbe9a7a450b994c3c3.woff2",
+      "bytes": 51516,
+      "sha256": "0f39f0bbe9a7a450b994c3c3bd9aa0627ae2dea8d36b67fc5a3554830f28005e"
+    },
+    {
+      "resource": "styles",
+      "index": 50,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-2db79fd3aa1d48c07e306645.woff2",
+      "bytes": 62740,
+      "sha256": "2db79fd3aa1d48c07e30664553e9d1ddb9fc4c23fdf02d48c63e094ebf275a5d"
+    },
+    {
+      "resource": "styles",
+      "index": 51,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-7e94834579a87ac5bbeae3c8.woff2",
+      "bytes": 58348,
+      "sha256": "7e94834579a87ac5bbeae3c8d0cfc33206d7e0fc85e7c59568f75358fb000c44"
+    },
+    {
+      "resource": "styles",
+      "index": 52,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-3f116c05fbb0abc3fba86bb8.woff2",
+      "bytes": 72500,
+      "sha256": "3f116c05fbb0abc3fba86bb85b4426eca3a41650d2763ed4c5b31fe8b28f752e"
+    },
+    {
+      "resource": "styles",
+      "index": 53,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-6b583a41d620c6b504ce9d45.woff2",
+      "bytes": 91672,
+      "sha256": "6b583a41d620c6b504ce9d451fdbb8e08d073b2573e46d444820959647d7f3e0"
+    },
+    {
+      "resource": "styles",
+      "index": 54,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-1581af3bbb4e78f52db3b107.woff2",
+      "bytes": 77584,
+      "sha256": "1581af3bbb4e78f52db3b1078a85595e0ffa30ee334b7dbb49baf42ba9fbb28a"
+    },
+    {
+      "resource": "styles",
+      "index": 55,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-a491a10a853d1fb3480d4471.woff2",
+      "bytes": 74000,
+      "sha256": "a491a10a853d1fb3480d4471a275fd8824726b0e1a795fe8a98eb946001ac80e"
+    },
+    {
+      "resource": "styles",
+      "index": 56,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-cad6d79ef7a000ed533559c0.woff2",
+      "bytes": 64612,
+      "sha256": "cad6d79ef7a000ed533559c080e92351797bb90d800243fa3a25c7064a3ce93e"
+    },
+    {
+      "resource": "styles",
+      "index": 57,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-ca078411ddf19a164747d6e2.woff2",
+      "bytes": 70316,
+      "sha256": "ca078411ddf19a164747d6e2220b0b2022f08e1682a1dc660a8902da13f2b0e0"
+    },
+    {
+      "resource": "styles",
+      "index": 58,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-80938d29c0efdbd634308ac5.woff2",
+      "bytes": 64520,
+      "sha256": "80938d29c0efdbd634308ac52ecbbda6707a0b3e3b7d1c84e197c28a6c8c837b"
+    },
+    {
+      "resource": "styles",
+      "index": 59,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-6e0e93e30ac6e513ffdb1e5d.woff2",
+      "bytes": 57320,
+      "sha256": "6e0e93e30ac6e513ffdb1e5ddc50337e81c5f33d54bc3bb0e044113f228f5727"
+    },
+    {
+      "resource": "styles",
+      "index": 60,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-6f05dd92f2f040024ed6f401.woff2",
+      "bytes": 67828,
+      "sha256": "6f05dd92f2f040024ed6f401c03a78ec8f8058313ecab04b6ff195a0041a4a5a"
+    },
+    {
+      "resource": "styles",
+      "index": 61,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-039698b9bc16db3439b86528.woff2",
+      "bytes": 53856,
+      "sha256": "039698b9bc16db3439b86528c88c369086ed237f7baa13873ca33a0922edce18"
+    },
+    {
+      "resource": "styles",
+      "index": 62,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-2263f0841a3499dd34793a4b.woff2",
+      "bytes": 69316,
+      "sha256": "2263f0841a3499dd34793a4b21c831760bcae5582b047cbcab0b55cf9b105ab5"
+    },
+    {
+      "resource": "styles",
+      "index": 63,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-c940bed82b2192c9a436af93.woff2",
+      "bytes": 61532,
+      "sha256": "c940bed82b2192c9a436af93a8ae990c9e66d1384376f56878c3906c6de35353"
+    },
+    {
+      "resource": "styles",
+      "index": 64,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-373d1b4d724f4ee5fa02eb5e.woff2",
+      "bytes": 69656,
+      "sha256": "373d1b4d724f4ee5fa02eb5ee5474033a914a990d966f2abbb36c96682e5e993"
+    },
+    {
+      "resource": "styles",
+      "index": 65,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-a8e46481396f2a9e4ac4875b.woff2",
+      "bytes": 74032,
+      "sha256": "a8e46481396f2a9e4ac4875b64645f26e4e9ff185a8503c2402c2bc9bf46219c"
+    },
+    {
+      "resource": "styles",
+      "index": 66,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-4fb8ac1d7a95c72aa66de767.woff2",
+      "bytes": 82552,
+      "sha256": "4fb8ac1d7a95c72aa66de7673a352e3e8b9046ffa90c444d0f961221f7052e40"
+    },
+    {
+      "resource": "styles",
+      "index": 67,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-f69a03144d47d4987530030e.woff2",
+      "bytes": 69524,
+      "sha256": "f69a03144d47d4987530030eceff2c2c4e37388ce5e45976a7a15f4dcd849d30"
+    },
+    {
+      "resource": "styles",
+      "index": 68,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-952351694a0ada3a721a73de.woff2",
+      "bytes": 61376,
+      "sha256": "952351694a0ada3a721a73decd3afeac99fac4637e0dbd2af987c7e147205ff1"
+    },
+    {
+      "resource": "styles",
+      "index": 69,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-90a9d9858975f1c073521af5.woff2",
+      "bytes": 61312,
+      "sha256": "90a9d9858975f1c073521af5df9a7286356ff78397d274cfe7b64cb97f719920"
+    },
+    {
+      "resource": "styles",
+      "index": 70,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-854a14f63241e795bc8a17e6.woff2",
+      "bytes": 79496,
+      "sha256": "854a14f63241e795bc8a17e64d472f09c834a02f9b59258637063aabca530070"
+    },
+    {
+      "resource": "styles",
+      "index": 71,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-9d345b17ad128918a7d4eea6.woff2",
+      "bytes": 63936,
+      "sha256": "9d345b17ad128918a7d4eea67714a376f8840ffdc82b77da8dbc416071491f65"
+    },
+    {
+      "resource": "styles",
+      "index": 72,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-ab7aef1b30a10f6643f3271c.woff2",
+      "bytes": 51012,
+      "sha256": "ab7aef1b30a10f6643f3271cb55e64c49e6d8c4b91a2e68287196cde66ad7614"
+    },
+    {
+      "resource": "styles",
+      "index": 73,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-24f7302e65f8adaec36d642a.woff2",
+      "bytes": 58572,
+      "sha256": "24f7302e65f8adaec36d642aa8caf68cdf4c50c91e54f75e9e535382366766b4"
+    },
+    {
+      "resource": "styles",
+      "index": 74,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-5c818243ce70b138c5e7edd2.woff2",
+      "bytes": 69204,
+      "sha256": "5c818243ce70b138c5e7edd2798f92d311d8d9158eb60bad6c4f5cebe4d46fc6"
+    },
+    {
+      "resource": "styles",
+      "index": 75,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-a4557ab88bbc6bb5272d3154.woff2",
+      "bytes": 71680,
+      "sha256": "a4557ab88bbc6bb5272d315402d2448f92a7e53bdf3e89f1d839e95e5b67999a"
+    },
+    {
+      "resource": "styles",
+      "index": 76,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-bca8897bbf2ee33d854e2d2c.woff2",
+      "bytes": 54196,
+      "sha256": "bca8897bbf2ee33d854e2d2cb19a31c66d549c2eb585af439e905378486df29e"
+    },
+    {
+      "resource": "styles",
+      "index": 77,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-52740303931d8b85ab952907.woff2",
+      "bytes": 73588,
+      "sha256": "52740303931d8b85ab9529076bf835aeaf877c56e47aead612281bc128318282"
+    },
+    {
+      "resource": "styles",
+      "index": 78,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-b677122aea77998b4b6c991c.woff2",
+      "bytes": 53064,
+      "sha256": "b677122aea77998b4b6c991cc0268585a48690a9347bd17057ac589728176c5d"
+    },
+    {
+      "resource": "styles",
+      "index": 79,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-6b91a10abb4a03d31c63d528.woff2",
+      "bytes": 62884,
+      "sha256": "6b91a10abb4a03d31c63d528f6ef6b0fcdf4dbe7c030d67e1943f6139c115d73"
+    },
+    {
+      "resource": "styles",
+      "index": 80,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-713d2bb29db38602e97e272b.woff2",
+      "bytes": 65720,
+      "sha256": "713d2bb29db38602e97e272bdafa666c5b426b7b779dbf3beb32313fd95b8551"
+    },
+    {
+      "resource": "styles",
+      "index": 81,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-c5cbbb60e77f863af35524ec.woff2",
+      "bytes": 56040,
+      "sha256": "c5cbbb60e77f863af35524ec5a6674f5ce15735f05746923caa8d07e99b55886"
+    },
+    {
+      "resource": "styles",
+      "index": 82,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-365512ffc9e2717c81cf5d9a.woff2",
+      "bytes": 74576,
+      "sha256": "365512ffc9e2717c81cf5d9af42646426d657d5494b4fd04501a5beb0af6f2e7"
+    },
+    {
+      "resource": "styles",
+      "index": 83,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-f0e12f7e577876bf2d554e92.woff2",
+      "bytes": 57824,
+      "sha256": "f0e12f7e577876bf2d554e924f0a2bbce375b647d885a568b37dd5b042133ad1"
+    },
+    {
+      "resource": "styles",
+      "index": 84,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-f0dbe158fa641cc4297af81a.woff2",
+      "bytes": 65740,
+      "sha256": "f0dbe158fa641cc4297af81a4d44d2a9a2b775a32a96d4f665d62820ee2e6562"
+    },
+    {
+      "resource": "styles",
+      "index": 85,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-cfabb52e72825965ec66b18b.woff2",
+      "bytes": 51780,
+      "sha256": "cfabb52e72825965ec66b18bc1bab646d150206f2a3aa6d4fa6f29040058515e"
+    },
+    {
+      "resource": "styles",
+      "index": 86,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-2101d62af080d6803513f4fe.woff2",
+      "bytes": 71048,
+      "sha256": "2101d62af080d6803513f4fe5d91aba6831b61bc95ed172dace75caa2a5b8c2d"
+    },
+    {
+      "resource": "styles",
+      "index": 87,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-a5fdbb67e3dadebda5b447c1.woff2",
+      "bytes": 58804,
+      "sha256": "a5fdbb67e3dadebda5b447c1707fe47a2d9e40f095fb22dedc63aadf969d6609"
+    },
+    {
+      "resource": "styles",
+      "index": 88,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-0a97bd54c22add0ce1fd5425.woff2",
+      "bytes": 45184,
+      "sha256": "0a97bd54c22add0ce1fd54256f20bcafa92b8db870b3f80cefd3672da29eb3ae"
+    },
+    {
+      "resource": "styles",
+      "index": 89,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-5945538dcbfc11c1db2d573e.woff2",
+      "bytes": 60576,
+      "sha256": "5945538dcbfc11c1db2d573e1a0889c33b90b45d8445cb9ce1f18b38db36336c"
+    },
+    {
+      "resource": "styles",
+      "index": 90,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-45f3ed82e9bd8231532b58a0.woff2",
+      "bytes": 62128,
+      "sha256": "45f3ed82e9bd8231532b58a0de47d0b26fbe8e4ceba610615903e346e5213263"
+    },
+    {
+      "resource": "styles",
+      "index": 91,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-bf628db08549cbf5090c3486.woff2",
+      "bytes": 58812,
+      "sha256": "bf628db08549cbf5090c3486717d5121d48af1d82c79b6ab181ed9b49ba5e31b"
+    },
+    {
+      "resource": "styles",
+      "index": 92,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-60e71123f0b838bf4fd52cb5.woff2",
+      "bytes": 42656,
+      "sha256": "60e71123f0b838bf4fd52cb5de5e3d6af8e48c8f7f32481a39da625d1e63fd2e"
+    },
+    {
+      "resource": "styles",
+      "index": 93,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-d8f48bbf844eadbaa2e3db64.woff2",
+      "bytes": 40440,
+      "sha256": "d8f48bbf844eadbaa2e3db648ed6889ccb8083572437eb6f0f717f9097b9e45b"
+    },
+    {
+      "resource": "styles",
+      "index": 94,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-09248b343e7220ab8786b907.woff2",
+      "bytes": 47336,
+      "sha256": "09248b343e7220ab8786b907c2d75aaf6d1a54830822070a0ab012ec03a02bb1"
+    },
+    {
+      "resource": "styles",
+      "index": 95,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-50751cd23b3787eff2af23d3.woff2",
+      "bytes": 7400,
+      "sha256": "50751cd23b3787eff2af23d3b9676b13cb5263e750a72fd258328f5812520b08"
+    },
+    {
+      "resource": "styles",
+      "index": 96,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-45cb9a16cbc13eff333b49bf.woff2",
+      "bytes": 6892,
+      "sha256": "45cb9a16cbc13eff333b49bfa5c63f0478078ac6bdc327de9d69bdb6cdd8ce2b"
+    },
+    {
+      "resource": "styles",
+      "index": 97,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-ba142270184772c2bbc1985b.woff2",
+      "bytes": 12280,
+      "sha256": "ba142270184772c2bbc1985bf88e42d05e9462b14163001b8c253765c3f1d55e"
+    },
+    {
+      "resource": "styles",
+      "index": 98,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-5968dd127304a59f1e2ea36b.woff2",
+      "bytes": 9736,
+      "sha256": "5968dd127304a59f1e2ea36b875f3702dadb0a229bc87a9053727c26807a15dc"
+    },
+    {
+      "resource": "styles",
+      "index": 99,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-30691665669ee807f465d552.woff2",
+      "bytes": 10568,
+      "sha256": "30691665669ee807f465d552b3247cd41f9097020662bc43f28dbaf243cbd883"
+    },
+    {
+      "resource": "styles",
+      "index": 100,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-91923c87f9f32c46056285e6.woff2",
+      "bytes": 2416,
+      "sha256": "91923c87f9f32c46056285e69b1009fbb71c0bd27a1a1f9d386bc9248217606f"
+    },
+    {
+      "resource": "styles",
+      "index": 101,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-26b9dec17f125371d5f5089f.woff2",
+      "bytes": 4376,
+      "sha256": "26b9dec17f125371d5f5089f89de39094a11f98ffebb061011158d7e4aa602d0"
+    },
+    {
+      "resource": "styles",
+      "index": 102,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-7bf7c8fd9809004cba36338a.woff2",
+      "bytes": 12324,
+      "sha256": "7bf7c8fd9809004cba36338a94c338cffbce66069c2b091a7472e0b4dfa6b041"
+    },
+    {
+      "resource": "styles",
+      "index": 103,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-10d846c3e11659c57d906ae2.woff2",
+      "bytes": 84728,
+      "sha256": "10d846c3e11659c57d906ae2ab9a9d418e0aaa36b99a991a09aca8e5bd6e3c64"
+    },
+    {
+      "resource": "styles",
+      "index": 104,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-139765926260131beb5763bb.woff2",
+      "bytes": 77708,
+      "sha256": "139765926260131beb5763bb8474d5441c7a504f62257cacd5b569ee39d119e4"
+    },
+    {
+      "resource": "styles",
+      "index": 105,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-98eb7841a02d362b6b926466.woff2",
+      "bytes": 79564,
+      "sha256": "98eb7841a02d362b6b92646644d54e9a3ed296e931799f342acc76f844024328"
+    },
+    {
+      "resource": "styles",
+      "index": 106,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-ae54f03733db84abcacd43c9.woff2",
+      "bytes": 84032,
+      "sha256": "ae54f03733db84abcacd43c967c9d6afd647f0a1579ef3b595a807bd24f76a2f"
+    },
+    {
+      "resource": "styles",
+      "index": 107,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-ebda2b19fc7a325ab200e073.woff2",
+      "bytes": 80996,
+      "sha256": "ebda2b19fc7a325ab200e073d3152ef8761dd2e3fc6f4a36c757792ba393264e"
+    },
+    {
+      "resource": "styles",
+      "index": 108,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-f43c00b1e7e213add01d19ee.woff2",
+      "bytes": 81516,
+      "sha256": "f43c00b1e7e213add01d19eecf6ef2e8a96f7087b46b908df407490b72fe09d9"
+    },
+    {
+      "resource": "styles",
+      "index": 109,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-1a6cc82f2ce03f8bbc6c78ad.woff2",
+      "bytes": 81600,
+      "sha256": "1a6cc82f2ce03f8bbc6c78ad27bb79d1319dbabb6a016499d9042073acabcc0e"
+    },
+    {
+      "resource": "styles",
+      "index": 110,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-2a55b026bb206504dc94a3fa.woff2",
+      "bytes": 79852,
+      "sha256": "2a55b026bb206504dc94a3fa0d58a1f2af2b9b4c3daf6dd988519458e7404876"
+    },
+    {
+      "resource": "styles",
+      "index": 111,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-4665f9383f65a4fb003c5380.woff2",
+      "bytes": 83484,
+      "sha256": "4665f9383f65a4fb003c53808f5b91d1e93fcccd3d2d8c799cfda6e3d14656d7"
+    },
+    {
+      "resource": "styles",
+      "index": 112,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-16b43b96dc859eaf9b6f2ee8.woff2",
+      "bytes": 79000,
+      "sha256": "16b43b96dc859eaf9b6f2ee884c9976318d6b55720ae72b118f9ec77582361d6"
+    },
+    {
+      "resource": "styles",
+      "index": 113,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-3616d3502701dcdf867d0c85.woff2",
+      "bytes": 79492,
+      "sha256": "3616d3502701dcdf867d0c850ef50cbf19e1613b283a238fe4f8ea0c91908c6d"
+    },
+    {
+      "resource": "styles",
+      "index": 114,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-8164af476b514e30654ecf3a.woff2",
+      "bytes": 81144,
+      "sha256": "8164af476b514e30654ecf3aa34edeecbad209782f4b026964032e4f594a2881"
+    },
+    {
+      "resource": "styles",
+      "index": 115,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-675553f67dda471ccc684b73.woff2",
+      "bytes": 75996,
+      "sha256": "675553f67dda471ccc684b734a07db465fb6bb9ec1ce5a70b6d6b0f9a36a7a26"
+    },
+    {
+      "resource": "styles",
+      "index": 116,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-1594e53f4ab5fe067f7ba108.woff2",
+      "bytes": 75872,
+      "sha256": "1594e53f4ab5fe067f7ba108b65a71ed07b2fb9da68af01349b4966c871e4d36"
+    },
+    {
+      "resource": "styles",
+      "index": 117,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-f402c381cb2eb5c6d1e65a8b.woff2",
+      "bytes": 74744,
+      "sha256": "f402c381cb2eb5c6d1e65a8bae7629b5cb97faaa42759af6874f6d33fcc98273"
+    },
+    {
+      "resource": "styles",
+      "index": 118,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-1bd7a4092909a57cf3f2df1f.woff2",
+      "bytes": 72536,
+      "sha256": "1bd7a4092909a57cf3f2df1f983980fa45d37f0f77b038a31785719fc9580668"
+    },
+    {
+      "resource": "styles",
+      "index": 119,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-2392f5989457174e847cc69a.woff2",
+      "bytes": 67284,
+      "sha256": "2392f5989457174e847cc69a4eff0ff80f5ac744b8f1fe29b0b1925299cb0a0e"
+    },
+    {
+      "resource": "styles",
+      "index": 120,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-44c0c56034f2906014cd0082.woff2",
+      "bytes": 66576,
+      "sha256": "44c0c56034f2906014cd0082c42cef587cd4e2eb24983aca2a10d9805a0f26f6"
+    },
+    {
+      "resource": "styles",
+      "index": 121,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-9a03bacc0425e420573fa8ba.woff2",
+      "bytes": 58148,
+      "sha256": "9a03bacc0425e420573fa8ba6b4a1468ebfe8860ef2243e41a646dee45b67b54"
+    },
+    {
+      "resource": "styles",
+      "index": 122,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-28858c6c597253c4488e0ce1.woff2",
+      "bytes": 103768,
+      "sha256": "28858c6c597253c4488e0ce1bddf52d6bb5464ebcf981927ea5c7269b5c1dc17"
+    },
+    {
+      "resource": "styles",
+      "index": 123,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-d6e6ed7b0a14b508f94072ae.woff2",
+      "bytes": 14476,
+      "sha256": "d6e6ed7b0a14b508f94072aea3bb29abe236fd012ba6174b49292a6c900718e6"
+    },
+    {
+      "resource": "styles",
+      "index": 124,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-9826143bb6278155de4f7691.woff2",
+      "bytes": 10920,
+      "sha256": "9826143bb6278155de4f76910fd6ec34fe450385dd0d85df10e4497bb174eac7"
+    },
+    {
+      "resource": "styles",
+      "index": 125,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-b07e7e5e090ed9220e5fd4af.woff2",
+      "bytes": 10332,
+      "sha256": "b07e7e5e090ed9220e5fd4afc6a22339a77f63f79f1f7ac010e3b05a8849c5ce"
+    },
+    {
+      "resource": "styles",
+      "index": 126,
+      "mime": "font/woff2",
+      "path": "brand/fonts/font-2ac76686e472db28292edcc2.woff2",
+      "bytes": 32972,
+      "sha256": "2ac76686e472db28292edcc26bcc201a3b40b08b2615db7e75e03d07ab853017"
+    }
+  ],
+  "template": {
+    "path": "archive/approved-2026-10-21/template.html",
+    "sha256": "8674544b17ce432edc887be40aadcb8c638c47505e3587f00ef262710594350b"
+  }
+}

@@ -4,6 +4,8 @@ description: Use this skill to generate well-branded interfaces and assets for ä
 user-invocable: true
 ---
 
-Read the readme.md file within this skill, and explore the other available files. `guidelines/brand-guide.md` is the brand's own published guide and wins over anything else if the two disagree; `tokens/colors.css` declares the nine authoritative palette values at the top.
+Read README.md and docs/component-runtime.md within this skill, and explore the other available files. `guidelines/brand-guide.md` is the brand's own published guide and wins over anything else if the two disagree; `tokens/colors.css` declares the nine authoritative palette values at the top.
 If creating visual artifacts (slides, mocks, throwaway prototypes, etc), copy assets out and create static HTML files for the user to view. If working on production code, you can copy assets and read the rules here to become an expert in designing with this brand.
 If the user invokes this skill without any other guidance, ask them what they want to build or design, ask some questions, and act as an expert designer who outputs HTML artifacts _or_ production code, depending on the need.
+
+Current component runtime: `dist/components/current.json` â†’ `2026.10.21-e0a760` (105 exports). Use the versioned local runtime and shared content; historical JSX and artifact exports are archived references. The original JSX for the new bundle was not supplied. Preserve `brand/` foundation authority and follow `AGENTS.md` for build and validation commands.

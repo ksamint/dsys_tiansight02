@@ -33,3 +33,6 @@ reference/source/*
 *.key
 .venv/
 *.py[cod]
+
+# Current versioned compiled component distribution is an intentional deliverable.
+!dist/components/*/_ds_bundle.js

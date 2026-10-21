@@ -1,0 +1,11 @@
+{
+  "schema": "tiansight.artifact/1",
+  "deckId": "exhibit",
+  "contentVersion": "7cf4a5a308cd9fe721ee5c31461cb2603692f8bb8c73857ede34630ccc6d7876",
+  "designSystemVersion": "2026.10.21-e0a760",
+  "source": "src/TiansightDeck-Exhibit.dc.html",
+  "html": "index.html",
+  "htmlSha256": "3c0a9ca35751002f1fb32ff7973c3eeb37104eaae6ace28104f8e42923321b0e",
+  "pdf": "exhibit-design.pdf",
+  "approval": "review-candidate"
+}

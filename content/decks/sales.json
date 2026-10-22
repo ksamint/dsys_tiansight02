@@ -28,8 +28,7 @@
       "publish": [
         "web",
         "banner",
-        "internal",
-        "hold"
+        "internal"
       ]
     },
     "client": {

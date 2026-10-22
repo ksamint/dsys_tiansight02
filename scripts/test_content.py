@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 import build_deck
-from content_lib import Library, sha
+from content_lib import Library, catalog, sha
 from text_identity import chars, numbers, numeric_range_text, normalized
 
 
@@ -138,6 +138,27 @@ class Contracts(unittest.TestCase):
         slide['props']={'body':{'$case':'case-01','$view':'snippet:approved-mention'}}
         self.assertTrue(self.lib.check())
         self.assertEqual(self.lib.resolve(slide['props']),{'body':'Uses Approved Case'})
+
+    def test_hold_slides_never_enter_a_profile(self):
+        manifest=copy.deepcopy(self.lib.decks['intro']);manifest['profiles']['internal']={'publish':['web','internal','hold']}
+        with self.assertRaises(ValueError):self.lib.validate_manifest(manifest)
+        self.lib.slides['aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa']['publish']='hold'
+        self.assertEqual(self.lib.deck_slides('intro','client'),[])
+
+    def test_approval_matches_current_versions_only(self):
+        def approved(entry):
+            self.write('content/approvals.json',{'schema':'tiansight.approvals/1','decks':{'intro':entry}})
+            return {d['id']:d['latestApproved'] for d in catalog(self.lib)['decks']}
+        current=self.lib.content_version('intro')
+        record={'contentVersion':current,'systemVersion':'test','approvedAt':'2026-10-22','by':'production-review'}
+        self.assertEqual(approved(record),{'intro':record,'sales':None})
+        self.assertEqual(approved({**record,'contentVersion':'0'*64}),{'intro':None,'sales':None})
+        self.assertEqual(approved({**record,'systemVersion':'other'}),{'intro':None,'sales':None})
+        with self.assertRaises(ValueError):approved({**record,'by':'anyone'})
+        self.write('content/approvals.json',{'schema':'tiansight.approvals/1','decks':{'missing':record}})
+        with self.assertRaises(ValueError):catalog(self.lib)
+        self.write('content/approvals.json',{'schema':'tiansight.approvals/1','decks':{}})
+        self.assertEqual({d['id']:d['latestApproved'] for d in catalog(self.lib)['decks']},{'intro':None,'sales':None})
 
     def test_hash_is_deterministic_and_order_sensitive(self):
         original=self.lib.content_version('intro')

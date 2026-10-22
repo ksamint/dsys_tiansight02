@@ -188,7 +188,8 @@ class Library:
         for profile, spec in deck.get('profiles', {}).items():
             if not re.fullmatch(r'[a-z0-9][a-z0-9-]*', profile):
                 raise ValueError('Unsafe profile id')
-            if not isinstance(spec.get('publish'), list) or set(spec['publish']) - {'web','banner','internal','sales-internal','hold'}:
+            # hold means 待确认后发布: such slides stay in the library but never reach a build.
+            if not isinstance(spec.get('publish'), list) or set(spec['publish']) - {'web','banner','internal','sales-internal'}:
                 raise ValueError('Invalid profile filter')
         ids = [entry if isinstance(entry, str) else entry['id'] for entry in deck['slides']]
         if len(ids) != len(set(ids)):
@@ -246,9 +247,36 @@ class Library:
         return True
 
 
+APPROVAL_SCHEMA = 'tiansight.approvals/1'
+APPROVERS = ('owner', 'production-review')
+
+
+def approvals(library):
+    """Approval records keyed by deck id; the file is written only by release.py --approve."""
+    path = library.root / 'content/approvals.json'
+    data = read_json(path) if path.exists() else {'schema': APPROVAL_SCHEMA, 'decks': {}}
+    if data.get('schema') != APPROVAL_SCHEMA or not isinstance(data.get('decks'), dict):
+        raise ValueError('Invalid content/approvals.json')
+    for did, entry in data['decks'].items():
+        if did not in library.decks:
+            raise ValueError(f'Approval for unknown deck: {did}')
+        if set(entry) != {'contentVersion', 'systemVersion', 'approvedAt', 'by'} or entry['by'] not in APPROVERS:
+            raise ValueError(f'Invalid approval record: {did}')
+    return data
+
+
+def latest_approved(library, did, content_version, records=None):
+    """An approval survives only while it names the deck's current content and system versions."""
+    entry = (records or approvals(library))['decks'].get(did)
+    if entry and entry['contentVersion'] == content_version and entry['systemVersion'] == library.version:
+        return dict(entry)
+    return None
+
+
 def catalog(library):
     existing = library.root / 'content/deck-catalog.json'
     prior = {d['id']: d for d in read_json(existing).get('decks', [])} if existing.exists() else {}
+    approved = approvals(library)
     decks = []
     for did, manifest in library.decks.items():
         slides = []
@@ -256,7 +284,8 @@ def catalog(library):
             sid = entry if isinstance(entry, str) else entry['id']
             record = library.slides[sid]
             slides.append({k: record[k] for k in ('id', 'label', 'publish', 'owner')} | {'order': i + 1})
-        decks.append({'id': did, 'title': manifest['title'], 'status': manifest['status'], 'contentVersion': library.content_version(did), 'systemVersion': library.version, 'profiles': list(manifest.get('profiles', {})), 'slides': slides, 'latestBuilt': prior.get(did, {}).get('latestBuilt'), 'latestApproved': prior.get(did, {}).get('latestApproved')})
+        version = library.content_version(did)
+        decks.append({'id': did, 'title': manifest['title'], 'status': manifest['status'], 'contentVersion': version, 'systemVersion': library.version, 'profiles': list(manifest.get('profiles', {})), 'slides': slides, 'latestBuilt': prior.get(did, {}).get('latestBuilt'), 'latestApproved': latest_approved(library, did, version, approved)})
     return {'schema': 'tiansight.deck-catalog/2', 'runtime': library.version, 'decks': decks}
 
 

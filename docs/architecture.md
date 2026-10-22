@@ -58,6 +58,17 @@ invalidate every consuming deck. `systemVersion` separately identifies the suppo
 `latestBuilt` and `build/intro/RELEASE.md`. Repeat for exhibit and sales. Release means a local
 review artifact; it does not publish or approve it. `latestApproved` remains null until owner
 production review. Production consumers use `latestApproved`; staging uses `latestBuilt`.
+Approval is recorded in `content/approvals.json` (`schema tiansight.approvals/1`, one entry per
+deck with `contentVersion`, `systemVersion`, `approvedAt`, `by`) by
+`python3 scripts/release.py <deck> --approve [--by owner|production-review]`, which copies the
+current `latestBuilt` versions and refuses an unbuilt or stale release. The catalog builder sets
+`latestApproved` only while the entry matches the deck's current versions; any content or runtime
+change returns it to null until the production review approves again. Only that review runs
+`--approve`.
+
+Slides with `publish: hold` (待确认后发布) stay in the library with their note but belong to no
+profile filter: the gate rejects a manifest profile that lists `hold` and any committed
+`build/*/*/index.html` containing a hold slide id, so the public repository ships none.
 PDF identity is checked using content/system versions in metadata and verification records;
 Chromium byte hashes are recorded as provenance rather than used for rebuild equality.
 

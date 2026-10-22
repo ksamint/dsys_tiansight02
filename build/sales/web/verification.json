@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "sales",
   "profile": "web",
-  "contentVersion": "eec86ed28b3b0e0f21eee9179f32d7240615d30b7c1e5f9c8d19b8031686e200",
+  "contentVersion": "1116e661f54fd76043dea137c16b5aece38d4764877ce817c1bbbfbd8694948c",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "0bec6ef58934bc16c6898810dad6be3b44267eb34991e6aab39869a110bfef4d",
-  "pdfSha256": "acf2113ad7937df5a91bff9a38baa5e88964cc6517102ec9864c017097253bd5",
+  "htmlSha256": "4a4e93d5914b784667434cabbdc6075fd23e4bea6fecf6152ce7ecc174b39e5d",
+  "pdfSha256": "976f36885a9ba6b9bb4c1b901c980a86f70f149000718cd46c5c455c22d3b26c",
   "pageCount": 13,
   "pages": [
     {
@@ -14,7 +14,7 @@
       "characters": 98,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 1.413
+      "meanPixelDifference": 1.869
     },
     {
       "page": 2,
@@ -22,7 +22,7 @@
       "characters": 291,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.794
+      "meanPixelDifference": 2.878
     },
     {
       "page": 3,
@@ -30,7 +30,7 @@
       "characters": 46,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.188
+      "meanPixelDifference": 2.172
     },
     {
       "page": 4,
@@ -38,7 +38,7 @@
       "characters": 257,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.429
+      "meanPixelDifference": 2.539
     },
     {
       "page": 5,
@@ -46,7 +46,7 @@
       "characters": 444,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.237
+      "meanPixelDifference": 2.798
     },
     {
       "page": 6,
@@ -54,7 +54,7 @@
       "characters": 47,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.474
+      "meanPixelDifference": 2.188
     },
     {
       "page": 7,
@@ -62,7 +62,7 @@
       "characters": 227,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.198
+      "meanPixelDifference": 2.436
     },
     {
       "page": 8,
@@ -70,7 +70,7 @@
       "characters": 285,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.323
+      "meanPixelDifference": 2.494
     },
     {
       "page": 9,
@@ -78,7 +78,7 @@
       "characters": 273,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.792
+      "meanPixelDifference": 2.862
     },
     {
       "page": 10,
@@ -86,7 +86,7 @@
       "characters": 145,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.485
+      "meanPixelDifference": 2.637
     },
     {
       "page": 11,
@@ -94,7 +94,7 @@
       "characters": 153,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.763
+      "meanPixelDifference": 3.017
     },
     {
       "page": 12,
@@ -102,7 +102,7 @@
       "characters": 172,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.089
+      "meanPixelDifference": 3.137
     },
     {
       "page": 13,
@@ -110,11 +110,11 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.728
+      "meanPixelDifference": 2.386
     }
   ],
   "fontsEmbedded": true,
-  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "fontVerification": "pdffonts + embedded font streams",
   "pageSizePoints": [
     960,
     540

@@ -6,7 +6,7 @@
       "id": "exhibit",
       "title": "餐饮展陈与厨房设计",
       "status": "maintained",
-      "contentVersion": "708920274f5d67d6a57d037c51f0cf81d8337d35da7e6c866c07155b23fd92be",
+      "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
       "systemVersion": "2026.10.21-e0a760",
       "profiles": [
         "internal",
@@ -303,14 +303,14 @@
         }
       ],
       "latestBuilt": {
-        "contentVersion": "708920274f5d67d6a57d037c51f0cf81d8337d35da7e6c866c07155b23fd92be",
+        "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
         "systemVersion": "2026.10.21-e0a760",
         "builtAt": "2026-10-21T06:08:10Z",
         "path": "build/exhibit/",
         "profiles": {
           "internal": {
             "path": "build/exhibit/internal/",
-            "pages": 41
+            "pages": 33
           },
           "client": {
             "path": "build/exhibit/client/",
@@ -328,7 +328,7 @@
       "id": "intro",
       "title": "企业介绍",
       "status": "maintained",
-      "contentVersion": "f3db1a0dbf64f6dfb3c3893444421b0b758874f249cf33b8aa3da509e7ee6616",
+      "contentVersion": "be77ac3d442e78d58d9ef148b70d39390eda53ad377572aec38902c1cde01631",
       "systemVersion": "2026.10.21-e0a760",
       "profiles": [
         "internal",
@@ -702,7 +702,7 @@
         }
       ],
       "latestBuilt": {
-        "contentVersion": "f3db1a0dbf64f6dfb3c3893444421b0b758874f249cf33b8aa3da509e7ee6616",
+        "contentVersion": "be77ac3d442e78d58d9ef148b70d39390eda53ad377572aec38902c1cde01631",
         "systemVersion": "2026.10.21-e0a760",
         "builtAt": "2026-10-21T06:08:10Z",
         "path": "build/intro/",
@@ -727,7 +727,7 @@
       "id": "kitchen",
       "title": "侍天厨政专项介绍",
       "status": "planned",
-      "contentVersion": "55205a19aea687701049a085a1742efeb77a49bedda9d9cc926a557f9450a9ff",
+      "contentVersion": "86624a58b9319ece47f83873bcb3410398163971ed53a385d4b0c531ae5e7367",
       "systemVersion": "2026.10.21-e0a760",
       "profiles": [
         "internal",
@@ -1107,7 +1107,7 @@
       "id": "sales",
       "title": "侍天 TIANSIGHT 销售提案",
       "status": "maintained",
-      "contentVersion": "eec86ed28b3b0e0f21eee9179f32d7240615d30b7c1e5f9c8d19b8031686e200",
+      "contentVersion": "1116e661f54fd76043dea137c16b5aece38d4764877ce817c1bbbfbd8694948c",
       "systemVersion": "2026.10.21-e0a760",
       "profiles": [
         "internal",
@@ -1215,7 +1215,7 @@
         }
       ],
       "latestBuilt": {
-        "contentVersion": "eec86ed28b3b0e0f21eee9179f32d7240615d30b7c1e5f9c8d19b8031686e200",
+        "contentVersion": "1116e661f54fd76043dea137c16b5aece38d4764877ce817c1bbbfbd8694948c",
         "systemVersion": "2026.10.21-e0a760",
         "builtAt": "2026-10-21T06:08:10Z",
         "path": "build/sales/",

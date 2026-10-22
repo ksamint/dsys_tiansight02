@@ -1,9 +1,10 @@
-"""Build/verify every profile, then update staging identity; never approve releases."""
+"""Build/verify every profile, then update staging identity; approval is a separate explicit step."""
 import argparse
+import datetime
 import json
 import subprocess
 import sys
-from content_lib import ROOT, Library, catalog, read_json
+from content_lib import ROOT, APPROVERS, Library, approvals, catalog, read_json
 
 
 def release(deck):
@@ -29,5 +30,29 @@ def release(deck):
     print(f'PASS: {deck} latestBuilt updated; approval unchanged')
 
 
+def approve(deck, by):
+    """Record production approval of the current latestBuilt; refuse anything unbuilt or stale."""
+    lib=Library()
+    if deck not in lib.decks:
+        raise ValueError(f'Unknown deck: {deck}')
+    entry=next(d for d in catalog(lib)['decks'] if d['id']==deck)
+    built=entry['latestBuilt']
+    if not built:
+        raise ValueError(f'{deck} has no latestBuilt; run scripts/release.py {deck} first')
+    if built['contentVersion']!=entry['contentVersion'] or built['systemVersion']!=entry['systemVersion']:
+        raise ValueError(f'{deck} latestBuilt is stale against the current content/system version; release it again before approving')
+    data=approvals(lib)
+    data['decks'][deck]={'contentVersion':built['contentVersion'],'systemVersion':built['systemVersion'],'approvedAt':datetime.date.today().isoformat(),'by':by}
+    data['decks']=dict(sorted(data['decks'].items()))
+    (ROOT/'content/approvals.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+    subprocess.run(['node','scripts/build_deck_catalog.mjs'],cwd=ROOT,check=True)
+    print(f'PASS: {deck} latestApproved set to {built["contentVersion"][:12]} by {by}')
+
+
 if __name__=='__main__':
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('deck');args=parser.parse_args();release(args.deck)
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('deck')
+    parser.add_argument('--approve',action='store_true',help='record the current latestBuilt as approved (production review only)')
+    parser.add_argument('--by',choices=APPROVERS,default='production-review')
+    args=parser.parse_args()
+    approve(args.deck,args.by) if args.approve else release(args.deck)

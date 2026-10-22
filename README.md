@@ -586,6 +586,7 @@ node scripts/build_deck_catalog.mjs             # catalog and slide index (or --
 python3 scripts/release.py intro                # verified local PDFs, latestBuilt
 python3 scripts/release.py exhibit
 python3 scripts/release.py sales
+python3 scripts/release.py intro --approve --by production-review  # production review only: content/approvals.json
 uv run --with pillow --with pymupdf python scripts/verify_pdf.py intro client
 python3 scripts/check.py --render
 node scripts/test_component_runtime.mjs

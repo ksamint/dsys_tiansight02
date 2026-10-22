@@ -25,13 +25,13 @@
   "height": 900,
   "headings": [
    1,
-   37,
+   29,
    0
   ],
-  "sections": 41,
+  "sections": 33,
   "cards": 0,
   "charts": 0,
-  "images": 69,
+  "images": 51,
   "h1": [
    0,
    21,
@@ -106,7 +106,7 @@
  },
  "brand/index.html@desktop": {
   "overflow": false,
-  "height": 14629,
+  "height": 14624,
   "headings": [
    1,
    13,
@@ -118,7 +118,7 @@
   "images": 7,
   "h1": [
    208,
-   3422,
+   3420,
    1024,
    62
   ],
@@ -127,7 +127,7 @@
  },
  "brand/index.html@mobile": {
   "overflow": false,
-  "height": 25040,
+  "height": 25089,
   "headings": [
    1,
    13,

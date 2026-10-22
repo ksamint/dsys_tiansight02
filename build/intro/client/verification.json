@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "intro",
   "profile": "client",
-  "contentVersion": "f3db1a0dbf64f6dfb3c3893444421b0b758874f249cf33b8aa3da509e7ee6616",
+  "contentVersion": "be77ac3d442e78d58d9ef148b70d39390eda53ad377572aec38902c1cde01631",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "9ec2f421c096a185582066de975c7476e5131ed5190db645b188d1a215343903",
-  "pdfSha256": "0a81e21f30ef440c841b9ba94637f1ba94b3dbd9cac862550b3437fd1bb22383",
+  "htmlSha256": "fd14189862550116eba0d655e88d0141d3c7484979562bd9c4b0565e699a7041",
+  "pdfSha256": "a3276ff0764c115fcf4b4dfda32883ad2ff495167183a2f86315fc2006ed42cb",
   "pageCount": 47,
   "pages": [
     {
@@ -14,7 +14,7 @@
       "characters": 96,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 1.796
+      "meanPixelDifference": 2.141
     },
     {
       "page": 2,
@@ -22,7 +22,7 @@
       "characters": 169,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.264
+      "meanPixelDifference": 2.594
     },
     {
       "page": 3,
@@ -30,7 +30,7 @@
       "characters": 72,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.928
+      "meanPixelDifference": 2.477
     },
     {
       "page": 4,
@@ -38,7 +38,7 @@
       "characters": 46,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.106
+      "meanPixelDifference": 2.836
     },
     {
       "page": 5,
@@ -46,7 +46,7 @@
       "characters": 257,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.499
+      "meanPixelDifference": 2.538
     },
     {
       "page": 6,
@@ -54,7 +54,7 @@
       "characters": 444,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.242
+      "meanPixelDifference": 2.797
     },
     {
       "page": 7,
@@ -62,7 +62,7 @@
       "characters": 183,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.159
+      "meanPixelDifference": 2.413
     },
     {
       "page": 8,
@@ -70,7 +70,7 @@
       "characters": 336,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.104
+      "meanPixelDifference": 2.968
     },
     {
       "page": 9,
@@ -78,7 +78,7 @@
       "characters": 242,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.914
+      "meanPixelDifference": 2.998
     },
     {
       "page": 10,
@@ -86,7 +86,7 @@
       "characters": 225,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.006
+      "meanPixelDifference": 3.035
     },
     {
       "page": 11,
@@ -94,7 +94,7 @@
       "characters": 230,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.899
+      "meanPixelDifference": 2.947
     },
     {
       "page": 12,
@@ -102,7 +102,7 @@
       "characters": 240,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.027
+      "meanPixelDifference": 3.073
     },
     {
       "page": 13,
@@ -110,7 +110,7 @@
       "characters": 195,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.267
+      "meanPixelDifference": 2.657
     },
     {
       "page": 14,
@@ -118,7 +118,7 @@
       "characters": 154,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.02
+      "meanPixelDifference": 2.374
     },
     {
       "page": 15,
@@ -126,7 +126,7 @@
       "characters": 67,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.912
+      "meanPixelDifference": 2.443
     },
     {
       "page": 16,
@@ -134,7 +134,7 @@
       "characters": 47,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.079
+      "meanPixelDifference": 2.791
     },
     {
       "page": 17,
@@ -142,7 +142,7 @@
       "characters": 197,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.964
+      "meanPixelDifference": 2.329
     },
     {
       "page": 18,
@@ -150,7 +150,7 @@
       "characters": 285,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.316
+      "meanPixelDifference": 2.489
     },
     {
       "page": 19,
@@ -158,7 +158,7 @@
       "characters": 273,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.785
+      "meanPixelDifference": 2.856
     },
     {
       "page": 20,
@@ -166,7 +166,7 @@
       "characters": 101,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.952
+      "meanPixelDifference": 2.572
     },
     {
       "page": 21,
@@ -174,7 +174,7 @@
       "characters": 119,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.95
+      "meanPixelDifference": 2.482
     },
     {
       "page": 22,
@@ -182,7 +182,7 @@
       "characters": 148,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.06
+      "meanPixelDifference": 2.613
     },
     {
       "page": 23,
@@ -190,7 +190,7 @@
       "characters": 93,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.852
+      "meanPixelDifference": 2.494
     },
     {
       "page": 24,
@@ -198,7 +198,7 @@
       "characters": 266,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.608
+      "meanPixelDifference": 2.783
     },
     {
       "page": 25,
@@ -206,7 +206,7 @@
       "characters": 275,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.565
+      "meanPixelDifference": 2.759
     },
     {
       "page": 26,
@@ -214,7 +214,7 @@
       "characters": 127,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.26
+      "meanPixelDifference": 2.554
     },
     {
       "page": 27,
@@ -222,7 +222,7 @@
       "characters": 67,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.822
+      "meanPixelDifference": 2.453
     },
     {
       "page": 28,
@@ -230,7 +230,7 @@
       "characters": 387,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.17
+      "meanPixelDifference": 2.874
     },
     {
       "page": 29,
@@ -238,7 +238,7 @@
       "characters": 366,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.365
+      "meanPixelDifference": 3.201
     },
     {
       "page": 30,
@@ -246,7 +246,7 @@
       "characters": 374,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.444
+      "meanPixelDifference": 3.201
     },
     {
       "page": 31,
@@ -254,7 +254,7 @@
       "characters": 346,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.277
+      "meanPixelDifference": 3.213
     },
     {
       "page": 32,
@@ -262,7 +262,7 @@
       "characters": 353,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.353
+      "meanPixelDifference": 3.195
     },
     {
       "page": 33,
@@ -270,7 +270,7 @@
       "characters": 304,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.121
+      "meanPixelDifference": 3.102
     },
     {
       "page": 34,
@@ -278,7 +278,7 @@
       "characters": 339,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.337
+      "meanPixelDifference": 3.213
     },
     {
       "page": 35,
@@ -286,7 +286,7 @@
       "characters": 324,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.345
+      "meanPixelDifference": 3.279
     },
     {
       "page": 36,
@@ -294,7 +294,7 @@
       "characters": 274,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.867
+      "meanPixelDifference": 2.977
     },
     {
       "page": 37,
@@ -302,7 +302,7 @@
       "characters": 153,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.759
+      "meanPixelDifference": 3.016
     },
     {
       "page": 38,
@@ -310,7 +310,7 @@
       "characters": 33,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.548
+      "meanPixelDifference": 2.422
     },
     {
       "page": 39,
@@ -318,7 +318,7 @@
       "characters": 172,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.084
+      "meanPixelDifference": 3.134
     },
     {
       "page": 40,
@@ -326,7 +326,7 @@
       "characters": 290,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.733
+      "meanPixelDifference": 2.85
     },
     {
       "page": 41,
@@ -334,7 +334,7 @@
       "characters": 320,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.87
+      "meanPixelDifference": 2.88
     },
     {
       "page": 42,
@@ -342,7 +342,7 @@
       "characters": 256,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.771
+      "meanPixelDifference": 2.881
     },
     {
       "page": 43,
@@ -350,7 +350,7 @@
       "characters": 244,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.711
+      "meanPixelDifference": 2.863
     },
     {
       "page": 44,
@@ -358,7 +358,7 @@
       "characters": 195,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.411
+      "meanPixelDifference": 2.665
     },
     {
       "page": 45,
@@ -366,7 +366,7 @@
       "characters": 224,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.777
+      "meanPixelDifference": 2.83
     },
     {
       "page": 46,
@@ -374,7 +374,7 @@
       "characters": 59,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.593
+      "meanPixelDifference": 2.333
     },
     {
       "page": 47,
@@ -382,11 +382,11 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.727
+      "meanPixelDifference": 2.385
     }
   ],
   "fontsEmbedded": true,
-  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "fontVerification": "pdffonts + embedded font streams",
   "pageSizePoints": [
     960,
     540

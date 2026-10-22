@@ -2,9 +2,9 @@
   "schema": "tiansight.artifact/2",
   "deckId": "intro",
   "profile": "internal",
-  "contentVersion": "f3db1a0dbf64f6dfb3c3893444421b0b758874f249cf33b8aa3da509e7ee6616",
+  "contentVersion": "be77ac3d442e78d58d9ef148b70d39390eda53ad377572aec38902c1cde01631",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "5f37c7c2226f08b3a70507ddf652a77cebb66d7a9c1092eff9a2dd3b0ff6fec8",
+  "htmlSha256": "a09e217e569ea182a0ff25471be70ee0d0be2852384aab9f7921ed7702dc0e84",
   "params": {
     "date": "2026-09-27"
   },

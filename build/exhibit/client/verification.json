@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "exhibit",
   "profile": "client",
-  "contentVersion": "708920274f5d67d6a57d037c51f0cf81d8337d35da7e6c866c07155b23fd92be",
+  "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "41b75b7c1174aa971ced66adf87b374595636d8d7a7b28b3e84653cb6fa7e031",
-  "pdfSha256": "b61ce01211816e66f2ccd811b08b39083198c95c93592c90e013124163ff11d3",
+  "htmlSha256": "5a2ed5eb0a86e93c02e2fa54bcb6910e349d031bafb4d73c209af8fdb592d00a",
+  "pdfSha256": "154bd5c75963a3e064361deb1d29ce4a947ef1d72a3a70fff7684ee5f9d44fca",
   "pageCount": 33,
   "pages": [
     {
@@ -14,7 +14,7 @@
       "characters": 101,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 1.506
+      "meanPixelDifference": 1.778
     },
     {
       "page": 2,
@@ -22,7 +22,7 @@
       "characters": 110,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.676
+      "meanPixelDifference": 2.427
     },
     {
       "page": 3,
@@ -30,7 +30,7 @@
       "characters": 220,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.524
+      "meanPixelDifference": 2.848
     },
     {
       "page": 4,
@@ -38,7 +38,7 @@
       "characters": 105,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.629
+      "meanPixelDifference": 2.199
     },
     {
       "page": 5,
@@ -46,7 +46,7 @@
       "characters": 44,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.751
+      "meanPixelDifference": 2.469
     },
     {
       "page": 6,
@@ -54,7 +54,7 @@
       "characters": 142,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.924
+      "meanPixelDifference": 2.281
     },
     {
       "page": 7,
@@ -62,7 +62,7 @@
       "characters": 164,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.926
+      "meanPixelDifference": 2.33
     },
     {
       "page": 8,
@@ -70,7 +70,7 @@
       "characters": 121,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.819
+      "meanPixelDifference": 2.448
     },
     {
       "page": 9,
@@ -78,7 +78,7 @@
       "characters": 122,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.804
+      "meanPixelDifference": 2.445
     },
     {
       "page": 10,
@@ -86,7 +86,7 @@
       "characters": 44,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.804
+      "meanPixelDifference": 2.524
     },
     {
       "page": 11,
@@ -94,7 +94,7 @@
       "characters": 145,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.807
+      "meanPixelDifference": 2.353
     },
     {
       "page": 12,
@@ -102,7 +102,7 @@
       "characters": 88,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.717
+      "meanPixelDifference": 2.439
     },
     {
       "page": 13,
@@ -110,7 +110,7 @@
       "characters": 82,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.738
+      "meanPixelDifference": 2.484
     },
     {
       "page": 14,
@@ -118,7 +118,7 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.78
+      "meanPixelDifference": 2.242
     },
     {
       "page": 15,
@@ -126,7 +126,7 @@
       "characters": 44,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.707
+      "meanPixelDifference": 2.455
     },
     {
       "page": 16,
@@ -134,7 +134,7 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.099
+      "meanPixelDifference": 2.64
     },
     {
       "page": 17,
@@ -142,7 +142,7 @@
       "characters": 122,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.058
+      "meanPixelDifference": 2.64
     },
     {
       "page": 18,
@@ -150,7 +150,7 @@
       "characters": 84,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.753
+      "meanPixelDifference": 2.464
     },
     {
       "page": 19,
@@ -158,7 +158,7 @@
       "characters": 76,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.712
+      "meanPixelDifference": 2.472
     },
     {
       "page": 20,
@@ -166,7 +166,7 @@
       "characters": 51,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.737
+      "meanPixelDifference": 2.4
     },
     {
       "page": 21,
@@ -174,7 +174,7 @@
       "characters": 146,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.201
+      "meanPixelDifference": 2.686
     },
     {
       "page": 22,
@@ -182,7 +182,7 @@
       "characters": 167,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.405
+      "meanPixelDifference": 2.71
     },
     {
       "page": 23,
@@ -190,7 +190,7 @@
       "characters": 47,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.701
+      "meanPixelDifference": 2.418
     },
     {
       "page": 24,
@@ -198,7 +198,7 @@
       "characters": 146,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.193
+      "meanPixelDifference": 2.697
     },
     {
       "page": 25,
@@ -206,7 +206,7 @@
       "characters": 158,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.91
+      "meanPixelDifference": 2.31
     },
     {
       "page": 26,
@@ -214,7 +214,7 @@
       "characters": 147,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.12
+      "meanPixelDifference": 2.656
     },
     {
       "page": 27,
@@ -222,7 +222,7 @@
       "characters": 150,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.197
+      "meanPixelDifference": 2.685
     },
     {
       "page": 28,
@@ -230,7 +230,7 @@
       "characters": 43,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.378
+      "meanPixelDifference": 2.213
     },
     {
       "page": 29,
@@ -238,7 +238,7 @@
       "characters": 247,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.716
+      "meanPixelDifference": 2.864
     },
     {
       "page": 30,
@@ -246,7 +246,7 @@
       "characters": 259,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.776
+      "meanPixelDifference": 2.882
     },
     {
       "page": 31,
@@ -254,7 +254,7 @@
       "characters": 293,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.743
+      "meanPixelDifference": 2.854
     },
     {
       "page": 32,
@@ -262,7 +262,7 @@
       "characters": 323,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.874
+      "meanPixelDifference": 2.882
     },
     {
       "page": 33,
@@ -270,11 +270,11 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.724
+      "meanPixelDifference": 2.384
     }
   ],
   "fontsEmbedded": true,
-  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "fontVerification": "pdffonts + embedded font streams",
   "pageSizePoints": [
     960,
     540

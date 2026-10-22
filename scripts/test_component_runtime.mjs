@@ -47,13 +47,23 @@ try{
   const decks={};
   for(const id of ['intro','sales','exhibit']){
     const entry=catalog.decks.find(d=>d.id===id);
-    const facts=await inspect(`build/${id}/internal/index.html`, entry.slides.filter(s=>s.status!=='planned').length);
-    assert.deepEqual(facts.slides.map(s=>s.id), entry.slides.filter(s=>s.status!=='planned').map(s=>s.id));
+    // The internal review build carries every maintained slide its profile filter publishes; hold slides never ship.
+    const allowed=JSON.parse(read(`content/decks/${id}.json`)).profiles.internal.publish;
+    assert(!allowed.includes('hold'),id+' internal profile must not publish hold slides');
+    const expected=entry.slides.filter(s=>{const record=JSON.parse(read(`content/slides/${s.id}.json`));return record.status!=='planned'&&allowed.includes(record.publish);}).map(s=>s.id);
+    const facts=await inspect(`build/${id}/internal/index.html`, expected.length);
+    assert.deepEqual(facts.slides.map(s=>s.id), expected);
     assert(!facts.text.match(/\d\.\d{10}/),'Floating-point chart label regression');
     decks[id]=facts;
   }
   const exhibit=decks.exhibit;
-  assert(exhibit.text.includes('按项目约定')&&exhibit.text.includes('+22.2%')&&exhibit.text.includes('−19.2%'));
+  // Approved exhibit values live in the library; they render whenever their slide is published, and a held slide keeps them verbatim.
+  const builtIds=new Set(exhibit.slides.map(s=>s.id));
+  for(const approved of ['按项目约定','+22.2%','−19.2%']){
+    const owners=readdirSync(resolve(root,'content/slides')).map(f=>JSON.parse(read(`content/slides/${f}`))).filter(r=>r.status==='maintained'&&JSON.stringify(r.props).includes(approved));
+    assert(owners.length,approved+' missing from the slide library');
+    assert.equal(exhibit.text.includes(approved),owners.some(r=>builtIds.has(r.id)),approved+' must render exactly when its slide is published');
+  }
   assert(!exhibit.text.includes('+17.3%')&&!exhibit.text.includes('+13.2%'));
   await page.keyboard.press('ArrowRight');
   assert.equal(await page.evaluate(()=>document.querySelector('deck-stage').index),1);
@@ -61,7 +71,7 @@ try{
   // Capture every slide at authored size; report text rectangles outside its bounds.
   const clipping=[];
   await page.evaluate(()=>document.querySelector('deck-stage').setAttribute('noscale',''));
-  for(let i=0;i<41;i++){
+  for(let i=0;i<exhibit.slides.length;i++){
     await page.evaluate(i=>document.querySelector('deck-stage').goTo(i),i);
     const slide=page.locator('section[data-label]').nth(i);
     await slide.screenshot({path:resolve(output,`exhibit-${String(i+1).padStart(2,'0')}.png`)});

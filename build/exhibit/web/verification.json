@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "exhibit",
   "profile": "web",
-  "contentVersion": "708920274f5d67d6a57d037c51f0cf81d8337d35da7e6c866c07155b23fd92be",
+  "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "66c7c98b722ad243cc5cc86f63ef574f1f3e8a2077c69d199e888039407fb977",
-  "pdfSha256": "a0e7c08eac4978893ee630bf72cb8084d0d3fe4a28d9a47e2c78ec4865d0d52b",
+  "htmlSha256": "e92e6d3a32433bc4af4e7bffdfe53d9fa50550e99adbc1673955fd8fdd6304b0",
+  "pdfSha256": "82d8110129137b99cd90e099653a50fca0ce160e0d4a5f07f96498d405c496f1",
   "pageCount": 26,
   "pages": [
     {
@@ -14,7 +14,7 @@
       "characters": 110,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 1.181
+      "meanPixelDifference": 1.682
     },
     {
       "page": 2,
@@ -22,7 +22,7 @@
       "characters": 220,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.659
+      "meanPixelDifference": 2.831
     },
     {
       "page": 3,
@@ -30,7 +30,7 @@
       "characters": 105,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.248
+      "meanPixelDifference": 2.199
     },
     {
       "page": 4,
@@ -38,7 +38,7 @@
       "characters": 142,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.806
+      "meanPixelDifference": 2.281
     },
     {
       "page": 5,
@@ -46,7 +46,7 @@
       "characters": 164,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.907
+      "meanPixelDifference": 2.327
     },
     {
       "page": 6,
@@ -54,7 +54,7 @@
       "characters": 121,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.818
+      "meanPixelDifference": 2.448
     },
     {
       "page": 7,
@@ -62,7 +62,7 @@
       "characters": 122,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.806
+      "meanPixelDifference": 2.446
     },
     {
       "page": 8,
@@ -70,7 +70,7 @@
       "characters": 145,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.808
+      "meanPixelDifference": 2.355
     },
     {
       "page": 9,
@@ -78,7 +78,7 @@
       "characters": 88,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.721
+      "meanPixelDifference": 2.441
     },
     {
       "page": 10,
@@ -86,7 +86,7 @@
       "characters": 82,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.737
+      "meanPixelDifference": 2.482
     },
     {
       "page": 11,
@@ -94,7 +94,7 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.782
+      "meanPixelDifference": 2.243
     },
     {
       "page": 12,
@@ -102,7 +102,7 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.101
+      "meanPixelDifference": 2.641
     },
     {
       "page": 13,
@@ -110,7 +110,7 @@
       "characters": 122,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.055
+      "meanPixelDifference": 2.638
     },
     {
       "page": 14,
@@ -118,7 +118,7 @@
       "characters": 84,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.754
+      "meanPixelDifference": 2.465
     },
     {
       "page": 15,
@@ -126,7 +126,7 @@
       "characters": 76,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.712
+      "meanPixelDifference": 2.472
     },
     {
       "page": 16,
@@ -134,7 +134,7 @@
       "characters": 146,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.198
+      "meanPixelDifference": 2.683
     },
     {
       "page": 17,
@@ -142,7 +142,7 @@
       "characters": 167,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.409
+      "meanPixelDifference": 2.711
     },
     {
       "page": 18,
@@ -150,7 +150,7 @@
       "characters": 146,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.193
+      "meanPixelDifference": 2.695
     },
     {
       "page": 19,
@@ -158,7 +158,7 @@
       "characters": 158,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.911
+      "meanPixelDifference": 2.309
     },
     {
       "page": 20,
@@ -166,7 +166,7 @@
       "characters": 147,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.121
+      "meanPixelDifference": 2.655
     },
     {
       "page": 21,
@@ -174,7 +174,7 @@
       "characters": 150,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.197
+      "meanPixelDifference": 2.684
     },
     {
       "page": 22,
@@ -182,7 +182,7 @@
       "characters": 247,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.718
+      "meanPixelDifference": 2.865
     },
     {
       "page": 23,
@@ -190,7 +190,7 @@
       "characters": 259,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.777
+      "meanPixelDifference": 2.883
     },
     {
       "page": 24,
@@ -198,7 +198,7 @@
       "characters": 293,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.739
+      "meanPixelDifference": 2.852
     },
     {
       "page": 25,
@@ -206,7 +206,7 @@
       "characters": 323,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.873
+      "meanPixelDifference": 2.88
     },
     {
       "page": 26,
@@ -214,11 +214,11 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.725
+      "meanPixelDifference": 2.385
     }
   ],
   "fontsEmbedded": true,
-  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "fontVerification": "pdffonts + embedded font streams",
   "pageSizePoints": [
     960,
     540

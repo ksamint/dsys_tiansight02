@@ -2,11 +2,11 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "exhibit",
   "profile": "internal",
-  "contentVersion": "708920274f5d67d6a57d037c51f0cf81d8337d35da7e6c866c07155b23fd92be",
+  "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "733a55b550a69770895ec46d784370e770d7534160fa9b891670d02667910cce",
-  "pdfSha256": "1f80607943deefb4917cd4489caa6cb4f3e494edf74e3e2e312edc6f092751a4",
-  "pageCount": 41,
+  "htmlSha256": "5a2ed5eb0a86e93c02e2fa54bcb6910e349d031bafb4d73c209af8fdb592d00a",
+  "pdfSha256": "e0a94acc00b09eec2c3195bbdeaa2e81bee1a20be5d1e71e0cd4645999fd11fd",
+  "pageCount": 33,
   "pages": [
     {
       "page": 1,
@@ -14,7 +14,7 @@
       "characters": 101,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 1.741
+      "meanPixelDifference": 2.173
     },
     {
       "page": 2,
@@ -22,7 +22,7 @@
       "characters": 110,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.806
+      "meanPixelDifference": 2.427
     },
     {
       "page": 3,
@@ -30,7 +30,7 @@
       "characters": 220,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.56
+      "meanPixelDifference": 2.848
     },
     {
       "page": 4,
@@ -38,7 +38,7 @@
       "characters": 105,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.631
+      "meanPixelDifference": 2.199
     },
     {
       "page": 5,
@@ -46,7 +46,7 @@
       "characters": 44,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.752
+      "meanPixelDifference": 2.469
     },
     {
       "page": 6,
@@ -54,7 +54,7 @@
       "characters": 142,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.925
+      "meanPixelDifference": 2.281
     },
     {
       "page": 7,
@@ -62,283 +62,219 @@
       "characters": 164,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.927
+      "meanPixelDifference": 2.33
     },
     {
       "page": 8,
-      "id": "e5b3a0d8-2f6c-4b91-8e47-91c2d6a5f0b3",
-      "characters": 129,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 3.134
-    },
-    {
-      "page": 9,
-      "id": "1f8c6e27-b4d3-4a59-9c02-7e5a3d81b6c4",
-      "characters": 247,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 3.869
-    },
-    {
-      "page": 10,
       "id": "6b98ca6f-126a-4a4e-85f3-fa44feb38344",
       "characters": 121,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.815
+      "meanPixelDifference": 2.448
     },
     {
-      "page": 11,
+      "page": 9,
       "id": "cecda97f-9fb6-40fa-b437-22da4bcb1395",
       "characters": 122,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.803
+      "meanPixelDifference": 2.445
     },
     {
-      "page": 12,
+      "page": 10,
       "id": "97aca518-0224-4cfd-823c-13e258967232",
       "characters": 44,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.807
+      "meanPixelDifference": 2.524
     },
     {
-      "page": 13,
+      "page": 11,
       "id": "9b1b891a-3fea-46e6-9eab-cf05efd17716",
       "characters": 145,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.806
+      "meanPixelDifference": 2.353
     },
     {
-      "page": 14,
+      "page": 12,
       "id": "1ebbbf22-f947-4331-9d56-e06f526c54db",
       "characters": 88,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.718
+      "meanPixelDifference": 2.439
     },
     {
-      "page": 15,
+      "page": 13,
       "id": "69a70c07-74f7-4269-bd23-b491dd6c7b68",
       "characters": 82,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.739
+      "meanPixelDifference": 2.484
     },
     {
-      "page": 16,
+      "page": 14,
       "id": "2c61e7ef-c71a-4ccb-8308-e7407dda3cf8",
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.779
+      "meanPixelDifference": 2.242
     },
     {
-      "page": 17,
+      "page": 15,
       "id": "bf00938c-e2a7-47a2-a11f-e609597ad24c",
       "characters": 44,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.712
+      "meanPixelDifference": 2.455
     },
     {
-      "page": 18,
+      "page": 16,
       "id": "76300fea-d62c-4907-8081-e9379fc4ef8d",
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.101
+      "meanPixelDifference": 2.64
     },
     {
-      "page": 19,
+      "page": 17,
       "id": "76d3d22d-c460-4b4c-ab4e-dd673ba5aae8",
       "characters": 122,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.056
+      "meanPixelDifference": 2.64
     },
     {
-      "page": 20,
+      "page": 18,
       "id": "f61420aa-efab-46d0-926e-0b53a9fe7f77",
       "characters": 84,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.754
+      "meanPixelDifference": 2.464
     },
     {
-      "page": 21,
+      "page": 19,
       "id": "54df294e-e1a0-43b2-8094-1f6a303c0788",
       "characters": 76,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.716
+      "meanPixelDifference": 2.472
     },
     {
-      "page": 22,
+      "page": 20,
       "id": "d2c0bdd1-2cdf-4c7a-90fe-14e39a5e2db1",
       "characters": 51,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.74
+      "meanPixelDifference": 2.4
     },
     {
-      "page": 23,
+      "page": 21,
       "id": "cbce9078-e6b6-4c22-ae8c-becc6b98c001",
       "characters": 146,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.2
+      "meanPixelDifference": 2.686
     },
     {
-      "page": 24,
+      "page": 22,
       "id": "d9a3002f-14cf-4f76-b061-81f6f58d9fc9",
       "characters": 167,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.406
+      "meanPixelDifference": 2.71
     },
     {
-      "page": 25,
-      "id": "b28ad6d5-1a75-4740-b42b-106d85f1384e",
-      "characters": 118,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 2.836
-    },
-    {
-      "page": 26,
-      "id": "f745a121-4a40-4240-aec6-b95fc669ed1a",
-      "characters": 93,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 2.821
-    },
-    {
-      "page": 27,
-      "id": "5b1a9bb8-0955-4cf6-831a-0fc3ab3f6158",
-      "characters": 82,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 2.765
-    },
-    {
-      "page": 28,
-      "id": "7a2d9c41-5e3b-4f86-a1c7-0b9e4d62f318",
-      "characters": 114,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 3.495
-    },
-    {
-      "page": 29,
-      "id": "c84f1b26-9d07-4e5a-b3f2-6a1e8c57d094",
-      "characters": 110,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 3.196
-    },
-    {
-      "page": 30,
+      "page": 23,
       "id": "ae882cb3-0355-4165-a9c2-092412fcd9f4",
       "characters": 47,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.701
+      "meanPixelDifference": 2.418
     },
     {
-      "page": 31,
+      "page": 24,
       "id": "d923b05d-df80-4feb-ab3e-fbce2b6512b9",
       "characters": 146,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.197
+      "meanPixelDifference": 2.697
     },
     {
-      "page": 32,
+      "page": 25,
       "id": "4ccad737-2ed1-464d-921f-e9e6bbdd6937",
       "characters": 158,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.912
+      "meanPixelDifference": 2.31
     },
     {
-      "page": 33,
+      "page": 26,
       "id": "adefb319-95e5-49d1-895b-19e4e4578013",
       "characters": 147,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.123
+      "meanPixelDifference": 2.656
     },
     {
-      "page": 34,
+      "page": 27,
       "id": "806e82b8-b93c-432d-a124-3fbd65816617",
       "characters": 150,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.195
+      "meanPixelDifference": 2.685
     },
     {
-      "page": 35,
+      "page": 28,
       "id": "08a3dfe9-79cd-4f7b-93df-a63f51bc5ff5",
       "characters": 43,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.38
+      "meanPixelDifference": 2.213
     },
     {
-      "page": 36,
+      "page": 29,
       "id": "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
       "characters": 247,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.717
+      "meanPixelDifference": 2.864
     },
     {
-      "page": 37,
+      "page": 30,
       "id": "5419cbed-e0d1-46a9-bd7b-393c6b260205",
       "characters": 259,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.781
+      "meanPixelDifference": 2.882
     },
     {
-      "page": 38,
+      "page": 31,
       "id": "ed451b90-dc1f-497d-82c3-d9cb095dd225",
       "characters": 293,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.74
+      "meanPixelDifference": 2.854
     },
     {
-      "page": 39,
+      "page": 32,
       "id": "8101bf62-d9e5-42da-84f6-107f597c4620",
       "characters": 323,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.873
+      "meanPixelDifference": 2.882
     },
     {
-      "page": 40,
-      "id": "9b4e2c7a-6d15-4f38-a0e9-3c7f5b18d2e6",
-      "characters": 205,
-      "textMatches": true,
-      "clippedWords": 0,
-      "meanPixelDifference": 3.655
-    },
-    {
-      "page": 41,
+      "page": 33,
       "id": "60f54dbe-8e06-45c8-b877-b1574f1e6bee",
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.728
+      "meanPixelDifference": 2.384
     }
   ],
   "fontsEmbedded": true,
-  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "fontVerification": "pdffonts + embedded font streams",
   "pageSizePoints": [
     960,
     540

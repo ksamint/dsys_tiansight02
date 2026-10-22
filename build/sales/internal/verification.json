@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "sales",
   "profile": "internal",
-  "contentVersion": "eec86ed28b3b0e0f21eee9179f32d7240615d30b7c1e5f9c8d19b8031686e200",
+  "contentVersion": "1116e661f54fd76043dea137c16b5aece38d4764877ce817c1bbbfbd8694948c",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "00ed43c2ebec4b565af31b101eac5fec4ac1c4529e8f97008fa141bac476c0fb",
-  "pdfSha256": "48a6138b0b59508c579908f143868ecaa77a3dcb5695791d5b3b6dcef619d10d",
+  "htmlSha256": "153fc7e9e18330754527219e3d1d86d6afce8d6509b34733abb96a7b34c27f37",
+  "pdfSha256": "9a6ddabbc80feca93ee3c5955ff5bdf6700b166f16e1b98e88303903acbfcc32",
   "pageCount": 14,
   "pages": [
     {
@@ -14,7 +14,7 @@
       "characters": 98,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 1.374
+      "meanPixelDifference": 1.693
     },
     {
       "page": 2,
@@ -22,7 +22,7 @@
       "characters": 291,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.803
+      "meanPixelDifference": 2.852
     },
     {
       "page": 3,
@@ -30,7 +30,7 @@
       "characters": 46,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.237
+      "meanPixelDifference": 2.172
     },
     {
       "page": 4,
@@ -38,7 +38,7 @@
       "characters": 257,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.466
+      "meanPixelDifference": 2.538
     },
     {
       "page": 5,
@@ -46,7 +46,7 @@
       "characters": 444,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.244
+      "meanPixelDifference": 2.798
     },
     {
       "page": 6,
@@ -54,7 +54,7 @@
       "characters": 47,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.473
+      "meanPixelDifference": 2.188
     },
     {
       "page": 7,
@@ -62,7 +62,7 @@
       "characters": 227,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.198
+      "meanPixelDifference": 2.436
     },
     {
       "page": 8,
@@ -70,7 +70,7 @@
       "characters": 285,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.323
+      "meanPixelDifference": 2.494
     },
     {
       "page": 9,
@@ -78,7 +78,7 @@
       "characters": 273,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.792
+      "meanPixelDifference": 2.862
     },
     {
       "page": 10,
@@ -86,7 +86,7 @@
       "characters": 145,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.485
+      "meanPixelDifference": 2.637
     },
     {
       "page": 11,
@@ -94,7 +94,7 @@
       "characters": 326,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.368
+      "meanPixelDifference": 2.439
     },
     {
       "page": 12,
@@ -102,7 +102,7 @@
       "characters": 153,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 3.76
+      "meanPixelDifference": 3.016
     },
     {
       "page": 13,
@@ -110,7 +110,7 @@
       "characters": 172,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 4.088
+      "meanPixelDifference": 3.137
     },
     {
       "page": 14,
@@ -118,11 +118,11 @@
       "characters": 116,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.728
+      "meanPixelDifference": 2.385
     }
   ],
   "fontsEmbedded": true,
-  "fontVerification": "PyMuPDF font files or Type3 glyph streams and Unicode maps (pdffonts unavailable)",
+  "fontVerification": "pdffonts + embedded font streams",
   "pageSizePoints": [
     960,
     540

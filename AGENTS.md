@@ -27,4 +27,7 @@ Run `python3 scripts/content_lib.py --check`, `python3 scripts/build_assets.py -
 `python3 scripts/build_deck.py --all --check`, `python3 scripts/check.py --render`,
 `node scripts/test_component_runtime.mjs` and `python3 scripts/build_preview.py`.
 `python3 scripts/release.py <deck>` prepares PDFs and `latestBuilt` for review only.
-Never set `latestApproved`, merge, tag or deploy without production review authorization.
+Approval is `python3 scripts/release.py <deck> --approve`, which writes `content/approvals.json`;
+run it only when the production review has authorized it. Never edit `latestApproved` by hand,
+merge, tag or deploy without production review authorization. Slides with `publish: hold` stay
+out of every profile filter and never ship under `build/`.

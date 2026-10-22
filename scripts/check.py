@@ -291,6 +291,18 @@ for command in ([sys.executable, 'scripts/build_component_runtime.py', '--check'
     if run.returncode:
         problems.append(' '.join(command) + ': ' + (run.stdout + run.stderr).strip().replace('\n', ' '))
 
+# Public repository: slides on hold (待确认后发布) stay in the library but never ship in build/.
+for manifest_path in sorted((root / 'content/decks').glob('*.json')):
+    for profile, spec in json.loads(manifest_path.read_text()).get('profiles', {}).items():
+        if 'hold' in spec.get('publish', []):
+            problems.append(f'{manifest_path.relative_to(root)}: profile {profile} publishes hold slides')
+hold_ids = sorted(json.loads(p.read_text())['id'] for p in (root / 'content/slides').glob('*.json') if json.loads(p.read_text()).get('publish') == 'hold')
+for page in sorted((root / 'build').glob('*/*/index.html')):
+    text = page.read_text()
+    for sid in hold_ids:
+        if sid in text:
+            problems.append(f'{page.relative_to(root)}: hold slide {sid} in a committed build')
+
 from lint_html import lint
 for page in sorted((root / 'build').glob('*/*/index.html')):
     errors = lint(page)

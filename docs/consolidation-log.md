@@ -1000,3 +1000,53 @@ Production review owns merge/deploy/tag/approval. `latestBuilt` is populated for
 exhibit and sales; all `latestApproved` fields remain null. Formal self-hosted runner
 availability remains unverified because authorized organization readback returned 403; the
 existing hosted CI fallback is preserved, with reversible runner variables ready.
+
+## Review fixes · 2026-10-22
+
+PR #4 review, three required items, applied as new commits on top of `21d1478`.
+
+1. Hold slides out of committed outputs. The owner's registry defines `hold` as 待确认后发布,
+   yet every manifest's `internal` profile listed `hold`, so eight hold slides shipped in
+   `build/exhibit/internal/` (HTML, PDF and verification record) of a public repository.
+   Path taken: the preferred one. `hold` is removed from the `internal` filter of all four
+   manifests and from the filter vocabulary in `content_lib.validate_manifest`; hold records
+   stay in the library as `status: maintained` with their notes and are simply not built until
+   cleared. Outputs were regenerated only through the repository commands
+   (`python3 scripts/build_deck.py --all`, then `python3 scripts/release.py intro`, `exhibit`,
+   `sales`) on the same toolchain as Phase F: PyMuPDF/Pillow found in the unpacked uv wheel
+   cache by `scripts/pdf_tooling.py`, Chromium through `scripts/playwright.mjs`. `pdffonts` is
+   present on this host, so the new verification records cite `pdffonts + embedded font
+   streams`. Page counts: exhibit internal 41 → 33 (client 33, web 26 unchanged); intro stays
+   52/47/43 because the two intro-owned hold slides (游园京梦 一/二) are referenced only by
+   the exhibit manifest; sales stays 14/13/13. Every `contentVersion` changes because the
+   manifest is part of the hash; `latestBuilt` follows, `latestApproved` stays null. The gate
+   now fails on any manifest profile that lists `hold` and on any hold slide id found in a
+   committed `build/*/*/index.html`; the contract tests cover both the filter rejection and
+   the profile exclusion. Three checks that assumed the internal build equals the whole
+   manifest were corrected rather than loosened: `snapshots/layout.json` is re-captured
+   (exhibit internal 41 → 33 sections, the only drift); `scripts/test_migration.mjs` maps each
+   exhibit baseline entry to its manifest slide id, compares the 33 built slides verbatim and
+   reports the 8 hold texts as retained in the baseline but not built; and
+   `scripts/test_component_runtime.mjs` derives the expected slide ids from the `internal`
+   filter and the slide records (its previous `status` filter never matched the catalog
+   entries) and asserts the approved exhibit values (按项目约定, +22.2%, −19.2%) render exactly
+   when the slide that owns them is published, since all three belong to hold slides.
+
+2. Approval mechanism. `content/approvals.json` (`tiansight.approvals/1`, committed with an
+   empty `decks` object; nothing is approved) is the only input to `latestApproved`.
+   `content_lib.catalog()` and `scripts/build_deck_catalog.mjs` both resolve it: an entry sets
+   `latestApproved` only while its `contentVersion` and `systemVersion` equal the deck's current
+   ones, otherwise null, and an entry for an unknown deck fails the build. The prior behaviour
+   of carrying `latestApproved` over from the existing catalog file is removed, so a stale
+   approval cannot survive a content change. `python3 scripts/release.py <deck> --approve
+   [--by owner|production-review]` copies the current `latestBuilt` versions into the file and
+   regenerates the catalog; it refuses when `latestBuilt` is unset or stale against the current
+   content/system version. Documented in `docs/architecture.md`, `docs/maintaining.md` §8,
+   `AGENTS.md` and the README command index; two new contract regressions (15 in total).
+
+3. Workflow runner. `.github/workflows/pages.yml` runs both jobs on `ubuntu-latest` again; the
+   `fromJSON(vars.*_RUNNER_LABELS ...)` indirection is gone. `persist-credentials: false` and the
+   pinned PDF identity tooling step are kept. `poppler-utils` is not added: `pdffonts` is called
+   only by `scripts/verify_pdf.py`, which runs during `release.py`, never in CI; the CI gate's
+   PDF check (`build_deck.py --all --check`) uses PyMuPDF only, and the fallback in
+   `verify_pdf.py` records when `pdffonts` was unavailable.

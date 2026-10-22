@@ -98,5 +98,9 @@ Edit canonical slides, cases or shared records, then rebuild consuming manifests
 `python3 scripts/build_deck.py --all`. Never copy shared content. Register source and approval
 for every asset; run `python3 scripts/build_assets.py`. Regenerate the catalog, then run the
 gate and runtime checks. Prepare local review PDFs using `python3 scripts/release.py <deck>`.
-The catalog separates `latestBuilt` from `latestApproved`; only production review sets approval.
+The catalog separates `latestBuilt` from `latestApproved`; only production review sets approval,
+with `python3 scripts/release.py <deck> --approve --by production-review` (or `--by owner`), which
+writes `content/approvals.json`; an approval lapses to null as soon as the deck's content or runtime
+version changes. Slides on hold (`publish: hold`) are never listed in a profile filter and never
+appear under `build/`.
 Historical source snapshots are in `archive/`, excluded from preview. See `docs/architecture.md`.

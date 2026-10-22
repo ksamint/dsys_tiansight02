@@ -322,7 +322,12 @@
           }
         }
       },
-      "latestApproved": null
+      "latestApproved": {
+        "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
+        "systemVersion": "2026.10.21-e0a760",
+        "approvedAt": "2026-10-22",
+        "by": "production-review"
+      }
     },
     {
       "id": "intro",
@@ -721,7 +726,12 @@
           }
         }
       },
-      "latestApproved": null
+      "latestApproved": {
+        "contentVersion": "be77ac3d442e78d58d9ef148b70d39390eda53ad377572aec38902c1cde01631",
+        "systemVersion": "2026.10.21-e0a760",
+        "approvedAt": "2026-10-22",
+        "by": "production-review"
+      }
     },
     {
       "id": "kitchen",
@@ -1234,7 +1244,12 @@
           }
         }
       },
-      "latestApproved": null
+      "latestApproved": {
+        "contentVersion": "1116e661f54fd76043dea137c16b5aece38d4764877ce817c1bbbfbd8694948c",
+        "systemVersion": "2026.10.21-e0a760",
+        "approvedAt": "2026-10-22",
+        "by": "production-review"
+      }
     }
   ]
 }

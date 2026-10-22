@@ -48,7 +48,7 @@ paraphrase it.
 | 报告样张 Report sample | The deliverable itself: 决策维度 / 分析维度 / 趋势与归因 / 方法论地图 pages, plus the five insight matrices (渗透率矩阵, 商圈供需洞察, 复购分层四象限, 利润敏感性矩阵, 价格带断层洞察) | `ui_kits/report/` |
 | 销售提案 Sales deck | 16:9 deck pitching 侍天 to a restaurant owner — 14 slides: 主张 → 服务内容 (四个阶段) → 服务模式 → 方法论 (第二大脑 · 样张 · 图谱) → 价值 → 案例 → 伙伴 → 创始团队 → 联系 | `content/decks/sales.json`, `build/sales/` |
 | 企业介绍 v3 Company intro | 47-page client profile from `guidelines/company-intro-v3.md`, plus internal registry slides | `content/decks/intro.json`, `build/intro/` |
-| 展陈与厨房设计 Exhibit | 41 approved pages on the shared runtime and canonical team/contact slides | `content/decks/exhibit.json`, `build/exhibit/` |
+| 展陈与厨房设计 Exhibit | 41 registry slides on the shared runtime with canonical team/contact slides; 33 build today, 8 `hold` pages wait for owner confirmation | `content/decks/exhibit.json`, `build/exhibit/` |
 | 全周期图谱 Lifecycle map | 餐饮经营全周期图谱 — flow map, single-store Gantt and 3D views over 60 decisions | `deliverables/lifecycle-map/` |
 | 报告模板 Report template | 39-page 1920×1080 Slides template: report standards plus a sample of each of the 27 page types, clickable PDF; built with the report kit (`tsk`) | `deliverables/report-template/`, `templates/report-kit/`, `docs/report-handbook.md` |
 

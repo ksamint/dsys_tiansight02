@@ -1,0 +1,22 @@
+{
+  "id": "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
+  "label": "节首 · 一",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "从开店到连锁"
+  ],
+  "publish": "banner",
+  "purpose": "第一章节首：从开店到连锁。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 1,
+    "title": "从开店到连锁",
+    "subtitle": "新店开业 · 概念开创 · 经营复盘 · 连锁督导",
+    "image": {
+      "$asset": "assets/deck/section-1.jpg"
+    }
+  }
+}

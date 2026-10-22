@@ -1,0 +1,42 @@
+{
+  "id": "d08c13a5-d95f-4d16-a212-7cf71ba95537",
+  "label": "明档尺度",
+  "cat": "design",
+  "type": "tiers",
+  "tags": [
+    "用餐体验",
+    "明档"
+  ],
+  "publish": "web",
+  "purpose": "四种明档尺度及适合的品类。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "LadderSlide",
+  "props": {
+    "eyebrow": "用餐体验 · 明档尺度",
+    "title": "四种明档形式，按品类与客单选择",
+    "gotLabel": "适合",
+    "tiers": [
+      {
+        "tier": "WINDOW",
+        "name": "玻璃窗口",
+        "got": "面点、包点；可见，隔声隔味。"
+      },
+      {
+        "tier": "OPEN LINE",
+        "name": "开放明档",
+        "got": "烧烤、炒锅；炉火即卖点。"
+      },
+      {
+        "tier": "COUNTER",
+        "name": "板前吧台",
+        "got": "刺身、铁板、日料；厨师与顾客直接交流。"
+      },
+      {
+        "tier": "ISLAND",
+        "name": "中央岛台",
+        "got": "自助、宴会、酒店；多面出品与展示。"
+      }
+    ]
+  }
+}

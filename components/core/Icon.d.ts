@@ -2,7 +2,7 @@ import * as React from "react";
 
 /**
  * 侍天's own hairline glyph, stroked in currentColor.
- * Brand set (assets/icons.svg, inlined): arrow-right, arrow-up-right, arrow-left,
+ * Brand set (assets/logo/icons.svg, inlined): arrow-right, arrow-up-right, arrow-left,
  * arrow-down, chevron-down, check, cross, menu, external, print, chart, compass,
  * route, correction, store, data, seal.
  * Aliases mapping onto it: x/close→cross, line-chart/trending-up→chart,

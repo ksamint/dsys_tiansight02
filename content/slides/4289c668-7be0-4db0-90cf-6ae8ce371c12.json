@@ -1,0 +1,18 @@
+{
+  "id": "4289c668-7be0-4db0-90cf-6ae8ce371c12",
+  "label": "案例 08 · 吴裕泰",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例",
+    "茶饮"
+  ],
+  "publish": "web",
+  "purpose": "伙伴案例：吴裕泰。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseStudySlide",
+  "props": {
+    "$case": "case-08"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "adefb319-95e5-49d1-895b-19e4e4578013",
+  "label": "交付物",
+  "cat": "design",
+  "type": "table",
+  "tags": [
+    "落地",
+    "交付物"
+  ],
+  "publish": "web",
+  "purpose": "设计服务交付物清单：需求、方案、深化、采购安装、陪跑。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "eyebrow": "落地方式 · 交付物",
+    "title": "各阶段交付物",
+    "subtitle": "",
+    "corner": "阶段",
+    "columns": [
+      "交付物"
+    ],
+    "rows": [
+      {
+        "label": "需求",
+        "cells": [
+          "现场报告、问题清单、菜单工艺分析"
+        ]
+      },
+      {
+        "label": "方案",
+        "cells": [
+          "功能分区图、动线图、明档与照明方案、三维模型"
+        ]
+      },
+      {
+        "label": "深化",
+        "cells": [
+          "设备清单与参数表、水电气排烟点位图、食品安全流程图"
+        ]
+      },
+      {
+        "label": "采购安装",
+        "cells": [
+          "比价表、安装记录、调试记录"
+        ]
+      },
+      {
+        "label": "陪跑",
+        "cells": [
+          "高峰观察记录、整改清单、复查结论"
+        ]
+      }
+    ],
+    "footnote": null
+  }
+}

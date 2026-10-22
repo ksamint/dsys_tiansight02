@@ -1,0 +1,17 @@
+{
+  "id": "1bef457e-aada-4eb7-9e63-52697e2698c7",
+  "label": "从经验到体系",
+  "cat": "kitchen",
+  "type": "steps",
+  "tags": [
+    "管理体系",
+    "精细化",
+    "数据化",
+    "标准化",
+    "系统化"
+  ],
+  "publish": "web",
+  "purpose": "从经验管理到体系运行的四步。",
+  "owner": "kitchen",
+  "status": "planned"
+}

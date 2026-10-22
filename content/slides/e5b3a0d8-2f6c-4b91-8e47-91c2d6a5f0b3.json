@@ -1,0 +1,57 @@
+{
+  "id": "e5b3a0d8-2f6c-4b91-8e47-91c2d6a5f0b3",
+  "label": "光与视觉",
+  "cat": "design",
+  "type": "table",
+  "tags": [
+    "用餐体验",
+    "照明",
+    "摆盘",
+    "点单",
+    "客单",
+    "研究"
+  ],
+  "publish": "hold",
+  "purpose": "侍天在光线、摆盘、氛围上的四项做法与待验证目标。",
+  "evidence": "external",
+  "note": "保留方法页；结果表述为待验证目标，不承诺门店收益。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "eyebrow": "用餐体验 · 光与视觉",
+    "title": "光与视觉，设定目标再验证",
+    "subtitle": "",
+    "corner": "侍天做什么",
+    "columns": [
+      "待验证的目标"
+    ],
+    "rows": [
+      {
+        "label": "调光线",
+        "cells": [
+          "调整照度与显色，验证招牌菜点单占比"
+        ]
+      },
+      {
+        "label": "定摆盘",
+        "cells": [
+          "统一摆盘与盛器，验证顾客价格感知"
+        ]
+      },
+      {
+        "label": "造氛围",
+        "cells": [
+          "调整光与声环境，跟踪顾客评价"
+        ]
+      },
+      {
+        "label": "做对照",
+        "cells": [
+          "改造前后对照点单占比与客单价"
+        ]
+      }
+    ],
+    "footnote": null
+  }
+}

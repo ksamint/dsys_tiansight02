@@ -1,0 +1,14 @@
+{
+  "id": "33893f5d-97d4-4059-9385-b23b7f02b465",
+  "label": "品控工具",
+  "cat": "kitchen",
+  "type": "cards",
+  "tags": [
+    "品控",
+    "工具"
+  ],
+  "publish": "web",
+  "purpose": "品控工具清单。",
+  "owner": "kitchen",
+  "status": "planned"
+}

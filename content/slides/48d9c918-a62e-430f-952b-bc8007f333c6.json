@@ -1,0 +1,39 @@
+{
+  "id": "48d9c918-a62e-430f-952b-bc8007f333c6",
+  "label": "商圈供需与复购分层",
+  "cat": "system",
+  "type": "screens",
+  "tags": [
+    "商圈",
+    "复购"
+  ],
+  "publish": "web",
+  "purpose": "商圈供需洞察与复购分层四象限截图。",
+  "evidence": "sample",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "方法论 · 商圈与复购",
+    "title": "商圈供需\n与复购分层",
+    "body": "看清周边竞品与供需缺口，按复购表现给顾客分层。",
+    "note": {
+      "$case": "case-05",
+      "$view": "snippet:48d9c918-a62e-430f-952b-bc8007f333c6-1"
+    },
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/screens/trade-area-supply.jpg"
+        },
+        "caption": "商圈供需洞察 · 周边竞品与供需缺口"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/repurchase-quadrant.jpg"
+        },
+        "caption": "复购分层四象限"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "10a2cbd4-90b1-453e-9ba9-7627f1e03342",
+  "label": "运行节奏",
+  "cat": "kitchen",
+  "type": "table",
+  "tags": [
+    "落地",
+    "例会",
+    "节奏"
+  ],
+  "publish": "web",
+  "purpose": "日、周、月的运行节奏表。",
+  "owner": "kitchen",
+  "status": "planned"
+}

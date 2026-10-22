@@ -1,0 +1,18 @@
+{
+  "id": "fa570563-6805-4835-bf60-5c5d15441864",
+  "label": "案例 04 · 苏帮袁",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例",
+    "苏帮菜"
+  ],
+  "publish": "web",
+  "purpose": "伙伴案例：苏帮袁。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseStudySlide",
+  "props": {
+    "$case": "case-04"
+  }
+}

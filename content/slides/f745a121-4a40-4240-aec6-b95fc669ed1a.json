@@ -1,0 +1,32 @@
+{
+  "id": "f745a121-4a40-4240-aec6-b95fc669ed1a",
+  "label": "服务经历",
+  "cat": "proof",
+  "type": "logos",
+  "tags": [
+    "酒店",
+    "国际酒店集团"
+  ],
+  "publish": "hold",
+  "purpose": "合作方服务过的国际酒店集团。",
+  "evidence": "partner",
+  "note": "任务所有者已批准纳入本次设计系统发行；官网同步不在本任务范围。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "设备与交付 · 合作方",
+    "title": "国际酒店集团\n服务经历",
+    "body": "喜⁠达⁠屋、凯⁠宾⁠斯⁠基、温⁠德⁠姆、希⁠尔⁠顿、万⁠豪、凯⁠悦、雅⁠高、洲⁠际。",
+    "note": "设备合作方服务过的酒店集团。",
+    "layout": "row",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/exhibit/hotels.jpg"
+        },
+        "caption": "国际酒店集团项目"
+      }
+    ]
+  }
+}

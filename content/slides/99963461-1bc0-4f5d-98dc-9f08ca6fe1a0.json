@@ -1,0 +1,56 @@
+{
+  "id": "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+  "label": "产品界面",
+  "cat": "system",
+  "type": "screens",
+  "tags": [
+    "产品",
+    "经营看板",
+    "截图"
+  ],
+  "publish": "web",
+  "purpose": "第二大脑平台界面截图：看板与移动端复盘。",
+  "evidence": "sample",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "方法论 · 产品界面",
+    "title": "经营看板，\n持续跟踪同一组数据",
+    "body": "诊断之后，看板按周月跟踪同一组指标，从矩阵到单品，再到手机上的复盘。",
+    "note": "产品界面为演示界面 · 模拟数据，非客户数据",
+    "layout": "grid",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/screens/dashboard-1.jpg"
+        },
+        "caption": "经营看板"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/dashboard-2.jpg"
+        },
+        "caption": "矩阵四象限"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/dashboard-3.jpg"
+        },
+        "caption": "SKU 画像"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/dashboard-4.jpg"
+        },
+        "caption": "来源审计"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/mobile-review.jpg"
+        },
+        "caption": "移动端复盘"
+      }
+    ]
+  }
+}

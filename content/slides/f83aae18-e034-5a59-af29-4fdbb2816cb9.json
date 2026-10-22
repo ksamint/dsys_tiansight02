@@ -1,0 +1,17 @@
+{
+  "id": "f83aae18-e034-5a59-af29-4fdbb2816cb9",
+  "label": "节首 · 服务内容",
+  "owner": "sales",
+  "cat": "service",
+  "type": "cards",
+  "tags": [],
+  "publish": "web",
+  "purpose": "节首 · 服务内容",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 1,
+    "title": "从概念到连锁",
+    "subtitle": "开店之前 · 经营之中 · 每月复盘 · 复制扩张"
+  }
+}

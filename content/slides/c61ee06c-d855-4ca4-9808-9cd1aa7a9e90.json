@@ -1,0 +1,21 @@
+{
+  "id": "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
+  "label": "专家团 · 余向东",
+  "cat": "team",
+  "type": "profile",
+  "tags": [
+    "人物",
+    "专家",
+    "后厨设计",
+    "展陈"
+  ],
+  "publish": "web",
+  "purpose": "余向东个人介绍：后厨设计与展陈项目经历。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProfileSlide",
+  "props": {
+    "$team": "余向东",
+    "eyebrow": "团队 · 专家团"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "07d7592f-5464-42ed-9919-9b483d6f3de4",
+  "label": "应急预案",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "管理体系",
+    "应急"
+  ],
+  "publish": "web",
+  "purpose": "应急预案现场张贴实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

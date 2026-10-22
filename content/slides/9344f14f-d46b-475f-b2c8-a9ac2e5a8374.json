@@ -1,0 +1,16 @@
+{
+  "id": "9344f14f-d46b-475f-b2c8-a9ac2e5a8374",
+  "label": "洗手设施",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "食安",
+    "洗手"
+  ],
+  "publish": "web",
+  "purpose": "洗手设施实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

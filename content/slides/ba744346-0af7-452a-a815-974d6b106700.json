@@ -1,0 +1,39 @@
+{
+  "id": "ba744346-0af7-452a-a815-974d6b106700",
+  "label": "团队",
+  "cat": "team",
+  "type": "roster",
+  "tags": [
+    "团队",
+    "联合创始人",
+    "专家团"
+  ],
+  "publish": "web",
+  "purpose": "团队总览：两位联合创始人与两位专家。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ExpertTeamSlide",
+  "props": {
+    "eyebrow": "团队 · 联合创始人与专家团",
+    "title": "产品决定顾客的选择，组织决定承诺能否兑现。",
+    "subtitle": "侍天把这两件事放在同一张经营蓝图里。",
+    "experts": [
+      {
+        "$team": "边江",
+        "$view": "seat"
+      },
+      {
+        "$team": "郭峰",
+        "$view": "seat"
+      },
+      {
+        "$team": "李权超",
+        "$view": "seat"
+      },
+      {
+        "$team": "余向东",
+        "$view": "seat"
+      }
+    ]
+  }
+}

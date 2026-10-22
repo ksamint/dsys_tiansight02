@@ -1,0 +1,14 @@
+{
+  "id": "a2233e73-f720-4175-94f7-a88259d0f014",
+  "label": "三个机制",
+  "cat": "kitchen",
+  "type": "promise",
+  "tags": [
+    "落地",
+    "机制"
+  ],
+  "publish": "web",
+  "purpose": "保证标准落地的三个机制。",
+  "owner": "kitchen",
+  "status": "planned"
+}

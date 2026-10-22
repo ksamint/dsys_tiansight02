@@ -1,0 +1,13 @@
+{
+  "id": "bf0552b6-86e5-5668-8cff-2dffc0ddbe58",
+  "label": "餐饮第二大脑",
+  "owner": "sales",
+  "cat": "service",
+  "type": "cards",
+  "tags": [],
+  "publish": "web",
+  "purpose": "餐饮第二大脑",
+  "status": "maintained",
+  "component": "LadderSlide",
+  "props": {}
+}

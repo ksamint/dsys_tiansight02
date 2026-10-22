@@ -1,0 +1,16 @@
+{
+  "id": "8183d369-af25-4844-8f0d-7150333d869d",
+  "label": "分装标识",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "储存",
+    "标识"
+  ],
+  "publish": "web",
+  "purpose": "分装与标识实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

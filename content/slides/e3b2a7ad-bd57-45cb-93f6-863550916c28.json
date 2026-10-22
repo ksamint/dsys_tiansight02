@@ -1,0 +1,15 @@
+{
+  "id": "e3b2a7ad-bd57-45cb-93f6-863550916c28",
+  "label": "风险识别",
+  "cat": "kitchen",
+  "type": "cards",
+  "tags": [
+    "管理体系",
+    "食安",
+    "风险"
+  ],
+  "publish": "web",
+  "purpose": "后厨风险识别清单。",
+  "owner": "kitchen",
+  "status": "planned"
+}

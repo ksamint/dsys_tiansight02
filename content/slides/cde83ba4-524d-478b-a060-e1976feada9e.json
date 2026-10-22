@@ -1,0 +1,16 @@
+{
+  "id": "cde83ba4-524d-478b-a060-e1976feada9e",
+  "label": "设备责任卡",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "设备",
+    "责任"
+  ],
+  "publish": "web",
+  "purpose": "设备责任卡实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

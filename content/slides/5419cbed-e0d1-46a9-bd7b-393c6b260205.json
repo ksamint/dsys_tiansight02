@@ -1,0 +1,21 @@
+{
+  "id": "5419cbed-e0d1-46a9-bd7b-393c6b260205",
+  "label": "专家团 · 李权超",
+  "cat": "team",
+  "type": "profile",
+  "tags": [
+    "人物",
+    "专家",
+    "出品",
+    "厨政"
+  ],
+  "publish": "web",
+  "purpose": "李权超个人介绍：出品与厨政管理经历。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProfileSlide",
+  "props": {
+    "$team": "李权超",
+    "eyebrow": "团队 · 专家团"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "7dd147e8-c3c8-412a-a6db-001140f41a34",
+  "label": "利润归因",
+  "cat": "system",
+  "type": "chart",
+  "tags": [
+    "利润",
+    "归因",
+    "瀑布图"
+  ],
+  "publish": "web",
+  "purpose": "利润归因瀑布图：去年同期到当期按驱动因素拆分。",
+  "evidence": "sample",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ChartSlide",
+  "props": {
+    "eyebrow": "方法论 · 经营洞察图谱",
+    "figure": "waterfall"
+  }
+}

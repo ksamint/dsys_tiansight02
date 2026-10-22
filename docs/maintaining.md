@@ -13,9 +13,10 @@ Each layer derives from the one above it. Never edit a lower layer to change a v
 | 1 | Live brand record (IPTrust) | https://apuch.art/api/brands/tiansight.json | the brand owner |
 | 2 | Checked-in snapshot | `brand/source.json` (version, theme, logo, `ip`), `brand/guide.md` | §3 below |
 | 3 | Foundation | `brand/tokens.css` → `brand/tokens.json` (`scripts/export_tokens.py`), `brand/base.css`, `brand/components.css` | PR, gate |
-| 4 | Distribution | `dist/` (`scripts/build_dist.py`) | generated |
-| 5 | Consumers | `deck/`, `website/`, `report/`, `people/`, `html-system/`, `templates/`, `deliverables/` | PR, gate; colours only from tokens |
-| 6 | Claude exports | Design System artifact, Slides artifacts (see `github.md`) | re-exported from the repo, never edited first |
+| 4 | Content | `content/` (slides, decks, cases, shared data) | PR, gate |
+| 5 | Distribution | `dist/` (`scripts/build_dist.py`); component runtime `dist/components/current.json` (`scripts/build_component_runtime.py`) | generated |
+| 6 | Consumers | `deck/`, `website/`, `report/`, `people/`, `html-system/`, `templates/`, `deliverables/` | PR, gate; colours only from tokens |
+| 7 | Claude exports | Design System artifact, Slides artifacts (see `github.md`) | re-exported from the repo, never edited first |
 
 Fixed decisions (owner-confirmed 2026-10-14):
 - Display name: **侍天 TIANSIGHT** everywhere. 侍天 - 智慧餐饮 and tiansight are registry values in `brand/source.json` → `ip`; they are not display copy.
@@ -57,7 +58,13 @@ python3 scripts/check.py --render              # + layout snapshots (needs globa
 python3 scripts/build_preview.py               # what CI runs (.github/workflows/pages.yml)
 python3 deliverables/report-template/gen/template_deck.py         # regenerate the report template
 bash templates/report-kit/build.sh <deck.py> <deck dir> [out.pdf] # Slides deck: rules, lint, render, colour, PDF
-cd deliverables/company-intro-v3/gen && python3 gen.py            # regenerate the company intro
+python3 scripts/build_deck.py --all              # canonical library → maintained decks
+python3 scripts/build_deck.py --all --check
+python3 scripts/build_assets.py --check
+python3 scripts/content_lib.py --check
+node scripts/build_deck_catalog.mjs --check
+python3 scripts/release.py intro                 # verified PDFs + latestBuilt; not approval
+node scripts/test_component_runtime.mjs
 ```
 
 A deliverable is fresh only when its generator reproduces the committed files: `check.py` fails otherwise.
@@ -66,7 +73,7 @@ Rebuild PDFs with `build.sh` whenever slides change. It needs the patched Slides
 
 ## 5. Claude artifacts
 
-- **Design System artifact 「侍天 TIANSIGHT」**: https://claude.ai/artifact/3HezHydMsfPFPqnbSbxv7K. Snapshot and import steps are in `docs/claude-design-system/` (`SYNC.md`).
+- **Design System artifact 「侍天 TIANSIGHT」**: https://claude.ai/artifact/3HezHydMsfPFPqnbSbxv7K. Snapshot and import steps are in `archive/claude-design-system-v13/` (`SYNC.md`).
 - **Slides 「侍天 TIANSIGHT 报告模板」**: https://claude.ai/artifact/3diuZp85itTBg8knhmuG5P. To refresh it, regenerate with `TSK_BLOBS=<blobs.json>` into a scratch folder, then publish `deck.json` plus `slides/*.html` as `project/…` together with the design-system tokens entry (see `templates/report-kit/README.md`).
 - After each re-export, add a dated entry to `github.md`: what changed and which artifact versions.
 - Artifacts are private until their owner shares them.
@@ -84,3 +91,16 @@ Where sensitive material lives instead: private repositories or artifacts per cl
 ## 7. Release notes
 
 Every merged PR adds a `CHANGELOG.md` entry under the current `brand/VERSION`. New commands go in `README.md` (§6 Index) and, for skills, in `skills/README.md`.
+
+## 8. Slide library workflow
+
+Edit canonical slides, cases or shared records, then rebuild consuming manifests with
+`python3 scripts/build_deck.py --all`. Never copy shared content. Register source and approval
+for every asset; run `python3 scripts/build_assets.py`. Regenerate the catalog, then run the
+gate and runtime checks. Prepare local review PDFs using `python3 scripts/release.py <deck>`.
+The catalog separates `latestBuilt` from `latestApproved`; only production review sets approval,
+with `python3 scripts/release.py <deck> --approve --by production-review` (or `--by owner`), which
+writes `content/approvals.json`; an approval lapses to null as soon as the deck's content or runtime
+version changes. Slides on hold (`publish: hold`) are never listed in a profile filter and never
+appear under `build/`.
+Historical source snapshots are in `archive/`, excluded from preview. See `docs/architecture.md`.

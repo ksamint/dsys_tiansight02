@@ -1,0 +1,36 @@
+{
+  "id": "08d447c4-1e58-45c1-83b2-9f28976cdd7f",
+  "label": "主张",
+  "cat": "design",
+  "type": "promise",
+  "tags": [
+    "主张",
+    "明档",
+    "出品",
+    "效率"
+  ],
+  "publish": "web",
+  "purpose": "主张：出品可见、品质稳定、高峰高效。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "PromiseSlide",
+  "props": {
+    "eyebrow": "主张",
+    "title": "菜单定厨房，厨房定体验。",
+    "body": "以品项结构与高峰销量为依据，统筹明档、工位与设备。",
+    "points": [
+      {
+        "label": "出品可见",
+        "note": "明档与展陈呈现制作标准。"
+      },
+      {
+        "label": "品质稳定",
+        "note": "标准出品台与工具定位。"
+      },
+      {
+        "label": "高峰高效",
+        "note": "分区、设备与动线支撑高峰。"
+      }
+    ]
+  }
+}

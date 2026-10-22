@@ -1,0 +1,80 @@
+{
+  "id": "03051a0b-475c-4847-a438-ab022540c12f",
+  "label": "团队案例 · 组织与后厨",
+  "cat": "team",
+  "type": "stats",
+  "tags": [
+    "团队",
+    "组织",
+    "后厨",
+    "履历"
+  ],
+  "publish": "web",
+  "purpose": "团队过往服务中的组织与后厨成果。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "StatColumnsSlide",
+  "props": {
+    "title": "企业大学、出品与后厨",
+    "subtitle": "把方法沉淀进组织",
+    "source": null,
+    "columns": [
+      {
+        "title": "餐饮企业大学",
+        "stats": [
+          {
+            "value": "20+",
+            "label": "定制化教练式培训",
+            "note": "跨国企业及国央企 CXO"
+          },
+          {
+            "value": "10+",
+            "label": "高校师资教练课程"
+          },
+          {
+            "value": "0 → 1",
+            "label": "EHL 在华业务落地",
+            "note": "延伸至欧洲、中东、非洲"
+          }
+        ]
+      },
+      {
+        "title": "五星级酒店出品体系",
+        "stats": [
+          {
+            "value": "20 家",
+            "label": "五星级酒店",
+            "note": "开业筹备与出品统筹"
+          },
+          {
+            "value": "15 年",
+            "label": "中餐出品总监",
+            "note": "世纪金源酒店集团"
+          },
+          {
+            "value": "近 30",
+            "label": "国家和地区",
+            "note": "中餐文化交流与厨艺展演"
+          }
+        ]
+      },
+      {
+        "title": "后厨设计落地",
+        "stats": [
+          {
+            "value": "近 30 年",
+            "label": "后厨效率管理与设备展陈设计"
+          },
+          {
+            "value": "6+",
+            "label": "代表落地品牌",
+            "note": {
+              "$case": "case-06",
+              "$view": "snippet:03051a0b-475c-4847-a438-ab022540c12f-1"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

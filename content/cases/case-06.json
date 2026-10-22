@@ -1,0 +1,155 @@
+{
+  "id": "case-06",
+  "name": "游园京梦",
+  "summary": {
+    "name": "游园京梦",
+    "image": {
+      "$asset": "assets/cases/case-06/case-06.jpg"
+    },
+    "logo": {
+      "$asset": "assets/partners/youyuanjingmeng.png"
+    },
+    "module": "模块三 · 经营复盘",
+    "summary": "阶段性订单级洞察淮扬菜菜单，给出上下架分析与优化建议。",
+    "sub": "淮扬菜 · 阶段性复盘",
+    "headline": "用订单级洞察，决定菜单上什么、下什么。",
+    "meta": [
+      {
+        "k": "业态",
+        "v": "淮扬菜"
+      },
+      {
+        "k": "地点",
+        "v": "阶段性复盘"
+      }
+    ],
+    "background": "游园京梦经营淮扬菜，需要在阶段节点复盘菜单：哪些菜保留、调整或下架，哪些新品值得上架。过去的判断主要依赖销量排名与经验。",
+    "challenges": [
+      "只看销量排名，看不出单品真实贡献",
+      "上新与下架依赖经验，决策周期长",
+      "调整之后缺少数据验证"
+    ],
+    "approach": [
+      {
+        "title": "订单级数据梳理",
+        "body": "还原点单组合与时段分布"
+      },
+      {
+        "title": "菜品四象限评估",
+        "body": "按销量、毛利、搭配带动与复点率评估"
+      },
+      {
+        "title": "上下架分析",
+        "body": "给出保留、调整、下架与上新清单"
+      },
+      {
+        "title": "阶段复盘",
+        "body": "跟踪调整后的表现，进入下一轮"
+      }
+    ],
+    "results": [
+      {
+        "value": "订单级",
+        "label": "每一单每一道菜"
+      },
+      {
+        "value": "4",
+        "label": "维评估 · 销量 毛利 搭配 复点"
+      },
+      {
+        "value": "上下架",
+        "label": "菜单调整建议清单"
+      }
+    ],
+    "deliverables": [
+      "阶段性订单级洞察",
+      "菜品四象限评估",
+      "菜单上下架建议清单",
+      "调整效果跟踪"
+    ],
+    "index": 6,
+    "total": 8
+  },
+  "gallery": [
+    {
+      "label": "项目案例 · 游园京梦 · 一",
+      "component": "ScreensSlide",
+      "props": {
+        "eyebrow": "项目案例 · 游园京梦 · 北京 SKP",
+        "title": "游园京梦：\n园林步道\n通向明档",
+        "body": "入口步道直对明档；玻璃围合点心与熟食工位，制作全程可见。",
+        "note": "项目实景照片。",
+        "layout": "feature",
+        "shots": [
+          {
+            "src": {
+              "$asset": "assets/cases/case-06/yyjm-1.jpg"
+            },
+            "caption": "入口园林步道与明档"
+          },
+          {
+            "src": {
+              "$asset": "assets/cases/case-06/yyjm-2.jpg"
+            },
+            "caption": "玻璃明档 · 点心与面档"
+          },
+          {
+            "src": {
+              "$asset": "assets/cases/case-06/yyjm-6.jpg"
+            },
+            "caption": "玻璃明档 · 熟食出品"
+          }
+        ]
+      }
+    },
+    {
+      "label": "项目案例 · 游园京梦 · 二",
+      "component": "ScreensSlide",
+      "props": {
+        "eyebrow": "项目案例 · 游园京梦 · 北京 SKP",
+        "title": "食材陈列，\n即点单引导",
+        "body": "冰鲜与时蔬沿明档陈列；悬挂料盒、冷柜就近取用，后厨纵深可见。",
+        "note": "项目实景照片。",
+        "layout": "feature",
+        "shots": [
+          {
+            "src": {
+              "$asset": "assets/cases/case-06/yyjm-3.jpg"
+            },
+            "caption": "海鲜与时蔬陈列明档"
+          },
+          {
+            "src": {
+              "$asset": "assets/cases/case-06/yyjm-4.jpg"
+            },
+            "caption": "明档正面 · 后厨纵深"
+          },
+          {
+            "src": {
+              "$asset": "assets/cases/case-06/yyjm-5.jpg"
+            },
+            "caption": "用餐区与服务台"
+          }
+        ]
+      }
+    }
+  ],
+  "assets": [
+    "assets/cases/case-06/case-06.jpg",
+    "assets/partners/youyuanjingmeng.png",
+    "assets/cases/case-06/yyjm-1.jpg",
+    "assets/cases/case-06/yyjm-2.jpg",
+    "assets/cases/case-06/yyjm-6.jpg",
+    "assets/cases/case-06/yyjm-3.jpg",
+    "assets/cases/case-06/yyjm-4.jpg",
+    "assets/cases/case-06/yyjm-5.jpg"
+  ],
+  "approval": {
+    "by": "owner",
+    "date": "2026-10-21",
+    "record": "docs/component-runtime.md"
+  },
+  "snippets": {
+    "03051a0b-475c-4847-a438-ab022540c12f-1": "游园京梦 · 一坐一忘 · 半山腰儿 · 悦融 · 琥珀京鲁菜 · 苏小牛"
+  }
+}

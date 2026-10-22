@@ -1,0 +1,14 @@
+{
+  "id": "6d7cda56-3007-4a10-8a76-5e5b77e66793",
+  "label": "服务交付物",
+  "cat": "kitchen",
+  "type": "table",
+  "tags": [
+    "落地",
+    "交付物"
+  ],
+  "publish": "web",
+  "purpose": "厨政服务交付物清单。",
+  "owner": "kitchen",
+  "status": "planned"
+}

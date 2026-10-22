@@ -1,0 +1,24 @@
+{
+  "id": "a3899939-9c43-4f5b-b6ee-e12b7615f862",
+  "label": "数据",
+  "cat": "system",
+  "type": "statement",
+  "tags": [
+    "数据",
+    "订单"
+  ],
+  "publish": "web",
+  "purpose": "整页陈述：每一张订单都是顾客投下的一票。",
+  "evidence": "illustration",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "StatementSlide",
+  "props": {
+    "kicker": "数据",
+    "title": "每一张订单，\n都是顾客投下的一票。",
+    "body": "侍天把订单级流水变成可以核对的经营判断。",
+    "image": {
+      "$asset": "assets/deck/statement-data.jpg"
+    }
+  }
+}

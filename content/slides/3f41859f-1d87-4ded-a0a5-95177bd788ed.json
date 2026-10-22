@@ -1,0 +1,42 @@
+{
+  "id": "3f41859f-1d87-4ded-a0a5-95177bd788ed",
+  "label": "菜单驱动",
+  "cat": "design",
+  "type": "steps",
+  "tags": [
+    "方法",
+    "菜单驱动"
+  ],
+  "publish": "web",
+  "purpose": "从菜单工艺推导后厨设计的步骤。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "FiveQuestionsSlide",
+  "props": {
+    "eyebrow": "方法 · 菜单驱动",
+    "title": "菜单驱动厨房设计",
+    "note": "",
+    "steps": [
+      {
+        "label": "菜单",
+        "q": "品项与销量",
+        "aim": "品项结构、高峰销量。"
+      },
+      {
+        "label": "工艺",
+        "q": "加工路径",
+        "aim": "加工方式、关键工序。"
+      },
+      {
+        "label": "工位",
+        "q": "岗位配置",
+        "aim": "岗位、人数、班次。"
+      },
+      {
+        "label": "设备",
+        "q": "设备选型",
+        "aim": "按产能与工艺选型。"
+      }
+    ]
+  }
+}

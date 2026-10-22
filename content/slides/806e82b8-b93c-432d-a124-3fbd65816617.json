@@ -1,0 +1,61 @@
+{
+  "id": "806e82b8-b93c-432d-a124-3fbd65816617",
+  "label": "验收指标",
+  "cat": "design",
+  "type": "table",
+  "tags": [
+    "落地",
+    "验收",
+    "指标"
+  ],
+  "publish": "web",
+  "purpose": "设计落地的验收指标。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "eyebrow": "落地方式 · 验收",
+    "title": "前后对照，验证改善",
+    "subtitle": "",
+    "corner": "指标",
+    "columns": [
+      "记录方式"
+    ],
+    "rows": [
+      {
+        "label": "高峰出餐时长",
+        "cells": [
+          "同品项、同时段，下单到上桌的分布"
+        ]
+      },
+      {
+        "label": "动线交叉点",
+        "cells": [
+          "高峰时段岗位交叉次数观察"
+        ]
+      },
+      {
+        "label": "照度与色温",
+        "cells": [
+          "用餐区、明档、后厨现场实测"
+        ]
+      },
+      {
+        "label": "顾客评价",
+        "cells": [
+          "点评中提及环境、明档与出品的内容"
+        ]
+      },
+      {
+        "label": "能耗",
+        "cells": [
+          "同月份水、电、气用量对比"
+        ]
+      }
+    ],
+    "footnote": {
+      "label": "目标值",
+      "text": "基线形成后共同确认。"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "27ee71ef-7f9f-46f5-b9d3-5cd83dd7eed8",
+  "label": "菜单推演",
+  "cat": "system",
+  "type": "chart",
+  "tags": [
+    "菜单推演",
+    "预测区间"
+  ],
+  "publish": "web",
+  "purpose": "菜单推演预测区间图（P10–P90），标明为推断。",
+  "evidence": "sample",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ChartSlide",
+  "props": {
+    "eyebrow": "方法论 · 经营洞察图谱",
+    "figure": "corridor"
+  }
+}

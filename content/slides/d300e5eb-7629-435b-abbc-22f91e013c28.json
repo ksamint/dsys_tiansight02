@@ -1,0 +1,44 @@
+{
+  "id": "d300e5eb-7629-435b-abbc-22f91e013c28",
+  "label": "价格带与菜品矩阵",
+  "cat": "system",
+  "type": "screens",
+  "tags": [
+    "价格带",
+    "渗透率",
+    "菜品矩阵"
+  ],
+  "publish": "web",
+  "purpose": "价格带断层与菜品渗透率矩阵截图。",
+  "evidence": "sample",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "方法论 · 价格带与菜品矩阵",
+    "title": "价格带与菜品矩阵",
+    "body": "按价格带对比新店与老店的销售份额，每个判断落到具体菜品。",
+    "note": "报告页 4.4.3 · 价格带断层诊断 · 模拟数据",
+    "layout": "feature",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/screens/price-band-gap.jpg"
+        },
+        "caption": "180–250 元价格带 · 新店额占比 4.4%，形成断层"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/penetration-matrix.jpg"
+        },
+        "caption": "渗透率矩阵 · 哪些菜点的人多、贡献高"
+      },
+      {
+        "src": {
+          "$asset": "assets/screens/profit-sensitivity.jpg"
+        },
+        "caption": "利润敏感性矩阵 · 调价与成本的影响"
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "exhibit",
+  "title": "餐饮展陈与厨房设计",
+  "canonicalSource": null,
+  "slides": [
+    "5e6b6f17-2773-4b81-95c4-8e27de028529",
+    "08d447c4-1e58-45c1-83b2-9f28976cdd7f",
+    "bba93bc0-e4f8-4068-8984-2935d93d8cfb",
+    "3f41859f-1d87-4ded-a0a5-95177bd788ed",
+    "cf2c6541-8f7f-4f78-a90b-816e61be6e7d",
+    "eb32d32e-c909-42cb-87c9-0b907b3ea1ed",
+    "d08c13a5-d95f-4d16-a212-7cf71ba95537",
+    "e5b3a0d8-2f6c-4b91-8e47-91c2d6a5f0b3",
+    "1f8c6e27-b4d3-4a59-9c02-7e5a3d81b6c4",
+    "6b98ca6f-126a-4a4e-85f3-fa44feb38344",
+    "cecda97f-9fb6-40fa-b437-22da4bcb1395",
+    "97aca518-0224-4cfd-823c-13e258967232",
+    "9b1b891a-3fea-46e6-9eab-cf05efd17716",
+    "1ebbbf22-f947-4331-9d56-e06f526c54db",
+    "69a70c07-74f7-4269-bd23-b491dd6c7b68",
+    "2c61e7ef-c71a-4ccb-8308-e7407dda3cf8",
+    "bf00938c-e2a7-47a2-a11f-e609597ad24c",
+    "76300fea-d62c-4907-8081-e9379fc4ef8d",
+    "76d3d22d-c460-4b4c-ab4e-dd673ba5aae8",
+    "f61420aa-efab-46d0-926e-0b53a9fe7f77",
+    "54df294e-e1a0-43b2-8094-1f6a303c0788",
+    "d2c0bdd1-2cdf-4c7a-90fe-14e39a5e2db1",
+    "cbce9078-e6b6-4c22-ae8c-becc6b98c001",
+    "d9a3002f-14cf-4f76-b061-81f6f58d9fc9",
+    "b28ad6d5-1a75-4740-b42b-106d85f1384e",
+    "f745a121-4a40-4240-aec6-b95fc669ed1a",
+    "5b1a9bb8-0955-4cf6-831a-0fc3ab3f6158",
+    "7a2d9c41-5e3b-4f86-a1c7-0b9e4d62f318",
+    "c84f1b26-9d07-4e5a-b3f2-6a1e8c57d094",
+    "ae882cb3-0355-4165-a9c2-092412fcd9f4",
+    "d923b05d-df80-4feb-ab3e-fbce2b6512b9",
+    "4ccad737-2ed1-464d-921f-e9e6bbdd6937",
+    "adefb319-95e5-49d1-895b-19e4e4578013",
+    "806e82b8-b93c-432d-a124-3fbd65816617",
+    "08a3dfe9-79cd-4f7b-93df-a63f51bc5ff5",
+    "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
+    "5419cbed-e0d1-46a9-bd7b-393c6b260205",
+    "ed451b90-dc1f-497d-82c3-d9cb095dd225",
+    "8101bf62-d9e5-42da-84f6-107f597c4620",
+    "9b4e2c7a-6d15-4f38-a0e9-3c7f5b18d2e6",
+    "60f54dbe-8e06-45c8-b877-b1574f1e6bee"
+  ],
+  "params": {
+    "date": {
+      "default": "2026-10",
+      "editor": "text"
+    }
+  },
+  "profiles": {
+    "internal": {
+      "publish": [
+        "web",
+        "banner",
+        "internal"
+      ]
+    },
+    "client": {
+      "publish": [
+        "web",
+        "banner"
+      ]
+    },
+    "web": {
+      "publish": [
+        "web"
+      ]
+    }
+  },
+  "transforms": [
+    "keep-words"
+  ],
+  "footer": "侍天 TIANSIGHT · 餐饮展陈与厨房设计",
+  "status": "maintained"
+}

@@ -1,0 +1,46 @@
+{
+  "id": "9b1b891a-3fea-46e6-9eab-cf05efd17716",
+  "label": "展陈六要素",
+  "cat": "design",
+  "type": "cards",
+  "tags": [
+    "出品展陈"
+  ],
+  "publish": "web",
+  "purpose": "出品展陈的六个要素。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {
+    "eyebrow": "出品展陈 · 六要素",
+    "title": "出品展陈六要素",
+    "subtitle": "",
+    "columns": 3,
+    "items": [
+      {
+        "title": "标准样",
+        "body": "每道菜有成品照片与份量标准。"
+      },
+      {
+        "title": "盛器",
+        "body": "与品类、份量、上桌方式匹配。"
+      },
+      {
+        "title": "陈列位",
+        "body": "招牌居视线中心，补货不遮挡。"
+      },
+      {
+        "title": "光线",
+        "body": "热食、冷食分设色温与显色。"
+      },
+      {
+        "title": "温度",
+        "body": "热台、冷台与展示时限。"
+      },
+      {
+        "title": "补货节奏",
+        "body": "按高峰节奏补货，保持满陈。"
+      }
+    ]
+  }
+}

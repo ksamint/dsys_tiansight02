@@ -1,0 +1,1408 @@
+{
+  "schema": "tiansight.asset-register/1",
+  "assets": [
+    {
+      "path": "assets/cases/case-01/case-01.jpg",
+      "sha256": "b283f07a4cab3cb28229d7c04420db075fdf35667a35956b738c9f0e79b8ea6a",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-01.jpg",
+      "sources": [
+        "assets/intro/deck/case-01.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-01"
+      ]
+    },
+    {
+      "path": "assets/cases/case-02/case-02.jpg",
+      "sha256": "561094856b34c7b7ce1df6aa59f2809730acbfb995a66c33dc5d84d1359b88ed",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-02.jpg",
+      "sources": [
+        "assets/intro/deck/case-02.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-02"
+      ]
+    },
+    {
+      "path": "assets/cases/case-03/case-03.jpg",
+      "sha256": "17b4f8c0a1fb719226af62a82c183237f97c210210c7a1709515afa0a7a4fae8",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-03.jpg",
+      "sources": [
+        "assets/intro/deck/case-03.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-03"
+      ]
+    },
+    {
+      "path": "assets/cases/case-04/case-04.jpg",
+      "sha256": "9e1b160d6a5dd73a662f4eb0ef8c929d9bb6321c7b61c7a0067d8f9f57ff8102",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-04.jpg",
+      "sources": [
+        "assets/intro/deck/case-04.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-04"
+      ]
+    },
+    {
+      "path": "assets/cases/case-05/case-05.jpg",
+      "sha256": "e7d2eb94d32de785694acbaa3debdf62b2582af0ad56ea57d118795833a1d7c9",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-05.jpg",
+      "sources": [
+        "assets/intro/deck/case-05.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-05"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/case-06.jpg",
+      "sha256": "f0c704544ecda684e5b41cb0a85de7794407dd9d1f6c3f4aa95618b5c8943770",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-06.jpg",
+      "sources": [
+        "assets/intro/deck/case-06.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-1.jpg",
+      "sha256": "c07a716e5251eabb22241351bc63397b25969b3d8cd3869385d6eba197e51e49",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-1.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-2.jpg",
+      "sha256": "cbc5f92c22659b43adb2c25008a63c577253ac18ab960da75d205cecf85a01f6",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-2.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-3.jpg",
+      "sha256": "79117893bcb00499d145bcd8222cb0d8c834484e3833d874919833e047b8d1d2",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-3.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-4.jpg",
+      "sha256": "8f2cb56eebcf5b34a1845cae7525448f35e647a63362075238e47453477fb23e",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-4.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-4.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-5.jpg",
+      "sha256": "77fd95b2da854f6e5c8fbf3d791a91e6e65483bed3f8fbf7c38b43cc3e6747f5",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-5.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-5.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-06/yyjm-6.jpg",
+      "sha256": "077b4cdab4588ac6475a5852f97f75ce13d7586d08a62e857581fad16c35a56a",
+      "kind": "cases",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-6.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-6.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06"
+      ]
+    },
+    {
+      "path": "assets/cases/case-07/case-07.jpg",
+      "sha256": "86a8b1e63fe026359987aa30b6119a33ea4c2533bbb32c41f1c17953e2327eb2",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-07.jpg",
+      "sources": [
+        "assets/intro/deck/case-07.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-07"
+      ]
+    },
+    {
+      "path": "assets/cases/case-08/case-08.jpg",
+      "sha256": "9c12559cb009bc1c2a7bfa9e7ac4e6333d455d5ef3b8d839cf4adb01e5f910d3",
+      "kind": "cases",
+      "source": "assets/intro/deck/case-08.jpg",
+      "sources": [
+        "assets/intro/deck/case-08.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-08"
+      ]
+    },
+    {
+      "path": "assets/deck/cover.jpg",
+      "sha256": "41e1f110fd2c9beac09d1a289bfd1700bffa42030f27bb386bc9036e3f9f72fb",
+      "kind": "deck",
+      "source": "assets/intro/deck/cover.jpg",
+      "sources": [
+        "assets/intro/deck/cover.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "b63a770d-49c7-40e5-8db3-02bc6ede0331",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/deck/module-1.jpg",
+      "sha256": "4541ddf24fd677149589e9f02bf60eadb015d0b014d802202263c464c52e8ac0",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-1.jpg",
+      "sources": [
+        "assets/intro/deck/module-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "f97c967e-6f86-45fb-bb36-e22d1df0dfff"
+      ]
+    },
+    {
+      "path": "assets/deck/module-2.jpg",
+      "sha256": "a6719173c491d45b748fcad1b7446023c3465056fa45cf570da458bb5d4aee5b",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-2.jpg",
+      "sources": [
+        "assets/intro/deck/module-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "bfea5864-e5c2-43ef-8f35-ee8ef113e40f",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/module-3.jpg",
+      "sha256": "c88c214cb00184bd5687e321feb9d40474dd35af11cb996da4cc1cbf4a3058d7",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-3.jpg",
+      "sources": [
+        "assets/intro/deck/module-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1bfcb28d-0489-4267-bc88-bb5afd9edd30",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/module-4.jpg",
+      "sha256": "a7386657c95a292d419c186dddb7c2deca8c771e0e6aec4c3a2b2fdb925b45c6",
+      "kind": "deck",
+      "source": "assets/intro/deck/module-4.jpg",
+      "sources": [
+        "assets/intro/deck/module-4.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "9ca9a8f2-58ca-4b23-bf8a-f00ac306c17e",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/section-1.jpg",
+      "sha256": "689130a16caf7d5e80ea469c4d06fe4afd369576af26e7754d91d77f755ec292",
+      "kind": "deck",
+      "source": "assets/intro/deck/section-1.jpg",
+      "sources": [
+        "assets/intro/deck/section-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/deck/section-2.jpg",
+      "sha256": "94569cc727fe009fffefd39925acd695787f500da51ab49ea2f98cf3d94bb851",
+      "kind": "deck",
+      "source": "assets/intro/deck/section-2.jpg",
+      "sources": [
+        "assets/intro/deck/section-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "82e572f3-d3bc-49d8-8b65-39d2d79c0782",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/section-3.jpg",
+      "sha256": "69c977b1e50821f359042decc8beabed7b9019bdc4e3d1caa017d0be212ac331",
+      "kind": "deck",
+      "source": "assets/intro/deck/section-3.jpg",
+      "sources": [
+        "assets/intro/deck/section-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "ceb4f385-17f4-46cf-aaaf-3fe469db76e2"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-data.jpg",
+      "sha256": "83d66104fdfcb627149e8050bacde3506e6fad8b9a9456e2fd88963cb4df61c2",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-data.jpg",
+      "sources": [
+        "assets/intro/deck/statement-data.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "a3899939-9c43-4f5b-b6ee-e12b7615f862",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-decision.jpg",
+      "sha256": "951b373f41fdd92d36d459fcc59fe969e9f2669d8c2b79754a0d333608290fb9",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-decision.jpg",
+      "sources": [
+        "assets/intro/deck/statement-decision.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "cdbe10c1-a934-4565-b22c-32620690305a"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-problem.jpg",
+      "sha256": "a0b75e60bcc8ee2e084fa1b708fa03103e6fd31273582393b0eca3543b819d32",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-problem.jpg",
+      "sources": [
+        "assets/intro/deck/statement-problem.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "3531cea9-7492-4d22-9767-cc7977113b06",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/deck/statement-proof.jpg",
+      "sha256": "c3c3bdd17f8499084f0cbf22a097b74c383ce826ff80691e8984ee38c698bd83",
+      "kind": "deck",
+      "source": "assets/intro/deck/statement-proof.jpg",
+      "sources": [
+        "assets/intro/deck/statement-proof.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "812447ee-f013-4213-a98a-89e9c7d4f127",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/brand-wall.jpg",
+      "sha256": "d6752b1b5932bee95a22f81c844036259d194b9c90adb51142a29150bbd30f57",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/brand-wall.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/brand-wall.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "5b1a9bb8-0955-4cf6-831a-0fc3ab3f6158",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-01-cover.jpg",
+      "sha256": "cc45e1e5bf9adb55887e9e427c4f76692d2d80d57ed88f8f6b2fa36e7ae3d1e6",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-01-cover.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-01-cover.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "5e6b6f17-2773-4b81-95c4-8e27de028529",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-03-sec-dining.jpg",
+      "sha256": "c582d14f9a333c10b441aca4061842ce2c3c9ccdd2a9e305bc74f0bad4a826a4",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-03-sec-dining.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-03-sec-dining.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "cf2c6541-8f7f-4f78-a90b-816e61be6e7d"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-04-sec-display.jpg",
+      "sha256": "99d08b0c04385d070c584b85e967bf55d245a6188f568a6c0ae55d5ff7ca8a60",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-04-sec-display.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-04-sec-display.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "97aca518-0224-4cfd-823c-13e258967232",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-05-sec-boh.jpg",
+      "sha256": "db9b7fb4fe2541421bf9699da0dcfecb8fef87242eed595c3969a7ad6dce0fc1",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-05-sec-boh.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-05-sec-boh.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "bf00938c-e2a7-47a2-a11f-e609597ad24c",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-06-sec-equipment.jpg",
+      "sha256": "deed55506064c39d55b517cab6a187027c4116df6d6bd50d451a813478c62ad4",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-06-sec-equipment.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-06-sec-equipment.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d2c0bdd1-2cdf-4c7a-90fe-14e39a5e2db1"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-07-sec-delivery.jpg",
+      "sha256": "3355e85b0e321db19abda169a8d790c6d37fd690da92a53d3f79f10838fbcfd8",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-07-sec-delivery.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-07-sec-delivery.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "ae882cb3-0355-4165-a9c2-092412fcd9f4",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/ex-08-sec-team.jpg",
+      "sha256": "f47c726bcec8dd03b7b0f321c189f2fa2ad9476594796bd49903a9c71eaf28d8",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-08-sec-team.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-08-sec-team.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "08a3dfe9-79cd-4f7b-93df-a63f51bc5ff5",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/hotels.jpg",
+      "sha256": "1a80b94061c281433bf7411a4cbd7523f4f8f8bf53bbce17caf9dcc01cb34385",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/hotels.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/hotels.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "f745a121-4a40-4240-aec6-b95fc669ed1a"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-boh1.jpg",
+      "sha256": "886d0d4ecda48489067fcd2712948d0bf4539dbdbfd1b09c3a8322966b0bed59",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh1.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "f61420aa-efab-46d0-926e-0b53a9fe7f77"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-boh2.jpg",
+      "sha256": "01dfc4531289a2b877dfb1ab600cd656885220fb14aaecaca1a772e62bd8181b",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh2.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "54df294e-e1a0-43b2-8094-1f6a303c0788",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-detail.jpg",
+      "sha256": "6148d3946728f5e2e84998460cc40e064f57b0d780fe7fe9fe196e21388106e6",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-detail.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-detail.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "69a70c07-74f7-4269-bd23-b491dd6c7b68",
+        "9b4e2c7a-6d15-4f38-a0e9-3c7f5b18d2e6",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-island.jpg",
+      "sha256": "baff70c132f0b22a32d63eb13aa04f0a1513fd4f63fb86da3f386162e32305aa",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-island.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-island.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "cecda97f-9fb6-40fa-b437-22da4bcb1395"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-mingdang.jpg",
+      "sha256": "3002273e1d34b9588deebfc7f6fcbaaf36eeeec97e26c0470dd8f35747ce1bc9",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-mingdang.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-mingdang.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "6b98ca6f-126a-4a4e-85f3-fa44feb38344",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/m-pass.jpg",
+      "sha256": "b83703e54905da562ef5dce195edda02fcca62a51fbca55e83d8124a5247a179",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-pass.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-pass.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "1ebbbf22-f947-4331-9d56-e06f526c54db",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/exhibit/p9-1.jpg",
+      "sha256": "e4134fcaef61fb459d3d37695b813e4281cb052c7f10717270163e1f5723f885",
+      "kind": "exhibit",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/src/p9-1.jpg",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/src/p9-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "b28ad6d5-1a75-4740-b42b-106d85f1384e",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/logo/icons.svg",
+      "sha256": "83edca866b5d0b734244275853735707c87fa70da80c304d919e9afabf15d319",
+      "kind": "logo",
+      "source": "assets/icons.svg",
+      "sources": [
+        "assets/icons.svg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "components/core/Icon.d.ts",
+        "components/core/Icon.jsx"
+      ]
+    },
+    {
+      "path": "assets/logo/logo.png",
+      "sha256": "4c63205cf059e98f5f455f99c05f12267bb28320771788539677edd4afedfe22",
+      "kind": "logo",
+      "source": "assets/logo.png",
+      "sources": [
+        "assets/logo.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "slides/ContactSlide.jsx",
+        "slides/SlideFrame.jsx",
+        "slides/TitleSlide.jsx"
+      ]
+    },
+    {
+      "path": "assets/logo/supplied-logo-seal.png",
+      "sha256": "0c2f7379b8624516b20c407747c991b8eb36b870832bb7bab2a42ffbae4a05c2",
+      "kind": "logo",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/logo-seal.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/logo-seal.png",
+        "assets/logo-seal.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "components/core/Seal.d.ts",
+        "components/core/Seal.jsx",
+        "components/core/Seal.prompt.md",
+        "components/core/core.card.html",
+        "slides/ContactSlide.jsx",
+        "slides/SlideFrame.jsx",
+        "slides/TitleSlide.jsx",
+        "templates/report-kit/README.md",
+        "templates/report-kit/example/starter.py",
+        "ui_kits/report/ReportShell.jsx",
+        "ui_kits/website/ClosingCTA.jsx",
+        "ui_kits/website/SiteHeader.jsx"
+      ]
+    },
+    {
+      "path": "assets/partners/3699.png",
+      "sha256": "e2ce139afafeb7dd1ace434421a0f904b80e303169525dcb1213b187216a4ab8",
+      "kind": "partners",
+      "source": "assets/intro/partners/3699.png",
+      "sources": [
+        "assets/intro/partners/3699.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/chaofa.png",
+      "sha256": "387fd1b8d75d1f514fea30877533bfff9e8de2481619f28b49faf4f8b7c40b8a",
+      "kind": "partners",
+      "source": "assets/intro/partners/chaofa.png",
+      "sources": [
+        "assets/intro/partners/chaofa.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-05",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/qingshuiting.png",
+      "sha256": "11fc80676aca61d21bdf53a4bc627434bec2e0e2f689fe0d9f5b8ee450c2d203",
+      "kind": "partners",
+      "source": "assets/intro/partners/qingshuiting.png",
+      "sources": [
+        "assets/intro/partners/qingshuiting.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-02",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/shitou.png",
+      "sha256": "780364d22b8761ee19227b3be72a8ec8cb3ced0c3ac754927e5d2e4b969070a6",
+      "kind": "partners",
+      "source": "assets/intro/partners/shitou.png",
+      "sources": [
+        "assets/intro/partners/shitou.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-01",
+        "case-03",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/subangyuan.png",
+      "sha256": "bfea44bfd8eefbed90059a84fe949f92e83e9043ced5bb262a6134e70844db24",
+      "kind": "partners",
+      "source": "assets/intro/partners/subangyuan.png",
+      "sources": [
+        "assets/intro/partners/subangyuan.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-04",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/wuyutai.png",
+      "sha256": "f1e9facf768ec20efe66287fef664ccb46063b7c02e97316bdb5224fe8f9b922",
+      "kind": "partners",
+      "source": "assets/intro/partners/wuyutai.png",
+      "sources": [
+        "assets/intro/partners/wuyutai.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-08",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/youyuanjingmeng.png",
+      "sha256": "9779b14b6c36b73407bb486161687b6aeed45494cd80f9de1d585de52c2e6e1e",
+      "kind": "partners",
+      "source": "assets/intro/partners/youyuanjingmeng.png",
+      "sources": [
+        "assets/intro/partners/youyuanjingmeng.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-06",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/partners/yun1980.png",
+      "sha256": "6753ed4919ea87d219c192954994e83da01d99f651c8b4bb08e0a2f77ed77a24",
+      "kind": "partners",
+      "source": "assets/intro/partners/yun1980.png",
+      "sources": [
+        "assets/intro/partners/yun1980.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "case-07",
+        "partner:content/partners.json"
+      ]
+    },
+    {
+      "path": "assets/people/bianjiang.png",
+      "sha256": "02382a1f0b0050cc356da91032cfcccacdbb32a630b799264e07e20d4e9228f8",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/bianjiang.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/bianjiang.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/guofeng.png",
+      "sha256": "347e351fa7aeb18e1a9a5ec384c36a0077060736f63e712e62a7c5a620a58c9a",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/guofeng.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/guofeng.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/bianjiang.png",
+      "sha256": "f3a3625893d283d05a4baa2f635862bbba3f5a86fedee9fc74ecf1a446c911c4",
+      "kind": "people",
+      "source": "assets/intro/people/bianjiang.png",
+      "sources": [
+        "assets/intro/people/bianjiang.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/guofeng.png",
+      "sha256": "9f895f15515daa5a2f685861f352192bfabc1d8e83718c128c3e51370cd937b7",
+      "kind": "people",
+      "source": "assets/intro/people/guofeng.png",
+      "sources": [
+        "assets/intro/people/guofeng.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/liquanchao.png",
+      "sha256": "30e9be0aa517f0dfdfa6a77dd8baf9e5905062dfda0e078e3c0ef83f077f96a2",
+      "kind": "people",
+      "source": "assets/intro/people/liquanchao.png",
+      "sources": [
+        "assets/intro/people/liquanchao.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/intro/wechat-qr.png",
+      "sha256": "204cc541635c423e2e055c77d68d0200353661c4c8df2671d29e3519d38cf768",
+      "kind": "people",
+      "source": "assets/intro/people/wechat-qr.png",
+      "sources": [
+        "assets/intro/people/wechat-qr.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/contact.js",
+        "content/contact.json",
+        "slides/ContactSlide.prompt.md",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/people/intro/yuxiangdong.png",
+      "sha256": "34ed5eb65f5bd9c20b8f738c2227d4ae09853880076c407dc0429a11f18b5608",
+      "kind": "people",
+      "source": "assets/intro/people/yuxiangdong.png",
+      "sources": [
+        "assets/intro/people/yuxiangdong.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/liquanchao.png",
+      "sha256": "6298c36ff75d5d9ca06b0aeb5140de79ff76d59a15d8055bacbb9428c4b414f4",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/liquanchao.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/liquanchao.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/people/wechat-qr.png",
+      "sha256": "3b8426bc477a0214f4c7c161bf3486232297555c36b6db5d074539b692856d47",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/wechat-qr.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/wechat-qr.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/contact.js",
+        "content/contact.json",
+        "slides/ContactSlide.prompt.md",
+        "templates/report-kit/example/starter.py"
+      ]
+    },
+    {
+      "path": "assets/people/yuxiangdong.png",
+      "sha256": "f7e38de909077096d4530c333478c10845039c1ed456a464b314c9e1dc0becb0",
+      "kind": "people",
+      "source": "archive/approved-2026-10-21/source.zip#embedded/image-map/people/yuxiangdong.png",
+      "sources": [
+        "archive/approved-2026-10-21/source.zip#embedded/image-map/people/yuxiangdong.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "date": "2026-10-21",
+        "record": "docs/component-runtime.md"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "content/team.js",
+        "person:content/team.json"
+      ]
+    },
+    {
+      "path": "assets/screens/3d.png",
+      "sha256": "f12d4cf9bfe4fd1ed80e51cda6a852832cf376ae8f695ade1c0012ce877f927c",
+      "kind": "screens",
+      "source": "deliverables/lifecycle-map/previews/3d.png",
+      "sources": [
+        "deliverables/lifecycle-map/previews/3d.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "deliverables/lifecycle-map/README.md"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-1.jpg",
+      "sha256": "7683048f49516379657aee151e16f1911c3ee5e50a135af23225d3844de18e2d",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-1.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-2.jpg",
+      "sha256": "ca60a54c0a340a12b051d9bdd0266036f3bdc95a98e8c8e9bf3ca387a73cd526",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-2.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-3.jpg",
+      "sha256": "ad370fe2b4c203a515152d6ccb8d17edcda654e46f6d69ec24941b8e3dfd3e08",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-3.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/dashboard-4.jpg",
+      "sha256": "8675042c38931ab18ba0799c5adab0f57b0c1549ddda43f50c8e860c5363df76",
+      "kind": "screens",
+      "source": "assets/intro/deck/dashboard-4.jpg",
+      "sources": [
+        "assets/intro/deck/dashboard-4.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/gantt.png",
+      "sha256": "5d65fab7c5b26d83e2c2b7ff3c614809d7b44bbce8591143d76291cf1a7acc59",
+      "kind": "screens",
+      "source": "deliverables/lifecycle-map/previews/gantt.png",
+      "sources": [
+        "deliverables/lifecycle-map/previews/gantt.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "deliverables/lifecycle-map/README.md"
+      ]
+    },
+    {
+      "path": "assets/screens/map.png",
+      "sha256": "0fb285a19ed339ac9855c2b3dc381ae885f1020c77f6ac3cffc83775415d524f",
+      "kind": "screens",
+      "source": "deliverables/lifecycle-map/previews/map.png",
+      "sources": [
+        "deliverables/lifecycle-map/previews/map.png"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "deliverables/lifecycle-map/README.md"
+      ]
+    },
+    {
+      "path": "assets/screens/mobile-review.jpg",
+      "sha256": "f185449e5603951c8e43bd89d67953bbd5455d4a105898e841171e19dc93240b",
+      "kind": "screens",
+      "source": "assets/intro/deck/mobile-review.jpg",
+      "sources": [
+        "assets/intro/deck/mobile-review.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/penetration-matrix.jpg",
+      "sha256": "ead2621ba75681380cac7590f7e833801495e3a68e0a890d78ba5025a26393c5",
+      "kind": "screens",
+      "source": "assets/intro/deck/penetration-matrix.jpg",
+      "sources": [
+        "assets/intro/deck/penetration-matrix.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d300e5eb-7629-435b-abbc-22f91e013c28"
+      ]
+    },
+    {
+      "path": "assets/screens/price-band-gap.jpg",
+      "sha256": "bb90d51a624674d5880be1aea1df82f39dc14bb3ef5a49aca5814dc43c2079fb",
+      "kind": "screens",
+      "source": "assets/intro/deck/price-band-gap.jpg",
+      "sources": [
+        "assets/intro/deck/price-band-gap.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d300e5eb-7629-435b-abbc-22f91e013c28"
+      ]
+    },
+    {
+      "path": "assets/screens/profit-sensitivity.jpg",
+      "sha256": "45bb49d007d5baf9e807fd9603c4f8d3aa8ebf4c140d17b90fd4de8cb1454f89",
+      "kind": "screens",
+      "source": "assets/intro/deck/profit-sensitivity.jpg",
+      "sources": [
+        "assets/intro/deck/profit-sensitivity.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "brand:dist/components/2026.10.21-e0a760/manifest.json",
+        "d300e5eb-7629-435b-abbc-22f91e013c28"
+      ]
+    },
+    {
+      "path": "assets/screens/report-page-1.jpg",
+      "sha256": "fea647250082f76d5a42506feb4a180749b50823a525d480ec7a467545594df8",
+      "kind": "screens",
+      "source": "assets/intro/deck/report-page-1.jpg",
+      "sources": [
+        "assets/intro/deck/report-page-1.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/report-page-2.jpg",
+      "sha256": "9db9374fec0b1ce6cc7ad35c22681763dfa349532a1a53fe813433bbcdf6094b",
+      "kind": "screens",
+      "source": "assets/intro/deck/report-page-2.jpg",
+      "sources": [
+        "assets/intro/deck/report-page-2.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/report-page-3.jpg",
+      "sha256": "9b77123726bac0910e0ae6305edc0f2493b3c8d62ec978645e3d0596f569bc33",
+      "kind": "screens",
+      "source": "assets/intro/deck/report-page-3.jpg",
+      "sources": [
+        "assets/intro/deck/report-page-3.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "1e564f65-294a-4ca3-80cf-c1769347aa3d",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/repurchase-quadrant.jpg",
+      "sha256": "80946a065e4d2a9601c9c5fdde86429e2873b23740cd62d890c58db261f4b3ce",
+      "kind": "screens",
+      "source": "assets/intro/deck/repurchase-quadrant.jpg",
+      "sources": [
+        "assets/intro/deck/repurchase-quadrant.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "48d9c918-a62e-430f-952b-bc8007f333c6",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    },
+    {
+      "path": "assets/screens/trade-area-supply.jpg",
+      "sha256": "8a5c99cb143aecea7ceef6cf8cf3aae6deb7b7273c5da1dece8db868f3a8615b",
+      "kind": "screens",
+      "source": "assets/intro/deck/trade-area-supply.jpg",
+      "sources": [
+        "assets/intro/deck/trade-area-supply.jpg"
+      ],
+      "approval": {
+        "by": "owner",
+        "record": "CHANGELOG.md v0.7"
+      },
+      "usedBy": [
+        "48d9c918-a62e-430f-952b-bc8007f333c6",
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
+      ]
+    }
+  ]
+}

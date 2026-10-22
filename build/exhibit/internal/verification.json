@@ -1,0 +1,284 @@
+{
+  "schema": "tiansight.pdf-verification/2",
+  "deckId": "exhibit",
+  "profile": "internal",
+  "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
+  "systemVersion": "2026.10.21-e0a760",
+  "htmlSha256": "5a2ed5eb0a86e93c02e2fa54bcb6910e349d031bafb4d73c209af8fdb592d00a",
+  "pdfSha256": "e0a94acc00b09eec2c3195bbdeaa2e81bee1a20be5d1e71e0cd4645999fd11fd",
+  "pageCount": 33,
+  "pages": [
+    {
+      "page": 1,
+      "id": "5e6b6f17-2773-4b81-95c4-8e27de028529",
+      "characters": 101,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.173
+    },
+    {
+      "page": 2,
+      "id": "08d447c4-1e58-45c1-83b2-9f28976cdd7f",
+      "characters": 110,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.427
+    },
+    {
+      "page": 3,
+      "id": "bba93bc0-e4f8-4068-8984-2935d93d8cfb",
+      "characters": 220,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.848
+    },
+    {
+      "page": 4,
+      "id": "3f41859f-1d87-4ded-a0a5-95177bd788ed",
+      "characters": 105,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.199
+    },
+    {
+      "page": 5,
+      "id": "cf2c6541-8f7f-4f78-a90b-816e61be6e7d",
+      "characters": 44,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.469
+    },
+    {
+      "page": 6,
+      "id": "eb32d32e-c909-42cb-87c9-0b907b3ea1ed",
+      "characters": 142,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.281
+    },
+    {
+      "page": 7,
+      "id": "d08c13a5-d95f-4d16-a212-7cf71ba95537",
+      "characters": 164,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.33
+    },
+    {
+      "page": 8,
+      "id": "6b98ca6f-126a-4a4e-85f3-fa44feb38344",
+      "characters": 121,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.448
+    },
+    {
+      "page": 9,
+      "id": "cecda97f-9fb6-40fa-b437-22da4bcb1395",
+      "characters": 122,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.445
+    },
+    {
+      "page": 10,
+      "id": "97aca518-0224-4cfd-823c-13e258967232",
+      "characters": 44,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.524
+    },
+    {
+      "page": 11,
+      "id": "9b1b891a-3fea-46e6-9eab-cf05efd17716",
+      "characters": 145,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.353
+    },
+    {
+      "page": 12,
+      "id": "1ebbbf22-f947-4331-9d56-e06f526c54db",
+      "characters": 88,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.439
+    },
+    {
+      "page": 13,
+      "id": "69a70c07-74f7-4269-bd23-b491dd6c7b68",
+      "characters": 82,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.484
+    },
+    {
+      "page": 14,
+      "id": "2c61e7ef-c71a-4ccb-8308-e7407dda3cf8",
+      "characters": 116,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.242
+    },
+    {
+      "page": 15,
+      "id": "bf00938c-e2a7-47a2-a11f-e609597ad24c",
+      "characters": 44,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.455
+    },
+    {
+      "page": 16,
+      "id": "76300fea-d62c-4907-8081-e9379fc4ef8d",
+      "characters": 116,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.64
+    },
+    {
+      "page": 17,
+      "id": "76d3d22d-c460-4b4c-ab4e-dd673ba5aae8",
+      "characters": 122,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.64
+    },
+    {
+      "page": 18,
+      "id": "f61420aa-efab-46d0-926e-0b53a9fe7f77",
+      "characters": 84,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.464
+    },
+    {
+      "page": 19,
+      "id": "54df294e-e1a0-43b2-8094-1f6a303c0788",
+      "characters": 76,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.472
+    },
+    {
+      "page": 20,
+      "id": "d2c0bdd1-2cdf-4c7a-90fe-14e39a5e2db1",
+      "characters": 51,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.4
+    },
+    {
+      "page": 21,
+      "id": "cbce9078-e6b6-4c22-ae8c-becc6b98c001",
+      "characters": 146,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.686
+    },
+    {
+      "page": 22,
+      "id": "d9a3002f-14cf-4f76-b061-81f6f58d9fc9",
+      "characters": 167,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.71
+    },
+    {
+      "page": 23,
+      "id": "ae882cb3-0355-4165-a9c2-092412fcd9f4",
+      "characters": 47,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.418
+    },
+    {
+      "page": 24,
+      "id": "d923b05d-df80-4feb-ab3e-fbce2b6512b9",
+      "characters": 146,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.697
+    },
+    {
+      "page": 25,
+      "id": "4ccad737-2ed1-464d-921f-e9e6bbdd6937",
+      "characters": 158,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.31
+    },
+    {
+      "page": 26,
+      "id": "adefb319-95e5-49d1-895b-19e4e4578013",
+      "characters": 147,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.656
+    },
+    {
+      "page": 27,
+      "id": "806e82b8-b93c-432d-a124-3fbd65816617",
+      "characters": 150,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.685
+    },
+    {
+      "page": 28,
+      "id": "08a3dfe9-79cd-4f7b-93df-a63f51bc5ff5",
+      "characters": 43,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.213
+    },
+    {
+      "page": 29,
+      "id": "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
+      "characters": 247,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.864
+    },
+    {
+      "page": 30,
+      "id": "5419cbed-e0d1-46a9-bd7b-393c6b260205",
+      "characters": 259,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.882
+    },
+    {
+      "page": 31,
+      "id": "ed451b90-dc1f-497d-82c3-d9cb095dd225",
+      "characters": 293,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.854
+    },
+    {
+      "page": 32,
+      "id": "8101bf62-d9e5-42da-84f6-107f597c4620",
+      "characters": 323,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.882
+    },
+    {
+      "page": 33,
+      "id": "60f54dbe-8e06-45c8-b877-b1574f1e6bee",
+      "characters": 116,
+      "textMatches": true,
+      "clippedWords": 0,
+      "meanPixelDifference": 2.384
+    }
+  ],
+  "fontsEmbedded": true,
+  "fontVerification": "pdffonts + embedded font streams",
+  "pageSizePoints": [
+    960,
+    540
+  ],
+  "textComparison": "NFKC non-whitespace character multisets including punctuation/signs, plus each numeric token in visual digit order at its HTML range; positioned text blocks may reorder",
+  "passed": true
+}

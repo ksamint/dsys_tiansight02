@@ -1,0 +1,23 @@
+{
+  "id": "cf2c6541-8f7f-4f78-a90b-816e61be6e7d",
+  "label": "节首 · 用餐体验",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "用餐体验",
+    "让顾客愿意点"
+  ],
+  "publish": "banner",
+  "purpose": "第一章节首：让顾客愿意点（用餐体验）。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 1,
+    "title": "让顾客愿意点",
+    "subtitle": "体验动线 · 明档尺度 · 光与视觉",
+    "image": {
+      "$asset": "assets/exhibit/ex-03-sec-dining.jpg"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "case-03",
+  "name": "石头先生",
+  "summary": {
+    "name": "石头先生",
+    "image": {
+      "$asset": "assets/cases/case-03/case-03.jpg"
+    },
+    "logo": {
+      "$asset": "assets/partners/shitou.png"
+    },
+    "module": "模块四 · 连锁督导",
+    "summary": "为近 100 家门店建立督导智能系统，支持供应链、营销、运营与投资决策。",
+    "sub": "烘焙 + 汉堡 · 近 100 家门店",
+    "headline": "为近 100 家门店建立餐饮第二大脑督导智能系统。",
+    "meta": [
+      {
+        "k": "业态",
+        "v": "烘焙 + 汉堡"
+      },
+      {
+        "k": "地点",
+        "v": "近 100 家门店"
+      }
+    ],
+    "background": "石头先生旗下烘焙与汉堡门店近 100 家。门店数据分散在不同系统，总部靠人工汇总，督导与决策的时效和一致性受限。",
+    "challenges": [
+      "多门店、多业态数据口径不一",
+      "人工导出整理耗时",
+      "各部门需要同一份可核对的数据"
+    ],
+    "approach": [
+      {
+        "title": "自动数据导出",
+        "body": "对接门店经营数据，按周期自动导出"
+      },
+      {
+        "title": "梳理清洗",
+        "body": "统一门店、菜品、时段口径，处理缺失与异常"
+      },
+      {
+        "title": "标注分析",
+        "body": "按业态、商圈、时段对比门店与菜品"
+      },
+      {
+        "title": "决策支持",
+        "body": "按供应链、营销、运营、投资四类场景输出结论"
+      }
+    ],
+    "results": [
+      {
+        "value": "近 100",
+        "label": "家门店接入"
+      },
+      {
+        "value": "2",
+        "label": "类业态 · 烘焙与汉堡"
+      },
+      {
+        "value": "4",
+        "label": "类决策 · 供应链 营销 运营 投资"
+      }
+    ],
+    "deliverables": [
+      "餐饮第二大脑督导系统",
+      "多门店经营看板",
+      "标准化数据口径",
+      "分场景决策简报"
+    ],
+    "index": 3,
+    "total": 8
+  },
+  "gallery": [],
+  "assets": [
+    "assets/cases/case-03/case-03.jpg",
+    "assets/partners/shitou.png"
+  ],
+  "approval": {
+    "by": "owner",
+    "date": "2026-10-21",
+    "record": "docs/component-runtime.md"
+  }
+}

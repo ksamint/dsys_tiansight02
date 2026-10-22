@@ -1,0 +1,17 @@
+{
+  "id": "2e73adff-ba13-5bb2-bdff-2e0353c0dd64",
+  "label": "节首 · 方法论",
+  "owner": "sales",
+  "cat": "service",
+  "type": "cards",
+  "tags": [],
+  "publish": "web",
+  "purpose": "节首 · 方法论",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 2,
+    "title": "餐饮第二大脑",
+    "subtitle": "菜单推演 · 经营看板 · 教练式督导 · 持续复盘"
+  }
+}

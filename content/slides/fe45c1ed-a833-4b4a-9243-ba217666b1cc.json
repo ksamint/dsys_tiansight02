@@ -1,0 +1,22 @@
+{
+  "id": "fe45c1ed-a833-4b4a-9243-ba217666b1cc",
+  "label": "图谱",
+  "cat": "system",
+  "type": "chart",
+  "tags": [
+    "图表",
+    "渗透率",
+    "利润归因",
+    "菜单推演"
+  ],
+  "publish": "web",
+  "purpose": "可切换的分析图：渗透率矩阵 / 利润归因 / 菜单推演（销售提案版）。",
+  "evidence": "sample",
+  "note": "销售提案版",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ChartSlide",
+  "props": {
+    "figure": "scatter"
+  }
+}

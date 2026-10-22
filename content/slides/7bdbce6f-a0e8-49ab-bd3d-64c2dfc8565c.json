@@ -1,0 +1,44 @@
+{
+  "id": "7bdbce6f-a0e8-49ab-bd3d-64c2dfc8565c",
+  "label": "第二大脑 · 四个部分",
+  "cat": "system",
+  "type": "tiers",
+  "tags": [
+    "第二大脑",
+    "菜单推演",
+    "经营看板",
+    "教练式督导",
+    "持续复盘"
+  ],
+  "publish": "web",
+  "purpose": "第二大脑的四个部分及各自作用。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "LadderSlide",
+  "props": {
+    "eyebrow": "餐饮第二大脑",
+    "title": "四个部分，支撑每一次决策。",
+    "tiers": [
+      {
+        "tier": "MENU SIMULATION",
+        "name": "菜单推演",
+        "got": "用真实点单数据，推演不同菜单方案的变化。"
+      },
+      {
+        "tier": "OPERATING DASHBOARD",
+        "name": "经营看板",
+        "got": "看清哪里变了、影响多大、先处理什么。"
+      },
+      {
+        "tier": "COACHING",
+        "name": "教练式督导",
+        "got": "每条建议落实到负责人和完成时间。"
+      },
+      {
+        "tier": "CONTINUOUS REVIEW",
+        "name": "持续复盘",
+        "got": "预期与实际对照，为下一次决策提供依据。"
+      }
+    ]
+  }
+}

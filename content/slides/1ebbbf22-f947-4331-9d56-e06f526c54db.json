@@ -1,0 +1,31 @@
+{
+  "id": "1ebbbf22-f947-4331-9d56-e06f526c54db",
+  "label": "出品台",
+  "cat": "design",
+  "type": "gallery",
+  "tags": [
+    "出品展陈",
+    "出品台"
+  ],
+  "publish": "web",
+  "purpose": "出品台项目实景拼板。",
+  "evidence": "partner",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "出品展陈 · 出品台",
+    "title": "出品台：\n工具定位，\n出品一致",
+    "body": "盛器、调料、工具定位放置，换人不换标准。",
+    "note": "项目实景照片。",
+    "layout": "row",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/exhibit/m-pass.jpg"
+        },
+        "caption": "圆形出品台 · 明档出品位 · 出品与吊架"
+      }
+    ]
+  }
+}

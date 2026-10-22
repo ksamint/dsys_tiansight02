@@ -1,0 +1,23 @@
+{
+  "id": "812447ee-f013-4213-a98a-89e9c7d4f127",
+  "label": "实证",
+  "cat": "proof",
+  "type": "statement",
+  "tags": [
+    "实证"
+  ],
+  "publish": "web",
+  "purpose": "整页陈述：从一家店，到近百家店。",
+  "evidence": "illustration",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "StatementSlide",
+  "props": {
+    "kicker": "实证",
+    "title": "从一家店，\n到近百家店。",
+    "body": "新店开业、经营复盘、连锁督导，已在真实门店中落地。",
+    "image": {
+      "$asset": "assets/deck/statement-proof.jpg"
+    }
+  }
+}

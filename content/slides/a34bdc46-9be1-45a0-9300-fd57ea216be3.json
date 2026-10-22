@@ -1,0 +1,36 @@
+{
+  "id": "a34bdc46-9be1-45a0-9300-fd57ea216be3",
+  "label": "主张",
+  "cat": "brand",
+  "type": "promise",
+  "tags": [
+    "主张",
+    "菜单",
+    "定价",
+    "组合"
+  ],
+  "publish": "web",
+  "purpose": "说明菜单是每天的经营决策，以及侍天带来的三项价值。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "PromiseSlide",
+  "props": {
+    "eyebrow": "侍天 TIANSIGHT",
+    "title": "菜单，是餐厅每天都在做的经营决策。",
+    "body": "卖什么、怎么定价、如何组合，决定顾客怎么点，也决定采购、后厨和利润。侍天从菜单入手，帮餐厅把这些决定做对。",
+    "points": [
+      {
+        "label": "让顾客愿意点",
+        "note": "餐厅概念、招牌产品、菜单结构与价格。"
+      },
+      {
+        "label": "让团队做得稳",
+        "note": "产品标准、岗位分工、培训与例会。"
+      },
+      {
+        "label": "让经营留下收益",
+        "note": "每项调整有依据，结果逐项核对。"
+      }
+    ]
+  }
+}

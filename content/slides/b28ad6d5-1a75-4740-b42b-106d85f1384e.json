@@ -1,0 +1,32 @@
+{
+  "id": "b28ad6d5-1a75-4740-b42b-106d85f1384e",
+  "label": "全线配套",
+  "cat": "design",
+  "type": "logos",
+  "tags": [
+    "设备",
+    "供应品牌"
+  ],
+  "publish": "hold",
+  "purpose": "厨房到客房的全线配套品类与供应品牌。",
+  "evidence": "partner",
+  "note": "品牌 logo 待换高清并确认使用许可",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ScreensSlide",
+  "props": {
+    "eyebrow": "设备与交付 · 合作方",
+    "title": "厨房至客房，\n全线配套",
+    "body": "厨⁠房⁠设⁠备、餐⁠饮⁠设⁠备、制⁠冷⁠设⁠备、厨⁠房⁠用⁠具、陶⁠瓷⁠餐⁠具、刀⁠叉、玻⁠璃⁠器⁠皿、宴⁠会⁠台⁠椅、大⁠堂⁠用⁠品、制⁠服、窗⁠帘、地⁠毯、布⁠草⁠及⁠易⁠耗⁠品。",
+    "note": "图为部分合作设备品牌。",
+    "layout": "row",
+    "shots": [
+      {
+        "src": {
+          "$asset": "assets/exhibit/p9-1.jpg"
+        },
+        "caption": "合作设备品牌"
+      }
+    ]
+  }
+}

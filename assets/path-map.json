@@ -1,0 +1,555 @@
+{
+  "schema": "tiansight.asset-path-map/1",
+  "paths": {
+    "exhibit/gen/ex-01-cover.jpg": "assets/exhibit/ex-01-cover.jpg",
+    "exhibit/gen/ex-03-sec-dining.jpg": "assets/exhibit/ex-03-sec-dining.jpg",
+    "exhibit/gen/ex-04-sec-display.jpg": "assets/exhibit/ex-04-sec-display.jpg",
+    "exhibit/gen/ex-05-sec-boh.jpg": "assets/exhibit/ex-05-sec-boh.jpg",
+    "exhibit/gen/ex-06-sec-equipment.jpg": "assets/exhibit/ex-06-sec-equipment.jpg",
+    "exhibit/gen/ex-07-sec-delivery.jpg": "assets/exhibit/ex-07-sec-delivery.jpg",
+    "exhibit/gen/ex-08-sec-team.jpg": "assets/exhibit/ex-08-sec-team.jpg",
+    "exhibit/m-mingdang.jpg": "assets/exhibit/m-mingdang.jpg",
+    "exhibit/m-island.jpg": "assets/exhibit/m-island.jpg",
+    "exhibit/m-pass.jpg": "assets/exhibit/m-pass.jpg",
+    "exhibit/m-detail.jpg": "assets/exhibit/m-detail.jpg",
+    "exhibit/m-boh1.jpg": "assets/exhibit/m-boh1.jpg",
+    "exhibit/m-boh2.jpg": "assets/exhibit/m-boh2.jpg",
+    "exhibit/hotels.jpg": "assets/exhibit/hotels.jpg",
+    "exhibit/brand-wall.jpg": "assets/exhibit/brand-wall.jpg",
+    "exhibit/src/p9-1.jpg": "assets/exhibit/p9-1.jpg",
+    "exhibit/case/yyjm-1.jpg": "assets/cases/case-06/yyjm-1.jpg",
+    "exhibit/case/yyjm-2.jpg": "assets/cases/case-06/yyjm-2.jpg",
+    "exhibit/case/yyjm-3.jpg": "assets/cases/case-06/yyjm-3.jpg",
+    "exhibit/case/yyjm-4.jpg": "assets/cases/case-06/yyjm-4.jpg",
+    "exhibit/case/yyjm-5.jpg": "assets/cases/case-06/yyjm-5.jpg",
+    "exhibit/case/yyjm-6.jpg": "assets/cases/case-06/yyjm-6.jpg",
+    "people/bianjiang.png": "assets/people/intro/bianjiang.png",
+    "people/guofeng.png": "assets/people/intro/guofeng.png",
+    "people/liquanchao.png": "assets/people/intro/liquanchao.png",
+    "people/yuxiangdong.png": "assets/people/intro/yuxiangdong.png",
+    "wechat-qr.png": "assets/people/intro/wechat-qr.png",
+    "logo-seal.png": "assets/logo/supplied-logo-seal.png",
+    "assets/icons.svg": "assets/logo/icons.svg",
+    "assets/intro/deck/case-01.jpg": "assets/cases/case-01/case-01.jpg",
+    "deck/case-01.jpg": "assets/cases/case-01/case-01.jpg",
+    "assets/intro/deck/case-02.jpg": "assets/cases/case-02/case-02.jpg",
+    "deck/case-02.jpg": "assets/cases/case-02/case-02.jpg",
+    "assets/intro/deck/case-03.jpg": "assets/cases/case-03/case-03.jpg",
+    "deck/case-03.jpg": "assets/cases/case-03/case-03.jpg",
+    "assets/intro/deck/case-04.jpg": "assets/cases/case-04/case-04.jpg",
+    "deck/case-04.jpg": "assets/cases/case-04/case-04.jpg",
+    "assets/intro/deck/case-05.jpg": "assets/cases/case-05/case-05.jpg",
+    "deck/case-05.jpg": "assets/cases/case-05/case-05.jpg",
+    "assets/intro/deck/case-06.jpg": "assets/cases/case-06/case-06.jpg",
+    "deck/case-06.jpg": "assets/cases/case-06/case-06.jpg",
+    "assets/intro/deck/case-07.jpg": "assets/cases/case-07/case-07.jpg",
+    "deck/case-07.jpg": "assets/cases/case-07/case-07.jpg",
+    "assets/intro/deck/case-08.jpg": "assets/cases/case-08/case-08.jpg",
+    "deck/case-08.jpg": "assets/cases/case-08/case-08.jpg",
+    "assets/intro/deck/cover.jpg": "assets/deck/cover.jpg",
+    "deck/cover.jpg": "assets/deck/cover.jpg",
+    "assets/intro/deck/dashboard-1.jpg": "assets/screens/dashboard-1.jpg",
+    "deck/dashboard-1.jpg": "assets/screens/dashboard-1.jpg",
+    "assets/intro/deck/dashboard-2.jpg": "assets/screens/dashboard-2.jpg",
+    "deck/dashboard-2.jpg": "assets/screens/dashboard-2.jpg",
+    "assets/intro/deck/dashboard-3.jpg": "assets/screens/dashboard-3.jpg",
+    "deck/dashboard-3.jpg": "assets/screens/dashboard-3.jpg",
+    "assets/intro/deck/dashboard-4.jpg": "assets/screens/dashboard-4.jpg",
+    "deck/dashboard-4.jpg": "assets/screens/dashboard-4.jpg",
+    "assets/intro/deck/mobile-review.jpg": "assets/screens/mobile-review.jpg",
+    "deck/mobile-review.jpg": "assets/screens/mobile-review.jpg",
+    "assets/intro/deck/module-1.jpg": "assets/deck/module-1.jpg",
+    "deck/module-1.jpg": "assets/deck/module-1.jpg",
+    "assets/intro/deck/module-2.jpg": "assets/deck/module-2.jpg",
+    "deck/module-2.jpg": "assets/deck/module-2.jpg",
+    "assets/intro/deck/module-3.jpg": "assets/deck/module-3.jpg",
+    "deck/module-3.jpg": "assets/deck/module-3.jpg",
+    "assets/intro/deck/module-4.jpg": "assets/deck/module-4.jpg",
+    "deck/module-4.jpg": "assets/deck/module-4.jpg",
+    "assets/intro/deck/penetration-matrix.jpg": "assets/screens/penetration-matrix.jpg",
+    "deck/penetration-matrix.jpg": "assets/screens/penetration-matrix.jpg",
+    "assets/intro/deck/price-band-gap.jpg": "assets/screens/price-band-gap.jpg",
+    "deck/price-band-gap.jpg": "assets/screens/price-band-gap.jpg",
+    "assets/intro/deck/profit-sensitivity.jpg": "assets/screens/profit-sensitivity.jpg",
+    "deck/profit-sensitivity.jpg": "assets/screens/profit-sensitivity.jpg",
+    "assets/intro/deck/report-page-1.jpg": "assets/screens/report-page-1.jpg",
+    "deck/report-page-1.jpg": "assets/screens/report-page-1.jpg",
+    "assets/intro/deck/report-page-2.jpg": "assets/screens/report-page-2.jpg",
+    "deck/report-page-2.jpg": "assets/screens/report-page-2.jpg",
+    "assets/intro/deck/report-page-3.jpg": "assets/screens/report-page-3.jpg",
+    "deck/report-page-3.jpg": "assets/screens/report-page-3.jpg",
+    "assets/intro/deck/repurchase-quadrant.jpg": "assets/screens/repurchase-quadrant.jpg",
+    "deck/repurchase-quadrant.jpg": "assets/screens/repurchase-quadrant.jpg",
+    "assets/intro/deck/section-1.jpg": "assets/deck/section-1.jpg",
+    "deck/section-1.jpg": "assets/deck/section-1.jpg",
+    "assets/intro/deck/section-2.jpg": "assets/deck/section-2.jpg",
+    "deck/section-2.jpg": "assets/deck/section-2.jpg",
+    "assets/intro/deck/section-3.jpg": "assets/deck/section-3.jpg",
+    "deck/section-3.jpg": "assets/deck/section-3.jpg",
+    "assets/intro/deck/statement-data.jpg": "assets/deck/statement-data.jpg",
+    "deck/statement-data.jpg": "assets/deck/statement-data.jpg",
+    "assets/intro/deck/statement-decision.jpg": "assets/deck/statement-decision.jpg",
+    "deck/statement-decision.jpg": "assets/deck/statement-decision.jpg",
+    "assets/intro/deck/statement-problem.jpg": "assets/deck/statement-problem.jpg",
+    "deck/statement-problem.jpg": "assets/deck/statement-problem.jpg",
+    "assets/intro/deck/statement-proof.jpg": "assets/deck/statement-proof.jpg",
+    "deck/statement-proof.jpg": "assets/deck/statement-proof.jpg",
+    "assets/intro/deck/trade-area-supply.jpg": "assets/screens/trade-area-supply.jpg",
+    "deck/trade-area-supply.jpg": "assets/screens/trade-area-supply.jpg",
+    "assets/intro/partners/3699.png": "assets/partners/3699.png",
+    "partners/3699.png": "assets/partners/3699.png",
+    "assets/intro/partners/chaofa.png": "assets/partners/chaofa.png",
+    "partners/chaofa.png": "assets/partners/chaofa.png",
+    "assets/intro/partners/qingshuiting.png": "assets/partners/qingshuiting.png",
+    "partners/qingshuiting.png": "assets/partners/qingshuiting.png",
+    "assets/intro/partners/shitou.png": "assets/partners/shitou.png",
+    "partners/shitou.png": "assets/partners/shitou.png",
+    "assets/intro/partners/subangyuan.png": "assets/partners/subangyuan.png",
+    "partners/subangyuan.png": "assets/partners/subangyuan.png",
+    "assets/intro/partners/wuyutai.png": "assets/partners/wuyutai.png",
+    "partners/wuyutai.png": "assets/partners/wuyutai.png",
+    "assets/intro/partners/youyuanjingmeng.png": "assets/partners/youyuanjingmeng.png",
+    "partners/youyuanjingmeng.png": "assets/partners/youyuanjingmeng.png",
+    "assets/intro/partners/yun1980.png": "assets/partners/yun1980.png",
+    "partners/yun1980.png": "assets/partners/yun1980.png",
+    "assets/intro/people/bianjiang.png": "assets/people/intro/bianjiang.png",
+    "assets/intro/people/guofeng.png": "assets/people/intro/guofeng.png",
+    "assets/intro/people/liquanchao.png": "assets/people/intro/liquanchao.png",
+    "assets/intro/people/wechat-qr.png": "assets/people/intro/wechat-qr.png",
+    "people/wechat-qr.png": "assets/people/intro/wechat-qr.png",
+    "assets/intro/people/yuxiangdong.png": "assets/people/intro/yuxiangdong.png",
+    "assets/logo-seal.png": "assets/logo/supplied-logo-seal.png",
+    "assets/logo.png": "assets/logo/logo.png",
+    "deliverables/lifecycle-map/previews/3d.png": "assets/screens/3d.png",
+    "deliverables/lifecycle-map/previews/gantt.png": "assets/screens/gantt.png",
+    "deliverables/lifecycle-map/previews/map.png": "assets/screens/map.png",
+    "deliverables/exhibit-design/src/exhibit/": "assets/exhibit/",
+    "deliverables/exhibit-design/src/exhibit/gen/ex-01-cover.jpg": "assets/exhibit/ex-01-cover.jpg",
+    "deliverables/exhibit-design/src/exhibit/gen/ex-03-sec-dining.jpg": "assets/exhibit/ex-03-sec-dining.jpg",
+    "deliverables/exhibit-design/src/exhibit/gen/ex-04-sec-display.jpg": "assets/exhibit/ex-04-sec-display.jpg",
+    "deliverables/exhibit-design/src/exhibit/gen/ex-05-sec-boh.jpg": "assets/exhibit/ex-05-sec-boh.jpg",
+    "deliverables/exhibit-design/src/exhibit/gen/ex-06-sec-equipment.jpg": "assets/exhibit/ex-06-sec-equipment.jpg",
+    "deliverables/exhibit-design/src/exhibit/gen/ex-07-sec-delivery.jpg": "assets/exhibit/ex-07-sec-delivery.jpg",
+    "deliverables/exhibit-design/src/exhibit/gen/ex-08-sec-team.jpg": "assets/exhibit/ex-08-sec-team.jpg",
+    "deliverables/exhibit-design/src/exhibit/m-mingdang.jpg": "assets/exhibit/m-mingdang.jpg",
+    "deliverables/exhibit-design/src/exhibit/m-island.jpg": "assets/exhibit/m-island.jpg",
+    "deliverables/exhibit-design/src/exhibit/m-pass.jpg": "assets/exhibit/m-pass.jpg",
+    "deliverables/exhibit-design/src/exhibit/m-detail.jpg": "assets/exhibit/m-detail.jpg",
+    "deliverables/exhibit-design/src/exhibit/m-boh1.jpg": "assets/exhibit/m-boh1.jpg",
+    "deliverables/exhibit-design/src/exhibit/m-boh2.jpg": "assets/exhibit/m-boh2.jpg",
+    "deliverables/exhibit-design/src/exhibit/hotels.jpg": "assets/exhibit/hotels.jpg",
+    "deliverables/exhibit-design/src/exhibit/brand-wall.jpg": "assets/exhibit/brand-wall.jpg",
+    "deliverables/exhibit-design/src/exhibit/src/p9-1.jpg": "assets/exhibit/p9-1.jpg",
+    "deliverables/exhibit-design/src/exhibit/case/yyjm-1.jpg": "assets/cases/case-06/yyjm-1.jpg",
+    "deliverables/exhibit-design/src/exhibit/case/yyjm-2.jpg": "assets/cases/case-06/yyjm-2.jpg",
+    "deliverables/exhibit-design/src/exhibit/case/yyjm-3.jpg": "assets/cases/case-06/yyjm-3.jpg",
+    "deliverables/exhibit-design/src/exhibit/case/yyjm-4.jpg": "assets/cases/case-06/yyjm-4.jpg",
+    "deliverables/exhibit-design/src/exhibit/case/yyjm-5.jpg": "assets/cases/case-06/yyjm-5.jpg",
+    "deliverables/exhibit-design/src/exhibit/case/yyjm-6.jpg": "assets/cases/case-06/yyjm-6.jpg",
+    "../../assets/intro/deck/case-01.jpg": "assets/cases/case-01/case-01.jpg",
+    "../assets/intro/deck/case-01.jpg": "assets/cases/case-01/case-01.jpg",
+    "../../assets/intro/deck/case-02.jpg": "assets/cases/case-02/case-02.jpg",
+    "../assets/intro/deck/case-02.jpg": "assets/cases/case-02/case-02.jpg",
+    "../../assets/intro/deck/case-03.jpg": "assets/cases/case-03/case-03.jpg",
+    "../assets/intro/deck/case-03.jpg": "assets/cases/case-03/case-03.jpg",
+    "../../assets/intro/deck/case-04.jpg": "assets/cases/case-04/case-04.jpg",
+    "../assets/intro/deck/case-04.jpg": "assets/cases/case-04/case-04.jpg",
+    "../../assets/intro/deck/case-05.jpg": "assets/cases/case-05/case-05.jpg",
+    "../assets/intro/deck/case-05.jpg": "assets/cases/case-05/case-05.jpg",
+    "../../assets/intro/deck/case-06.jpg": "assets/cases/case-06/case-06.jpg",
+    "../assets/intro/deck/case-06.jpg": "assets/cases/case-06/case-06.jpg",
+    "../../assets/intro/deck/case-07.jpg": "assets/cases/case-07/case-07.jpg",
+    "../assets/intro/deck/case-07.jpg": "assets/cases/case-07/case-07.jpg",
+    "../../assets/intro/deck/case-08.jpg": "assets/cases/case-08/case-08.jpg",
+    "../assets/intro/deck/case-08.jpg": "assets/cases/case-08/case-08.jpg",
+    "../../assets/intro/deck/cover.jpg": "assets/deck/cover.jpg",
+    "../assets/intro/deck/cover.jpg": "assets/deck/cover.jpg",
+    "../../assets/intro/deck/dashboard-1.jpg": "assets/screens/dashboard-1.jpg",
+    "../assets/intro/deck/dashboard-1.jpg": "assets/screens/dashboard-1.jpg",
+    "../../assets/intro/deck/dashboard-2.jpg": "assets/screens/dashboard-2.jpg",
+    "../assets/intro/deck/dashboard-2.jpg": "assets/screens/dashboard-2.jpg",
+    "../../assets/intro/deck/dashboard-3.jpg": "assets/screens/dashboard-3.jpg",
+    "../assets/intro/deck/dashboard-3.jpg": "assets/screens/dashboard-3.jpg",
+    "../../assets/intro/deck/dashboard-4.jpg": "assets/screens/dashboard-4.jpg",
+    "../assets/intro/deck/dashboard-4.jpg": "assets/screens/dashboard-4.jpg",
+    "../../assets/intro/deck/mobile-review.jpg": "assets/screens/mobile-review.jpg",
+    "../assets/intro/deck/mobile-review.jpg": "assets/screens/mobile-review.jpg",
+    "../../assets/intro/deck/module-1.jpg": "assets/deck/module-1.jpg",
+    "../assets/intro/deck/module-1.jpg": "assets/deck/module-1.jpg",
+    "../../assets/intro/deck/module-2.jpg": "assets/deck/module-2.jpg",
+    "../assets/intro/deck/module-2.jpg": "assets/deck/module-2.jpg",
+    "../../assets/intro/deck/module-3.jpg": "assets/deck/module-3.jpg",
+    "../assets/intro/deck/module-3.jpg": "assets/deck/module-3.jpg",
+    "../../assets/intro/deck/module-4.jpg": "assets/deck/module-4.jpg",
+    "../assets/intro/deck/module-4.jpg": "assets/deck/module-4.jpg",
+    "../../assets/intro/deck/penetration-matrix.jpg": "assets/screens/penetration-matrix.jpg",
+    "../assets/intro/deck/penetration-matrix.jpg": "assets/screens/penetration-matrix.jpg",
+    "../../assets/intro/deck/price-band-gap.jpg": "assets/screens/price-band-gap.jpg",
+    "../assets/intro/deck/price-band-gap.jpg": "assets/screens/price-band-gap.jpg",
+    "../../assets/intro/deck/profit-sensitivity.jpg": "assets/screens/profit-sensitivity.jpg",
+    "../assets/intro/deck/profit-sensitivity.jpg": "assets/screens/profit-sensitivity.jpg",
+    "../../assets/intro/deck/report-page-1.jpg": "assets/screens/report-page-1.jpg",
+    "../assets/intro/deck/report-page-1.jpg": "assets/screens/report-page-1.jpg",
+    "../../assets/intro/deck/report-page-2.jpg": "assets/screens/report-page-2.jpg",
+    "../assets/intro/deck/report-page-2.jpg": "assets/screens/report-page-2.jpg",
+    "../../assets/intro/deck/report-page-3.jpg": "assets/screens/report-page-3.jpg",
+    "../assets/intro/deck/report-page-3.jpg": "assets/screens/report-page-3.jpg",
+    "../../assets/intro/deck/repurchase-quadrant.jpg": "assets/screens/repurchase-quadrant.jpg",
+    "../assets/intro/deck/repurchase-quadrant.jpg": "assets/screens/repurchase-quadrant.jpg",
+    "../../assets/intro/deck/section-1.jpg": "assets/deck/section-1.jpg",
+    "../assets/intro/deck/section-1.jpg": "assets/deck/section-1.jpg",
+    "../../assets/intro/deck/section-2.jpg": "assets/deck/section-2.jpg",
+    "../assets/intro/deck/section-2.jpg": "assets/deck/section-2.jpg",
+    "../../assets/intro/deck/section-3.jpg": "assets/deck/section-3.jpg",
+    "../assets/intro/deck/section-3.jpg": "assets/deck/section-3.jpg",
+    "../../assets/intro/deck/statement-data.jpg": "assets/deck/statement-data.jpg",
+    "../assets/intro/deck/statement-data.jpg": "assets/deck/statement-data.jpg",
+    "../../assets/intro/deck/statement-decision.jpg": "assets/deck/statement-decision.jpg",
+    "../assets/intro/deck/statement-decision.jpg": "assets/deck/statement-decision.jpg",
+    "../../assets/intro/deck/statement-problem.jpg": "assets/deck/statement-problem.jpg",
+    "../assets/intro/deck/statement-problem.jpg": "assets/deck/statement-problem.jpg",
+    "../../assets/intro/deck/statement-proof.jpg": "assets/deck/statement-proof.jpg",
+    "../assets/intro/deck/statement-proof.jpg": "assets/deck/statement-proof.jpg",
+    "../../assets/intro/deck/trade-area-supply.jpg": "assets/screens/trade-area-supply.jpg",
+    "../assets/intro/deck/trade-area-supply.jpg": "assets/screens/trade-area-supply.jpg",
+    "../../assets/intro/partners/3699.png": "assets/partners/3699.png",
+    "../assets/intro/partners/3699.png": "assets/partners/3699.png",
+    "../../assets/intro/partners/chaofa.png": "assets/partners/chaofa.png",
+    "../assets/intro/partners/chaofa.png": "assets/partners/chaofa.png",
+    "../../assets/intro/partners/qingshuiting.png": "assets/partners/qingshuiting.png",
+    "../assets/intro/partners/qingshuiting.png": "assets/partners/qingshuiting.png",
+    "../../assets/intro/partners/shitou.png": "assets/partners/shitou.png",
+    "../assets/intro/partners/shitou.png": "assets/partners/shitou.png",
+    "../../assets/intro/partners/subangyuan.png": "assets/partners/subangyuan.png",
+    "../assets/intro/partners/subangyuan.png": "assets/partners/subangyuan.png",
+    "../../assets/intro/partners/wuyutai.png": "assets/partners/wuyutai.png",
+    "../assets/intro/partners/wuyutai.png": "assets/partners/wuyutai.png",
+    "../../assets/intro/partners/youyuanjingmeng.png": "assets/partners/youyuanjingmeng.png",
+    "../assets/intro/partners/youyuanjingmeng.png": "assets/partners/youyuanjingmeng.png",
+    "../../assets/intro/partners/yun1980.png": "assets/partners/yun1980.png",
+    "../assets/intro/partners/yun1980.png": "assets/partners/yun1980.png",
+    "../../assets/intro/people/bianjiang.png": "assets/people/intro/bianjiang.png",
+    "../assets/intro/people/bianjiang.png": "assets/people/intro/bianjiang.png",
+    "../../assets/intro/people/guofeng.png": "assets/people/intro/guofeng.png",
+    "../assets/intro/people/guofeng.png": "assets/people/intro/guofeng.png",
+    "../../assets/intro/people/liquanchao.png": "assets/people/intro/liquanchao.png",
+    "../assets/intro/people/liquanchao.png": "assets/people/intro/liquanchao.png",
+    "../../assets/intro/people/wechat-qr.png": "assets/people/intro/wechat-qr.png",
+    "../assets/intro/people/wechat-qr.png": "assets/people/intro/wechat-qr.png",
+    "../../assets/intro/people/yuxiangdong.png": "assets/people/intro/yuxiangdong.png",
+    "../assets/intro/people/yuxiangdong.png": "assets/people/intro/yuxiangdong.png"
+  },
+  "runtime": {
+    "exhibit/gen/ex-01-cover.jpg": "assets/exhibit/ex-01-cover.jpg",
+    "exhibit/gen/ex-03-sec-dining.jpg": "assets/exhibit/ex-03-sec-dining.jpg",
+    "exhibit/gen/ex-04-sec-display.jpg": "assets/exhibit/ex-04-sec-display.jpg",
+    "exhibit/gen/ex-05-sec-boh.jpg": "assets/exhibit/ex-05-sec-boh.jpg",
+    "exhibit/gen/ex-06-sec-equipment.jpg": "assets/exhibit/ex-06-sec-equipment.jpg",
+    "exhibit/gen/ex-07-sec-delivery.jpg": "assets/exhibit/ex-07-sec-delivery.jpg",
+    "exhibit/gen/ex-08-sec-team.jpg": "assets/exhibit/ex-08-sec-team.jpg",
+    "exhibit/m-mingdang.jpg": "assets/exhibit/m-mingdang.jpg",
+    "exhibit/m-island.jpg": "assets/exhibit/m-island.jpg",
+    "exhibit/m-pass.jpg": "assets/exhibit/m-pass.jpg",
+    "exhibit/m-detail.jpg": "assets/exhibit/m-detail.jpg",
+    "exhibit/m-boh1.jpg": "assets/exhibit/m-boh1.jpg",
+    "exhibit/m-boh2.jpg": "assets/exhibit/m-boh2.jpg",
+    "exhibit/hotels.jpg": "assets/exhibit/hotels.jpg",
+    "exhibit/brand-wall.jpg": "assets/exhibit/brand-wall.jpg",
+    "exhibit/src/p9-1.jpg": "assets/exhibit/p9-1.jpg",
+    "exhibit/case/yyjm-1.jpg": "assets/cases/case-06/yyjm-1.jpg",
+    "exhibit/case/yyjm-2.jpg": "assets/cases/case-06/yyjm-2.jpg",
+    "exhibit/case/yyjm-3.jpg": "assets/cases/case-06/yyjm-3.jpg",
+    "exhibit/case/yyjm-4.jpg": "assets/cases/case-06/yyjm-4.jpg",
+    "exhibit/case/yyjm-5.jpg": "assets/cases/case-06/yyjm-5.jpg",
+    "exhibit/case/yyjm-6.jpg": "assets/cases/case-06/yyjm-6.jpg",
+    "people/bianjiang.png": "assets/people/bianjiang.png",
+    "people/guofeng.png": "assets/people/guofeng.png",
+    "people/liquanchao.png": "assets/people/liquanchao.png",
+    "people/yuxiangdong.png": "assets/people/yuxiangdong.png",
+    "wechat-qr.png": "assets/people/wechat-qr.png",
+    "supplied-logo-seal.png": "assets/logo/supplied-logo-seal.png",
+    "deck/case-01.jpg": "assets/cases/case-01/case-01.jpg",
+    "deck/case-02.jpg": "assets/cases/case-02/case-02.jpg",
+    "deck/case-03.jpg": "assets/cases/case-03/case-03.jpg",
+    "deck/case-04.jpg": "assets/cases/case-04/case-04.jpg",
+    "deck/case-05.jpg": "assets/cases/case-05/case-05.jpg",
+    "deck/case-06.jpg": "assets/cases/case-06/case-06.jpg",
+    "deck/case-07.jpg": "assets/cases/case-07/case-07.jpg",
+    "deck/case-08.jpg": "assets/cases/case-08/case-08.jpg",
+    "deck/cover.jpg": "assets/deck/cover.jpg",
+    "deck/dashboard-1.jpg": "assets/screens/dashboard-1.jpg",
+    "deck/dashboard-2.jpg": "assets/screens/dashboard-2.jpg",
+    "deck/dashboard-3.jpg": "assets/screens/dashboard-3.jpg",
+    "deck/dashboard-4.jpg": "assets/screens/dashboard-4.jpg",
+    "deck/mobile-review.jpg": "assets/screens/mobile-review.jpg",
+    "deck/module-1.jpg": "assets/deck/module-1.jpg",
+    "deck/module-2.jpg": "assets/deck/module-2.jpg",
+    "deck/module-3.jpg": "assets/deck/module-3.jpg",
+    "deck/module-4.jpg": "assets/deck/module-4.jpg",
+    "deck/penetration-matrix.jpg": "assets/screens/penetration-matrix.jpg",
+    "deck/price-band-gap.jpg": "assets/screens/price-band-gap.jpg",
+    "deck/profit-sensitivity.jpg": "assets/screens/profit-sensitivity.jpg",
+    "deck/report-page-1.jpg": "assets/screens/report-page-1.jpg",
+    "deck/report-page-2.jpg": "assets/screens/report-page-2.jpg",
+    "deck/report-page-3.jpg": "assets/screens/report-page-3.jpg",
+    "deck/repurchase-quadrant.jpg": "assets/screens/repurchase-quadrant.jpg",
+    "deck/section-1.jpg": "assets/deck/section-1.jpg",
+    "deck/section-2.jpg": "assets/deck/section-2.jpg",
+    "deck/section-3.jpg": "assets/deck/section-3.jpg",
+    "deck/statement-data.jpg": "assets/deck/statement-data.jpg",
+    "deck/statement-decision.jpg": "assets/deck/statement-decision.jpg",
+    "deck/statement-problem.jpg": "assets/deck/statement-problem.jpg",
+    "deck/statement-proof.jpg": "assets/deck/statement-proof.jpg",
+    "deck/trade-area-supply.jpg": "assets/screens/trade-area-supply.jpg",
+    "partners/3699.png": "assets/partners/3699.png",
+    "partners/chaofa.png": "assets/partners/chaofa.png",
+    "partners/qingshuiting.png": "assets/partners/qingshuiting.png",
+    "partners/shitou.png": "assets/partners/shitou.png",
+    "partners/subangyuan.png": "assets/partners/subangyuan.png",
+    "partners/wuyutai.png": "assets/partners/wuyutai.png",
+    "partners/youyuanjingmeng.png": "assets/partners/youyuanjingmeng.png",
+    "partners/yun1980.png": "assets/partners/yun1980.png",
+    "people/wechat-qr.png": "assets/people/intro/wechat-qr.png",
+    "logo-seal.png": "assets/logo/logo.png"
+  },
+  "sources": {
+    "assets/exhibit/ex-01-cover.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-01-cover.jpg"
+    ],
+    "assets/exhibit/ex-03-sec-dining.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-03-sec-dining.jpg"
+    ],
+    "assets/exhibit/ex-04-sec-display.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-04-sec-display.jpg"
+    ],
+    "assets/exhibit/ex-05-sec-boh.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-05-sec-boh.jpg"
+    ],
+    "assets/exhibit/ex-06-sec-equipment.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-06-sec-equipment.jpg"
+    ],
+    "assets/exhibit/ex-07-sec-delivery.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-07-sec-delivery.jpg"
+    ],
+    "assets/exhibit/ex-08-sec-team.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/gen/ex-08-sec-team.jpg"
+    ],
+    "assets/exhibit/m-mingdang.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-mingdang.jpg"
+    ],
+    "assets/exhibit/m-island.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-island.jpg"
+    ],
+    "assets/exhibit/m-pass.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-pass.jpg"
+    ],
+    "assets/exhibit/m-detail.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-detail.jpg"
+    ],
+    "assets/exhibit/m-boh1.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh1.jpg"
+    ],
+    "assets/exhibit/m-boh2.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/m-boh2.jpg"
+    ],
+    "assets/exhibit/hotels.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/hotels.jpg"
+    ],
+    "assets/exhibit/brand-wall.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/brand-wall.jpg"
+    ],
+    "assets/exhibit/p9-1.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/src/p9-1.jpg"
+    ],
+    "assets/cases/case-06/yyjm-1.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-1.jpg"
+    ],
+    "assets/cases/case-06/yyjm-2.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-2.jpg"
+    ],
+    "assets/cases/case-06/yyjm-3.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-3.jpg"
+    ],
+    "assets/cases/case-06/yyjm-4.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-4.jpg"
+    ],
+    "assets/cases/case-06/yyjm-5.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-5.jpg"
+    ],
+    "assets/cases/case-06/yyjm-6.jpg": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/exhibit/case/yyjm-6.jpg"
+    ],
+    "assets/people/bianjiang.png": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/people/bianjiang.png"
+    ],
+    "assets/people/guofeng.png": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/people/guofeng.png"
+    ],
+    "assets/people/liquanchao.png": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/people/liquanchao.png"
+    ],
+    "assets/people/yuxiangdong.png": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/people/yuxiangdong.png"
+    ],
+    "assets/people/wechat-qr.png": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/wechat-qr.png"
+    ],
+    "assets/logo/supplied-logo-seal.png": [
+      "archive/approved-2026-10-21/source.zip#embedded/image-map/logo-seal.png",
+      "assets/logo-seal.png"
+    ],
+    "assets/logo/icons.svg": [
+      "assets/icons.svg"
+    ],
+    "assets/cases/case-01/case-01.jpg": [
+      "assets/intro/deck/case-01.jpg"
+    ],
+    "assets/cases/case-02/case-02.jpg": [
+      "assets/intro/deck/case-02.jpg"
+    ],
+    "assets/cases/case-03/case-03.jpg": [
+      "assets/intro/deck/case-03.jpg"
+    ],
+    "assets/cases/case-04/case-04.jpg": [
+      "assets/intro/deck/case-04.jpg"
+    ],
+    "assets/cases/case-05/case-05.jpg": [
+      "assets/intro/deck/case-05.jpg"
+    ],
+    "assets/cases/case-06/case-06.jpg": [
+      "assets/intro/deck/case-06.jpg"
+    ],
+    "assets/cases/case-07/case-07.jpg": [
+      "assets/intro/deck/case-07.jpg"
+    ],
+    "assets/cases/case-08/case-08.jpg": [
+      "assets/intro/deck/case-08.jpg"
+    ],
+    "assets/deck/cover.jpg": [
+      "assets/intro/deck/cover.jpg"
+    ],
+    "assets/screens/dashboard-1.jpg": [
+      "assets/intro/deck/dashboard-1.jpg"
+    ],
+    "assets/screens/dashboard-2.jpg": [
+      "assets/intro/deck/dashboard-2.jpg"
+    ],
+    "assets/screens/dashboard-3.jpg": [
+      "assets/intro/deck/dashboard-3.jpg"
+    ],
+    "assets/screens/dashboard-4.jpg": [
+      "assets/intro/deck/dashboard-4.jpg"
+    ],
+    "assets/screens/mobile-review.jpg": [
+      "assets/intro/deck/mobile-review.jpg"
+    ],
+    "assets/deck/module-1.jpg": [
+      "assets/intro/deck/module-1.jpg"
+    ],
+    "assets/deck/module-2.jpg": [
+      "assets/intro/deck/module-2.jpg"
+    ],
+    "assets/deck/module-3.jpg": [
+      "assets/intro/deck/module-3.jpg"
+    ],
+    "assets/deck/module-4.jpg": [
+      "assets/intro/deck/module-4.jpg"
+    ],
+    "assets/screens/penetration-matrix.jpg": [
+      "assets/intro/deck/penetration-matrix.jpg"
+    ],
+    "assets/screens/price-band-gap.jpg": [
+      "assets/intro/deck/price-band-gap.jpg"
+    ],
+    "assets/screens/profit-sensitivity.jpg": [
+      "assets/intro/deck/profit-sensitivity.jpg"
+    ],
+    "assets/screens/report-page-1.jpg": [
+      "assets/intro/deck/report-page-1.jpg"
+    ],
+    "assets/screens/report-page-2.jpg": [
+      "assets/intro/deck/report-page-2.jpg"
+    ],
+    "assets/screens/report-page-3.jpg": [
+      "assets/intro/deck/report-page-3.jpg"
+    ],
+    "assets/screens/repurchase-quadrant.jpg": [
+      "assets/intro/deck/repurchase-quadrant.jpg"
+    ],
+    "assets/deck/section-1.jpg": [
+      "assets/intro/deck/section-1.jpg"
+    ],
+    "assets/deck/section-2.jpg": [
+      "assets/intro/deck/section-2.jpg"
+    ],
+    "assets/deck/section-3.jpg": [
+      "assets/intro/deck/section-3.jpg"
+    ],
+    "assets/deck/statement-data.jpg": [
+      "assets/intro/deck/statement-data.jpg"
+    ],
+    "assets/deck/statement-decision.jpg": [
+      "assets/intro/deck/statement-decision.jpg"
+    ],
+    "assets/deck/statement-problem.jpg": [
+      "assets/intro/deck/statement-problem.jpg"
+    ],
+    "assets/deck/statement-proof.jpg": [
+      "assets/intro/deck/statement-proof.jpg"
+    ],
+    "assets/screens/trade-area-supply.jpg": [
+      "assets/intro/deck/trade-area-supply.jpg"
+    ],
+    "assets/partners/3699.png": [
+      "assets/intro/partners/3699.png"
+    ],
+    "assets/partners/chaofa.png": [
+      "assets/intro/partners/chaofa.png"
+    ],
+    "assets/partners/qingshuiting.png": [
+      "assets/intro/partners/qingshuiting.png"
+    ],
+    "assets/partners/shitou.png": [
+      "assets/intro/partners/shitou.png"
+    ],
+    "assets/partners/subangyuan.png": [
+      "assets/intro/partners/subangyuan.png"
+    ],
+    "assets/partners/wuyutai.png": [
+      "assets/intro/partners/wuyutai.png"
+    ],
+    "assets/partners/youyuanjingmeng.png": [
+      "assets/intro/partners/youyuanjingmeng.png"
+    ],
+    "assets/partners/yun1980.png": [
+      "assets/intro/partners/yun1980.png"
+    ],
+    "assets/people/intro/bianjiang.png": [
+      "assets/intro/people/bianjiang.png"
+    ],
+    "assets/people/intro/guofeng.png": [
+      "assets/intro/people/guofeng.png"
+    ],
+    "assets/people/intro/liquanchao.png": [
+      "assets/intro/people/liquanchao.png"
+    ],
+    "assets/people/intro/wechat-qr.png": [
+      "assets/intro/people/wechat-qr.png"
+    ],
+    "assets/people/intro/yuxiangdong.png": [
+      "assets/intro/people/yuxiangdong.png"
+    ],
+    "assets/logo/logo.png": [
+      "assets/logo.png"
+    ],
+    "assets/screens/3d.png": [
+      "deliverables/lifecycle-map/previews/3d.png"
+    ],
+    "assets/screens/gantt.png": [
+      "deliverables/lifecycle-map/previews/gantt.png"
+    ],
+    "assets/screens/map.png": [
+      "deliverables/lifecycle-map/previews/map.png"
+    ]
+  }
+}

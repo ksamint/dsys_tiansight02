@@ -1,0 +1,22 @@
+{
+  "id": "916c9d8c-56d4-45f0-9722-01ff073a4219",
+  "label": "四个阶段",
+  "cat": "service",
+  "type": "steps",
+  "tags": [
+    "四个阶段",
+    "开店之前",
+    "经营之中",
+    "每月复盘",
+    "复制扩张"
+  ],
+  "publish": "web",
+  "purpose": "四个阶段的服务主线（销售提案版）。",
+  "note": "销售提案版",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "FiveQuestionsSlide",
+  "props": {
+    "active": 1
+  }
+}

@@ -12,4 +12,4 @@ Three views:
 
 Data nature: band widths, single-store timings and cadence classes are 侍天 design values, not measurements. Metric formulas are generic definitions; each project re-confirms them on store data.
 
-Previews: `previews/map.png`, `previews/gantt.png`, `previews/3d.png`.
+Previews: `../../assets/screens/map.png`, `../../assets/screens/gantt.png`, `../../assets/screens/3d.png`.

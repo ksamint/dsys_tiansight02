@@ -1,0 +1,16 @@
+{
+  "id": "cfcfcd48-d6db-4466-96dd-ae499aa122e5",
+  "label": "冷藏分类",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "储存",
+    "冷藏"
+  ],
+  "publish": "web",
+  "purpose": "冷藏分区分类实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

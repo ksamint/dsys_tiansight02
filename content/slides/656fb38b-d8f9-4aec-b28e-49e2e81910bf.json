@@ -1,0 +1,16 @@
+{
+  "id": "656fb38b-d8f9-4aec-b28e-49e2e81910bf",
+  "label": "调料存放",
+  "cat": "kitchen",
+  "type": "gallery",
+  "tags": [
+    "现场标准",
+    "储存",
+    "调料"
+  ],
+  "publish": "web",
+  "purpose": "调料存放实景。",
+  "evidence": "real",
+  "owner": "kitchen",
+  "status": "planned"
+}

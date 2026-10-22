@@ -1,0 +1,23 @@
+{
+  "id": "97aca518-0224-4cfd-823c-13e258967232",
+  "label": "节首 · 出品展陈",
+  "cat": "nav",
+  "type": "section",
+  "tags": [
+    "出品展陈",
+    "让招牌菜卖上价"
+  ],
+  "publish": "banner",
+  "purpose": "第二章节首：让招牌菜卖上价（出品展陈）。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "SectionSlide",
+  "props": {
+    "index": 2,
+    "title": "让招牌菜卖上价",
+    "subtitle": "展陈要素 · 出品台 · 出品动线",
+    "image": {
+      "$asset": "assets/exhibit/ex-04-sec-display.jpg"
+    }
+  }
+}

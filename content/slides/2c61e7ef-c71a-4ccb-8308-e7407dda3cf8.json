@@ -1,0 +1,42 @@
+{
+  "id": "2c61e7ef-c71a-4ccb-8308-e7407dda3cf8",
+  "label": "出品动线",
+  "cat": "design",
+  "type": "steps",
+  "tags": [
+    "出品展陈",
+    "动线"
+  ],
+  "publish": "web",
+  "purpose": "从出餐口到餐桌的出品动线。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "FiveQuestionsSlide",
+  "props": {
+    "eyebrow": "出品展陈 · 出品动线",
+    "title": "出品与收餐分道，洁污分流",
+    "note": "",
+    "steps": [
+      {
+        "label": "出餐口",
+        "q": "集中检验",
+        "aim": "核对标准样与温度。"
+      },
+      {
+        "label": "传菜",
+        "q": "最短路径",
+        "aim": "传菜通道与顾客通道分离。"
+      },
+      {
+        "label": "上桌",
+        "q": "按位上菜",
+        "aim": "上菜顺序对应座位编号。"
+      },
+      {
+        "label": "收餐",
+        "q": "独立回收",
+        "aim": "直达洗消，不经出品区。"
+      }
+    ]
+  }
+}

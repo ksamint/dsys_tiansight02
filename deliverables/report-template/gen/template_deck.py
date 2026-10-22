@@ -15,9 +15,9 @@ from tsk import *  # noqa: E402,F403
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, '..')
 configure(deckname='侍天报告模板', outdir=OUT, badge_target='catalog', rule_exempt=['voice', 'qa'], label_pages=['d1'], images={
-    'seal': 'assets/logo-seal.png', 'cover': 'assets/intro/deck/cover.jpg', 'module2': 'assets/intro/deck/module-2.jpg',
-    'qr': 'assets/intro/people/wechat-qr.png', 'bianjiang': 'assets/intro/people/bianjiang.png', 'guofeng': 'assets/intro/people/guofeng.png',
-    'liquanchao': 'assets/intro/people/liquanchao.png', 'yuxiangdong': 'assets/intro/people/yuxiangdong.png'})
+    'seal': 'assets/logo/supplied-logo-seal.png', 'cover': 'assets/deck/cover.jpg', 'module2': 'assets/deck/module-2.jpg',
+    'qr': 'assets/people/intro/wechat-qr.png', 'bianjiang': 'assets/people/intro/bianjiang.png', 'guofeng': 'assets/people/intro/guofeng.png',
+    'liquanchao': 'assets/people/intro/liquanchao.png', 'yuxiangdong': 'assets/people/intro/yuxiangdong.png'})
 
 # ---------------- 页序 ----------------
 S1 = ['principles', 'howto', 'voice', 'colors', 'type', 'layout', 'charts', 'badges', 'dodont', 'qa', 'constraints', 'catalog']

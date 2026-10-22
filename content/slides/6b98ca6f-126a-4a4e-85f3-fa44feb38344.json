@@ -1,0 +1,38 @@
+{
+  "id": "6b98ca6f-126a-4a4e-85f3-fa44feb38344",
+  "label": "明档实景",
+  "cat": "design",
+  "type": "gallery",
+  "tags": [
+    "用餐体验",
+    "明档"
+  ],
+  "publish": "web",
+  "purpose": "明档出品线项目实景拼板。",
+  "evidence": "partner",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ext:PhotoPoints",
+  "props": {
+    "eyebrow": "用餐体验 · 明档",
+    "title": "明档，\n让制作成为卖点",
+    "image": {
+      "$asset": "assets/exhibit/m-mingdang.jpg"
+    },
+    "caption": "项目实景 · 明档出品线、吊架与出品台",
+    "points": [
+      {
+        "label": "看得见",
+        "body": "座位可见制作，建立出品与卫生信任。"
+      },
+      {
+        "label": "点得多",
+        "body": "招牌菜明档出品，引导点单。"
+      },
+      {
+        "label": "记得住",
+        "body": "吊架、灯光、出品台统一，形成品牌画面。"
+      }
+    ]
+  }
+}

@@ -1,8 +1,16 @@
 # 侍天 TIANSIGHT — Design System
 
+The current working folders are `brand/` (foundation), `content/` (shared slides and deck
+manifests), `assets/` (registered visuals), `build/` (generated decks) and `scripts/` (one
+build/export path). `dist/` holds the pinned runtime; `archive/` preserves historical sources.
+Read [architecture and contracts](docs/architecture.md) and the [deck catalog](content/deck-catalog.json).
+The [intro](build/intro/client/index.html), [exhibit](build/exhibit/client/index.html) and
+[sales](build/sales/client/index.html) decks are generated from the same library; kitchen stays planned.
+Approval is separate from a successful build.
+
 > **Repository:** `ksamint/dsys_tiansight02` is the public home of the design system from 2026-10-18. It starts from the consolidated v0.7 release of `ksamint/dsys_tiansight01`, which is now a private archive. Nothing confidential is kept here; see `docs/maintaining.md` §6.
 
-> IP identity (IPTrust): `assetKey` sidera · display name 侍天 TIANSIGHT (registry: 侍天 - 智慧餐饮 / tiansight). Snapshot 5c7c158 (2026-09-27), see `brand/source.json`. Official website https://tiansight.apuch.cn; brand design system https://apuch.art/tiansight; repository preview https://ksamint.github.io/dsys_tiansight02/.
+> IP identity (IPTrust): `assetKey` sidera · display name 侍天 TIANSIGHT (registry: 侍天 - 智慧餐饮 / tiansight). Snapshot 53340b5 (2026-10-18; checked 2026-10-21), see `brand/source.json`. Official website https://tiansight.apuch.cn; brand design system https://apuch.art/tiansight; repository preview https://ksamint.github.io/dsys_tiansight02/.
 
 > 侍天 TIANSIGHT — 从一道菜，到一家家店的好生意。
 > *拍板之前，问侍天。*
@@ -38,8 +46,9 @@ paraphrase it.
 |---|---|---|
 | 官网 Marketing site | Single long-scroll site: hero → 报告样张 → 从概念到连锁 (四阶段) → 餐饮第二大脑 → 伙伴背书 → 联系; 伙伴与创始团队 page | `ui_kits/website/` |
 | 报告样张 Report sample | The deliverable itself: 决策维度 / 分析维度 / 趋势与归因 / 方法论地图 pages, plus the five insight matrices (渗透率矩阵, 商圈供需洞察, 复购分层四象限, 利润敏感性矩阵, 价格带断层洞察) | `ui_kits/report/` |
-| 销售提案 Sales deck | 16:9 deck pitching 侍天 to a restaurant owner — 14 slides: 主张 → 服务内容 (四个阶段) → 服务模式 → 方法论 (第二大脑 · 样张 · 图谱) → 价值 → 案例 → 伙伴 → 创始团队 → 联系 | `slides/`, `templates/sales-deck/` |
-| 企业介绍 v3 Company intro | 47-page 1920×1080 intro deck from `guidelines/company-intro-v3.md`: browser viewer, PDF, generator | `deliverables/company-intro-v3/` |
+| 销售提案 Sales deck | 16:9 deck pitching 侍天 to a restaurant owner — 14 slides: 主张 → 服务内容 (四个阶段) → 服务模式 → 方法论 (第二大脑 · 样张 · 图谱) → 价值 → 案例 → 伙伴 → 创始团队 → 联系 | `content/decks/sales.json`, `build/sales/` |
+| 企业介绍 v3 Company intro | 47-page client profile from `guidelines/company-intro-v3.md`, plus internal registry slides | `content/decks/intro.json`, `build/intro/` |
+| 展陈与厨房设计 Exhibit | 41 registry slides on the shared runtime with canonical team/contact slides; 33 build today, 8 `hold` pages wait for owner confirmation | `content/decks/exhibit.json`, `build/exhibit/` |
 | 全周期图谱 Lifecycle map | 餐饮经营全周期图谱 — flow map, single-store Gantt and 3D views over 60 decisions | `deliverables/lifecycle-map/` |
 | 报告模板 Report template | 39-page 1920×1080 Slides template: report standards plus a sample of each of the 27 page types, clickable PDF; built with the report kit (`tsk`) | `deliverables/report-template/`, `templates/report-kit/`, `docs/report-handbook.md` |
 
@@ -116,9 +125,9 @@ directly before doing substantial work on 侍天 designs. The parts that matter 
 |---|---|
 | [`brand/tokens.css`](https://github.com/ksamint/dsys_tiansight02/blob/main/brand/tokens.css) | **The authoritative foundation.** The published palette, type steps, spacing, radii and motion. Everything in `tokens/` here is grounded in it. |
 | [`brand/guide.md`](https://github.com/ksamint/dsys_tiansight02/blob/main/brand/guide.md) | The published brand guide, copied here verbatim as `guidelines/brand-guide.md` |
-| [`brand/fonts/`](https://github.com/ksamint/dsys_tiansight02/tree/main/brand/fonts) | 127 self-hosted WOFF2 subsets + OFL licenses, copied here to `assets/fonts/` |
+| [`brand/fonts/`](https://github.com/ksamint/dsys_tiansight02/tree/main/brand/fonts) | 127 self-hosted WOFF2 subsets + OFL licenses, copied here to `brand/fonts/` |
 | [`brand/components.css`](https://github.com/ksamint/dsys_tiansight02/blob/main/brand/components.css) | The CSS component layer with all five states per component |
-| [`brand/icons.svg`](https://github.com/ksamint/dsys_tiansight02/blob/main/brand/icons.svg) | The brand's own 17-glyph hairline sprite, copied to `assets/icons.svg` |
+| [`brand/icons.svg`](https://github.com/ksamint/dsys_tiansight02/blob/main/brand/icons.svg) | The brand's own 17-glyph hairline sprite, copied to `assets/logo/icons.svg` |
 | [`website/`](https://github.com/ksamint/dsys_tiansight02/tree/main/website) · [`deck/`](https://github.com/ksamint/dsys_tiansight02/tree/main/deck) · [`report/`](https://github.com/ksamint/dsys_tiansight02/tree/main/report) | The three real consumers — static HTML on the brand stylesheets |
 | [`html-system/`](https://github.com/ksamint/dsys_tiansight02/tree/main/html-system) · [`skills/`](https://github.com/ksamint/dsys_tiansight02/tree/main/skills) | Manifest-driven report/deck builder and six agent skills for producing reports on this system |
 | [`docs/`](https://github.com/ksamint/dsys_tiansight02/tree/main/docs) | `principles.md`, `quickstart.md`, `contributing.md`, `foundation-review.md` |
@@ -130,7 +139,7 @@ token files here carry the published values, with the proposal's alias names kep
 so component code stays stable. See §3 Color.
 
 **Other assets:** `uploads/侍天-透明-页眉.png`, the transparent circular seal (印章) containing
-侍天 in brush calligraphy; `assets/logo.png` is the 601×640 master and `assets/logo-seal.png`
+侍天 in brush calligraphy; `assets/logo/logo.png` is the 601×640 master and `assets/logo/supplied-logo-seal.png`
 the smaller header version. Marketing copy for the site, deck and report is quoted
 throughout this readme and reproduced in the UI kits.
 
@@ -266,7 +275,7 @@ carries the value, or on a 玄墨 ground (8.5:1). Body-size 明金 text is refus
 ### Type
 
 **Serif everywhere.** There is no sans face in this brand. Three families, all
-self-hosted from `assets/fonts/` as unicode-range WOFF2 subsets — no runtime CDN.
+self-hosted from `brand/fonts/` as unicode-range WOFF2 subsets — no runtime CDN.
 
 - **Display & headings:** `--font-display` / `--font-cn` — Noto Serif SC. Weight 600 for
   titles, 300–400 at 48px+ where the serif gets airy. Tracking `.14em`
@@ -510,14 +519,14 @@ The sales deck carries three d3 figures, one per beat of the 三部曲: **现状
 菜单推演 (P10–P90, 基线, 实测, badged E4 — the band is the message); **验收** — `CaseSlide` shows
 the 主指标's monthly path as a `TrendLine` with the 动作落地 mark and the 约定目标 reference,
 then the 护栏指标 as before → after pairs. All three run on 样张 data and say so in their 口径;
-the deck page and `templates/sales-deck/ds-base.js` load d3 v7.
+the deck page and `dist/components/2026.10.21-e0a760/loader.js` load d3 v7.
 
 ## 5. Iconography
 
 侍天 has its own icon sprite. Three rules follow.
 
-1. **The seal is the only brand mark.** `assets/logo.png` (601×640 master) and
-   `assets/logo-seal.png` (smaller header version) — transparent PNGs, a circular outline
+1. **The seal is the only brand mark.** `assets/logo/logo.png` (601×640 master) and
+   `assets/logo/supplied-logo-seal.png` (smaller header version) — transparent PNGs, a circular outline
    enclosing 侍天 in brush script. Use it at 28–40px in headers (`--mark-min-inline` 24px
    floor) and 88–120px in the closing CTA (`--mark-min-hero` 64px floor). Never recolor
    it, never place it on a saturated ground, never letter-space or reconstruct the
@@ -533,7 +542,7 @@ the deck page and `templates/sales-deck/ds-base.js` load d3 v7.
    `--bronze-500` — at bronze-500 both halves read as one dark word on parchment.
    **Never flatten it to a single color** and never re-split the letters differently. Use the exported `Wordmark`
    component (`components/core/Seal.jsx`) rather than typing the string by hand.
-3. **UI icons: the brand's own 17-glyph sprite.** `assets/icons.svg` holds them as
+3. **UI icons: the brand's own 17-glyph sprite.** `assets/logo/icons.svg` holds them as
    `<symbol id="ts-*">`; `components/core/Icon.jsx` inlines the same geometry so the
    component works at any directory depth. Drawing style: 24×24 box, `stroke-width: 1.5`,
    round caps and joins, **no fills**, always `currentColor`, rendered at 18–20px in UI
@@ -564,7 +573,32 @@ the deck page and `templates/sales-deck/ds-base.js` load d3 v7.
 
 ---
 
-## 6. Index
+## 6. Library build commands
+
+```sh
+python3 -m pip install -r scripts/pdf-requirements.txt  # if PDF tooling is absent
+python3 scripts/content_lib.py --check
+python3 scripts/build_assets.py                 # asset register (or --check)
+python3 scripts/build_deck.py --all              # all maintained HTML profiles
+python3 scripts/build_deck.py intro --profile client --param date=2026-11 --pdf
+python3 scripts/build_deck.py --all --check
+node scripts/build_deck_catalog.mjs             # catalog and slide index (or --check)
+python3 scripts/release.py intro                # verified local PDFs, latestBuilt
+python3 scripts/release.py exhibit
+python3 scripts/release.py sales
+python3 scripts/release.py intro --approve --by production-review  # production review only: content/approvals.json
+uv run --with pillow --with pymupdf python scripts/verify_pdf.py intro client
+python3 scripts/check.py --render
+node scripts/test_component_runtime.mjs
+node scripts/test_migration.mjs
+node scripts/test_export_text.mjs
+python3 scripts/build_preview.py
+```
+
+Release outputs are review candidates; production approval is explicit. Compose a temporary
+manifest with existing slide IDs and pass `--manifest`. See `docs/architecture.md`.
+
+## 7. Index
 
 ```
 styles.css                  single entry point — @import list only
@@ -602,9 +636,6 @@ slides/                     SlideFrame, SlideTitle, SlidePlaceholder, SlideChart
                             ValueSlide, CaseSlide, PartnerWallSlide, ExpertTeamSlide, ContactSlide
                             — plus index.html (the deck)
 templates/
-  sales-deck/               侍天 销售提案 — the 16:9 deck as a copyable template, with its own
-                            deck-stage.js shell (kept here, outside the compiled tree, so the
-                            133 KB shell stays out of _ds_bundle.js)
   report-kit/               tsk — Python page types for 1920×1080 Slides report decks + lint / render
                             checks and clickable-PDF export; `bash templates/report-kit/build.sh <deck.py> <dir>`,
                             tests `python3 templates/report-kit/tests/test_kit.py` (in check.py)
@@ -613,14 +644,11 @@ ui_kits/
   report/                   经营诊断报告 sample pages, incl. the d3 趋势与归因 page
   samples/                  four real 推演 / 长卷 dashboards, verbatim, as reference screens
 deliverables/
-  company-intro-v3/         企业介绍 v3 — 47 slides, viewer, PDF, deck.json; regenerate with
-                            `cd deliverables/company-intro-v3/gen && python3 gen.py`
-                            (view: `python3 -m http.server` at the repo root, open /deliverables/company-intro-v3/)
   lifecycle-map/            餐饮经营全周期图谱 — index.html + decisions.json (d3/three.js from cdnjs)
   report-template/          报告模板 — 39 slides (standards + 27 page-type samples), viewer, PDF, deck.json;
                             regenerate with `python3 deliverables/report-template/gen/template_deck.py`
-assets/intro/               deck photos, partner logos, portraits, WeChat QR for the intro
-docs/claude-design-system/  Claude Design System snapshot + SYNC.md (set up / sync another Claude account)
+assets/                     canonical registered photos, marks, portraits, QR and fonts
+archive/claude-design-system-v13/  Claude Design System snapshot + SYNC.md (set up / sync another Claude account)
 docs/maintaining.md         维护规程 — order of authority, branch/PR rule, brand refresh, gate, artifact sync
 docs/report-handbook.md     报告模板手册 — voice, colour, type, layout, badges, page types, workflow, QA for Slides reports
 scripts/check_contrast.py    WCAG 2.1 audit of every colour pairing in use; `python3 scripts/check_contrast.py` prints the table (in check.py)
@@ -658,7 +686,7 @@ readme.md                   this file
 `PromiseSlide`, `SectionSlide`, `FiveQuestionsSlide` (= `StagesSlide`), `ServiceModelSlide`,
 `ProofSlide`, `ChartSlide`, `LadderSlide`, `ValueSlide`, `CaseSlide`, `PartnerWallSlide`,
 `ExpertTeamSlide`, `ContactSlide`.
-Decks mount these as `<section>` children of `deck-stage` (`templates/sales-deck/deck-stage.js`),
+Decks mount these as `<section>` children of `deck-stage` (`dist/components/2026.10.21-e0a760/deck-stage.js`),
 which owns scaling, keyboard nav, the thumbnail rail and PDF export — never write a custom
 scaler. Slide defaults carry the current framing: `TitleSlide` 从一道菜… / 拍板之前，问侍天,
 `PromiseSlide` the menu thesis and three beats, `FiveQuestionsSlide` the four stages,
@@ -704,13 +732,13 @@ rather than generic, and exist because the copy demands them:
   d3 implementations of the same figures and can drift. Scoring contracts
   (`buildAdaptationProfile` weights, `sceneScores`) were **not** reproduced — the contract
   forbids re-deriving them outside `server/lib/matrix-insights-analysis.js`.
-- **Fonts are real, not substituted.** The 127 WOFF2 subsets in `assets/fonts/` come from
+- **Fonts are real, not substituted.** The 127 WOFF2 subsets in `brand/fonts/` come from
   the source repo and are served locally. The families are Noto Serif SC / Noto Serif /
   IBM Plex Mono — the brand's actual choice, not a stand-in. If 侍天 later licenses Source
   Han Serif or a 方正 face, only `tokens/fonts.css` and the family tokens change.
 - **Icons are the brand's own set**, but it is only 17 glyphs. Names outside it fall back
   to Lucide via CDN at matching stroke weight — that fallback is the remaining
-  substitution. Ask 侍天 to extend `assets/icons.svg` rather than relying on it.
+  substitution. Ask 侍天 to extend `assets/logo/icons.svg` rather than relying on it.
 - **No Latin wordmark artwork exists** in the supplied assets — the two-tone TIANSIGHT /
   INSIGHT lockup is set live in type per the rule above. Send artwork if the real mark has
   custom letterforms or different letter-spacing.
@@ -733,6 +761,5 @@ rather than generic, and exist because the copy demands them:
   data. Chart types and axis labels need confirmation against a real 样张 —
   `reference/catalogue.md` describes the reviewed originals (anonymised; the files stay out of
   this public repo).
-- **Templates.** Only the sales deck ships as a copyable template so far. The website and
-  report kits exist as Design System cards; promoting them to `templates/` is a
-  straightforward next step if consuming projects want to start from them.
+- **Decks.** Intro, exhibit and sales are built from canonical manifests in `content/decks/`.
+  Compose by slide references; the report kit remains a separate consumer.

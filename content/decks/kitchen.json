@@ -1,0 +1,87 @@
+{
+  "id": "kitchen",
+  "title": "侍天厨政专项介绍",
+  "canonicalSource": null,
+  "slides": [
+    "75b5d850-ef53-427e-810d-b5f8519c5c47",
+    "24dd2b24-1129-494e-99fb-2fe612c62f19",
+    "4fef1e6b-f64c-42a4-8d73-76e78d029569",
+    "b23b1430-3927-45ca-9950-82cc2d516f25",
+    "1bef457e-aada-4eb7-9e63-52697e2698c7",
+    "33278844-0b8c-43b8-ae00-efc880a1b592",
+    "767d87a9-26b1-404b-947e-ef46a19fb49b",
+    "e3b2a7ad-bd57-45cb-93f6-863550916c28",
+    "07d7592f-5464-42ed-9919-9b483d6f3de4",
+    "cef41141-7bf7-423e-b543-fefd986159c6",
+    "eafab63e-953c-409c-87bf-4afeb6f6bfd7",
+    "cfcfcd48-d6db-4466-96dd-ae499aa122e5",
+    "5d4889fa-fd9a-46cf-b96b-c997dc83a1a9",
+    "8183d369-af25-4844-8f0d-7150333d869d",
+    "656fb38b-d8f9-4aec-b28e-49e2e81910bf",
+    "7d9d06c0-d6a9-48b2-a827-d7c7f66ed6f4",
+    "e361daa8-83a8-4cdd-890c-bdf416b809c8",
+    "439085ee-6168-436f-96e8-b1c128d2bc9a",
+    "5ee6b1fc-5513-4740-b800-9d9bd34467d6",
+    "240279bf-2bad-4484-970c-c8e939b1fd5f",
+    "60f68492-0a44-49ed-82b1-013be536290b",
+    "3fd8612f-e855-44fa-805a-e945aaa4f040",
+    "9344f14f-d46b-475f-b2c8-a9ac2e5a8374",
+    "8dfe15df-c1c8-4ea5-92db-6e17b0c2b261",
+    "753ea379-36ea-4a59-8f63-55390d5326a3",
+    "34e22dea-78aa-4eac-ab8d-671849b4e81d",
+    "cde83ba4-524d-478b-a060-e1976feada9e",
+    "ce53ab36-97d6-4455-9da8-c8b111e77484",
+    "7ebb7b83-c789-4f81-a217-1546e1310793",
+    "fd830be9-0765-4f74-bb5a-6bd34ade0c6d",
+    "33adbeba-ed42-4be9-891b-bba7cf9ff6a0",
+    "46c1c655-80fc-4a90-bca0-0a6d7475c671",
+    "c5a3333b-2be9-4e95-8c44-4cc1cd4ead49",
+    "33893f5d-97d4-4059-9385-b23b7f02b465",
+    "69186ea2-161b-485f-8545-8c505447e863",
+    "7c8dc302-9791-41a3-9ec1-83b09ede0b6a",
+    "5bd3b505-b440-4373-9f27-8243b321fd4b",
+    "a2233e73-f720-4175-94f7-a88259d0f014",
+    "10a2cbd4-90b1-453e-9ba9-7627f1e03342",
+    "6d7cda56-3007-4a10-8a76-5e5b77e66793",
+    "ad2040c0-b786-4ab6-8610-43c96ab0826f",
+    "3ede721f-fe1a-44a6-b880-569b6214e6e6",
+    "b01c2f1b-b527-462c-b5ae-30c135a41296",
+    "a50c735a-9455-4409-8441-5b90c244073b",
+    "ed451b90-dc1f-497d-82c3-d9cb095dd225",
+    "8101bf62-d9e5-42da-84f6-107f597c4620",
+    "5419cbed-e0d1-46a9-bd7b-393c6b260205",
+    "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
+    "88ef1824-0213-45c2-9439-fc4b7b829e76",
+    "262cf8b7-e0dc-4c1e-9ec7-6ee914085562",
+    "a03d3e56-2874-404a-a734-8b88df47986c",
+    "60f54dbe-8e06-45c8-b877-b1574f1e6bee"
+  ],
+  "params": {
+    "date": {
+      "default": "2026-10",
+      "editor": "text"
+    }
+  },
+  "profiles": {
+    "internal": {
+      "publish": [
+        "web",
+        "banner",
+        "internal"
+      ]
+    },
+    "client": {
+      "publish": [
+        "web",
+        "banner"
+      ]
+    },
+    "web": {
+      "publish": [
+        "web"
+      ]
+    }
+  },
+  "transforms": [],
+  "status": "planned"
+}

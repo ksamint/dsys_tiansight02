@@ -1,0 +1,18 @@
+{
+  "id": "909bcf6d-4727-457e-bded-15bf27df98e2",
+  "label": "案例 03 · 石头先生",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例",
+    "烤炉"
+  ],
+  "publish": "web",
+  "purpose": "伙伴案例：石头先生的烤炉。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseStudySlide",
+  "props": {
+    "$case": "case-03"
+  }
+}

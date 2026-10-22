@@ -1,0 +1,83 @@
+{
+  "id": "case-04",
+  "name": "苏帮袁",
+  "summary": {
+    "name": "苏帮袁",
+    "image": {
+      "$asset": "assets/cases/case-04/case-04.jpg"
+    },
+    "logo": {
+      "$asset": "assets/partners/subangyuan.png"
+    },
+    "module": "模块三 · 经营复盘",
+    "summary": "每月订单级复盘 9 家淮扬 · 江浙菜门店，协助优化菜单与复购策略。",
+    "sub": "9 家门店 · 按月复盘",
+    "headline": "每月复盘 9 家门店，协助优化整体菜单与复购策略。",
+    "meta": [
+      {
+        "k": "业态",
+        "v": "淮扬菜 · 江浙菜"
+      },
+      {
+        "k": "地点",
+        "v": "9 家门店"
+      }
+    ],
+    "background": "苏帮袁经营淮扬菜与江浙菜，旗下 9 家门店客群与销量表现各不相同。需要一套按月运行、口径统一的复盘机制，让管理层每月都能拿到可比较的结论。",
+    "challenges": [
+      "9 家门店口径不一，横向难比较",
+      "月度数据多，人工整理慢、洞察浅",
+      "复购缺少持续追踪，菜单调整难验证"
+    ],
+    "approach": [
+      {
+        "title": "月度销量拆解",
+        "body": "拆解每店每菜每时段的销量与客单"
+      },
+      {
+        "title": "消费者洞察",
+        "body": "客群结构、点单偏好与客单分层"
+      },
+      {
+        "title": "复购率分析",
+        "body": "定位影响复购的菜品与环节"
+      },
+      {
+        "title": "菜单与复购策略",
+        "body": "输出建议，次月复盘验证效果"
+      }
+    ],
+    "results": [
+      {
+        "value": "9",
+        "label": "家门店 · 统一口径按月复盘"
+      },
+      {
+        "value": "三维",
+        "label": "门店 × 菜品 × 时段"
+      },
+      {
+        "value": "3",
+        "label": "项分析 · 销量 洞察 复购"
+      }
+    ],
+    "deliverables": [
+      "月度经营复盘报告",
+      "9 店横向对比看板",
+      "消费者与复购分析",
+      "菜单与复购优化建议"
+    ],
+    "index": 4,
+    "total": 8
+  },
+  "gallery": [],
+  "assets": [
+    "assets/cases/case-04/case-04.jpg",
+    "assets/partners/subangyuan.png"
+  ],
+  "approval": {
+    "by": "owner",
+    "date": "2026-10-21",
+    "record": "docs/component-runtime.md"
+  }
+}

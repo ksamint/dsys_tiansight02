@@ -1,0 +1,17 @@
+{
+  "id": "11f58198-e3a9-4f0c-ac0c-a3d55763eb3c",
+  "label": "案例 02 · 清水亭",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例"
+  ],
+  "publish": "web",
+  "purpose": "伙伴案例：清水亭。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseStudySlide",
+  "props": {
+    "$case": "case-02"
+  }
+}

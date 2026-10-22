@@ -1,0 +1,17 @@
+{
+  "id": "c5b7abdd-d3a2-44b0-a155-93ff56c79ee9",
+  "label": "团队案例 · 品牌增长",
+  "cat": "team",
+  "type": "stats",
+  "tags": [
+    "团队",
+    "品牌增长",
+    "履历"
+  ],
+  "publish": "web",
+  "purpose": "团队过往服务中的品牌增长数据。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "StatColumnsSlide",
+  "props": {}
+}

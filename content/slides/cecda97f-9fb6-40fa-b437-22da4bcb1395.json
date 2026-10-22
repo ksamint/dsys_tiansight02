@@ -1,0 +1,38 @@
+{
+  "id": "cecda97f-9fb6-40fa-b437-22da4bcb1395",
+  "label": "展示岛台",
+  "cat": "design",
+  "type": "gallery",
+  "tags": [
+    "用餐体验",
+    "岛台"
+  ],
+  "publish": "web",
+  "purpose": "展示岛台项目实景拼板。",
+  "evidence": "partner",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "ext:PhotoPoints",
+  "props": {
+    "eyebrow": "用餐体验 · 岛台",
+    "title": "岛台，\n一台多用",
+    "image": {
+      "$asset": "assets/exhibit/m-island.jpg"
+    },
+    "caption": "项目实景 · 展示岛台、出品岛台、开放式岛台",
+    "points": [
+      {
+        "label": "多场景",
+        "body": "零点、自助、宴会共用，按时段切换。"
+      },
+      {
+        "label": "补餐快",
+        "body": "后场就近补餐，高峰不断档。"
+      },
+      {
+        "label": "展示即陈列",
+        "body": "菜品、器具、灯光一体，提升价格感知。"
+      }
+    ]
+  }
+}

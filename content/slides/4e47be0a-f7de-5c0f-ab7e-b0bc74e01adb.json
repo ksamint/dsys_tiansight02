@@ -1,0 +1,13 @@
+{
+  "id": "4e47be0a-f7de-5c0f-ab7e-b0bc74e01adb",
+  "label": "老板看到的价值",
+  "owner": "sales",
+  "cat": "service",
+  "type": "cards",
+  "tags": [],
+  "publish": "web",
+  "purpose": "老板看到的价值",
+  "status": "maintained",
+  "component": "ValueSlide",
+  "props": {}
+}

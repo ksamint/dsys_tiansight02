@@ -1,0 +1,14 @@
+{
+  "id": "5bd3b505-b440-4373-9f27-8243b321fd4b",
+  "label": "纠偏闭环",
+  "cat": "kitchen",
+  "type": "steps",
+  "tags": [
+    "落地",
+    "纠偏"
+  ],
+  "publish": "web",
+  "purpose": "发现、纠偏、复查的闭环步骤。",
+  "owner": "kitchen",
+  "status": "planned"
+}

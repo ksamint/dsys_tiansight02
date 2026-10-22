@@ -1,0 +1,21 @@
+{
+  "id": "ed451b90-dc1f-497d-82c3-d9cb095dd225",
+  "label": "联合创始人 · 边江",
+  "cat": "team",
+  "type": "profile",
+  "tags": [
+    "人物",
+    "联合创始人",
+    "菜单",
+    "定位"
+  ],
+  "publish": "web",
+  "purpose": "边江个人介绍：履历、服务品牌与代表成果。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProfileSlide",
+  "props": {
+    "$team": "边江",
+    "eyebrow": "团队 · 联合创始人"
+  }
+}

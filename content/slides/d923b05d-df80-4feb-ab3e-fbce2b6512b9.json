@@ -1,0 +1,57 @@
+{
+  "id": "d923b05d-df80-4feb-ab3e-fbce2b6512b9",
+  "label": "新店与改造",
+  "cat": "design",
+  "type": "table",
+  "tags": [
+    "落地",
+    "新店",
+    "改造"
+  ],
+  "publish": "web",
+  "purpose": "新店与改造项目的不同做法。",
+  "owner": "exhibit",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "eyebrow": "落地方式 · 两种场景",
+    "title": "新店筹备与旧店改造",
+    "subtitle": "",
+    "corner": "",
+    "columns": [
+      "新店筹备",
+      "旧店改造"
+    ],
+    "rows": [
+      {
+        "label": "起点",
+        "cells": [
+          "菜单与品牌定位",
+          "现场勘察与问题清单"
+        ]
+      },
+      {
+        "label": "重点",
+        "cells": [
+          "面积分配、分区与明档位置",
+          "动线重排、设备替换与照明调整"
+        ]
+      },
+      {
+        "label": "限制",
+        "cells": [
+          "建筑条件、排烟与消防",
+          "不停业或短停业施工"
+        ]
+      },
+      {
+        "label": "交付",
+        "cells": [
+          "全套图纸、设备清单与开业调试",
+          "分阶段改造方案与前后对照"
+        ]
+      }
+    ],
+    "footnote": null
+  }
+}

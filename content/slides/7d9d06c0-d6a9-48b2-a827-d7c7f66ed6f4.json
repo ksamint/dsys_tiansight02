@@ -1,0 +1,15 @@
+{
+  "id": "7d9d06c0-d6a9-48b2-a827-d7c7f66ed6f4",
+  "label": "调料二次生命期",
+  "cat": "kitchen",
+  "type": "table",
+  "tags": [
+    "现场标准",
+    "调料",
+    "保质期"
+  ],
+  "publish": "web",
+  "purpose": "调料开封后二次生命期对照表。",
+  "owner": "kitchen",
+  "status": "planned"
+}

@@ -225,6 +225,14 @@ if '--render' in sys.argv:
         problems.append('snapshot: ' + run.stdout.strip().replace('\n', ' '))
     else:
         notes.append(run.stdout.strip())
+    text_check = subprocess.run(['node', str(root / 'scripts/test_export_text.mjs')], capture_output=True, text=True)
+    if text_check.returncode:
+        problems.append('rendered PDF text: ' + (text_check.stdout + text_check.stderr).strip().replace('\n', ' '))
+    run = subprocess.run(['node', str(root / 'scripts/test_migration.mjs')], capture_output=True, text=True)
+    if run.returncode:
+        problems.append('migration text: ' + (run.stdout + run.stderr).strip().replace('\n', ' '))
+    else:
+        notes.append(run.stdout.strip())
 
 # 8f. Version file matches the guide
 version = (brand / 'VERSION').read_text().strip()
@@ -271,7 +279,61 @@ for group, name, expected_type in (('color', 'gold-600', 'color'), ('shadow', 's
     if exported_tokens.get(group, {}).get(name, {}).get('$type') != expected_type:
         problems.append(f'tokens.json: {name} must be {group}/{expected_type}')
 
-export = root / 'TIANSIGHT 侍天 Design System'
+# Current runtime, canonical library and generated profiles must be reproducible offline.
+for command in ([sys.executable, 'scripts/build_component_runtime.py', '--check'],
+                [sys.executable, 'scripts/build_content.py', '--check'],
+                [sys.executable, 'scripts/content_lib.py', '--check'],
+                [sys.executable, 'scripts/build_assets.py', '--check'],
+                [sys.executable, 'scripts/build_deck.py', '--all', '--check'],
+                [sys.executable, 'scripts/test_content.py'],
+                ['node', 'scripts/build_deck_catalog.mjs', '--check']):
+    run = subprocess.run(command, cwd=root, capture_output=True, text=True)
+    if run.returncode:
+        problems.append(' '.join(command) + ': ' + (run.stdout + run.stderr).strip().replace('\n', ' '))
+
+# Public repository: slides on hold (待确认后发布) stay in the library but never ship in build/.
+for manifest_path in sorted((root / 'content/decks').glob('*.json')):
+    for profile, spec in json.loads(manifest_path.read_text()).get('profiles', {}).items():
+        if 'hold' in spec.get('publish', []):
+            problems.append(f'{manifest_path.relative_to(root)}: profile {profile} publishes hold slides')
+hold_ids = sorted(json.loads(p.read_text())['id'] for p in (root / 'content/slides').glob('*.json') if json.loads(p.read_text()).get('publish') == 'hold')
+for page in sorted((root / 'build').glob('*/*/index.html')):
+    text = page.read_text()
+    for sid in hold_ids:
+        if sid in text:
+            problems.append(f'{page.relative_to(root)}: hold slide {sid} in a committed build')
+
+from lint_html import lint
+for page in sorted((root / 'build').glob('*/*/index.html')):
+    errors = lint(page)
+    if errors:
+        problems.append(str(page.relative_to(root)) + ': ' + '; '.join(errors))
+
+# Public content path guard complements the unchanged raw-data guard above.
+for folder in ('content', 'assets'):
+    for path in (root / folder).rglob('*'):
+        if path.is_file() and re.search(r'client|客户数据|POS', path.relative_to(root).as_posix(), re.I):
+            problems.append(f'{path.relative_to(root)}: sensitive content path')
+# No unregistered visual files outside the documented source/distribution exceptions.
+image_extensions = {'.png', '.jpg', '.jpeg', '.svg', '.webp', '.gif', '.avif'}
+for path in root.rglob('*'):
+    rel = path.relative_to(root).as_posix()
+    if rel.startswith('snapshots/render/'):
+        continue
+    if any(part.startswith('.') or part in {'_site', 'node_modules', '__pycache__'} for part in path.relative_to(root).parts):
+        continue
+    if path.is_file() and path.suffix.lower() in image_extensions:
+        allowed = rel.startswith(('assets/', 'brand/', 'archive/', 'people/photos/', 'templates/report-kit/', 'dist/product/')) or bool(re.match(r'dist/components/[^/]+/assets/', rel)) or rel == 'dist/icons.svg'
+        if not allowed:
+            problems.append(f'{rel}: image outside canonical asset folders')
+# Extensions must remain offline and derive typography/colours from foundation tokens.
+for path in (root / 'content/extensions').glob('*.js'):
+    code = path.read_text()
+    if re.search(r'#[0-9a-fA-F]{3,8}\b|rgba?\(|https?://|sans-serif|\b(?:Arial|Helvetica|Inter|Roboto)\b', code):
+        problems.append(f'{path.relative_to(root)}: extension violates token/font/offline policy')
+
+# Archived export completeness remains checked independently.
+export = root / 'archive/proposal-2026-09'
 manifest = json.loads((export / '_ds_manifest.json').read_text())
 for entry in manifest['components']:
     if not (export / entry['sourcePath']).is_file():
@@ -290,4 +352,4 @@ if missing_photos:
 for note in notes:
     print('note:', note)
 print(f"PASS: official palette, {len(guide_rows)} guide tokens, logo hash, foundation policy, tokens.json, dist bundle, a11y lint, contrast, profiles, chart theme, public reference, no raw data, "
-      f"offline specimen, deck, website, report and people, report kit, {len(manifest['components'])} component exports and {len(manifest['cards'])} cards")
+      f"offline specimen, deck, website, report and people, report kit, 105 current component exports; {len(manifest['components'])} archived exports and {len(manifest['cards'])} cards")

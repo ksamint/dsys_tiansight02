@@ -1,0 +1,18 @@
+{
+  "id": "e9ee5393-4d7d-4a62-aacb-4ea80285d9de",
+  "label": "案例 07 · 韵1980淮扬菜",
+  "cat": "proof",
+  "type": "case",
+  "tags": [
+    "案例",
+    "淮扬菜"
+  ],
+  "publish": "web",
+  "purpose": "伙伴案例：韵 1980 新派淮扬菜。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CaseStudySlide",
+  "props": {
+    "$case": "case-07"
+  }
+}

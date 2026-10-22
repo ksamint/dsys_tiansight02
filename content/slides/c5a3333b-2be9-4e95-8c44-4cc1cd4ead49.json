@@ -1,0 +1,15 @@
+{
+  "id": "c5a3333b-2be9-4e95-8c44-4cc1cd4ead49",
+  "label": "色标对照",
+  "cat": "kitchen",
+  "type": "table",
+  "tags": [
+    "分色",
+    "5S",
+    "色标"
+  ],
+  "publish": "web",
+  "purpose": "5S 色标按用途分组的对照表。",
+  "owner": "kitchen",
+  "status": "planned"
+}

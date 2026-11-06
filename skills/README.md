@@ -1,6 +1,6 @@
 # Tiansight report skills · 报告技能集
 
-Seven skills that make every agent produce HTML slides and reports to the same standard: branded on
+Eight skills that make every agent produce HTML slides and reports to the same standard: branded on
 `brand/`, every number with a source, a 口径 and a formula, explained in a dedicated module rather
 than the body, and drillable in the web build. They were written from the review of three delivered
 decks (`reference/catalogue.md`) and point at the reference implementation in `html-system/`.
@@ -14,6 +14,7 @@ decks (`reference/catalogue.md`) and point at the reference implementation in `h
 | `ts-report-versioning` | a report changes, data is refreshed, a caliber is fixed | versions, change log slide, source→metric→slide mapping, `version_diff.py` |
 | `ts-webapp-interactive` | the report is served as a web app with drill-down | `report.js` hooks, URL state, tooltips, filters |
 | `ts-slides-report` | the deliverable is a 1920×1080 Claude Slides deck or its PDF (client reports, supplements, proposal annexes) | `templates/report-kit/` (tsk page types, render checks, clickable PDF), `docs/report-handbook.md`, `deliverables/report-template/`; report profiles such as `ts-slides-report/repurchase.md` |
+| `tiansight-contract-annex` | drafting a signable contract annex (服务交付范围确认清单 / 交付说明附件) as a Word file | annex structure, naming, pagination, delivery checks |
 
 Load `ts-html-report` first for HTML reports (it tells you when to load the others), or `ts-slides-report` for Slides decks. Every skill is self-contained
 enough to be copied into another repository together with `html-system/` and `brand/`.

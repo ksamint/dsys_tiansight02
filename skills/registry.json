@@ -1,0 +1,78 @@
+{
+  "about": "Version registry for skills/. version is semver for this repo's copy; upstream records the source for later comparison. See skills/README.md.",
+  "skills": [
+    {
+      "name": "pitch-art",
+      "version": "1.0.0",
+      "localSha256": "d6b519290b34a4696fbd605abbc8364d439301c3438eb034dd9204fcc48a5d11",
+      "origin": "claude.ai plugin skill",
+      "upstream": {
+        "skillId": "skill_017BMyJs1PU7ZKkWF5D1hUrk",
+        "pluginId": "plugin_018gvnLicvfkGqigmtp5HN1J",
+        "updatedAt": "2026-10-29T05:43:32.631532Z",
+        "sha256": "d6b519290b34a4696fbd605abbc8364d439301c3438eb034dd9204fcc48a5d11",
+        "syncedOn": "2026-11-06"
+      },
+      "localChanges": "",
+      "role": "proposal narrative and value model (brand-neutral)",
+      "note": "upstream bundle ships only SKILL.md; references/infographics.md and scripts/ it mentions are not synced"
+    },
+    {
+      "name": "tiansight-contract-annex",
+      "version": "1.0.0",
+      "localSha256": "bd57a2b010b6793f7daaeaa9492c7b45bbbaf88395f3774fa9841b791577be42",
+      "origin": "claude.ai plugin skill",
+      "upstream": {
+        "skillId": "skill_01S8MEUhwcDs4YREJzRmfQ2N",
+        "pluginId": "plugin_016vUpF76suNZrK4v4pykcVt",
+        "updatedAt": "2026-11-04T01:23:45.860046Z",
+        "sha256": "917b7f646d0a2a518a93dea84ef1c871b9947de64a91d41c6a0b29b139fdd593",
+        "syncedOn": "2026-11-06"
+      },
+      "localChanges": "client contract name in examples replaced by a placeholder",
+      "role": "signable Word contract annex"
+    },
+    {
+      "name": "ts-data-provenance",
+      "version": "1.0.0",
+      "localSha256": "2928c1494d34f5989e99758fefe648521648abfd3fc64275010deffa249c29a0",
+      "origin": "this repository"
+    },
+    {
+      "name": "ts-data-quality",
+      "version": "1.0.0",
+      "localSha256": "5e412344af60e1ab1b044ef93ff7512c029320b7d2a644eb67c6a42fb2640f61",
+      "origin": "this repository"
+    },
+    {
+      "name": "ts-dataviz-modules",
+      "version": "1.0.0",
+      "localSha256": "89c2296184d23467e39028497c379ca6c7059e47fe90634ba70098093a8f5239",
+      "origin": "this repository"
+    },
+    {
+      "name": "ts-html-report",
+      "version": "1.0.0",
+      "localSha256": "c90e7854a58ca430962cb331063bb29abf78b286372e2565acb1f31c6e05a1af",
+      "origin": "this repository"
+    },
+    {
+      "name": "ts-report-versioning",
+      "version": "1.0.0",
+      "localSha256": "b97fafe02f754a8ce4a9443bff3a8bc29ece5a1f3eaf25a9ed7833bc5947b096",
+      "origin": "this repository"
+    },
+    {
+      "name": "ts-slides-report",
+      "version": "1.0.0",
+      "localSha256": "8491dbecac026ad9864d40cc08ab77a3e1f09730346445303f7467a591c943ff",
+      "origin": "this repository"
+    },
+    {
+      "name": "ts-webapp-interactive",
+      "version": "1.0.0",
+      "localSha256": "8c4ece7f0833d7a63938e384109033cb75ff334533fe771694958181bcf94ab1",
+      "origin": "this repository"
+    }
+  ]
+}

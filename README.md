@@ -129,7 +129,7 @@ directly before doing substantial work on 侍天 designs. The parts that matter 
 | [`brand/components.css`](https://github.com/ksamint/dsys_tiansight02/blob/main/brand/components.css) | The CSS component layer with all five states per component |
 | [`brand/icons.svg`](https://github.com/ksamint/dsys_tiansight02/blob/main/brand/icons.svg) | The brand's own 17-glyph hairline sprite, copied to `assets/logo/icons.svg` |
 | [`website/`](https://github.com/ksamint/dsys_tiansight02/tree/main/website) · [`deck/`](https://github.com/ksamint/dsys_tiansight02/tree/main/deck) · [`report/`](https://github.com/ksamint/dsys_tiansight02/tree/main/report) | The three real consumers — static HTML on the brand stylesheets |
-| [`html-system/`](https://github.com/ksamint/dsys_tiansight02/tree/main/html-system) · [`skills/`](https://github.com/ksamint/dsys_tiansight02/tree/main/skills) | Manifest-driven report/deck builder and six agent skills for producing reports on this system |
+| [`html-system/`](https://github.com/ksamint/dsys_tiansight02/tree/main/html-system) · [`skills/`](https://github.com/ksamint/dsys_tiansight02/tree/main/skills) | Manifest-driven report/deck builder and nine agent skills (versioned in `skills/registry.json`) for producing reports on this system |
 | [`docs/`](https://github.com/ksamint/dsys_tiansight02/tree/main/docs) | `principles.md`, `quickstart.md`, `contributing.md`, `foundation-review.md` |
 
 A note on precedence, stated by the repo itself: the repo's `AGENTS.md` records that an
@@ -593,6 +593,7 @@ node scripts/test_component_runtime.mjs
 node scripts/test_migration.mjs
 node scripts/test_export_text.mjs
 python3 scripts/build_preview.py
+python3 scripts/skills_registry.py --check   # skills/registry.json matches skills/*/SKILL.md
 ```
 
 Release outputs are review candidates; production approval is explicit. Compose a temporary

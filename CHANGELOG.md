@@ -2,6 +2,10 @@
 
 Versions follow the published brand guide. The system version is in `brand/VERSION`.
 
+## v0.7 · 2026-11-06 · Skills
+
+- Add `pitch-art` and `tiansight-contract-annex` under `skills/`, with `skills/registry.json` (versions, upstream source and hashes) and `scripts/skills_registry.py` for check, compare and record.
+
 ## v0.7 · 2026-10-18 · New public repository
 
 ### Consolidation: slide library, deck manifests, one export path

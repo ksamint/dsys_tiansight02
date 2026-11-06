@@ -5,6 +5,8 @@ Versions follow the published brand guide. The system version is in `brand/VERSI
 ## v0.7 · 2026-11-06 · Skills
 
 - Add `pitch-art` and `tiansight-contract-annex` under `skills/`, with `skills/registry.json` (versions, upstream source and hashes) and `scripts/skills_registry.py` for check, compare and record.
+- `tiansight-contract-annex` 1.1.0 from upstream 2026-11-06: acceptance covers delivered work only; no operating-result commitments.
+- `pitch-art` 2.0.0 for review: infographic-first slide anatomy with text limits, figure-choice table and recipes 14–21, a delete list for AI-style phrasing, reading-comfort rules, Tiansight token binding. Registry hashes now cover whole skill folders.
 
 ## v0.7 · 2026-10-18 · New public repository
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Track agent skills under skills/ in skills/registry.json.
 
-  python3 scripts/skills_registry.py --check            local files match the registry (gate)
+  python3 scripts/skills_registry.py --check            local skill folders match the registry (gate)
   python3 scripts/skills_registry.py --compare DIR      compare against a synced upstream skills
                                                         folder (contains manifest.json and <name>/SKILL.md)
   python3 scripts/skills_registry.py --record NAME      re-hash NAME after an intended edit
@@ -13,7 +13,14 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 REG = ROOT / "skills" / "registry.json"
 
 def sha(p):
-    return hashlib.sha256(p.read_bytes()).hexdigest()
+    """sha256 over every file of a skill folder (path + bytes), so references/ and scripts/ count too."""
+    p = pathlib.Path(p)
+    if p.name == "SKILL.md":
+        p = p.parent
+    h = hashlib.sha256()
+    for f in sorted(x for x in p.rglob("*") if x.is_file()):
+        h.update(f.relative_to(p).as_posix().encode() + b"\0" + f.read_bytes() + b"\0")
+    return h.hexdigest()
 
 def load():
     return json.loads(REG.read_text(encoding="utf-8"))

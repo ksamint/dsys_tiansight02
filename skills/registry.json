@@ -1,32 +1,31 @@
 {
-  "about": "Version registry for skills/. version is semver for this repo's copy; upstream records the source for later comparison. See skills/README.md.",
+  "about": "Version registry for skills/. version is semver for this repo's copy; hashes cover the whole skill folder; upstream records the source for later comparison. See skills/README.md.",
   "skills": [
     {
       "name": "pitch-art",
-      "version": "1.0.0",
-      "localSha256": "d6b519290b34a4696fbd605abbc8364d439301c3438eb034dd9204fcc48a5d11",
+      "version": "2.0.0",
+      "localSha256": "d19d0de6c8335fb23227de85b915b70e4b256884cdf3a93592478f25920e6d56",
       "origin": "claude.ai plugin skill",
       "upstream": {
         "skillId": "skill_017BMyJs1PU7ZKkWF5D1hUrk",
         "pluginId": "plugin_018gvnLicvfkGqigmtp5HN1J",
         "updatedAt": "2026-10-29T05:43:32.631532Z",
-        "sha256": "d6b519290b34a4696fbd605abbc8364d439301c3438eb034dd9204fcc48a5d11",
+        "sha256": "8b3924d4e92d71b10a17da36a509e5ace229de249ed9641955497a4c28471b30",
         "syncedOn": "2026-11-06"
       },
-      "localChanges": "",
-      "role": "proposal narrative and value model (brand-neutral)",
-      "note": "upstream bundle ships only SKILL.md; references/infographics.md and scripts/ it mentions are not synced"
+      "localChanges": "2.0.0 rewrite for review: slide anatomy with text limits, figure-choice table, delete list for AI-style phrasing, reading-comfort rules, Tiansight token binding; infographics.md gains recipes 14-21. Upstream 2026-10-29 is the base.",
+      "role": "proposal narrative and value model (brand-neutral)"
     },
     {
       "name": "tiansight-contract-annex",
-      "version": "1.0.0",
-      "localSha256": "bd57a2b010b6793f7daaeaa9492c7b45bbbaf88395f3774fa9841b791577be42",
+      "version": "1.1.0",
+      "localSha256": "2a4cec348a70d0c3662b383668dc113a2ae745061b3897b55cdf66d77e5feeb9",
       "origin": "claude.ai plugin skill",
       "upstream": {
         "skillId": "skill_01S8MEUhwcDs4YREJzRmfQ2N",
         "pluginId": "plugin_016vUpF76suNZrK4v4pykcVt",
-        "updatedAt": "2026-11-04T01:23:45.860046Z",
-        "sha256": "917b7f646d0a2a518a93dea84ef1c871b9947de64a91d41c6a0b29b139fdd593",
+        "updatedAt": "2026-11-06T01:41:50.075343Z",
+        "sha256": "2bc358e7f405a35043fc53a96e3e1e269ddebdd297945da6197559a8ba80597f",
         "syncedOn": "2026-11-06"
       },
       "localChanges": "client contract name in examples replaced by a placeholder",
@@ -35,43 +34,43 @@
     {
       "name": "ts-data-provenance",
       "version": "1.0.0",
-      "localSha256": "2928c1494d34f5989e99758fefe648521648abfd3fc64275010deffa249c29a0",
+      "localSha256": "3dcc00eb6f4f52a46b51245b2afea40d7ce786ba984dd9bcb8aaa03c63800235",
       "origin": "this repository"
     },
     {
       "name": "ts-data-quality",
       "version": "1.0.0",
-      "localSha256": "5e412344af60e1ab1b044ef93ff7512c029320b7d2a644eb67c6a42fb2640f61",
+      "localSha256": "2db027d1e2094b67cbea6d9defb5388ca0df65b8b4074a3afa9b225e46cf0ef7",
       "origin": "this repository"
     },
     {
       "name": "ts-dataviz-modules",
       "version": "1.0.0",
-      "localSha256": "89c2296184d23467e39028497c379ca6c7059e47fe90634ba70098093a8f5239",
+      "localSha256": "d281355c59036d521ce93d01a6a65b12d1f8b918858b5d9fcd3a3273ab948b87",
       "origin": "this repository"
     },
     {
       "name": "ts-html-report",
       "version": "1.0.0",
-      "localSha256": "c90e7854a58ca430962cb331063bb29abf78b286372e2565acb1f31c6e05a1af",
+      "localSha256": "bbb8ed0f5072009a53c4263ea2285c745f47c88943d5fced9c1565cae97c19cf",
       "origin": "this repository"
     },
     {
       "name": "ts-report-versioning",
       "version": "1.0.0",
-      "localSha256": "b97fafe02f754a8ce4a9443bff3a8bc29ece5a1f3eaf25a9ed7833bc5947b096",
+      "localSha256": "f0880f941a7824efde2e07a7f05488998b9e9d6bcad7caef0e763a135caf28a1",
       "origin": "this repository"
     },
     {
       "name": "ts-slides-report",
       "version": "1.0.0",
-      "localSha256": "8491dbecac026ad9864d40cc08ab77a3e1f09730346445303f7467a591c943ff",
+      "localSha256": "59ded6a9cef13f286c5da4256cdacb4e5f635e505a8c1025746f8eebeee42f54",
       "origin": "this repository"
     },
     {
       "name": "ts-webapp-interactive",
       "version": "1.0.0",
-      "localSha256": "8c4ece7f0833d7a63938e384109033cb75ff334533fe771694958181bcf94ab1",
+      "localSha256": "ad456605e5a08fbe72d26a8352ae734a9f6d48ee5faafad47cf7563888f63fc5",
       "origin": "this repository"
     }
   ]

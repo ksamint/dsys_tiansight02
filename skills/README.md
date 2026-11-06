@@ -15,7 +15,7 @@ decks (`reference/catalogue.md`) and point at the reference implementation in `h
 | `ts-webapp-interactive` | the report is served as a web app with drill-down | `report.js` hooks, URL state, tooltips, filters |
 | `ts-slides-report` | the deliverable is a 1920×1080 Claude Slides deck or its PDF (client reports, supplements, proposal annexes) | `templates/report-kit/` (tsk page types, render checks, clickable PDF), `docs/report-handbook.md`, `deliverables/report-template/`; report profiles such as `ts-slides-report/repurchase.md` |
 | `tiansight-contract-annex` | drafting a signable contract annex (服务交付范围确认清单 / 交付说明附件) as a Word file | annex structure, naming, pagination, delivery checks |
-| `pitch-art` | the storyline, value model, ROI and writing rules of a client pitch, proposal or diagnostic deck (brand-neutral; pair with `ts-slides-report` or `ts-html-report` for the Tiansight build) | storyline, writing, timeline, value and typography rules |
+| `pitch-art` | the storyline, infographic choice, value model, ROI and writing rules of a client pitch, proposal or diagnostic deck (brand-neutral; pair with `ts-slides-report` or `ts-html-report` for the Tiansight build) | storyline, writing, timeline, value and typography rules |
 
 Load `ts-html-report` first for HTML reports (it tells you when to load the others), or `ts-slides-report` for Slides decks. Every skill is self-contained
 enough to be copied into another repository together with `html-system/` and `brand/`.
@@ -43,5 +43,6 @@ python3 scripts/skills_registry.py --record <name> [--upstream <synced-dir>]   #
 ```
 
 To update from upstream: run `--compare`, diff the file, re-apply the recorded local changes, bump `version` in the
-registry, then `--record <name> --upstream <synced-dir>`. `pitch-art` upstream ships only `SKILL.md`; the
-`references/infographics.md` and `scripts/` it mentions are not synced here.
+registry, then `--record <name> --upstream <synced-dir>`. Hashes cover every file in a skill folder, including
+`references/`. `pitch-art` 2.0.0 is a local rewrite on top of upstream 2026-10-29; when upstream changes, merge its
+changes into the local version rather than overwriting it.

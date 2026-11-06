@@ -18,14 +18,14 @@
     },
     {
       "name": "tiansight-contract-annex",
-      "version": "1.1.0",
-      "localSha256": "2a4cec348a70d0c3662b383668dc113a2ae745061b3897b55cdf66d77e5feeb9",
+      "version": "1.2.0",
+      "localSha256": "62313cecec0223025d73ce4f1f63a91d7f01fd86b9ccd4f1da6390343c801ca8",
       "origin": "claude.ai plugin skill",
       "upstream": {
         "skillId": "skill_01S8MEUhwcDs4YREJzRmfQ2N",
         "pluginId": "plugin_016vUpF76suNZrK4v4pykcVt",
-        "updatedAt": "2026-11-06T01:41:50.075343Z",
-        "sha256": "2bc358e7f405a35043fc53a96e3e1e269ddebdd297945da6197559a8ba80597f",
+        "updatedAt": "2026-11-06T03:20:13.225007Z",
+        "sha256": "a61e56d4228c821671e94a2218f52174707b7ca8fe837a53e058966c126423fc",
         "syncedOn": "2026-11-06"
       },
       "localChanges": "client contract name in examples replaced by a placeholder",

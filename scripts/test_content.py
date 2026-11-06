@@ -23,6 +23,7 @@ class Contracts(unittest.TestCase):
         self.write('content/contact.json',{'title':'Contact'})
         self.write('content/partners.json',{'logos':[{'$asset':'assets/logo/logo.png'}]})
         self.write('content/cases/case-01.json',{'summary':{'title':'Case'}})
+        self.write('content/positioning.json',self.positioning())
         self.write('content/slides/aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa.json',{'id':'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa','label':'A','owner':'intro','status':'maintained','component':'Cover','publish':'web','props':{'person':{'$team':'A'}}})
         self.write('content/slides/bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb.json',{'id':'bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb','label':'B','owner':'intro','status':'planned','publish':'internal'})
         for deck in ('intro','sales'):
@@ -30,6 +31,39 @@ class Contracts(unittest.TestCase):
         self.lib=Library(self.root)
 
     def tearDown(self): self.temp.cleanup()
+
+    @staticmethod
+    def positioning():
+        scenario=lambda v,n,mod,st:{'id':n,'verb':v,'name':n,'question':'q','inputs':'i','output':'o','cadence':'c','acceptance':'a','module':mod,'stage':st}
+        dim=lambda i:{'id':i,'name':i,'en':i.upper(),'body':'b'}
+        return {'schema':'tiansight.positioning/1','id':'p','title':'t','version':'1','status':'draft','approval':None,
+            'lead':{'eyebrow':'e','title':'T','note':'N','body':'B'},
+            'models':[{'id':'operating','numeral':'壹','name':'经营模型','en':'O','tagline':'tl','aim':'aim','headline':'h','verbs':['开发','诊断','优化'],
+                        'scenarios':[scenario('开发','新店','module-1','before'),scenario('诊断','老店','module-3','during'),scenario('优化','弱店','module-4','expand')]},
+                      {'id':'profit','numeral':'貳','name':'利润模型','en':'P','tagline':'tl','aim':'aim','headline':'h','objective':'obj','dimensions':[dim(f'd{i}') for i in range(4)],'shift':{'from':'f','to':'t','by':'by'},'effect':'eff'},
+                      {'id':'talent','numeral':'叁','name':'人才模型','en':'T','tagline':'tl','aim':'aim','headline':'h','roles':[{'id':f'r{i}','name':f'R{i}','holds':'h','needs':'n'} for i in range(6)],'dimensions':[dim(f'd{i}') for i in range(4)],'shift':{'from':'f','to':'t','by':'by'}}],
+            'foundations':{'eyebrow':'fe','title':'ft','body':'fb','items':[{'id':i,'name':i,'en':i.upper(),'body':'b','supports':['talent'],'state':'在用'} for i in ('knowledge-base','decision-tree','capability-table')]},
+            'refs':{'modules':{'module-1':'一','module-3':'三','module-4':'四'},'stages':{'before':'前','during':'中','expand':'扩'}}}
+
+    def test_positioning_views_resolve_from_one_record(self):
+        steps=self.lib.resolve({'$positioning':'models:steps','active':1})
+        self.assertEqual([s['label'] for s in steps['steps']],['经营模型','利润模型','人才模型']); self.assertEqual(steps['active'],1)
+        matrix=self.lib.resolve({'$positioning':'operating:matrix'})
+        self.assertEqual(matrix['columns'],['开发 · 新店','诊断 · 老店','优化 · 弱店']); self.assertEqual(len(matrix['rows']),5)
+        self.assertEqual(len(self.lib.resolve({'$positioning':'foundations:cards'})['items']),3)
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'unknown:view'})
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'models:steps','title':'copy in override'})
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'models:steps','$view':'x'})
+        broken=self.positioning(); broken['status']='approved'
+        self.write('content/positioning.json',broken)
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'models:steps'})
+
+    def test_positioning_edit_invalidates_consuming_deck(self):
+        self.lib.slides['aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa']['props']={'$positioning':'profit:tiers'}
+        before=self.lib.content_version(self.lib.decks['intro'])
+        record=self.positioning(); record['models'][1]['aim']='changed'
+        self.write('content/positioning.json',record)
+        self.assertNotEqual(before,self.lib.content_version(self.lib.decks['intro']))
 
     def write(self,path,value):
         target=self.root/path;target.parent.mkdir(parents=True,exist_ok=True)

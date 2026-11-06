@@ -1,0 +1,22 @@
+{
+  "id": "b18a2ef8-22cf-401b-a684-e284118381b6",
+  "label": "经营模型 · 三个场景",
+  "cat": "model",
+  "type": "table",
+  "tags": [
+    "经营模型",
+    "新店开业",
+    "老店复盘",
+    "弱店转强"
+  ],
+  "publish": "web",
+  "purpose": "经营模型：开发 · 诊断 · 优化对应新店开业 · 老店复盘 · 弱店转强，逐项列出问题、输入、产出、节奏与验收。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "MatrixTableSlide",
+  "props": {
+    "$positioning": "operating:matrix",
+    "highlight": -1
+  }
+}

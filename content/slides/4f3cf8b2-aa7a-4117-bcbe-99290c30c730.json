@@ -1,0 +1,21 @@
+{
+  "id": "4f3cf8b2-aa7a-4117-bcbe-99290c30c730",
+  "label": "三大基础",
+  "cat": "model",
+  "type": "cards",
+  "tags": [
+    "三大基础",
+    "知识库",
+    "决策树",
+    "能力表"
+  ],
+  "publish": "web",
+  "purpose": "侍天自研的三大基础：餐饮主体知识库、餐饮全生命周期决策树、餐饮人才发展能力表。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {
+    "$positioning": "foundations:cards"
+  }
+}

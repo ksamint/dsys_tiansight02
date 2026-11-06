@@ -2,13 +2,13 @@
   "schema": "tiansight.artifact/2",
   "deckId": "intro",
   "profile": "internal",
-  "contentVersion": "be77ac3d442e78d58d9ef148b70d39390eda53ad377572aec38902c1cde01631",
+  "contentVersion": "4e298ed68e8da829ab351244c57e517b0d2b8e63cbd3e469ff6fea8d9d93f8eb",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "a09e217e569ea182a0ff25471be70ee0d0be2852384aab9f7921ed7702dc0e84",
+  "htmlSha256": "f71cf13b27f8b55c7b72d9c4004859e042d6ff5a890968bfd9cf5578a402e6af",
   "params": {
     "date": "2026-09-27"
   },
   "builtAt": "2026-10-21T06:08:10Z",
-  "pageCount": 52,
+  "pageCount": 59,
   "transforms": []
 }

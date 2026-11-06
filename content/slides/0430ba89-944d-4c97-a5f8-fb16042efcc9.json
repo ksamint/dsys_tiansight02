@@ -1,0 +1,23 @@
+{
+  "id": "0430ba89-944d-4c97-a5f8-fb16042efcc9",
+  "label": "人才模型 · 六类角色",
+  "cat": "model",
+  "type": "cards",
+  "tags": [
+    "人才模型",
+    "老板",
+    "店长",
+    "前厅后厨",
+    "外部伙伴",
+    "AI 智能体"
+  ],
+  "publish": "web",
+  "purpose": "人才模型的六类角色各自负责什么、需要什么。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {
+    "$positioning": "talent:roles"
+  }
+}

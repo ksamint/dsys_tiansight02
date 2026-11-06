@@ -44,7 +44,7 @@
     <button class="ts-button ts-button-sm ts-button-secondary menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><svg class="ts-icon"><use href="#ts-menu"/></svg> 菜单</button>
     <nav class="ts-nav" id="site-nav" aria-label="主导航">
       <a href="#proof">报告样张</a>
-      <a href="#five">经营五问</a>
+      <a href="#models">三大模型</a>
       <a href="#pricing">服务与价格</a>
       <a href="#partners">伙伴</a>
       <a href="team.html">团队</a>
@@ -218,36 +218,33 @@
 </section>
 
 <!-- five questions -->
-<section id="five" class="ts-section">
+<!-- positioning:start -->
+<!-- Generated from content/positioning.json by scripts/build_positioning.py (2026-11-06.1); edit the record, not this block. -->
+<section id="models" class="ts-section">
   <div class="ts-container">
     <div class="ts-heading reveal">
-      <span class="ts-caption">经营五问 · Five questions</span>
-      <h2>五问既明，百事可决</h2>
-      <p class="ts-sub">逐店逐月，循环推演。经验证有效的做法沉淀为门店标准，不随人员流动而流失。</p>
+      <span class="ts-caption">三大模型 · Three models</span>
+      <h2>经营、利润、人才，放进同一张蓝图。</h2>
+      <p class="ts-sub">侍天把餐饮经营建成三个可以计算、可以核对的模型：经营模型回答店怎么开、怎么复盘、怎么做强；利润模型回答钱留在哪里、漏在哪里；人才模型回答谁来做、AI 做什么。三个模型都站在侍天自研的三大基础之上。</p>
     </div>
-    <div class="five-grid reveal">
-      <div class="steps" role="tablist" aria-label="经营五问" aria-orientation="vertical">
-        <button role="tab" id="q-1" aria-controls="qp-1" aria-selected="true"><span class="ts-step">一</span><span><b>现状</b><small>现在怎样 · 看清经营</small></span></button>
-        <button role="tab" id="q-2" aria-controls="qp-2" aria-selected="false"><span class="ts-step">二</span><span><b>机会</b><small>机会在哪 · 发现增利点</small></span></button>
-        <button role="tab" id="q-3" aria-controls="qp-3" aria-selected="false"><span class="ts-step">三</span><span><b>优先</b><small>先做什么 · 判断顺序</small></span></button>
-        <button role="tab" id="q-4" aria-controls="qp-4" aria-selected="false"><span class="ts-step">四</span><span><b>行动</b><small>谁来负责 · 形成清单</small></span></button>
-        <button role="tab" id="q-5" aria-controls="qp-5" aria-selected="false"><span class="ts-step">五</span><span><b>结果</b><small>是否有效 · 验证结果</small></span></button>
+    <div class="models-grid reveal">
+      <div class="steps" role="tablist" aria-label="三大模型" aria-orientation="vertical">
+        <button role="tab" id="model-operating" aria-controls="model-panel-operating" aria-selected="true"><span class="ts-step">壹</span><span><b>经营模型</b><small>开发 · 诊断 · 优化</small></span></button><button role="tab" id="model-profit" aria-controls="model-panel-profit" aria-selected="false"><span class="ts-step">貳</span><span><b>利润模型</b><small>运营数据 × 财务数据</small></span></button><button role="tab" id="model-talent" aria-controls="model-panel-talent" aria-selected="false"><span class="ts-step">叁</span><span><b>人才模型</b><small>六类角色，一张人才表</small></span></button>
       </div>
       <div class="ts-card" style="padding:var(--card-pad-lg)">
-        <div id="qp-1" class="step-panel" role="tabpanel" aria-labelledby="q-1"><span class="ts-caption">第一问 · 现在怎样</span><h3>看清经营</h3><p>汇总收银、平台、会员与门店数据，合成一本账。每个数字有出处，异常能追溯。</p></div>
-        <div id="qp-2" class="step-panel" role="tabpanel" aria-labelledby="q-2" hidden><span class="ts-caption">第二问 · 机会在哪</span><h3>发现增利点</h3><p>增利机会与利润流失一并定位：哪家店、哪道菜、哪个时段、哪条渠道。</p></div>
-        <div id="qp-3" class="step-panel" role="tabpanel" aria-labelledby="q-3" hidden><span class="ts-caption">第三问 · 先做什么</span><h3>判断顺序</h3><p>按利润影响与可执行性排序，先改哪三件写明边界条件。</p></div>
-        <div id="qp-4" class="step-panel" role="tabpanel" aria-labelledby="q-4" hidden><span class="ts-caption">第四问 · 谁来负责</span><h3>形成清单</h3><p>明确动作、责任人、期限与验收指标，团队拿到就能执行。</p></div>
-        <div id="qp-5" class="step-panel" role="tabpanel" aria-labelledby="q-5" hidden><span class="ts-caption">第五问 · 是否有效</span><h3>验证结果</h3><p>对比执行前后变化，有效的沉淀为标准，无效的修订判断，继续校正。</p></div>
-        <div class="three">
-          <div><b>看得清</b><p>收银、平台、会员数据合成一本账，每个数字有出处。</p></div>
-          <div><b>改得动</b><p>问题进入行动清单，明确优先级、责任人和验证周期。</p></div>
-          <div><b>留得下</b><p>有效的做法沉淀成店里的标准动作，换店长、开新店都不走样。</p></div>
-        </div>
+        <div id="model-panel-operating" class="step-panel" role="tabpanel" aria-labelledby="model-operating"><span class="ts-caption">壹 · OPERATING MODEL</span><h3>三个场景，一套方法：开发新店、诊断老店、把弱店做强。</h3><div class="dims dims-3"><div class="dim"><span class="ts-caption">开发 · 新店开业</span><b>这家店值不值得开，开业后的 90 天怎么活下来？</b><p><span class="k">输入</span>商圈客流与竞争格局、项目条件、投资与租金。</p><p><span class="k">产出</span>新店可行性报告、36 个月投资现金流模型、开业经营方案。</p><p><span class="k">节奏</span>前期研究 42 日 · 开业后督导 90 天</p><p><span class="k">验收</span>开业爬坡与现金流按周月对照测算，偏差有解释。</p></div><div class="dim"><span class="ts-caption">诊断 · 老店复盘</span><b>增长在哪里，利润漏在哪里，先改哪三件？</b><p><span class="k">输入</span>最近 6 个月的收银、平台、会员与门店数据。</p><p><span class="k">产出</span>经营诊断与菜单方案、90 天行动清单。</p><p><span class="k">节奏</span>7 日内交付诊断 · 周快报 · 月度复盘</p><p><span class="k">验收</span>先改哪三件、由谁执行、以什么验收，逐项核对。</p></div><div class="dim"><span class="ts-caption">优化 · 弱店转强</span><b>这家店是结构问题还是执行问题，止损线在哪里？</b><p><span class="k">输入</span>门店之间的对照：同品牌强店的产品标准与经营参数。</p><p><span class="k">产出</span>止损与结构调整方案、按店校正的行动清单。</p><p><span class="k">节奏</span>逐店逐月校正 · 季度复盘</p><p><span class="k">验收</span>对照执行前后的变化，有效的沉淀为门店标准。</p></div></div></div><div id="model-panel-profit" class="step-panel" role="tabpanel" aria-labelledby="model-profit" hidden><span class="ts-caption">貳 · PROFIT MODEL</span><h3>把运营数据和财务数据放进同一个模型，预测经营需求，优化人力与物料，让每一天都能找到利润遗漏点。</h3><div class="dims dims-4"><div class="dim"><span class="ts-caption">ONE LEDGER</span><b>一本账</b><p>收银、平台、会员、门店数据与成本、费用、现金流合成一本账，每个数字有出处，异常能追溯。</p></div><div class="dim"><span class="ts-caption">DEMAND FORECAST</span><b>需求预测</b><p>按餐段、菜品与渠道预测经营需求，排班与备料跟着预测走，不跟着感觉走。</p></div><div class="dim"><span class="ts-caption">LABOR AND STOCK</span><b>人力与物料</b><p>人效、损耗、采购备货放在同一张预测之下，把浪费压在发生之前。</p></div><div class="dim"><span class="ts-caption">PROFIT LEAKAGE</span><b>利润遗漏点</b><p>折扣、损耗、结构性浪费与价格带断层逐项定位：哪家店、哪道菜、哪个时段、哪条渠道。</p></div></div><p class="shift"><span class="k">节奏升级</span>由「每月算一次赚了多少钱」升级为「每天复盘，寻找利润遗漏点并当天优化」。数据管理负责算清，专家判断负责决定。 新品、时令、价格接受度的试验更快得到结果；市场变了，菜单与经营跟着变。</p></div><div id="model-panel-talent" class="step-panel" role="tabpanel" aria-labelledby="model-talent" hidden><span class="ts-caption">叁 · TALENT MODEL</span><h3>把老板、店长、前厅后厨、外部伙伴与 AI 智能体放进同一张人才表，按运营与战略需求招、选、预留，让传统餐饮组织转为 AI 原生餐饮组织。</h3><div class="dims dims-3"><div class="dim"><span class="ts-caption">定方向，拍板。</span><b>老板</b><p>看懂一本账，用模型校验自己的判断。</p></div><div class="dim"><span class="ts-caption">逐日复盘与执行。</span><b>店长</b><p>把行动清单变成门店的动作与验收。</p></div><div class="dim"><span class="ts-caption">顾客体验与转化。</span><b>前厅</b><p>套餐连带、餐段效率、会员复购。</p></div><div class="dim"><span class="ts-caption">出品稳定与成本。</span><b>后厨</b><p>量化制作、定置管理、损耗控制。</p></div><div class="dim"><span class="ts-caption">供应链、设计、专项顾问。</span><b>外部伙伴</b><p>按项目挂接，按验收指标交付。</p></div><div class="dim"><span class="ts-caption">守望数据，预警异常，起草方案。</span><b>AI 智能体</b><p>在授权范围内执行，超出授权交给人。</p></div></div><ul class="ways"><li><b>岗位对齐</b> 每个岗位对应运营与战略需求里的决策和动作：先定要决定什么，再定要谁。</li><li><b>招与选</b> 招聘画像与选拔标准来自能力表，不来自面试印象。</li><li><b>预留</b> 新店与扩张之前就建人才储备，开店不等人。</li><li><b>人机分工</b> 哪些决策交给 AI 智能体、哪些留给人，按决策的可逆性与授权等级划定。</li></ul><p class="shift"><span class="k">组织转型</span>传统餐饮组织 → AI 原生餐饮组织。人负责判断与承诺，AI 负责计算与守望。</p></div>
       </div>
+    </div>
+    <div class="foundations reveal">
+      <span class="ts-caption">三大基础 · Three foundations</span>
+      <h3>侍天自研的三大基础</h3>
+      <p class="ts-sub">三大模型不是三份文件，它们读同一套知识、同一棵决策树、同一张能力表。三大基础由侍天自研，支持三大模型在不同市场落地。</p>
+      <div class="three"><div><span class="ts-caption">KNOWLEDGE BASE · 在用</span><b>餐饮主体知识库</b><p>把方法论、口径、案例与行业参照整理成可查、可引用的知识库，每条有出处与适用边界。</p></div><div><span class="ts-caption">DECISION TREE · 在用</span><b>餐饮全生命周期决策树</b><p>从筹备、开业到多店扩张，把每个阶段要做的决策排成一棵树：问题、指标口径、责任人、节奏。</p></div><div><span class="ts-caption">CAPABILITY TABLE · 编制中</span><b>餐饮人才发展能力表</b><p>按岗位列出能力项、等级与证据，人才的招、选、预留和 AI 分工都对着这一张表。</p></div></div>
+      <p class="ledger-note">文案为审阅稿，待业主确认后发布。</p>
     </div>
   </div>
 </section>
+<!-- positioning:end -->
 
 <!-- pricing -->
 <section id="pricing" class="ts-section band">

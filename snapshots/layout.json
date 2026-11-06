@@ -4,13 +4,13 @@
   "height": 900,
   "headings": [
    1,
-   40,
+   47,
    0
   ],
-  "sections": 52,
+  "sections": 59,
   "cards": 0,
   "charts": 0,
-  "images": 119,
+  "images": 126,
   "h1": [
    0,
    21,
@@ -148,11 +148,11 @@
  },
  "website/index.html@desktop": {
   "overflow": false,
-  "height": 7456,
+  "height": 7996,
   "headings": [
    1,
    11,
-   17
+   16
   ],
   "sections": 9,
   "cards": 20,
@@ -169,11 +169,11 @@
  },
  "website/index.html@mobile": {
   "overflow": false,
-  "height": 13472,
+  "height": 14657,
   "headings": [
    1,
    11,
-   17
+   16
   ],
   "sections": 9,
   "cards": 20,

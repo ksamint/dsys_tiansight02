@@ -1,0 +1,23 @@
+{
+  "id": "97606bd2-4060-4580-adc0-71694ae53e24",
+  "label": "利润模型 · 四个维度",
+  "cat": "model",
+  "type": "tiers",
+  "tags": [
+    "利润模型",
+    "一本账",
+    "需求预测",
+    "人力物料",
+    "利润遗漏点"
+  ],
+  "publish": "web",
+  "purpose": "利润模型的四个维度：一本账、需求预测、人力与物料、利润遗漏点。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "LadderSlide",
+  "props": {
+    "$positioning": "profit:tiers",
+    "highlight": -1
+  }
+}

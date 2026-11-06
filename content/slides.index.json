@@ -513,6 +513,19 @@
     ]
   },
   {
+    "id": "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
+    "label": "三大模型",
+    "owner": "intro",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "三大模型",
+      "经营模型",
+      "利润模型",
+      "人才模型"
+    ]
+  },
+  {
     "id": "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
     "label": "节首 · 一",
     "owner": "intro",
@@ -724,6 +737,86 @@
       "经营看板",
       "教练式督导",
       "持续复盘"
+    ]
+  },
+  {
+    "id": "b18a2ef8-22cf-401b-a684-e284118381b6",
+    "label": "经营模型 · 三个场景",
+    "owner": "intro",
+    "component": "MatrixTableSlide",
+    "publish": "web",
+    "tags": [
+      "经营模型",
+      "新店开业",
+      "老店复盘",
+      "弱店转强"
+    ]
+  },
+  {
+    "id": "97606bd2-4060-4580-adc0-71694ae53e24",
+    "label": "利润模型 · 四个维度",
+    "owner": "intro",
+    "component": "LadderSlide",
+    "publish": "web",
+    "tags": [
+      "利润模型",
+      "一本账",
+      "需求预测",
+      "人力物料",
+      "利润遗漏点"
+    ]
+  },
+  {
+    "id": "9b9917a1-6283-43e9-8da1-9547def4509b",
+    "label": "利润模型 · 节奏升级",
+    "owner": "intro",
+    "component": "MatrixTableSlide",
+    "publish": "web",
+    "tags": [
+      "利润模型",
+      "每天复盘"
+    ]
+  },
+  {
+    "id": "0430ba89-944d-4c97-a5f8-fb16042efcc9",
+    "label": "人才模型 · 六类角色",
+    "owner": "intro",
+    "component": "CardGridSlide",
+    "publish": "web",
+    "tags": [
+      "人才模型",
+      "老板",
+      "店长",
+      "前厅后厨",
+      "外部伙伴",
+      "AI 智能体"
+    ]
+  },
+  {
+    "id": "06575aca-d9ed-4040-89fe-1eedb15c211c",
+    "label": "人才模型 · 招选预留",
+    "owner": "intro",
+    "component": "LadderSlide",
+    "publish": "web",
+    "tags": [
+      "人才模型",
+      "岗位对齐",
+      "招与选",
+      "预留",
+      "人机分工"
+    ]
+  },
+  {
+    "id": "4f3cf8b2-aa7a-4117-bcbe-99290c30c730",
+    "label": "三大基础",
+    "owner": "intro",
+    "component": "CardGridSlide",
+    "publish": "web",
+    "tags": [
+      "三大基础",
+      "知识库",
+      "决策树",
+      "能力表"
     ]
   },
   {

@@ -1,0 +1,23 @@
+{
+  "id": "06575aca-d9ed-4040-89fe-1eedb15c211c",
+  "label": "人才模型 · 招选预留",
+  "cat": "model",
+  "type": "tiers",
+  "tags": [
+    "人才模型",
+    "岗位对齐",
+    "招与选",
+    "预留",
+    "人机分工"
+  ],
+  "publish": "web",
+  "purpose": "人才模型的四个做法：岗位对齐、招与选、预留、人机分工；传统餐饮组织到 AI 原生餐饮组织。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "LadderSlide",
+  "props": {
+    "$positioning": "talent:tiers",
+    "highlight": -1
+  }
+}

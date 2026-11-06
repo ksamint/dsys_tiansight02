@@ -13,10 +13,12 @@ Each layer derives from the one above it. Never edit a lower layer to change a v
 | 1 | Live brand record (IPTrust) | https://apuch.art/api/brands/tiansight.json | the brand owner |
 | 2 | Checked-in snapshot | `brand/source.json` (version, theme, logo, `ip`), `brand/guide.md` | §3 below |
 | 3 | Foundation | `brand/tokens.css` → `brand/tokens.json` (`scripts/export_tokens.py`), `brand/base.css`, `brand/components.css` | PR, gate |
-| 4 | Content | `content/` (slides, decks, cases, shared data) | PR, gate |
+| 4 | Content | `content/` (slides, decks, cases, shared data, `positioning.json` for 三大模型 · 三大基础) | PR, gate |
 | 5 | Distribution | `dist/` (`scripts/build_dist.py`); component runtime `dist/components/current.json` (`scripts/build_component_runtime.py`) | generated |
 | 6 | Consumers | `deck/`, `website/`, `report/`, `people/`, `html-system/`, `templates/`, `deliverables/` | PR, gate; colours only from tokens |
 | 7 | Claude exports | Design System artifact, Slides artifacts (see `github.md`) | re-exported from the repo, never edited first |
+
+Architecture decisions are recorded in `docs/adr/` (ADR 0001 records this order of authority; ADR 0002 the positioning record).
 
 Fixed decisions (owner-confirmed 2026-10-14):
 - Display name: **侍天 TIANSIGHT** everywhere. 侍天 - 智慧餐饮 and tiansight are registry values in `brand/source.json` → `ip`; they are not display copy.
@@ -62,6 +64,7 @@ python3 scripts/build_deck.py --all              # canonical library → maintai
 python3 scripts/build_deck.py --all --check
 python3 scripts/build_assets.py --check
 python3 scripts/content_lib.py --check
+python3 scripts/build_positioning.py              # website #models section from content/positioning.json (or --check)
 node scripts/build_deck_catalog.mjs --check
 python3 scripts/release.py intro                 # verified PDFs + latestBuilt; not approval
 node scripts/test_component_runtime.mjs

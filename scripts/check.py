@@ -175,7 +175,8 @@ for label, cmd in (('tokens.json', [sys.executable, str(root / 'scripts' / 'expo
                    ('lint', [sys.executable, str(root / 'scripts' / 'lint_html.py')]),
                    ('dist', [sys.executable, str(root / 'scripts' / 'build_dist.py'), '--check']),
                    ('contrast', [sys.executable, str(root / 'scripts' / 'check_contrast.py'), '--quiet']),
-                   ('profiles', [sys.executable, str(root / 'scripts' / 'build_profiles.py'), '--check'])):
+                   ('profiles', [sys.executable, str(root / 'scripts' / 'build_profiles.py'), '--check']),
+                   ('positioning', [sys.executable, str(root / 'scripts' / 'build_positioning.py'), '--check'])):
     run = subprocess.run(cmd, capture_output=True, text=True)
     if run.returncode != 0:
         problems.append(f'{label}: ' + run.stdout.strip().replace('\n', ' '))
@@ -312,7 +313,8 @@ for page in sorted((root / 'build').glob('*/*/index.html')):
 # Public content path guard complements the unchanged raw-data guard above.
 for folder in ('content', 'assets'):
     for path in (root / folder).rglob('*'):
-        if path.is_file() and re.search(r'client|客户数据|POS', path.relative_to(root).as_posix(), re.I):
+        # POS as a word (pos-export.csv, POS_data/), not inside English words such as positioning.
+        if path.is_file() and re.search(r'client|客户数据|(?<![a-z])POS(?![a-z])', path.relative_to(root).as_posix(), re.I):
             problems.append(f'{path.relative_to(root)}: sensitive content path')
 # No unregistered visual files outside the documented source/distribution exceptions.
 image_extensions = {'.png', '.jpg', '.jpeg', '.svg', '.webp', '.gif', '.avif'}

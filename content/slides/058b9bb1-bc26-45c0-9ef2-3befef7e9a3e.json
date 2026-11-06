@@ -1,0 +1,22 @@
+{
+  "id": "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
+  "label": "三大模型",
+  "cat": "brand",
+  "type": "steps",
+  "tags": [
+    "三大模型",
+    "经营模型",
+    "利润模型",
+    "人才模型"
+  ],
+  "publish": "web",
+  "purpose": "三大模型总览：经营、利润、人才放进同一张蓝图。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "FiveQuestionsSlide",
+  "props": {
+    "$positioning": "models:steps",
+    "active": -1
+  }
+}

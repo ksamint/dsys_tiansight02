@@ -333,7 +333,7 @@
       "id": "intro",
       "title": "企业介绍",
       "status": "maintained",
-      "contentVersion": "1b7bc371805533ca247095616ab55138ac132ea0e895c60e2c8c3cc9848e7a23",
+      "contentVersion": "86f47b0445783d6f36380f74e5a2c61f0b57c6736caab9aa3f846d433532284b",
       "systemVersion": "2026.10.21-e0a760",
       "profiles": [
         "internal",
@@ -364,7 +364,7 @@
         },
         {
           "id": "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
-          "label": "1 + 3 + 3",
+          "label": "经营 · 利润 · 能力",
           "publish": "web",
           "owner": "intro",
           "order": 4
@@ -742,7 +742,7 @@
         }
       ],
       "latestBuilt": {
-        "contentVersion": "1b7bc371805533ca247095616ab55138ac132ea0e895c60e2c8c3cc9848e7a23",
+        "contentVersion": "86f47b0445783d6f36380f74e5a2c61f0b57c6736caab9aa3f846d433532284b",
         "systemVersion": "2026.10.21-e0a760",
         "builtAt": "2026-10-21T06:08:10Z",
         "path": "build/intro/",
@@ -1147,7 +1147,7 @@
       "id": "sales",
       "title": "侍天 TIANSIGHT 销售提案",
       "status": "maintained",
-      "contentVersion": "5c752f1eafa54af640abb1aaf6dabb7493e40341dc04a8977547595cf5eedcc7",
+      "contentVersion": "a87a09ae9d2b11b268fd3efecb3884f4d50c11c6e137ec1bdd64cace94eaab91",
       "systemVersion": "2026.10.21-e0a760",
       "profiles": [
         "internal",
@@ -1171,7 +1171,7 @@
         },
         {
           "id": "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
-          "label": "1 + 3 + 3",
+          "label": "经营 · 利润 · 能力",
           "publish": "web",
           "owner": "intro",
           "order": 3
@@ -1290,7 +1290,7 @@
         }
       ],
       "latestBuilt": {
-        "contentVersion": "5c752f1eafa54af640abb1aaf6dabb7493e40341dc04a8977547595cf5eedcc7",
+        "contentVersion": "a87a09ae9d2b11b268fd3efecb3884f4d50c11c6e137ec1bdd64cace94eaab91",
         "systemVersion": "2026.10.21-e0a760",
         "builtAt": "2026-10-21T06:08:10Z",
         "path": "build/sales/",

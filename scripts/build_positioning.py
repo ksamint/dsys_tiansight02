@@ -60,14 +60,14 @@ def stack(record):
                       f'<b>{e(m["name"])}</b><span class="p-keys">{" · ".join(e(k) for k in m["keys"])}</span></a></li>' for m in models)
     strata = ''.join(f'<li>{icon(FOUNDATION_ICON[f["id"]])}<b>{e(f["name"])}</b><span>{e(f["full"])}</span></li>' for f in foundations)
     members = '<i> + </i>'.join(e(m) for m in base['members'])
-    return f"""<div class="stack reveal" role="group" aria-label="{e(record['lead']['formula'])}">
+    return f"""<div class="stack reveal" role="group" aria-label="模型、底座与基座">
       <div class="stack-tag" aria-hidden="true"><span>结果</span></div>
       <ul class="stack-row outcomes" aria-label="结果">{outcomes}</ul>
-      <div class="stack-tag" aria-hidden="true"><b>3</b><span>模型</span></div>
+      <div class="stack-tag" aria-hidden="true"><span>模型</span></div>
       <ul class="stack-row pillars" aria-label="三个模型">{pillars}</ul>
-      <div class="stack-tag" aria-hidden="true"><b>3</b><span>底座</span></div>
+      <div class="stack-tag" aria-hidden="true"><span>底座</span></div>
       <ul class="stack-row strata" aria-label="三个底座">{strata}</ul>
-      <div class="stack-tag tag-base" aria-hidden="true"><b>{e(base['numeral'])}</b><span>基座</span></div>
+      <div class="stack-tag tag-base" aria-hidden="true"><span>基座</span></div>
       <div class="stack-base">{icon('globe')}<b>{members}</b><span>{e(base['name'])}</span></div>
     </div>"""
 
@@ -124,7 +124,7 @@ def render(record):
 <!-- Generated from content/positioning.json by scripts/build_positioning.py ({e(record["version"])}); edit the record, not this block. -->
 <section id="models" class="ts-section">
   <div class="ts-container">
-    <div class="ts-heading reveal"><span class="ts-caption">{e(record['lead']['formula'])}</span><h2>{e(record['lead']['title'])}</h2></div>
+    <div class="ts-heading reveal"><h2>{e(record['lead']['title'])}</h2></div>
     {stack(record)}
     {chapters}{note}
   </div>

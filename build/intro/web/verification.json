@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "intro",
   "profile": "web",
-  "contentVersion": "1b7bc371805533ca247095616ab55138ac132ea0e895c60e2c8c3cc9848e7a23",
+  "contentVersion": "86f47b0445783d6f36380f74e5a2c61f0b57c6736caab9aa3f846d433532284b",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "52872ddf42dd8dfb32e1446caf1c2e04c2a0317c27cc06e3d7fd6be2cc5f7f76",
-  "pdfSha256": "6e62bdddb981390c198d06bed16705afaee8778068091210c8738825b52bb926",
+  "htmlSha256": "39d1eb0a8f6f38f17f7e09b3353c4ddbf8806c3d4fbd17a8bcb40d59676838da",
+  "pdfSha256": "5857e131d4903c561f94cda711bd4b47f16a4a1c6df50b61f60631258582f19d",
   "pageCount": 48,
   "pages": [
     {
@@ -27,10 +27,10 @@
     {
       "page": 3,
       "id": "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
-      "characters": 155,
+      "characters": 157,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.681
+      "meanPixelDifference": 2.689
     },
     {
       "page": 4,
@@ -155,10 +155,10 @@
     {
       "page": 19,
       "id": "4f3cf8b2-aa7a-4117-bcbe-99290c30c730",
-      "characters": 153,
+      "characters": 149,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.302
+      "meanPixelDifference": 2.3
     },
     {
       "page": 20,

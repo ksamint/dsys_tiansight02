@@ -48,6 +48,7 @@ class Contracts(unittest.TestCase):
     def test_positioning_views_resolve_from_one_record(self):
         matrix=self.lib.resolve({'$positioning':'system:matrix','highlight':1})
         self.assertEqual(matrix['columns'],['经营模型','利润模型','能力模型']); self.assertEqual(matrix['highlight'],1)
+        self.assertNotIn('1 + 3 + 3',json.dumps(matrix,ensure_ascii=False)); self.assertNotIn('1 + 3 + 3',json.dumps(self.lib.resolve({'$positioning':'foundations:cards'}),ensure_ascii=False))
         self.assertEqual(matrix['rows'][0]['cells'],['赚到钱','留下利润','持续发展'])
         self.assertEqual(matrix['rows'][2]['cells'],['kno','dec','cap'])
         self.assertEqual([s['label'] for s in self.lib.resolve({'$positioning':'capability:steps'})['steps']],['评估','发展','协同'])

@@ -14,7 +14,7 @@
   ],
   "publish": "web",
   "purpose": "能力模型：人和组织的能力评估、发展与协同。",
-  "note": "1 + 3 + 3，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
+  "note": "三个模型、三个底座与生态基座，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "FiveQuestionsSlide",

@@ -1,10 +1,9 @@
 {
   "id": "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
-  "label": "1 + 3 + 3",
+  "label": "经营 · 利润 · 能力",
   "cat": "brand",
   "type": "table",
   "tags": [
-    "1 + 3 + 3",
     "生态基座",
     "经营模型",
     "利润模型",
@@ -14,8 +13,8 @@
     "能力表"
   ],
   "publish": "web",
-  "purpose": "总览：一个生态基座、三个模型与结果、三个底座。",
-  "note": "1 + 3 + 3，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
+  "purpose": "总览：三个模型与结果、三个底座、一个生态基座。",
+  "note": "三个模型、三个底座与生态基座，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "MatrixTableSlide",

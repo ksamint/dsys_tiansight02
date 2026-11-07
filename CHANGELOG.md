@@ -115,3 +115,7 @@ One version of the system, built from the brand guide v0.7 rulings (2026-09-09) 
 - Migrate active cards/loaders; preserve historical JSX/export directories as archives.
 - Add the editable 41-page exhibit, shared canonical team/contact, verified research wording and original slide IDs/images.
 - Add distribution/deck/artifact manifests and one versioned content → HTML → PDF export contract. No web/MCP service, merge or deployment.
+
+### 2026-11-07 · Local release review
+
+- Refreshed the two brand specimen heading positions measured identically on main and the positioning branch; no specimen styling changed.

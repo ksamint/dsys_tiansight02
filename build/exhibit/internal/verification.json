@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "exhibit",
   "profile": "internal",
-  "contentVersion": "4d81fcc621ee4384ba6436c3438c4f842262d090e0cb74526c423d3bb8a01fbc",
+  "contentVersion": "909fabbf7812145f5e7dcd3103b4f472d39ea526cf66cf2a7c1254b7e9da6764",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "5a2ed5eb0a86e93c02e2fa54bcb6910e349d031bafb4d73c209af8fdb592d00a",
-  "pdfSha256": "e0a94acc00b09eec2c3195bbdeaa2e81bee1a20be5d1e71e0cd4645999fd11fd",
+  "htmlSha256": "ce984c2b56e79a46f70a588e34c7b9719b5ea1893fbf08ca9171b40fb5011844",
+  "pdfSha256": "691527cf2e8bc6eee31688843528138fa768739ce14284f18a4fbcc92744873f",
   "pageCount": 33,
   "pages": [
     {
@@ -14,7 +14,7 @@
       "characters": 101,
       "textMatches": true,
       "clippedWords": 0,
-      "meanPixelDifference": 2.173
+      "meanPixelDifference": 2.692
     },
     {
       "page": 2,

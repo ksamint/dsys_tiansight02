@@ -1,6 +1,6 @@
 # 侍天 TIANSIGHT 销售提案
 
-Content: `a87a09ae9d2b11b268fd3efecb3884f4d50c11c6e137ec1bdd64cace94eaab91`
+Content: `3788834e09a69046699461ad89f4163cff5cd4a5083cf5415f624d29e4b3b134`
 System: `2026.10.21-e0a760`
 Built: 2026-10-21T06:08:10Z
 

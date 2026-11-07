@@ -4,13 +4,13 @@
   "height": 900,
   "headings": [
    1,
-   47,
+   45,
    0
   ],
-  "sections": 59,
+  "sections": 57,
   "cards": 0,
   "charts": 0,
-  "images": 126,
+  "images": 124,
   "h1": [
    0,
    21,
@@ -148,14 +148,14 @@
  },
  "website/index.html@desktop": {
   "overflow": false,
-  "height": 7946,
+  "height": 9148,
   "headings": [
    1,
    11,
-   16
+   15
   ],
   "sections": 9,
-  "cards": 20,
+  "cards": 19,
   "charts": 13,
   "images": 2,
   "h1": [
@@ -169,14 +169,14 @@
  },
  "website/index.html@mobile": {
   "overflow": false,
-  "height": 14607,
+  "height": 16141,
   "headings": [
    1,
    11,
-   16
+   15
   ],
   "sections": 9,
-  "cards": 20,
+  "cards": 19,
   "charts": 13,
   "images": 2,
   "h1": [

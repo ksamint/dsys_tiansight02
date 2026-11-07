@@ -1,23 +1,25 @@
 {
   "id": "0430ba89-944d-4c97-a5f8-fb16042efcc9",
-  "label": "人才模型 · 六类角色",
+  "label": "能力模型 · 持续发展",
   "cat": "model",
-  "type": "cards",
+  "type": "steps",
   "tags": [
-    "人才模型",
-    "老板",
-    "店长",
-    "前厅后厨",
-    "外部伙伴",
-    "AI 智能体"
+    "能力模型",
+    "评估",
+    "发展",
+    "协同",
+    "人",
+    "组织",
+    "AI 原生"
   ],
   "publish": "web",
-  "purpose": "人才模型的六类角色各自负责什么、需要什么。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
+  "purpose": "能力模型：人和组织的能力评估、发展与协同。",
+  "note": "1 + 3 + 3，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
   "owner": "intro",
   "status": "maintained",
-  "component": "CardGridSlide",
+  "component": "FiveQuestionsSlide",
   "props": {
-    "$positioning": "talent:roles"
+    "$positioning": "capability:steps",
+    "active": -1
   }
 }

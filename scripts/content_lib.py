@@ -96,7 +96,7 @@ class Library:
             else:
                 raise ValueError('Unknown case view')
         elif key == '$positioning':
-            # One record for 三大模型 · 三大基础 (docs/adr/0002); the view builds the props.
+            # One record for 1 + 3 + 3 (docs/adr/0002); the view builds the props.
             if '$view' in value:
                 raise ValueError('$positioning names its view directly')
             result = positioning_lib.view(positioning_lib.load(self.root), str(ref))

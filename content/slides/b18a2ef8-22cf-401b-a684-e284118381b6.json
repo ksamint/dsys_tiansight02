@@ -1,22 +1,25 @@
 {
   "id": "b18a2ef8-22cf-401b-a684-e284118381b6",
-  "label": "经营模型 · 三个场景",
+  "label": "经营模型 · 赚到钱",
   "cat": "model",
-  "type": "table",
+  "type": "steps",
   "tags": [
     "经营模型",
+    "开发",
+    "诊断",
+    "优化",
     "新店开业",
     "老店复盘",
     "弱店转强"
   ],
   "publish": "web",
-  "purpose": "经营模型：开发 · 诊断 · 优化对应新店开业 · 老店复盘 · 弱店转强，逐项列出问题、输入、产出、节奏与验收。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
+  "purpose": "经营模型：开发 · 诊断 · 优化，对应新店开业 · 老店复盘 · 弱店转强。",
+  "note": "1 + 3 + 3，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
   "owner": "intro",
   "status": "maintained",
-  "component": "MatrixTableSlide",
+  "component": "FiveQuestionsSlide",
   "props": {
-    "$positioning": "operating:matrix",
-    "highlight": -1
+    "$positioning": "operating:steps",
+    "active": -1
   }
 }

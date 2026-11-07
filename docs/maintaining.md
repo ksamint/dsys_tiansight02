@@ -13,7 +13,7 @@ Each layer derives from the one above it. Never edit a lower layer to change a v
 | 1 | Live brand record (IPTrust) | https://apuch.art/api/brands/tiansight.json | the brand owner |
 | 2 | Checked-in snapshot | `brand/source.json` (version, theme, logo, `ip`), `brand/guide.md` | §3 below |
 | 3 | Foundation | `brand/tokens.css` → `brand/tokens.json` (`scripts/export_tokens.py`), `brand/base.css`, `brand/components.css` | PR, gate |
-| 4 | Content | `content/` (slides, decks, cases, shared data, `positioning.json` for 三大模型 · 三大基础) | PR, gate |
+| 4 | Content | `content/` (slides, decks, cases, shared data, `positioning.json` for 1 + 3 + 3) | PR, gate |
 | 5 | Distribution | `dist/` (`scripts/build_dist.py`); component runtime `dist/components/current.json` (`scripts/build_component_runtime.py`) | generated |
 | 6 | Consumers | `deck/`, `website/`, `report/`, `people/`, `html-system/`, `templates/`, `deliverables/` | PR, gate; colours only from tokens |
 | 7 | Claude exports | Design System artifact, Slides artifacts (see `github.md`) | re-exported from the repo, never edited first |

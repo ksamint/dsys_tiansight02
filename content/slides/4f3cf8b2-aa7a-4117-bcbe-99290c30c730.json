@@ -1,17 +1,18 @@
 {
   "id": "4f3cf8b2-aa7a-4117-bcbe-99290c30c730",
-  "label": "三大基础",
+  "label": "三个底座 · 一个基座",
   "cat": "model",
   "type": "cards",
   "tags": [
-    "三大基础",
     "知识库",
     "决策树",
-    "能力表"
+    "能力表",
+    "Table AI",
+    "OPC Global"
   ],
   "publish": "web",
-  "purpose": "侍天自研的三大基础：餐饮主体知识库、餐饮全生命周期决策树、餐饮人才发展能力表。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
+  "purpose": "三个底座支撑三个模型，生态基座支撑全部。",
+  "note": "1 + 3 + 3，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "CardGridSlide",

@@ -34,34 +34,36 @@ class Contracts(unittest.TestCase):
 
     @staticmethod
     def positioning():
-        scenario=lambda v,n,mod,st:{'id':n,'verb':v,'name':n,'question':'q','inputs':'i','output':'o','cadence':'c','acceptance':'a','module':mod,'stage':st}
-        dim=lambda i:{'id':i,'name':i,'en':i.upper(),'body':'b'}
-        return {'schema':'tiansight.positioning/1','id':'p','title':'t','version':'1','status':'draft','approval':None,
-            'lead':{'eyebrow':'e','title':'T','note':'N','body':'B'},
-            'models':[{'id':'operating','numeral':'壹','name':'经营模型','en':'O','tagline':'tl','aim':'aim','headline':'h','verbs':['开发','诊断','优化'],
-                        'scenarios':[scenario('开发','新店','module-1','before'),scenario('诊断','老店','module-3','during'),scenario('优化','弱店','module-4','expand')]},
-                      {'id':'profit','numeral':'貳','name':'利润模型','en':'P','tagline':'tl','aim':'aim','headline':'h','objective':'obj','dimensions':[dim(f'd{i}') for i in range(4)],'shift':{'from':'f','to':'t','by':'by'},'effect':'eff'},
-                      {'id':'talent','numeral':'叁','name':'人才模型','en':'T','tagline':'tl','aim':'aim','headline':'h','roles':[{'id':f'r{i}','name':f'R{i}','holds':'h','needs':'n'} for i in range(6)],'dimensions':[dim(f'd{i}') for i in range(4)],'shift':{'from':'f','to':'t','by':'by'}}],
-            'foundations':{'eyebrow':'fe','title':'ft','body':'fb','items':[{'id':i,'name':i,'en':i.upper(),'body':'b','supports':['talent'],'state':'在用'} for i in ('knowledge-base','decision-tree','capability-table')]},
-            'refs':{'modules':{'module-1':'一','module-3':'三','module-4':'四'},'stages':{'before':'前','during':'中','expand':'扩'}}}
+        return {'schema':'tiansight.positioning/2','id':'p','title':'1 + 3 + 3','version':'1','status':'draft','approval':None,
+            'lead':{'formula':'1 + 3 + 3','title':'T'},
+            'base':{'numeral':'1','name':'基座','en':'BASE','members':['A','B']},
+            'models':[{'id':'operating','numeral':'壹','name':'经营模型','en':'O','outcome':'赚到钱','keys':['开发','诊断','优化'],
+                        'scenarios':[{'id':'new-store','verb':'开发','name':'新店'},{'id':'review','verb':'诊断','name':'老店'},{'id':'turnaround','verb':'优化','name':'弱店'}]},
+                      {'id':'profit','numeral':'貳','name':'利润模型','en':'P','outcome':'留下利润','keys':['k'],'sources':['运营','财务'],
+                        'flow':[{'id':f'f{i}','name':f'步{i}'} for i in range(3)]+[{'id':'leak','name':'遗漏','loss':True}],'rhythm':{'from':'月','to':'天'}},
+                      {'id':'capability','numeral':'叁','name':'能力模型','en':'C','outcome':'持续发展','keys':['评估','发展','协同'],'focus':['人','组织'],
+                        'roles':[{'id':f'r{i}','name':f'R{i}'} for i in range(5)]+[{'id':'agents','name':'AI','agent':True}],'shift':{'from':'旧','to':'新'}}],
+            'foundations':[{'id':i,'name':i[:3],'full':i,'en':i.upper(),'under':u} for i,u in (('knowledge-base','operating'),('decision-tree','profit'),('capability-table','capability'))]}
 
     def test_positioning_views_resolve_from_one_record(self):
-        steps=self.lib.resolve({'$positioning':'models:steps','active':1})
-        self.assertEqual([s['label'] for s in steps['steps']],['经营模型','利润模型','人才模型']); self.assertEqual(steps['active'],1)
-        matrix=self.lib.resolve({'$positioning':'operating:matrix'})
-        self.assertEqual(matrix['columns'],['开发 · 新店','诊断 · 老店','优化 · 弱店']); self.assertEqual(len(matrix['rows']),5)
+        matrix=self.lib.resolve({'$positioning':'system:matrix','highlight':1})
+        self.assertEqual(matrix['columns'],['经营模型','利润模型','能力模型']); self.assertEqual(matrix['highlight'],1)
+        self.assertEqual(matrix['rows'][0]['cells'],['赚到钱','留下利润','持续发展'])
+        self.assertEqual(matrix['rows'][2]['cells'],['kno','dec','cap'])
+        self.assertEqual([s['label'] for s in self.lib.resolve({'$positioning':'capability:steps'})['steps']],['评估','发展','协同'])
         self.assertEqual(len(self.lib.resolve({'$positioning':'foundations:cards'})['items']),3)
         with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'unknown:view'})
-        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'models:steps','title':'copy in override'})
-        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'models:steps','$view':'x'})
-        broken=self.positioning(); broken['status']='approved'
-        self.write('content/positioning.json',broken)
-        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'models:steps'})
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'system:matrix','title':'copy in override'})
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'system:matrix','$view':'x'})
+        for broken in (lambda r: r.update(status='approved'), lambda r: r['models'][2].update(outcome='这是一句解释性的长句子，不是标签。')):
+            record=self.positioning(); broken(record)
+            self.write('content/positioning.json',record)
+            with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'system:matrix'})
 
     def test_positioning_edit_invalidates_consuming_deck(self):
-        self.lib.slides['aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa']['props']={'$positioning':'profit:tiers'}
+        self.lib.slides['aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa']['props']={'$positioning':'profit:steps'}
         before=self.lib.content_version(self.lib.decks['intro'])
-        record=self.positioning(); record['models'][1]['aim']='changed'
+        record=self.positioning(); record['models'][1]['outcome']='改了'
         self.write('content/positioning.json',record)
         self.assertNotEqual(before,self.lib.content_version(self.lib.decks['intro']))
 

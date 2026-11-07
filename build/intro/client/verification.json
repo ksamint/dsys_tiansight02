@@ -2,10 +2,10 @@
   "schema": "tiansight.pdf-verification/2",
   "deckId": "intro",
   "profile": "client",
-  "contentVersion": "4e298ed68e8da829ab351244c57e517b0d2b8e63cbd3e469ff6fea8d9d93f8eb",
+  "contentVersion": "2e9d17fddae4dc3b4feb5979a410cbfa1478babc62da09e30044f59b1634ef8c",
   "systemVersion": "2026.10.21-e0a760",
-  "htmlSha256": "5b3209e64cc810f7d6cc42049b5dc614f6ad13ae4b5ebd5dc9532854e67850d9",
-  "pdfSha256": "a215d368871cd8ed3dbafaa9d97e45d923a2e93f3d2f6d3efd807049ceb1dae8",
+  "htmlSha256": "dedda6f948016bdcd324c261899239df78dce2c0f03cb50f596802edbbf8403d",
+  "pdfSha256": "503c7f1ed11b0871047607ba485526bd8029a59ad49bce50f05e2e251b7a0d06",
   "pageCount": 54,
   "pages": [
     {

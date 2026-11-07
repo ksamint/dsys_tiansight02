@@ -105,8 +105,8 @@ not marketing copy): six questions (为谁做这一餐 / 卖什么 / 顾客愿�
 guardrails), evidence grades EGA.E1–E4, and the dashboard's five questions (出了什么变化？影响多少钱？
 建议改什么？谁在什么时候做？做后结果怎样？). Reports and dashboards use these; the website does not.
 
-**三大模型 · 三大基础** (owner brief 2026-11-06, `content/positioning.json`, status draft until the owner
-confirms the wording) — 经营模型 (开发 · 诊断 · 优化 ↔ 新店开业 · 老店复盘 · 弱店转强), 利润模型 (运营数据 ×
+**三大模型 · 三大基础** (owner brief 2026-11-06, `content/positioning.json`, wording approved by the owner
+2026-11-06) — 经营模型 (开发 · 诊断 · 优化 ↔ 新店开业 · 老店复盘 · 弱店转强), 利润模型 (运营数据 ×
 财务数据 → 需求预测、人力与物料、利润遗漏点; 每月算账 → 每天复盘), 人才模型 (老板 · 店长 · 前厅 · 后厨 ·
 外部伙伴 · AI 智能体; 招、选、预留; 传统餐饮组织 → AI 原生餐饮组织), on three self-built foundations
 (餐饮主体知识库 · 餐饮全生命周期决策树 · 餐饮人才发展能力表). It sits beside the four stages, the service

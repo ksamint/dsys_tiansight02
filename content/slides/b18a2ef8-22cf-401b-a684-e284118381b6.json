@@ -11,7 +11,7 @@
   ],
   "publish": "web",
   "purpose": "经营模型：开发 · 诊断 · 优化对应新店开业 · 老店复盘 · 弱店转强，逐项列出问题、输入、产出、节奏与验收。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "MatrixTableSlide",

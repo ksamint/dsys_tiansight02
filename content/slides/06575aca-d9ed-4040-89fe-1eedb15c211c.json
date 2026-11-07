@@ -12,7 +12,7 @@
   ],
   "publish": "web",
   "purpose": "人才模型的四个做法：岗位对齐、招与选、预留、人机分工；传统餐饮组织到 AI 原生餐饮组织。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "LadderSlide",

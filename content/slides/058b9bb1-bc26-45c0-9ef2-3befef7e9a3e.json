@@ -11,7 +11,7 @@
   ],
   "publish": "web",
   "purpose": "三大模型总览：经营、利润、人才放进同一张蓝图。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "FiveQuestionsSlide",

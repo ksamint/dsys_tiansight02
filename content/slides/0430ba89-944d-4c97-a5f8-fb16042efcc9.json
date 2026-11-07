@@ -13,7 +13,7 @@
   ],
   "publish": "web",
   "purpose": "人才模型的六类角色各自负责什么、需要什么。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "CardGridSlide",

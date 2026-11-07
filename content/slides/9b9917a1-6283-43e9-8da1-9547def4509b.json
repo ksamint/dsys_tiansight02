@@ -9,7 +9,7 @@
   ],
   "publish": "web",
   "purpose": "由每月算一次升级为每天复盘：算账、分工、结果的前后对照。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "MatrixTableSlide",

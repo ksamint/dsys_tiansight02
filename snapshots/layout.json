@@ -148,7 +148,7 @@
  },
  "website/index.html@desktop": {
   "overflow": false,
-  "height": 7996,
+  "height": 7946,
   "headings": [
    1,
    11,
@@ -169,7 +169,7 @@
  },
  "website/index.html@mobile": {
   "overflow": false,
-  "height": 14657,
+  "height": 14607,
   "headings": [
    1,
    11,

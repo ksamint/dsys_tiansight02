@@ -12,7 +12,7 @@
   ],
   "publish": "web",
   "purpose": "利润模型的四个维度：一本账、需求预测、人力与物料、利润遗漏点。",
-  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（status draft，待业主确认）。",
+  "note": "三大模型 · 三大基础，文案来自 content/positioning.json（业主 2026-11-06 确认）。",
   "owner": "intro",
   "status": "maintained",
   "component": "LadderSlide",

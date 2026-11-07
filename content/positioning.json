@@ -3,8 +3,13 @@
   "id": "three-models-three-foundations",
   "title": "三大模型 · 三大基础",
   "version": "2026-11-06.1",
-  "status": "draft",
-  "approval": null,
+  "status": "approved",
+  "approval": {
+    "approvedAt": "2026-11-06",
+    "by": "owner",
+    "scope": "Wording of record version 2026-11-06.1: lead, three models, three foundations.",
+    "via": "Owner instruction in the Claude Code session that drafted the record."
+  },
   "source": {
     "brief": "业主口述，2026-11-06：经营模型（开发 · 诊断 · 优化 ↔ 新店开业 · 老店复盘 · 弱店转强）、利润模型、人才模型，以及侍天自研的三大基础。",
     "relates": [
@@ -12,7 +17,7 @@
       "guidelines/company-intro-v3.md",
       "deliverables/lifecycle-map/decisions.json"
     ],
-    "note": "本记录是三大模型与三大基础的唯一文案来源（docs/adr/0002）。官网分区与企业介绍页面都从这里生成或引用，不另抄一份。status 为 draft 时，构建产物只是审阅稿；业主确认后改为 approved，并按 docs/maintaining.md §8 走发布审批。"
+    "note": "本记录是三大模型与三大基础的唯一文案来源（docs/adr/0002）。官网分区与企业介绍页面都从这里生成或引用，不另抄一份。业主已于 2026-11-06 确认文案（status approved）。企业介绍的发布审批另按 docs/maintaining.md §8 进行。"
   },
   "lead": {
     "eyebrow": "三大模型 · Three models",

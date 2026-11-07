@@ -1,6 +1,6 @@
 # ADR 0002 · 三大模型 · 三大基础只有一份记录：`content/positioning.json`
 
-- 状态：已采纳 2026-11-06。记录本身 `status: draft`，文案待业主确认；确认后改为 `approved` 并填 `approval`，再按 `docs/maintaining.md` §8 走 deck 发布审批。
+- 状态：已采纳 2026-11-06。记录文案由业主于 2026-11-06 确认（`status: approved`，`approval` 已填）；企业介绍 deck 的发布审批仍按 `docs/maintaining.md` §8 由生产评审单独进行。
 - 关联：ADR 0001 · `scripts/positioning_lib.py` · `scripts/build_positioning.py` · `content/decks/intro.json` · `website/index.html`
 
 ## 背景

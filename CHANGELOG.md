@@ -6,6 +6,7 @@ Versions follow the published brand guide. The system version is in `brand/VERSI
 
 - The positioning record becomes 1 + 3 + 3 (schema `tiansight.positioning/2`, owner brief 2026-11-07): one base (Table AI + OPC Global, 全球专家与联盟生态基座), three models with outcomes (经营模型 → 赚到钱, 利润模型 → 留下利润, 能力模型 → 持续发展; 能力模型 replaces 人才模型 and covers 人和组织的评估 · 发展 · 协同), three foundations (知识库, 决策树, 能力表), labels only. The validator rejects sentences.
 - Intro deck: five slides on five views (`system:matrix`, `operating:steps`, `profit:steps`, `capability:steps`, `foundations:cards`); the two 2026-11-06 slides for 利润节奏升级 and 人才招选预留 are removed. PDFs rebuilt; `latestApproved` stays a production-review step.
+- Sales deck references the same five slides (overview after 主张, the model, foundation and base slides after 餐饮第二大脑): 19 slides internal, 18 client and web. Sales PDFs rebuilt; `latestApproved` stays a production-review step.
 - Website `#models`: a 1 + 3 + 3 pillar diagram (outcomes, models, foundations, base) and three chapter infographics, generated from the record. ADR 0002 rewritten for the new structure.
 
 ## v0.7 · 2026-11-06 · Positioning record

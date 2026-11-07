@@ -46,7 +46,7 @@ paraphrase it.
 |---|---|---|
 | 官网 Marketing site | Single long-scroll site: hero → 报告样张 → 从概念到连锁 (四阶段) → 餐饮第二大脑 → 伙伴背书 → 联系; 伙伴与创始团队 page | `ui_kits/website/` |
 | 报告样张 Report sample | The deliverable itself: 决策维度 / 分析维度 / 趋势与归因 / 方法论地图 pages, plus the five insight matrices (渗透率矩阵, 商圈供需洞察, 复购分层四象限, 利润敏感性矩阵, 价格带断层洞察) | `ui_kits/report/` |
-| 销售提案 Sales deck | 16:9 deck pitching 侍天 to a restaurant owner — 14 slides: 主张 → 服务内容 (四个阶段) → 服务模式 → 方法论 (第二大脑 · 样张 · 图谱) → 价值 → 案例 → 伙伴 → 创始团队 → 联系 | `content/decks/sales.json`, `build/sales/` |
+| 销售提案 Sales deck | 16:9 deck pitching 侍天 to a restaurant owner — 19 slides: 主张 → 1 + 3 + 3 → 服务内容 (四个阶段) → 服务模式 → 方法论 (第二大脑 · 经营 / 利润 / 能力模型 · 底座与基座 · 样张 · 图谱) → 价值 → 案例 → 伙伴 → 创始团队 → 联系 | `content/decks/sales.json`, `build/sales/` |
 | 企业介绍 v3 Company intro | 47-page client profile from `guidelines/company-intro-v3.md`, plus internal registry slides | `content/decks/intro.json`, `build/intro/` |
 | 展陈与厨房设计 Exhibit | 41 registry slides on the shared runtime with canonical team/contact slides; 33 build today, 8 `hold` pages wait for owner confirmation | `content/decks/exhibit.json`, `build/exhibit/` |
 | 全周期图谱 Lifecycle map | 餐饮经营全周期图谱 — flow map, single-store Gantt and 3D views over 60 decisions | `deliverables/lifecycle-map/` |

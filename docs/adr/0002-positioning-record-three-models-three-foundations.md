@@ -16,7 +16,7 @@
 
 1. **一份结构化记录**：`content/positioning.json` 是 1 + 3 + 3 全部文案的唯一来源，位于内容层（ADR 0001 第 4 层）。它只存名称与短标签：`lead`（公式与一句标题）、`base`、三个 `models`（`outcome`、`keys`，以及各自的图示数据：经营的三个场景、利润的两个数据源与四步流向及复盘节奏、能力的人与组织、六类角色与组织转型）、三个 `foundations`（`under` 指向所在模型）。
 2. **门禁拒绝解释句**：`scripts/positioning_lib.py` 校验结构与顺序，并拒绝超过 16 字或带句末标点的标签。要写长句，就不属于这份记录。
-3. **幻灯片引用，不抄写**：引用 `{"$positioning": "<view>"}` 由 `content_lib.resolve` 生成组件 props，同级字段只允许布局键。五个视图：`system:matrix`（1 + 3 + 3 总览）、`operating:steps`、`profit:steps`、`capability:steps`、`foundations:cards`。企业介绍引用五页：总览在「问题」之后，其余在「第二大脑 · 四个部分」之后。记录一改，所有引用它的 deck 的 `contentVersion` 随之改变，`latestApproved` 回到 null。
+3. **幻灯片引用，不抄写**：引用 `{"$positioning": "<view>"}` 由 `content_lib.resolve` 生成组件 props，同级字段只允许布局键。五个视图：`system:matrix`（1 + 3 + 3 总览）、`operating:steps`、`profit:steps`、`capability:steps`、`foundations:cards`。企业介绍与销售提案都引用这五页：企业介绍的总览在「问题」之后，销售提案的总览在「主张」之后；其余四页都在「第二大脑」之后。记录一改，所有引用它的 deck 的 `contentVersion` 随之改变，`latestApproved` 回到 null。
 4. **官网分区由构建器生成**：`scripts/build_positioning.py` 把记录渲染为 `website/index.html` 中 `#models` 分区：1 + 3 + 3 立柱图（结果、模型、底座、基座四层，竖线贯通）与三个章节信息图（经营的三条示意曲线、利润的数据流与 30 日节奏、能力的评估 → 发展 → 协同循环与六类角色）。`--check` 在 `scripts/check.py` 8d。
 5. **下游钉提交**：平台仓库（`ksamint/vanahom-fb-hom01`，其 ADR 0006）把本记录按提交 vendored 到 `config/tiansight-positioning.json`，用同样的结构生成首页 `#models` 分区。平台不得改写文案，只能换提交。
 
@@ -29,7 +29,6 @@
 
 ## 后果
 
-- 官网、企业介绍与平台首页的 1 + 3 + 3 来自同一文件；改一处，三处随之更新。
+- 官网、企业介绍、销售提案与平台首页的 1 + 3 + 3 来自同一文件；改一处，四处随之更新。
 - 门禁：记录结构与标签长度（`content_lib --check`）、分区新鲜度（`check.py` 8d `positioning`）、合同回归（`scripts/test_content.py`）。
 - 2026-11-06 版的两页（利润节奏升级、人才招选预留）已从库中移除；其余五页沿用原 UUID，改为新视图。
-- 待办：销售提案 `sales` 尚未引用 1 + 3 + 3。

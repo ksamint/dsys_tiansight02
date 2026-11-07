@@ -6,9 +6,11 @@ import hashlib
 import json
 import re
 
+import positioning_lib
+
 ROOT = Path(__file__).resolve().parents[1]
 LAYOUT_KEYS = {'page', 'active', 'highlight', 'figure'}
-REFS = {'$team', '$contact', '$case', '$partners', '$asset'}
+REFS = {'$team', '$contact', '$case', '$partners', '$asset', '$positioning'}
 
 
 def read_json(path):
@@ -93,6 +95,11 @@ class Library:
                 result = case['gallery'][int(view.split(':')[1])]['props']
             else:
                 raise ValueError('Unknown case view')
+        elif key == '$positioning':
+            # One record for 1 + 3 + 3 (docs/adr/0002); the view builds the props.
+            if '$view' in value:
+                raise ValueError('$positioning names its view directly')
+            result = positioning_lib.view(positioning_lib.load(self.root), str(ref))
         else:
             if ref is not True:
                 raise ValueError(f'{key} requires true')
@@ -100,7 +107,7 @@ class Library:
         result = self.resolve(copy.deepcopy(result), output, True)
         siblings = {k: self.resolve(v, output, inserted) for k, v in value.items() if k not in (key, '$view')}
         if siblings:
-            if key == '$case':
+            if key in ('$case', '$positioning'):
                 self.check_overrides(siblings)
             result = {**result, **siblings}
         return result
@@ -154,7 +161,7 @@ class Library:
             if isinstance(value, dict):
                 for key, ref in value.items():
                     path = None
-                    if key in ('$team', '$contact', '$partners'):
+                    if key in ('$team', '$contact', '$partners', '$positioning'):
                         path = 'content/' + key[1:] + '.json'
                     elif key == '$case':
                         path = f'content/cases/{ref}.json'

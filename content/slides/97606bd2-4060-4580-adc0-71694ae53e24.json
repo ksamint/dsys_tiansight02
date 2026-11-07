@@ -1,0 +1,24 @@
+{
+  "id": "97606bd2-4060-4580-adc0-71694ae53e24",
+  "label": "利润模型 · 留下利润",
+  "cat": "model",
+  "type": "steps",
+  "tags": [
+    "利润模型",
+    "一本账",
+    "需求预测",
+    "人力物料",
+    "利润遗漏点",
+    "每天复盘"
+  ],
+  "publish": "web",
+  "purpose": "利润模型：运营与财务数据，一本账到利润遗漏点，由每月一算到每天复盘。",
+  "note": "三个模型、三个底座与生态基座，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "FiveQuestionsSlide",
+  "props": {
+    "$positioning": "profit:steps",
+    "active": -1
+  }
+}

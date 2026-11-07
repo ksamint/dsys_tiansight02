@@ -513,6 +513,22 @@
     ]
   },
   {
+    "id": "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
+    "label": "经营 · 利润 · 能力",
+    "owner": "intro",
+    "component": "MatrixTableSlide",
+    "publish": "web",
+    "tags": [
+      "生态基座",
+      "经营模型",
+      "利润模型",
+      "能力模型",
+      "知识库",
+      "决策树",
+      "能力表"
+    ]
+  },
+  {
     "id": "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
     "label": "节首 · 一",
     "owner": "intro",
@@ -724,6 +740,67 @@
       "经营看板",
       "教练式督导",
       "持续复盘"
+    ]
+  },
+  {
+    "id": "b18a2ef8-22cf-401b-a684-e284118381b6",
+    "label": "经营模型 · 赚到钱",
+    "owner": "intro",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "经营模型",
+      "开发",
+      "诊断",
+      "优化",
+      "新店开业",
+      "老店复盘",
+      "弱店转强"
+    ]
+  },
+  {
+    "id": "97606bd2-4060-4580-adc0-71694ae53e24",
+    "label": "利润模型 · 留下利润",
+    "owner": "intro",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "利润模型",
+      "一本账",
+      "需求预测",
+      "人力物料",
+      "利润遗漏点",
+      "每天复盘"
+    ]
+  },
+  {
+    "id": "0430ba89-944d-4c97-a5f8-fb16042efcc9",
+    "label": "能力模型 · 持续发展",
+    "owner": "intro",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "能力模型",
+      "评估",
+      "发展",
+      "协同",
+      "人",
+      "组织",
+      "AI 原生"
+    ]
+  },
+  {
+    "id": "4f3cf8b2-aa7a-4117-bcbe-99290c30c730",
+    "label": "三个底座 · 一个基座",
+    "owner": "intro",
+    "component": "CardGridSlide",
+    "publish": "web",
+    "tags": [
+      "知识库",
+      "决策树",
+      "能力表",
+      "Table AI",
+      "OPC Global"
     ]
   },
   {

@@ -23,6 +23,7 @@ class Contracts(unittest.TestCase):
         self.write('content/contact.json',{'title':'Contact'})
         self.write('content/partners.json',{'logos':[{'$asset':'assets/logo/logo.png'}]})
         self.write('content/cases/case-01.json',{'summary':{'title':'Case'}})
+        self.write('content/positioning.json',self.positioning())
         self.write('content/slides/aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa.json',{'id':'aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa','label':'A','owner':'intro','status':'maintained','component':'Cover','publish':'web','props':{'person':{'$team':'A'}}})
         self.write('content/slides/bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb.json',{'id':'bbbbbbbb-bbbb-4bbb-bbbb-bbbbbbbbbbbb','label':'B','owner':'intro','status':'planned','publish':'internal'})
         for deck in ('intro','sales'):
@@ -30,6 +31,42 @@ class Contracts(unittest.TestCase):
         self.lib=Library(self.root)
 
     def tearDown(self): self.temp.cleanup()
+
+    @staticmethod
+    def positioning():
+        return {'schema':'tiansight.positioning/2','id':'p','title':'1 + 3 + 3','version':'1','status':'draft','approval':None,
+            'lead':{'formula':'1 + 3 + 3','title':'T'},
+            'base':{'numeral':'1','name':'基座','en':'BASE','members':['A','B']},
+            'models':[{'id':'operating','numeral':'壹','name':'经营模型','en':'O','outcome':'赚到钱','keys':['开发','诊断','优化'],
+                        'scenarios':[{'id':'new-store','verb':'开发','name':'新店'},{'id':'review','verb':'诊断','name':'老店'},{'id':'turnaround','verb':'优化','name':'弱店'}]},
+                      {'id':'profit','numeral':'貳','name':'利润模型','en':'P','outcome':'留下利润','keys':['k'],'sources':['运营','财务'],
+                        'flow':[{'id':f'f{i}','name':f'步{i}'} for i in range(3)]+[{'id':'leak','name':'遗漏','loss':True}],'rhythm':{'from':'月','to':'天'}},
+                      {'id':'capability','numeral':'叁','name':'能力模型','en':'C','outcome':'持续发展','keys':['评估','发展','协同'],'focus':['人','组织'],
+                        'roles':[{'id':f'r{i}','name':f'R{i}'} for i in range(5)]+[{'id':'agents','name':'AI','agent':True}],'shift':{'from':'旧','to':'新'}}],
+            'foundations':[{'id':i,'name':i[:3],'full':i,'en':i.upper(),'under':u} for i,u in (('knowledge-base','operating'),('decision-tree','profit'),('capability-table','capability'))]}
+
+    def test_positioning_views_resolve_from_one_record(self):
+        matrix=self.lib.resolve({'$positioning':'system:matrix','highlight':1})
+        self.assertEqual(matrix['columns'],['经营模型','利润模型','能力模型']); self.assertEqual(matrix['highlight'],1)
+        self.assertNotIn('1 + 3 + 3',json.dumps(matrix,ensure_ascii=False)); self.assertNotIn('1 + 3 + 3',json.dumps(self.lib.resolve({'$positioning':'foundations:cards'}),ensure_ascii=False))
+        self.assertEqual(matrix['rows'][0]['cells'],['赚到钱','留下利润','持续发展'])
+        self.assertEqual(matrix['rows'][2]['cells'],['kno','dec','cap'])
+        self.assertEqual([s['label'] for s in self.lib.resolve({'$positioning':'capability:steps'})['steps']],['评估','发展','协同'])
+        self.assertEqual(len(self.lib.resolve({'$positioning':'foundations:cards'})['items']),3)
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'unknown:view'})
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'system:matrix','title':'copy in override'})
+        with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'system:matrix','$view':'x'})
+        for broken in (lambda r: r.update(status='approved'), lambda r: r['models'][2].update(outcome='这是一句解释性的长句子，不是标签。')):
+            record=self.positioning(); broken(record)
+            self.write('content/positioning.json',record)
+            with self.assertRaises(ValueError):self.lib.resolve({'$positioning':'system:matrix'})
+
+    def test_positioning_edit_invalidates_consuming_deck(self):
+        self.lib.slides['aaaaaaaa-aaaa-4aaa-aaaa-aaaaaaaaaaaa']['props']={'$positioning':'profit:steps'}
+        before=self.lib.content_version(self.lib.decks['intro'])
+        record=self.positioning(); record['models'][1]['outcome']='改了'
+        self.write('content/positioning.json',record)
+        self.assertNotEqual(before,self.lib.content_version(self.lib.decks['intro']))
 
     def write(self,path,value):
         target=self.root/path;target.parent.mkdir(parents=True,exist_ok=True)

@@ -34,6 +34,11 @@ including the source's two distinct engagements for 石头先生.
 | `$case: id` | `summary` of `content/cases/<id>.json` |
 | `$partners: true` | `content/partners.json` |
 | `$asset: path` | Hash-checked entry in `assets/index.json`, relative to output |
+| `$positioning: view` | Props built by `scripts/positioning_lib.py` from `content/positioning.json` (1 + 3 + 3, ADR 0002); siblings are layout-only |
+
+`content/positioning.json` is the one record of 1 + 3 + 3; `scripts/build_positioning.py`
+renders the website's `#models` section from it and `--check` guards freshness. Decisions are
+recorded in `docs/adr/`.
 
 References may occur in arrays or objects. Resolved records are inserted once; recursive
 reference chains are rejected. Layout siblings merge with reference props. Serializable

@@ -4,13 +4,13 @@
   "height": 900,
   "headings": [
    1,
-   40,
+   45,
    0
   ],
-  "sections": 52,
+  "sections": 57,
   "cards": 0,
   "charts": 0,
-  "images": 119,
+  "images": 124,
   "h1": [
    0,
    21,
@@ -46,13 +46,13 @@
   "height": 900,
   "headings": [
    1,
-   14,
+   19,
    0
   ],
-  "sections": 14,
+  "sections": 19,
   "cards": 0,
   "charts": 0,
-  "images": 28,
+  "images": 33,
   "h1": [
    0,
    21,
@@ -118,7 +118,7 @@
   "images": 7,
   "h1": [
    208,
-   3420,
+   3428,
    1024,
    62
   ],
@@ -139,7 +139,7 @@
   "images": 7,
   "h1": [
    24,
-   5396,
+   5457,
    342,
    40
   ],
@@ -148,14 +148,14 @@
  },
  "website/index.html@desktop": {
   "overflow": false,
-  "height": 7456,
+  "height": 9122,
   "headings": [
    1,
    11,
-   17
+   15
   ],
   "sections": 9,
-  "cards": 20,
+  "cards": 19,
   "charts": 13,
   "images": 2,
   "h1": [
@@ -169,14 +169,14 @@
  },
  "website/index.html@mobile": {
   "overflow": false,
-  "height": 13472,
+  "height": 16115,
   "headings": [
    1,
    11,
-   17
+   15
   ],
   "sections": 9,
-  "cards": 20,
+  "cards": 19,
   "charts": 13,
   "images": 2,
   "h1": [

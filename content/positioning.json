@@ -1,0 +1,170 @@
+{
+  "schema": "tiansight.positioning/2",
+  "id": "one-three-three",
+  "title": "1 + 3 + 3",
+  "version": "2026-11-07.1",
+  "status": "approved",
+  "approval": {
+    "approvedAt": "2026-11-07",
+    "by": "owner",
+    "scope": "1 + 3 + 3 structure, names, outcomes and labels of record version 2026-11-07.1.",
+    "via": "Owner brief in the Claude Code session: 人才模型 becomes 能力模型 (人和组织的能力评估、发展与协同); base Table AI + OPC Global; outcomes 赚到钱、留下利润、持续发展; foundations 知识库、决策树、能力表; no explanatory copy."
+  },
+  "source": {
+    "brief": "业主口述，2026-11-07：整体是 1 + 3 + 3。1 是 Table AI + OPC Global 全球专家与联盟生态基座；3 是三个餐饮板块（经营模型、利润模型、能力模型），对应赚到钱、留下利润、持续发展；3 是支持这三个板块的底座（知识库、决策树、能力表）。能力模型聚焦人和组织的能力评估、发展与协同。不要解释性文字。",
+    "supersedes": "2026-11-06.1（三大模型 · 三大基础，含人才模型）",
+    "note": "本记录是 1 + 3 + 3 的唯一文案来源（docs/adr/0002）。只存名称与短标签，不存解释句；企业介绍与官网都从这里生成或引用。"
+  },
+  "lead": {
+    "formula": "1 + 3 + 3",
+    "title": "赚到钱，留下利润，持续发展。"
+  },
+  "base": {
+    "numeral": "1",
+    "name": "全球专家与联盟生态基座",
+    "en": "GLOBAL EXPERTS & ALLIANCE",
+    "members": [
+      "Table AI",
+      "OPC Global"
+    ]
+  },
+  "models": [
+    {
+      "id": "operating",
+      "numeral": "壹",
+      "name": "经营模型",
+      "en": "OPERATING MODEL",
+      "outcome": "赚到钱",
+      "keys": [
+        "开发",
+        "诊断",
+        "优化"
+      ],
+      "scenarios": [
+        {
+          "id": "new-store",
+          "verb": "开发",
+          "name": "新店开业"
+        },
+        {
+          "id": "review",
+          "verb": "诊断",
+          "name": "老店复盘"
+        },
+        {
+          "id": "turnaround",
+          "verb": "优化",
+          "name": "弱店转强"
+        }
+      ]
+    },
+    {
+      "id": "profit",
+      "numeral": "貳",
+      "name": "利润模型",
+      "en": "PROFIT MODEL",
+      "outcome": "留下利润",
+      "keys": [
+        "运营 × 财务",
+        "每天复盘"
+      ],
+      "sources": [
+        "运营数据",
+        "财务数据"
+      ],
+      "flow": [
+        {
+          "id": "ledger",
+          "name": "一本账"
+        },
+        {
+          "id": "forecast",
+          "name": "需求预测"
+        },
+        {
+          "id": "labor-stock",
+          "name": "人力 · 物料"
+        },
+        {
+          "id": "leakage",
+          "name": "利润遗漏点",
+          "loss": true
+        }
+      ],
+      "rhythm": {
+        "from": "每月算一次",
+        "to": "每天复盘"
+      }
+    },
+    {
+      "id": "capability",
+      "numeral": "叁",
+      "name": "能力模型",
+      "en": "CAPABILITY MODEL",
+      "outcome": "持续发展",
+      "keys": [
+        "评估",
+        "发展",
+        "协同"
+      ],
+      "focus": [
+        "人",
+        "组织"
+      ],
+      "roles": [
+        {
+          "id": "owner",
+          "name": "老板"
+        },
+        {
+          "id": "manager",
+          "name": "店长"
+        },
+        {
+          "id": "front",
+          "name": "前厅"
+        },
+        {
+          "id": "kitchen",
+          "name": "后厨"
+        },
+        {
+          "id": "partners",
+          "name": "外部伙伴"
+        },
+        {
+          "id": "agents",
+          "name": "AI 智能体",
+          "agent": true
+        }
+      ],
+      "shift": {
+        "from": "传统餐饮组织",
+        "to": "AI 原生餐饮组织"
+      }
+    }
+  ],
+  "foundations": [
+    {
+      "id": "knowledge-base",
+      "name": "知识库",
+      "full": "餐饮主体知识库",
+      "en": "KNOWLEDGE BASE",
+      "under": "operating"
+    },
+    {
+      "id": "decision-tree",
+      "name": "决策树",
+      "full": "餐饮全生命周期决策树",
+      "en": "DECISION TREE",
+      "under": "profit"
+    },
+    {
+      "id": "capability-table",
+      "name": "能力表",
+      "full": "餐饮人才发展能力表",
+      "en": "CAPABILITY TABLE",
+      "under": "capability"
+    }
+  ]
+}

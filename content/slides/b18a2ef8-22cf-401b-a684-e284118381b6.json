@@ -1,0 +1,25 @@
+{
+  "id": "b18a2ef8-22cf-401b-a684-e284118381b6",
+  "label": "经营模型 · 赚到钱",
+  "cat": "model",
+  "type": "steps",
+  "tags": [
+    "经营模型",
+    "开发",
+    "诊断",
+    "优化",
+    "新店开业",
+    "老店复盘",
+    "弱店转强"
+  ],
+  "publish": "web",
+  "purpose": "经营模型：开发 · 诊断 · 优化，对应新店开业 · 老店复盘 · 弱店转强。",
+  "note": "三个模型、三个底座与生态基座，文案来自 content/positioning.json（业主 2026-11-07 确认）。",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "FiveQuestionsSlide",
+  "props": {
+    "$positioning": "operating:steps",
+    "active": -1
+  }
+}

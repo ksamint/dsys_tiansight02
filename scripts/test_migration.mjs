@@ -16,14 +16,14 @@ for(const deck of ['intro','exhibit']){
  await page.goto(pathToFileURL(path.resolve(`build/${deck}/internal/index.html`)).href);
  await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(350);
  const actual=await page.locator('section[data-slide-id]').evaluateAll(s=>s.map(x=>({id:x.dataset.slideId,label:x.dataset.label,text:x.textContent})));
- const aliases={'节首 · 服务模块':'节首 · 一','团队 · 总览':'团队'};const mismatches=[];const unbuilt=[];let matched=0;
+ const aliases={'节首 · 服务模块':'节首 · 一','团队 · 总览':'团队','第二大脑 · 四个部分':'餐饮第二大脑'};const mismatches=[];const unbuilt=[];let matched=0;
  for(const [i,source]of baseline[deck].entries()){
   const record=typeof source==='string'?records[i]:records.find(r=>r.label===(aliases[source.label]||source.label));
   const label=typeof source==='string'?record?.label:aliases[source.label]||source.label;
   if(record&&record.status==='maintained'&&!allowed.includes(record.publish)){unbuilt.push({label,publish:record.publish});continue;}
   const target=typeof source==='string'?actual.find(x=>x.id===record?.id):actual.find(x=>x.label===label);
   const expected=typeof source==='string'?source:source.text;
-  if(normalize(expected)===normalize(target?.text||''))matched++;else {const approved=(baseline.approvedDifferences||[]).find(x=>x.deck===deck&&x.label===label&&normalize(expected.replace(x.source,x.actual))===normalize(target?.text||''));mismatches.push({label,source:expected,actual:target?.text||'',cause:approved?.cause||null});}
+  if(normalize(expected)===normalize(target?.text||''))matched++;else {const recorded=(baseline.approvedDifferences||[]).filter(x=>x.deck===deck&&x.label===label);const approved=recorded.length&&normalize(recorded.reduce((s,x)=>s.replace(x.source,x.actual),expected))===normalize(target?.text||'');mismatches.push({label,source:expected,actual:target?.text||'',cause:approved?recorded.map(x=>x.cause).join(' '):null});}
  }
  held+=unbuilt.length;
  report.decks[deck]={compared:baseline[deck].length-unbuilt.length,matched,mismatches,unbuilt};

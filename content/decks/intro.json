@@ -4,12 +4,11 @@
   "canonicalSource": "guidelines/company-intro-v3.md",
   "slides": [
     "b63a770d-49c7-40e5-8db3-02bc6ede0331",
-    "a34bdc46-9be1-45a0-9300-fd57ea216be3",
+    "4908fa67-0c0b-58be-b6ff-ef4710a8f658",
     "3531cea9-7492-4d22-9767-cc7977113b06",
     "058b9bb1-bc26-45c0-9ef2-3befef7e9a3e",
     "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
     "916c9d8c-56d4-45f0-9722-01ff073a4219",
-    "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
     "36b35d54-c26c-4985-8c82-d0f758848008",
     "55cf1cdc-2258-41d3-9e3a-a39c23790784",
     "f97c967e-6f86-45fb-bb36-e22d1df0dfff",
@@ -24,7 +23,7 @@
     "64fe666d-a6dd-4eb9-84ca-12b1087950dd",
     "a3899939-9c43-4f5b-b6ee-e12b7615f862",
     "82e572f3-d3bc-49d8-8b65-39d2d79c0782",
-    "7bdbce6f-a0e8-49ab-bd3d-64c2dfc8565c",
+    "bf0552b6-86e5-5668-8cff-2dffc0ddbe58",
     "b18a2ef8-22cf-401b-a684-e284118381b6",
     "97606bd2-4060-4580-adc0-71694ae53e24",
     "0430ba89-944d-4c97-a5f8-fb16042efcc9",
@@ -37,7 +36,7 @@
     "48d9c918-a62e-430f-952b-bc8007f333c6",
     "7dd147e8-c3c8-412a-a6db-001140f41a34",
     "27ee71ef-7f9f-46f5-b9d3-5cd83dd7eed8",
-    "b8fbe927-ea40-4906-8c98-9b2928eb53d5",
+    "2d940251-bde3-40c7-904e-2b0c47042f05",
     "58a82f6d-8e63-4ac1-8416-ba0ec1ca872c",
     "812447ee-f013-4213-a98a-89e9c7d4f127",
     "06c5c56b-0e55-4ccb-bbcf-6023afdbebed",
@@ -49,7 +48,6 @@
     "6668bdcd-fc78-4a34-8d9b-5f735207fa8e",
     "e9ee5393-4d7d-4a62-aacb-4ea80285d9de",
     "4289c668-7be0-4db0-90cf-6ae8ce371c12",
-    "2d940251-bde3-40c7-904e-2b0c47042f05",
     "ceb4f385-17f4-46cf-aaaf-3fe469db76e2",
     "ba744346-0af7-452a-a815-974d6b106700",
     "ed451b90-dc1f-497d-82c3-d9cb095dd225",
@@ -58,12 +56,14 @@
     "c61ee06c-d855-4ca4-9808-9cd1aa7a9e90",
     "c5b7abdd-d3a2-44b0-a155-93ff56c79ee9",
     "03051a0b-475c-4847-a438-ab022540c12f",
+    "4e47be0a-f7de-5c0f-ab7e-b0bc74e01adb",
+    "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
     "cdbe10c1-a934-4565-b22c-32620690305a",
     "60f54dbe-8e06-45c8-b877-b1574f1e6bee"
   ],
   "params": {
     "date": {
-      "default": "2026-09-27",
+      "default": "2026-11-07",
       "editor": "text"
     }
   },

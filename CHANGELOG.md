@@ -2,6 +2,13 @@
 
 Versions follow the published brand guide. The system version is in `brand/VERSION`.
 
+## v0.7 · 2026-11-07 · Intro follows the official homepage
+
+- Intro deck recomposed in the order of the live homepage https://tiansight.apuch.cn (fetched 2026-11-07): 主张 (菜单是什么) → 问题 → 经营 · 利润 · 能力 → 一 从概念到连锁 (四个阶段, 四个服务模块, 模块与节点, 交付节奏, 可选专项) → 二 餐饮第二大脑 (四个部分, 三个模型, 底座 · 基座, 样张为证 and the insight pages) → 伙伴 (伙伴背书, 实证, 八个案例) → 三 团队 → 老板看到的价值 → 服务模式 (合作从一份经营诊断开始) → 拍板之前，问侍天 → 联系. Manifest only: no slide copy edited.
+- Three intro slides whose copy had drifted from the homepage (主张 `a34bdc46`, 第二大脑 · 四个部分 `7bdbce6f`, 老板看到的价值 `b8fbe927`) are replaced by the shared sales records that render the homepage copy verbatim (`4908fa67`, `bf0552b6`, `4e47be0a`). The superseded records stay in the library, unreferenced. 57 slides internal, 52 client, 48 web; cover date 2026-11-07. Intro PDFs rebuilt and verified; `latestApproved` stays a production-review step.
+- Migration text gate: `scripts/test_migration.mjs` applies every recorded difference for a slide (not only the first) and maps 第二大脑 · 四个部分 to its replacement 餐饮第二大脑; `snapshots/migration-text.json` records the four intended differences (cover date, 主张, 餐饮第二大脑, 老板看到的价值) with their cause.
+- Brand snapshot: the IPTrust record moved to iptrust01 `7797344`; theme, official logo and published guide (v0.6, equal to the archived copy) are unchanged, so the foundation is untouched. `brand/source.json` version and sync note refreshed.
+
 ## v0.7 · 2026-11-07 · 1 + 3 + 3
 
 - Owner: the "1 + 3 + 3" formula is internal only. No slide, deck or website shows it; the overview slide is labelled 经营 · 利润 · 能力 and the website rows read 模型 · 底座 · 基座 without numbers. The record keeps `lead.formula` as its structural name.

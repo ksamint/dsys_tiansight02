@@ -489,17 +489,12 @@
     ]
   },
   {
-    "id": "a34bdc46-9be1-45a0-9300-fd57ea216be3",
+    "id": "4908fa67-0c0b-58be-b6ff-ef4710a8f658",
     "label": "主张",
-    "owner": "intro",
+    "owner": "sales",
     "component": "PromiseSlide",
     "publish": "web",
-    "tags": [
-      "主张",
-      "菜单",
-      "定价",
-      "组合"
-    ]
+    "tags": []
   },
   {
     "id": "3531cea9-7492-4d22-9767-cc7977113b06",
@@ -550,19 +545,6 @@
       "经营之中",
       "每月复盘",
       "复制扩张"
-    ]
-  },
-  {
-    "id": "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
-    "label": "服务模式",
-    "owner": "intro",
-    "component": "ServiceModelSlide",
-    "publish": "web",
-    "tags": [
-      "服务模式",
-      "经营诊断",
-      "落地辅导",
-      "第二大脑陪跑"
     ]
   },
   {
@@ -729,18 +711,12 @@
     ]
   },
   {
-    "id": "7bdbce6f-a0e8-49ab-bd3d-64c2dfc8565c",
-    "label": "第二大脑 · 四个部分",
-    "owner": "intro",
+    "id": "bf0552b6-86e5-5668-8cff-2dffc0ddbe58",
+    "label": "餐饮第二大脑",
+    "owner": "sales",
     "component": "LadderSlide",
     "publish": "web",
-    "tags": [
-      "第二大脑",
-      "菜单推演",
-      "经营看板",
-      "教练式督导",
-      "持续复盘"
-    ]
+    "tags": []
   },
   {
     "id": "b18a2ef8-22cf-401b-a684-e284118381b6",
@@ -898,15 +874,14 @@
     ]
   },
   {
-    "id": "b8fbe927-ea40-4906-8c98-9b2928eb53d5",
-    "label": "老板看到的价值",
+    "id": "2d940251-bde3-40c7-904e-2b0c47042f05",
+    "label": "伙伴背书",
     "owner": "intro",
-    "component": "ValueSlide",
+    "component": "PartnerWallSlide",
     "publish": "web",
     "tags": [
-      "价值",
-      "三不",
-      "验收"
+      "伙伴",
+      "logo"
     ]
   },
   {
@@ -1027,17 +1002,6 @@
     ]
   },
   {
-    "id": "2d940251-bde3-40c7-904e-2b0c47042f05",
-    "label": "伙伴背书",
-    "owner": "intro",
-    "component": "PartnerWallSlide",
-    "publish": "web",
-    "tags": [
-      "伙伴",
-      "logo"
-    ]
-  },
-  {
     "id": "ceb4f385-17f4-46cf-aaaf-3fe469db76e2",
     "label": "节首 · 团队",
     "owner": "intro",
@@ -1082,6 +1046,27 @@
       "组织",
       "后厨",
       "履历"
+    ]
+  },
+  {
+    "id": "4e47be0a-f7de-5c0f-ab7e-b0bc74e01adb",
+    "label": "老板看到的价值",
+    "owner": "sales",
+    "component": "ValueSlide",
+    "publish": "web",
+    "tags": []
+  },
+  {
+    "id": "ceaf94a2-1d19-4029-8bf5-c2740e99f04a",
+    "label": "服务模式",
+    "owner": "intro",
+    "component": "ServiceModelSlide",
+    "publish": "web",
+    "tags": [
+      "服务模式",
+      "经营诊断",
+      "落地辅导",
+      "第二大脑陪跑"
     ]
   },
   {
@@ -1594,14 +1579,6 @@
     "tags": []
   },
   {
-    "id": "4908fa67-0c0b-58be-b6ff-ef4710a8f658",
-    "label": "主张",
-    "owner": "sales",
-    "component": "PromiseSlide",
-    "publish": "web",
-    "tags": []
-  },
-  {
     "id": "f83aae18-e034-5a59-af29-4fdbb2816cb9",
     "label": "节首 · 服务内容",
     "owner": "sales",
@@ -1614,22 +1591,6 @@
     "label": "节首 · 方法论",
     "owner": "sales",
     "component": "SectionSlide",
-    "publish": "web",
-    "tags": []
-  },
-  {
-    "id": "bf0552b6-86e5-5668-8cff-2dffc0ddbe58",
-    "label": "餐饮第二大脑",
-    "owner": "sales",
-    "component": "LadderSlide",
-    "publish": "web",
-    "tags": []
-  },
-  {
-    "id": "4e47be0a-f7de-5c0f-ab7e-b0bc74e01adb",
-    "label": "老板看到的价值",
-    "owner": "sales",
-    "component": "ValueSlide",
     "publish": "web",
     "tags": []
   }

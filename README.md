@@ -10,7 +10,7 @@ Approval is separate from a successful build.
 
 > **Repository:** `ksamint/dsys_tiansight02` is the public home of the design system from 2026-10-18. It starts from the consolidated v0.7 release of `ksamint/dsys_tiansight01`, which is now a private archive. Nothing confidential is kept here; see `docs/maintaining.md` §6.
 
-> IP identity (IPTrust): `assetKey` sidera · display name 侍天 TIANSIGHT (registry: 侍天 - 智慧餐饮 / tiansight). Snapshot 53340b5 (2026-10-18; checked 2026-10-21), see `brand/source.json`. Official website https://tiansight.apuch.cn; brand design system https://apuch.art/tiansight; repository preview https://ksamint.github.io/dsys_tiansight02/.
+> IP identity (IPTrust): `assetKey` sidera · display name 侍天 TIANSIGHT (registry: 侍天 - 智慧餐饮 / tiansight). Snapshot 7797344 (iptrust01, 2026-11-07; checked 2026-11-07; theme, logo and guide unchanged since 53340b5), see `brand/source.json`. Official website https://tiansight.apuch.cn; brand design system https://apuch.art/tiansight; repository preview https://ksamint.github.io/dsys_tiansight02/.
 
 > 侍天 TIANSIGHT — 从一道菜，到一家家店的好生意。
 > *拍板之前，问侍天。*
@@ -47,7 +47,7 @@ paraphrase it.
 | 官网 Marketing site | Single long-scroll site: hero → 报告样张 → 从概念到连锁 (四阶段) → 餐饮第二大脑 → 伙伴背书 → 联系; 伙伴与创始团队 page | `ui_kits/website/` |
 | 报告样张 Report sample | The deliverable itself: 决策维度 / 分析维度 / 趋势与归因 / 方法论地图 pages, plus the five insight matrices (渗透率矩阵, 商圈供需洞察, 复购分层四象限, 利润敏感性矩阵, 价格带断层洞察) | `ui_kits/report/` |
 | 销售提案 Sales deck | 16:9 deck pitching 侍天 to a restaurant owner — 19 slides: 主张 → 1 + 3 + 3 → 服务内容 (四个阶段) → 服务模式 → 方法论 (第二大脑 · 经营 / 利润 / 能力模型 · 底座与基座 · 样张 · 图谱) → 价值 → 案例 → 伙伴 → 创始团队 → 联系 | `content/decks/sales.json`, `build/sales/` |
-| 企业介绍 v3 Company intro | 47-page client profile from `guidelines/company-intro-v3.md`, plus internal registry slides | `content/decks/intro.json`, `build/intro/` |
+| 企业介绍 Company intro | 57 slides (52 client) in the official homepage order: 主张 → 从概念到连锁 → 餐饮第二大脑 → 伙伴与案例 → 团队 → 价值 → 经营诊断 → 联系; copy from `guidelines/company-intro-v3.md` and the shared library | `content/decks/intro.json`, `build/intro/` |
 | 展陈与厨房设计 Exhibit | 41 registry slides on the shared runtime with canonical team/contact slides; 33 build today, 8 `hold` pages wait for owner confirmation | `content/decks/exhibit.json`, `build/exhibit/` |
 | 全周期图谱 Lifecycle map | 餐饮经营全周期图谱 — flow map, single-store Gantt and 3D views over 60 decisions | `deliverables/lifecycle-map/` |
 | 报告模板 Report template | 39-page 1920×1080 Slides template: report standards plus a sample of each of the 27 page types, clickable PDF; built with the report kit (`tsk`) | `deliverables/report-template/`, `templates/report-kit/`, `docs/report-handbook.md` |

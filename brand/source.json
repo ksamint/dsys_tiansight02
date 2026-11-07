@@ -1,5 +1,5 @@
 {
-  "retrieved": "2026-10-21",
+  "retrieved": "2026-11-07",
   "directory": "https://apuch.art/",
   "api": "https://apuch.art/api/brands/tiansight.json",
   "ip": {
@@ -16,11 +16,11 @@
   },
   "guidePath": "Tiansight/tiansight_design.md",
   "version": {
-    "hash": "53340b5287a42790703a21b20a84beb62e54cdf5",
-    "shortHash": "53340b5",
-    "date": "2026-10-18T08:59:45+08:00",
-    "message": "Point Tiansight design-system links to dsys_tiansight02 (#7)",
-    "url": "https://github.com/ksamint/tableai_designaha/commit/53340b5287a42790703a21b20a84beb62e54cdf5"
+    "hash": "779734446b61cf407a51eed57c852ca161bda9ec",
+    "shortHash": "7797344",
+    "date": "2026-11-07T10:38:56+08:00",
+    "message": "Fix directory loading, mobile layout and language switching",
+    "url": "https://github.com/ksamint/iptrust01/commit/779734446b61cf407a51eed57c852ca161bda9ec"
   },
   "theme": {
     "mode": "light",
@@ -66,5 +66,5 @@
     "status": "ready",
     "version": 1
   },
-  "syncNote": "2026-10-21: public directory and brand API fetched. Theme and official logo unchanged. Live guide remains v0.6; brand/guide.md retains the owner-confirmed v0.7 accessibility and foundation amendments documented in docs/foundation-review.md. Verbatim live guide is archived in archive/approved-2026-10-21/published-guide.md."
+  "syncNote": "2026-11-07: brand API fetched from the container shell (network allowed). IPTrust record moved to iptrust01 7797344; theme, official logo (sha256 4c63205c…) and the published guide are unchanged, so tokens.css and guide.md are untouched. Live guide remains v0.6 and equals archive/approved-2026-10-21/published-guide.md; brand/guide.md retains the owner-confirmed v0.7 amendments documented in docs/foundation-review.md. The record's officialWebsite field is empty; the owner-confirmed official website stays https://tiansight.apuch.cn."
 }

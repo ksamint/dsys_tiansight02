@@ -15,8 +15,6 @@
     "index": 1,
     "title": "从开店到连锁",
     "subtitle": "新店开业 · 概念开创 · 经营复盘 · 连锁督导",
-    "image": {
-      "$asset": "assets/deck/section-1.jpg"
-    }
+    "image": null
   }
 }

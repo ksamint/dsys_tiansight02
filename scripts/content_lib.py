@@ -86,9 +86,12 @@ class Library:
             view = value.get('$view')
             if view is None:
                 result = case['summary']
-            elif view == 'index':
+            elif view == 'native':
+                # Native-figure decks: the same summary without photograph or logo.
+                result = case['summary'] | {'image': None, 'logo': None}
+            elif view in ('index', 'index:native'):
                 summary = case['summary']
-                result = {'tag': summary['module'], 'title': case['name'], 'body': summary['summary'], 'logo': summary['logo']}
+                result = {'tag': summary['module'], 'title': case['name'], 'body': summary['summary'], 'logo': None if view == 'index:native' else summary['logo']}
             elif re.fullmatch(r'snippet:[a-z0-9-]+', str(view)):
                 result = case['snippets'][view.split(':', 1)[1]]
             elif re.fullmatch(r'gallery:\d+', str(view)):
@@ -104,6 +107,12 @@ class Library:
             if ref is not True:
                 raise ValueError(f'{key} requires true')
             result = read_json(self.root / ('content/contact.json' if key == '$contact' else 'content/partners.json'))
+            view = value.get('$view')
+            if key == '$partners' and view == 'names':
+                # Names set in type, no logo artwork: the wall's `partners` prop.
+                result = {k: v for k, v in result.items() if k != 'logos'} | {'partners': [x['name'] for x in result['logos']], 'logos': None}
+            elif view is not None:
+                raise ValueError(f'Unknown {key} view')
         result = self.resolve(copy.deepcopy(result), output, True)
         siblings = {k: self.resolve(v, output, inserted) for k, v in value.items() if k not in (key, '$view')}
         if siblings:

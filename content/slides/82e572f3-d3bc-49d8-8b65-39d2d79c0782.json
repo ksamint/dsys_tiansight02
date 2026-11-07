@@ -15,8 +15,6 @@
     "index": 2,
     "title": "餐饮第二大脑",
     "subtitle": "菜单推演 · 经营看板 · 教练式督导 · 持续复盘",
-    "image": {
-      "$asset": "assets/deck/section-2.jpg"
-    }
+    "image": null
   }
 }

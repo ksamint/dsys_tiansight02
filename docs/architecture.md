@@ -31,8 +31,8 @@ including the source's two distinct engagements for 石头先生.
 | --- | --- |
 | `$team: name` | Person in `content/team.json` |
 | `$contact: true` | `content/contact.json` |
-| `$case: id` | `summary` of `content/cases/<id>.json` |
-| `$partners: true` | `content/partners.json` |
+| `$case: id` | `summary` of `content/cases/<id>.json`; `$view: native` drops photo and logo, `index` / `index:native` the index card |
+| `$partners: true` | `content/partners.json`; `$view: names` sets the partner names in type, no logos |
 | `$asset: path` | Hash-checked entry in `assets/index.json`, relative to output |
 | `$positioning: view` | Props built by `scripts/positioning_lib.py` from `content/positioning.json` (1 + 3 + 3, ADR 0002); siblings are layout-only |
 

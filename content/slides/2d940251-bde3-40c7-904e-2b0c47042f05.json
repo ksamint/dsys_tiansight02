@@ -13,6 +13,7 @@
   "status": "maintained",
   "component": "PartnerWallSlide",
   "props": {
-    "$partners": true
+    "$partners": true,
+    "$view": "names"
   }
 }

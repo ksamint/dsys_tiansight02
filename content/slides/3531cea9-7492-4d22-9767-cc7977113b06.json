@@ -17,8 +17,6 @@
     "kicker": "问题",
     "title": "每天打烊之后，\n经营的决定才刚开始。",
     "body": "卖什么、定什么价、怎么组合，每个决定都要有依据。",
-    "image": {
-      "$asset": "assets/deck/statement-problem.jpg"
-    }
+    "image": null
   }
 }

@@ -1,0 +1,23 @@
+{
+  "id": "d4927b27-b0b8-5f08-bf84-6f6eaa0a6203",
+  "label": "联合创始人 · 郭峰",
+  "cat": "team",
+  "type": "profile",
+  "tags": [
+    "人物",
+    "联合创始人",
+    "组织",
+    "服务体验"
+  ],
+  "publish": "web",
+  "purpose": "郭峰个人介绍：EHL 背景、组织与 AI 应用。（无照片版，企业介绍原生图形）",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProfileSlide",
+  "props": {
+    "$team": "郭峰",
+    "eyebrow": "团队 · 联合创始人",
+    "photo": null
+  },
+  "note": "No photograph: the runtime draws a seal monogram. The photo version stays in exhibit and kitchen."
+}

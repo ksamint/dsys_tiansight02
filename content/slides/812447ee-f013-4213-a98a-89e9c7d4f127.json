@@ -16,8 +16,6 @@
     "kicker": "实证",
     "title": "从一家店，\n到近百家店。",
     "body": "新店开业、经营复盘、连锁督导，已在真实门店中落地。",
-    "image": {
-      "$asset": "assets/deck/statement-proof.jpg"
-    }
+    "image": null
   }
 }

@@ -17,9 +17,7 @@
   "props": {
     "eyebrow": "服务模块二 · 概念开创",
     "title": "定位概念开创与产品价值创新",
-    "image": {
-      "$asset": "assets/deck/module-2.jpg"
-    },
+    "image": null,
     "subtitle": "餐饮新概念、菜单价值重构与复合业态的经营设计及创新督导。",
     "stats": [
       {

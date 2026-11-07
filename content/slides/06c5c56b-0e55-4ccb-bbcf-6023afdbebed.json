@@ -19,35 +19,35 @@
     "items": [
       {
         "$case": "case-01",
-        "$view": "index"
+        "$view": "index:native"
       },
       {
         "$case": "case-02",
-        "$view": "index"
+        "$view": "index:native"
       },
       {
         "$case": "case-03",
-        "$view": "index"
+        "$view": "index:native"
       },
       {
         "$case": "case-04",
-        "$view": "index"
+        "$view": "index:native"
       },
       {
         "$case": "case-05",
-        "$view": "index"
+        "$view": "index:native"
       },
       {
         "$case": "case-06",
-        "$view": "index"
+        "$view": "index:native"
       },
       {
         "$case": "case-07",
-        "$view": "index"
+        "$view": "index:native"
       },
       {
         "$case": "case-08",
-        "$view": "index"
+        "$view": "index:native"
       }
     ],
     "columns": 4

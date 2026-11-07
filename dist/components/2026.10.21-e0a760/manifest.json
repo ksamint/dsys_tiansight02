@@ -573,8 +573,8 @@
   "files": [
     {
       "path": "dist/components/2026.10.21-e0a760/_ds_bundle.js",
-      "bytes": 439410,
-      "sha256": "93f5d6672b37e2644630bff6c9d1c699d4f20b84f5a8697bb8d2fdc4a526c7a6"
+      "bytes": 441948,
+      "sha256": "dabbeee02d0402a464960e314c003784464635f1802ce1a11899a4ec10ee488e"
     },
     {
       "path": "dist/components/2026.10.21-e0a760/deck-stage.js",

@@ -805,52 +805,6 @@
     ]
   },
   {
-    "id": "1e564f65-294a-4ca3-80cf-c1769347aa3d",
-    "label": "报告样张",
-    "owner": "intro",
-    "component": "ScreensSlide",
-    "publish": "web",
-    "tags": [
-      "报告",
-      "样张"
-    ]
-  },
-  {
-    "id": "99963461-1bc0-4f5d-98dc-9f08ca6fe1a0",
-    "label": "产品界面",
-    "owner": "intro",
-    "component": "ScreensSlide",
-    "publish": "web",
-    "tags": [
-      "产品",
-      "经营看板",
-      "截图"
-    ]
-  },
-  {
-    "id": "d300e5eb-7629-435b-abbc-22f91e013c28",
-    "label": "价格带与菜品矩阵",
-    "owner": "intro",
-    "component": "ScreensSlide",
-    "publish": "web",
-    "tags": [
-      "价格带",
-      "渗透率",
-      "菜品矩阵"
-    ]
-  },
-  {
-    "id": "48d9c918-a62e-430f-952b-bc8007f333c6",
-    "label": "商圈供需与复购分层",
-    "owner": "intro",
-    "component": "ScreensSlide",
-    "publish": "web",
-    "tags": [
-      "商圈",
-      "复购"
-    ]
-  },
-  {
     "id": "7dd147e8-c3c8-412a-a6db-001140f41a34",
     "label": "利润归因",
     "owner": "intro",
@@ -1021,6 +975,58 @@
       "团队",
       "联合创始人",
       "专家团"
+    ]
+  },
+  {
+    "id": "e6b9cb6e-d277-5494-b753-93bd9c552372",
+    "label": "联合创始人 · 边江",
+    "owner": "intro",
+    "component": "ProfileSlide",
+    "publish": "web",
+    "tags": [
+      "人物",
+      "联合创始人",
+      "菜单",
+      "定位"
+    ]
+  },
+  {
+    "id": "d4927b27-b0b8-5f08-bf84-6f6eaa0a6203",
+    "label": "联合创始人 · 郭峰",
+    "owner": "intro",
+    "component": "ProfileSlide",
+    "publish": "web",
+    "tags": [
+      "人物",
+      "联合创始人",
+      "组织",
+      "服务体验"
+    ]
+  },
+  {
+    "id": "3f600f35-2ad2-5a96-980b-b1bb9e31e8fb",
+    "label": "专家团 · 李权超",
+    "owner": "intro",
+    "component": "ProfileSlide",
+    "publish": "web",
+    "tags": [
+      "人物",
+      "专家",
+      "出品",
+      "厨政"
+    ]
+  },
+  {
+    "id": "744cab0d-0896-5ee3-9d92-659ed9096edc",
+    "label": "专家团 · 余向东",
+    "owner": "intro",
+    "component": "ProfileSlide",
+    "publish": "web",
+    "tags": [
+      "人物",
+      "专家",
+      "后厨设计",
+      "展陈"
     ]
   },
   {

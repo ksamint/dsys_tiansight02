@@ -17,8 +17,6 @@
     "kicker": "数据",
     "title": "每一张订单，\n都是顾客投下的一票。",
     "body": "侍天把订单级流水变成可以核对的经营判断。",
-    "image": {
-      "$asset": "assets/deck/statement-data.jpg"
-    }
+    "image": null
   }
 }

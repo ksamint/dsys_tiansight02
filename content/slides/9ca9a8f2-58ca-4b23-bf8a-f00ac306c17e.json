@@ -17,9 +17,7 @@
   "props": {
     "eyebrow": "服务模块四 · 连锁督导",
     "title": "连锁规模化运营督导",
-    "image": {
-      "$asset": "assets/deck/module-4.jpg"
-    },
+    "image": null,
     "subtitle": "餐饮及烘焙连锁的多店经营分析、总部督导与标准化运营。",
     "stats": [
       {

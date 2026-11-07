@@ -258,7 +258,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "b63a770d-49c7-40e5-8db3-02bc6ede0331",
         "brand:dist/components/2026.10.21-e0a760/manifest.json",
         "templates/report-kit/example/starter.py"
       ]
@@ -276,8 +275,7 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "brand:dist/components/2026.10.21-e0a760/manifest.json",
-        "f97c967e-6f86-45fb-bb36-e22d1df0dfff"
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
     {
@@ -293,7 +291,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "bfea5864-e5c2-43ef-8f35-ee8ef113e40f",
         "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
@@ -310,7 +307,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "1bfcb28d-0489-4267-bc88-bb5afd9edd30",
         "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
@@ -327,7 +323,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "9ca9a8f2-58ca-4b23-bf8a-f00ac306c17e",
         "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
@@ -344,7 +339,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "7ad0a1ed-21fd-4632-874c-0c342bd6f6ab",
         "brand:dist/components/2026.10.21-e0a760/manifest.json",
         "templates/report-kit/example/starter.py"
       ]
@@ -362,7 +356,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "82e572f3-d3bc-49d8-8b65-39d2d79c0782",
         "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
@@ -379,8 +372,7 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "brand:dist/components/2026.10.21-e0a760/manifest.json",
-        "ceb4f385-17f4-46cf-aaaf-3fe469db76e2"
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
     {
@@ -396,7 +388,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "a3899939-9c43-4f5b-b6ee-e12b7615f862",
         "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
@@ -413,8 +404,7 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "brand:dist/components/2026.10.21-e0a760/manifest.json",
-        "cdbe10c1-a934-4565-b22c-32620690305a"
+        "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
     {
@@ -430,7 +420,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "3531cea9-7492-4d22-9767-cc7977113b06",
         "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },
@@ -447,7 +436,6 @@
         "record": "CHANGELOG.md v0.7"
       },
       "usedBy": [
-        "812447ee-f013-4213-a98a-89e9c7d4f127",
         "brand:dist/components/2026.10.21-e0a760/manifest.json"
       ]
     },

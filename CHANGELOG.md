@@ -2,6 +2,13 @@
 
 Versions follow the published brand guide. The system version is in `brand/VERSION`.
 
+## v0.7 · 2026-11-07 · Intro: native figures only, 三不 and fee copy removed
+
+- Owner: the 三不 line (侍天不替老板拍板…) and the result-linked fee copy (服务费用可与双方确认的改善结果挂钩…) are removed. `ValueSlide` and `ServiceModelSlide` pass `note: ""`; 服务模式 keeps the 服务内容 and 客户价值 rows and drops 核心优势, which repeated both. Both slides are shared, so the sales deck changes too. README rules updated.
+- Owner: the intro uses native figures only, no images. Photographs are removed from the cover, statement, section and module slides (`image: null`); the four screenshot slides (报告样张, 产品界面, 价格带与菜品矩阵, 商圈供需与复购分层) leave the manifest; partner logos give way to names set in type (`$partners` view `names`, also on the sales wall); case slides use `$case` view `native` and the index `index:native`; team seats and four new photo-less profile records (the photo versions stay in exhibit and kitchen) take no portraits. Remaining images: the brand seal and the WeChat QR on 联系. Intro: 53 internal, 48 client, 44 web.
+- Runtime patches (`scripts/runtime_patches.py`): without a photo, ProfileSlide and ExpertTeamSlide draw a seal monogram and CaseStudySlide a service-module track instead of a grey placeholder; PartnerWallSlide uses shorter cells for names so the quote no longer runs into the footer. Photo paths render as before, but the runtime bytes changed, so every deck's content version changed: intro, sales and exhibit PDFs rebuilt, and the exhibit approval returns to null until production review.
+- `scripts/content_lib.py` gains the views above, with contract tests; `snapshots/migration-text.json` records each intended difference with its cause.
+
 ## v0.7 · 2026-11-07 · Intro follows the official homepage
 
 - Intro deck recomposed in the order of the live homepage https://tiansight.apuch.cn (fetched 2026-11-07): 主张 (菜单是什么) → 问题 → 经营 · 利润 · 能力 → 一 从概念到连锁 (四个阶段, 四个服务模块, 模块与节点, 交付节奏, 可选专项) → 二 餐饮第二大脑 (四个部分, 三个模型, 底座 · 基座, 样张为证 and the insight pages) → 伙伴 (伙伴背书, 实证, 八个案例) → 三 团队 → 老板看到的价值 → 服务模式 (合作从一份经营诊断开始) → 拍板之前，问侍天 → 联系. Manifest only: no slide copy edited.

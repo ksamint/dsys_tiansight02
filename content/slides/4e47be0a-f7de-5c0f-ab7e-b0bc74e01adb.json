@@ -9,5 +9,7 @@
   "purpose": "老板看到的价值",
   "status": "maintained",
   "component": "ValueSlide",
-  "props": {}
+  "props": {
+    "note": ""
+  }
 }

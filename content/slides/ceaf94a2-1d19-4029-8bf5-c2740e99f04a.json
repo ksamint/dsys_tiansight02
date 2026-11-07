@@ -16,6 +16,17 @@
   "status": "maintained",
   "component": "ServiceModelSlide",
   "props": {
-    "highlight": 1
+    "highlight": 1,
+    "rows": [
+      {
+        "key": "content",
+        "label": "服务内容"
+      },
+      {
+        "key": "value",
+        "label": "客户价值"
+      }
+    ],
+    "note": ""
   }
 }

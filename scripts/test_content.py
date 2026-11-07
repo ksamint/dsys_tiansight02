@@ -80,6 +80,12 @@ class Contracts(unittest.TestCase):
         with self.assertRaises(ValueError):self.lib.resolve({'$asset':'../private'})
         with self.assertRaises(ValueError):self.lib.resolve({'$case':'../case-01'})
 
+    def test_native_views_drop_images(self):
+        self.assertEqual(self.lib.resolve({'$case':'case-01','$view':'native'}),{'title':'Case','image':None,'logo':None})
+        self.write('content/partners.json',{'title':'T','logos':[{'name':'甲','src':{'$asset':'assets/logo/logo.png'}},{'name':'乙'}]})
+        self.assertEqual(self.lib.resolve({'$partners':True,'$view':'names'}),{'title':'T','partners':['甲','乙'],'logos':None})
+        with self.assertRaises(ValueError):self.lib.resolve({'$partners':True,'$view':'other'})
+
     def test_nested_content_references_rejected(self):
         self.write('content/contact.json',{'nested':{'$team':'A'}})
         with self.assertRaises(ValueError):self.lib.resolve({'$contact':True})

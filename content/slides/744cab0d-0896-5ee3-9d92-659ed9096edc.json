@@ -1,0 +1,23 @@
+{
+  "id": "744cab0d-0896-5ee3-9d92-659ed9096edc",
+  "label": "专家团 · 余向东",
+  "cat": "team",
+  "type": "profile",
+  "tags": [
+    "人物",
+    "专家",
+    "后厨设计",
+    "展陈"
+  ],
+  "publish": "web",
+  "purpose": "余向东个人介绍：后厨设计与展陈项目经历。（无照片版，企业介绍原生图形）",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProfileSlide",
+  "props": {
+    "$team": "余向东",
+    "eyebrow": "团队 · 专家团",
+    "photo": null
+  },
+  "note": "No photograph: the runtime draws a seal monogram. The photo version stays in exhibit and kitchen."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "3f600f35-2ad2-5a96-980b-b1bb9e31e8fb",
+  "label": "专家团 · 李权超",
+  "cat": "team",
+  "type": "profile",
+  "tags": [
+    "人物",
+    "专家",
+    "出品",
+    "厨政"
+  ],
+  "publish": "web",
+  "purpose": "李权超个人介绍：出品与厨政管理经历。（无照片版，企业介绍原生图形）",
+  "owner": "intro",
+  "status": "maintained",
+  "component": "ProfileSlide",
+  "props": {
+    "$team": "李权超",
+    "eyebrow": "团队 · 专家团",
+    "photo": null
+  },
+  "note": "No photograph: the runtime draws a seal monogram. The photo version stays in exhibit and kitchen."
+}

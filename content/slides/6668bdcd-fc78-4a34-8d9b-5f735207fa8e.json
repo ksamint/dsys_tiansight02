@@ -12,6 +12,7 @@
   "status": "maintained",
   "component": "CaseStudySlide",
   "props": {
-    "$case": "case-06"
+    "$case": "case-06",
+    "$view": "native"
   }
 }

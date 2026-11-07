@@ -17,9 +17,7 @@
   "props": {
     "eyebrow": "服务模块一 · 新店开业",
     "title": "新店可研与开业督导",
-    "image": {
-      "$asset": "assets/deck/module-1.jpg"
-    },
+    "image": null,
     "subtitle": "确定店址的新店可行性研究、开业经营设计与试运营督导。",
     "stats": [
       {

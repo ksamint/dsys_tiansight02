@@ -47,7 +47,7 @@ paraphrase it.
 | 官网 Marketing site | Single long-scroll site: hero → 报告样张 → 从概念到连锁 (四阶段) → 餐饮第二大脑 → 伙伴背书 → 联系; 伙伴与创始团队 page | `ui_kits/website/` |
 | 报告样张 Report sample | The deliverable itself: 决策维度 / 分析维度 / 趋势与归因 / 方法论地图 pages, plus the five insight matrices (渗透率矩阵, 商圈供需洞察, 复购分层四象限, 利润敏感性矩阵, 价格带断层洞察) | `ui_kits/report/` |
 | 销售提案 Sales deck | 16:9 deck pitching 侍天 to a restaurant owner — 19 slides: 主张 → 1 + 3 + 3 → 服务内容 (四个阶段) → 服务模式 → 方法论 (第二大脑 · 经营 / 利润 / 能力模型 · 底座与基座 · 样张 · 图谱) → 价值 → 案例 → 伙伴 → 创始团队 → 联系 | `content/decks/sales.json`, `build/sales/` |
-| 企业介绍 Company intro | 57 slides (52 client) in the official homepage order: 主张 → 从概念到连锁 → 餐饮第二大脑 → 伙伴与案例 → 团队 → 价值 → 经营诊断 → 联系; copy from `guidelines/company-intro-v3.md` and the shared library | `content/decks/intro.json`, `build/intro/` |
+| 企业介绍 Company intro | 53 slides (48 client) in the official homepage order: 主张 → 从概念到连锁 → 餐饮第二大脑 → 伙伴与案例 → 团队 → 价值 → 经营诊断 → 联系; native figures only, no photographs, screenshots or logos; copy from `guidelines/company-intro-v3.md` and the shared library | `content/decks/intro.json`, `build/intro/` |
 | 展陈与厨房设计 Exhibit | 41 registry slides on the shared runtime with canonical team/contact slides; 33 build today, 8 `hold` pages wait for owner confirmation | `content/decks/exhibit.json`, `build/exhibit/` |
 | 全周期图谱 Lifecycle map | 餐饮经营全周期图谱 — flow map, single-store Gantt and 3D views over 60 decisions | `deliverables/lifecycle-map/` |
 | 报告模板 Report template | 39-page 1920×1080 Slides template: report standards plus a sample of each of the 27 page types, clickable PDF; built with the report kit (`tsk`) | `deliverables/report-template/`, `templates/report-kit/`, `docs/report-handbook.md` |
@@ -77,12 +77,14 @@ predictor):
 - **持续复盘** — 将预期与实际对照，让下一次决策有更可靠的依据。
 
 **The value the owner sees** — 落在具体的经营变化上: 顾客是否更容易点到满意的一餐 · 出品是否更稳定 ·
-浪费是否减少 · 门店是否留下更多经营贡献. Bounded by the 三不 line, which is copy, not a hedge:
-**侍天不替老板拍板，不凭单一销量砍菜，也不把预期收益写成已经发生的结果。** The proof line every
-deliverable stands behind: **每次拍板有依据，每项行动有人落实，每轮改善可以核对。**
+浪费是否减少 · 门店是否留下更多经营贡献. The proof line every deliverable stands behind:
+**每次拍板有依据，每项行动有人落实，每轮改善可以核对。** Owner 2026-11-07: the 三不 line
+(侍天不替老板拍板…) is removed from decks; `ValueSlide` is used with `note: ""`. Do not reintroduce it.
 
 **Service model** (服务模式, client brief 2026-09-19) — three tiers chosen by 餐饮类型 and
-经营阶段, each stated as 服务内容 / 客户价值 / 核心优势 (`ServiceModelSlide` carries the copy):
+经营阶段, each stated as 服务内容 / 客户价值 (`ServiceModelSlide` carries the copy; owner 2026-11-07:
+decks pass `rows` without the 核心优势 row and `note: ""`, because that row and the note repeated the
+removed 三不 and fee copy):
 
 | Tier | Fits | Entry |
 |---|---|---|
@@ -93,10 +95,8 @@ deliverable stands behind: **每次拍板有依据，每项行动有人落实，
 合作从一份经营诊断开始 — the 6 个月 / 7 日内 diagnosis is the **entry**, not the whole offer, and
 "之后再决定是否进入持续跟进或专家上门的阶段". Tier names are the client's; do not rename them.
 
-**Result-linked fees.** For projects with the data and execution conditions, fees can be tied
-to jointly confirmed improvements: 约定基线、目标、计量口径与验证方式 at the start; 记录动作和投入
-during; 共同核对实际结果与可归属的改善 at review. Copy stays conditional ("可与…挂钩"), never a
-guarantee, never a fixed share or a promised uplift.
+**Fees.** Owner 2026-11-07: result-linked fee copy (服务费用可与双方确认的改善结果挂钩，约定基线、目标、
+计量口径与验证方式…) is removed and does not appear in decks or new work. Never promise an uplift.
 
 **Methodology vocabulary** (《侍天方法论总纲》, `uploads/侍天方法论_大纲分类框架版.md` — reference only,
 not marketing copy): six questions (为谁做这一餐 / 卖什么 / 顾客愿意怎样买 / 能否稳定交付 / 留下多少钱 /
@@ -196,8 +196,7 @@ is three-fold — **依据、动作、验证方式** — and the closing proof l
 Never write a benefit without its check: not "提升复购" but "哪些菜值得保留 → 每个建议明确依据、动作与
 验证方式". Claims about the system are deliberately modest (辅助判断 · 讲清 · 为…提供支持) — the
 methodology doc forbids calling the 点单模型 a proven predictor or the 第二大脑 a finished
-intelligent system. Fees "可与…挂钩", never "保证". Honesty about limits is a selling point,
-not a hedge.
+intelligent system. Never "保证". Honesty about limits is a selling point, not a hedge.
 
 **3. Address: 老板 / 经营者, and the 餐厅 / 门店 as the subject.** Sentences are built around the
 restaurant, the menu, the dish, the team — “老板看到的价值”, “顾客是否…”, “门店是否…”. 侍天 refers
@@ -705,7 +704,7 @@ which owns scaling, keyboard nav, the thumbnail rail and PDF export — never wr
 scaler. Slide defaults carry the current framing: `TitleSlide` 从一道菜… / 拍板之前，问侍天,
 `PromiseSlide` the menu thesis and three beats, `FiveQuestionsSlide` the four stages,
 `ServiceModelSlide` the three tiers, `LadderSlide` the four parts of 第二大脑, `ValueSlide` the
-four checkable changes + 三不, `ProofSlide` one report page with its d3 evidence figure, `ChartSlide`
+four checkable changes (pass `note: ""`; the 三不 default is retired), `ProofSlide` one report page with its d3 evidence figure, `ChartSlide`
 one of three d3 decision figures (`figure`), `CaseSlide` a 现状 → 动作 → 验收 case with the 主指标's
 monthly path (sample-badged until a partner confirms), `ContactSlide` the diagnosis entry.
 `ExpertTeamSlide` takes the two founders. Kit charts reach slides only through `SlideChart` (§4).

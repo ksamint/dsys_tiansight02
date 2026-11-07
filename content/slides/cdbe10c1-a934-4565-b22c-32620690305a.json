@@ -16,8 +16,6 @@
     "kicker": "决策",
     "title": "拍板之前，\n问侍天。",
     "body": "餐饮第二大脑 · 让每个经营决定都有依据。",
-    "image": {
-      "$asset": "assets/deck/statement-decision.jpg"
-    }
+    "image": null
   }
 }

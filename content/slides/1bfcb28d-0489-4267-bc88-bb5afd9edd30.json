@@ -16,9 +16,7 @@
   "props": {
     "eyebrow": "服务模块三 · 经营复盘",
     "title": "餐饮经营复盘与优化",
-    "image": {
-      "$asset": "assets/deck/module-3.jpg"
-    },
+    "image": null,
     "subtitle": "在营餐厅经营复盘、菜单优化与收益改善。",
     "stats": [
       {

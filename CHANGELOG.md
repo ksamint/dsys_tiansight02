@@ -2,6 +2,10 @@
 
 Versions follow the published brand guide. The system version is in `brand/VERSION`.
 
+## v0.7 · 2026-11-08 · Kitchen deck references 1 + 3 + 3
+
+- Kitchen deck (侍天厨政专项介绍, still `planned`) references the same five positioning slides by ID: the 经营 · 利润 · 能力 overview after 厨务痛点, and the three model slides plus 三个底座 · 一个基座 before 节首 · 团队 (57 slides in the manifest). No copy is duplicated; the deck still builds nothing until it is promoted from planned. Catalog regenerated.
+
 ## v0.7 · 2026-11-07 · 1 + 3 + 3
 
 - Owner: the "1 + 3 + 3" formula is internal only. No slide, deck or website shows it; the overview slide is labelled 经营 · 利润 · 能力 and the website rows read 模型 · 底座 · 基座 without numbers. The record keeps `lead.formula` as its structural name.

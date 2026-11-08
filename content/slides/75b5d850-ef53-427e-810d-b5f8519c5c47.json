@@ -9,5 +9,16 @@
   "publish": "banner",
   "purpose": "厨政专项封面：把标准留在现场，把能力留给团队。",
   "owner": "kitchen",
-  "status": "planned"
+  "status": "maintained",
+  "component": "TitleSlide",
+  "props": {
+    "title": "厨政标准化",
+    "subtitle": "4D 厨房体系 ＋ 6S 现场管理 ＋ 月度督导",
+    "clientLabel": "文件",
+    "client": "侍天 · 厨政专项介绍",
+    "date": {
+      "$param": "date"
+    }
+  },
+  "note": "文案摘自《侍天 · 厨政标准化 · 成功案例与成果说明》（2026-11）方法与计划章节；客户案例、营业数据、现场照片与合同条款不入公开库。"
 }

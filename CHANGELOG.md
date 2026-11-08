@@ -5,6 +5,7 @@ Versions follow the published brand guide. The system version is in `brand/VERSI
 ## v0.7 · 2026-11-08 · Kitchen deck references 1 + 3 + 3
 
 - Kitchen deck (侍天厨政专项介绍, still `planned`) references the same five positioning slides by ID: the 经营 · 利润 · 能力 overview after 厨务痛点, and the three model slides plus 三个底座 · 一个基座 before 节首 · 团队 (57 slides in the manifest). No copy is duplicated; the deck still builds nothing until it is promoted from planned. Catalog regenerated.
+- Kitchen method and plan content from 《侍天 · 厨政标准化 · 成功案例与成果说明》 (2026-11), method chapters only: 封面, 6T 管理, 服务交付物 and 计量与验收 move from planned to maintained, and 11 new kitchen slides (UUIDv5 `tiansight:kitchen:<label>`) cover the four execution pain points, the four-colour scheme, 4D + 6S, the value path, the four-step plan, the six-area diagnosis, system build-out, the 90-day timeline, monthly follow-up, risk and acceptance, and the cooperation steps. The source's client cases, store figures, site photos, sample-store estimates and contract terms stay out of this public repository. The deck stays `planned`; a temporary maintained manifest rendered all 25 pages without clipping.
 
 ## v0.7 · 2026-11-07 · 1 + 3 + 3
 

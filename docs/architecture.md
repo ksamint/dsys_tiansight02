@@ -11,7 +11,7 @@ assets in `assets/`, and generated review artifacts in `build/`. Historical expo
 `component`, `props`, `publish`, `cat`, `type`, `tags`, `purpose`, optional `evidence` and
 `note`, and `status`. Maintained slides have props; planned slides have none and never render.
 Registry UUIDs and order are preserved. Sales-only UUIDs use UUIDv5 with the documented
-`tiansight:sales:<label>` namespace input. Shared profiles, contact, partners and case slides
+`tiansight:sales:<label>` namespace input. New kitchen-only slides use `tiansight:kitchen:<label>` the same way. Shared profiles, contact, partners and case slides
 are owned by intro and referenced by every consuming deck. Never copy a slide to compose a deck.
 
 `content/decks/<id>.json` lists slide UUIDs in order, with optional layout-only overrides

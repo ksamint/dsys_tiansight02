@@ -5,19 +5,17 @@
  *   node scripts/snapshot.mjs            # same as --check, plus PNGs for eyeballing
  *
  * Facts per page and viewport: horizontal overflow, document height, count of headings, sections,
- * cards, charts and images, first-h1 box, console/page errors. Heights may drift ±3% and the h1 box ±2px
- * (font fallback differs between machines); everything else must match exactly. PNGs go to snapshots/render/ (ignored
+ * cards, charts and images, first-h1 box, loaded webfonts, console/page errors. Heights may drift ±3% and the
+ * h1 box ±2px; everything else must match exactly. Pages that link fonts.css must load at least one webfont,
+ * so a page never falls back to machine-dependent system fonts unnoticed. PNGs go to snapshots/render/ (ignored
  * by git) so a reviewer can diff them by eye; the JSON is the committed baseline.
  * Requires the global Playwright install used by scripts/export_people.mjs.
  */
-import { createRequire } from 'node:module';
-import { execSync } from 'node:child_process';
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const globalRoot = execSync('npm root -g').toString().trim();
 const { chromium } = await import('./playwright.mjs');
 
 const VIEWPORTS = { desktop: { width: 1280, height: 900 }, mobile: { width: 390, height: 844 } };
@@ -54,9 +52,10 @@ for (const page of PAGES) {
     const errors = [];
     pg.on('pageerror', (e) => errors.push(String(e.message || e)));
     pg.on('console', (m) => { if (m.type() === 'error' && !/ERR_FILE_NOT_FOUND/.test(m.text())) errors.push(m.text()); });
-    // Webfonts and portraits are supplied later by the user; a failed load of those is expected, anything else is not.
-    pg.on('requestfailed', (r) => { const u = r.url(); if (!/\.woff2$|photos\/(founder-0[1-5]|missing)\.png$/.test(u)) errors.push('failed request ' + u.replace(/^.*dsys_tiansight0\d\//, '')); });
+    // Portraits are supplied later by the user; a failed load of those is expected, anything else (fonts included) is not.
+    pg.on('requestfailed', (r) => { const u = r.url(); if (!/photos\/(founder-0[1-5]|missing)\.png$/.test(u)) errors.push('failed request ' + u.replace(/^.*dsys_tiansight0\d\//, '')); });
     await pg.goto('file://' + resolve(root, page.file));
+    await pg.evaluate(() => document.fonts.ready);
     await pg.waitForTimeout(350);
     await pg.evaluate(() => document.querySelectorAll('.ts-reveal').forEach((e) => e.classList.remove('ts-reveal')));
     const facts = await pg.evaluate(() => {
@@ -71,6 +70,8 @@ for (const page of PAGES) {
         sections: n('section'), cards: n('.ts-card'), charts: n('svg[role="img"], .ts-chart, .fig'), images: n('img'),
         h1: box ? [Math.round(box.left), Math.round(box.top), Math.round(box.width), Math.round(box.height)] : null,
         title: document.title,
+        fontsLinked: !!document.querySelector('link[rel="stylesheet"][href$="fonts.css"]'),
+        fontsLoaded: [...document.fonts].filter((f) => f.status === 'loaded').length,
       };
     });
     facts.errors = errors;
@@ -93,6 +94,7 @@ for (const [key, got] of Object.entries(result)) {
   const was = base[key];
   if (!was) { drift.push(`${key}: no baseline (run --update)`); continue; }
   if (got.overflow) drift.push(`${key}: horizontal overflow`);
+  if (got.fontsLinked && !got.fontsLoaded) drift.push(`${key}: fonts.css linked but no webfont loaded (system-font fallback)`);
   if (got.errors.length) drift.push(`${key}: page errors: ${got.errors.join(' | ')}`);
   if (Math.abs(got.height - was.height) > was.height * 0.03) drift.push(`${key}: height ${was.height} → ${got.height}`);
   if (got.h1 && was.h1 && got.h1.some((v, i) => Math.abs(v - was.h1[i]) > 2)) drift.push(`${key}: h1 box ${JSON.stringify(was.h1)} → ${JSON.stringify(got.h1)}`);

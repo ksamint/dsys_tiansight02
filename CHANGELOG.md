@@ -2,6 +2,11 @@
 
 Versions follow the published brand guide. The system version is in `brand/VERSION`.
 
+## v0.7 · 2026-11-08 · Specimen fonts and snapshot harness
+
+- `brand/index.html` now links `brand/fonts.css` (its own font note already said it did). Before, the specimen loaded no webfont and rendered in whatever system fonts the machine had, so its layout baseline flipped between machines (h1 at y 3420 vs 3428 desktop, 5396 vs 5457 mobile) and `check.py --render` failed on `main` in some environments. With the fonts loaded it matches the committed baseline everywhere.
+- `scripts/snapshot.mjs`: waits for `document.fonts.ready`; reports drift when a page links `fonts.css` but loads no webfont; a failed `.woff2` request is now an error rather than ignored; the unused `npm root -g` call is removed.
+
 ## v0.7 · 2026-11-07 · 1 + 3 + 3
 
 - Owner: the "1 + 3 + 3" formula is internal only. No slide, deck or website shows it; the overview slide is labelled 经营 · 利润 · 能力 and the website rows read 模型 · 底座 · 基座 without numbers. The record keeps `lead.formula` as its structural name.

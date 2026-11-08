@@ -2,7 +2,7 @@
   "id": "6d7cda56-3007-4a10-8a76-5e5b77e66793",
   "label": "服务交付物",
   "cat": "kitchen",
-  "type": "table",
+  "type": "cards",
   "tags": [
     "落地",
     "交付物"
@@ -10,5 +10,63 @@
   "publish": "web",
   "purpose": "厨政服务交付物清单。",
   "owner": "kitchen",
-  "status": "planned"
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {
+    "eyebrow": "工作计划 · 交付清单",
+    "title": "12 类交付物，逐项设节点",
+    "subtitle": "合计 60+ 项标准文件与表格。",
+    "items": [
+      {
+        "title": "后厨诊断报告",
+        "body": "1 份 · D10"
+      },
+      {
+        "title": "管理层岗位职责表",
+        "body": "2 份 · D17"
+      },
+      {
+        "title": "四岗区 4D 标准",
+        "body": "16 份 · D45"
+      },
+      {
+        "title": "厨房管理规范",
+        "body": "8 项 · D65"
+      },
+      {
+        "title": "工具表格",
+        "body": "10 项 · D65"
+      },
+      {
+        "title": "物品定位与色标模板",
+        "body": "9 区 · D65"
+      },
+      {
+        "title": "6S 规范与应急预案",
+        "body": "1 套 · D65"
+      },
+      {
+        "title": "厨房管理制度",
+        "body": "14 项 · D80"
+      },
+      {
+        "title": "标准化厨房管理手册",
+        "body": "1 本 · D90"
+      },
+      {
+        "title": "月度督导整改报告",
+        "body": "3 期 · 第 4–6 月"
+      },
+      {
+        "title": "项目周报",
+        "body": "13 期 · 每周"
+      },
+      {
+        "title": "项目总结报告",
+        "body": "1 份 · D180"
+      }
+    ],
+    "columns": 4
+  },
+  "note": "文案摘自《侍天 · 厨政标准化 · 成功案例与成果说明》（2026-11）方法与计划章节；客户案例、营业数据、现场照片与合同条款不入公开库。"
 }

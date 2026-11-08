@@ -1098,6 +1098,7 @@
     "id": "75b5d850-ef53-427e-810d-b5f8519c5c47",
     "label": "封面",
     "owner": "kitchen",
+    "component": "TitleSlide",
     "publish": "banner",
     "tags": [
       "厨政专项"
@@ -1130,6 +1131,20 @@
     ]
   },
   {
+    "id": "394414bd-4fb0-5605-b5d8-f92a635e71c8",
+    "label": "执行力四痛点",
+    "owner": "kitchen",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "执行力",
+      "沟通",
+      "责任",
+      "激励",
+      "标准"
+    ]
+  },
+  {
     "id": "b23b1430-3927-45ca-9950-82cc2d516f25",
     "label": "节首 · 管理体系",
     "owner": "kitchen",
@@ -1155,10 +1170,49 @@
     "id": "33278844-0b8c-43b8-ae00-efc880a1b592",
     "label": "6T 管理",
     "owner": "kitchen",
+    "component": "CardGridSlide",
     "publish": "web",
     "tags": [
       "管理体系",
       "6T"
+    ]
+  },
+  {
+    "id": "cf0ee969-7a41-50ce-92c7-858413c02956",
+    "label": "问题与方案",
+    "owner": "kitchen",
+    "component": "CardGridSlide",
+    "publish": "web",
+    "tags": [
+      "四色管理",
+      "可视化",
+      "动线",
+      "培训"
+    ]
+  },
+  {
+    "id": "59214462-a3ad-557d-8887-af19981e001d",
+    "label": "4D + 6S 合一",
+    "owner": "kitchen",
+    "component": "MatrixTableSlide",
+    "publish": "web",
+    "tags": [
+      "4D",
+      "6S",
+      "14 项制度",
+      "督导"
+    ]
+  },
+  {
+    "id": "1437338a-b7e4-5965-9d87-07e40996b0ac",
+    "label": "价值路径",
+    "owner": "kitchen",
+    "component": "LadderSlide",
+    "publish": "web",
+    "tags": [
+      "提效",
+      "降本",
+      "食安"
     ]
   },
   {
@@ -1474,6 +1528,77 @@
     ]
   },
   {
+    "id": "8a4f5239-d8da-5f62-8d62-38ffef152812",
+    "label": "落地四步法",
+    "owner": "kitchen",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "诊断",
+      "体系",
+      "推广",
+      "持续"
+    ]
+  },
+  {
+    "id": "a7eae58e-2fac-5e9f-87e6-ec90e0d73363",
+    "label": "六维诊断",
+    "owner": "kitchen",
+    "component": "CardGridSlide",
+    "publish": "web",
+    "tags": [
+      "诊断",
+      "基线"
+    ]
+  },
+  {
+    "id": "760de412-018d-567e-8efe-cceb88172ebc",
+    "label": "体系建设与推广督导",
+    "owner": "kitchen",
+    "component": "CardGridSlide",
+    "publish": "web",
+    "tags": [
+      "体系文件",
+      "推广机制"
+    ]
+  },
+  {
+    "id": "0caf3efc-9496-50ac-bd8f-70d5c467ceda",
+    "label": "90 天详细计划",
+    "owner": "kitchen",
+    "component": "TimelineSlide",
+    "publish": "web",
+    "tags": [
+      "90 天",
+      "里程碑",
+      "督导"
+    ]
+  },
+  {
+    "id": "3ad034f5-d8cf-5e91-9e0b-e8a6b0026def",
+    "label": "月度陪跑",
+    "owner": "kitchen",
+    "component": "CardGridSlide",
+    "publish": "web",
+    "tags": [
+      "陪跑",
+      "督导",
+      "培训"
+    ]
+  },
+  {
+    "id": "cf155f3e-f82b-5ff5-95ed-66c582e66133",
+    "label": "风险防控与验收",
+    "owner": "kitchen",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "风险",
+      "验收",
+      "追溯"
+    ]
+  },
+  {
     "id": "5bd3b505-b440-4373-9f27-8243b321fd4b",
     "label": "纠偏闭环",
     "owner": "kitchen",
@@ -1508,6 +1633,7 @@
     "id": "6d7cda56-3007-4a10-8a76-5e5b77e66793",
     "label": "服务交付物",
     "owner": "kitchen",
+    "component": "CardGridSlide",
     "publish": "web",
     "tags": [
       "落地",
@@ -1518,6 +1644,7 @@
     "id": "ad2040c0-b786-4ab6-8610-43c96ab0826f",
     "label": "计量与验收",
     "owner": "kitchen",
+    "component": "MatrixTableSlide",
     "publish": "web",
     "tags": [
       "落地",
@@ -1583,6 +1710,18 @@
     "tags": [
       "合作方式",
       "厨政"
+    ]
+  },
+  {
+    "id": "795ec88d-9680-532c-8e93-ef60472baf02",
+    "label": "合作流程",
+    "owner": "kitchen",
+    "component": "FiveQuestionsSlide",
+    "publish": "web",
+    "tags": [
+      "沟通",
+      "方案",
+      "启动"
     ]
   },
   {

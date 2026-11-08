@@ -10,5 +10,33 @@
   "publish": "web",
   "purpose": "6T 管理的六个日常动作。",
   "owner": "kitchen",
-  "status": "planned"
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {
+    "eyebrow": "方法体系 · 6T 理念",
+    "title": "每天必做的 6 个动作",
+    "subtitle": "T 取“天”字拼音首字母；6T 即 6 个天天要做到，与 6S 现场标准配合执行。",
+    "items": [
+      {
+        "title": "天天处理"
+      },
+      {
+        "title": "天天整合"
+      },
+      {
+        "title": "天天清扫"
+      },
+      {
+        "title": "天天规范"
+      },
+      {
+        "title": "天天检查"
+      },
+      {
+        "title": "天天改进"
+      }
+    ],
+    "columns": 3
+  },
+  "note": "文案摘自《侍天 · 厨政标准化 · 成功案例与成果说明》（2026-11）方法与计划章节；客户案例、营业数据、现场照片与合同条款不入公开库。"
 }

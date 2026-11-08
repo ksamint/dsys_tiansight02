@@ -1,0 +1,45 @@
+{
+  "id": "3ad034f5-d8cf-5e91-9e0b-e8a6b0026def",
+  "label": "月度陪跑",
+  "cat": "kitchen",
+  "type": "cards",
+  "tags": [
+    "陪跑",
+    "督导",
+    "培训"
+  ],
+  "publish": "web",
+  "purpose": "验收后 3 个月的五个循环机制。",
+  "owner": "kitchen",
+  "status": "maintained",
+  "component": "CardGridSlide",
+  "props": {
+    "eyebrow": "工作计划 · 月度陪跑",
+    "title": "每月回访，防止标准回潮",
+    "subtitle": "验收后 3 个月，五个机制循环运行；D180 期满复核。",
+    "items": [
+      {
+        "title": "月度陪跑",
+        "body": "每月全面回访。"
+      },
+      {
+        "title": "考核评估",
+        "body": "每月考核一次。"
+      },
+      {
+        "title": "员工反馈",
+        "body": "收集意见建议。"
+      },
+      {
+        "title": "持续培训",
+        "body": "线上线下课程。"
+      },
+      {
+        "title": "分析与反馈",
+        "body": "督导分析运营。"
+      }
+    ],
+    "columns": 5
+  },
+  "note": "文案摘自《侍天 · 厨政标准化 · 成功案例与成果说明》（2026-11）方法与计划章节；客户案例、营业数据、现场照片与合同条款不入公开库。"
+}

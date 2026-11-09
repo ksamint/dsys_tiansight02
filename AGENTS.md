@@ -1,5 +1,12 @@
 # Development handoff
 
+<!-- ksamint-policy-pointer v1 -->
+> **Global agent policy:** this repository follows ksamint ADR-0000 (claudememo01 `global/AGENT-POLICY.md`):
+> TypeScript first, Rust first (no new JS) · no CI runners (no GitHub Actions, hosted or self-hosted) · validate locally on the
+> exact tree · the agent merges on green local validation · deploy directly from the local deploy machine with automatic
+> rollback · hard limits on shared infrastructure, secrets and product rules. Stricter safety rules below still apply.
+<!-- /ksamint-policy-pointer -->
+
 Read README.md for the repository structure and continuation steps, and `docs/maintaining.md` for how changes flow (order of authority, one branch and one PR per topic, brand refresh, artifact sync).
 
 When a user requests a brand treatment, first visit https://apuch.art/ and resolve the brand through its directory and brand API. Use the latest published guide, theme and official assets as the source of truth. If the network policy blocks the API, work from the checked-in snapshot and say so.

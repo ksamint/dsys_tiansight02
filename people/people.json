@@ -11,33 +11,109 @@
     "alliance": "A Member of the Table AI Alliance",
     "city": "Hong Kong",
     "site": "［tiansight.·］",
-    "wechat_public": "［公众号名称］"
+    "wechat_public": "［公众号名称］",
+    "web": "tiansight.apuch.cn"
   },
   "people": [
-    { "id": "founder-01", "order": "壹", "photo": "founder-01.png",
-      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+    {
+      "id": "founder-01",
+      "order": "壹",
+      "photo": "founder-01.png",
+      "name": "［姓名］",
+      "en": "［Name］",
+      "title": "联合创始人 · ［职务］",
+      "focus": "［专长一］ · ［专长二］",
       "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
       "quote": "［一句本人观点，可引用，不超过 30 字。］",
-      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
-    { "id": "founder-02", "order": "贰", "photo": "founder-02.png",
-      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "contact": {
+        "phone": "［+86 ··· ···· ····］",
+        "wechat": "［微信号］",
+        "email": "［name@tiansight.·］"
+      }
+    },
+    {
+      "id": "founder-02",
+      "order": "贰",
+      "photo": "founder-02.png",
+      "name": "［姓名］",
+      "en": "［Name］",
+      "title": "联合创始人 · ［职务］",
+      "focus": "［专长一］ · ［专长二］",
       "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
       "quote": "［一句本人观点，可引用，不超过 30 字。］",
-      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
-    { "id": "founder-03", "order": "叁", "photo": "founder-03.png",
-      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "contact": {
+        "phone": "［+86 ··· ···· ····］",
+        "wechat": "［微信号］",
+        "email": "［name@tiansight.·］"
+      }
+    },
+    {
+      "id": "founder-03",
+      "order": "叁",
+      "photo": "founder-03.png",
+      "name": "［姓名］",
+      "en": "［Name］",
+      "title": "联合创始人 · ［职务］",
+      "focus": "［专长一］ · ［专长二］",
       "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
       "quote": "［一句本人观点，可引用，不超过 30 字。］",
-      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
-    { "id": "founder-04", "order": "肆", "photo": "founder-04.png",
-      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "contact": {
+        "phone": "［+86 ··· ···· ····］",
+        "wechat": "［微信号］",
+        "email": "［name@tiansight.·］"
+      }
+    },
+    {
+      "id": "founder-04",
+      "order": "肆",
+      "photo": "founder-04.png",
+      "name": "［姓名］",
+      "en": "［Name］",
+      "title": "联合创始人 · ［职务］",
+      "focus": "［专长一］ · ［专长二］",
       "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
       "quote": "［一句本人观点，可引用，不超过 30 字。］",
-      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } },
-    { "id": "founder-05", "order": "伍", "photo": "founder-05.png",
-      "name": "［姓名］", "en": "［Name］", "title": "联合创始人 · ［职务］", "focus": "［专长一］ · ［专长二］",
+      "contact": {
+        "phone": "［+86 ··· ···· ····］",
+        "wechat": "［微信号］",
+        "email": "［name@tiansight.·］"
+      }
+    },
+    {
+      "id": "founder-05",
+      "order": "伍",
+      "photo": "founder-05.png",
+      "name": "［姓名］",
+      "en": "［Name］",
+      "title": "联合创始人 · ［职务］",
+      "focus": "［专长一］ · ［专长二］",
       "bio": "［一句话简介：过往经历与现负责领域，不超过 40 字。］",
       "quote": "［一句本人观点，可引用，不超过 30 字。］",
-      "contact": { "phone": "［+86 ··· ···· ····］", "wechat": "［微信号］", "email": "［name@tiansight.·］" } }
+      "contact": {
+        "phone": "［+86 ··· ···· ····］",
+        "wechat": "［微信号］",
+        "email": "［name@tiansight.·］"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "name": "边江",
+      "en": "BIAN JIANG",
+      "title": "联合创始人",
+      "title_en": "Co-founder",
+      "phone": "［+86 ··· ···· ····］",
+      "wechat": "［微信号］",
+      "email": "［name@tiansight.·］"
+    },
+    {
+      "name": "郭峰",
+      "en": "GUO FENG",
+      "title": "联合创始人",
+      "title_en": "Co-founder",
+      "phone": "［+86 ··· ···· ····］",
+      "wechat": "［微信号］",
+      "email": "［name@tiansight.·］"
+    }
   ]
 }

@@ -16,7 +16,7 @@ import sys
 root = Path(__file__).resolve().parents[1]
 people_dir = root / 'people'
 DATA = json.loads((people_dir / 'people.json').read_text())
-PEOPLE, GROUP, CO = DATA['people'], DATA['group'], DATA['company']
+PEOPLE, GROUP, CO, CARDS = DATA['people'], DATA['group'], DATA['company'], DATA['cards']
 DECK_START, DECK_END = '<!-- people:start -->', '<!-- people:end -->'
 
 
@@ -91,18 +91,35 @@ def slide_spotlight(p, base):
 
 # ── name cards ───────────────────────────────────────────────────────
 
-def namecards(p, base):
-    c = p['contact']
-    front = (f'<div class="card card-front"><div class="top"><img src="{base["brand"]}logo.png" alt="侍天">'
-             f'<span class="ts-caption">{esc(CO["name"])} · {esc(CO["tagline"])}</span></div>'
-             f'<div class="who"><div class="name">{esc(p["name"])}</div><div class="en">{esc(p["en"])}</div><div class="title">{esc(p["title"])}</div></div>'
-             f'<div class="contact"><span>{esc(c["phone"])}</span><span>{esc(c["wechat"])}</span><span>{esc(c["email"])}</span><span>{esc(CO["site"])}</span></div></div>')
-    port = (f'<div class="card card-portrait">{portrait(p, base)}<div class="who"><span class="ts-caption">{esc(CO["name"])}</span>'
-            f'<div class="name">{esc(p["name"])}</div><div class="title">{esc(p["title"])}</div>'
-            f'<div class="contact"><span>{esc(c["phone"])}</span><span>{esc(c["wechat"])}</span><span>{esc(c["email"])}</span></div></div></div>')
-    back = (f'<div class="card card-back"><img src="{base["brand"]}logo.png" alt="侍天"><span class="ts-tagline">{esc(CO["tagline"])}</span>'
+def card_back(c, base):
+    """Personal side. One-letter labels hang in a column; values align; set from the bottom margin up."""
+    rows = [('M', c['phone']), ('微', c['wechat']), ('E', c['email']), ('W', CO['web'])]
+    lines = ''.join(f'<li><span class="k">{k}</span><span class="v">{esc(v)}</span></li>' for k, v in rows if v)
+    name = c['name'].strip()
+    two = ' data-two' if len(name) == 2 else ''
+    return (f'<div class="card card-back"><div class="id"><div class="who">'
+            f'<div class="name"{two}>{esc(name)}</div>'
+            f'<div class="en">{esc(c["en"])}</div>'
+            f'<div class="title">{esc(c["title"])}  {esc(c["title_en"])}</div></div>'
+            f'<img src="{base["brand"]}logo.png" alt="侍天"></div>'
+            f'<ul class="contact">{lines}</ul></div>')
+
+
+def card_front(base):
+    """Shared side: the mark over the brand row. Identical for every person."""
+    return (f'<div class="card card-front"><img src="{base["brand"]}logo.png" alt="侍天">'
+            f'<span class="ts-tagline">{esc(CO["tagline"])}</span>'
             f'<span class="ts-caption">{esc(CO["alliance"])} · {esc(CO["city"])}</span></div>')
-    return front + port + back
+
+
+def sheet(inner, caption):
+    return f'<figure class="sheet">{inner}<figcaption class="ts-caption">{esc(caption)}</figcaption></figure>'
+
+
+def namecards(base):
+    out = [sheet(card_front(base), '正面 · 全员共用')]
+    out += [sheet(card_back(c, base), f'背面 · {c["name"]}') for c in CARDS]
+    return ''.join(out)
 
 
 # ── social artboards ─────────────────────────────────────────────────
@@ -172,7 +189,7 @@ def render_all():
             'team_cards': ''.join(profile_card(p, loc) for p in PEOPLE),
         }),
         people_dir / 'namecards.html': fill((people_dir / 'templates' / 'namecards.html').read_text(), {
-            'namecards': ''.join(namecards(p, loc) for p in PEOPLE)}),
+            'namecards': namecards(loc)}),
         people_dir / 'social.html': fill((people_dir / 'templates' / 'social.html').read_text(), {
             'social': ''.join(social(p, loc) for p in PEOPLE)}),
     }

@@ -11,6 +11,8 @@ _ds_bundle.js
 _ds_manifest.json
 _adherence.oxlintrc.json
 people/export/
+# real name-card contact details, typed in through scripts/namecards.ts (docs/maintaining.md §6)
+people/local/
 
 snapshots/render/
 /Design system review and deliverables.zip

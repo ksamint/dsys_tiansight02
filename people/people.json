@@ -12,7 +12,8 @@
     "city": "Hong Kong",
     "site": "［tiansight.·］",
     "wechat_public": "［公众号名称］",
-    "web": "tiansight.apuch.cn"
+    "web": "tiansight.apuch.cn",
+    "card_tagline": "餐饮智慧领航者"
   },
   "people": [
     {
@@ -100,8 +101,8 @@
     {
       "name": "边江",
       "en": "BIAN JIANG",
-      "title": "联合创始人",
-      "title_en": "Co-founder",
+      "title": "首席执行官 · 联合创始人",
+      "title_en": "CEO & Co-founder",
       "phone": "［+86 ··· ···· ····］",
       "wechat": "［微信号］",
       "email": "［name@tiansight.·］"

@@ -5,6 +5,8 @@ Versions follow the published brand guide. The system version is in `brand/VERSI
 ## v0.7 · 2026-11-13 · Business cards
 
 - `people/namecards.html` follows the dsys_xiding01 card system: one shared front (mark, 智慧领航者, alliance line) and one personal back per founder (边江, 郭峰), 90 × 54 mm trim, 3 mm bleed, 4 mm safe area, one 6 mm margin, hanging one-letter labels (M 电话, 微 微信, E 邮箱, W 官网), two-character names opened to three-character width, a guides toggle, and 96 × 60 mm print pages. Cards render from `cards` in `people/people.json`; contact lines are placeholders until the founders confirm them; no address line yet.
+- Owner: 边江 is 首席执行官 · 联合创始人 (CEO & Co-founder), 郭峰 联合创始人 (Co-founder). The shared side carries only the mark and 餐饮智慧领航者; the alliance and Hong Kong line is removed.
+- `node scripts/namecards.ts` (TypeScript, Node 22.18+): a local editor for the cards' real details, saved to the git-ignored `people/local/cards.json`, and PNG export at 300 dpi (1063 × 638 trim, 1134 × 709 with 3 mm bleed) into `people/export/namecards/`. `build_people.py --cards … --out …` renders the cards from that file.
 
 ## v0.7 · 2026-11-07 · 1 + 3 + 3
 

@@ -116,11 +116,17 @@ body:has(#guides:checked) .sheet figcaption { margin-bottom: calc(-1 * var(--ble
 body:has(#guides:checked) .sheet .card { overflow: visible; }
 body:has(#guides:checked) .sheet .card::before { inset: 0; border: 0.15mm dashed var(--seal); }
 body:has(#guides:checked) .sheet .card::after { content: ""; position: absolute; inset: var(--safe); border: 0.15mm dashed var(--gold); pointer-events: none; z-index: 2; }
+/* PNG export (scripts/namecards.ts): trim without the screen hairline, or the sheet with its bleed. */
+body.export .sheet .card { box-shadow: none; }
+body.export .sheet figcaption { display: none; }
+body.export-bleed .sheet { padding: var(--bleed); gap: 0; }
+body.export-bleed .sheet:has(.card-front) { background: var(--ink-primary); }
+body.export-bleed .sheet:has(.card-back) { background: var(--paper); }
 @media print {
   @page { size: 96mm 60mm; margin: 0; }
   body { background: var(--paper); }
   .cards { display: block; padding: 0; }
-  .sheet { padding: var(--bleed); break-after: page; page-break-after: always; gap: 0; }
+  .sheet { width: calc(var(--card-w) + 2 * var(--bleed)); padding: var(--bleed); break-after: page; page-break-after: always; gap: 0; }
   .sheet:has(.card-front) { background: var(--ink-primary); }
   .sheet:has(.card-back) { background: var(--paper); }
   .sheet .card { box-shadow: none; }

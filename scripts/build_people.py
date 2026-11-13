@@ -4,6 +4,9 @@ python3 scripts/build_people.py          # write website/team.html, people/block
                                          # people/namecards.html, people/social.html and
                                          # the founder slides inside deck/index.html
 python3 scripts/build_people.py --check  # exit 1 if any output is stale
+python3 scripts/build_people.py --cards people/local/cards.json --out people/export/namecards.html
+                                         # name cards only, from a local (git-ignored) card file;
+                                         # used by scripts/namecards.ts
 
 Pure stdlib. Blocks use the .ts-portrait / .ts-identity classes from people/people.css.
 """
@@ -108,17 +111,16 @@ def card_back(c, base):
 def card_front(base):
     """Shared side: the mark over the brand row. Identical for every person."""
     return (f'<div class="card card-front"><img src="{base["brand"]}logo.png" alt="侍天">'
-            f'<span class="ts-tagline">{esc(CO["tagline"])}</span>'
-            f'<span class="ts-caption">{esc(CO["alliance"])} · {esc(CO["city"])}</span></div>')
+            f'<span class="ts-tagline">{esc(CO["card_tagline"])}</span></div>')
 
 
 def sheet(inner, caption):
     return f'<figure class="sheet">{inner}<figcaption class="ts-caption">{esc(caption)}</figcaption></figure>'
 
 
-def namecards(base):
+def namecards(base, cards=None):
     out = [sheet(card_front(base), '正面 · 全员共用')]
-    out += [sheet(card_back(c, base), f'背面 · {c["name"]}') for c in CARDS]
+    out += [sheet(card_back(c, base), f'背面 · {c["name"]}') for c in (cards or CARDS)]
     return ''.join(out)
 
 
@@ -202,7 +204,25 @@ def render_all():
     return outputs
 
 
+def render_local(cards_path, out_path):
+    """Name cards only, from a card file outside the committed data (real contact details stay local)."""
+    import os
+    cards = json.loads(Path(cards_path).read_text())
+    out = Path(out_path).resolve()
+    rel = Path(os.path.relpath(root, out.parent)).as_posix() + '/'
+    base = {'photo': rel + 'people/photos/', 'brand': rel + 'brand/'}
+    page = fill((people_dir / 'templates' / 'namecards.html').read_text(), {'namecards': namecards(base, cards)})
+    page = page.replace('href="../brand/', f'href="{rel}brand/').replace('href="people.css"', f'href="{rel}people/people.css"')
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(page)
+    print(f'wrote {out}')
+
+
 if __name__ == '__main__':
+    if '--cards' in sys.argv:
+        args = sys.argv
+        render_local(args[args.index('--cards') + 1], args[args.index('--out') + 1])
+        sys.exit(0)
     outputs = render_all()
     stale = [p for p, out in outputs.items() if not p.exists() or p.read_text() != out]
     if '--check' in sys.argv:

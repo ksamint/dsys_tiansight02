@@ -669,6 +669,10 @@ scripts/check_contrast.py    WCAG 2.1 audit of every colour pairing in use; `pyt
 people/profiles.json        联合创始人履历库 (边江, 郭峰): classified entries, E1–E4 grades, contract in profiles.schema.json;
                             pages via `python3 scripts/build_profiles.py` (freshness in check.py),
                             PDFs and single-file HTML via `node scripts/export_profiles.mjs` (into people/export/, ignored)
+people/namecards.html       名片 90 × 54 mm (shared front, one back per founder; placeholders) from `cards` in people/people.json;
+                            type real details and export PNG locally with `node scripts/namecards.ts`
+                            (editor at http://127.0.0.1:4178; `node scripts/namecards.ts export` for PNGs only).
+                            Details stay in people/local/ (ignored); PNGs, 300 dpi trim + 3 mm bleed, in people/export/namecards/
 thumbnail.html              project tile
 SKILL.md                    Agent-Skills entry point
 github.md                   source-repo association + screen map, for upstream sync

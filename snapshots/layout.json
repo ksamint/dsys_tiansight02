@@ -316,7 +316,7 @@
  },
  "people/namecards.html@desktop": {
   "overflow": false,
-  "height": 1500,
+  "height": 900,
   "headings": [
    1,
    0,
@@ -325,7 +325,7 @@
   "sections": 0,
   "cards": 0,
   "charts": 0,
-  "images": 15,
+  "images": 3,
   "h1": [
    48,
    50,

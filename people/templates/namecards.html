@@ -16,12 +16,13 @@
   <div class="ts-heading">
     <span class="ts-caption">Name cards · 名片 · 90 × 54 mm</span>
     <h1>创始人名片</h1>
-    <p class="ts-sub">每人三面：正面、肖像面、背面。打印或另存为 PDF 时每面一页，无出血；印刷版请在 people.css 的 @page 中加 3mm 出血。</p>
+    <p class="ts-sub">全员共用一个正面，每人一个背面。印刷页为 96 × 60 mm（四边各 3 mm 出血）；打开参考线可看裁切线与 4 mm 安全区。</p>
+    <label class="guides-toggle"><input type="checkbox" id="guides"> 显示参考线（裁切线 · 安全区）</label>
   </div>
 </div>
 <main class="cards">
   {{block:namecards}}
 </main>
-<p class="spec-note ts-small ts-muted ts-container" style="padding-block:var(--space-6)">联系方式为占位。字体须自托管思源宋体后再交付印刷，并将文字转曲线。</p>
+<p class="spec-note ts-small ts-muted ts-container" style="padding-block:var(--space-6)">此页为公开占位版。真实联系方式用 node scripts/namecards.ts 在本地填写并导出 PNG，只存于 people/local/（不入库）。官网 tiansight.apuch.cn；地址行待定，定后在 .contact 中加一行 A。字体须自托管思源宋体后再交付印刷，并将文字转曲线。</p>
 </body>
 </html>
